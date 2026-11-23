@@ -42,6 +42,8 @@
     .item-btn:hover { transform: translateY(-2px); }
     .item-btn.correct { animation: inf-pulse-green .6s ease; box-shadow: 0 0 0 6px #198754; border-color: #198754; }
     .item-btn.wrong { animation: inf-shake .4s ease; box-shadow: 0 0 0 6px #dc3545; border-color: #dc3545; }
+    .item-btn:disabled { color: inherit; cursor: default; }
+    .item-btn:disabled:hover { transform: none; }
     .item-btn.dim { opacity: .55; }
     .progress-dots { display: flex; justify-content: center; gap: .4rem; margin-bottom: .8rem; }
     .progress-dots .dot { width: 14px; height: 14px; border-radius: 50%; background: #cfd6df; }
@@ -119,6 +121,7 @@
 
   <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
   <script src="/app-shared/site-chrome.js"></script>
+  <script src="/giochi/assets/js/audio-sintetico.js"></script>
   <script>
   (function () {
     'use strict';
@@ -209,10 +212,10 @@
       },
       {
         domanda: 'Se sento odore di gas in casa, NON devo:',
-        perche: "Accendere una luce o un fiammifero col gas in aria può far esplodere la cucina. Apri le finestre, esci e chiama il 112.",
+        perche: "Accendere una luce o un fiammifero col gas in aria può far esplodere la cucina. Apri le finestre, esci e chiama il 112 da fuori.",
         items: [
           { emo: '🚪', nome: 'Aprire le finestre', danger: false },
-          { emo: '🔥', nome: 'Accendere la luce', danger: true },
+          { emo: '💡', nome: 'Accendere la luce', danger: true },
           { emo: '📞', nome: 'Chiamare il 112', danger: false },
           { emo: '🚶', nome: 'Uscire da casa', danger: false }
         ]
@@ -330,6 +333,9 @@
     let SCENE = pescaScene();
 
     let cur = 0, score = 0, locked = false;
+    // Doppio tocco sul pulsante che avvia una partita, un livello o un round: il secondo tocco
+    // non deve finire sulla risposta che compare sotto il dito. Per mezzo secondo si ignora.
+    var sbloccoAl = 0;
     const startScr = document.getElementById('start-screen');
     const gameScr = document.getElementById('game-screen');
     const endScr = document.getElementById('end-screen');
@@ -344,6 +350,7 @@
       // Estrae 6 scene random a ogni partita dal pool di 14
       SCENE = pescaScene();
       cur = 0; score = 0; locked = false;
+      sbloccoAl = Date.now() + 500;
       startScr.classList.add('hide');
       endScr.classList.add('hide');
       gameScr.classList.remove('hide');
@@ -369,7 +376,7 @@
         const b = document.createElement('button');
         b.type = 'button';
         b.className = 'item-btn';
-        b.setAttribute('aria-label', it.nome + (it.danger ? ' (pericoloso)' : ''));
+        b.dataset.danger = it.danger ? '1' : '0';
         b.innerHTML = '<span aria-hidden="true">' + it.emo + '</span><span class="nome">' + it.nome + '</span>';
         b.addEventListener('click', () => onPick(b, it));
         scenaEl.appendChild(b);
@@ -382,8 +389,11 @@
     }
 
     function onPick(btn, it) {
-      if (locked) return;
+      if (locked || Date.now() < sbloccoAl) return;
+      // Doppio tocco: fino alla scena successiva i pulsanti restano bloccati.
       locked = true;
+      scenaEl.querySelectorAll('.item-btn').forEach(b => { b.disabled = true; });
+      if (window.AudioSintetico) window.AudioSintetico.init();
       // Mostra spiegazione didattica del PERCHE' della risposta giusta
       // (sia che il bambino abbia scelto bene sia che abbia sbagliato).
       const perEl = document.getElementById('perche');
@@ -394,12 +404,15 @@
       if (it.danger) {
         btn.classList.add('correct');
         score++;
+        if (window.AudioSintetico) window.AudioSintetico.dingPositivo();
         if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
       } else {
         btn.classList.add('wrong');
+        if (window.AudioSintetico) window.AudioSintetico.tonoNeutro();
         // mostra anche quello giusto
         scenaEl.querySelectorAll('.item-btn').forEach(b => {
-          if (b !== btn) b.classList.add('dim');
+          if (b.dataset.danger === '1') b.classList.add('correct');
+          else if (b !== btn) b.classList.add('dim');
         });
         if (window.GameCoach && window.GameCoach.hint) {
           window.GameCoach.hint('Pericolose: fuoco, prese, coltelli, sostanze. Sicure: peluche, libri, acqua da bere.', '/cosa-fare-adesso/');
@@ -412,7 +425,7 @@
         } else {
           render();
         }
-      }, 1100);
+      }, 2600); // tempo per leggere o ascoltare il perché
     }
 
     function finish() {

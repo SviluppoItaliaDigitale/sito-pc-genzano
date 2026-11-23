@@ -32,6 +32,15 @@
   var solvedCount = 0;
   var hintsLeft = 3;
   var activeWord = null;
+  // Doppio tocco: lo schema si chiude una volta sola, un secondo tocco rapido
+  // su «Aiuto» non consuma due aiuti.
+  var finito = false;
+  var aiutoInCorso = false;
+
+  function suono(giusta) {
+    if (!window.AudioSintetico) return;
+    if (giusta) window.AudioSintetico.dingPositivo(); else window.AudioSintetico.tonoNeutro();
+  }
 
   difficultyBtns.forEach(function (btn) {
     btn.addEventListener('click', function () {
@@ -86,6 +95,8 @@
     if (!puzzle) return;
     hintsLeft = 3;
     solvedCount = 0;
+    finito = false;
+    aiutoInCorso = false;
     hintsSpan.textContent = hintsLeft;
     feedbackBox.classList.add('hide');
     totalSpan.textContent = puzzle.words.length;
@@ -214,10 +225,11 @@
     var c = +e.target.dataset.col;
     var cellObj = cellMap[r + ',' + c];
     cellObj.el.classList.remove('correct', 'wrong');
-    if (e.target.value && activeWord) {
-      moveInWord(1);
-      maybeCheckWord(activeWord);
-    }
+    // Una lettera cambiata può rompere una parola già risolta o completarne
+    // una che incrocia: si ricontrollano tutte le parole di questa casella.
+    var parole = cellObj.words.map(function (x) { return x.word; });
+    if (e.target.value && activeWord) moveInWord(1);
+    parole.forEach(function (w) { maybeCheckWord(w); });
   }
 
   function onKeyDown(e) {
@@ -249,6 +261,8 @@
   }
 
   function maybeCheckWord(w) {
+    if (finito) return;
+    var gia = !!w.solved;
     var ans = '';
     for (var i = 0; i < w.answer.length; i++) {
       var r = w.row + (w.dir === 'D' ? i : 0);
@@ -256,7 +270,8 @@
       var cell = cellMap[r + ',' + c];
       ans += (cell && cell.input && cell.input.value) ? cell.input.value.toUpperCase() : ' ';
     }
-    if (ans === w.answer) {
+    if (ans !== w.answer && gia) { w.solved = false; recountSolved(); refreshCluesList(); }
+    if (ans === w.answer && !gia) {
       w.solved = true;
       for (var j = 0; j < w.answer.length; j++) {
         var rr = w.row + (w.dir === 'D' ? j : 0);
@@ -266,6 +281,7 @@
       }
       recountSolved();
       refreshCluesList();
+      suono(true);
       // Feedback con spiegazione didattica (quando presente nel puzzle):
       // permette di fissare la nozione invece di limitarsi a "Bravo!".
       var msg = '<strong>' + w.answer + '</strong> completata!';
@@ -276,6 +292,7 @@
   }
 
   function verifyAll() {
+    if (finito || !puzzle) return;
     var wrong = 0;
     puzzle.words.forEach(function (w) {
       var ans = '';
@@ -308,12 +325,15 @@
     });
     recountSolved();
     refreshCluesList();
-    if (wrong > 0) showFeedback('Ci sono ' + wrong + ' lettere da correggere (evidenziate in rosso).', false);
+    if (wrong > 0) { suono(false); showFeedback('Ci sono ' + wrong + ' lettere da correggere (evidenziate in rosso).', false); }
     else if (solvedCount === puzzle.words.length) finishPuzzle();
     else showFeedback('Nessun errore finora. Continua!', true);
   }
 
   function useHint() {
+    if (finito || aiutoInCorso) return;
+    aiutoInCorso = true;
+    setTimeout(function () { aiutoInCorso = false; }, 500);
     if (hintsLeft <= 0) {
       showFeedback('Hai finito gli aiuti.', false);
       return;
@@ -334,7 +354,7 @@
     if (!filled) return;
     hintsLeft--;
     hintsSpan.textContent = hintsLeft;
-    maybeCheckWord(target);
+    cellMap[filled.r + ',' + filled.c].words.forEach(function (x) { maybeCheckWord(x.word); });
     showFeedback('Aiuto usato. Aiuti rimasti: ' + hintsLeft + '.', true);
   }
 
@@ -355,6 +375,8 @@
   }
 
   function finishPuzzle() {
+    if (finito) return;
+    finito = true;
     gameScreen.classList.add('hide');
     resultsScreen.classList.remove('hide');
     finalSolved.textContent = solvedCount;

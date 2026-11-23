@@ -216,7 +216,15 @@
 
     function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t;} return a; }
 
+    var inPassaggio = false;
+    // Doppio tocco sul pulsante che avvia una partita, un livello o un round: il secondo tocco
+    // non deve finire sulla risposta che compare sotto il dito. Per mezzo secondo si ignora.
+    var sbloccoAl = 0;
     function start(){
+      // Doppio tocco su «Iniziamo» o «Ancora»: la partita parte una volta sola.
+      if (!game.classList.contains('hide')) return;
+      inPassaggio = false;
+      sbloccoAl = Date.now() + 500;
       if (window.AudioSintetico) window.AudioSintetico.init();
       queue = shuffle(SUONI.slice());
       idx = 0; stars = 0;
@@ -252,6 +260,8 @@
     }
 
     function scegli(scelto, target, btn){
+      if (inPassaggio || Date.now() < sbloccoAl) return;
+      inPassaggio = true;
       var btns = scelta.querySelectorAll('.inf-big-btn');
       btns.forEach(function(b){ b.disabled = true; });
       if (window.AudioSintetico && window.AudioSintetico.ferma) window.AudioSintetico.ferma();
@@ -280,6 +290,7 @@
         }
       }
       setTimeout(function(){
+        inPassaggio = false;
         idx++;
         if (idx >= queue.length) finish();
         else show();

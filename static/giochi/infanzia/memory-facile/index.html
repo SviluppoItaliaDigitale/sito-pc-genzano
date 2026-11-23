@@ -57,6 +57,9 @@
       color: #fff;
       box-shadow: 0 4px 0 rgba(0,0,0,.2);
     }
+    .mem-back .mem-img { width: 78%; height: 78%; object-fit: contain; display: block; }
+    .inf-attribuzione { text-align: center; font-size: .8rem; color: #495057; margin: 1.5rem 0 0; }
+    .inf-attribuzione a { display: inline-block; padding: .4rem 0; color: #003366; }
     .mem-back {
       background: #fff; border: 3px solid var(--inf-blu);
       transform: rotateY(180deg);
@@ -122,6 +125,7 @@
         <a href="../index.html" class="inf-back"><i class="bi bi-arrow-left"></i> Altri giochi</a>
       </div>
     </div>
+    <p class="inf-attribuzione">Pittogrammi: Sergio Palao, <a href="/attribuzioni-pittogrammi/">ARASAAC (CC BY-NC-SA 4.0)</a>; cartelli di sicurezza ISO 7010.</p>
   </main>
 
   <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
@@ -133,18 +137,18 @@
   <script>
   (function(){
     var ICONE_TOTALI = [
-      { emo: '🚑', lbl: 'ambulanza',  perche: "L'ambulanza porta in ospedale chi sta male." },
-      { emo: '🚒', lbl: 'pompieri',   perche: 'I pompieri spengono il fuoco e salvano le persone.' },
-      { emo: '⛑️', lbl: 'casco',     perche: 'Il casco protegge la testa dei volontari.' },
-      { emo: '🔦', lbl: 'torcia',     perche: 'La torcia fa luce quando manca la corrente.' },
-      { emo: '🧯', lbl: 'estintore',  perche: "L'estintore spegne le piccole fiamme. Solo i grandi lo usano." },
-      { emo: '🚓', lbl: 'polizia',    perche: 'La polizia aiuta a tenere tutti al sicuro.' },
-      { emo: '⚠️', lbl: 'attenzione', perche: 'Il triangolo giallo dice: stai attento, c\'è un pericolo!' },
-      { emo: '🚪', lbl: 'uscita',     perche: "L'uscita di emergenza è la strada per uscire in sicurezza." },
-      { emo: '📞', lbl: 'telefono',   perche: 'Per chiamare aiuto in Italia si fa il 1-1-2.' },
-      { emo: '🎒', lbl: 'zaino',      perche: 'Nello zaino di emergenza ci sono acqua, torcia e le cose importanti.' },
-      { emo: '💧', lbl: 'acqua',      perche: "L'acqua da bere è la prima cosa da mettere nello zaino di emergenza." },
-      { emo: '📻', lbl: 'radio',      perche: 'La radio a pile fa sentire le notizie anche quando manca la corrente.' }
+      { img: '/pittogrammi/arasaac/ambulanza.png', alt: 'Ambulanza bianca con la croce rossa e la luce sul tetto', lbl: 'ambulanza',  perche: "L'ambulanza porta in ospedale chi sta male." },
+      { img: '/pittogrammi/arasaac/camion-pompieri.png', alt: 'Camion rosso dei pompieri con la scala e la manichetta arrotolata', lbl: 'pompieri',   perche: 'I pompieri spengono il fuoco e salvano le persone.' },
+      { img: '/pittogrammi/arasaac/casco.png', alt: 'Casco giallo di protezione', lbl: 'casco',     perche: 'Il casco protegge la testa dei volontari.' },
+      { img: '/pittogrammi/arasaac/torcia.png', alt: 'Torcia grigia con la lampadina accesa', lbl: 'torcia',     perche: 'La torcia fa luce quando manca la corrente.' },
+      { img: '/pittogrammi/iso7010/estintore.svg', alt: 'Cartello rosso con l\'estintore e la fiamma', lbl: 'estintore',  perche: "L'estintore spegne le piccole fiamme. Solo i grandi lo usano." },
+      { img: '/pittogrammi/arasaac/auto-polizia.png', alt: 'Auto della polizia bianca e azzurra con la luce sul tetto', lbl: 'polizia',    perche: 'La polizia aiuta a tenere tutti al sicuro.' },
+      { img: '/pittogrammi/iso7010/pericolo-generico.svg', alt: 'Triangolo giallo con il punto esclamativo', lbl: 'attenzione', perche: 'Il triangolo giallo dice: stai attento, c\'è un pericolo!' },
+      { img: '/pittogrammi/iso7010/uscita-emergenza-destra.svg', alt: 'Cartello verde dell\'uscita di emergenza: una persona corre verso la porta', lbl: 'uscita',     perche: "L'uscita di emergenza è la strada per uscire in sicurezza." },
+      { img: '/pittogrammi/arasaac/telefono.png', alt: 'Telefono con la cornetta e i tasti', lbl: 'telefono',   perche: 'Per chiamare aiuto in Italia si fa il 1-1-2.' },
+      { img: '/pittogrammi/arasaac/zaino.png', alt: 'Zaino verde con la tasca arancione', lbl: 'zaino',      perche: 'Nello zaino di emergenza ci sono acqua, torcia e le cose importanti.' },
+      { img: '/pittogrammi/iso7010/acqua-potabile.svg', alt: 'Cartello verde dell\'acqua da bere: un rubinetto e un bicchiere', lbl: 'acqua',      perche: "L'acqua da bere è la prima cosa da mettere nello zaino di emergenza." },
+      { img: '/pittogrammi/arasaac/radio.png', alt: 'Radio grigia con l\'antenna', lbl: 'radio',      perche: 'La radio a pile fa sentire le notizie anche quando manca la corrente.' }
     ];
     var LIVELLI = [
       { coppie: 3, cols: 3 },
@@ -163,6 +167,9 @@
     var levelBadge = document.getElementById('level-badge');
     var btnNext = document.getElementById('next-level');
 
+    // Doppio tocco sul pulsante che avvia una partita, un livello o un round: il secondo tocco
+    // non deve finire sulla risposta che compare sotto il dito. Per mezzo secondo si ignora.
+    var sbloccoAl = 0;
     var first = null, lock = false, matched = 0;
     var livello = 0;
     var iconeLivello = [];
@@ -176,6 +183,7 @@
       grid.className = 'mem-grid cols-' + cfg.cols;
       grid.innerHTML = '';
       matched = 0; first = null; lock = false;
+      sbloccoAl = Date.now() + 500;
       countEl.textContent = '0';
       totalEl.textContent = cfg.coppie;
       levelBadge.textContent = 'Livello ' + (livello + 1) + ' di ' + LIVELLI.length;
@@ -189,14 +197,14 @@
         btn.setAttribute('type','button');
         btn.setAttribute('aria-label','Carta coperta');
         btn.dataset.lbl = c.lbl;
-        btn.innerHTML = '<div class="mem-inner"><div class="mem-face mem-front"><i class="bi bi-question-lg"></i></div><div class="mem-face mem-back">' + c.emo + '</div></div>';
+        btn.innerHTML = '<div class="mem-inner"><div class="mem-face mem-front"><i class="bi bi-question-lg"></i></div><div class="mem-face mem-back"><img class="mem-img" src="' + c.img + '" alt="' + c.alt + '" width="96" height="96"></div></div>';
         btn.addEventListener('click', function(){ flip(btn, c); });
         grid.appendChild(btn);
       });
     }
 
     function flip(btn, c){
-      if (lock) return;
+      if (lock || Date.now() < sbloccoAl) return;
       if (btn.classList.contains('flipped') || btn.classList.contains('matched')) return;
       btn.classList.add('flipped');
       btn.setAttribute('aria-label', c.lbl);
@@ -216,13 +224,14 @@
         // bambini 3-6 anni). Resta visibile fino alla prossima carta girata.
         var perEl = document.getElementById('perche');
         if (perEl && c.perche) {
-          perEl.textContent = '💡 ' + c.emo + ' ' + c.perche;
+          perEl.textContent = '💡 ' + c.perche;
           perEl.classList.remove('hide');
         }
         first = null;
-        if (matched === iconeLivello.length) setTimeout(fineLivello, 1800);
+        if (matched === iconeLivello.length) { lock = true; setTimeout(fineLivello, 1800); }
       } else {
         lock = true;
+        if (window.AudioSintetico) window.AudioSintetico.tonoNeutro();
         var f = first;
         setTimeout(function(){
           f.btn.classList.remove('flipped');
@@ -264,6 +273,8 @@
     }
 
     btnNext.addEventListener('click', function(){
+      // Doppio tocco: il secondo tocco non deve saltare un livello né cercarne uno che non esiste.
+      if (levelUpCard.classList.contains('hide') || livello >= LIVELLI.length - 1) return;
       livello++;
       avviaLivello();
     });

@@ -52,3 +52,15 @@
     .match-area { gap: 10px; }
     .match-item { font-size: 0.78rem; padding: 10px 8px; min-height: 44px; }
 }
+/* Figure delle caselle: cartello ISO 7010 o campione del colore dell'allerta */
+.match-item { gap: 10px; }
+.match-iso { width: 44px; height: 44px; flex: 0 0 auto; }
+.match-colore {
+    width: 28px; height: 28px; border-radius: 50%; flex: 0 0 auto;
+    border: 2px solid rgba(0,0,0,0.35);
+}
+@media (max-width: 600px) {
+    .match-item { flex-direction: column; gap: 4px; }
+    .match-iso { width: 36px; height: 36px; }
+}
+.cat-card .cat-icon { color: #004d99; }

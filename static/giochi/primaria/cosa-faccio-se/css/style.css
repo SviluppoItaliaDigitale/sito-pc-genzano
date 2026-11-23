@@ -72,3 +72,4 @@
 @media (prefers-reduced-motion: reduce) {
   .pausa-box { animation: none; }
 }
+.scenario-card .sc-icon { color: #004d99; }

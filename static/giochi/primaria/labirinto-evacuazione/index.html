@@ -104,13 +104,25 @@
     @media (prefers-reduced-motion: reduce) {
       .cell.smoke { animation: none; }
     }
+    /* Simboli della mappa: Bootstrap Icons (carattere già caricato in ogni
+       gioco). Fino al 23/11/2026 erano emoji: alcune (scala, bambino) sui
+       browser delle LIM più vecchi uscivano come quadratini vuoti. */
+    .cell .bi { line-height: 1; }
     .cell.player::after {
-      content: "🧒";
-      position: absolute; inset: 0;
+      content: "\f8fa"; /* bi-person-walking */
+      font-family: bootstrap-icons !important;
+      position: absolute; inset: 6%;
       display: flex; align-items: center; justify-content: center;
-      font-size: calc(var(--mappa-cell) * 0.7);
+      font-size: calc(var(--mappa-cell) * 0.6);
+      background: #003366; color: #fff; border-radius: 50%;
       animation: pulse 1.2s ease-in-out infinite;
     }
+    @media (prefers-reduced-motion: reduce) {
+      .cell.player::after { animation: none; }
+    }
+    html.a11y-pause-anim .cell.player::after, html.a11y-pause-animations .cell.player::after { animation: none; }
+    .legenda-item .bi { font-size: 1.05rem; }
+    .legenda-item .leg-player { background: #003366; color: #fff; border-radius: 50%; padding: 1px 3px; }
     @keyframes pulse {
       0%,100% { transform: scale(1); }
       50% { transform: scale(1.12); }
@@ -236,23 +248,23 @@
               <ul>
                 <li><strong>Non usare mai l'ascensore</strong> durante l'evacuazione. Usa le <strong>scale</strong>.</li>
                 <li><strong>Segui le frecce verdi</strong> di emergenza: indicano la via di fuga più sicura.</li>
-                <li><strong>Non tornare indietro</strong> a prendere oggetti o amici: prosegui fino al punto di raccolta.</li>
-                <li><strong>Evita fuoco e fumo</strong>: se vedi fiamme o fumo, cerca una strada alternativa. <em>Negli ultimi scenari il fumo 💨 si sposta da solo.</em></li>
+                <li><strong>Non tornare indietro</strong> a prendere oggetti: prosegui fino al punto di raccolta. Se manca un compagno, dillo subito all'insegnante.</li>
+                <li><strong>Evita fuoco e fumo</strong>: se vedi fiamme o fumo, cerca una strada alternativa. <em>Negli ultimi scenari il fumo si sposta da solo.</em></li>
                 <li><strong>Cerca la via più breve</strong>: ogni scenario ha un budget di mosse. Si può finire anche oltre, ma più si va lunghi più punti si perdono.</li>
-                <li><strong>Raggiungi il punto di raccolta 🏁</strong> e resta lì in fila con l'insegnante.</li>
+                <li><strong>Raggiungi il punto di raccolta</strong> e resta lì in fila con l'insegnante.</li>
               </ul>
             </div>
 
             <div class="legenda" aria-label="Legenda mappa">
-              <span class="legenda-item">🧒 Alunno (tu)</span>
-              <span class="legenda-item">🚪 Partenza</span>
-              <span class="legenda-item">🏁 Punto di raccolta</span>
-              <span class="legenda-item">🪜 Scala (sì)</span>
-              <span class="legenda-item">⚠️ Ascensore (no)</span>
-              <span class="legenda-item">🔥 Fuoco (no)</span>
-              <span class="legenda-item">📦 Ostacolo (no)</span>
-              <span class="legenda-item">💨 Fumo (no)</span>
-              <span class="legenda-item">➡️ Freccia di emergenza</span>
+              <span class="legenda-item"><i class="bi bi-person-walking leg-player" aria-hidden="true"></i> Alunno (tu)</span>
+              <span class="legenda-item"><i class="bi bi-door-open-fill" aria-hidden="true"></i> Partenza (aula)</span>
+              <span class="legenda-item"><i class="bi bi-people-fill text-success" aria-hidden="true"></i> Punto di raccolta</span>
+              <span class="legenda-item"><i class="bi bi-ladder" aria-hidden="true"></i> Scale (sì)</span>
+              <span class="legenda-item"><i class="bi bi-arrow-down-up" aria-hidden="true"></i> Ascensore (no)</span>
+              <span class="legenda-item"><i class="bi bi-fire text-danger" aria-hidden="true"></i> Fuoco (no)</span>
+              <span class="legenda-item"><i class="bi bi-box-seam-fill" aria-hidden="true"></i> Ostacolo (no)</span>
+              <span class="legenda-item"><i class="bi bi-cloud-haze2-fill" aria-hidden="true"></i> Fumo (no)</span>
+              <span class="legenda-item"><i class="bi bi-arrow-right text-success" aria-hidden="true"></i> Freccia verde di emergenza</span>
             </div>
 
             <p class="text-center">
@@ -307,7 +319,7 @@
           <!-- END -->
           <div id="end" class="screen hide">
             <div class="app-result-box">
-              <div class="app-result-emoji">🏆</div>
+              <div class="app-result-emoji" aria-hidden="true"><i class="bi bi-trophy-fill" style="color:#b8860b"></i></div>
               <h2>Evacuazione completata!</h2>
               <p>Hai portato tutti gli alunni al punto di raccolta in sicurezza.</p>
               <p class="mb-0">Scenari completati: <strong id="end-scenari">6</strong> su 6 &middot; Errori totali: <strong id="end-errori">0</strong></p>
@@ -344,7 +356,7 @@
     var SCENARI = [
       {
         titolo: 'Scenario 1 — Aula al primo piano',
-        desc: 'Suona la campanella di evacuazione. Esci dall\'aula evitando l\'ascensore ⚠️ e gli ostacoli 📦. Cerca le scale 🪜 e scendi fino al punto di raccolta in cortile.',
+        desc: 'Suona la campanella di evacuazione. Esci dall\'aula evitando l\'ascensore e gli ostacoli. Cerca le scale e scendi fino al punto di raccolta in cortile.',
         righe: [
           '#########',
           '#S......#',
@@ -361,7 +373,7 @@
       },
       {
         titolo: 'Scenario 2 — Fuoco e ostacoli nel corridoio',
-        desc: 'Sei al piano terra. Nei corridoi ci sono zaini caduti 📦, fuoco 🔥 e l\'ascensore ⚠️ è bloccato. Cerca le scale 🪜 e raggiungi l\'uscita più in basso.',
+        desc: 'Sei al piano terra. Nei corridoi ci sono zaini caduti, fuoco e l\'ascensore è bloccato. Cerca le scale e raggiungi l\'uscita più in basso.',
         righe: [
           '##########',
           '#S.B.....#',
@@ -379,7 +391,7 @@
       },
       {
         titolo: 'Scenario 3 — Evacuazione completa',
-        desc: 'Allarme generale dall\'aula al cortile. La via diretta è bloccata da fuoco 🔥 e ostacoli 📦: trova il piano con la scala 🪜 e attraversa con calma. Tanti vicoli ciechi: leggi prima di muoverti.',
+        desc: 'Allarme generale dall\'aula al cortile. La via diretta è bloccata da fuoco e ostacoli: trova il piano con le scale e attraversa con calma. Tanti vicoli ciechi: leggi prima di muoverti.',
         righe: [
           '###########',
           '#S.B......#',
@@ -400,7 +412,7 @@
       },
       {
         titolo: 'Scenario 4 — Fumo che si propaga',
-        desc: 'L\'allarme suona e c\'è un piccolo incendio 🔥. Da ora in avanti il fumo 💨 si sposta da solo dopo qualche tua mossa: muoviti deciso, evita ascensore ⚠️ e ostacoli 📦, e usa le scale 🪜.',
+        desc: 'L\'allarme suona e c\'è un piccolo incendio. Da ora in avanti il fumo si sposta da solo dopo qualche tua mossa: muoviti deciso, evita ascensore e ostacoli, e usa le scale.',
         fumo: true,
         passiFumo: 4,
         righe: [
@@ -419,7 +431,7 @@
       },
       {
         titolo: 'Scenario 5 — Doppio incendio e fumo che avanza',
-        desc: 'Due incendi 🔥 in due punti diversi: il fumo 💨 cresce in fretta. Trova la strada alternativa, evita gli ostacoli 📦 e segui la freccia verde ➡️ fino all\'uscita 🏁.',
+        desc: 'Due incendi in due punti diversi: il fumo cresce in fretta. Trova la strada alternativa, evita gli ostacoli e segui la freccia verde fino al punto di raccolta.',
         fumo: true,
         passiFumo: 4,
         righe: [
@@ -439,7 +451,7 @@
       },
       {
         titolo: 'Scenario 6 — Evacuazione completa con fumo',
-        desc: 'Allarme generale: dall\'aula al primo piano fino al cortile. Due incendi 🔥 propagano fumo 💨 lentamente, l\'ascensore ⚠️ è una trappola, segui scale 🪜 e freccia verde ⬇️. Pensa prima di muoverti.',
+        desc: 'Allarme generale: dall\'aula al primo piano fino al cortile. Due incendi propagano fumo lentamente, l\'ascensore è una trappola: usa le scale e segui la freccia verde. Pensa prima di muoverti.',
         fumo: true,
         passiFumo: 7,
         righe: [
@@ -484,6 +496,10 @@
                             // sarebbe giusto far perdere il budget per un
                             // evento casuale fuori dal controllo del giocatore.
     var BONUS_PER_FUMO = 3;
+    // Doppio tocco: arrivati al punto di raccolta i comandi restano fermi
+    // (`bloccato`) e «Ricomincia scenario» non può far saltare lo scenario
+    // successivo: il passaggio è affidato a un solo timer, annullabile.
+    var timerPassaggio = null;
 
     var intro = document.getElementById('intro');
     var game = document.getElementById('game');
@@ -507,13 +523,18 @@
       caricaScenario();
     });
 
-    document.getElementById('btn-reset').addEventListener('click', caricaScenario);
+    document.getElementById('btn-reset').addEventListener('click', function(){
+      if (bloccato) return;
+      caricaScenario();
+    });
     document.getElementById('btn-rigioca').addEventListener('click', function(){
+      if (timerPassaggio) { clearTimeout(timerPassaggio); timerPassaggio = null; }
       end.classList.add('hide'); intro.classList.remove('hide');
       scenarioIdx = 0; erroriTotali = 0; overTotali = 0; scenariOk = 0;
     });
 
     function caricaScenario(){
+      if (timerPassaggio) { clearTimeout(timerPassaggio); timerPassaggio = null; }
       var s = SCENARI[scenarioIdx];
       titoloEl.textContent = s.titolo;
       descEl.textContent = s.desc;
@@ -557,6 +578,7 @@
           cell.className = 'cell ' + classeDa(ch);
           cell.setAttribute('role', 'gridcell');
           cell.innerHTML = simboloDa(ch);
+          if (NOMI[ch]) cell.setAttribute('aria-label', NOMI[ch]);
           if (r === playerR && c === playerC){
             cell.classList.add('player');
             cell.setAttribute('aria-label', 'Posizione attuale dell\'alunno');
@@ -605,19 +627,28 @@
       }
     }
 
+    function ico(nome){ return '<i class="bi bi-' + nome + '" aria-hidden="true"></i>'; }
+    // Nome leggibile della casella per i lettori di schermo.
+    var NOMI = { S: 'partenza', E: 'punto di raccolta', A: 'ascensore', F: 'fuoco', M: 'fumo', B: 'ostacolo', X: 'scale',
+                 U: 'freccia verso l\'alto', D: 'freccia verso il basso', L: 'freccia a sinistra', R: 'freccia a destra' };
+    function suonoTono(freq, durata, gain){
+      if (window.AudioSintetico) window.AudioSintetico.tono({ freq: freq, durata: durata, gain: gain });
+    }
+    function suonoErrore(){ if (window.AudioSintetico) window.AudioSintetico.tonoNeutro(); }
+
     function simboloDa(ch){
       switch(ch){
-        case 'S': return '🚪';
-        case 'E': return '🏁';
-        case 'A': return '⚠️';
-        case 'F': return '🔥';
-        case 'M': return '💨';
-        case 'B': return '📦';
-        case 'X': return '🪜';
-        case 'U': return '⬆️';
-        case 'D': return '⬇️';
-        case 'L': return '⬅️';
-        case 'R': return '➡️';
+        case 'S': return ico('door-open-fill');
+        case 'E': return ico('people-fill');
+        case 'A': return ico('arrow-down-up');
+        case 'F': return ico('fire');
+        case 'M': return ico('cloud-haze2-fill');
+        case 'B': return ico('box-seam-fill');
+        case 'X': return ico('ladder');
+        case 'U': return ico('arrow-up');
+        case 'D': return ico('arrow-down');
+        case 'L': return ico('arrow-left');
+        case 'R': return ico('arrow-right');
         default: return '';
       }
     }
@@ -724,35 +755,35 @@
       // muro
       if (target === '#') {
         mostraMessaggio('Lì c\'è un muro, non puoi passare.', 'warning');
-        if (window.AudioSintetico) window.AudioSintetico.tono(200, 0.1);
+        suonoTono(220, 0.08, 0.08);
         return;
       }
       // ascensore
       if (target === 'A') {
         erroriScenario++; erroriTotali++; erroriEl.textContent = erroriScenario;
-        mostraMessaggio('⚠️ Non si usa mai l\'ascensore durante un\'evacuazione! Cerca le scale 🪜.', 'danger');
-        if (window.AudioSintetico) window.AudioSintetico.tono(180, 0.25);
+        mostraMessaggio('Non si usa mai l\'ascensore durante un\'evacuazione! Cerca le scale.', 'danger');
+        suonoErrore();
         return;
       }
       // fuoco
       if (target === 'F') {
         erroriScenario++; erroriTotali++; erroriEl.textContent = erroriScenario;
-        mostraMessaggio('🔥 Attenzione: fuoco! Non attraversare fiamme e fumo. Cerca una strada alternativa.', 'danger');
-        if (window.AudioSintetico) window.AudioSintetico.tono(160, 0.25);
+        mostraMessaggio('Attenzione: fuoco! Non attraversare fiamme e fumo. Cerca una strada alternativa.', 'danger');
+        suonoErrore();
         return;
       }
       // fumo (propagato dal fuoco)
       if (target === 'M') {
         erroriScenario++; erroriTotali++; erroriEl.textContent = erroriScenario;
-        mostraMessaggio('💨 Il fumo è arrivato qui: non lo attraversare. Cerca subito un\'altra strada.', 'danger');
-        if (window.AudioSintetico) window.AudioSintetico.tono(170, 0.22);
+        mostraMessaggio('Il fumo è arrivato qui: non lo attraversare. Cerca subito un\'altra strada.', 'danger');
+        suonoErrore();
         return;
       }
       // ostacolo (zaino, banco rovesciato)
       if (target === 'B') {
         erroriScenario++; erroriTotali++; erroriEl.textContent = erroriScenario;
-        mostraMessaggio('📦 C\'è un ostacolo (zaino o banco rovesciato). Non saltarlo: rallenta. Trova un\'altra strada per non cadere.', 'warning');
-        if (window.AudioSintetico) window.AudioSintetico.tono(220, 0.18);
+        mostraMessaggio('C\'è un ostacolo (zaino o banco rovesciato). Non saltarlo: rallenta. Trova un\'altra strada per non cadere.', 'warning');
+        suonoErrore();
         return;
       }
       // frecce: verificare direzione congruente
@@ -774,7 +805,7 @@
         if (!rotta) {
           erroriScenario++; erroriTotali++; erroriEl.textContent = erroriScenario;
           mostraMessaggio('Le frecce verdi di emergenza indicano la via di fuga: seguile nella direzione giusta!', 'warning');
-          if (window.AudioSintetico) window.AudioSintetico.tono(220, 0.18);
+          suonoErrore();
           return;
         }
       }
@@ -785,7 +816,7 @@
       mosse++; mosseEl.textContent = mosse;
       aggiornaBudget();
       nascondiMessaggio();
-      if (window.AudioSintetico) window.AudioSintetico.tono(380, 0.04);
+      suonoTono(520, 0.05, 0.05);
 
       // propagazione fumo (solo scenari con fumo:true): ogni cella di fumo
       // costringe il giocatore a deviazioni che mangerebbero il budget
@@ -802,8 +833,8 @@
             var bonus = spread * BONUS_PER_FUMO;
             budgetBonus += bonus;
             aggiornaBudget();
-            mostraMessaggio('💨 Il fumo si sta diffondendo: hai +' + bonus + ' mosse extra per deviare.', 'warning');
-            if (window.AudioSintetico) window.AudioSintetico.tono(140, 0.18);
+            mostraMessaggio('Il fumo si sta diffondendo: hai +' + bonus + ' mosse extra per deviare.', 'warning');
+            suonoTono(300, 0.15, 0.1);
           }
         }
       }
@@ -816,12 +847,13 @@
         var budgetEff = sc.max + budgetBonus;
         var over = Math.max(0, mosse - budgetEff);
         if (over > 0) overTotali += over;
-        var msg = '🏁 Punto di raccolta raggiunto! Mosse: ' + mosse + ' · Errori: ' + erroriScenario;
+        var msg = 'Punto di raccolta raggiunto! Mosse: ' + mosse + ' · Errori: ' + erroriScenario;
         if (over > 0) msg += ' · Oltre il budget: +' + over + ' mosse';
         msg += '.';
         mostraMessaggio(msg, 'ok');
         if (window.AudioSintetico) window.AudioSintetico.dingPositivo();
-        setTimeout(function(){
+        timerPassaggio = setTimeout(function(){
+          timerPassaggio = null;
           scenarioIdx++;
           if (scenarioIdx < SCENARI.length) {
             caricaScenario();

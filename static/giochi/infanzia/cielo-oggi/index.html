@@ -452,6 +452,15 @@
     var progressBolli = document.querySelectorAll('#progress .bollino');
     var queue = [], idx = 0, errori = 0, locked = false, roundIdx = 0;
     var stelleTotali = 0;
+    // Doppio tocco sul pulsante che avvia una partita, un livello o un round: il secondo tocco
+    // non deve finire sulla risposta che compare sotto il dito. Per mezzo secondo si ignora.
+    var sbloccoAl = 0;
+
+    // Quando il riquadro del gioco si chiude, la scheda che compare poteva finire sotto
+    // la barra blu in alto: la si porta al centro dello schermo.
+    function mostraInVista(el){
+      try { el.scrollIntoView({ block: 'center' }); } catch (err) { el.scrollIntoView(); }
+    }
 
     function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t;} return a; }
 
@@ -467,7 +476,7 @@
     }
 
     function scegli(btn){
-      if (locked) return;
+      if (locked || Date.now() < sbloccoAl) return;
       if (window.AudioSintetico) window.AudioSintetico.init();
       var col = btn.getAttribute('data-col');
       var s = queue[idx];
@@ -501,6 +510,7 @@
     function avviaRound(){
       queue = shuffle(ROUNDS[roundIdx].slice());
       idx = 0;
+      sbloccoAl = Date.now() + 500;
       gameCard.classList.remove('hide');
       roundUp.classList.add('hide');
       endScreen.classList.add('hide');
@@ -516,6 +526,7 @@
       if (roundIdx < ROUNDS.length - 1) {
         gameCard.classList.add('hide');
         roundUp.classList.remove('hide');
+        mostraInVista(roundUp);
         if (window.AudioSintetico){
           window.AudioSintetico.tono({freq:523,durata:.15});
           setTimeout(function(){ window.AudioSintetico.tono({freq:659,durata:.15}); },180);
@@ -529,6 +540,7 @@
       endScreen.classList.remove('hide');
       gameCard.classList.add('hide');
       roundUp.classList.add('hide');
+      mostraInVista(endScreen);
       if (window.AudioSintetico){
         window.AudioSintetico.tono({freq:523,durata:.2});
         setTimeout(function(){ window.AudioSintetico.tono({freq:659,durata:.2}); },200);
@@ -542,11 +554,14 @@
     bandiere.forEach(function(b){ b.addEventListener('click', function(){ scegli(b); }); });
 
     document.getElementById('next-round').addEventListener('click', function(){
+      // Doppio tocco: il secondo tocco non deve saltare un round né cercarne uno che non esiste.
+      if (roundUp.classList.contains('hide') || roundIdx >= ROUNDS.length - 1) return;
       roundIdx++;
       avviaRound();
     });
 
     document.getElementById('restart').addEventListener('click', function(){
+      if (endScreen.classList.contains('hide')) return;
       roundIdx = 0; errori = 0;
       avviaRound();
     });

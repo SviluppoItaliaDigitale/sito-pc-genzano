@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const zainoFill = document.getElementById('zaino-fill');
 
     const allItems = [
-        { name: 'Acqua', icon: '\uD83D\uDCA7', correct: true, tip: 'Almeno 2 litri a persona!' },
+        { name: 'Acqua', icon: '\uD83D\uDCA7', correct: true, tip: 'Circa 4 litri a persona al giorno, per bere e lavarsi.' },
         { name: 'Torcia', icon: '\uD83D\uDD26', correct: true, tip: 'Per vedere al buio senza fiamme' },
         { name: 'Fischietto', icon: '\uD83D\uDCEF', correct: true, tip: 'Per farsi trovare dai soccorritori' },
         { name: 'Coperta', icon: '\uD83D\uDECF\uFE0F', correct: true, tip: 'Per scaldarsi senza corrente' },
@@ -48,6 +48,10 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     let correctTotal, found, errors;
+    // Doppio tocco: un oggetto già scelto non conta di nuovo e, preso l'ultimo,
+    // la schermata finale (e il salvataggio) parte una volta sola.
+    let finito = false;
+    let partita = 0;
 
     function shuffle(arr) {
         for (let i = arr.length - 1; i > 0; i--) {
@@ -69,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
         introScreen.classList.add('hide');
         gameScreen.classList.remove('hide');
         winScreen.classList.add('hide');
-        found = 0; errors = 0;
+        found = 0; errors = 0; finito = false; partita++;
         // Modalita': veloce (16 oggetti random, ~10 corretti + ~6 distrattori)
         // o completa (tutti gli oggetti). La modalita' veloce e' utile come
         // partita "rapida" durante una lezione; la completa e' il test
@@ -103,6 +107,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function pickItem(card, item) {
+        if (finito || card.classList.contains('correct') || card.classList.contains('wrong')) return;
+        card.setAttribute('aria-disabled', 'true');
+        if (window.AudioSintetico) {
+            if (item.correct) window.AudioSintetico.dingPositivo(); else window.AudioSintetico.tonoNeutro();
+        }
         if (item.correct) {
             card.classList.add('correct');
             found++;
@@ -110,7 +119,10 @@ document.addEventListener('DOMContentLoaded', () => {
             zainoFill.style.height = Math.round((found / correctTotal) * 100) + '%';
             showToast(item.tip, true);
             if (found === correctTotal) {
+                finito = true;
+                const questa = partita;
                 setTimeout(() => {
+                    if (questa !== partita) return;
                     if (errors === 0) {
                         winMessage.textContent = 'Perfetto! Hai preparato lo zaino senza nessun errore!';
                     } else if (errors <= 3) {

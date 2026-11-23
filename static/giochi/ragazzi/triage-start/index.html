@@ -47,6 +47,8 @@
     }
     .btn-cod:hover, .btn-cod:focus-visible { outline: 3px solid var(--rag-blu); outline-offset: 2px; }
     .btn-cod:disabled { opacity: .55; cursor: not-allowed; }
+    .btn-cod { min-height: 56px; }
+    .btn-cod.scelto, .btn-cod.scelto:disabled { opacity: 1; outline: 4px solid var(--rag-blu); outline-offset: 2px; }
     .btn-cod.rosso { background: #DC3545; }
     .btn-cod.giallo { background: #F4B700; color: #17324D; }
     .btn-cod.verde { background: #198754; }
@@ -105,8 +107,9 @@
         <div class="flow-box">
 1. Il paziente cammina da solo?
    SÌ → VERDE (lieve, può attendere)
-2. Respira dopo apertura vie aeree?
-   NO → NERO (deceduto)
+2. Respira? Se no, apri le vie aeree.
+   Non respira neanche così → NERO (deceduto)
+   Respira solo dopo l'apertura → ROSSO
 3. Frequenza respiratoria &gt; 30/min?
    SÌ → ROSSO (critico)
 4. Polso radiale assente o refill capillare &gt; 2s?
@@ -178,6 +181,7 @@
   </main>
 
   <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/giochi/assets/js/audio-sintetico.js"></script>
   <script src="/app-shared/site-chrome.js"></script>
   <script src="/giochi/assets/js/progressione.js"></script>
   <script src="/giochi/assets/js/attestato.js"></script>
@@ -268,7 +272,7 @@
         spiega: 'Respiro > 30/min: ROSSO. L\'ustione e la probabile inalazione fumo aggravano, ma la decisione START si ferma al primo criterio positivo.' },
 
       { eta: 17, sesso: 'M', scenario: 'Incidente stradale scooter',
-        descr: 'Seduto a bordo strada, si tiene un braccio. Ha il casco ancora indossato, cammina se aiutato ma di propria iniziativa. Lucido e collaborante.',
+        descr: 'Seduto a bordo strada, si tiene un braccio. Ha ancora il casco. Quando gli chiedi di spostarsi, si alza e cammina da solo, senza aiuto. Lucido e collaborante.',
         sintomi: [
           ['person-walking', 'Cammina autonomamente'],
           ['chat-text', 'Cosciente e collaborante']
@@ -283,7 +287,7 @@
           ['lungs-fill', 'Respiro dopo manovra: 8/min (molto lento)']
         ],
         cod: 'rosso',
-        spiega: 'Respiro < 10/min o > 30/min: codice ROSSO. Nonostante la ripresa dopo apertura vie aeree, la frequenza bassissima indica distress grave: priorità massima.' },
+        spiega: 'Regola 2: chi riprende a respirare solo dopo l\'apertura delle vie aeree è codice ROSSO. Un respiro così lento (8 al minuto) conferma che la situazione è grave: priorità massima.' },
 
       { eta: 12, sesso: 'M', scenario: 'Esercitazione antincendio scuola',
         descr: 'Evacuazione regolare, nessun sintomo. Chiede solo un sorso d’acqua. Cammina in fila.',
@@ -333,7 +337,7 @@
           ['chat-text', 'Risponde al nome']
         ],
         cod: 'giallo',
-        spiega: 'Regola pediatrica attenuata: nei bambini si tende a considerare codici più elevati, ma con parametri vitali compensati il codice è GIALLO con rivalutazione frequente.' }
+        spiega: 'Per i bambini piccoli esiste una variante del metodo, JumpSTART, con soglie del respiro diverse da quelle degli adulti (normale fra 15 e 45 atti al minuto). Qui respiro, polso e risposta sono nella norma: codice GIALLO, da rivalutare spesso.' }
     ];
 
     var intro = document.getElementById('intro'),
@@ -353,6 +357,9 @@
         scoreEl = document.getElementById('score');
     var btnCods = document.querySelectorAll('.btn-cod');
     var queue = [], idx = 0, score = 0, rossiOk = 0, erroriCritici = 0;
+    // Doppio tocco (LIM): una risposta per paziente, un solo «Prossimo paziente»;
+    // un tocco che arriva entro 400 ms dal cambio di schermata non conta.
+    var risposto = false, prontoDa = 0, finito = false;
 
     function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t;} return a; }
 
@@ -363,7 +370,7 @@
       // l'allenamento al metodo S.T.A.R.T. non diventa memorizzazione
       // sequenziale.
       queue = shuffle(PAZIENTI.slice()).slice(0, 8);
-      idx = 0; score = 0; rossiOk = 0; erroriCritici = 0;
+      idx = 0; score = 0; rossiOk = 0; erroriCritici = 0; finito = false;
       scoreEl.textContent = '0'; idxTot.textContent = queue.length;
       mostra();
     }
@@ -384,15 +391,21 @@
       });
       esito.classList.add('hide'); esito.classList.remove('ok','ko'); esito.innerHTML = '';
       nextWrap.classList.add('hide');
-      btnCods.forEach(function(b){ b.disabled = false; });
+      btnCods.forEach(function(b){ b.disabled = false; b.classList.remove('scelto'); });
+      risposto = false;
+      prontoDa = Date.now() + 400;
       if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
       idxCur.textContent = idx + 1;
       progressBar.style.width = ((idx / queue.length) * 100) + '%';
     }
 
-    function rispondi(cod){
+    function rispondi(cod, btn){
+      if (risposto || Date.now() < prontoDa) return;
+      risposto = true;
       var p = queue[idx];
       btnCods.forEach(function(b){ b.disabled = true; });
+      if (btn) btn.classList.add('scelto');
+      if (window.AudioSintetico) { if (cod === p.cod) window.AudioSintetico.dingPositivo(); else window.AudioSintetico.tonoNeutro(); }
       var CODNAMES = { rosso:'ROSSO', giallo:'GIALLO', verde:'VERDE', nero:'NERO' };
       if (cod === p.cod){
         score++; scoreEl.textContent = score;
@@ -420,12 +433,16 @@
     }
 
     function next(){
+      if (!risposto || Date.now() < prontoDa) return;
+      risposto = false;
       idx++;
       if (idx >= queue.length) fine();
       else mostra();
     }
 
     function fine(){
+      if (finito) return;
+      finito = true;
       game.classList.add('hide'); endScreen.classList.remove('hide');
       progressBar.style.width = '100%';
       document.getElementById('end-score').textContent = score + '/' + queue.length;
@@ -443,7 +460,7 @@
     document.getElementById('start-btn').addEventListener('click', start);
     document.getElementById('restart-btn').addEventListener('click', start);
     document.getElementById('next-btn').addEventListener('click', next);
-    btnCods.forEach(function(b){ b.addEventListener('click', function(){ rispondi(b.getAttribute('data-cod')); }); });
+    btnCods.forEach(function(b){ b.addEventListener('click', function(){ rispondi(b.getAttribute('data-cod'), b); }); });
   })();
   </script>
   <script src="/giochi/assets/js/coach.js" defer></script>

@@ -34,6 +34,9 @@
       background: var(--rag-arancio); color: var(--rag-blu); border-color: var(--rag-arancio);
     }
     .choice-btn:focus-visible { outline: 3px solid #ffbe2e; outline-offset: 2px; }
+    .choice-btn:disabled { cursor: default; opacity: .55; background: rgba(255,255,255,0.08); color: #fff; border-color: rgba(255,255,255,0.2); }
+    .choice-btn.scelta-tua, .choice-btn.scelta-tua:disabled { opacity: 1; background: rgba(255,190,46,0.22); border-color: var(--rag-arancio); }
+    .choice-fb .btn { min-height: 44px; }
     .choice-fb {
       background: rgba(255,190,46,0.14); border-left: 4px solid var(--rag-arancio);
       color: #fff; padding: .8rem 1rem; border-radius: 8px; margin-top: .4rem;
@@ -113,6 +116,7 @@
     </div>
   </main>
   <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/giochi/assets/js/audio-sintetico.js"></script>
   <script src="/app-shared/site-chrome.js"></script>
   <script src="/giochi/assets/js/progressione.js"></script>
   <script src="/giochi/assets/js/attestato.js"></script>
@@ -215,7 +219,7 @@
         testo: 'La chiamata segnala "boato fortissimo" in via degli Olmi. Cinque minuti dopo arriva un\'altra chiamata: stessa via, stessa descrizione. La funzione «Telecomunicazioni d\'emergenza» verifica: era un tuono di un temporale fuori zona, niente di legato al sisma. Cosa fai?',
         scelte: [
           { testo: 'Annoto sul registro come "duplicato verificato — non sismico", senza inviare squadre. Risorse risparmiate per emergenze vere.', next: 'finale_buono', delta: { sicurezza: 1, aiutate: 2 }, fb: 'Verificare e annotare evita di sprecare squadre: in emergenza le risorse servono alle richieste reali.' },
-          { testo: 'Mando comunque una squadra a controllare: meglio sicuri che dispiaciuti.', next: 'finale_medio', delta: { sicurezza: 0, aiutate: 0 }, fb: 'Comprensibile, ma la verifica era già stata fatta dalla funzione «Telecomunicazioni d\'emergenza»: mandare squadre su segnalazioni chiuse toglie risorse altrove.' }
+          { testo: 'Mando comunque una squadra a controllare: meglio sicuri che dispiaciuti.', next: 'finale_medio', delta: { sicurezza: 0, aiutate: 0 }, ok: false, fb: 'Comprensibile, ma la verifica era già stata fatta dalla funzione «Telecomunicazioni d\'emergenza»: mandare squadre su segnalazioni chiuse toglie risorse altrove.' }
         ]
       },
       // Evento "shock" #2: chiamata da turista in inglese. Educa alla
@@ -241,7 +245,7 @@
         testo: 'In radio arriva un messaggio confuso da una squadra esterna. Come lo gestisci?',
         scelte: [
           { testo: 'Rispondo con la procedura ufficiale e chiedo di ripetere con formato standard.', next: 'finale_buono', delta: { sicurezza: 1, aiutate: 3 }, fb: 'Formato standard e richiesta di ripetere: così un messaggio confuso diventa un\'informazione utilizzabile.' },
-          { testo: 'Rispondo colloquialmente per fare prima.', next: 'finale_medio', delta: { sicurezza: 0, aiutate: 1 }, fb: 'Il linguaggio colloquiale in radio genera fraintendimenti proprio quando la precisione conta di più.' }
+          { testo: 'Rispondo colloquialmente per fare prima.', next: 'finale_medio', delta: { sicurezza: 0, aiutate: 1 }, ok: false, fb: 'Il linguaggio colloquiale in radio genera fraintendimenti proprio quando la precisione conta di più.' }
         ]
       },
       retrovia: {
@@ -275,9 +279,22 @@
         stTempo = document.getElementById('st-tempo');
 
     var sicurezza = 10, aiutate = 0;
+    // Doppio tocco (LIM): dopo una scelta i comandi restano fermi finche' non
+    // compare la scena successiva; appena compare, un tocco arrivato entro 400 ms
+    // e' la coda del tocco precedente e non conta.
+    var inPassaggio = false, prontoDa = 0, finito = false;
+
+    // Suono sobrio: giusta = scelta che non mette a rischio la sicurezza (o
+    // segnata ok:true), sbagliata = le altre. Scene con una sola scelta: muta.
+    function suona(c, n){
+      var A = window.AudioSintetico;
+      if (!A || n < 2) return;
+      var giusta = (c.ok !== undefined) ? c.ok : !(c.delta && c.delta.sicurezza < 0);
+      if (giusta) A.dingPositivo(); else A.tonoNeutro();
+    }
 
     function start(){
-      sicurezza = 10; aiutate = 0;
+      sicurezza = 10; aiutate = 0; finito = false;
       intro.classList.add('hide'); end.classList.add('hide');
       game.classList.remove('hide');
       show('start');
@@ -291,7 +308,10 @@
       stAiutate.textContent = aiutate;
       sceneEl.innerHTML = '<p>' + s.testo + '</p>';
       choicesEl.innerHTML = '';
+      inPassaggio = false;
+      prontoDa = Date.now() + 400;
       if (s.fine){
+        inPassaggio = true;
         setTimeout(function(){ finish(s.esito); }, 1000);
         return;
       }
@@ -301,6 +321,10 @@
         b.type = 'button';
         b.textContent = c.testo;
         b.addEventListener('click', function(){
+          if (inPassaggio || Date.now() < prontoDa) return;
+          inPassaggio = true;
+          b.classList.add('scelta-tua');
+          suona(c, s.scelte.length);
           if (c.delta){
             sicurezza = Math.max(0, sicurezza + (c.delta.sicurezza || 0));
             aiutate += (c.delta.aiutate || 0);
@@ -326,9 +350,13 @@
             box.appendChild(pEl);
             var go = document.createElement('button');
             go.type = 'button';
-            go.className = 'btn btn-warning btn-sm';
+            go.className = 'btn btn-warning';
             go.innerHTML = 'Continua <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>';
-            go.addEventListener('click', function(){ show(dest); });
+            go.addEventListener('click', function(){
+              if (go.disabled) return;
+              go.disabled = true;
+              show(dest);
+            });
             box.appendChild(go);
             choicesEl.appendChild(box);
             go.focus();
@@ -341,6 +369,8 @@
     }
 
     function finish(esito){
+      if (finito) return;
+      finito = true;
       game.classList.add('hide');
       end.classList.remove('hide');
       document.getElementById('end-sicurezza').textContent = sicurezza;

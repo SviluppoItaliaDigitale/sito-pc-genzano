@@ -33,6 +33,10 @@
       font-weight: 700; font-size: .8rem; flex-shrink: 0;
     }
     .funzione.selected .n { background: #fff; }
+    .funzione { min-height: 44px; }
+    .funzione:disabled { cursor: default; opacity: .6; }
+    .funzione.selected:disabled { opacity: 1; }
+    #assegna { min-height: 44px; }
     .evento-card {
       border-left: 5px solid var(--rag-arancio); background: #fffbf0;
       padding: .8rem 1rem; border-radius: 6px; margin-bottom: .8rem;
@@ -149,6 +153,7 @@
     </div>
   </main>
   <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/giochi/assets/js/audio-sintetico.js"></script>
   <script src="/app-shared/site-chrome.js"></script>
   <script src="/giochi/assets/js/progressione.js"></script>
   <script src="/giochi/assets/js/attestato.js"></script>
@@ -205,7 +210,10 @@
         finalMsg = document.getElementById('final-msg');
 
     var selezione = null, idx = 0, ok = 0, ko = 0;
-    var EVENTI_PARTITA = []; // popolato a inizio partita: 8 random dal pool di 10
+    // Doppio tocco (LIM): dopo «Assegna» funzioni e pulsante restano fermi
+    // finche' non arriva l'evento successivo.
+    var inPassaggio = false, finito = false;
+    var EVENTI_PARTITA = []; // popolato a inizio partita: 8 random dal pool di 16
 
     function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t;} return a; }
 
@@ -218,6 +226,7 @@
         b.innerHTML = '<span class="n">' + f.n + '</span> <i class="bi ' + f.icona + '"></i> ' + f.nome;
         b.dataset.n = f.n;
         b.addEventListener('click', function(){
+          if (inPassaggio) return;
           funzioniList.querySelectorAll('.funzione').forEach(function(x){ x.classList.remove('selected'); });
           b.classList.add('selected');
           selezione = f.n;
@@ -231,12 +240,12 @@
       intro.classList.add('hide');
       end.classList.add('hide');
       game.classList.remove('hide');
-      // Estrae 8 eventi random dal pool di 10. Mantiene l'ordine
+      // Estrae 8 eventi random dal pool di 16. Mantiene l'ordine
       // cronologico originale ma cambia quali eventi appaiono in ogni
       // partita: il giocatore non puo' memorizzare la sequenza.
       EVENTI_PARTITA = shuffle(EVENTI.slice()).slice(0, 8);
       EVENTI_PARTITA.sort(function(a, b){ return a.ora.localeCompare(b.ora); });
-      idx = 0; ok = 0; ko = 0;
+      idx = 0; ok = 0; ko = 0; inPassaggio = false; finito = false;
       corretteEl.textContent = '0'; errateEl.textContent = '0';
       timeline.innerHTML = '';
       evTotEl.textContent = EVENTI_PARTITA.length;
@@ -246,9 +255,10 @@
 
     function mostraEvento(){
       selezione = null;
+      inPassaggio = false;
       assegnaBtn.disabled = true;
       feedback.innerHTML = '';
-      funzioniList.querySelectorAll('.funzione').forEach(function(x){ x.classList.remove('selected'); });
+      funzioniList.querySelectorAll('.funzione').forEach(function(x){ x.classList.remove('selected'); x.disabled = false; });
       var ev = EVENTI_PARTITA[idx];
       evNEl.textContent = idx+1;
       oreEl.textContent = ev.ora;
@@ -256,12 +266,18 @@
     }
 
     assegnaBtn.addEventListener('click', function(){
-      if (selezione == null) return;
+      if (selezione == null || inPassaggio) return;
+      inPassaggio = true;
+      assegnaBtn.disabled = true;
+      funzioniList.querySelectorAll('.funzione').forEach(function(x){ x.disabled = true; });
       var ev = EVENTI_PARTITA[idx];
       var corretto = (selezione === ev.corretta);
       var tl = document.createElement('div');
       tl.className = 'tl-item ' + (corretto ? 'ok' : 'ko');
-      tl.innerHTML = '<strong>' + ev.ora + '</strong> &middot; F' + selezione + (corretto ? ' ✓' : ' ✗ (giusta: F' + ev.corretta + ')');
+      tl.innerHTML = '<strong>' + ev.ora + '</strong> &middot; F' + selezione + (corretto
+        ? ' <i class="bi bi-check-lg text-success" aria-hidden="true"></i><span class="visually-hidden">giusta</span>'
+        : ' <i class="bi bi-x-lg text-danger" aria-hidden="true"></i> (giusta: F' + ev.corretta + ')');
+      if (window.AudioSintetico) { if (corretto) window.AudioSintetico.dingPositivo(); else window.AudioSintetico.tonoNeutro(); }
       timeline.appendChild(tl);
       if (corretto){
         ok++; corretteEl.textContent = ok;
@@ -284,6 +300,8 @@
     });
 
     function finish(){
+      if (finito) return;
+      finito = true;
       game.classList.add('hide');
       end.classList.remove('hide');
       finalScore.textContent = ok;

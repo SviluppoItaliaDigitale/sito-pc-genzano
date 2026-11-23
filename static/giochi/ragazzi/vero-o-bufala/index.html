@@ -45,6 +45,8 @@
     .btn-scelta.bufala { background: var(--rag-rosso); color: #fff; }
     .btn-scelta:hover, .btn-scelta:focus-visible { filter: brightness(1.08); outline: 3px solid var(--rag-blu); outline-offset: 2px; }
     .btn-scelta:disabled { opacity: .6; cursor: not-allowed; }
+    .btn-scelta { min-height: 48px; }
+    .btn-scelta.scelto, .btn-scelta.scelto:disabled { opacity: 1; outline: 4px solid var(--rag-blu); outline-offset: 2px; }
     .esito {
       margin-top: 1rem; padding: .8rem 1rem; border-radius: 8px;
       font-size: .95rem; line-height: 1.5;
@@ -179,6 +181,7 @@
   </main>
 
   <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/giochi/assets/js/audio-sintetico.js"></script>
   <script src="/app-shared/site-chrome.js"></script>
   <script src="/giochi/assets/js/progressione.js"></script>
   <script src="/giochi/assets/js/attestato.js"></script>
@@ -203,8 +206,8 @@
           'Inoltrato 100+ volte (catena tipica WhatsApp)'
         ] },
       { canale: 'Regione Lazio — Centro Funzionale Regionale',
-        data: 'Bollettino di vigilanza — 15 aprile 2026',
-        testo: 'Per la giornata di domani 16 aprile è prevista allerta GIALLA per rischio idrogeologico sulla zona di allerta B (bacini centrali). Consultare il bollettino su regione.lazio.it.',
+        data: 'Bollettino di criticità — 15 aprile 2026',
+        testo: 'Per la giornata di domani 16 aprile è prevista allerta GIALLA per rischio idrogeologico sulla zona di allerta F (Bacini Costieri Sud). Consultare il bollettino su regione.lazio.it.',
         ufficiale: true,
         spiega: 'Messaggio di esempio, scritto per il gioco: non è un comunicato reale. Bollettino conforme al protocollo regionale: zona di allerta identificata con codice, livello colore, rimando al sito ufficiale.' },
       { canale: 'Pagina Facebook "Meteo Lazio estremo"',
@@ -274,11 +277,11 @@
         ufficiale: false,
         spiega: 'Messaggio di esempio, scritto per il gioco: non è un comunicato reale. Phishing. Il DPC non eroga contributi diretti ai cittadini via email e non usa @gmail.com.',
         segnali: [
-          'Mittente non istituzionale (un dominio @gmail.com, mai @governo.it)',
+          'Mittente non istituzionale: un indirizzo @gmail.com, non quello di un ente (il Dipartimento scrive da @protezionecivile.it)',
           'Promessa di denaro per attirare il click',
           'Richiede di cliccare un link o scaricare un allegato',
           'Linguaggio formale ma generico ("Gentile cittadino")',
-          'Le PA italiane non comunicano contributi via email diretta'
+          'I contributi pubblici si chiedono con bandi pubblicati sui siti degli enti, non con un allegato via email'
         ] },
       { canale: 'Protezione Civile Genzano — sito ufficiale',
         data: 'comunicazione del 14 aprile 2026',
@@ -367,6 +370,9 @@
     var btnUff = document.querySelector('.btn-scelta.ufficiale'),
         btnBuf = document.querySelector('.btn-scelta.bufala');
     var queue = [], idx = 0, score = 0, uff = 0, buf = 0;
+    // Doppio tocco (LIM): una risposta per notizia, un solo «Avanti»; un tocco
+    // che arriva entro 400 ms dal cambio di notizia non conta.
+    var risposto = false, prontoDa = 0, finito = false;
 
     function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t;} return a; }
 
@@ -377,7 +383,7 @@
       // Pool 24 notizie -> 12 random a partita. Diverse ad ogni gioco e mai
       // tutte uguali: il giocatore non puo' memorizzare le 19 in 2 partite.
       queue = shuffle(NOTIZIE.slice()).slice(0, 12);
-      idx = 0; score = 0; uff = 0; buf = 0;
+      idx = 0; score = 0; uff = 0; buf = 0; finito = false;
       scoreEl.textContent = '0';
       idxTot.textContent = queue.length;
       mostra();
@@ -393,14 +399,20 @@
       esito.innerHTML = '';
       nextWrap.classList.add('hide');
       btnUff.disabled = false; btnBuf.disabled = false;
+      btnUff.classList.remove('scelto'); btnBuf.classList.remove('scelto');
+      risposto = false;
+      prontoDa = Date.now() + 400;
       idxCur.textContent = (idx + 1);
       progressBar.style.width = ((idx / queue.length) * 100) + '%';
       if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
     }
 
     function rispondi(scelta){
+      if (risposto || Date.now() < prontoDa) return;
+      risposto = true;
       var n = queue[idx];
       btnUff.disabled = true; btnBuf.disabled = true;
+      (scelta === 'ufficiale' ? btnUff : btnBuf).classList.add('scelto');
       // Costruisce highlight dei segnali tipici (bufala o ufficiale): se la
        // notizia ha un array `segnali`, lo mostro come bullet sotto la
        // spiegazione. Cosi' il giocatore impara a riconoscere il PATTERN, non
@@ -415,6 +427,7 @@
           + '</ul></div>';
       }
       var giusto = (scelta === 'ufficiale' && n.ufficiale) || (scelta === 'bufala' && !n.ufficiale);
+      if (window.AudioSintetico) { if (giusto) window.AudioSintetico.dingPositivo(); else window.AudioSintetico.tonoNeutro(); }
       if (giusto){
         score++;
         if (n.ufficiale) uff++; else buf++;
@@ -431,7 +444,7 @@
         // Layer 3: hint con criteri per riconoscere fonti
         if (window.GameCoach && window.GameCoach.hint) {
           var tip = n.ufficiale
-            ? 'Le fonti ufficiali (DPC, Regione, Comune, INGV, ARPA, ISS, EENA) hanno: dato preciso, periodo definito, rimando al sito istituzionale, nessun appello emotivo.'
+            ? 'Le fonti ufficiali (DPC, Regione, Comune, INGV, ARPA, ISS) hanno: dato preciso, periodo definito, rimando al sito istituzionale, nessun appello emotivo.'
             : 'Le bufale hanno: appelli urgenti a "condividere", "fonti interne anonime", numeri allarmanti senza fonte, link abbreviati o mittente non istituzionale (gmail, gruppi anonimi, video virali).';
           window.GameCoach.hint(tip, '/social-media-policy/');
         }
@@ -441,12 +454,16 @@
     }
 
     function next(){
+      if (!risposto || Date.now() < prontoDa) return;
+      risposto = false;
       idx++;
       if (idx >= queue.length) fine();
       else mostra();
     }
 
     function fine(){
+      if (finito) return;
+      finito = true;
       game.classList.add('hide');
       endScreen.classList.remove('hide');
       progressBar.style.width = '100%';

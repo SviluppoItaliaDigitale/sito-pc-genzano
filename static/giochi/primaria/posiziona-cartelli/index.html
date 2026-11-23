@@ -362,6 +362,7 @@
 
   <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
   <script src="/app-shared/site-chrome.js"></script>
+  <script src="/giochi/assets/js/audio-sintetico.js"></script>
   <script src="/giochi/assets/js/progressione.js"></script>
   <script src="/giochi/assets/js/attestato.js"></script>
   <script src="/giochi/assets/js/comune.js"></script>
@@ -383,7 +384,7 @@
     var CART = {
       fuoco:      { id: 'fuoco',      kind: 'danger', iso: ISO_BASE + 'materiale-infiammabile.svg', label: 'Pericolo incendio' },
       elettrico:  { id: 'elettrico',  kind: 'danger', iso: ISO_BASE + 'pericolo-elettrico.svg',     label: 'Alta tensione' },
-      caduta:     { id: 'caduta',     kind: 'danger', iso: ISO_BASE + 'pericolo-generico.svg',      label: 'Rischio di caduta' },
+      caduta:     { id: 'caduta',     kind: 'danger', iso: ISO_BASE + 'pericolo-caduta.svg',        label: 'Rischio di caduta' },
       chimico:    { id: 'chimico',    kind: 'danger', iso: ISO_BASE + 'pericolo-tossico.svg',       label: 'Sostanze pericolose' },
       vietatofumare:    { id: 'vietatofumare',    kind: 'ban', iso: ISO_BASE + 'vietato-fumare.svg',    label: 'Vietato fumare' },
       vietatoingresso:  { id: 'vietatoingresso',  kind: 'ban', iso: ISO_BASE + 'vietato-pedoni.svg',    label: 'Vietato entrare' },
@@ -509,6 +510,13 @@
     var current = null;   // scena corrente
     var placement = {};   // { segnoId: slotId | null }
     var selected = null;  // sign selezionato con tastiera o col tocco
+    // Doppio tocco: dopo la verifica riuscita i cartelli e «Verifica» restano
+    // fermi fino alla schermata finale, che parte (e salva) una volta sola.
+    var inPassaggio = false;
+    function suono(giusta) {
+      if (!window.AudioSintetico) return;
+      if (giusta) window.AudioSintetico.dingPositivo(); else window.AudioSintetico.tonoNeutro();
+    }
     // toccando il vassoio con un cartello scelto, il cartello torna lì
     trayEl.addEventListener('click', function () {
       if (!selected) return;
@@ -544,6 +552,8 @@
 
     function startScene(s) {
       current = s;
+      inPassaggio = false;
+      checkBtn.disabled = false;
       placement = {};
       selected = null;
       selectScreen.classList.add('hide');
@@ -700,6 +710,7 @@
     }
 
     function placeSign(cid, slotId) {
+      if (inPassaggio) return;
       // se lo slot è occupato, scambia o rimuovi l'altro
       if (slotId) {
         var other = slotOccupiedBy(slotId);
@@ -852,6 +863,7 @@
     }
 
     function verify() {
+      if (inPassaggio || !current) return;
       var ok = 0, ko = 0, unplaced = 0;
       current.cartelli.forEach(function (cid) {
         var slotId = placement[cid];
@@ -878,10 +890,15 @@
         return;
       }
       if (ok === current.cartelli.length) {
-        setTimeout(finish, 700);
+        inPassaggio = true;
+        checkBtn.disabled = true;
+        suono(true);
+        var scena = current;
+        setTimeout(function () { if (current === scena && inPassaggio) finish(); }, 700);
         if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
       } else {
         feedbackMsg.className = 'alert alert-warning mt-3';
+        suono(false);
         feedbackMsg.textContent = 'Hai ' + ko + ' cartell' + (ko === 1 ? 'o' : 'i') + ' da spostare. Sposta quelli sbagliati e riprova.';
         feedbackMsg.classList.remove('hide');
         if (window.GameCoach && window.GameCoach.hint) {
@@ -908,11 +925,13 @@
 
     checkBtn.addEventListener('click', verify);
     resetBtn.addEventListener('click', function () {
+      if (inPassaggio) return;
       placement = {};
       feedbackMsg.classList.add('hide');
       buildScene(); buildTray(); updateHud();
     });
     backBtn.addEventListener('click', function () {
+      inPassaggio = false;
       gameScreen.classList.add('hide');
       selectScreen.classList.remove('hide');
     });

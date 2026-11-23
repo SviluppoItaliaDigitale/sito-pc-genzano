@@ -120,9 +120,9 @@
     var ROUND_2 = [
       { emoji: '🌧️', q: 'Piove tanto. Vai a giocare vicino al fiume?', si: false, tip: 'No! Quando piove tanto, stai lontano dai fiumi.' },
       { emoji: '🧯', q: 'Un adulto spegne un piccolo fuoco con l\'estintore. Lo guardi da lontano?', si: true, tip: 'Sì! Restare lontano è la scelta giusta.' },
-      { emoji: '🌳', q: 'C\'è un terremoto. Ti metti sotto il tavolo resistente?', si: true, tip: 'Sì! Sotto un tavolo robusto sei più al sicuro.' },
+      { emoji: '🏠', q: 'C\'è un terremoto. Ti metti sotto il tavolo resistente?', si: true, tip: 'Sì! Sotto un tavolo robusto sei più al sicuro.' },
       { emoji: '🚨', q: 'Senti un allarme: devi nasconderti senza dirlo a nessuno?', si: false, tip: 'No! Chiama sempre un grande vicino a te.' },
-      { emoji: '🚪', q: 'C\'è fumo in casa. Esci di corsa per le scale?', si: true, tip: 'Sì! Le scale sono sicure, mai l\'ascensore.' }
+      { emoji: '🚪', q: 'C\'è fumo in casa. Esci con un grande usando le scale?', si: true, tip: 'Sì! Si esce dalle scale, mai con l\'ascensore.' }
     ];
     var ROUND_3 = [
       { emoji: '⛈️', q: 'C\'è un temporale forte. Stai sotto un albero alto?', si: false, tip: 'No! L\'albero attira i fulmini. Vai dentro casa.' },
@@ -148,7 +148,7 @@
       { emoji: '💡', q: 'Esci da una stanza. Spegni la luce per non sprecare energia?', si: true, tip: 'Sì! Spegnere la luce aiuta tutti e protegge il pianeta.' },
       { emoji: '🧴', q: 'Trovi una bottiglia con il teschio disegnato sopra. La bevi se hai sete?', si: false, tip: 'No! Il teschio vuol dire VELENO. Mai bere bottiglie sconosciute.' },
       { emoji: '🚿', q: 'Mentre ti lavi i denti, lasci l\'acqua aperta tutto il tempo?', si: false, tip: 'No! Chiudi l\'acqua: si risparmia tanta acqua preziosa.' },
-      { emoji: '🪟', q: 'Senti il suono dell\'allarme antincendio a casa. Apri la finestra e chiami un grande?', si: true, tip: 'Sì! Avvisi un adulto e seguite insieme il piano di fuga.' }
+      { emoji: '🚨', q: 'Senti il suono dell\'allarme antincendio a casa. Chiami subito un grande?', si: true, tip: 'Sì! Avvisi un adulto e seguite insieme il piano di fuga.' }
     ];
     var ROUNDS = [ROUND_1, ROUND_2, ROUND_3, ROUND_4, ROUND_5];
 
@@ -168,6 +168,9 @@
     var roundUpTitolo = document.getElementById('round-up-titolo');
     var roundUpMsg = document.getElementById('round-up-msg');
     var idx = 0, stars = 0, queue = [], roundIdx = 0;
+    // Doppio tocco sul pulsante che avvia una partita, un livello o un round: il secondo tocco
+    // non deve finire sulla risposta che compare sotto il dito. Per mezzo secondo si ignora.
+    var sbloccoAl = 0;
 
     function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t;} return a; }
 
@@ -178,12 +181,15 @@
       game.classList.remove('hide');
       queue = shuffle(ROUNDS[roundIdx].slice());
       idx = 0;
+      sbloccoAl = Date.now() + 500;
       levelBadge.textContent = 'Round ' + (roundIdx + 1) + ' di ' + ROUNDS.length;
       show();
       if (window.AudioSintetico) window.AudioSintetico.init();
     }
 
     function start(){
+      // Doppio tocco su «Iniziamo» o «Ancora»: la partita parte una volta sola.
+      if (!game.classList.contains('hide')) return;
       roundIdx = 0; stars = 0;
       starsEl.textContent = '0';
       avviaRound();
@@ -200,7 +206,10 @@
       if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
     }
 
+    var inPassaggio = false;
     function answer(val){
+      if (inPassaggio || Date.now() < sbloccoAl) return;
+      inPassaggio = true;
       var s = queue[idx];
       var correct = (val === s.si);
       btnSi.disabled = true; btnNo.disabled = true;
@@ -222,6 +231,7 @@
         }
       }
       setTimeout(function(){
+        inPassaggio = false;
         idx++;
         if (idx >= queue.length) fineRound();
         else show();
@@ -258,6 +268,8 @@
     document.getElementById('start-btn').addEventListener('click', start);
     document.getElementById('restart').addEventListener('click', start);
     document.getElementById('next-round').addEventListener('click', function(){
+      // Doppio tocco: il secondo tocco non deve saltare un round né cercarne uno che non esiste.
+      if (roundUp.classList.contains('hide') || roundIdx >= ROUNDS.length - 1) return;
       roundIdx++;
       avviaRound();
     });

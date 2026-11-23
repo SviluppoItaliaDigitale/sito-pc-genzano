@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Il Rifugio di Tina — Giochi Piccoli Esploratori</title>
   <link rel="canonical" href="https://www.protezionecivilegenzano.it/giochi/infanzia/rifugio-tina/">
-  <meta name="description" content="Trema la terra! 6 scene: trova il posto sicuro dove Tina si deve riparare in cucina, a scuola, in giardino, in cameretta, al supermercato e in bagno. Gioco per bambini dai 3 ai 6 anni.">
+  <meta name="description" content="Trema la terra! 5 scene: trova il posto sicuro dove Tina si deve riparare in cucina, a scuola, in giardino, in cameretta e al supermercato. Gioco per bambini dai 3 ai 6 anni.">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
@@ -86,7 +86,6 @@
         <span class="bollino">3</span>
         <span class="bollino">4</span>
         <span class="bollino">5</span>
-        <span class="bollino">6</span>
       </div>
       <div class="scena-label" id="scena-label">🏠 In cucina</div>
       <div class="tts-bambini-wrap">
@@ -285,32 +284,6 @@
         </g>\
       </svg>';
 
-    // Scena 6: Bagno — vasca con bordi solidi (giusto), sotto specchio (sbagliato), accanto al vetro doccia (sbagliato)
-    var SCENA_BAGNO = '\
-      <svg viewBox="0 0 500 340" role="img" aria-label="Scena bagno">\
-        <rect x="0" y="0" width="500" height="260" fill="#e8f8ff"/>\
-        <rect x="0" y="260" width="500" height="80" fill="#d0e0e8"/>\
-        <!-- Specchio (sbagliato) -->\
-        <g class="spot" data-pos="specchio" tabindex="0" role="button" aria-label="Sotto lo specchio">\
-          <rect x="40" y="30" width="120" height="100" fill="#e6f4f4" stroke="#888" stroke-width="4"/>\
-          <line x1="55" y1="50" x2="80" y2="50" stroke="#fff" stroke-width="3"/>\
-          <text x="100" y="155" font-size="12" font-weight="800" fill="#8B1F2E" text-anchor="middle">specchio</text>\
-        </g>\
-        <!-- Vetro doccia (sbagliato) -->\
-        <g class="spot" data-pos="doccia" tabindex="0" role="button" aria-label="Accanto al vetro della doccia">\
-          <rect x="380" y="40" width="100" height="180" fill="#f0fbff" stroke="#17324D" stroke-width="4" opacity="0.7"/>\
-          <circle cx="430" cy="60" r="6" fill="#888"/>\
-          <text x="430" y="245" font-size="12" font-weight="800" fill="#8B1F2E" text-anchor="middle">vetro doccia</text>\
-        </g>\
-        <!-- Vasca (GIUSTO) -->\
-        <g class="spot" data-pos="vasca" tabindex="0" role="button" aria-label="Dentro la vasca con i bordi solidi">\
-          <ellipse cx="250" cy="200" rx="100" ry="40" fill="#fff" stroke="#17324D" stroke-width="4"/>\
-          <ellipse cx="250" cy="200" rx="80" ry="28" fill="#cfe9ff"/>\
-          <rect x="160" y="180" width="180" height="20" fill="#fff" stroke="#17324D" stroke-width="3"/>\
-          <text x="250" y="270" font-size="14" font-weight="800" fill="#2F5A25" text-anchor="middle">vasca</text>\
-        </g>\
-      </svg>';
-
     var SCENE = [
       {
         label: '🏠 In cucina',
@@ -361,26 +334,18 @@
           scaffale: 'Attento! Le scatole dallo scaffale alto possono cadere.',
           frigo: 'Attento! Il vetro del frigo può rompersi.'
         }
-      },
-      {
-        label: '🛁 In bagno',
-        html: SCENA_BAGNO,
-        giusto: 'vasca',
-        tipGiusto: 'Sì! Dentro la vasca con i bordi solidi sei protetto.',
-        tipSbagliato: {
-          specchio: 'Attento! Lo specchio può cadere e rompersi.',
-          doccia: 'Attento! Il vetro della doccia è pericoloso.'
-        }
       }
     ];
 
     function shuffle(a){ for (var i = a.length - 1; i > 0; i--){ var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
     // Mescola le scene a inizio partita per rigiocabilita' (prima erano sempre
-    // nello stesso ordine: cucina, scuola, giardino, cameretta, supermercato,
-    // bagno).
+    // nello stesso ordine: cucina, scuola, giardino, cameretta, supermercato).
     SCENE = shuffle(SCENE);
 
     var idx = 0, errori = 0, locked = false;
+    // Doppio tocco sul pulsante che avvia una partita, un livello o un round: il secondo tocco
+    // non deve finire sulla risposta che compare sotto il dito. Per mezzo secondo si ignora.
+    var sbloccoAl = 0;
     var container = document.getElementById('scena-container');
     var labelEl = document.getElementById('scena-label');
     var feedback = document.getElementById('feedback');
@@ -406,6 +371,18 @@
         }
       }, 200);
 
+      // Area di tocco piena: senza questo rettangolo trasparente si poteva toccare solo il disegno
+      // (le gambe del tavolo), non lo spazio sotto, che è proprio dove il bambino tocca.
+      container.querySelectorAll('.spot').forEach(function(spot){
+        try {
+          var bb = spot.getBBox();
+          var area = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+          area.setAttribute('x', bb.x - 6); area.setAttribute('y', bb.y - 6);
+          area.setAttribute('width', bb.width + 12); area.setAttribute('height', bb.height + 12);
+          area.setAttribute('fill', 'transparent');
+          spot.insertBefore(area, spot.firstChild);
+        } catch (err) { /* getBBox non disponibile: resta l'area del disegno */ }
+      });
       container.querySelectorAll('.spot').forEach(function(spot){
         spot.addEventListener('click', function(){ scegli(spot, s); });
         spot.addEventListener('keydown', function(e){
@@ -415,7 +392,7 @@
     }
 
     function scegli(spot, s){
-      if (locked) return;
+      if (locked || Date.now() < sbloccoAl) return;
       var pos = spot.getAttribute('data-pos');
       if (pos === s.giusto){
         locked = true;
@@ -457,9 +434,11 @@
     }
 
     document.getElementById('restart').addEventListener('click', function(){
+      if (endScreen.classList.contains('hide')) return;
       // Rimescola le scene anche al restart per non ripetere stessa sequenza
       SCENE = shuffle(SCENE);
       idx = 0; errori = 0;
+      sbloccoAl = Date.now() + 500;
       endScreen.classList.add('hide');
       var cartaNascosta = document.querySelector('.inf-card.hide');
       if (cartaNascosta) cartaNascosta.classList.remove('hide');

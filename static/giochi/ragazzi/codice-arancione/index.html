@@ -26,6 +26,9 @@
       font-size: .88rem;
     }
     .risorsa:hover { border-color: var(--rag-blu); }
+    .risorsa { min-height: 48px; text-align: left; }
+    .risorsa small { flex-shrink: 0; font-weight: 700; }
+    #verifica { min-height: 44px; }
     .risorsa.attiva { background: var(--rag-blu); color: #fff; border-color: var(--rag-blu); }
     .risorsa .q {
       position: absolute; top: -8px; right: -8px;
@@ -124,7 +127,7 @@
             <div class="coa-grid">
               <div class="rag-panel">
                 <h3 class="h6">Risorse da allestire</h3>
-                <p class="small text-muted">Clicca per aggiungere/rimuovere.</p>
+                <p class="small text-muted">Tocca una risorsa per aggiungerla, toccala di nuovo per toglierla. Il numero a destra è il costo.</p>
                 <div id="risorse" class="risorse-grid"></div>
               </div>
               <div class="rag-panel">
@@ -161,6 +164,7 @@
     </div>
   </main>
   <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/giochi/assets/js/audio-sintetico.js"></script>
   <script src="/app-shared/site-chrome.js"></script>
   <script src="/giochi/assets/js/progressione.js"></script>
   <script src="/giochi/assets/js/attestato.js"></script>
@@ -181,13 +185,13 @@
       { id: 'ludoteca', label: 'Area bambini protetta', costo: 15, bambini: true, icon: 'bi-balloon-heart-fill' },
       { id: 'generatore', label: 'Generatore elettrico + illuminazione', costo: 20, essenziale: 'elettricita', icon: 'bi-lightning-charge' },
       { id: 'telecom', label: 'Ponte radio + wifi emergenza', costo: 15, essenziale: 'telecom', icon: 'bi-broadcast' },
-      { id: 'sicurezza', label: 'Servizio d\'ordine (VVUU + volontari)', costo: 15, essenziale: 'sicurezza', icon: 'bi-shield-fill' },
+      { id: 'sicurezza', label: 'Vigilanza dell\'area (Polizia locale)', costo: 15, essenziale: 'sicurezza', icon: 'bi-shield-fill' },
       { id: 'acqua', label: 'Cisterna acqua potabile (1500 L)', costo: 15, essenziale: 'acqua', icon: 'bi-droplet-half' },
       { id: 'riscaldamento', label: 'Riscaldatori d\'aria + coperte', costo: 20, essenziale: 'caldo', icon: 'bi-thermometer-sun' },
-      { id: 'climatizzazione', label: 'Ventilatori + ombrari', costo: 18, essenziale: 'fresco', icon: 'bi-wind' }
+      { id: 'climatizzazione', label: 'Ventilatori + gazebo ombreggianti', costo: 18, essenziale: 'fresco', icon: 'bi-wind' }
     ];
 
-    /* 3 scenari con popolazione, vincoli e priorita' diverse. Random a inizio
+    /* 4 scenari con popolazione, vincoli e priorita' diverse. Random a inizio
        partita. Le priorita' specifiche (es. "fresco" in incendio AIB estivo)
        diventano essenziali nella checklist finale. */
     var SCENARI = [
@@ -261,6 +265,9 @@
     var scenario = null;
     var selezione = {};
     var sopravvenutoFatto = false;
+    // Doppio tocco (LIM): un tocco ripetuto sulla stessa risorsa entro 350 ms e'
+    // la coda del primo e non la toglie di nuovo; «Allestimento pronto» vale una volta.
+    var ultimoTocco = { id: null, t: 0 }, finito = false;
 
     var intro = document.getElementById('intro'),
         game = document.getElementById('game'),
@@ -286,6 +293,7 @@
       scenario = JSON.parse(JSON.stringify(SCENARI[Math.floor(Math.random() * SCENARI.length)]));
       selezione = {};
       sopravvenutoFatto = false;
+      finito = false;
       intro.classList.add('hide'); end.classList.add('hide'); game.classList.remove('hide');
       sopravBox.classList.add('hide');
       // Aggiorna intestazione e briefing
@@ -307,8 +315,12 @@
         var b = document.createElement('button');
         b.className = 'risorsa' + (attiva ? ' attiva' : '');
         b.type = 'button';
-        b.innerHTML = '<i class="bi ' + r.icon + '"></i> <span>' + r.label + '</span><small class="ms-auto">' + r.costo + '</small>' + (attiva ? '<span class="q">✓</span>' : '');
+        b.innerHTML = '<i class="bi ' + r.icon + '"></i> <span>' + r.label + '</span><small class="ms-auto">' + r.costo + '<span class="visually-hidden"> unità di budget</span></small>' + (attiva ? '<span class="q" aria-hidden="true"><i class="bi bi-check-lg"></i></span>' : '');
+        b.setAttribute('aria-pressed', attiva ? 'true' : 'false');
         b.addEventListener('click', function(){
+          var ora = Date.now();
+          if (ultimoTocco.id === r.id && ora - ultimoTocco.t < 350) return;
+          ultimoTocco = { id: r.id, t: ora };
           if (attiva) delete selezione[r.id];
           else selezione[r.id] = r;
           render();
@@ -360,16 +372,21 @@
         });
       }
       // Mostra il box sopravvenuto
-      sopravTit.textContent = '🔔 ' + scenario.sopravvenuto.titolo;
+      sopravTit.innerHTML = '<i class="bi bi-bell-fill me-1" aria-hidden="true"></i>';
+      sopravTit.appendChild(document.createTextNode(scenario.sopravvenuto.titolo));
+      if (window.AudioSintetico && window.AudioSintetico.campanello) window.AudioSintetico.campanello();
       sopravTxt.innerHTML = scenario.sopravvenuto.testo + '<br><small class="text-muted">Budget aggiornato: ' + scenario.budget + ' unità · Posti letto target: ' + scenario.popolazione + '</small>';
       sopravBox.classList.remove('hide');
       targetPosti.textContent = scenario.popolazione;
       aggiornaDashboard();
-      // Auto-nasconde il box dopo 8 secondi (ma resta lo stato aggiornato)
-      setTimeout(function(){ sopravBox.classList.add('hide'); }, 8000);
+      // Il riquadro resta visibile fino alla fine dell'allestimento: sparire
+      // dopo pochi secondi toglieva l'informazione a chi legge piu' lentamente
+      // (WCAG 2.2.1, tempi regolabili).
     }
 
     document.getElementById('verifica').addEventListener('click', function(){
+      if (finito) return;
+      finito = true;
       var tot = 0, posti = 0, ig = 0, pasti = 0;
       var san = false, access = false, bambini = false;
       var prioCoperte = {};
@@ -401,7 +418,7 @@
         var label = ({
           elettricita: 'Alimentazione elettrica e illuminazione',
           telecom: 'Telecomunicazioni di emergenza',
-          sicurezza: 'Servizio d\'ordine',
+          sicurezza: 'Vigilanza dell\'area (Polizia locale)',
           acqua: 'Cisterna acqua potabile',
           fresco: 'Climatizzazione (ondata calore)',
           caldo: 'Riscaldamento (freddo)',

@@ -364,7 +364,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { text: '113', correct: false },
                 { text: '117', correct: false }
             ],
-            explanation: 'Nel Lazio il 112 è il numero unico di emergenza, anche per gli incendi boschivi. La centrale manda subito i soccorsi giusti: Vigili del Fuoco, Forestale o Protezione Civile.'
+            explanation: 'Nel Lazio il 112 è il numero unico di emergenza, anche per gli incendi boschivi. La centrale manda subito i soccorsi giusti: Vigili del Fuoco e squadre antincendio boschivo.'
         },
         {
             category: 'numeri',
@@ -728,7 +728,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { text: 'Incendi boschivi', correct: true },
                 { text: 'Nevicate intense', correct: false }
             ],
-            explanation: 'D\'estate (nel 2026 dal 15 giugno al 15 ottobre) la vegetazione dei boschi dei Castelli Romani può prendere fuoco molto facilmente. Nel Lazio per segnalare un incendio boschivo si chiama il 112, il numero unico di emergenza.'
+            explanation: 'D\'estate (a Genzano, nel 2026, il periodo di grave pericolosità va dal 17 giugno al 15 ottobre) la vegetazione dei boschi dei Castelli Romani può prendere fuoco molto facilmente. Nel Lazio per segnalare un incendio boschivo si chiama il 112, il numero unico di emergenza.'
         },
 
         // ═══════════════════════════════════════
@@ -911,7 +911,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { text: 'Spegnere l’auto e aspettare', correct: false },
                 { text: 'Aprire i finestrini', correct: false }
             ],
-            explanation: 'Anche 30 cm d’acqua possono far galleggiare un’auto. Nei sottopassi l’acqua si raccoglie in fretta: non attraversare mai.'
+            explanation: 'Circa 30 cm d’acqua che scorre portano via la maggior parte delle auto. Nei sottopassi l’acqua si raccoglie in fretta: non attraversare mai.'
         },
         {
             category: 'alluvione',
@@ -922,7 +922,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { text: 'Un pallone e un paio di scarpe', correct: false },
                 { text: 'Una valigia di vestiti eleganti', correct: false }
             ],
-            explanation: 'Nel kit di emergenza ci sono le cose indispensabili per resistere alcune ore senza aiuto: acqua, torcia, radio, medicine, documenti.'
+            explanation: 'Nel kit di emergenza ci sono le cose indispensabili per cavarsela da soli per i primi giorni, almeno 72 ore: acqua, torcia, radio, medicine, documenti.'
         },
         {
             category: 'numeri',
@@ -955,7 +955,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { text: 'Solo di giorno', correct: false },
                 { text: 'Solo se lo dici ai genitori', correct: false }
             ],
-            explanation: 'Il 112 è gratuito e funziona sempre, anche senza credito e anche senza SIM in alcuni casi. È il numero da insegnare a tutti.'
+            explanation: 'Il 112 è gratuito e funziona sempre, anche senza credito e senza SIM. È il numero da insegnare a tutti.'
         },
         {
             category: 'zaino',
@@ -1036,14 +1036,14 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             category: 'protezione-civile',
-            question: 'Qual è il colore ufficiale della Protezione Civile in Italia?',
+            question: 'Di che colore è la divisa operativa dei volontari di Protezione Civile?',
             answers: [
                 { text: 'Rosso', correct: false },
-                { text: 'Blu e arancione (alta visibilità)', correct: true },
-                { text: 'Verde e giallo', correct: false },
+                { text: 'Giallo ad alta visibilità, con bande che riflettono la luce', correct: true },
+                { text: 'Verde', correct: false },
                 { text: 'Viola', correct: false }
             ],
-            explanation: 'La divisa della Protezione Civile è blu con parti arancioni ad alta visibilità, per essere riconoscibili anche di notte o con poca luce.'
+            explanation: 'La divisa operativa dei volontari è gialla ad alta visibilità, con bande che riflettono la luce: così si vedono bene anche di notte o con poca luce.'
         },
         {
             category: 'protezione-civile',
@@ -1253,6 +1253,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function startGame() {
+        partita++;
         startScreen.classList.add('hide');
         resultsScreen.classList.add('hide');
         quizScreen.classList.remove('hide');
@@ -1278,6 +1279,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function setNextQuestion() {
+        rispostaData = false;
         resetState();
         showQuestion(shuffledQuestions[currentQuestionIndex]);
         updateProgress();
@@ -1296,12 +1298,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Doppio tocco: una sola risposta per domanda, anche con due tocchi rapidi.
+    let rispostaData = false;
+    let partita = 0;
+
     function selectAnswer(e) {
-        const selectedButton = e.target;
+        if (rispostaData) return;
+        rispostaData = true;
+        const selectedButton = e.currentTarget || e.target;
         const correct = selectedButton.dataset.correct === 'true';
         const currentQ = shuffledQuestions[currentQuestionIndex];
 
         if (correct) { score++; }
+        if (window.AudioSintetico) {
+            if (correct) window.AudioSintetico.dingPositivo(); else window.AudioSintetico.tonoNeutro();
+        }
 
         Array.from(answerButtonsElement.children).forEach(button => {
             setStatusClass(button, button.dataset.correct === 'true');
@@ -1335,7 +1346,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         scoreLive.textContent = score + ' corrette';
 
+        const questa = partita;
         setTimeout(() => {
+            if (questa !== partita) return;
             currentQuestionIndex++;
             if (currentQuestionIndex < shuffledQuestions.length) {
                 setNextQuestion();
@@ -1403,6 +1416,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     startButton.addEventListener('click', startGame);
     restartButton.addEventListener('click', () => {
+        partita++;
         resultsScreen.classList.add('hide');
         startScreen.classList.remove('hide');
     });

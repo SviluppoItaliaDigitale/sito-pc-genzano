@@ -25,6 +25,19 @@
   var VISTA = [1000, 1116];
 
   var stato = null;
+  // Doppio tocco (LIM): quando il pannello cambia schermata, un tocco che arriva
+  // entro 450 ms e' la coda del tocco precedente e non deve scegliere nulla nella
+  // schermata nuova; un tocco ripetuto sulla stessa voce di preparazione non la
+  // toglie subito dopo averla messa.
+  var prontoDa = 0, ultimaPrep = { id: null, t: 0 };
+
+  // Suono sobrio alla scelta: un «ding» per la scelta giusta, un tono neutro
+  // per le altre. Tace mentre il gioco legge ad alta voce.
+  function suona(giusta) {
+    var A = window.AudioSintetico;
+    if (!A || (window.speechSynthesis && window.speechSynthesis.speaking)) return;
+    if (giusta) A.dingPositivo(); else A.tonoNeutro();
+  }
 
   /* ------------------------------------------------------------ utilità */
   function esc(t) {
@@ -217,6 +230,7 @@
   /* ------------------------------------------------------------- schermate */
   function mostra(html, chiaveLuogo, zoom) {
     smettiDiLeggere();
+    prontoDa = Date.now() + 450;
     pannello.innerHTML = html +
       (parla ? '<p class="gsp-ascolta"><button type="button" class="btn btn-outline-primary btn-sm" data-azione="ascolta">' +
         '<i class="bi bi-volume-up-fill me-1" aria-hidden="true"></i>Ascolta</button></p>' : '');
@@ -356,6 +370,7 @@
     var e = stato.s.eventi[stato.indice];
     var scelte = stato.scelteCorrenti;
     var c = scelte[i];
+    if (!c || stato.esiti.hasOwnProperty(e.id)) return;
     var max = Math.max.apply(null, scelte.map(function (x) { return x.punti; }));
     var ottimo = 3;
     stato.punti += c.punti;
@@ -363,6 +378,7 @@
     stato.massimo += ottimo;
     stato.diario.push({ titolo: e.titolo, scelta: c.testo, punti: c.punti, perche: c.perche, link: e.link });
     var tipo = c.punti === 3 ? 'giusta' : (c.punti > 0 ? 'meglio' : 'sbagliata');
+    suona(tipo === 'giusta' || (max < 3 && c.punti === max));
     var etichetta = { giusta: 'Scelta giusta', meglio: 'Si poteva fare meglio', sbagliata: 'Scelta sbagliata' }[tipo];
     var icona = { giusta: 'bi-check-circle-fill', meglio: 'bi-dash-circle-fill', sbagliata: 'bi-x-circle-fill' }[tipo];
     Array.prototype.forEach.call(pannello.querySelectorAll('.gsp-scelta'), function (b, j) {
@@ -446,10 +462,13 @@
     var b = ev.target.closest('[data-azione]');
     if (!b || b.disabled) return;
     var a = b.getAttribute('data-azione');
+    if (a !== 'ascolta' && Date.now() < prontoDa) return;
     if (a === 'inizia') inizia(b.getAttribute('data-scenario'));
     else if (a === 'prima') schermataPrima();
     else if (a === 'prep') {
-      var id = b.getAttribute('data-id'), k = stato.prep.indexOf(id);
+      var id = b.getAttribute('data-id'), k = stato.prep.indexOf(id), ora = Date.now();
+      if (ultimaPrep.id === id && ora - ultimaPrep.t < 350) return;
+      ultimaPrep = { id: id, t: ora };
       if (k >= 0) stato.prep.splice(k, 1); else stato.prep.push(id);
       aggiornaContatore();
       var az = stato.s.prima.azioni.filter(function (x) { return x.id === id; })[0];
@@ -457,7 +476,7 @@
     }
     else if (a === 'via') prossimoEvento();
     else if (a === 'scegli') scegli(parseInt(b.getAttribute('data-i'), 10));
-    else if (a === 'avanti') prossimoEvento();
+    else if (a === 'avanti') { b.disabled = true; prossimoEvento(); }
     // l'indice punta già al primo evento del «dopo»: si mostra senza avanzare
     else if (a === 'dopo') mostraEvento(stato.s.eventi[stato.indice], preparazione());
     else if (a === 'rigioca') inizia(stato.s.id);

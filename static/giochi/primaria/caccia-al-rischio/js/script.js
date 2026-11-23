@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
       variations: [
         { image: 'img/scena-casa.svg', risks: [
           { id: 'presa_elettrica', name: 'Presa elettrica scoperta',
-            explain: 'In caso di blackout o temporale: non infilare le dita. Spegnere il quadro elettrico generale prima di rimettere mano alle prese.',
+            explain: 'Mai infilare dita o oggetti nelle prese. Se in casa entra acqua o va via la corrente, è un adulto a staccare l\'interruttore generale.',
             top: 69.24, left: 21.56, size: 10 },
           { id: 'cassetti_aperti', name: 'Cassetti aperti',
             explain: 'Durante un terremoto i cassetti aperti possono cadere. Tienili sempre chiusi: meno cose volano in giro durante una scossa.',
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
             explain: 'In caso di terremoto o evacuazione: spegnere subito gas e forno. Se senti odore di gas dopo una scossa, non accendere niente, apri le finestre e chiama il 112.',
             top: 44.74, left: 40.81, size: 20 },
           { id: 'spigoli', name: 'Spigoli sporgenti',
-            explain: 'Durante una scossa stare lontano da angoli appuntiti. Cerca un posto sotto un tavolo robusto o nel vano di una porta interna portante.',
+            explain: 'Durante una scossa stai lontano da angoli appuntiti. Riparati sotto un tavolo robusto o nel vano di una porta inserita in un muro portante.',
             top: 28.1, left: 46.71, size: 10 },
           { id: 'apertura_ante', name: 'Ante aperte',
             explain: 'Bicchieri e piatti negli scaffali con la scossa cadono e si rompono. Tieni le ante chiuse, e in zone sismiche metti delle chiusure di sicurezza.',
@@ -123,19 +123,19 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       id: 'bagno', name: 'In Bagno',
-      intro: 'Il bagno ha acqua, elettricità e superfici scivolose: durante un\'emergenza serve estra cautela.',
+      intro: 'Il bagno ha acqua, elettricità e superfici scivolose: durante un\'emergenza serve ancora più attenzione.',
       variations: [{ image: 'img/scenariobagno.svg', risks: [
         { id: 'tappeto_scivoloso', name: 'Tappetino scivoloso',
           explain: 'In una fuga d\'emergenza dalla doccia, un tappetino bagnato fa cadere. Antiscivolo sotto il tappeto o niente tappeto.',
           top: 80.83, left: 58.75, size: 10 },
         { id: 'spigoli', name: 'Spigoli sporgenti',
-          explain: 'Durante un terremoto, evita di restare in piedi vicino agli spigoli del lavandino o della vasca. Meglio sedersi a terra in un angolo lontano da vetri.',
+          explain: 'Durante un terremoto non restare in piedi vicino agli spigoli del lavandino o della vasca. Abbassati, proteggi testa e collo con le braccia e stai lontano da specchi e vetri.',
           top: 58.56, left: 40.81, size: 10 },
         { id: 'oblo', name: 'Oblò della lavatrice',
-          explain: 'Durante un blackout l\'asciugatura si ferma: non aprire l\'oblò di colpo se ha acqua dentro, finisce sul pavimento e diventa scivoloso.',
+          explain: 'Durante un blackout la lavatrice si ferma: non aprire l\'oblò se dentro c\'è ancora acqua, finisce sul pavimento e diventa scivoloso.',
           top: 67.05, left: 16.58, size: 10 },
         { id: 'sgabello', name: 'Sgabello instabile',
-          explain: 'In allerta sismica non lasciare sgabelli o oggetti altri instabili: cadrebbero alla prima scossa. Mensole alte e oggetti pesanti vanno fissati al muro.',
+          explain: 'Non lasciare sgabelli o altri oggetti instabili in giro: cadrebbero alla prima scossa. Mensole alte e oggetti pesanti vanno fissati al muro.',
           top: 71.88, left: 75.77, size: 10 }
       ]}]
     },
@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
             explain: 'Durante una scossa la lampada cade: se è sopra al letto puoi farti male. Spostala a terra o fissala.',
             top: 41.78, left: 6.54, size: 10 },
           { id: 'monitor', name: 'Monitor sul bordo',
-            explain: 'Schermi e mensole alte cadono per primi. Fissali con strap o mettili a terra in zona sismica.',
+            explain: 'Schermi e mensole alte cadono per primi. Un adulto può fissarli al muro o al mobile con apposite cinghie.',
             top: 33.81, left: 88.19, size: 10 },
           { id: 'spigoli', name: 'Spigoli del letto',
             explain: 'Sopra al letto non mettere mensole o quadri pesanti: in una scossa cadono dritti dove dormi.',
@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
             explain: 'In zone sismiche mobili spigolosi vicino al letto sono il primo problema. Cerca un posto sicuro lontano dagli angoli, sotto un tavolo robusto.',
             top: 75.08, left: 43.8, size: 10 },
           { id: 'lampadina', name: 'Lampada appesa',
-            explain: 'Lampadari sopra al letto, in caso di scossa, possono staccarsi. Usa lampade fisse a parete o luci LED a soffitto a vite robusta.',
+            explain: 'Lampade appese sopra al letto, in caso di scossa, possono staccarsi e cadere. Meglio non tenerle proprio sopra il cuscino.',
             top: 36.69, left: 27.54, size: 10 },
           { id: 'finestra', name: 'Finestra aperta',
             explain: 'In allerta vento (codice giallo o arancione) chiudere le finestre: vetri rotti = ferite gravi. In allerta temporale: lontano dai vetri.',
@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
           explain: 'Mai uscire dalla finestra: si esce dalla porta con la fila. La finestra è un punto pericoloso durante un terremoto (vetri rotti) e va chiusa.',
           top: 47.76, left: 96.55, size: 10 },
         { id: 'spigolo', name: 'Spigolo del ripiano',
-          explain: 'Mensole con libri sopra al banco = libri che cadono in scossa. Le scuole anti-sismiche hanno tutto fissato al muro con barre.',
+          explain: 'Mensole con libri sopra al banco = libri che cadono durante una scossa. Per questo a scuola gli scaffali alti si fissano al muro.',
           top: 44.08, left: 22.56, size: 10 }
       ]}]
     },
@@ -202,10 +202,10 @@ document.addEventListener('DOMContentLoaded', () => {
           explain: 'In una scossa di terremoto, scendere subito da strutture sospese e sederti a terra in spazio aperto, lontano da alberi e pali.',
           top: 56.12, left: 16.27, size: 10 },
         { id: 'cadere', name: 'Struttura alta del gioco',
-          explain: 'Durante un temporale: scendere subito dalle strutture alte e dai giochi metallici (attirano fulmini). Andare verso un edificio.',
+          explain: 'Durante un temporale scendi subito dalle strutture alte e stai lontano da pali e strutture metalliche. Vai verso un edificio solido.',
           top: 78.84, left: 14.28, size: 10 },
         { id: 'scivolo', name: 'Scivolo metallico',
-          explain: 'In allerta caldo (allerta arancione o rossa) il metallo scotta: aspetta che faccia ombra. In temporale, niente metallo per i fulmini.',
+          explain: 'Nelle giornate di caldo forte il metallo al sole scotta: evita i giochi nelle ore più calde, dalle 11 alle 18. Durante un temporale stai lontano dalle strutture metalliche.',
           top: 64.81, left: 51.54, size: 10 },
         { id: 'caduta', name: 'Cavallo a molla',
           explain: 'Durante una scossa sismica all\'aperto: scendi e siediti in spazio libero, lontano da alberi che possono cadere e da fili elettrici.',
@@ -220,13 +220,13 @@ document.addEventListener('DOMContentLoaded', () => {
       intro: 'In viaggio si applicano regole di sicurezza più strette: l\'autista non può fermarsi ovunque.',
       variations: [{ image: 'img/scenarioscuolabus.svg', risks: [
         { id: 'autista', name: 'Disturbare l\'autista',
-          explain: 'L\'autista in caso di terremoto deve fermarsi in posto sicuro (lontano da ponti, sottopassaggi, alberi alti). Non distrarlo, fagli sentire l\'avviso radio.',
+          explain: 'Se c\'è un terremoto, l\'autista deve fermarsi in un posto sicuro, lontano da ponti, sottopassi e alberi alti. Non distrarlo mai mentre guida.',
           top: 43.65, left: 38.36, size: 10 },
         { id: 'inciampo', name: 'Scalini',
           explain: 'In evacuazione del bus si scende uno alla volta, mai correndo: lo scalino è alto e si cade facile. Le maestre in fondo controllano.',
           top: 71.88, left: 50.01, size: 10 },
         { id: 'attraversamento', name: 'Attraversare la strada',
-          explain: 'Dopo aver lasciato il bus: aspettare che riparta prima di attraversare. In caso di allerta meteo, l\'autista chiama il Comune e segue le istruzioni.',
+          explain: 'Dopo essere sceso dal bus, aspetta che riparta prima di attraversare: così vedi bene la strada e chi guida vede te.',
           top: 72.11, left: 76.77, size: 25 }
       ]}]
     }
@@ -242,6 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function showSelectionScreen(){
     if (!selectionScreen) return;
+    partita++;
     gameScreen.classList.add('hide');
     winScreen.classList.add('hide');
     selectionScreen.classList.remove('hide');
@@ -271,6 +272,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function initializeGame(){
     foundCount = 0;
+    finito = false;
+    partita++;
     sceneImage.src = currentVariation.image;
     scenarioTitle.innerText = `Caccia al Rischio: ${currentScenario.name}`;
     if (scenarioIntro) scenarioIntro.textContent = currentScenario.intro || '';
@@ -297,13 +300,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Doppio tocco: un pericolo già trovato non conta di nuovo e, trovato
+  // l'ultimo, la vittoria (e il salvataggio del risultato) parte una volta sola.
+  let finito = false;
+  let partita = 0;
+
   function foundRisk(risk){
     const listItem = document.getElementById(`li-${risk.id}`);
     const hotspot = document.getElementById(`hotspot-${risk.id}`);
-    if (!listItem.classList.contains('found')) {
+    if (finito || !listItem || listItem.classList.contains('found')) return;
+    {
       listItem.classList.add('found');
       hotspot.classList.add('found');
       foundCount++;
+      if (window.AudioSintetico) window.AudioSintetico.dingPositivo();
 
       // Mostra spiegazione PC del rischio
       if (explainBox && risk.explain) {
@@ -313,7 +323,10 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
     if (foundCount === currentVariation.risks.length) {
+      finito = true;
+      const questa = partita;
       setTimeout(() => {
+        if (questa !== partita) return;
         winScreen.classList.remove('hide');
         if (window.GiochiUtil) {
           window.GiochiUtil.salvaEMostraAttestato(

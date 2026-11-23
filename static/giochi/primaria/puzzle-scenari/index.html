@@ -125,6 +125,7 @@
   </main>
   <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
   <script src="/app-shared/site-chrome.js"></script>
+  <script src="/giochi/assets/js/audio-sintetico.js"></script>
   <script src="/giochi/assets/js/progressione.js"></script>
   <script src="/giochi/assets/js/attestato.js"></script>
   <script src="/giochi/assets/js/comune.js"></script>
@@ -136,10 +137,10 @@
         titolo: 'Terremoto a scuola',
         desc: 'La terra trema durante la lezione: qual è la sequenza corretta delle azioni?',
         passi: [
-          'Non corro e non urlo: mi calmo per ascoltare le istruzioni.',
-          'Mi ripari sotto il banco, coprendo testa e collo con le braccia.',
-          'Aspetta che la scossa finisca senza uscire di corsa.',
-          'Segui le maestre verso il punto di raccolta all\'aperto.',
+          'Appena senti la scossa, riparati sotto il banco e copri testa e collo con le braccia.',
+          'Resta sotto il banco finché la scossa non è finita: non uscire di corsa.',
+          'Quando la maestra lo dice, mettiti in fila senza prendere lo zaino.',
+          'Segui la maestra verso il punto di raccolta all\'aperto, usando le scale e mai l\'ascensore.',
           'Al punto di raccolta rispondi all\'appello così sanno che stai bene.'
         ]
       },
@@ -149,10 +150,10 @@
         desc: 'L\'acqua comincia a entrare dalla porta: come ti comporti?',
         passi: [
           'Avvisa subito un adulto e non uscire di casa da solo.',
-          'Sposta gli oggetti importanti ai piani alti.',
-          'Stacca la corrente elettrica se l\'adulto lo dice.',
-          'Saliti ai piani alti: non scendere in cantina o garage.',
-          'Se arriva la Protezione Civile, seguine le indicazioni.'
+          'Se si può fare senza rischi, l\'adulto chiude il gas e stacca la corrente, senza toccare l\'acqua.',
+          'Sali con la famiglia ai piani alti, senza usare l\'ascensore.',
+          'Resta in alto: non scendere in cantina o in garage, nemmeno per prendere qualcosa.',
+          'Quando arrivano i soccorritori, segui le loro indicazioni.'
         ]
       },
       {
@@ -182,10 +183,10 @@
       {
         id: 'ondata-calore',
         titolo: 'Ondata di calore (38 gradi)',
-        desc: 'Codice rosso ondata di calore: qual è la sequenza corretta per stare al sicuro?',
+        desc: 'Il bollettino sulle ondate di calore segna il livello più alto: qual è la sequenza corretta per stare al sicuro?',
         passi: [
           'Controlla il bollettino del Ministero della Salute o del Comune.',
-          'Bevi spesso acqua, anche senza sete: 1.5-2 litri al giorno.',
+          'Bevi acqua spesso, anche se non hai sete.',
           'Non uscire tra le 11 e le 18: il sole picchia di più.',
           'Chiudi tapparelle e tende sul lato esposto al sole nelle ore calde.',
           'Controlla anziani e bambini piccoli: telefonali o passa a trovarli.'
@@ -194,13 +195,13 @@
       {
         id: 'blackout',
         titolo: 'Blackout esteso',
-        desc: 'E\' andata via la luce e non torna: qual è la sequenza giusta?',
+        desc: 'È andata via la luce e non torna: qual è la sequenza giusta?',
         passi: [
           'Stacca i grandi elettrodomestici (forno, lavatrice) per evitare picchi al ritorno.',
           'Usa la torcia a pile: niente candele in giro per casa (rischio incendio).',
-          'Apri il frigo solo quando serve: il cibo dura 4-6 ore se chiuso.',
+          'Apri il frigo solo quando serve: se resta chiuso, il cibo si conserva per molte ore.',
           'Se hai una radio a pile, ascolta gli aggiornamenti del Comune.',
-          'Se il blackout dura tante ore o fa freddo, vai al palazzetto comunale: il Comune apre punti di accoglienza.'
+          'Se il blackout dura tante ore, segui le indicazioni del Comune: se serve, dice dove trovare assistenza.'
         ]
       }
     ];
@@ -223,6 +224,7 @@
     function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t;} return a; }
 
     function renderList(){
+      inPassaggio = false;
       selectScreen.classList.remove('hide');
       gameScreen.classList.add('hide');
       endScreen.classList.add('hide');
@@ -244,6 +246,7 @@
 
     function start(s){
       current = s;
+      inPassaggio = false;
       selectScreen.classList.add('hide');
       gameScreen.classList.remove('hide');
       endScreen.classList.add('hide');
@@ -281,10 +284,12 @@
     }
 
     function moveUp(li){
+      if (inPassaggio) return;
       var prev = li.previousElementSibling;
       if (prev) { stepList.insertBefore(li, prev); renumber(); }
     }
     function moveDown(li){
+      if (inPassaggio) return;
       var next = li.nextElementSibling;
       if (next) { stepList.insertBefore(next, li); renumber(); }
     }
@@ -306,7 +311,16 @@
       });
     }
 
+    // Doppio tocco: dopo una sequenza giusta «Controlla» non conta due volte
+    // lo stesso scenario e la schermata successiva parte una volta sola.
+    var inPassaggio = false;
+    function suono(giusta){
+      if (!window.AudioSintetico) return;
+      if (giusta) window.AudioSintetico.dingPositivo(); else window.AudioSintetico.tonoNeutro();
+    }
+
     document.getElementById('check-btn').addEventListener('click', function(){
+      if (inPassaggio || !current) return;
       var items = stepList.querySelectorAll('.step-item');
       var right = 0;
       items.forEach(function(it, i){
@@ -318,11 +332,15 @@
         feedback.className = 'feedback-msg ok';
         feedback.innerHTML = '<i class="bi bi-check-circle-fill me-1"></i> Perfetto! Sequenza corretta!';
         feedback.classList.remove('hide');
+        inPassaggio = true;
+        suono(true);
         totalScore += items.length;
         totalMax += items.length;
         if (!completedIds[current.id]) { completed++; completedIds[current.id] = true; }
-        setTimeout(finish, 1600);
+        var scena = current;
+        setTimeout(function(){ if (inPassaggio && current === scena) finish(); }, 1600);
       } else {
+        suono(false);
         feedback.className = 'feedback-msg ko';
         feedback.innerHTML = '<i class="bi bi-exclamation-triangle-fill me-1"></i> ' + right + ' passi giusti su ' + items.length + '. Riprova a sistemare i rossi!';
         feedback.classList.remove('hide');
@@ -332,6 +350,7 @@
     document.getElementById('back-btn').addEventListener('click', renderList);
 
     function finish(){
+      inPassaggio = false;
       if (completed >= SCENARI.length){
         gameScreen.classList.add('hide');
         endScreen.classList.remove('hide');

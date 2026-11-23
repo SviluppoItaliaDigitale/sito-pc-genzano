@@ -43,7 +43,7 @@
     }
     .chapter-card h3 { color: #003366; font-size: 1.05rem; margin: .5rem 0 .2rem; }
     .chapter-card .count { font-size: .8rem; color: #5b6b7c; }
-    .chapter-card .sample { font-size: 2.2rem; margin-bottom: .3rem; }
+    .chapter-card .sample i { font-size: 2.6rem; }
 
     .hud {
       display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center;
@@ -64,87 +64,21 @@
       margin: 0 auto 1rem; display: block;
     }
 
-    /* Pittogrammi CLP — diamante bianco con bordo rosso */
-    .clp {
-      width: clamp(96px, 32vw, 130px); height: clamp(96px, 32vw, 130px);
-      position: relative; margin: 0 auto 1rem;
-      transform: rotate(45deg);
-      background: #fff; border: 5px solid #d91e18;
-      display: flex; align-items: center; justify-content: center;
+    /* Pittogramma della domanda: CLP e ISO 7010 sono le immagini ufficiali,
+       ADR e' il rombo SVG disegnato dallo script. */
+    .pittogramma-box {
+      width: clamp(120px, 34vw, 160px); height: clamp(120px, 34vw, 160px);
+      margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center;
     }
-    .clp-inner {
-      transform: rotate(-45deg); font-size: clamp(2rem, 8vw, 3rem); color: #000;
-      display: flex; align-items: center; justify-content: center;
-    }
-
-    /* ADR — diamante colorato con numero in basso */
-    .adr {
-      width: clamp(96px, 32vw, 130px); height: clamp(96px, 32vw, 130px);
-      position: relative; margin: 0 auto 1rem;
-      transform: rotate(45deg);
-      border: 3px solid #000;
-      display: flex; align-items: center; justify-content: center;
-    }
-    .adr-inner {
-      transform: rotate(-45deg); font-size: clamp(1.6rem, 6vw, 2.6rem); color: #000;
-      display: flex; flex-direction: column; align-items: center;
-      line-height: 1;
-    }
-    .adr-inner .sym { font-size: clamp(1.6rem, 6vw, 2.6rem); }
-    .adr-inner .cls { font-size: 1rem; font-weight: 800; border-top: 2px solid currentColor; padding-top: 4px; margin-top: 4px; min-width: 20px; }
-    /* Colori ADR per classe */
-    .adr-1 { background: #ff9900; } /* esplosivi */
-    .adr-2 { background: #ff0000; } /* gas infiammabile */
-    .adr-2g { background: #00aa00; } /* gas non infiammabile */
-    .adr-2t { background: #fff; } /* gas tossico: bianco */
-    .adr-3 { background: #ff0000; } /* liquidi infiammabili */
-    .adr-4 { background: #fff; background-image: repeating-linear-gradient(90deg, #ff0000 0 8px, #fff 8px 16px); } /* solidi infiammabili */
-    .adr-5 { background: #ffcc00; } /* ossidanti */
-    .adr-6 { background: #fff; } /* tossici */
-    .adr-7 { background: #ffeb3b; } /* radioattivi */
-    .adr-8 { background: #fff; } /* corrosivi: bianco in alto, nero in basso */
-    .adr-9 { background: #fff; background-image: repeating-linear-gradient(0deg, #000 0 4px, #fff 4px 8px); }
-    .adr-8::before {
-      content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 50%;
-      background: #000;
-    }
-    .adr-6 .adr-inner, .adr-5 .adr-inner { color: #000; }
-
-    /* UNI EN ISO 7010 — forme/colori */
-    .uni7010 {
-      width: clamp(88px, 30vw, 120px); height: clamp(88px, 30vw, 120px); margin: 0 auto 1rem;
-      display: flex; align-items: center; justify-content: center;
-      font-size: clamp(2.4rem, 9vw, 3.5rem); line-height: 1;
-    }
-    .uni7010.pericolo { background: #ffcc00; border: 5px solid #000; color: #000;
-      clip-path: polygon(50% 0, 100% 100%, 0 100%); padding-top: 30px; align-items: flex-end;
-      width: clamp(100px, 34vw, 140px); height: clamp(92px, 31vw, 130px); font-size: clamp(2rem, 8vw, 3rem);
-    }
-    .uni7010.divieto { background: #fff; border: 8px solid #cc0000; border-radius: 50%; color: #000;
-      position: relative;
-    }
-    .uni7010.divieto::after {
-      content: ""; position: absolute; left: 8%; right: 8%; top: 45%; height: 10px;
-      background: #cc0000; transform: rotate(-45deg);
-    }
-    .uni7010.obbligo { background: #0033cc; border: 5px solid #0033cc; border-radius: 50%; color: #fff; }
-    .uni7010.soccorso { background: #008000; border: 5px solid #008000; color: #fff; border-radius: 8px; }
-    .uni7010.antincendio { background: #cc0000; border: 5px solid #cc0000; color: #fff; border-radius: 8px; }
-    /* Quando uso il pittogramma ISO ufficiale (img), il container .uni7010 fa
-       da cornice colorata e l'immagine sta dentro. Override clip-path e
-       allineamento per non tagliare l'SVG. */
-    .uni7010 .uni-iso {
-      max-width: 80%; max-height: 80%; display: block;
-      filter: drop-shadow(0 2px 3px rgba(0,0,0,.15));
-    }
-    .uni7010.pericolo { padding-top: 0; align-items: center; clip-path: none; }
-    .uni7010.divieto::after { display: none; }
-    .uni7010.divieto { padding: 0; }
+    .pittogramma-box .pitto-img, .pittogramma-box .adr-svg { width: 100%; height: 100%; display: block; }
+    .chapter-card .sample { height: 64px; display: flex; align-items: center; justify-content: center; color: #003366; }
+    .chapter-card .sample img, .chapter-card .sample svg { width: 60px; height: 60px; }
 
     .answers {
       display: flex; flex-direction: column; gap: .5rem;
     }
     .answer-btn {
+      min-height: 48px;
       text-align: left; padding: .75rem 1rem; border-radius: 10px;
       background: #fff; border: 2px solid #cfd6df; color: #1a1a1a;
       font-size: .95rem; line-height: 1.4;
@@ -211,7 +145,7 @@
             <div class="regole-box">
               <h2><i class="bi bi-info-circle-fill me-1" aria-hidden="true"></i>Tre sistemi internazionali di segnaletica</h2>
               <ul>
-                <li><strong>CLP (Regolamento CE 1272/2008)</strong>: etichette a diamante rosso sui prodotti chimici. pittogrammi standard.</li>
+                <li><strong>CLP (Regolamento CE 1272/2008)</strong>: etichette a rombo con bordo rosso sui prodotti chimici: nove pittogrammi standard.</li>
                 <li><strong>ADR</strong>: accordo europeo per il trasporto di merci pericolose su strada. Diamanti colorati con numero della classe.</li>
                 <li><strong>UNI EN ISO 7010</strong>: cartelli di sicurezza nei luoghi di lavoro. Pericolo (giallo triangolare), divieto (rosso circolare con sbarra), obbligo (blu circolare), salvataggio (verde), antincendio (rosso quadrato).</li>
               </ul>
@@ -260,6 +194,7 @@
   </main>
 
   <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/giochi/assets/js/audio-sintetico.js"></script>
   <script src="/app-shared/site-chrome.js"></script>
   <script src="/giochi/assets/js/progressione.js"></script>
   <script src="/giochi/assets/js/attestato.js"></script>
@@ -268,65 +203,68 @@
   (function () {
     'use strict';
 
-    // Ogni domanda definisce: tipo di pittogramma (clp/adr/uni7010), simbolo, risposte
-    // e spiegazione. Il pittogramma viene renderizzato a runtime.
+    // Ogni domanda definisce: pittogramma, risposte e spiegazione.
+    // CLP: i pittogrammi ufficiali GHS01-GHS09 (cartella ghs/, pubblico dominio).
+    // ADR: rombo disegnato qui (colori e numero della classe) con il simbolo nero
+    // ripreso dai pittogrammi GHS; classe 7 e 9 hanno trifoglio e strisce in SVG.
+    // UNI EN ISO 7010: i segnali della libreria del sito (/pittogrammi/iso7010/).
 
     var CAPITOLI = {
       clp: {
         titolo: 'Etichette CLP',
         descrizione: 'Prodotti chimici',
-        sample: '\u26A0\uFE0F',
+        campione: { img: 'ghs/ghs02-infiammabile.svg' },
         questions: [
-          { sym: '\uD83D\uDD25', correct: 'Infiammabile', opts: ['Esplosivo', 'Infiammabile', 'Corrosivo', 'Tossico'], why: 'Fiamma su diamante CLP = GHS02. Si trova su benzina, alcool, solventi, bombolette spray, vernici a base solvente.' },
-          { sym: '\uD83D\uDCA5', correct: 'Esplosivo', opts: ['Ossidante', 'Gas compresso', 'Esplosivo', 'Tossico'], why: 'Bomba che esplode = GHS01. Usato su esplosivi, munizioni, fuochi d\'artificio professionali.' },
-          { sym: '\u2620\uFE0F', correct: 'Tossico acuto', opts: ['Irritante', 'Tossico acuto', 'Corrosivo', 'Nocivo per l\'ambiente'], why: 'Teschio e tibie incrociate = GHS06. Prodotto molto pericoloso per ingestione, contatto, inalazione anche in piccole dosi.' },
-          { sym: '\u2757', correct: 'Irritante o nocivo', opts: ['Esplosivo', 'Tossico mortale', 'Irritante o nocivo', 'Radioattivo'], why: 'Punto esclamativo = GHS07. Prodotto che può irritare pelle e occhi, o essere nocivo a dosi elevate. Spesso su detergenti domestici.' },
-          { sym: '\uD83E\uDDEA', correct: 'Corrosivo', opts: ['Infiammabile', 'Corrosivo', 'Ossidante', 'Gas compresso'], why: 'Due provette che corrodono mano e metallo = GHS05. Acidi forti, candeggina concentrata, disgorganti: distruggono tessuti e materiali.' },
-          { sym: '\u2699\uFE0F', correct: 'Gas sotto pressione', opts: ['Ossidante', 'Gas sotto pressione', 'Esplosivo', 'Infiammabile'], why: 'Bombola cilindrica = GHS04. Bombole di GPL, ossigeno, azoto: possono esplodere se riscaldate.' },
-          { sym: '\uD83D\uDD34', correct: 'Ossidante', opts: ['Infiammabile', 'Ossidante', 'Radioattivo', 'Corrosivo'], why: 'Fiamma sopra un cerchio = GHS03. Prodotto che alimenta la combustione: perossido di idrogeno, clorato di potassio.' },
-          { sym: '\uD83E\uDEC1', correct: 'Pericolo per la salute', opts: ['Tossico acuto', 'Pericolo per la salute', 'Corrosivo', 'Irritante'], why: 'Uomo con stella sul petto = GHS08. Prodotti cancerogeni, mutageni, tossici per la riproduzione o che danneggiano organi con esposizione prolungata.' },
-          { sym: '\uD83D\uDC1F', correct: 'Pericoloso per l\'ambiente', opts: ['Infiammabile', 'Tossico acuto', 'Pericoloso per l\'ambiente', 'Radioattivo'], why: 'Pesce e albero morti = GHS09. Sostanza tossica per la vita acquatica o per l\'ecosistema: pesticidi, solventi, metalli pesanti.' }
+          { ghs: 'ghs02-infiammabile', correct: 'Infiammabile', opts: ['Esplosivo', 'Infiammabile', 'Corrosivo', 'Tossico'], why: 'Fiamma su diamante CLP = GHS02. Si trova su benzina, alcool, solventi, bombolette spray, vernici a base solvente.' },
+          { ghs: 'ghs01-esplosivo', correct: 'Esplosivo', opts: ['Comburente (ossidante)', 'Gas sotto pressione', 'Esplosivo', 'Tossico acuto'], why: 'Bomba che esplode = GHS01. Usato su esplosivi, munizioni, fuochi d\'artificio professionali.' },
+          { ghs: 'ghs06-tossicita-acuta', correct: 'Tossico acuto', opts: ['Irritante', 'Tossico acuto', 'Corrosivo', 'Nocivo per l\'ambiente'], why: 'Teschio e tibie incrociate = GHS06. Prodotto molto pericoloso per ingestione, contatto, inalazione anche in piccole dosi.' },
+          { ghs: 'ghs07-irritante-nocivo', correct: 'Irritante o nocivo', opts: ['Esplosivo', 'Tossico mortale', 'Irritante o nocivo', 'Radioattivo'], why: 'Punto esclamativo = GHS07. Prodotto che può irritare pelle e occhi, o essere nocivo a dosi elevate. Spesso su detergenti domestici.' },
+          { ghs: 'ghs05-corrosivo', correct: 'Corrosivo', opts: ['Infiammabile', 'Corrosivo', 'Comburente (ossidante)', 'Gas sotto pressione'], why: 'Due provette che corrodono mano e metallo = GHS05. Acidi forti, candeggina concentrata, disgorganti: distruggono tessuti e materiali.' },
+          { ghs: 'ghs04-gas-sotto-pressione', correct: 'Gas sotto pressione', opts: ['Comburente (ossidante)', 'Gas sotto pressione', 'Esplosivo', 'Infiammabile'], why: 'Bombola cilindrica = GHS04. Bombole di GPL, ossigeno, azoto: possono esplodere se riscaldate.' },
+          { ghs: 'ghs03-comburente', correct: 'Comburente (ossidante)', opts: ['Infiammabile', 'Comburente (ossidante)', 'Radioattivo', 'Corrosivo'], why: 'Fiamma sopra un cerchio = GHS03, comburente. Il prodotto alimenta la combustione e rende più violento un incendio: perossido di idrogeno concentrato, clorato di potassio.' },
+          { ghs: 'ghs08-pericolo-salute', correct: 'Pericolo per la salute', opts: ['Tossico acuto', 'Pericolo per la salute', 'Corrosivo', 'Irritante'], why: 'Sagoma di una persona con una stella sul petto = GHS08. Prodotti cancerogeni, mutageni, tossici per la riproduzione o che danneggiano organi con esposizione prolungata.' },
+          { ghs: 'ghs09-ambiente', correct: 'Pericoloso per l\'ambiente', opts: ['Infiammabile', 'Tossico acuto', 'Pericoloso per l\'ambiente', 'Radioattivo'], why: 'Pesce e albero morti = GHS09. Sostanza tossica per la vita acquatica o per l\'ecosistema: pesticidi, solventi, metalli pesanti.' }
         ]
       },
       adr: {
         titolo: 'Diamanti ADR',
         descrizione: 'Trasporto merci pericolose',
-        sample: '\uD83D\uDE9B',
+        campione: { adr: '3' },
         questions: [
-          { sym: '\uD83D\uDCA5', cls: '1', color: 'adr-1', correct: 'Classe 1 — Materiali esplosivi', opts: ['Classe 1 — Materiali esplosivi', 'Classe 3 — Liquidi infiammabili', 'Classe 7 — Radioattivi', 'Classe 5 — Ossidanti'], why: 'ADR Classe 1 (arancione): esplosivi, dinamite, munizioni. Camion con cassone rinforzato e scorta.' },
-          { sym: '\uD83D\uDD25', cls: '2', color: 'adr-2', correct: 'Classe 2 — Gas infiammabile', opts: ['Classe 3 — Liquido infiammabile', 'Classe 4 — Solido infiammabile', 'Classe 2 — Gas infiammabile', 'Classe 8 — Corrosivi'], why: 'ADR Classe 2 su fondo rosso: gas infiammabile (GPL, metano, propano).' },
-          { sym: '\uD83D\uDD25', cls: '3', color: 'adr-3', correct: 'Classe 3 — Liquidi infiammabili', opts: ['Classe 3 — Liquidi infiammabili', 'Classe 5 — Ossidanti', 'Classe 9 — Merci diverse', 'Classe 6 — Tossici'], why: 'ADR Classe 3 su fondo rosso con fiamma: benzina, diesel, alcol etilico, solventi.' },
-          { sym: '\uD83D\uDD34', cls: '5.1', color: 'adr-5', correct: 'Classe 5.1 — Ossidanti', opts: ['Classe 2 — Gas', 'Classe 5.1 — Ossidanti', 'Classe 7 — Radioattivi', 'Classe 8 — Corrosivi'], why: 'ADR Classe 5.1 su fondo giallo con fiamma-cerchio: ossidanti (perossido di idrogeno, nitrato d\'ammonio).' },
-          { sym: '\u2620\uFE0F', cls: '6.1', color: 'adr-6', correct: 'Classe 6.1 — Sostanze tossiche', opts: ['Classe 6.1 — Sostanze tossiche', 'Classe 8 — Corrosivi', 'Classe 9 — Materiali diversi', 'Classe 2 — Gas tossico'], why: 'ADR Classe 6.1 su fondo bianco con teschio: sostanze tossiche per ingestione, inalazione, contatto (arsenico, cianuri).' },
-          { sym: '\u2622\uFE0F', cls: '7', color: 'adr-7', correct: 'Classe 7 — Radioattivi', opts: ['Classe 1 — Esplosivi', 'Classe 5 — Ossidanti', 'Classe 7 — Radioattivi', 'Classe 9 — Merci diverse'], why: 'ADR Classe 7 su fondo giallo/bianco con trifoglio della radiazione: radioisotopi medicali e industriali.' },
-          { sym: '\uD83E\uDDEA', cls: '8', color: 'adr-8', correct: 'Classe 8 — Corrosivi', opts: ['Classe 3 — Liquidi infiammabili', 'Classe 8 — Corrosivi', 'Classe 6.1 — Tossici', 'Classe 5 — Ossidanti'], why: 'ADR Classe 8 bianco-nero con provette: acido solforico, soda caustica. Attenzione alle perdite.' },
-          { sym: '\u2699\uFE0F', cls: '9', color: 'adr-9', correct: 'Classe 9 — Materiali vari pericolosi', opts: ['Classe 2 — Gas', 'Classe 7 — Radioattivi', 'Classe 9 — Materiali vari pericolosi', 'Classe 5 — Ossidanti'], why: 'ADR Classe 9 a strisce bianco-nero: batterie al litio, materiali magnetizzati, amianto, rifiuti speciali.' }
+          { adr: '1', correct: 'Classe 1 — Materiali esplosivi', opts: ['Classe 1 — Materiali esplosivi', 'Classe 3 — Liquidi infiammabili', 'Classe 7 — Radioattivi', 'Classe 5.1 — Materie comburenti'], why: 'ADR Classe 1, rombo arancione con la bomba che esplode: esplosivi, munizioni, fuochi d\'artificio.' },
+          { adr: '2.1', correct: 'Classe 2 — Gas infiammabili', opts: ['Classe 3 — Liquidi infiammabili', 'Classe 4 — Solidi infiammabili', 'Classe 2 — Gas infiammabili', 'Classe 8 — Corrosivi'], why: 'ADR Classe 2, etichetta 2.1: fiamma su fondo rosso e numero 2 in basso. Gas infiammabili come GPL, metano, propano.' },
+          { adr: '3', correct: 'Classe 3 — Liquidi infiammabili', opts: ['Classe 3 — Liquidi infiammabili', 'Classe 5.1 — Materie comburenti', 'Classe 9 — Merci diverse', 'Classe 6 — Tossici'], why: 'ADR Classe 3: fiamma su fondo rosso e numero 3 in basso. Benzina, gasolio, alcol etilico, solventi.' },
+          { adr: '5.1', correct: 'Classe 5.1 — Materie comburenti', opts: ['Classe 2 — Gas', 'Classe 5.1 — Materie comburenti', 'Classe 7 — Radioattivi', 'Classe 8 — Corrosivi'], why: 'ADR Classe 5.1: fiamma sopra un cerchio su fondo giallo. Materie comburenti (ossidanti) come il perossido di idrogeno o il nitrato d\'ammonio.' },
+          { adr: '6.1', correct: 'Classe 6.1 — Sostanze tossiche', opts: ['Classe 6.1 — Sostanze tossiche', 'Classe 8 — Corrosivi', 'Classe 9 — Materiali diversi', 'Classe 2 — Gas tossico'], why: 'ADR Classe 6.1: teschio su fondo bianco e numero 6 in basso. Materie tossiche per ingestione, inalazione o contatto (arsenico, cianuri).' },
+          { adr: '7', correct: 'Classe 7 — Radioattivi', opts: ['Classe 1 — Esplosivi', 'Classe 5.1 — Materie comburenti', 'Classe 7 — Radioattivi', 'Classe 9 — Merci diverse'], why: 'ADR Classe 7: trifoglio della radioattività, metà superiore gialla e inferiore bianca. Radioisotopi per uso medico e industriale.' },
+          { adr: '8', correct: 'Classe 8 — Corrosivi', opts: ['Classe 3 — Liquidi infiammabili', 'Classe 8 — Corrosivi', 'Classe 6.1 — Tossici', 'Classe 5.1 — Materie comburenti'], why: 'ADR Classe 8: metà superiore bianca con le provette che corrodono, metà inferiore nera. Acido solforico, soda caustica.' },
+          { adr: '9', correct: 'Classe 9 — Materiali vari pericolosi', opts: ['Classe 2 — Gas', 'Classe 7 — Radioattivi', 'Classe 9 — Materiali vari pericolosi', 'Classe 5.1 — Materie comburenti'], why: 'ADR Classe 9: sette strisce verticali nere nella metà superiore. Materie e oggetti pericolosi diversi: batterie al litio, materiali magnetizzati, amianto.' }
         ]
       },
       uni: {
         titolo: 'Cartelli UNI 7010',
         descrizione: 'Luoghi di lavoro',
-        sample: '\u26A0\uFE0F',
+        campione: { img: '/pittogrammi/iso7010/pericolo-generico.svg' },
         // Le UNI 7010 italiane corrispondono allo standard internazionale ISO
         // 7010. Quando possibile uso il pittogramma SVG ufficiale dalla
         // libreria del sito (rules 04a \u2014 shortcode pittogramma): coerenza
         // estetica e didattica, riconoscimento dei segnali REALI che il
         // ragazzo vedra' a scuola, in cantiere, al lavoro.
         questions: [
-          { sym: '\u26A1', iso: 'pericolo-elettrico', tipo: 'pericolo', correct: 'Pericolo: tensione elettrica', opts: ['Pericolo: tensione elettrica', 'Obbligo: usare guanti isolanti', 'Divieto: non toccare', 'Estintore'], why: 'Triangolo giallo con bordo nero = pericolo. Il simbolo della saetta indica alta tensione.' },
-          { sym: '\uD83D\uDD25', iso: 'materiale-infiammabile', tipo: 'pericolo', correct: 'Pericolo: materiale infiammabile', opts: ['Pericolo: materiale infiammabile', 'Divieto di fumare', 'Estintore', 'Obbligo di usare la mascherina'], why: 'Triangolo giallo con fiamma: zona con materiali infiammabili. Evita fiamme libere e scintille.' },
-          { sym: '\u2620\uFE0F', iso: 'pericolo-tossico', tipo: 'pericolo', correct: 'Pericolo: sostanze tossiche', opts: ['Pericolo: sostanze tossiche', 'Divieto di fumare', 'Soccorso', 'Obbligo di mascherina'], why: 'Triangolo giallo con teschio: presenza di sostanze tossiche. Usa i DPI e rispetta le procedure.' },
-          { sym: '\uD83D\uDEAD', iso: 'vietato-fumare', tipo: 'divieto', correct: 'Vietato fumare', opts: ['Vietato fumare', 'Vietato entrare', 'Divieto di bere', 'Divieto di usare fiamme libere'], why: 'Cerchio rosso con sbarra e sigaretta barrata: divieto di fumo. Obbligatorio per legge in luoghi pubblici e di lavoro.' },
-          { sym: '\uD83D\uDEAB', iso: 'vietato-pedoni', tipo: 'divieto', correct: 'Vietato l\'accesso', opts: ['Vietato fumare', 'Vietato usare l\'ascensore', 'Vietato l\'accesso', 'Vietato lavorare'], why: 'Cerchio rosso con sbarra: area interdetta alle persone non autorizzate (qui il segnale e\' "vietato pedoni").' },
-          { sym: '\u26D1\uFE0F', iso: 'casco-protettivo', tipo: 'obbligo', correct: 'Obbligo di casco', opts: ['Obbligo di casco', 'Obbligo di occhiali', 'Obbligo di calzature di sicurezza', 'Obbligo di guanti'], why: 'Cerchio blu con casco: obbligatorio indossare il casco di protezione. Tipico nei cantieri.' },
-          { sym: '\uD83E\uDDE4', iso: 'guanti-protettivi', tipo: 'obbligo', correct: 'Obbligo di guanti di protezione', opts: ['Obbligo di guanti di protezione', 'Obbligo di mascherina', 'Obbligo di occhiali', 'Obbligo di grembiule'], why: 'Cerchio blu con guanto: usa guanti quando maneggi materiali o sostanze che possono ferirti o contaminarti.' },
-          { sym: '\uD83E\uDD7D', iso: 'protezione-occhi', tipo: 'obbligo', correct: 'Obbligo di occhiali di sicurezza', opts: ['Obbligo di casco', 'Obbligo di occhiali di sicurezza', 'Obbligo di mascherina', 'Obbligo di tappi per orecchie'], why: 'Cerchio blu con occhiali: usa occhiali di sicurezza per proteggere gli occhi da polveri, schegge o schizzi.' },
-          { sym: '\u2795', iso: 'cassetta-primo-soccorso', tipo: 'soccorso', correct: 'Punto di primo soccorso', opts: ['Uscita di emergenza', 'Punto di primo soccorso', 'Idrante', 'Punto di raccolta'], why: 'Quadrato verde con croce bianca: qui trovi kit di medicazione o personale di primo soccorso.' },
-          { sym: '\uD83D\uDEAA', iso: 'uscita-emergenza-destra', tipo: 'soccorso', correct: 'Uscita di emergenza', opts: ['Uscita di emergenza', 'Ingresso', 'Scala antincendio', 'Vietato entrare'], why: 'Quadrato verde con porta e freccia: la via di fuga in caso di emergenza. Tienila sempre libera.' },
-          { sym: '\u2764\uFE0F', iso: 'defibrillatore-dae', tipo: 'soccorso', correct: 'Defibrillatore (DAE)', opts: ['Primo soccorso', 'Defibrillatore (DAE)', 'Antincendio', 'Idrante'], why: 'Quadrato verde con cuore e saetta: posizione del defibrillatore. Va usato subito in caso di arresto cardiaco.' },
-          { sym: '\uD83D\uDC65', iso: 'punto-raccolta', tipo: 'soccorso', correct: 'Punto di raccolta', opts: ['Sala riunioni', 'Punto di raccolta', 'Ufficio informazioni', 'Uscita di emergenza'], why: 'Quadrato verde con frecce verso le persone: luogo dove riunirsi dopo un\'evacuazione per contarsi.' },
-          { sym: '\uD83E\uDDEF', iso: 'estintore', tipo: 'antincendio', correct: 'Estintore', opts: ['Estintore', 'Idrante', 'Rilevatore di fumo', 'Pulsante di allarme'], why: 'Quadrato rosso con estintore: localizzazione di un estintore. Impara a usarlo: PASS (Prendi, Avvicina, Schiaccia, Spazza).' },
-          { sym: '\uD83D\uDEB1', iso: 'idrante-muro', tipo: 'antincendio', correct: 'Idrante antincendio', opts: ['Lavandino', 'Idrante antincendio', 'Prese acqua potabile', 'Estintore'], why: 'Quadrato rosso con manichetta: idrante o naspo. Va usato dai Vigili del Fuoco o da personale formato.' }
+          { iso: 'pericolo-elettrico', tipo: 'pericolo', correct: 'Pericolo: tensione elettrica', opts: ['Pericolo: tensione elettrica', 'Obbligo: usare guanti isolanti', 'Divieto: non toccare', 'Estintore'], why: 'Triangolo giallo con bordo nero = pericolo. Il simbolo della saetta indica alta tensione.' },
+          { iso: 'materiale-infiammabile', tipo: 'pericolo', correct: 'Pericolo: materiale infiammabile', opts: ['Pericolo: materiale infiammabile', 'Divieto di fumare', 'Estintore', 'Obbligo di usare la mascherina'], why: 'Triangolo giallo con fiamma: zona con materiali infiammabili. Evita fiamme libere e scintille.' },
+          { iso: 'pericolo-tossico', tipo: 'pericolo', correct: 'Pericolo: sostanze tossiche', opts: ['Pericolo: sostanze tossiche', 'Divieto di fumare', 'Soccorso', 'Obbligo di mascherina'], why: 'Triangolo giallo con teschio: presenza di sostanze tossiche. Usa i DPI e rispetta le procedure.' },
+          { iso: 'vietato-fumare', tipo: 'divieto', correct: 'Vietato fumare', opts: ['Vietato fumare', 'Vietato entrare', 'Divieto di bere', 'Divieto di usare fiamme libere'], why: 'Cerchio rosso con sbarra e sigaretta barrata: divieto di fumo. Obbligatorio per legge in luoghi pubblici e di lavoro.' },
+          { iso: 'vietato-pedoni', tipo: 'divieto', correct: 'Vietato ai pedoni', opts: ['Vietato fumare', 'Vietato usare l\'ascensore', 'Vietato ai pedoni', 'Vietato lavorare'], why: 'Cerchio rosso con sbarra sopra una persona che cammina: qui i pedoni non possono passare, per esempio dove circolano carrelli o mezzi.' },
+          { iso: 'casco-protettivo', tipo: 'obbligo', correct: 'Obbligo di casco', opts: ['Obbligo di casco', 'Obbligo di occhiali', 'Obbligo di calzature di sicurezza', 'Obbligo di guanti'], why: 'Cerchio blu con casco: obbligatorio indossare il casco di protezione. Tipico nei cantieri.' },
+          { iso: 'guanti-protettivi', tipo: 'obbligo', correct: 'Obbligo di guanti di protezione', opts: ['Obbligo di guanti di protezione', 'Obbligo di mascherina', 'Obbligo di occhiali', 'Obbligo di grembiule'], why: 'Cerchio blu con guanto: usa guanti quando maneggi materiali o sostanze che possono ferirti o contaminarti.' },
+          { iso: 'protezione-occhi', tipo: 'obbligo', correct: 'Obbligo di occhiali di sicurezza', opts: ['Obbligo di casco', 'Obbligo di occhiali di sicurezza', 'Obbligo di mascherina', 'Obbligo di tappi per orecchie'], why: 'Cerchio blu con occhiali: usa occhiali di sicurezza per proteggere gli occhi da polveri, schegge o schizzi.' },
+          { iso: 'cassetta-primo-soccorso', tipo: 'soccorso', correct: 'Punto di primo soccorso', opts: ['Uscita di emergenza', 'Punto di primo soccorso', 'Idrante', 'Punto di raccolta'], why: 'Quadrato verde con croce bianca: qui trovi kit di medicazione o personale di primo soccorso.' },
+          { iso: 'uscita-emergenza-destra', tipo: 'soccorso', correct: 'Uscita di emergenza', opts: ['Uscita di emergenza', 'Ingresso', 'Scala antincendio', 'Vietato entrare'], why: 'Quadrato verde con porta e freccia: la via di fuga in caso di emergenza. Tienila sempre libera.' },
+          { iso: 'defibrillatore-dae', tipo: 'soccorso', correct: 'Defibrillatore (DAE)', opts: ['Primo soccorso', 'Defibrillatore (DAE)', 'Antincendio', 'Idrante'], why: 'Quadrato verde con cuore e saetta: posizione del defibrillatore. Va usato subito in caso di arresto cardiaco.' },
+          { iso: 'punto-raccolta', tipo: 'soccorso', correct: 'Punto di raccolta', opts: ['Sala riunioni', 'Punto di raccolta', 'Ufficio informazioni', 'Uscita di emergenza'], why: 'Quadrato verde con frecce verso le persone: luogo dove riunirsi dopo un\'evacuazione per contarsi.' },
+          { iso: 'estintore', tipo: 'antincendio', correct: 'Estintore', opts: ['Estintore', 'Idrante', 'Rilevatore di fumo', 'Pulsante di allarme'], why: 'Quadrato rosso con estintore: localizzazione di un estintore. Per usarlo: togli la sicura, punta il getto alla base delle fiamme, premi la leva.' },
+          { iso: 'idrante-muro', tipo: 'antincendio', correct: 'Idrante antincendio', opts: ['Lavandino', 'Idrante antincendio', 'Prese acqua potabile', 'Estintore'], why: 'Quadrato rosso con manichetta: idrante o naspo. Va usato dai Vigili del Fuoco o da personale formato.' }
         ]
       }
     };
@@ -335,7 +273,7 @@
     CAPITOLI.mix = {
       titolo: 'Mix completo',
       descrizione: 'Tutti i sistemi',
-      sample: '\uD83C\uDFAF',
+      campione: { icona: 'bi-shuffle' },
       questions: null // generato a runtime
     };
 
@@ -361,6 +299,9 @@
     var questions = [];
     var idx = 0;
     var score = 0;
+    // Doppio tocco (LIM): una risposta per domanda e un solo «Avanti»; un tocco
+    // che arriva entro 400 ms dal cambio di schermata non conta.
+    var risposto = false, prontoDa = 0, finito = false;
 
     function shuffle(a) {
       a = a.slice();
@@ -380,7 +321,7 @@
         card.setAttribute('role', 'button');
         card.setAttribute('tabindex', '0');
         var count = c.questions ? c.questions.length : 'tutti';
-        card.innerHTML = '<div class="sample" aria-hidden="true">' + c.sample + '</div>' +
+        card.innerHTML = '<div class="sample" aria-hidden="true">' + campioneHtml(c.campione) + '</div>' +
                         '<h3>' + c.titolo + '</h3>' +
                         '<div class="count">' + c.descrizione + ' · ' + count + (count === 'tutti' ? '' : ' domande') + '</div>';
         card.addEventListener('click', function () { startChapter(key); });
@@ -405,6 +346,7 @@
       }
       idx = 0;
       score = 0;
+      finito = false;
       selectScreen.classList.add('hide');
       endScreen.classList.add('hide');
       quizScreen.classList.remove('hide');
@@ -412,36 +354,73 @@
       showQuestion();
     }
 
+    // Etichetta ADR (rombo 100x100): fondo, simbolo, numero della classe.
+    var ADR = {
+      '1':   { fondo: '#f39200', simbolo: 'ghs01-esplosivo', numero: '1' },
+      '2.1': { fondo: '#e30613', simbolo: 'ghs02-infiammabile', numero: '2' },
+      '3':   { fondo: '#e30613', simbolo: 'ghs02-infiammabile', numero: '3' },
+      '5.1': { fondo: '#ffd500', simbolo: 'ghs03-comburente', numero: '5.1' },
+      '6.1': { fondo: '#ffffff', simbolo: 'ghs06-tossicita-acuta', numero: '6' },
+      '7':   { fondo: '#ffd500', fondoBasso: '#ffffff', speciale: 'trifoglio', numero: '7' },
+      '8':   { fondo: '#ffffff', fondoBasso: '#000000', simbolo: 'ghs05-corrosivo', numero: '8', numeroChiaro: true },
+      '9':   { fondo: '#ffffff', speciale: 'strisce', numero: '9' }
+    };
+    var adrN = 0;
+    function svgAdr(cls) {
+      var d = ADR[cls], id = 'adr' + (++adrN);
+      var rombo = '50,1.5 98.5,50 50,98.5 1.5,50';
+      var s = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" class="adr-svg" aria-hidden="true" focusable="false">' +
+        '<defs><clipPath id="' + id + 'r"><polygon points="' + rombo + '"/></clipPath>' +
+        '<clipPath id="' + id + 's"><polygon points="50,20 75,45 50,70 25,45"/></clipPath></defs>' +
+        '<g clip-path="url(#' + id + 'r)"><rect width="100" height="100" fill="' + d.fondo + '"/>';
+      if (d.fondoBasso) s += '<rect y="50" width="100" height="50" fill="' + d.fondoBasso + '"/>';
+      if (d.speciale === 'strisce') {
+        for (var i = 0; i < 7; i++) s += '<rect x="' + (22 + i * 8.6) + '" y="0" width="4.3" height="50" fill="#000"/>';
+      }
+      s += '</g>';
+      if (d.simbolo) {
+        // il pittogramma GHS e' un rombo bianco: con «multiply» il bianco prende il
+        // colore di fondo e resta solo il simbolo nero; il bordo rosso resta fuori dal ritaglio
+        s += '<g clip-path="url(#' + id + 's)"><image href="ghs/' + d.simbolo + '.svg" xlink:href="ghs/' + d.simbolo + '.svg" x="17.5" y="12.5" width="65" height="65" style="mix-blend-mode:multiply"/></g>';
+      }
+      if (d.speciale === 'trifoglio') {
+        s += '<circle cx="50" cy="33" r="3.2" fill="#000"/>';
+        [[-30], [-150], [90]].forEach(function (a) {
+          var c = a[0] * Math.PI / 180, a1 = c - Math.PI / 6, a2 = c + Math.PI / 6, r1 = 5.5, r2 = 17;
+          function pt(r, ang) { return (50 + r * Math.cos(ang)).toFixed(2) + ' ' + (33 + r * Math.sin(ang)).toFixed(2); }
+          s += '<path fill="#000" d="M' + pt(r1, a1) + ' L' + pt(r2, a1) + ' A' + r2 + ' ' + r2 + ' 0 0 1 ' + pt(r2, a2) +
+            ' L' + pt(r1, a2) + ' A' + r1 + ' ' + r1 + ' 0 0 0 ' + pt(r1, a1) + 'Z"/>';
+        });
+      }
+      s += '<polygon points="50,6 94,50 50,94 6,50" fill="none" stroke="' + (d.numeroChiaro ? '#fff' : '#000') + '" stroke-width="1.2"/>' +
+        '<polygon points="' + rombo + '" fill="none" stroke="#000" stroke-width="1"/>' +
+        '<text x="50" y="86" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="' + (d.numero.length > 1 ? 11 : 14) + '" fill="' + (d.numeroChiaro ? '#fff' : '#000') + '">' + d.numero + '</text>' +
+        '</svg>';
+      return s;
+    }
+
     function renderPittogramma(type, q) {
       pittogrammaWrap.innerHTML = '';
+      var d = document.createElement('div');
+      d.className = 'pittogramma-box';
+      d.setAttribute('role', 'img');
       if (type === 'clp') {
-        var d = document.createElement('div');
-        d.className = 'clp';
-        d.setAttribute('role', 'img');
-        d.setAttribute('aria-label', 'Pittogramma CLP');
-        d.innerHTML = '<span class="clp-inner" aria-hidden="true">' + q.sym + '</span>';
-        pittogrammaWrap.appendChild(d);
+        d.setAttribute('aria-label', 'Pittogramma di pericolo CLP');
+        d.innerHTML = '<img src="ghs/' + q.ghs + '.svg" alt="" class="pitto-img">';
       } else if (type === 'adr') {
-        var d2 = document.createElement('div');
-        d2.className = 'adr ' + q.color;
-        d2.setAttribute('role', 'img');
-        d2.setAttribute('aria-label', 'Diamante ADR classe ' + q.cls);
-        d2.innerHTML = '<div class="adr-inner" aria-hidden="true"><span class="sym">' + q.sym + '</span><span class="cls">' + q.cls + '</span></div>';
-        pittogrammaWrap.appendChild(d2);
-      } else if (type === 'uni') {
-        var d3 = document.createElement('div');
-        d3.className = 'uni7010 ' + q.tipo;
-        d3.setAttribute('role', 'img');
-        d3.setAttribute('aria-label', 'Cartello UNI 7010 ' + q.tipo);
-        // Se la domanda specifica un pittogramma ISO 7010, usa lo SVG ufficiale
-        // dalla libreria (static/pittogrammi/iso7010/). Fallback: emoji.
-        if (q.iso) {
-          d3.innerHTML = '<img src="/pittogrammi/iso7010/' + q.iso + '.svg" alt="" class="uni-iso" loading="lazy">';
-        } else {
-          d3.textContent = q.sym;
-        }
-        pittogrammaWrap.appendChild(d3);
+        d.setAttribute('aria-label', 'Etichetta ADR di una merce pericolosa');
+        d.innerHTML = svgAdr(q.adr);
+      } else {
+        d.setAttribute('aria-label', 'Segnale di sicurezza UNI EN ISO 7010');
+        d.innerHTML = '<img src="/pittogrammi/iso7010/' + q.iso + '.svg" alt="" class="pitto-img">';
       }
+      pittogrammaWrap.appendChild(d);
+    }
+
+    function campioneHtml(c) {
+      if (c.img) return '<img src="' + c.img + '" alt="">';
+      if (c.adr) return svgAdr(c.adr);
+      return '<i class="bi ' + c.icona + '"></i>';
     }
 
     function showQuestion() {
@@ -453,6 +432,8 @@
       var entry = questions[idx];
       renderPittogramma(entry.type, entry.q);
       domandaEl.textContent = 'Cosa rappresenta questo pittogramma?';
+      risposto = false;
+      prontoDa = Date.now() + 400;
       answersEl.innerHTML = '';
       shuffle(entry.q.opts).forEach(function (txt) {
         var btn = document.createElement('button');
@@ -465,11 +446,14 @@
     }
 
     function chooseAnswer(btn, txt, q) {
+      if (risposto || Date.now() < prontoDa) return;
+      risposto = true;
       answersEl.querySelectorAll('button').forEach(function (b) {
         b.disabled = true;
         if (b.textContent === q.correct) b.classList.add('correct');
       });
       var isOk = txt === q.correct;
+      if (window.AudioSintetico) { if (isOk) window.AudioSintetico.dingPositivo(); else window.AudioSintetico.tonoNeutro(); }
       if (!isOk) btn.classList.add('wrong');
       else score++;
       hudScore.textContent = 'Punti: ' + score + ' / ' + questions.length;
@@ -489,10 +473,17 @@
         }
       }
       nextBtn.classList.remove('hide');
-      nextBtn.onclick = function () { idx++; showQuestion(); };
+      nextBtn.onclick = function () {
+        if (!risposto) return;
+        nextBtn.onclick = null;
+        idx++;
+        showQuestion();
+      };
     }
 
     function finish() {
+      if (finito) return;
+      finito = true;
       quizScreen.classList.add('hide');
       endScreen.classList.remove('hide');
       endScoreEl.textContent = score;

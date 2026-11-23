@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { text: 'È appena iniziato l\'autunno e piove per la prima volta dopo l\'estate.', answer: 'giallo', tip: 'Prima pioggia: il terreno asciutto non la assorbe e le strade possono diventare scivolose.' },
         { text: 'Il papà sta usando il barbecue in giardino con vento forte.', answer: 'rosso', tip: 'Vento forte e fuoco aperto: rischio incendio! Spegnete il barbecue finché non cala il vento.' },
         { text: 'La sirena di una casa di riposo suona per 30 secondi a mezzogiorno.', answer: 'verde', tip: 'Spesso è una prova settimanale. Se dura più a lungo o a orari strani, diventa giallo.' },
-        { text: 'Un cavo elettrico è caduto a terra in strada dopo un temporale.', answer: 'rosso', tip: 'Pericolosissimo! Resta lontano almeno 10 metri e chiama subito il 112: potrebbe essere sotto tensione.' },
+        { text: 'Un cavo elettrico è caduto a terra in strada dopo un temporale.', answer: 'rosso', tip: 'Pericolosissimo! Non avvicinarti e non toccarlo, avvisa un adulto e chiamate il 112: potrebbe essere sotto tensione.' },
         { text: 'Il bollettino dice "nebbia fitta in pianura domattina".', answer: 'giallo', tip: 'Nebbia: guida piano se ci sei in auto, usa luci adeguate. Per i pedoni niente panico, ma attenzione alle strade.' },
         { text: 'Un compagno a scuola sbatte la testa e ha un piccolo bernoccolo.', answer: 'giallo', tip: 'Avvisa subito la maestra o la bidella. Se sta male, si chiama il 112.' },
         { text: 'Al telegiornale dicono che c\'è stato un terremoto a 300 km da qui.', answer: 'verde', tip: 'Non sei nella zona colpita. Puoi informarti, ma dove sei non c\'è pericolo.' },
@@ -64,12 +64,15 @@ document.addEventListener('DOMContentLoaded', () => {
         { text: 'Su Instagram vedi un post di un negozio "evacuazione totale di Genzano stanotte!" con tante condivisioni.', answer: 'verde', tip: 'Le condivisioni non rendono vera una notizia. Mai un\'evacuazione si comunica via post di un negozio: la comunicano il Comune e la Protezione Civile.' },
         { text: 'Sul sito del Centro Funzionale Regionale Lazio leggi: codice giallo per temporali domani 12-18.', answer: 'giallo', tip: 'Bollettino ufficiale codice giallo: criticità ordinaria. Preparati, ma niente panico.' },
         { text: 'Un amico ti chiede di rilanciare un suo post che chiede preghiere per "il terremoto in arrivo".', answer: 'verde', tip: 'I terremoti non si possono prevedere. Niente preghiere preventive, niente allarmismo: si chiama "diffondere falsi allarmi".' },
-        { text: 'Il bollettino DPC (Dipartimento Protezione Civile) annuncia codice rosso per ondata di calore.', answer: 'rosso', tip: 'Codice rosso ufficiale: rischio elevato per anziani e bambini. Bevi tantissimo, niente sole tra 11 e 17, controlla i nonni.' },
+        { text: 'Il bollettino del Ministero della Salute sulle ondate di calore segna il livello più alto per la tua città.', answer: 'rosso', tip: 'Livello più alto: rischio elevato, soprattutto per anziani e bambini. Bevi spesso, evita il sole dalle 11 alle 18, controlla i nonni.' },
         { text: 'Un canale Telegram non ufficiale dice "il Comune sta nascondendo l\'emergenza!".', answer: 'verde', tip: 'Tipico schema cospirazionista. Le emergenze vere vengono comunicate dai canali ufficiali, non "rivelate" da canali anonimi.' },
         { text: 'A scuola la maestra vi chiede di cercare con i genitori dove si leggono le allerte meteo ufficiali.', answer: 'giallo', tip: 'Utile per prepararsi: le allerte del Centro Funzionale Regionale si leggono sul sito della Regione Lazio, nella pagina Allerte meteo di questo sito e sui canali del Comune.' }
     ];
 
     let queue, index, score, locked;
+    // Doppio tocco: `locked` ferma i tasti dopo la risposta; `partita` impedisce
+    // che il timer di una partita finita faccia avanzare quella nuova.
+    let partita = 0;
 
     function shuffle(arr) {
         for (let i = arr.length - 1; i > 0; i--) {
@@ -80,6 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function startGame() {
+        partita++;
         introScreen.classList.add('hide');
         resultScreen.classList.add('hide');
         gameScreen.classList.remove('hide');
@@ -108,6 +112,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const sit = queue[index];
         const correct = chosen === sit.answer;
         buttons.forEach(b => { b.disabled = true; });
+        if (window.AudioSintetico) {
+            if (correct) window.AudioSintetico.dingPositivo(); else window.AudioSintetico.tonoNeutro();
+        }
         if (correct) {
             score++;
             scoreSpan.textContent = score;
@@ -124,7 +131,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
         feedback.classList.remove('hide');
+        const questa = partita;
         setTimeout(() => {
+            if (questa !== partita) return;
             index++;
             if (index < queue.length) { showSituation(); }
             else { showResults(); }
