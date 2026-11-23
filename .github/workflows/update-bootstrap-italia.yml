@@ -369,7 +369,7 @@ jobs:
       # indispensabile si controlla qui, prima di aprirla.
       - name: "⚙️ Setup Hugo (build di prova)"
         if: steps.update.outcome == 'success'
-        uses: peaceiris/actions-hugo@2752ce1d29631191ea3f27c23495fa06139a5b78 # v3.2.1
+        uses: peaceiris/actions-hugo@d1c81a15d4e6dca7086a17b9c2565cb70fd576bf # v3.3.0
         with:
           hugo-version: '0.154.5'
           extended: true
@@ -393,7 +393,7 @@ jobs:
       # il GITHUB_TOKEN e valgono i controlli fatti qui sopra.
       - name: "📤 Apri la pull request di aggiornamento"
         if: steps.update.outcome == 'success'
-        uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
+        uses: peter-evans/create-pull-request@3ffccacd46053766916f087ce41d627c0b8cf2d1 # v8.1.3
         with:
           token: ${{ secrets.BOOTSTRAP_PR_TOKEN || secrets.GITHUB_TOKEN }}
           branch: bot/bootstrap-italia-${{ steps.releases.outputs.stable }}
