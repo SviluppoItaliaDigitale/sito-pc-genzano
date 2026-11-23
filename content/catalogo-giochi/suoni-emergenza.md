@@ -36,7 +36,7 @@ sitemap:
 
 ## Come si gioca
 
-1. La sirena di ambulanza e pompieri ha due note, una bassa e una alta.
+1. La sirena di ambulanza e pompieri ha due note, una bassa e l'altra alta.
 2. Il tuono fa "boom" dopo il fulmine.
 3. L'allarme della scuola dice di uscire in ordine.
 4. Con IT-alert il telefono fa un suono speciale: chiama subito un adulto.
