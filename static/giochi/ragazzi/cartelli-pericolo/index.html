@@ -328,10 +328,10 @@
         card.className = 'chapter-card';
         card.setAttribute('role', 'button');
         card.setAttribute('tabindex', '0');
-        var count = c.questions ? c.questions.length : 'tutti';
+        var count = c.questions ? c.questions.length : 15; // il mix ne pesca 15
         card.innerHTML = '<div class="sample" aria-hidden="true">' + campioneHtml(c.campione) + '</div>' +
                         '<h3>' + c.titolo + '</h3>' +
-                        '<div class="count">' + c.descrizione + ' · ' + count + (count === 'tutti' ? '' : ' domande') + '</div>';
+                        '<div class="count">' + c.descrizione + ' · ' + count + ' domande</div>';
         card.addEventListener('click', function () { startChapter(key); });
         card.addEventListener('keydown', function (e) {
           if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); startChapter(key); }

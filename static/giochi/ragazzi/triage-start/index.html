@@ -430,8 +430,8 @@
         if (window.GameCoach && window.GameCoach.hint) {
           var TIPS = {
             'rosso':  'ROSSO = pericolo di vita immediato (respira male, polso radiale assente, non risponde). Sul campo si tratta per primo.',
-            'giallo': 'GIALLO = grave ma stabile, può aspettare 30-60 minuti. Parametri compensati ma lesione importante.',
-            'verde':  'VERDE = lieve, cammina e parla. Può aspettare ore, ma va comunque registrato.',
+            'giallo': 'GIALLO = grave ma stabile: viene trattato dopo i rossi. Parametri compensati ma lesione importante.',
+            'verde':  'VERDE = lieve, cammina e parla: viene trattato dopo rossi e gialli, ma va comunque registrato.',
             'nero':   'NERO = deceduto o non recuperabile sul campo. Si annota e si passa al prossimo paziente.'
           };
           window.GameCoach.hint(TIPS[p.cod] || 'Rivedi il metodo START sui Consigli (bottone sopra).', '/cosa-fare-adesso/');

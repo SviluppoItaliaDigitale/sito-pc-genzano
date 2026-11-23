@@ -4,7 +4,8 @@
      (acceso o spento, scelta salvata nel browser);
    - nei giochi che non hanno suoni propri, un «ding» alla risposta giusta e un
      tono neutro a quella sbagliata, letti dalle classi che il gioco già mette
-     sulle risposte (correct/wrong, giusto/sbagliato, corretto/errato, ok/ko);
+     sulle risposte (correct/wrong, giusto/sbagliato, corretto/errato; non ok/ko,
+     che molti giochi usano per riquadri e cronologie);
    - in tutti i giochi, una breve musica a fine partita, quando il gioco salva il
      risultato (GiochiPC.salvaRisultato).
    Il suono accompagna e non sostituisce mai le scritte del gioco.
@@ -13,8 +14,8 @@
 (function (global) {
   'use strict';
 
-  var GIUSTE = ['correct', 'giusto', 'corretto', 'is-correct', 'ok'];
-  var SBAGLIATE = ['wrong', 'sbagliato', 'errato', 'is-wrong', 'ko'];
+  var GIUSTE = ['correct', 'giusto', 'corretto', 'is-correct'];
+  var SBAGLIATE = ['wrong', 'sbagliato', 'errato', 'is-wrong'];
   var VOLUME_ACCESO = 0.6;
 
   function A() { return global.AudioSintetico; }

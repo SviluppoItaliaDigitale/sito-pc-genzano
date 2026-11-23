@@ -58,7 +58,7 @@ body.gsp-body { background: var(--gsp-fondo); }
   max-height: 640px;
 }
 @media (max-width: 991.98px) { .gsp-mappa { height: 40vh; min-height: 240px; max-height: none; } }
-.gsp-pannello h2 { scroll-margin-top: 1rem; }
+.gsp-pannello h2 { scroll-margin-top: 84px; /* sotto la barra del gioco, sticky in alto */ }
 
 .gsp-camera {
   position: absolute;
@@ -242,6 +242,3 @@ html.a11y-pause-anim .gsp-mappa.gsp-trema, html.a11y-pause-animations .gsp-mappa
    di attesa alto almeno 44 px, comodo col dito sulla lavagna. */
 .gsp-sotto-mappa .form-check { min-height: 44px; display: flex; align-items: center; }
 .gsp-sotto-mappa .form-check-label { min-height: 44px; display: inline-flex; align-items: center; }
-
-/* Il titolo portato in vista non finisce sotto la barra del gioco (sticky, in alto). */
-.gsp-pannello h2 { scroll-margin-top: 84px; }

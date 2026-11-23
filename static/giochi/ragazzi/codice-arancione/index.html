@@ -98,7 +98,7 @@
 
           <div id="intro" class="rag-panel">
             <h2>Riunione informativa</h2>
-            <p>Sei <strong>Funzionario di sala operativa</strong> al COC. È stato dichiarato un <strong>Codice Arancione</strong>: devi allestire un'area di accoglienza per gli sfollati nel palazzetto comunale rispettando i vincoli logistici, sanitari e di sicurezza.</p>
+            <p>Sei <strong>Funzionario di sala operativa</strong> al COC, che il Sindaco ha attivato dopo un'emergenza: devi allestire un'area di accoglienza per gli sfollati nel palazzetto comunale rispettando i vincoli logistici, sanitari e di sicurezza.</p>
             <p>Ogni partita propone uno scenario diverso (frana, alluvione, sisma, incendio boschivo) con popolazione, budget e priorità specifiche. <strong>Attento agli eventi sopravvenuti</strong>: durante l'allestimento la situazione può cambiare.</p>
             <button id="start" class="btn btn-primary btn-lg"><i class="bi bi-bounding-box me-1"></i> Apri il campo</button>
           </div>
@@ -216,7 +216,7 @@
         titolo: 'Codice Arancione — Alluvione zona Lago',
         icon: 'bi-water',
         coloreScenario: '#0369a1',
-        briefing: 'Esondazione del lago di Nemi dopo 48h di pioggia: <strong>150 persone</strong> evacuate (25 anziani, 10 con disabilità, 35 bambini). Strade principali interrotte. Budget <strong>180 unità</strong>.',
+        briefing: 'Frane e allagamenti sui versanti del lago di Nemi dopo 48 ore di pioggia: <strong>150 persone</strong> evacuate (25 anziani, 10 con disabilità, 35 bambini). Strade principali interrotte. Budget <strong>180 unità</strong>.',
         popolazione: 150, anziani: 25, disabili: 10, bambini: 35,
         budget: 180,
         priorita: ['elettricita', 'acqua', 'telecom'],
@@ -414,12 +414,12 @@
       });
 
       var pop = scenario.popolazione;
-      var bagniMin = Math.ceil(pop / 25);
+      var bagniMin = Math.ceil(pop / 20); // standard Sphere 2018: almeno 1 bagno condiviso ogni 20 persone
       var pastiMin = pop;
 
       var check = [];
       check.push({ ok: posti >= pop, msg: 'Posti letto ≥ ' + pop + ' (hai ' + posti + ')', punti: 20 });
-      check.push({ ok: ig >= bagniMin, msg: 'Bagni ≥ ' + bagniMin + ' (hai ' + ig + ') — minimo 1 ogni 25 persone', punti: 15 });
+      check.push({ ok: ig >= bagniMin, msg: 'Bagni ≥ ' + bagniMin + ' (hai ' + ig + ') — almeno 1 ogni 20 persone (standard Sphere)', punti: 15 });
       check.push({ ok: pasti >= pastiMin, msg: 'Pasti ≥ ' + pastiMin + '/giorno (hai ' + pasti + ')', punti: 15 });
       check.push({ ok: san, msg: 'Copertura sanitaria presente', punti: 10 });
       check.push({ ok: access, msg: 'Soluzioni accessibili alle persone con disabilità', punti: 10 });
