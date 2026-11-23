@@ -31,3 +31,12 @@
     .sem-btn { font-size: 0.85rem; padding: 12px 10px; }
     .situation-text { font-size: 1rem; }
 }
+/* Comandi grandi per la LIM: almeno 56 px di altezza */
+.sem-btn { min-height: 56px; }
+.sem-btn:focus-visible { outline: 3px solid #003366; outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+    .sem-btn, .situation-card { transition: none; }
+    .sem-btn:hover { transform: none; }
+    .feedback-box { animation: none; }
+}
+html.a11y-pause-anim .feedback-box { animation: none; }

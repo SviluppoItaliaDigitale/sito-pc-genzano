@@ -1,5 +1,7 @@
 .game-container { max-width: 650px; margin: 0 auto; }
 .scenario-card {
+    height: 100%;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
     background: #fff; border: 2px solid #dee2e6; border-radius: 12px;
     padding: 1.5rem; text-align: center; cursor: pointer;
     transition: all 0.25s ease; text-decoration: none; color: #333;
@@ -20,9 +22,15 @@
     cursor: pointer; transition: all 0.2s ease; line-height: 1.5;
 }
 .choice-btn:hover { border-color: #004d99; background: #e3f2fd; }
-.choice-btn:disabled { cursor: default; }
-.choice-btn.right { border-color: #2e7d32; background: #e8f5e9; }
-.choice-btn.wrong-choice { border-color: #c62828; background: #ffebee; }
+.choice-btn { color: #1a1a1a; }
+/* Dopo la risposta i pulsanti restano leggibili: il grigio del browser
+   per i pulsanti disattivati stava sotto 3:1. */
+.choice-btn:disabled { cursor: default; color: #343a40; opacity: 1; }
+.choice-btn.right { border-color: #2e7d32; background: #e8f5e9; color: #1b5e20; }
+.choice-btn.wrong-choice { border-color: #c62828; background: #ffebee; color: #842029; }
+.choice-btn.right::before { content: '\2713\00a0'; font-weight: 700; }
+.choice-btn.wrong-choice::before { content: '\2717\00a0'; font-weight: 700; }
+.choice-btn:focus-visible, .scenario-card:focus-visible { outline: 3px solid #ffbe2e; outline-offset: 2px; }
 .story-feedback {
     padding: 14px 18px; border-radius: 10px;
     font-size: 0.9rem; margin-top: 12px; animation: fadeSlide 0.3s ease;
@@ -70,6 +78,19 @@
   to   { opacity: 1; transform: translateY(0); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .pausa-box { animation: none; }
+  .pausa-box, .story-card, .story-feedback { animation: none; }
+  .scenario-card, .choice-btn { transition: none; }
+  .scenario-card:hover { transform: none; }
 }
+html.a11y-pause-anim .pausa-box,
+html.a11y-pause-anim .story-card,
+html.a11y-pause-anim .story-feedback { animation: none; }
+#scenario-list > [class*="col"] { display: flex; }
+#scenario-list .scenario-card { width: 100%; }
 .scenario-card .sc-icon { color: #004d99; }
+/* Bootstrap Italia, dopo un tocco, impone "border-color: inherit !important"
+   (data-focus-mouse): si rimettono i colori di stato delle scelte. */
+#choices-container button.choice-btn { border-color: #dee2e6 !important; }
+#choices-container button.choice-btn:hover:not(:disabled) { border-color: #004d99 !important; }
+#choices-container button.choice-btn.right { border-color: #2e7d32 !important; }
+#choices-container button.choice-btn.wrong-choice { border-color: #c62828 !important; }

@@ -36,15 +36,20 @@
   margin-top: 1rem;
 }
 .btn-livello {
+  /* Ogni livello ha il suo colore (--lv): bordo, testi e cerchio col numero.
+     Fino al 23/11/2026 il cerchio usava "background: currentColor" insieme a
+     "color: #fff": cerchio bianco e numero bianco, cioè invisibile. */
+  --lv: var(--pc-blue);
+  --lv-scuro: #001a33;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: .35rem;
   padding: 1.5rem 1rem;
-  border: 3px solid var(--pc-blue);
-  background: linear-gradient(180deg, #ffffff 0%, #e7f1ff 100%);
-  color: var(--pc-blue);
+  border: 3px solid var(--lv);
+  background: #fff;
+  color: var(--lv);
   border-radius: 16px;
   cursor: pointer;
   transition: transform .15s, background .2s, color .2s, box-shadow .2s;
@@ -52,14 +57,16 @@
   font-family: inherit;
   width: 100%;
   min-height: 140px;
-  box-shadow: 0 4px 0 var(--pc-blue), 0 6px 12px rgba(0,51,102,.15);
+  box-shadow: 0 4px 0 var(--lv), 0 6px 12px rgba(0,51,102,.15);
   position: relative;
 }
+.btn-livello[data-livello="medio"]   { --lv: #b45309; --lv-scuro: #7c3a0c; }
+.btn-livello[data-livello="esperto"] { --lv: #7f1d1d; --lv-scuro: #5a0f0f; }
 .btn-livello:hover {
-  background: linear-gradient(180deg, var(--pc-blue) 0%, #002244 100%);
+  background: var(--lv);
   color: #fff;
   transform: translateY(-3px);
-  box-shadow: 0 7px 0 #001a33, 0 10px 16px rgba(0,51,102,.3);
+  box-shadow: 0 7px 0 var(--lv-scuro), 0 10px 16px rgba(0,51,102,.3);
 }
 .btn-livello:focus-visible {
   outline: 4px solid #ffbe2e;
@@ -67,18 +74,14 @@
 }
 .btn-livello:active {
   transform: translateY(1px);
-  box-shadow: 0 2px 0 var(--pc-blue), 0 3px 6px rgba(0,51,102,.15);
+  box-shadow: 0 2px 0 var(--lv), 0 3px 6px rgba(0,51,102,.15);
 }
-.btn-livello[data-livello="medio"]   { border-color: #b45309; box-shadow: 0 4px 0 #b45309, 0 6px 12px rgba(180,83,9,.15); color: #b45309; }
-.btn-livello[data-livello="medio"]:hover  { background: linear-gradient(180deg, #b45309 0%, #7c3a0c 100%); color: #fff; box-shadow: 0 7px 0 #7c3a0c, 0 10px 16px rgba(180,83,9,.3); }
-.btn-livello[data-livello="esperto"] { border-color: #7f1d1d; box-shadow: 0 4px 0 #7f1d1d, 0 6px 12px rgba(127,29,29,.15); color: #7f1d1d; }
-.btn-livello[data-livello="esperto"]:hover { background: linear-gradient(180deg, #7f1d1d 0%, #5a0f0f 100%); color: #fff; box-shadow: 0 7px 0 #5a0f0f, 0 10px 16px rgba(127,29,29,.3); }
 
 .livello-num {
-  font-size: 2.4rem;
+  font-size: 1.6rem;
   font-weight: 700;
   line-height: 1;
-  background: currentColor;
+  background: var(--lv);
   color: #fff;
   width: 2.6rem;
   height: 2.6rem;
@@ -88,14 +91,10 @@
   justify-content: center;
   margin-bottom: .35rem;
 }
-.btn-livello:hover .livello-num,
-.btn-livello[data-livello="medio"]:hover .livello-num,
-.btn-livello[data-livello="esperto"]:hover .livello-num {
+.btn-livello:hover .livello-num {
   background: #fff;
-  color: var(--pc-blue);
+  color: var(--lv);
 }
-.btn-livello[data-livello="medio"]:hover .livello-num   { color: #b45309; }
-.btn-livello[data-livello="esperto"]:hover .livello-num { color: #7f1d1d; }
 .livello-nome {
   font-size: 1.3rem;
   font-weight: 700;
@@ -103,24 +102,22 @@
   letter-spacing: .02em;
 }
 .livello-info {
-  font-size: .88rem;
-  opacity: .85;
+  font-size: .9rem;
   margin-top: .15rem;
 }
 .livello-cta {
   display: inline-flex;
   align-items: center;
   gap: .25rem;
-  font-size: .82rem;
+  font-size: .85rem;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: .04em;
   margin-top: .35rem;
 }
 @media (prefers-reduced-motion: reduce) {
   .btn-livello { transition: none; }
   .btn-livello:hover, .btn-livello:active { transform: none; }
 }
+html.a11y-pause-anim .btn-livello { transition: none; }
 
 .hud-row {
   display: flex;
@@ -218,7 +215,7 @@
   align-items: center;
 }
 .card-front {
-  background: linear-gradient(135deg, #004d99 0%, #003366 100%);
+  background: #003366;
   color: white;
 }
 .card-front::after {
@@ -324,3 +321,12 @@
   0%   { opacity: 1; transform: translateX(-50%) translateY(0); }
   100% { opacity: 0; transform: translateX(-50%) translateY(-40px); }
 }
+
+/* Il messaggio "Coppia trovata" resta fermo e leggibile se l'utente ha
+   chiesto meno movimento: con l'animazione azzerata sparirebbe subito. */
+@media (prefers-reduced-motion: reduce) {
+  .match-toast { animation: none; }
+}
+html.a11y-pause-anim .match-toast,
+html.a11y-pause-anim .card,
+html.a11y-pause-anim .explain-box { animation: none; transition: none; }

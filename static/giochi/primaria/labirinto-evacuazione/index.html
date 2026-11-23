@@ -126,6 +126,13 @@
     }
     html.a11y-pause-anim .cell.player::after, html.a11y-pause-animations .cell.player::after { animation: none; }
     .legenda-item .bi { font-size: 1.05rem; }
+    .cell .lab-picto { width: 82%; height: 82%; object-fit: contain; pointer-events: none; }
+    .cell.exit .lab-picto { width: 88%; height: 88%; }
+    .legenda-item .leg-picto { width: 1.6rem; height: 1.6rem; object-fit: contain; }
+    /* Pittogrammi funzionali: restano visibili con «Nascondi immagini» */
+    html.a11y-hide-images .cell .lab-picto,
+    html.a11y-hide-images .legenda-item .leg-picto { visibility: visible !important; }
+    .lab-attribuzione { font-size: .85rem; color: #495057; margin: .4rem 0 1rem; text-align: center; }
     .legenda-item .leg-player { background: #003366; color: #fff; border-radius: 50%; padding: 1px 3px; }
     @keyframes pulse {
       0%,100% { transform: scale(1); }
@@ -269,14 +276,15 @@
             <div class="legenda" aria-label="Legenda mappa">
               <span class="legenda-item"><i class="bi bi-person-walking leg-player" aria-hidden="true"></i> Alunno (tu)</span>
               <span class="legenda-item"><i class="bi bi-door-open-fill" aria-hidden="true"></i> Partenza (aula)</span>
-              <span class="legenda-item"><i class="bi bi-people-fill text-success" aria-hidden="true"></i> Punto di raccolta</span>
-              <span class="legenda-item"><i class="bi bi-ladder" aria-hidden="true"></i> Scale (sì)</span>
-              <span class="legenda-item"><i class="bi bi-arrow-down-up" aria-hidden="true"></i> Ascensore (no)</span>
+              <span class="legenda-item"><img class="leg-picto" src="/pittogrammi/iso7010/punto-raccolta.svg" alt="" aria-hidden="true"> Punto di raccolta</span>
+              <span class="legenda-item"><img class="leg-picto" src="/pittogrammi/arasaac/scendere-scale.png" alt="" aria-hidden="true"> Scale (sì)</span>
+              <span class="legenda-item"><img class="leg-picto" src="/pittogrammi/arasaac/ascensore.png" alt="" aria-hidden="true"> Ascensore (no)</span>
               <span class="legenda-item"><i class="bi bi-fire text-danger" aria-hidden="true"></i> Fuoco (no)</span>
               <span class="legenda-item"><i class="bi bi-box-seam-fill" aria-hidden="true"></i> Ostacolo (no)</span>
               <span class="legenda-item"><i class="bi bi-cloud-haze2-fill" aria-hidden="true"></i> Fumo (no)</span>
               <span class="legenda-item"><i class="bi bi-arrow-right text-success" aria-hidden="true"></i> Freccia verde di emergenza</span>
             </div>
+            <p class="lab-attribuzione">Punto di raccolta: cartello di sicurezza ISO 7010. Ascensore e scale: pittogrammi di Sergio Palao, <a href="/attribuzioni-pittogrammi/">ARASAAC (CC BY-NC-SA 4.0)</a>.</p>
 
             <p class="text-center">
               Affronterai <strong>6 scenari</strong> di difficoltà crescente: dall'aula al primo piano fino a un'evacuazione completa con incendi che propagano fumo.
@@ -639,6 +647,11 @@
     }
 
     function ico(nome){ return '<i class="bi bi-' + nome + '" aria-hidden="true"></i>'; }
+    // Punto di raccolta: cartello ISO 7010 E007, quello vero dei cortili.
+    // Ascensore e scale: pittogrammi ARASAAC (la scala a pioli e le frecce
+    // di prima non dicevano «ascensore» né «scale»). Il nome resta
+    // nell'aria-label della casella, l'immagine ha alt vuoto.
+    function picto(src){ return '<img class="lab-picto" src="' + src + '" alt="" draggable="false">'; }
     // Nome leggibile della casella per i lettori di schermo.
     var NOMI = { S: 'partenza', E: 'punto di raccolta', A: 'ascensore', F: 'fuoco', M: 'fumo', B: 'ostacolo', X: 'scale',
                  U: 'freccia verso l\'alto', D: 'freccia verso il basso', L: 'freccia a sinistra', R: 'freccia a destra' };
@@ -650,12 +663,12 @@
     function simboloDa(ch){
       switch(ch){
         case 'S': return ico('door-open-fill');
-        case 'E': return ico('people-fill');
-        case 'A': return ico('arrow-down-up');
+        case 'E': return picto('/pittogrammi/iso7010/punto-raccolta.svg');
+        case 'A': return picto('/pittogrammi/arasaac/ascensore.png');
         case 'F': return ico('fire');
         case 'M': return ico('cloud-haze2-fill');
         case 'B': return ico('box-seam-fill');
-        case 'X': return ico('ladder');
+        case 'X': return picto('/pittogrammi/arasaac/scendere-scale.png');
         case 'U': return ico('arrow-up');
         case 'D': return ico('arrow-down');
         case 'L': return ico('arrow-left');

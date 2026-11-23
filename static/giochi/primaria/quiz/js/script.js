@@ -1314,8 +1314,12 @@ document.addEventListener('DOMContentLoaded', () => {
             if (correct) window.AudioSintetico.dingPositivo(); else window.AudioSintetico.tonoNeutro();
         }
 
+        // Si colorano solo la risposta giusta e quella scelta (se sbagliata):
+        // tutte le sbagliate in rosso confondevano su quale si era toccata.
         Array.from(answerButtonsElement.children).forEach(button => {
-            setStatusClass(button, button.dataset.correct === 'true');
+            if (button.dataset.correct === 'true' || button === selectedButton) {
+                setStatusClass(button, button.dataset.correct === 'true');
+            }
             button.disabled = true;
         });
 

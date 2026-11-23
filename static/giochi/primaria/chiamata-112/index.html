@@ -98,7 +98,7 @@
       border-color: #003366; background: #eef4fb;
       outline: 2px solid #003366; outline-offset: 2px;
     }
-    .opt-btn:disabled { cursor: default; opacity: .8; }
+    .opt-btn:disabled { cursor: default; }
     .opt-btn.ok {
       background: #d1e7dd; border-color: #198754; color: #0f5132;
     }
@@ -108,6 +108,19 @@
     .opt-btn.meh {
       background: #fff3cd; border-color: #b45309; color: #664d03;
     }
+    /* Il segno davanti alla risposta scelta: non conta solo il colore */
+    .opt-btn.ok::before  { content: "\2713\00a0"; font-weight: 700; }
+    .opt-btn.ko::before  { content: "\2717\00a0"; font-weight: 700; }
+    .opt-btn.meh::before { content: "!\00a0"; font-weight: 700; }
+    .opt-btn:disabled:not(.ok):not(.ko):not(.meh) { opacity: 1; color: #343a40; }
+    .opt-btn { min-height: 48px; }
+    /* Bootstrap Italia, dopo un tocco, impone "border-color: inherit !important"
+       (data-focus-mouse): si rimettono i colori di stato delle risposte. */
+    #options button.opt-btn { border-color: #cfd6df !important; }
+    #options button.opt-btn:hover:not(:disabled) { border-color: #003366 !important; }
+    #options button.opt-btn.ok { border-color: #198754 !important; }
+    #options button.opt-btn.ko { border-color: #dc3545 !important; }
+    #options button.opt-btn.meh { border-color: #b45309 !important; }
 
     .feedback-box {
       background: #eef4fb; border-left: 4px solid #003366;
@@ -142,6 +155,7 @@
     @media (prefers-reduced-motion: reduce) {
       .scenario-card, .opt-btn { transition: none; }
     }
+    html.a11y-pause-anim .scenario-card, html.a11y-pause-anim .opt-btn { transition: none; }
   </style>
 </head>
 <body data-coach-game="chiamata-112">

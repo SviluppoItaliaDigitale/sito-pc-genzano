@@ -28,6 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentVariation = null;
   let currentScenario = null;
 
+  // Posizioni dei punti riallineate il 23/11/2026 sui disegni SVG (800x500):
+  // top/left = angolo in alto a sinistra in %, size = % di larghezza e di
+  // altezza; prima molti cerchi cadevano sul pavimento vuoto o accanto al
+  // pericolo. I commenti «posizione ~x,y» dentro gli SVG sono quelli vecchi.
   // Ogni rischio: id, name, top/left/size (posizione hotspot %), explain (cosa
   // fare in caso di emergenza PC associata). Le explain pescano da:
   // /rischi-prevenzione/sismico, .../incendio, .../idrogeologico, .../temporali,
@@ -40,44 +44,44 @@ document.addEventListener('DOMContentLoaded', () => {
         { image: 'img/scena-casa.svg', risks: [
           { id: 'presa_elettrica', name: 'Presa elettrica scoperta',
             explain: 'Mai infilare dita o oggetti nelle prese. Se in casa entra acqua o va via la corrente, è un adulto a staccare l\'interruttore generale.',
-            top: 69.24, left: 21.56, size: 10 },
+            top: 65.0, left: 16.88, size: 10 },
           { id: 'cassetti_aperti', name: 'Cassetti aperti',
             explain: 'Durante un terremoto i cassetti aperti possono cadere. Tienili sempre chiusi: meno cose volano in giro durante una scossa.',
-            top: 66.15, left: 87.04, size: 10 },
+            top: 56.0, left: 83.0, size: 14 },
           { id: 'lampada', name: 'Lampada accesa che scotta',
             explain: 'Se va via la luce, niente candele: usano fiamme libere e con tappeti o tende possono provocare incendi. Meglio una torcia a pile.',
-            top: 42.67, left: 17.42, size: 10 }
+            top: 24.0, left: 9.38, size: 12 }
         ]},
         { image: 'img/scenariocasa1.svg', risks: [
           { id: 'finestre_aperte', name: 'Finestre aperte',
             explain: 'Con vento forte (allerta gialla o arancione) chiudere le finestre: rami e oggetti possono entrare. In caso di temporale stare lontani da finestre per i fulmini.',
-            top: 57.3, left: 47.94, size: 20 },
+            top: 19.0, left: 35.75, size: 26 },
           { id: 'gradini', name: 'Inciampo sui gradini',
             explain: 'In evacuazione si scende dalle scale (mai ascensore!). Tieni sempre il corrimano e cammina, non correre: gli scalini sono il primo punto di caduta.',
-            top: 83.55, left: 63.35, size: 10 },
+            top: 57.0, left: 65.38, size: 18 },
           { id: 'tappeto', name: 'Tappeto stropicciato',
             explain: 'Allarme di evacuazione: bisogna uscire in fila in pochi secondi. Tappeti arricciati e oggetti per terra fanno cadere chi corre.',
-            top: 84.42, left: 42.42, size: 10 },
+            top: 76.0, left: 32.88, size: 18 },
           { id: 'spigolo_tavolo', name: 'Spigolo del tavolo',
             explain: 'Durante una scossa di terremoto si sta SOTTO il tavolo, non vicino allo spigolo. Sotto il tavolo proteggi testa e spalle se cade qualcosa dall\'alto.',
-            top: 84.57, left: 82.21, size: 10 }
+            top: 73.4, left: 75.0, size: 10 }
         ]},
         { image: 'img/scenariocasa2.svg', risks: [
           { id: 'lampadina', name: 'Lampadina che scotta',
-            explain: 'Una lampadina che scotta segna che è accesa: durante un blackout si spegne da sola. Con la luce assente, una torcia a pile è più sicura delle candele.',
-            top: 56.36, left: 84.67, size: 10 },
+            explain: 'Una lampadina accesa scalda: non coprirla con stoffe o carta e tienila lontano dalle tende. Se manca la luce, usa una torcia a pile, non le candele.',
+            top: 44.6, left: 73.62, size: 10 },
           { id: 'tavolo', name: 'Spigoli del tavolo',
-            explain: 'Durante una scossa metterti SOTTO il tavolo e non urtare lo spigolo. Resta lì finché la scossa non finisce.',
-            top: 83.81, left: 57.37, size: 10 },
+            explain: 'Durante una scossa puoi ripararti sotto un tavolo robusto, attento agli spigoli. Resta lì finché la scossa non finisce.',
+            top: 72.6, left: 53.0, size: 14 },
           { id: 'testata_letto', name: 'Testata del letto',
             explain: 'Durante un terremoto, se sei a letto, resta a letto e proteggi la testa con il cuscino: alzarsi al buio tra oggetti caduti è più pericoloso.',
-            top: 55.83, left: 26.16, size: 10 },
+            top: 46.6, left: 21.75, size: 14 },
           { id: 'piedi_letto', name: 'Piedi del letto',
-            explain: 'Mai mettere oggetti pesanti sopra l\'armadio o sopra la testata. In una scossa cadrebbero proprio dove dormi.',
-            top: 89.65, left: 11.14, size: 10 },
+            explain: 'Tieni scarpe robuste e una torcia vicino al letto: dopo la scossa per terra possono esserci vetri e calcinacci.',
+            top: 72.0, left: 41.88, size: 10 },
           { id: 'cassetti', name: 'Cassetti senza fermo',
             explain: 'In zone sismiche fissare i mobili al muro. Cassetti che si aprono di colpo durante la scossa possono colpire le gambe.',
-            top: 65.91, left: 77.15, size: 10 }
+            top: 60.0, left: 74.62, size: 12 }
         ]}
       ]
     },
@@ -88,36 +92,36 @@ document.addEventListener('DOMContentLoaded', () => {
         { image: 'img/scenariocucina1.svg', risks: [
           { id: 'forno_acceso', name: 'Fornelli e forno accesi',
             explain: 'In caso di terremoto o evacuazione: spegnere subito gas e forno. Se senti odore di gas dopo una scossa, non accendere niente, apri le finestre e chiama il 112.',
-            top: 44.74, left: 40.81, size: 20 },
+            top: 37.0, left: 36.5, size: 22 },
           { id: 'spigoli', name: 'Spigoli sporgenti',
             explain: 'Durante una scossa stai lontano da angoli appuntiti. Riparati sotto un tavolo robusto o nel vano di una porta inserita in un muro portante.',
-            top: 28.1, left: 46.71, size: 10 },
+            top: 14.0, left: 41.5, size: 10 },
           { id: 'apertura_ante', name: 'Ante aperte',
             explain: 'Bicchieri e piatti negli scaffali con la scossa cadono e si rompono. Tieni le ante chiuse, e in zone sismiche metti delle chiusure di sicurezza.',
-            top: 58.65, left: 79.53, size: 10 },
+            top: 53.0, left: 79.0, size: 12 },
           { id: 'tappeto', name: 'Tappeto arricciato',
             explain: 'In una fuga d\'emergenza un tappeto è un primo motivo di caduta. Toglilo prima dell\'allerta o bloccalo con strisce antiscivolo.',
-            top: 84.02, left: 62.51, size: 10 }
+            top: 75.4, left: 53.5, size: 18 }
         ]},
         { image: 'img/scenariocucina2.svg', risks: [
           { id: 'spigoli', name: 'Spigoli dei mobili',
             explain: 'Durante una scossa sotto al tavolo: mai vicino agli angoli sporgenti dei mobili che possono colpirti.',
-            top: 29, left: 55.38, size: 10 },
+            top: 14.0, left: 49.38, size: 10 },
           { id: 'fornello_acceso', name: 'Fornello e forno accesi',
             explain: 'Allerta o no, mai lasciare i fornelli accesi senza un adulto. In caso di scossa o evacuazione: chiudere il rubinetto del gas.',
-            top: 49.95, left: 43.49, size: 20 },
+            top: 38.0, left: 33.75, size: 20 },
           { id: 'tappeto', name: 'Tappeto arricciato',
             explain: 'In emergenza si esce di corsa: un tappeto arricciato fa cadere. Soprattutto a chi porta lo zaino di emergenza.',
-            top: 84.47, left: 78.69, size: 10 },
+            top: 75.4, left: 69.75, size: 18 },
           { id: 'cassettiere', name: 'Cassetti aperti',
             explain: 'Quando trema, i cassetti aperti diventano proiettili. Il primo passo della prevenzione è tenere le cose chiuse e fissate.',
-            top: 62.49, left: 19.34, size: 10 },
+            top: 41.5, left: 22.62, size: 11 },
           { id: 'barattoli', name: 'Barattoli sporgenti',
             explain: 'Vetri sugli scaffali alti = pericolo di taglio durante una scossa. In zona sismica: mensole basse, oggetti pesanti in basso.',
-            top: 50.75, left: 12.98, size: 10 },
+            top: 27.6, left: 6.5, size: 12 },
           { id: 'attrezzi', name: 'Coltelli a portata di mano',
             explain: 'In una scossa improvvisa, coltelli sul piano possono cadere. Vanno chiusi in cassetto, lontano dall\'altezza testa.',
-            top: 40.97, left: 67.64, size: 10 }
+            top: 29.6, left: 62.75, size: 12 }
         ]}
       ]
     },
@@ -127,16 +131,16 @@ document.addEventListener('DOMContentLoaded', () => {
       variations: [{ image: 'img/scenariobagno.svg', risks: [
         { id: 'tappeto_scivoloso', name: 'Tappetino scivoloso',
           explain: 'In una fuga d\'emergenza dalla doccia, un tappetino bagnato fa cadere. Antiscivolo sotto il tappeto o niente tappeto.',
-          top: 80.83, left: 58.75, size: 10 },
+          top: 73.0, left: 49.75, size: 18 },
         { id: 'spigoli', name: 'Spigoli sporgenti',
           explain: 'Durante un terremoto non restare in piedi vicino agli spigoli del lavandino o della vasca. Abbassati, proteggi testa e collo con le braccia e stai lontano da specchi e vetri.',
-          top: 58.56, left: 40.81, size: 10 },
+          top: 50.0, left: 36.38, size: 16 },
         { id: 'oblo', name: 'Oblò della lavatrice',
           explain: 'Durante un blackout la lavatrice si ferma: non aprire l\'oblò se dentro c\'è ancora acqua, finisce sul pavimento e diventa scivoloso.',
-          top: 67.05, left: 16.58, size: 10 },
+          top: 58.5, left: 10.75, size: 11 },
         { id: 'sgabello', name: 'Sgabello instabile',
           explain: 'Non lasciare sgabelli o altri oggetti instabili in giro: cadrebbero alla prima scossa. Mensole alte e oggetti pesanti vanno fissati al muro.',
-          top: 71.88, left: 75.77, size: 10 }
+          top: 68.0, left: 70.88, size: 10 }
       ]}]
     },
     {
@@ -145,37 +149,37 @@ document.addEventListener('DOMContentLoaded', () => {
       variations: [
         { image: 'img/scenariogiochi1.svg', risks: [
           { id: 'tappeto', name: 'Tappeto arricciato',
-            explain: 'Allarme di notte: bisogna alzarsi al buio e uscire. Tappeto arricciato + buio = caduta sicura. Tienilo piatto o usa antiscivolo.',
-            top: 82.6, left: 62.89, size: 10 },
+            explain: 'Se di notte bisogna uscire al buio, un tappeto arricciato fa inciampare. Tienilo piatto o usa un antiscivolo.',
+            top: 75.0, left: 54.5, size: 16 },
           { id: 'giochi', name: 'Giochi sparsi a terra',
-            explain: 'Se trema mentre dormi devi uscire dal letto: giochi a terra e Lego sono lo stesso problema dei tappeti. Riponili prima di dormire.',
-            top: 82.12, left: 35.37, size: 10 },
+            explain: 'Dopo una scossa di notte potresti dover uscire al buio: giochi e mattoncini a terra fanno inciampare. Riponili prima di dormire.',
+            top: 75.0, left: 30.5, size: 14 },
           { id: 'lampadina', name: 'Lampada vicina al letto',
             explain: 'Durante una scossa la lampada cade: se è sopra al letto puoi farti male. Spostala a terra o fissala.',
-            top: 41.78, left: 6.54, size: 10 },
+            top: 28.0, left: 1.5, size: 10 },
           { id: 'monitor', name: 'Monitor sul bordo',
             explain: 'Schermi e mensole alte cadono per primi. Un adulto può fissarli al muro o al mobile con apposite cinghie.',
-            top: 33.81, left: 88.19, size: 10 },
+            top: 27.6, left: 82.75, size: 12 },
           { id: 'spigoli', name: 'Spigoli del letto',
-            explain: 'Sopra al letto non mettere mensole o quadri pesanti: in una scossa cadono dritti dove dormi.',
-            top: 58.36, left: 43.72, size: 25 }
+            explain: 'Alzandoti al buio puoi sbattere contro gli spigoli del letto. Tieni una torcia a portata di mano e il passaggio libero.',
+            top: 43.0, left: 55.0, size: 10 }
         ]},
         { image: 'img/scenariogiochi2.svg', risks: [
           { id: 'scivolo', name: 'Scivolo da gioco instabile',
             explain: 'Strutture da gioco grandi vanno fissate al muro. In una scossa cadono di lato e bloccano la via di fuga.',
-            top: 57.81, left: 82.21, size: 10 },
+            top: 50.0, left: 75.75, size: 16 },
           { id: 'giochi', name: 'Giochi sparsi',
             explain: 'In un\'evacuazione di notte la via dal letto alla porta deve essere libera. Riordinare prima di dormire è la prima regola.',
-            top: 84.26, left: 21.03, size: 10 },
+            top: 77.0, left: 15.25, size: 14 },
           { id: 'spigoli', name: 'Spigoli appuntiti',
-            explain: 'In zone sismiche mobili spigolosi vicino al letto sono il primo problema. Cerca un posto sicuro lontano dagli angoli, sotto un tavolo robusto.',
-            top: 75.08, left: 43.8, size: 10 },
+            explain: 'Mobili con spigoli vicino al letto possono farti male se cadi o inciampi. Durante una scossa cerca riparo sotto un tavolo robusto.',
+            top: 65.0, left: 34.75, size: 10 },
           { id: 'lampadina', name: 'Lampada appesa',
             explain: 'Lampade appese sopra al letto, in caso di scossa, possono staccarsi e cadere. Meglio non tenerle proprio sopra il cuscino.',
-            top: 36.69, left: 27.54, size: 10 },
+            top: 24.0, left: 22.5, size: 10 },
           { id: 'finestra', name: 'Finestra aperta',
             explain: 'In allerta vento (codice giallo o arancione) chiudere le finestre: vetri rotti = ferite gravi. In allerta temporale: lontano dai vetri.',
-            top: 61.22, left: 36.36, size: 10 }
+            top: 43.0, left: 27.25, size: 18 }
         ]}
       ]
     },
@@ -185,13 +189,13 @@ document.addEventListener('DOMContentLoaded', () => {
       variations: [{ image: 'img/scenarioclasse.svg', risks: [
         { id: 'spigoli', name: 'Banchi con spigoli',
           explain: 'Durante una scossa sotto al banco coprendo la testa: il banco assorbe il colpo se cade qualcosa dall\'alto. Resta lì finché la maestra dice di uscire.',
-          top: 61.46, left: 39.35, size: 10 },
+          top: 55.0, left: 5.62, size: 10 },
         { id: 'finestra', name: 'Finestra apribile',
           explain: 'Mai uscire dalla finestra: si esce dalla porta con la fila. La finestra è un punto pericoloso durante un terremoto (vetri rotti) e va chiusa.',
-          top: 47.76, left: 96.55, size: 10 },
+          top: 24.5, left: 85.0, size: 15 },
         { id: 'spigolo', name: 'Spigolo del ripiano',
           explain: 'Mensole con libri sopra al banco = libri che cadono durante una scossa. Per questo a scuola gli scaffali alti si fissano al muro.',
-          top: 44.08, left: 22.56, size: 10 }
+          top: 39.4, left: 12.5, size: 10 }
       ]}]
     },
     {
@@ -200,19 +204,19 @@ document.addEventListener('DOMContentLoaded', () => {
       variations: [{ image: 'img/scenarioparco1.svg', risks: [
         { id: 'inciampo', name: 'Ponte sospeso',
           explain: 'In una scossa di terremoto, scendere subito da strutture sospese e sederti a terra in spazio aperto, lontano da alberi e pali.',
-          top: 56.12, left: 16.27, size: 10 },
+          top: 48.4, left: 10.25, size: 12 },
         { id: 'cadere', name: 'Struttura alta del gioco',
           explain: 'Durante un temporale scendi subito dalle strutture alte e stai lontano da pali e strutture metalliche. Vai verso un edificio solido.',
-          top: 78.84, left: 14.28, size: 10 },
+          top: 68.0, left: 8.75, size: 12 },
         { id: 'scivolo', name: 'Scivolo metallico',
           explain: 'Nelle giornate di caldo forte il metallo al sole scotta: evita i giochi nelle ore più calde, dalle 11 alle 18. Durante un temporale stai lontano dalle strutture metalliche.',
-          top: 64.81, left: 51.54, size: 10 },
+          top: 51.0, left: 48.0, size: 14 },
         { id: 'caduta', name: 'Cavallo a molla',
           explain: 'Durante una scossa sismica all\'aperto: scendi e siediti in spazio libero, lontano da alberi che possono cadere e da fili elettrici.',
-          top: 57.36, left: 40.2, size: 10 },
+          top: 60.0, left: 34.0, size: 12 },
         { id: 'mani', name: 'Sbarre alte',
           explain: 'Con vento forte (allerta gialla per vento) lascia subito le sbarre: rami e oggetti possono volare. Cerca un edificio robusto.',
-          top: 49.73, left: 91.8, size: 10 }
+          top: 45.0, left: 83.62, size: 14 }
       ]}]
     },
     {
@@ -221,13 +225,13 @@ document.addEventListener('DOMContentLoaded', () => {
       variations: [{ image: 'img/scenarioscuolabus.svg', risks: [
         { id: 'autista', name: 'Disturbare l\'autista',
           explain: 'Se c\'è un terremoto, l\'autista deve fermarsi in un posto sicuro, lontano da ponti, sottopassi e alberi alti. Non distrarlo mai mentre guida.',
-          top: 43.65, left: 38.36, size: 10 },
+          top: 35.0, left: 59.0, size: 12 },
         { id: 'inciampo', name: 'Scalini',
           explain: 'In evacuazione del bus si scende uno alla volta, mai correndo: lo scalino è alto e si cade facile. Le maestre in fondo controllano.',
-          top: 71.88, left: 50.01, size: 10 },
+          top: 62.0, left: 42.5, size: 10 },
         { id: 'attraversamento', name: 'Attraversare la strada',
           explain: 'Dopo essere sceso dal bus, aspetta che riparta prima di attraversare: così vedi bene la strada e chi guida vede te.',
-          top: 72.11, left: 76.77, size: 25 }
+          top: 72.0, left: 70.75, size: 16 }
       ]}]
     }
   ];

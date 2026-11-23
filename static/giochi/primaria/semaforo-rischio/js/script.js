@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { text: 'La terra trema per qualche secondo.', answer: 'rosso', tip: 'Terremoto! Riparati sotto un tavolo, proteggiti la testa. Non uscire durante la scossa.' },
         { text: 'Il meteo prevede neve in montagna domani.', answer: 'verde', tip: 'Neve in montagna: normale in inverno. Attenzione se devi viaggiare.' },
         { text: 'L\'acqua del fosso vicino a casa sta salendo velocemente.', answer: 'rosso', tip: 'Rischio alluvione! Vai ai piani alti e non avvicinarti al fosso.' },
-        { text: 'C\'è vento forte e oggetti che volano in strada.', answer: 'giallo', tip: 'Vento forte: resta in casa se puoi, stai lontano da alberi e cartelloni.' },
+        { text: 'C\'è vento forte e oggetti che volano in strada.', answer: 'rosso', tip: 'Oggetti che volano sono un pericolo subito: entra al riparo in un edificio e stai lontano da finestre, alberi e cartelloni.' },
         { text: 'Il tuo vicino anziano non risponde da ieri e fa molto caldo.', answer: 'rosso', tip: 'Potrebbe stare male per il caldo! Chiama il 112 o chiedi aiuto a un adulto.' },
         { text: 'La maestra dice che oggi si fa la prova di evacuazione.', answer: 'giallo', tip: 'Esercitazione: segui le istruzioni con attenzione, è un\'occasione per imparare!' },
         { text: 'Un\'amica ti mostra un video allarmante sui social.', answer: 'giallo', tip: 'Attenzione alle fake news! Verifica sempre le notizie sulle fonti ufficiali.' },

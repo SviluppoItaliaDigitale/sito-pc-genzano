@@ -16,9 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             title: 'Numeri di emergenza', icon: 'bi-telephone-fill',
             pairs: [
-                { left: '112', right: 'Numero unico di emergenza nel Lazio' },
+                { left: '112', right: 'Il numero da chiamare per ogni emergenza' },
                 { left: '803 555', right: 'Sala Operativa regionale del Lazio, per segnalazioni non urgenti' },
-                { left: 'Chiamata al 112', right: 'Gratis, senza credito, da qualsiasi telefono' },
+                { left: 'Telefono senza credito', right: 'Puoi chiamare lo stesso i soccorsi: è gratis' },
                 { left: '112 in Europa', right: 'Stesso numero in tutti i Paesi europei' },
                 { left: 'Cosa dire al 112', right: 'Cosa succede, dove sei, chi ha bisogno di aiuto' },
                 { left: 'Chiamata per scherzo', right: 'È un reato e toglie aiuto a chi ne ha davvero bisogno' }

@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Scarpe chiuse', icon: '\uD83D\uDC5F', correct: true, tip: 'Per camminare su vetri e macerie' },
         { name: 'Cibo a lunga conservazione', icon: '\uD83E\uDD6B', correct: true, tip: 'Scatolette, crackers, barrette' },
         { name: 'Caricatore portatile', icon: '\uD83D\uDD0B', correct: true, tip: 'Per tenere il telefono carico' },
-        { name: 'Kit primo soccorso', icon: '\u26D1\uFE0F', correct: true, tip: 'Cerotti, garze, disinfettante' },
+        { name: 'Kit primo soccorso', icon: '\uD83E\uDE79', correct: true, tip: 'Cerotti, garze, disinfettante' },
         { name: 'Vestiti di ricambio', icon: '\uD83D\uDC55', correct: true, tip: 'Un cambio completo per ognuno' },
         { name: 'Videogiochi', icon: '\uD83C\uDFAE', correct: false, tip: 'Non servono, occupano spazio prezioso!' },
         { name: 'Gelato', icon: '\uD83C\uDF66', correct: false, tip: 'Si scioglie subito, non si conserva' },
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Chiavi di scorta', icon: '\uD83D\uDD11', correct: true, tip: 'Copia delle chiavi di casa e dell’auto.' },
         { name: 'Occhiali di scorta', icon: '\uD83D\uDC53', correct: true, tip: 'Per chi ne porta abitualmente: un paio di riserva.' },
         { name: 'Foto di famiglia', icon: '\uD83D\uDDBC\uFE0F', correct: true, tip: 'Serve a ritrovare i propri cari in caso di separazione.' },
-        { name: 'Sacchetti di plastica', icon: '\uD83D\uDED2', correct: true, tip: 'Per proteggere documenti dall’acqua e raccogliere rifiuti.' },
+        { name: 'Sacchetti di plastica', icon: '\uD83D\uDECD\uFE0F', correct: true, tip: 'Per proteggere documenti dall’acqua e raccogliere rifiuti.' },
         { name: 'Console videogiochi', icon: '\uD83D\uDD79\uFE0F', correct: false, tip: 'Scarica la batteria e non serve.' },
         { name: 'Libri di scuola', icon: '\uD83D\uDCDA', correct: false, tip: 'Troppo pesanti: la scuola aspetta!' },
         { name: 'Vasetto di fiori', icon: '\uD83C\uDF37', correct: false, tip: 'Fragile e occupa spazio inutilmente.' },
@@ -62,6 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function showToast(text, isGood) {
+        // Un messaggio alla volta: con tocchi rapidi si sovrapponevano e non si leggeva nessuno.
+        Array.prototype.forEach.call(document.querySelectorAll('.feedback-toast'), function (v) { v.remove(); });
         const t = document.createElement('div');
         t.className = 'feedback-toast ' + (isGood ? 'good' : 'bad');
         t.textContent = text;

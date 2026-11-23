@@ -109,7 +109,9 @@
   function buildGrid() {
     cellMap = {};
     gridEl.innerHTML = '';
-    gridEl.style.gridTemplateColumns = 'repeat(' + puzzle.cols + ', 40px)';
+    // Colonne larghe quanto le caselle (.cell, misura in CSS): con 40px fissi
+    // sul telefono le caselle, più strette, restavano staccate da strisce blu.
+    gridEl.style.gridTemplateColumns = 'repeat(' + puzzle.cols + ', auto)';
     var usedCells = {};
 
     puzzle.words.forEach(function (w) {
