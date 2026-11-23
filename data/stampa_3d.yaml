@@ -34,6 +34,13 @@ oggetti:
     misure: "8 × 3 cm, spessa 3,4 mm"
     lunghezza_mm: 80
     peso_g: 8
+    scheda:
+      - ["Ingombro", "80 × 30 mm, spessa 3,4 mm (2,4 mm di base e 1 mm di scritte)"]
+      - ["Peso", "circa 8 g"]
+      - ["Scritte e cornice", "in rilievo di 1 mm; cornice larga 1,2 mm"]
+      - ["Altezza delle lettere", "nominativo 8,5 mm; righe piccole 4,5 mm, tratto più sottile 0,7 mm"]
+      - ["Fissaggio", "scanalatura sul retro larga 1,6 mm e profonda 1,3 mm per una spilla da balia lunga 45 mm; due incavi da 6,5 × 6,5 mm, profondi 1,4 mm"]
+      - ["Posizione di stampa", "in piano, già orientata nel file, senza supporti"]
     materiale: "PETG"
     colore: "blu"
     occorrente:
@@ -63,6 +70,12 @@ oggetti:
     misure: "7,7 × 2,6 cm, spesso 5 mm"
     lunghezza_mm: 77
     peso_g: 10
+    scheda:
+      - ["Ingombro", "77 × 26 mm, spesso 5 mm (4 mm di base e 1 mm di scritte)"]
+      - ["Peso", "circa 10 g"]
+      - ["Occhiello", "diametro 16 mm, foro da 5 mm per l'anello"]
+      - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4,5 mm"]
+      - ["Posizione di stampa", "in piano, già orientato nel file, senza supporti"]
     materiale: "PETG"
     colore: "blu"
     occorrente:
@@ -88,6 +101,12 @@ oggetti:
     misure: "8 × 4,2 cm, spessa 5 mm"
     lunghezza_mm: 80
     peso_g: 17
+    scheda:
+      - ["Ingombro", "80 × 42 mm, spessa 5 mm (4 mm di base e 1 mm di scritte)"]
+      - ["Peso", "circa 17 g"]
+      - ["Fessura", "26 × 5,5 mm, in alto, per laccio o cinghia"]
+      - ["Altezza delle lettere", "nominativo 8,5 mm; righe piccole 4,5 mm"]
+      - ["Posizione di stampa", "in piano, già orientata nel file, senza supporti"]
     materiale: "PETG"
     colore: "blu"
     occorrente:
@@ -100,7 +119,7 @@ oggetti:
   - id: "appendiabiti"
     nome: "Appendiabiti da armadietto"
     articolo: "l'appendiabiti"
-    descrizione: "Gancio robusto per giacca e zaino, con la piastra del nominativo, la bandiera italiana e «Protezione Civile Genzano di Roma». Si fissa nell'armadietto con due viti o con nastro biadesivo."
+    descrizione: "Gancio robusto per giacca, zaino o casco, con la piastra del nominativo, la bandiera italiana e «Protezione Civile Genzano di Roma». Il gancio è largo quanto la piastra. Si fissa nell'armadietto con due viti o con nastro biadesivo."
     sorgente: "ganci-nominativo.scad"
     anteprima: &gancio
       base: "#1d4f9a"
@@ -108,25 +127,33 @@ oggetti:
       rilievo_mm: 1.0
       bandiera: [-36.5, 1.75, -23.75, 10.25]
       vista_3d: true
+      fianco: -40   # si stampa in piedi sul lato sinistro (x = -40), senza supporti
     parametri:
       tipo: "appendiabiti"
       parte: "tutto"
     misure: "8 × 6,3 cm, sporge 3,3 cm"
     lunghezza_mm: 80
-    peso_g: 34
+    peso_g: 71
+    scheda:
+      - ["Ingombro", "80 × 63 mm, sporge 33 mm dalla parete"]
+      - ["Peso", "circa 71 g"]
+      - ["Piastra", "spessa 5 mm, scritte in rilievo di 1 mm"]
+      - ["Gancio", "largo 80 mm; braccio spesso 10 mm, punta alta 7 mm; 21 mm liberi fra la piastra e la punta; rinforzo a 45 gradi alla base"]
+      - ["Fori", "2 per viti a testa svasata da 4 mm (foro 4,4 mm, svasatura 8,8 mm), a 66 mm l'uno dall'altro"]
+      - ["Posizione di stampa", "in piedi sul lato sinistro, già orientato nel file, senza supporti"]
     materiale: "PETG"
     colore: "blu"
     occorrente:
       - "due viti a testa svasata da 4 mm e i tasselli adatti alla parete, oppure nastro biadesivo di montaggio per esterni"
     montaggio:
       - "Pulisci e asciuga il punto dell'armadietto dove vuoi metterlo."
-      - "Con le viti: appoggia l'appendiabiti, segna i due fori, fora, metti i tasselli e avvita senza stringere troppo."
+      - "Con le viti: appoggia l'appendiabiti con il gancio in basso, segna i due fori, fora, metti i tasselli e avvita senza stringere troppo."
       - "Con il biadesivo: incolla due strisce sul retro, premi forte per 30 secondi e aspetta un giorno prima di appendere oggetti pesanti."
 
   - id: "gancio-anta"
     nome: "Gancio per l'anta"
     articolo: "il gancio"
-    descrizione: "Gancio che si appoggia sopra l'anta dell'armadietto o della porta, senza viti né colla, con la piastra del nominativo, la bandiera italiana e un gancio per appendere."
+    descrizione: "Gancio che si appoggia sopra l'anta dell'armadietto o della porta, senza viti né colla, con la piastra del nominativo, la bandiera italiana e un gancio largo quanto la piastra."
     sorgente: "ganci-nominativo.scad"
     anteprima: *gancio
     parametri:
@@ -134,7 +161,14 @@ oggetti:
       parte: "tutto"
     misure: "8 × 6,3 cm, per ante spesse fino a 2 cm"
     lunghezza_mm: 80
-    peso_g: 43
+    peso_g: 95
+    scheda:
+      - ["Ingombro", "80 × 63 mm, profondo 58 mm"]
+      - ["Peso", "circa 95 g"]
+      - ["Spazio per l'anta", "20 mm: va bene per ante spesse fino a 2 cm"]
+      - ["Aletta dietro", "alta 28 mm e spessa 5 mm; ponte sopra l'anta spesso 5 mm"]
+      - ["Gancio", "largo 80 mm; 21 mm liberi fra la piastra e la punta"]
+      - ["Posizione di stampa", "in piedi sul lato sinistro, già orientato nel file, senza supporti"]
     materiale: "PETG"
     colore: "blu"
     occorrente:
@@ -147,42 +181,153 @@ oggetti:
   - id: "gancio-cintura"
     nome: "Gancio portachiavi da cintura"
     articolo: "il gancio"
-    descrizione: "Clip da infilare sulla cintura, con il nominativo, la bandiera italiana e un occhiello rinforzato dove agganci le chiavi."
+    descrizione: "Clip da infilare sulla cintura, con il nominativo, la bandiera italiana e un occhiello rinforzato dove agganci le chiavi. Un dentino con lo scivolo la tiene ferma sulla cintura."
     sorgente: "ganci-nominativo.scad"
     anteprima: *gancio
     parametri:
       tipo: "cintura"
       parte: "tutto"
-    misure: "9,5 × 4,7 cm, per cinture spesse fino a 5 mm"
+    misure: "9,5 × 5,4 cm, per cinture alte fino a 4 cm e spesse fino a 5 mm"
     lunghezza_mm: 95
-    peso_g: 31
+    peso_g: 42
+    scheda:
+      - ["Ingombro", "95 × 54 mm, spesso 15 mm"]
+      - ["Peso", "circa 42 g"]
+      - ["Spazio per la cintura", "5,5 mm di spessore e 44 mm di altezza: cinture spesse fino a 5 mm e alte fino a 4 cm"]
+      - ["Dentino", "lascia un passaggio di 3,5 mm; scivolo sotto per far entrare la cintura, fermo sopra per non farla uscire"]
+      - ["Linguetta a molla", "80 × 49 mm, spessa 3,5 mm: si apre di 1,5 mm con una spinta di circa 2 kg"]
+      - ["Occhiello", "diametro 18 mm, foro da 8 mm per anello o moschettone"]
+      - ["Posizione di stampa", "in piedi sul lato sinistro, già orientato nel file, senza supporti; così la linguetta è robusta nella direzione in cui si piega"]
     materiale: "PETG"
     colore: "blu"
     occorrente:
       - "un anello portachiavi o un piccolo moschettone"
     montaggio:
-      - "Infila la clip sulla cintura dall'alto: la cintura passa fra la piastra e la linguetta dietro."
-      - "Spingi finché il dentino in fondo alla linguetta supera il bordo della cintura."
+      - "Tieni la clip con la scritta verso di te e infilala sulla cintura dall'alto: la cintura passa fra la piastra e la linguetta dietro."
+      - "Spingi in basso finché il bordo alto della cintura arriva al ponte della clip: il dentino scatta sotto la cintura e la tiene."
+      - "Per toglierla solleva con un dito il fondo della linguetta e sfila la clip verso l'alto."
       - "Aggancia le chiavi all'occhiello a destra, con l'anello o con un moschettone per staccarle al volo."
 
   - id: "porta-radio"
     nome: "Porta radio portatile"
     articolo: "il porta radio"
-    descrizione: "Supporto da parete per la radio portatile, con il nominativo e la bandiera italiana: la clip da cintura della radio si aggancia alla linguetta. Utile in sede o vicino ai caricabatterie."
+    descrizione: "Supporto da parete per la radio portatile, con il nominativo e la bandiera italiana. Ha una barra spessa e alta come una cintura: la clip da cintura della radio ci si aggancia come sui pantaloni. Utile in sede o vicino ai caricabatterie."
     sorgente: "ganci-nominativo.scad"
     anteprima: *gancio
     parametri:
       tipo: "radio"
       parte: "tutto"
-    misure: "8 × 9,3 cm, linguetta larga 5,2 cm"
-    lunghezza_mm: 80
-    peso_g: 65
+    misure: "8 × 10,1 cm, barra spessa 4 mm e alta 38 mm"
+    lunghezza_mm: 101
+    peso_g: 78
+    scheda:
+      - ["Ingombro", "80 × 101 mm, sporge 17 mm dalla parete"]
+      - ["Peso", "circa 78 g"]
+      - ["Barra", "spessa 4 mm e alta 38 mm, a 8 mm dalla piastra: la clip della radio ci passa dietro e scende libera sotto"]
+      - ["Spazio fra i due appoggi", "42 mm vicino alla parete e 68 mm davanti: entrano le clip larghe fino a 4 cm"]
+      - ["Fori", "4 per viti a testa svasata da 4 mm (foro 4,4 mm, svasatura 8,8 mm)"]
+      - ["Posizione di stampa", "in piedi sul lato sinistro, già orientato nel file, senza supporti"]
     materiale: "PETG"
     colore: "blu"
     occorrente:
       - "quattro viti a testa svasata da 4 mm e i tasselli adatti alla parete"
     montaggio:
-      - "Appoggia il porta radio al muro con la linguetta in basso, segna i quattro fori, fora e metti i tasselli."
+      - "Appoggia il porta radio al muro con la barra in basso, segna i quattro fori, fora e metti i tasselli."
       - "Avvita senza stringere troppo: la plastica non deve incrinarsi."
-      - "Aggancia la radio dall'alto, facendo scorrere la sua clip da cintura sulla linguetta, come su una cintura."
-      - "Prima prova con la tua radio: la linguetta è spessa 4 mm e larga 5,2 cm, come una cintura."
+      - "Aggancia la radio dall'alto, facendo scorrere la sua clip da cintura sulla barra, come su una cintura: la clip passa dietro la barra e la curva della clip appoggia sul bordo alto."
+      - "Prima prova con la tua radio: la clip deve essere larga al massimo 4 cm."
+
+  - id: "tessera-multiuso"
+    nome: "Tessera multiuso"
+    articolo: "la tessera"
+    descrizione: "Tessera tascabile grande come una carta di credito, con la bandiera italiana, il nominativo, «Protezione Civile Genzano di Roma», la scritta «EMERGENZA 112», un righello di 7 cm e un'asola per il cordino o il moschettone."
+    sorgente: "oggetti-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-39.5, 11.25, -26.75, 19.75]
+    parametri:
+      tipo: "tessera"
+      parte: "tutto"
+    misure: "8,6 × 5,4 cm, spessa 4 mm"
+    lunghezza_mm: 86
+    peso_g: 19
+    scheda:
+      - ["Ingombro", "86 × 54 mm come una carta di credito, spessa 4 mm (3 mm di base e 1 mm di scritte)"]
+      - ["Peso", "circa 19 g"]
+      - ["Righello", "in rilievo lungo il bordo basso, da 0 a 7 cm, tacche ogni 5 mm larghe 0,8 mm"]
+      - ["Asola", "3,6 × 14 mm, a destra, per cordino, anello o moschettone"]
+      - ["Scritte", "nominativo alto 8,5 mm, «EMERGENZA 112» alto 6,5 mm, righe piccole 4,5 mm"]
+      - ["Posizione di stampa", "in piano, già orientata nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "un cordino, un anello o un piccolo moschettone, se vuoi appenderla"
+    montaggio:
+      - "Tienila nel portafoglio o nella tasca della divisa: il numero di emergenza è sempre a portata di mano."
+      - "Per misurare appoggia lo 0 del righello all'inizio di ciò che misuri: ogni tacca lunga è un centimetro, quella corta mezzo."
+      - "Se vuoi appenderla, passa il cordino o il moschettone nell'asola a destra."
+
+  - id: "etichetta-attrezzatura"
+    nome: "Etichetta per l'attrezzatura"
+    articolo: "l'etichetta"
+    descrizione: "Piccola etichetta con la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma», con due fessure per le fascette: si fissa a radio, torce, borse, maniglie e cinghie per riconoscere subito la propria attrezzatura."
+    sorgente: "oggetti-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-27.0, 2.35, -17.25, 8.85]
+    parametri:
+      tipo: "etichetta"
+      parte: "tutto"
+    misure: "7,6 × 2,4 cm, spessa 4 mm"
+    lunghezza_mm: 76
+    peso_g: 8
+    scheda:
+      - ["Ingombro", "76 × 24 mm, spessa 4 mm (3 mm di base e 1 mm di scritte)"]
+      - ["Peso", "circa 8 g"]
+      - ["Fessure", "due, da 2,4 × 6,5 mm, alle estremità: entrano fascette larghe fino a 5 mm"]
+      - ["Scritte", "nominativo alto 6,5 mm, righe piccole 4 mm"]
+      - ["Posizione di stampa", "in piano, già orientata nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "due fascette di plastica larghe fino a 5 mm, meglio se riapribili"
+    montaggio:
+      - "Infila una fascetta nella fessura di sinistra dal davanti e falla uscire dietro."
+      - "Gira la fascetta intorno alla maniglia, alla cinghia o al manico dell'attrezzo e chiudila, senza tirare troppo."
+      - "Fai lo stesso con la fessura di destra, poi taglia le code delle fascette."
+
+  - id: "targa-tavolo"
+    nome: "Targa da tavolo"
+    articolo: "la targa"
+    descrizione: "Targa a forma di tetto, da appoggiare sul tavolo della postazione in sala operativa, al COC o durante un evento, con la bandiera italiana, il nominativo in grande e «Protezione Civile Genzano di Roma»."
+    sorgente: "oggetti-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-57.0, 0.5, -33.0, 16.5]
+      vista_3d: true
+      inclina: [65, 2, 23]   # angolo, taglio alla base e mezza altezza della piastra: per colorare le scritte
+    parametri:
+      tipo: "tavolo"
+      parte: "tutto"
+    misure: "14 × 4,1 cm, profonda 3,9 cm"
+    lunghezza_mm: 140
+    peso_g: 54
+    scheda:
+      - ["Ingombro", "140 mm di larghezza, alta 41 mm, profonda 39 mm"]
+      - ["Peso", "circa 54 g"]
+      - ["Forma", "due piastre spesse 3,5 mm inclinate di 65 gradi, unite in alto e aperte sotto"]
+      - ["Scritte", "nominativo alto 16 mm, righe piccole 5,5 mm, in rilievo di 1 mm"]
+      - ["Posizione di stampa", "in piedi, già orientata nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "niente: si appoggia sul tavolo"
+    montaggio:
+      - "Appoggia la targa sul tavolo con la scritta verso chi arriva."
+      - "Se il tavolo è in pendenza o all'aperto, metti sotto un pezzetto di biadesivo perché non scivoli."

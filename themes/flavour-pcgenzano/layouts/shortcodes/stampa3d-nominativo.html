@@ -36,6 +36,7 @@
   <section class="s3d-oggetto" data-oggetto="{{ $o.id }}" aria-labelledby="s3d-nome-{{ $o.id }}">
     <h3 id="s3d-nome-{{ $o.id }}">{{ $o.nome }} <span data-s3d="nominativo"></span></h3>
     <p>{{ $o.descrizione }} Misura {{ $o.misure }} e pesa circa {{ $o.peso_g }} grammi.</p>
+    {{ partial "stampa3d-scheda.html" $o }}
 
     <h4 class="s3d-passo"><span class="s3d-num" aria-hidden="true">1</span> Guarda se è giusta</h4>
     <p>Per girarla trascina con il dito o con il mouse, oppure usa i pulsanti sotto la vista.</p>
@@ -83,6 +84,7 @@
 <section class="s3d-oggetto">
   <h3>{{ .nome }}</h3>
   <p>{{ .descrizione }} Misura {{ .misure }} e pesa circa {{ .peso_g }} grammi.</p>
+  {{ partial "stampa3d-scheda.html" . }}
   {{ partial "stampa3d-istruzioni.html" (dict "o" . "d" $d "statico" true) }}
 </section>
 {{- end }}

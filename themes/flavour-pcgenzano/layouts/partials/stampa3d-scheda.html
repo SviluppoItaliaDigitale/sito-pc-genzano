@@ -1,0 +1,16 @@
+{{- /* Scheda tecnica di un oggetto da stampare (voci «scheda» di data/stampa_3d.yaml, misurate sui file veri).
+       Parametro: l'oggetto. */ -}}
+{{- with .scheda }}
+<div class="table-responsive s3d-scheda">
+<table class="table table-sm">
+  <caption>Scheda tecnica: {{ $.nome | lower }}</caption>
+  <tbody>
+    {{- range . }}
+    <tr><th scope="row">{{ index . 0 }}</th><td>{{ index . 1 }}</td></tr>
+    {{- end }}
+    <tr><th scope="row">Materiale</th><td>{{ $.materiale }}, riempimento al 100%, colore {{ $.colore }}</td></tr>
+    <tr><th scope="row">File</th><td>STL in millimetri, un solo pezzo con superficie chiusa, senza parti da sostenere</td></tr>
+  </tbody>
+</table>
+</div>
+{{- end }}
