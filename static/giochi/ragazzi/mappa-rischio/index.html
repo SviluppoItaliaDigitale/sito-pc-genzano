@@ -296,8 +296,10 @@
 
     /* Punti rappresentativi al centro di ogni zona: usati dai pulsanti-zona
        (percorso alternativo accessibile da tastiera). */
-    var ZONA_PUNTO = { centro: [100, 90], residenziale: [285, 85], parco: [110, 215], lago: [310, 215] };
+    // Sotto la scritta della zona, cosi' il segnaposto non la copre.
+    var ZONA_PUNTO = { centro: [100, 122], residenziale: [285, 115], parco: [110, 245], lago: [310, 245] };
     var discardList = document.getElementById('discard-list');
+    var ultimoId = null;
 
     function piazzaSuMappa(el, x, y){
       var xp = x / 400, yp = y / 300;
@@ -310,6 +312,7 @@
       marker.title = el.label;
       mapEl.appendChild(marker);
       piazzamenti[el.id] = { x: x, y: y, el: el, marker: marker };
+      ultimoId = el.id;
       dopoPiazzamento();
     }
 
@@ -354,7 +357,12 @@
         var z = zb.dataset.zona;
         if (z === 'nessuna'){ scarta(active); return; }
         var pt = ZONA_PUNTO[z];
-        piazzaSuMappa(active, pt[0], pt[1]);
+        // piu' elementi nella stessa zona: segnaposti affiancati, non sovrapposti
+        var giaQui = 0;
+        Object.keys(piazzamenti).forEach(function(k){ if (piazzamenti[k].zonaBtn === z) giaQui++; });
+        var dx = [0, -26, 26, -52, 52, -13, 13, -39][giaQui % 8];
+        piazzaSuMappa(active, pt[0] + dx, pt[1] - (giaQui >= 5 ? 18 : 0));
+        if (piazzamenti[ultimoId]) piazzamenti[ultimoId].zonaBtn = z;
       });
     });
 
