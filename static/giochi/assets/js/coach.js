@@ -274,7 +274,7 @@
       come: [
         'Scegli un livello (4, 6 o 8 coppie).',
         'Gira una carta: è un pittogramma o una frase di comportamento.',
-        'Cerca la coppia: la "Scala antincendio" si abbina a "Mai ascensore se c\'è allarme".',
+        'Cerca la coppia: il cartello «Uscita di emergenza» si abbina a «Esci di qua se c\'è allarme».',
         'Dopo ogni coppia leggi la spiegazione del segnale.',
         'Memorizza dove sono le carte già viste per fare meno mosse.'
       ],

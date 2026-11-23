@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { text: 'La radio dice che domani sono previste piogge intense.', answer: 'giallo', tip: 'Allerta prevista: preparati, evita zone a rischio e tieniti informato.' },
         { text: 'Stai giocando al parco e fa bel tempo.', answer: 'verde', tip: 'Tutto tranquillo, divertiti!' },
         { text: 'Vedi del fumo uscire da un bosco vicino.', answer: 'rosso', tip: 'Possibile incendio! Allontanati e chiama subito il 112, il numero unico di emergenza.' },
-        { text: 'È uscita un\'allerta arancione per rischio alluvione.', answer: 'rosso', tip: 'Allerta arancione: fenomeni intensi, resta al sicuro e segui le indicazioni!' },
+        { text: 'È uscita un\'allerta rossa per rischio alluvione.', answer: 'rosso', tip: 'Allerta rossa: fenomeni molto intensi, resta al sicuro e segui le indicazioni del Comune!' },
         { text: 'Fa molto caldo, il termometro segna 38 gradi.', answer: 'giallo', tip: 'Ondata di calore: bevi acqua, resta all\'ombra nelle ore più calde (11-18).' },
         { text: 'La terra trema per qualche secondo.', answer: 'rosso', tip: 'Terremoto! Riparati sotto un tavolo, proteggiti la testa. Non uscire durante la scossa.' },
         { text: 'Il meteo prevede neve in montagna domani.', answer: 'verde', tip: 'Neve in montagna: normale in inverno. Attenzione se devi viaggiare.' },
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { text: 'Cammini in montagna e senti un rombo come di tuono, ma il cielo è sereno.', answer: 'rosso', tip: 'Potrebbe essere una frana o una valanga in lontananza! Allontanati dai versanti e avvisa un adulto.' },
         { text: 'È appena iniziato l\'autunno e piove per la prima volta dopo l\'estate.', answer: 'giallo', tip: 'Prima pioggia: il terreno asciutto non la assorbe e le strade possono diventare scivolose.' },
         { text: 'Il papà sta usando il barbecue in giardino con vento forte.', answer: 'rosso', tip: 'Vento forte e fuoco aperto: rischio incendio! Spegnete il barbecue finché non cala il vento.' },
-        { text: 'La sirena di una casa di riposo suona per 30 secondi a mezzogiorno.', answer: 'verde', tip: 'Spesso è una prova settimanale. Se dura più a lungo o a orari strani, diventa giallo.' },
+        { text: 'La campanella della scuola suona per la fine delle lezioni.', answer: 'verde', tip: 'È la campanella di tutti i giorni: niente di preoccupante.' },
         { text: 'Un cavo elettrico è caduto a terra in strada dopo un temporale.', answer: 'rosso', tip: 'Pericolosissimo! Non avvicinarti e non toccarlo, avvisa un adulto e chiamate il 112: potrebbe essere sotto tensione.' },
         { text: 'Il bollettino dice "nebbia fitta in pianura domattina".', answer: 'giallo', tip: 'Nebbia: guida piano se ci sei in auto, usa luci adeguate. Per i pedoni niente panico, ma attenzione alle strade.' },
         { text: 'Un compagno a scuola sbatte la testa e ha un piccolo bernoccolo.', answer: 'giallo', tip: 'Avvisa subito la maestra o la bidella. Se sta male, si chiama il 112.' },
@@ -57,15 +57,15 @@ document.addEventListener('DOMContentLoaded', () => {
         { text: 'Vedi un bambino più piccolo di te che sembra essersi perso al supermercato.', answer: 'giallo', tip: 'Chiedigli come si chiama e portalo da un commesso o alla cassa: loro chiameranno al microfono.' },
 
         // Tema "comunicazione del rischio" — fonti ufficiali + IT-alert + fake news
-        { text: 'Tuo cugino ti gira un audio WhatsApp: "ho saputo che stanotte fanno saltare la diga di Nemi!".', answer: 'verde', tip: 'Audio anonimi su WhatsApp = quasi sempre fake news. Non lo inoltri, non ci credi, verifichi sul sito del Comune.' },
+        { text: 'Tuo cugino ti gira un audio WhatsApp: "ho saputo che stanotte fanno saltare la diga di Nemi!".', answer: 'giallo', tip: 'Attenzione: audio anonimi su WhatsApp = quasi sempre fake news. Non lo inoltri, non ci credi, verifichi sul sito del Comune.' },
         { text: 'Sul cellulare arriva un messaggio "IT-alert" con un suono speciale. Non è un test: è un allarme.', answer: 'rosso', tip: 'IT-alert è un allarme ufficiale per una grave emergenza. Leggi il messaggio con un adulto e segui le indicazioni delle autorità.' },
-        { text: 'Un meteorologo TikTok dice: "domani il Lazio sarà colpito da uragano!".', answer: 'verde', tip: 'TikTok non è fonte ufficiale. Verifica sul sito del Centro Funzionale Regionale: senza allerta ufficiale, è sensazionalismo.' },
-        { text: 'Il sindaco di Genzano pubblica un video sui canali ufficiali del Comune: allerta arancione confermata.', answer: 'rosso', tip: 'Comunicazione ufficiale del sindaco: prendi sul serio. Limita gli spostamenti e segui le indicazioni.' },
-        { text: 'Su Instagram vedi un post di un negozio "evacuazione totale di Genzano stanotte!" con tante condivisioni.', answer: 'verde', tip: 'Le condivisioni non rendono vera una notizia. Mai un\'evacuazione si comunica via post di un negozio: la comunicano il Comune e la Protezione Civile.' },
+        { text: 'Un meteorologo TikTok dice: "domani il Lazio sarà colpito da uragano!".', answer: 'giallo', tip: 'Attenzione: TikTok non è fonte ufficiale. Verifica sul sito del Centro Funzionale Regionale: senza allerta ufficiale, è sensazionalismo.' },
+        { text: 'Il sindaco di Genzano pubblica un video sui canali ufficiali del Comune: allerta rossa confermata.', answer: 'rosso', tip: 'Comunicazione ufficiale del sindaco: prendi sul serio. Limita gli spostamenti e segui le indicazioni.' },
+        { text: 'Su Instagram vedi un post di un negozio "evacuazione totale di Genzano stanotte!" con tante condivisioni.', answer: 'giallo', tip: 'Attenzione: le condivisioni non rendono vera una notizia. Mai un\'evacuazione si comunica via post di un negozio: la comunicano il Comune e la Protezione Civile.' },
         { text: 'Sul sito del Centro Funzionale Regionale Lazio leggi: codice giallo per temporali domani 12-18.', answer: 'giallo', tip: 'Bollettino ufficiale codice giallo: criticità ordinaria. Preparati, ma niente panico.' },
-        { text: 'Un amico ti chiede di rilanciare un suo post che chiede preghiere per "il terremoto in arrivo".', answer: 'verde', tip: 'I terremoti non si possono prevedere. Niente preghiere preventive, niente allarmismo: si chiama "diffondere falsi allarmi".' },
+        { text: 'Un amico ti chiede di rilanciare un suo post che chiede preghiere per "il terremoto in arrivo".', answer: 'giallo', tip: 'Attenzione: i terremoti non si possono prevedere. Niente preghiere preventive, niente allarmismo: si chiama "diffondere falsi allarmi".' },
         { text: 'Il bollettino del Ministero della Salute sulle ondate di calore segna il livello più alto per la tua città.', answer: 'rosso', tip: 'Livello più alto: rischio elevato, soprattutto per anziani e bambini. Bevi spesso, evita il sole dalle 11 alle 18, controlla i nonni.' },
-        { text: 'Un canale Telegram non ufficiale dice "il Comune sta nascondendo l\'emergenza!".', answer: 'verde', tip: 'Tipico schema cospirazionista. Le emergenze vere vengono comunicate dai canali ufficiali, non "rivelate" da canali anonimi.' },
+        { text: 'Un canale Telegram non ufficiale dice "il Comune sta nascondendo l\'emergenza!".', answer: 'giallo', tip: 'Attenzione: tipico schema cospirazionista. Le emergenze vere vengono comunicate dai canali ufficiali, non "rivelate" da canali anonimi.' },
         { text: 'A scuola la maestra vi chiede di cercare con i genitori dove si leggono le allerte meteo ufficiali.', answer: 'giallo', tip: 'Utile per prepararsi: le allerte del Centro Funzionale Regionale si leggono sul sito della Regione Lazio, nella pagina Allerte meteo di questo sito e sui canali del Comune.' }
     ];
 
