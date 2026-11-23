@@ -227,6 +227,16 @@
     tono({ freq: 400, durata: 0.25, tipo: 'sine', gain: 0.15, attack: 0.02, release: 0.1 });
   }
 
+  // Fine partita: arpeggio breve e allegro; con meno della metà dei punti è più
+  // morbido, mai un suono di «bocciatura».
+  function fineGioco(percentuale) {
+    if (!init()) return;
+    var note = (percentuale === undefined || percentuale >= 50) ? [523, 659, 784, 1047] : [440, 523, 659];
+    for (var i = 0; i < note.length; i++) {
+      tono({ freq: note[i], durata: 0.22, tipo: 'triangle', gain: 0.2, delay: i * 0.13, attack: 0.01, release: 0.15 });
+    }
+  }
+
   function pipRadio() {
     if (!init()) return;
     tono({ freq: 1200, durata: 0.09, tipo: 'sine', gain: 0.2, attack: 0.005, release: 0.02 });
@@ -248,6 +258,7 @@
     campanello: campanello,
     dingPositivo: dingPositivo,
     tonoNeutro: tonoNeutro,
+    fineGioco: fineGioco,
     pipRadio: pipRadio
   };
 })(typeof window !== 'undefined' ? window : this);

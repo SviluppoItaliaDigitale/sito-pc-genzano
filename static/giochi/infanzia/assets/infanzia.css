@@ -153,3 +153,11 @@ body.inf-body {
 @media (prefers-reduced-motion: reduce) {
   .inf-big-btn, .inf-big-btn.correct, .inf-big-btn.wrong { animation: none; transition: none; }
 }
+
+/* LIM grandi (Full HD e oltre, 23/11/2026): l'area del gioco si ingrandisce, così
+   figure e pulsanti si vedono anche dal fondo della classe. Sotto i 1600x860
+   (LIM a 1366x768, computer, telefoni) resta com'è. I giochi dell'infanzia non
+   usano trascinamenti né coordinate del tocco: l'ingrandimento non li altera. */
+@media (min-width: 1600px) and (min-height: 860px) {
+  .inf-main { zoom: 1.3; }
+}

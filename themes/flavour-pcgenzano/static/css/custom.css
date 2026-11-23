@@ -8601,6 +8601,13 @@ html.a11y-contrast-invert .gi-play, html.a11y-contrast-yellow-black .gi-play { b
 .lim-pronto a { color: #003366; font-weight: 600; text-decoration: underline; display: inline-flex; align-items: center; min-height: 44px; }
 .lim-pronto a:focus { outline: 3px solid #ffbe2e; outline-offset: 2px; }
 @media print { .lim-pronto { display: none !important; } }
+/* Nei giochi (barra del gioco, 23/11/2026) il riquadro resta ma in una riga
+   compatta, per lasciare l'altezza della LIM al gioco; il link «Torna ai giochi»
+   in cima ai giochi dell'infanzia è già «Torna al menu» della barra. */
+body.con-barra-gioco .lim-pronto { align-items: center; padding: 0.3rem 0.85rem; margin-bottom: 0.75rem;
+  font-size: 0.875rem; line-height: 1.4; text-align: left; }
+body.con-barra-gioco .lim-pronto-icona { font-size: 1.15rem; margin-top: 0; }
+body.con-barra-gioco .inf-main > nav[aria-label="Percorso"] { display: none; }
 
 /* ==========================================================================
    ILLUSTRAZIONI ANIMATE v1.0 (shortcode illustrazione-udl con «animazione»)
