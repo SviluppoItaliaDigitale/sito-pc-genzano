@@ -188,6 +188,10 @@ Tutti i giochi sono pubblicati con licenza **Creative Commons CC BY-NC-SA 4.0** 
 - [Schede stampabili per la scuola](/formazione/schede-stampabili/)
 - [Kit didattici per fascia](/formazione/)
 
+### Grazie a docenti ed educatori
+
+Ringraziamo i docenti e gli educatori che ci scrivono con costanza: segnalano ciò che in classe non funziona, propongono temi nuovi e ci chiedono di adattare i giochi alle diverse età. Molti miglioramenti sono nati così, compresa la compatibilità con le lavagne interattive, che abbiamo rivisto dopo le segnalazioni arrivate dalle scuole. Per mandarci un suggerimento scrivi dalla pagina [Contatti](/contatti/).
+
 ## Accessibilità complessiva
 
 Tutti i giochi sono navigabili da tastiera, hanno contrasti conformi WCAG 2.2 AA e rispettano la preferenza utente `prefers-reduced-motion`. I consigli per giocare sono leggibili ad alta voce con un bottone integrato (Web Speech API del browser). Dove sono presenti pittogrammi, sono standard ISO 7010 (segnaletica internazionale) o ARASAAC (accessibilità cognitiva).
