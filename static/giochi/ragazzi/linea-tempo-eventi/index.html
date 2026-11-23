@@ -79,6 +79,48 @@
     .stat-box .num { font-size: 1.5rem; font-weight: 800; color: var(--rag-blu); }
     .stat-box .lbl { font-size: .78rem; color: #5b6b7c; }
     .verifica-wrap { display: flex; gap: .5rem; flex-wrap: wrap; }
+
+    /* ── Impaginazione (revisione grafica): tessere in griglia, tessera scelta
+       ben visibile, a schermo largo tessere e linea del tempo affiancate così
+       sulla LIM non si scorre fra la tessera e la posizione. */
+    .lt-container { max-width: 860px; }
+    .pool-events {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(min(190px, 100%), 1fr));
+      align-items: stretch; align-content: start;
+    }
+    .pool-events .evento-card { max-width: none; width: 100%; }
+    .pool-events:empty { min-height: 0; display: block; }
+    .pool-events:empty::before {
+      content: "Tutte le tessere sono sulla linea del tempo."; color: #3d4b5c; font-weight: 600; font-size: .92rem;
+    }
+    .evento-card { min-height: 44px; line-height: 1.35; }
+    .evento-card strong { font-size: .95rem; }
+    .evento-card small { color: #4a5866; }
+    .evento-card.scelta {
+      background: #fff3cd; border-color: #8a5300;
+      outline: 4px solid #8a5300; outline-offset: 2px; box-shadow: none;
+    }
+    .evento-card.scelta::after {
+      content: "Scelta: ora tocca una posizione"; display: block; margin-top: .3rem;
+      font-size: .78rem; font-weight: 700; color: #6c3e00;
+    }
+    .timeline-strip { background: #eef4fc; padding-left: 1.3rem; }
+    .timeline-slot > .evento-card { flex: 1 1 auto; max-width: none; }
+    .timeline-slot.correct::after, .timeline-slot.wrong::after {
+      font-family: bootstrap-icons; font-size: 1.4rem; line-height: 1; flex: 0 0 auto;
+    }
+    .timeline-slot.correct::after { content: "\f26a"; color: #146c43; }
+    .timeline-slot.wrong::after { content: "\f622"; color: #b02a37; }
+    @media (min-width: 992px) {
+      .lt-container { max-width: 1140px; }
+      #intro.intro-card { max-width: 860px; margin-left: auto; margin-right: auto; }
+      .lt-layout { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 1.2rem; align-items: start; }
+      .lt-col-pool { position: sticky; top: 72px; }
+      .lt-col-pool .pool-events { max-height: calc(100vh - 140px); overflow-y: auto; margin-bottom: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) { .evento-card { transition: none; } .evento-card:hover { transform: none; } }
+    html.a11y-pause-anim .evento-card, html.a11y-pause-animations .evento-card { transition: none; }
+    html.a11y-pause-anim .evento-card:hover, html.a11y-pause-animations .evento-card:hover { transform: none; }
   </style>
 </head>
 <body class="rag-body" data-coach-game="linea-tempo-eventi">
@@ -99,7 +141,7 @@
       </div>
     </div>
 
-    <div class="container py-4" style="max-width: 860px;">
+    <div class="container py-4 lt-container">
 
       <section id="intro" class="intro-card">
         <h2 class="h4 mb-3">La memoria serve alla prevenzione</h2>
@@ -114,11 +156,16 @@
 
       <section id="game" class="hide">
         <div class="gioco-card-wrap">
-          <div class="pool-label"><i class="bi bi-collection"></i> Tessere da collocare</div>
-          <div id="pool" class="pool-events" aria-label="Tessere da collocare"></div>
-
-          <div class="pool-label"><i class="bi bi-calendar3"></i> Linea del tempo (dal più antico al più recente)</div>
-          <div id="timeline" class="timeline-strip" aria-label="Slot cronologici"></div>
+          <div class="lt-layout">
+            <div class="lt-col-pool">
+              <div class="pool-label"><i class="bi bi-collection" aria-hidden="true"></i> Tessere da collocare</div>
+              <div id="pool" class="pool-events" aria-label="Tessere da collocare"></div>
+            </div>
+            <div class="lt-col-linea">
+              <div class="pool-label"><i class="bi bi-calendar3" aria-hidden="true"></i> Linea del tempo (dal più antico al più recente)</div>
+              <div id="timeline" class="timeline-strip" aria-label="Slot cronologici"></div>
+            </div>
+          </div>
 
           <div class="verifica-wrap">
             <button id="verifica-btn" class="btn btn-primary" disabled><i class="bi bi-check2-circle me-1"></i>Verifica</button>

@@ -51,6 +51,11 @@
       display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(.6rem, 3vw, 1rem);
       width: 100%; max-width: 520px; margin: 0 auto;
     }
+    /* LIM e computer (23/11/2026): i quattro cartelli su una riga, cosi' a 1366x768
+       e 1024x768 domanda, cartelli e risposta di Tina si vedono senza scorrere. */
+    @media (min-width: 700px) {
+      .cartelli { grid-template-columns: repeat(4, minmax(0, 1fr)); max-width: 700px; }
+    }
     .cartello-btn {
       aspect-ratio: 1; width: 100%;
       border-radius: 20px; border: 4px solid transparent;
@@ -371,18 +376,32 @@
     }
 
     var inPassaggio = false;
+    // Esito visibile anche senza colori: bollino con spunta o croce (infanzia.css).
+    function segnaEsito(btn, ok) {
+      togliEsito(btn);
+      var s = document.createElement('span');
+      s.className = 'inf-esito' + (ok ? '' : ' no');
+      s.setAttribute('aria-hidden', 'true');
+      btn.appendChild(s);
+    }
+    function togliEsito(btn) {
+      var v = btn.querySelector('.inf-esito');
+      if (v) btn.removeChild(v);
+    }
+
     function scegli(id, btn) {
       if (inPassaggio || Date.now() < sbloccoAl) return;
       var q = domande[round];
       if (id === q.target) {
         inPassaggio = true;
         btn.classList.add('correct');
+        segnaEsito(btn, true);
         // Spiegazione didattica del cartello: 1 frase semplice (3-6 anni)
         // sul significato del simbolo, non solo la conferma.
         var perche = CATALOGO[id].perche || '';
         feedbackEl.innerHTML = 'Giusto! Hai trovato ' + CATALOGO[id].nome + '.' +
           (perche ? ' <small style="display:block;margin-top:.3rem;font-weight:400;color:#0f5132;">💡 ' + perche + '</small>' : '');
-        feedbackEl.style.color = '#198754';
+        feedbackEl.style.color = '#1E6B34';
         cartelliEl.querySelectorAll('button').forEach(function (b) { b.disabled = true; if (b !== btn) b.classList.add('dim'); });
         if (window.AudioSintetico) window.AudioSintetico.dingPositivo();
         if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
@@ -394,10 +413,11 @@
       } else {
         errors++;
         btn.classList.add('wrong');
+        segnaEsito(btn, false);
         feedbackEl.textContent = 'Quasi! Riprova: cerca ' + CATALOGO[q.target].nome + '.';
-        feedbackEl.style.color = '#dc3545';
+        feedbackEl.style.color = '#B3261E';
         if (window.AudioSintetico) window.AudioSintetico.tonoNeutro();
-        setTimeout(function () { btn.classList.remove('wrong'); }, 500);
+        setTimeout(function () { btn.classList.remove('wrong'); togliEsito(btn); }, 900);
         if (window.GameCoach && window.GameCoach.hint) {
           window.GameCoach.hint('Verde = sicurezza (uscita, primo soccorso). Rosso = divieto. Giallo = attenzione. Blu = obbligo (casco, guanti).', '/pittogrammi/');
         }

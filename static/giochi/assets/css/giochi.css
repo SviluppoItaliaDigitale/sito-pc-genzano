@@ -61,9 +61,10 @@
   margin-bottom: 0.75rem;
   color: #fff;
 }
-.gioco-card-icon.icon-infanzia { background: linear-gradient(135deg, #D9364F, #B01F39); }
-.gioco-card-icon.icon-primaria { background: linear-gradient(135deg, #008758, #006F47); }
-.gioco-card-icon.icon-ragazzi  { background: linear-gradient(135deg, #0066CC, #004A96); }
+/* Tinte piene della fascia (niente gradienti decorativi); bianco su tinta >= 4.5:1 */
+.gioco-card-icon.icon-infanzia { background: #B01F39; }
+.gioco-card-icon.icon-primaria { background: #006F47; }
+.gioco-card-icon.icon-ragazzi  { background: #003366; }
 
 .gioco-card h2, .gioco-card h3, .gioco-card .h3 {
   font-size: 1.15rem;
@@ -108,10 +109,10 @@
   font-size: 2.4rem; color: #fff;
   margin-bottom: 1.2rem;
 }
-.fascia-icon-infanzia { background: linear-gradient(135deg, #D9364F, #B01F39); }
-.fascia-icon-primaria { background: linear-gradient(135deg, #008758, #006F47); }
-.fascia-icon-ragazzi  { background: linear-gradient(135deg, #0066CC, #004A96); }
-.fascia-icon-abili    { background: linear-gradient(135deg, #7A1FA2, #4A1266); }
+.fascia-icon-infanzia { background: #B01F39; }
+.fascia-icon-primaria { background: #006F47; }
+.fascia-icon-ragazzi  { background: #003366; }
+.fascia-icon-abili    { background: #5E1880; }
 
 .fascia-card h2 { font-size: 1.4rem; margin: 0 0 0.3rem 0; font-weight: 700; }
 .fascia-card .fascia-eta { color: #5b6b7c; font-size: 0.95rem; margin-bottom: 0.8rem; font-weight: 600; }
@@ -230,6 +231,19 @@
   .gioco-card:hover, .fascia-card:hover, .btn-infanzia:hover {
     transform: none !important;
   }
+}
+/* "Pausa animazioni" del pannello di accessibilita' */
+html.a11y-pause-anim .gioco-card, html.a11y-pause-anim .fascia-card,
+html.a11y-pause-anim .btn-infanzia, html.a11y-pause-anim .badge-giochi,
+html.a11y-pause-animations .gioco-card, html.a11y-pause-animations .fascia-card,
+html.a11y-pause-animations .btn-infanzia, html.a11y-pause-animations .badge-giochi {
+  transition: none !important;
+}
+html.a11y-pause-anim .gioco-card:hover, html.a11y-pause-anim .fascia-card:hover,
+html.a11y-pause-anim .btn-infanzia:hover,
+html.a11y-pause-animations .gioco-card:hover, html.a11y-pause-animations .fascia-card:hover,
+html.a11y-pause-animations .btn-infanzia:hover {
+  transform: none !important;
 }
 
 /* ── Print (per attestato in pagina) ──────────────────────── */

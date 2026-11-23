@@ -60,6 +60,17 @@
       transition: transform .15s;
     }
     .mezzo-btn .nome { font-size: clamp(.7rem, 2.9vw, .85rem); font-weight: 700; line-height: 1.2; text-transform: uppercase; overflow-wrap: anywhere; }
+    /* Telefono: «AMBULANZA» andava a capo a meta' parola (AMBULANZ-A). */
+    @media (max-width: 420px) {
+      .mezzo-btn { padding: .6rem .15rem; border-width: 3px; }
+      .mezzo-btn .nome { font-size: .68rem; overflow-wrap: normal; }
+    }
+    /* LIM e computer: figure e nomi piu' grandi (prima 51 px e 13,6 px in pulsanti da 190 px). */
+    @media (min-width: 700px) {
+      .mezzi-griglia { max-width: 600px; gap: 1rem; }
+      .mezzo-btn { font-size: 4.2rem; aspect-ratio: auto; min-height: 175px; }
+      .mezzo-btn .nome { font-size: 1.05rem; }
+    }
     .mezzo-btn.pompiere { border-color: #dc3545; background: #fff5f5; }
     .mezzo-btn.ambulanza { border-color: #6c757d; background: #f8f9fa; }
     .mezzo-btn.volontari { border-color: #fd7e14; background: #fff8f0; }
@@ -100,8 +111,8 @@
         <p class="h5 mt-2">3 mezzi: <strong>pompiere</strong>, <strong>ambulanza</strong>, <strong>volontari</strong>.</p>
         <p class="text-muted">6 emergenze, scegli il mezzo giusto!</p>
         <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
-          <button id="start-btn" class="btn btn-primary btn-lg"><i class="bi bi-play-fill me-1" aria-hidden="true"></i> Inizia</button>
-          <a href="../index.html" class="btn btn-outline-secondary btn-lg"><i class="bi bi-arrow-left me-1" aria-hidden="true"></i> Torna ai giochi</a>
+          <button id="start-btn" class="inf-big-btn"><i class="bi bi-play-fill" aria-hidden="true"></i> Inizia</button>
+          <a href="../index.html" class="inf-back inf-back-grande"><i class="bi bi-arrow-left" aria-hidden="true"></i> Torna ai giochi</a>
         </div>
       </div>
 
@@ -136,8 +147,8 @@
           <p class="mb-3">Hai mandato il mezzo giusto <strong><span id="punti">0</span></strong> volte su 6.</p>
           <p class="text-muted small mb-3">Ricorda: in ogni caso si chiama il <strong>112</strong>, e loro mandano il mezzo giusto!</p>
           <div class="d-flex flex-wrap justify-content-center gap-2">
-            <button id="restart-btn" class="btn btn-primary"><i class="bi bi-arrow-repeat me-1"></i> Rigioca</button>
-            <a href="../index.html" class="btn btn-outline-secondary"><i class="bi bi-arrow-left me-1"></i> Torna ai giochi</a>
+            <button id="restart-btn" class="inf-big-btn"><i class="bi bi-arrow-repeat" aria-hidden="true"></i> Rigioca</button>
+            <a href="../index.html" class="inf-back inf-back-grande"><i class="bi bi-arrow-left" aria-hidden="true"></i> Torna ai giochi</a>
           </div>
         </div>
       </div>
@@ -266,6 +277,8 @@
       if (perEl && perche) {
         perEl.textContent = '💡 ' + perche;
         perEl.classList.remove('hide');
+        // Sul telefono la spiegazione cade sotto le scelte: la si porta in vista.
+        if (perEl.scrollIntoView && perEl.getBoundingClientRect().bottom > window.innerHeight) { perEl.scrollIntoView({ block: 'nearest' }); }
       }
       if (tipo === giusto) {
         btn.classList.add('correct');

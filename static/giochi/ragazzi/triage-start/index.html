@@ -53,7 +53,16 @@
     .btn-cod.giallo { background: #F4B700; color: #17324D; }
     .btn-cod.verde { background: #198754; }
     .btn-cod.nero { background: #222; }
-    .btn-cod small { font-weight: 600; font-size: .7rem; opacity: .85; }
+    .btn-cod small { font-weight: 700; font-size: .8rem; }
+    .btn-cod { position: relative; font-size: 1rem; }
+    /* Codice giusto: pieno e con la spunta in un tondino bianco, anche se la
+       scelta era un'altra (prima si vedeva solo il pulsante scelto). */
+    .btn-cod.giusto, .btn-cod.giusto:disabled { opacity: 1; }
+    .btn-cod.giusto::after {
+      content: "\f26a"; font-family: bootstrap-icons; position: absolute; top: -10px; right: -10px;
+      width: 26px; height: 26px; border-radius: 50%; background: #fff; color: #146c43;
+      font-size: 1.2rem; line-height: 26px; text-align: center; box-shadow: 0 1px 4px rgba(0,0,0,.3);
+    }
     .esito { margin-top: 1rem; padding: .9rem 1rem; border-radius: 8px; line-height: 1.55; }
     .esito.ok { background: #e8f5ee; border-left: 4px solid var(--rag-verde); }
     .esito.ko { background: #fde8eb; border-left: 4px solid var(--rag-rosso); }
@@ -399,7 +408,7 @@
       });
       esito.classList.add('hide'); esito.classList.remove('ok','ko'); esito.innerHTML = '';
       nextWrap.classList.add('hide');
-      btnCods.forEach(function(b){ b.disabled = false; b.classList.remove('scelto'); });
+      btnCods.forEach(function(b){ b.disabled = false; b.classList.remove('scelto', 'giusto'); });
       risposto = false;
       prontoDa = Date.now() + 400;
       bloccaTocchi();
@@ -414,6 +423,8 @@
       var p = queue[idx];
       btnCods.forEach(function(b){ b.disabled = true; });
       if (btn) btn.classList.add('scelto');
+      // il codice giusto resta riconoscibile sul pulsante (spunta), anche se hai sbagliato
+      btnCods.forEach(function(b){ if (b.getAttribute('data-cod') === p.cod) b.classList.add('giusto'); });
       if (window.AudioSintetico) { if (cod === p.cod) window.AudioSintetico.dingPositivo(); else window.AudioSintetico.tonoNeutro(); }
       var CODNAMES = { rosso:'ROSSO', giallo:'GIALLO', verde:'VERDE', nero:'NERO' };
       if (cod === p.cod){

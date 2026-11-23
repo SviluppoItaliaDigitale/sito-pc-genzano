@@ -31,13 +31,19 @@
     .opt-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: .5rem; margin-top: 1rem; }
     @media (max-width: 560px) { .opt-grid { grid-template-columns: 1fr; } }
     .opt-btn {
-      padding: .7rem; border-radius: 8px; border: 2px solid #e9ecef;
-      background: #fff; color: var(--rag-blu); cursor: pointer; font-weight: 500;
-      text-align: left;
+      padding: .7rem .9rem; border-radius: 8px; border: 2px solid #7d8ea3;
+      background: #fff; color: var(--rag-blu); cursor: pointer; font-weight: 600;
+      text-align: left; font-size: 1.02rem;
+      display: flex; align-items: center; justify-content: space-between; gap: .5rem;
     }
-    .opt-btn:hover, .opt-btn:focus { background: #eef4fc; border-color: var(--rag-blu); }
+    .opt-btn:not(:disabled):hover, .opt-btn:focus-visible { background: #eef4fc; border-color: var(--rag-blu); }
+    .opt-btn:focus-visible { outline: 3px solid var(--rag-blu); outline-offset: 2px; }
+    /* Esito: colore + icona (spunta o croce), mai il solo colore */
     .opt-btn.correct { background: #d1e7dd; border-color: #198754; color: #0f5132; }
     .opt-btn.wrong { background: #f8d7da; border-color: #dc3545; color: #8B1F2E; }
+    .opt-btn.correct::after, .opt-btn.wrong::after { font-family: bootstrap-icons; font-size: 1.25rem; line-height: 1; }
+    .opt-btn.correct::after { content: "\f26a"; color: #146c43; }
+    .opt-btn.wrong::after { content: "\f622"; color: #b02a37; }
     .alfabeto-table {
       font-size: .85rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(128px, 1fr)); gap: .4rem;
     }

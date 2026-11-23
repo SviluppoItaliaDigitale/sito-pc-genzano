@@ -84,17 +84,27 @@
       font-size: .95rem; line-height: 1.4;
       transition: all .15s; cursor: pointer;
     }
-    .answer-btn:hover, .answer-btn:focus {
+    .answer-btn:not(:disabled):hover, .answer-btn:focus-visible {
       border-color: #003366; background: #eef4fb;
-      outline: 2px solid #003366; outline-offset: 2px;
+      outline: 3px solid #003366; outline-offset: 2px;
     }
     .answer-btn:disabled { cursor: default; opacity: .8; }
+    /* Esito sul pulsante: colore + icona (spunta o croce), mai il solo colore */
+    .answer-btn.correct, .answer-btn.wrong {
+      opacity: 1; font-weight: 700;
+      display: flex; align-items: center; justify-content: space-between; gap: .6rem;
+    }
+    .answer-btn.correct::after, .answer-btn.wrong::after {
+      font-family: bootstrap-icons; font-size: 1.3rem; line-height: 1; flex: 0 0 auto;
+    }
     .answer-btn.correct {
       background: #d1e7dd; border-color: #198754; color: #0f5132;
     }
+    .answer-btn.correct::after { content: "\f26a"; color: #146c43; }
     .answer-btn.wrong {
       background: #f8d7da; border-color: #dc3545; color: #842029;
     }
+    .answer-btn.wrong::after { content: "\f622"; color: #b02a37; }
 
     .feedback-box {
       background: #eef4fb; border-left: 4px solid #003366;

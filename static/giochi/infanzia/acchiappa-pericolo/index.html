@@ -37,7 +37,14 @@
       cursor: pointer; user-select: none;
       transition: transform .15s;
     }
-    .item-btn .nome { font-size: 0.95rem; color: #495057; font-weight: 700; line-height: 1.2; text-transform: uppercase; }
+    .item-btn .nome { font-size: 0.95rem; color: #3d4752; font-weight: 700; line-height: 1.2; text-transform: uppercase; overflow-wrap: anywhere; padding: 0 .3rem; }
+    .item-btn .item-pitto { width: 72px; height: 72px; object-fit: contain; display: block; }
+    /* LIM e computer (23/11/2026): le quattro scelte stanno su una riga, cosi' a
+       1366x768 e 1024x768 si vedono tutte insieme alla spiegazione, senza scorrere. */
+    @media (min-width: 700px) {
+      .scena-griglia { grid-template-columns: repeat(4, minmax(0, 1fr)); max-width: 700px; gap: .9rem; }
+      .item-btn { aspect-ratio: auto; min-height: 172px; padding: .8rem .2rem; }
+    }
     .item-btn:focus { outline: 4px solid var(--inf-blu, #003366); outline-offset: 4px; }
     .item-btn:hover { transform: translateY(-2px); }
     .item-btn.correct { animation: inf-pulse-green .6s ease; box-shadow: 0 0 0 6px #198754; border-color: #198754; }
@@ -86,12 +93,21 @@
 
     <div class="inf-card" id="game-card">
       <div id="start-screen" class="text-center">
-        <div style="font-size: 5rem;" aria-hidden="true">🐢</div>
+        <!-- Tina, la stessa tartaruga col casco degli altri giochi (prima un'emoji) -->
+        <svg viewBox="0 0 180 120" width="160" height="110" aria-hidden="true" focusable="false">
+        <ellipse cx="90" cy="105" rx="70" ry="6" fill="rgba(0,0,0,0.08)"/>
+        <path d="M 30 85 Q 30 35 90 30 Q 150 35 150 85 Z" fill="#4E8B3E" stroke="#2F5A25" stroke-width="2"/>
+        <circle cx="90" cy="25" r="18" fill="#8ABF78" stroke="#2F5A25" stroke-width="2"/>
+        <circle cx="84" cy="23" r="2.5" fill="#17324D"/>
+        <circle cx="96" cy="23" r="2.5" fill="#17324D"/>
+        <path d="M 86 30 Q 90 34 94 30" stroke="#17324D" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M 72 18 Q 90 5 108 18 L 108 22 L 72 22 Z" fill="#D9364F" stroke="#8B1F2E" stroke-width="2"/>
+      </svg>
         <p class="h5 mt-2">Sei pronto a giocare con Tina?</p>
         <p class="text-muted">6 round, tante scene, tante stelline da guadagnare!</p>
         <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
-          <button id="start-btn" class="btn btn-primary btn-lg"><i class="bi bi-play-fill me-1" aria-hidden="true"></i> Inizia</button>
-          <a href="../index.html" class="btn btn-outline-secondary btn-lg"><i class="bi bi-arrow-left me-1" aria-hidden="true"></i> Torna ai giochi</a>
+          <button id="start-btn" class="inf-big-btn"><i class="bi bi-play-fill" aria-hidden="true"></i> Inizia</button>
+          <a href="../index.html" class="inf-back inf-back-grande"><i class="bi bi-arrow-left" aria-hidden="true"></i> Torna ai giochi</a>
         </div>
       </div>
 
@@ -111,12 +127,13 @@
           <div class="titolo">Bravissimo!</div>
           <p class="mb-3">Hai indovinato <strong><span id="punti">0</span></strong> pericoli su 6.</p>
           <div class="d-flex flex-wrap justify-content-center gap-2">
-            <button id="restart-btn" class="btn btn-primary"><i class="bi bi-arrow-repeat me-1"></i> Rigioca</button>
-            <a href="../index.html" class="btn btn-outline-secondary"><i class="bi bi-arrow-left me-1"></i> Torna ai giochi</a>
+            <button id="restart-btn" class="inf-big-btn"><i class="bi bi-arrow-repeat" aria-hidden="true"></i> Rigioca</button>
+            <a href="../index.html" class="inf-back inf-back-grande"><i class="bi bi-arrow-left" aria-hidden="true"></i> Torna ai giochi</a>
           </div>
         </div>
       </div>
     </div>
+    <p class="inf-attribuzione">Pittogrammi: Sergio Palao, <a href="/attribuzioni-pittogrammi/">ARASAAC (CC BY-NC-SA 4.0)</a>.</p>
   </main>
 
   <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
@@ -195,7 +212,7 @@
         perche: 'Vicino alla finestra i vetri possono rompersi. Mettiti SOTTO il tavolo finché non finisce la scossa.',
         items: [
           { emo: '🪟', nome: 'Vicino alla finestra', danger: true },
-          { emo: '🪑', nome: 'Sotto il tavolo', danger: false },
+          { emo: '🪑', img: 'nascondersi-tavolo', nome: 'Sotto il tavolo', danger: false },
           { emo: '🚪', nome: 'Vano della porta nel muro spesso', danger: false },
           { emo: '🛏️', nome: 'Vicino al letto', danger: false }
         ]
@@ -214,7 +231,7 @@
         domanda: 'Se sento odore di gas in casa, NON devo:',
         perche: "Accendere una luce o un fiammifero col gas in aria può far esplodere la cucina. Apri le finestre, esci e chiama il 112 da fuori.",
         items: [
-          { emo: '🚪', nome: 'Aprire le finestre', danger: false },
+          { emo: '🪟', img: 'aprire-finestra', nome: 'Aprire le finestre', danger: false },
           { emo: '💡', nome: 'Accendere la luce', danger: true },
           { emo: '📞', nome: 'Chiamare il 112', danger: false },
           { emo: '🚶', nome: 'Uscire da casa', danger: false }
@@ -256,7 +273,7 @@
         items: [
           { emo: '📞', nome: 'Chiamo il 112 con un adulto', danger: false },
           { emo: '🤳', nome: 'Faccio un selfie col fuoco dietro', danger: true },
-          { emo: '💧', nome: 'Mi allontano dal fumo', danger: false },
+          { emo: '🏃', img: 'scappare', nome: 'Mi allontano dal fumo', danger: false },
           { emo: '👀', nome: 'Guardo da dove arriva il vento', danger: false }
         ]
       },
@@ -296,7 +313,7 @@
         items: [
           { emo: '🚶', nome: 'Mi metto in fila col capofila', danger: false },
           { emo: '🎒', nome: 'Torno in classe a prendere lo zaino', danger: true },
-          { emo: '🪜', nome: 'Uso le scale, non l\'ascensore', danger: false },
+          { emo: '🪜', img: 'scendere-scale', nome: 'Uso le scale, non l\'ascensore', danger: false },
           { emo: '✋', nome: 'Cammino veloce ma senza correre', danger: false }
         ]
       },
@@ -315,8 +332,8 @@
         perche: 'Mai usare l\'ascensore in caso di fumo: può bloccarsi tra i piani. Sempre le scale.',
         items: [
           { emo: '🚪', nome: 'Esco di casa con calma', danger: false },
-          { emo: '🛗', nome: 'Prendo l\'ascensore', danger: true },
-          { emo: '🪜', nome: 'Scendo dalle scale', danger: false },
+          { emo: '🛗', img: 'ascensore', nome: 'Prendo l\'ascensore', danger: true },
+          { emo: '🪜', img: 'scendere-scale', nome: 'Scendo dalle scale', danger: false },
           { emo: '📞', nome: 'Chiamo il 112 una volta fuori', danger: false }
         ]
       }
@@ -377,7 +394,12 @@
         b.type = 'button';
         b.className = 'item-btn';
         b.dataset.danger = it.danger ? '1' : '0';
-        b.innerHTML = '<span aria-hidden="true">' + it.emo + '</span><span class="nome">' + it.nome + '</span>';
+        // Dove c'e' un pittogramma ARASAAC adatto si usa quello: le emoji piu' recenti
+        // (scale, ascensore, sedia) non compaiono sui browser delle LIM meno recenti.
+        var figura = it.img
+          ? '<img class="item-pitto" src="/pittogrammi/arasaac/' + it.img + '.png" alt="" width="72" height="72">'
+          : '<span aria-hidden="true">' + it.emo + '</span>';
+        b.innerHTML = figura + '<span class="nome">' + it.nome + '</span>';
         b.addEventListener('click', () => onPick(b, it));
         scenaEl.appendChild(b);
       });
@@ -400,6 +422,10 @@
       if (perEl && SCENE[cur].perche) {
         perEl.textContent = '💡 ' + SCENE[cur].perche;
         perEl.classList.remove('hide');
+        // Sul telefono la spiegazione cade sotto le scelte: la si porta in vista.
+        if (perEl.scrollIntoView && perEl.getBoundingClientRect().bottom > window.innerHeight) {
+          perEl.scrollIntoView({ block: 'nearest' });
+        }
       }
       if (it.danger) {
         btn.classList.add('correct');

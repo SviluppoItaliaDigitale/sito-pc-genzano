@@ -85,6 +85,8 @@
       .oggetto-btn.giusto { animation: none; opacity: 0; }
       .oggetto-btn.sbagliato { animation: none; border-color: var(--inf-rosso); }
     }
+    /* Con «Ferma le animazioni» l'oggetto messo nello zaino sparisce subito, come sopra. */
+    html.a11y-pause-anim .oggetto-btn.giusto, html.a11y-pause-animations .oggetto-btn.giusto { opacity: 0; }
   </style>
 </head>
 <body class="inf-body" data-coach-game="vesti-tina">
