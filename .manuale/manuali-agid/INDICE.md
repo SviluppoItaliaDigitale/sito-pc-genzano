@@ -1,6 +1,6 @@
 # Manuali ufficiali per i testi della PA
 
-Testi scaricati dai repository ufficiali su GitHub il 16/11/2026 16:12. Non modificarli a mano: si aggiornano con `python3 scripts/manuali-agid.py aggiorna`, che dice anche cosa è cambiato.
+Testi scaricati dai repository ufficiali su GitHub il 23/11/2026 18:40. Non modificarli a mano: si aggiornano con `python3 scripts/manuali-agid.py aggiorna`, che dice anche cosa è cambiato.
 
 | File | Documento | Editore e licenza | Versione del testo |
 |---|---|---|---|
@@ -21,11 +21,11 @@ Testi scaricati dai repository ufficiali su GitHub il 16/11/2026 16:12. Non modi
 Repository e commit usati:
 
 - AgID, Linee guida di design per i siti internet e i servizi digitali della PA: https://github.com/italia/lg-design-servizi-web (ramo versione-corrente), commit 94afa9e del 27/07/2022.
-- Designers Italia, design system .italia (sito designers.italia.it): https://github.com/italia/designers.italia.it (ramo main), commit 96ae069 del 13/11/2026.
+- Designers Italia, design system .italia (sito designers.italia.it): https://github.com/italia/designers.italia.it (ramo main), commit 03d02aa del 23/11/2026.
 - Designers Italia, Guida alle parole della Pubblica Amministrazione: https://github.com/italia/writing-toolkit (ramo master), commit 6223b45 del 14/04/2025.
 - Designers Italia, Manuale operativo di design: https://github.com/italia/manuale-operativo-design-docs (ramo versione-corrente), commit 0e67948 del 20/03/2025.
 
-Versione della documentazione del design system .italia: 1.13.0.
+Versione della documentazione del design system .italia: 1.14.0.
 
 Attribuzione: i testi di Designers Italia (Dipartimento per la trasformazione digitale) sono pubblicati con licenza CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/deed.it); le Linee guida di design di AgID con licenza CC0 1.0. Le pagine dei Fondamenti sono convertite da YAML a Markdown senza cambiare il testo; i file .rst sono i sorgenti originali, uniti in un file per documento (ogni parte comincia con «.. file: nome»).
 

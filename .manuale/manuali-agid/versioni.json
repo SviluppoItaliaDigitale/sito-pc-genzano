@@ -1,5 +1,5 @@
 {
- "aggiornato_il": "16/11/2026 16:12",
+ "aggiornato_il": "23/11/2026 18:40",
  "fonti": {
   "lg-design": {
    "repo": "https://github.com/italia/lg-design-servizi-web",
@@ -10,8 +10,8 @@
   "designers": {
    "repo": "https://github.com/italia/designers.italia.it",
    "ramo": "main",
-   "commit": "96ae06936dad41ccecbb38911a118a264a717dae",
-   "data": "2026-11-13T17:34:25+01:00"
+   "commit": "03d02aacf9948a35edccc3c905266cad16e9818d",
+   "data": "2026-11-23T16:21:45+01:00"
   },
   "parole-pa": {
    "repo": "https://github.com/italia/writing-toolkit",
@@ -106,5 +106,5 @@
    "cambiato_il": "15/10/2026"
   }
  },
- "design_system": "1.13.0"
+ "design_system": "1.14.0"
 }
