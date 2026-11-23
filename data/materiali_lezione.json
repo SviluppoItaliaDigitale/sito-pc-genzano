@@ -4424,9 +4424,10 @@
    ],
    "minuti": null,
    "temi": [
+    "incendi",
     "meteo"
    ],
-   "desc": "Riconosci 12 suoni dell'emergenza: ambulanza, pompieri, polizia, tuono, allarme, IT-alert, vento e altri. Gioco audio per bambini dai 3 ai 6 anni.",
+   "desc": "Riconosci 12 suoni dell'emergenza: sirena di ambulanza e pompieri, polizia, tuono, allarme, rilevatore di fumo, IT-alert, vento e altri. Gioco audio per bambini dai 3 ai 6 anni.",
    "facilitata": false
   },
   {

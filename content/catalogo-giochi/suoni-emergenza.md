@@ -21,7 +21,7 @@ sitemap:
   changefreq: monthly
 ---
 
-**I Suoni dell'Emergenza** è un gioco educativo gratuito del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**, pensato per la **scuola dell'infanzia**. Si gioca direttamente dal browser, senza account e senza scaricare nulla.
+**I Suoni dell'Emergenza** è un gioco educativo gratuito del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**, pensato per la **scuola dell'infanzia**. Si gioca direttamente dal browser, senza account e senza installare nulla.
 
 ## A chi è rivolto
 
@@ -36,7 +36,7 @@ sitemap:
 
 ## Come si gioca
 
-1. La sirena dell'ambulanza ha tre toni.
+1. La sirena di ambulanza e pompieri ha due note, una bassa e una alta.
 2. Il tuono fa "boom" dopo il fulmine.
 3. L'allarme della scuola dice di uscire in ordine.
 4. Con IT-alert il telefono fa un suono speciale: chiama subito un adulto.

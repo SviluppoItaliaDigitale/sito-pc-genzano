@@ -1,5 +1,7 @@
 /* Audio sintetico — Protezione Civile Genzano
-   Tutti i suoni generati via Web Audio API. Nessun file audio nel repo.
+   Suoni generati via Web Audio API; per i suoni naturali e quotidiani (tuono,
+   pioggia, vento, cane, campanello, campanella, rilevatore di fumo) registrazioni
+   vere CC0 in /giochi/assets/audio/, con il suono sintetico come riserva.
    Rispetta masterVolume (persistito in localStorage). */
 
 (function (global) {
@@ -111,17 +113,55 @@
     } catch (e) { /* noop */ }
   }
 
-  // Preset: suoni dell'emergenza
-  function sirenaAmbulanza() {
-    if (!init()) return;
-    var t0 = ctx.currentTime;
-    var cicli = 3;
-    var durata = 0.4;
-    for (var i = 0; i < cicli; i++) {
-      tono({ freq: 600, durata: durata, tipo: 'square', gain: 0.18, delay: i * durata * 2, attack: 0.02, release: 0.05 });
-      tono({ freq: 800, durata: durata, tipo: 'square', gain: 0.18, delay: i * durata * 2 + durata, attack: 0.02, release: 0.05 });
+  // Registrazioni vere (MP3 in /giochi/assets/audio/, licenze nella pagina del gioco).
+  // Se il browser non riesce a riprodurle, suona `riserva` (il suono sintetico).
+  var audioInCorso = null;
+  function ferma() {
+    if (audioInCorso) {
+      try { audioInCorso.pause(); } catch (e) { /* noop */ }
+      audioInCorso = null;
     }
   }
+  function registrazione(nome, riserva) {
+    init();
+    ferma();
+    var usataRiserva = false;
+    function usaRiserva() {
+      if (usataRiserva) return;
+      usataRiserva = true;
+      if (typeof riserva === 'function') riserva();
+    }
+    try {
+      if (typeof global.Audio !== 'function') { usaRiserva(); return; }
+      var a = new global.Audio('/giochi/assets/audio/' + nome + '.mp3');
+      a.volume = masterVolume;
+      a.onerror = usaRiserva;
+      audioInCorso = a;
+      var p = a.play();
+      if (p && typeof p.then === 'function') p.then(null, usaRiserva);
+    } catch (e) { usaRiserva(); }
+  }
+
+  // Preset: suoni dell'emergenza
+  // Sirena bitonale di ambulanze e vigili del fuoco come nel DM 17/10/1980, art. 2:
+  // note 392 Hz e 660 Hz, ciclo di 3 secondi diviso in 1/3 (392), 1/18 (660),
+  // 1/18 (392), 1/18 (660), 1/3 (392), 1/18 (660), 1/18 (392), 1/18 (660).
+  function sirenaSoccorso(cicli) {
+    if (!init()) return;
+    cicli = cicli || 1;
+    var ciclo = 3;
+    var schema = [[392, 6], [660, 1], [392, 1], [660, 1], [392, 6], [660, 1], [392, 1], [660, 1]];
+    var t = 0;
+    for (var c = 0; c < cicli; c++) {
+      for (var i = 0; i < schema.length; i++) {
+        var d = ciclo * schema[i][1] / 18;
+        tono({ freq: schema[i][0], durata: d, tipo: 'sawtooth', gain: 0.16, delay: t, attack: 0.01, release: 0.01 });
+        t += d;
+      }
+    }
+  }
+  // Nome storico, tenuto per compatibilità: suona la sirena del decreto.
+  function sirenaAmbulanza() { sirenaSoccorso(1); }
 
   function tuono() {
     if (!init()) return;
@@ -176,6 +216,9 @@
     tono: tono,
     rumoreBianco: rumoreBianco,
     sirenaAmbulanza: sirenaAmbulanza,
+    sirenaSoccorso: sirenaSoccorso,
+    registrazione: registrazione,
+    ferma: ferma,
     tuono: tuono,
     allarmeIncendio: allarmeIncendio,
     itAlert: itAlert,
