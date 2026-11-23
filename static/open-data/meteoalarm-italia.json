@@ -1,11 +1,11 @@
 {
  "_snapshot": {
-  "generato": "2026-11-23T01:04:36+00:00",
+  "generato": "2026-11-23T09:08:32+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 18,
-  "scaduti_scartati": 34,
-  "in_corso": 15,
+  "avvisi": 16,
+  "scaduti_scartati": 36,
+  "in_corso": 13,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
@@ -102,19 +102,6 @@
   },
   {
    "in_corso": true,
-   "regione": "Marche",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-23T00:00:00+00:00",
-   "fine": "2026-11-23T05:59:00+00:00",
-   "emesso": "2026-11-22T09:38:31+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261122103830.116"
-  },
-  {
-   "in_corso": true,
    "regione": "Molise",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -190,19 +177,6 @@
    "fine": "2026-11-23T11:59:00+00:00",
    "emesso": "2026-11-22T09:38:31+00:00",
    "identificativo": "2.49.0.0.380.3.IT.261122103830.115"
-  },
-  {
-   "in_corso": true,
-   "regione": "Umbria",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-23T00:00:00+00:00",
-   "fine": "2026-11-23T05:59:00+00:00",
-   "emesso": "2026-11-22T09:38:31+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261122103830.117"
   },
   {
    "in_corso": false,

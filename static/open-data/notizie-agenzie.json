@@ -5,16 +5,166 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-11-23T01:04:28+00:00",
+  "generato": "2026-11-23T09:08:21+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-11-22T23:30:21+00:00",
+   "data": "2026-11-23T08:57:08+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Roma, demolizione per una villa abusiva a Ostia Antica: \"È solo la prima, proseguiremo su questa strada\"",
+   "url": "https://www.adnkronos.com/cronaca/demolizione-vila-abusiva-ostia-antica_26zwNs5uuTFFe40ovbzFTy"
+  },
+  {
+   "data": "2026-11-23T08:55:39+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "L'ex capo della Polizia De Gennaro si è ucciso, sconvolto dalle indagini su Via d'Amelio",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/21/lex-capo-della-polizia-de-gennaro-si-e-ucciso-sparandosi.-la-procura-indaga-per_5bcb2e78-76a6-4c7d-b2ba-61000e349ee9.html"
+  },
+  {
+   "data": "2026-11-23T08:49:30+00:00",
    "fonte": "ANSA",
-   "titolo": "Kiev: 'Il bilancio dell'attacco russo a Dymer è salito a sei morti'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/22/nave-militare-russa-colpita-a-bengasi-sono-stati-gli-ucraini-_957fd3f3-aa7b-4ed5-b2d5-03500486cfde.html"
+   "titolo": "Zelensky rivendica gli attacchi alle navi russe in Libia: 'Operazione esemplare'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/23/zelensky-rivendica-gli-attacchi-alle-navi-russe-in-libia-operazione-esemplare_819461b5-d139-49ae-9b7d-9d179e6481b3.html"
+  },
+  {
+   "data": "2026-11-23T08:47:28+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il suicidio di De Gennaro, indirizzata al procuratore De Luca una delle buste sequestrate",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/23/il-suicidio-di-de-gennaro-indirizzata-al-procuratore-de-luca-una-delle-buste-sequestrate_0f667388-d03f-456e-a1c3-6859254e204a.html"
+  },
+  {
+   "data": "2026-11-23T08:41:32+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Noemi Bocchi: \"A una mia amica single presenterei Alessandro Matri\". E Federica Nargi replica",
+   "url": "https://www.adnkronos.com/spettacoli/noemi-bocchi-alessandro-matri-federica-nargi-ballando-con-le-stelle_7eH36clXZqAoLMMT5FGDZp"
+  },
+  {
+   "data": "2026-11-23T08:35:09+00:00",
+   "fonte": "ANSA",
+   "titolo": "Grillo show, e avvisa: 'Se il giudice dice che il Movimento è mio me lo riprendo'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/22/grillo-show-e-avvisa-se-il-giudice-dice-che-il-movimento-e-mio-me-lo-riprendo_d85903d4-9afa-4b58-b602-96ed3ea730be.html"
+  },
+  {
+   "data": "2026-11-23T08:33:35+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il Fibonacci Day, celebra il legame tra numeri e armonia",
+   "url": "https://www.ansa.it/canale_scienza/notizie/fisica_matematica/2026/11/23/e-il-fibonacci-day-celebra-il-legame-tra-numeri-e-armonia_7a86e020-ed0d-46aa-8c63-25f06fc6ecec.html"
+  },
+  {
+   "data": "2026-11-23T08:29:20+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Scandalo Nvidia, il New York Times: \"Alice Huang in contatto con servizi segreti cinesi da primavera 2025\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/nvidia-alice-huang-servizi-segreti-cinesi_6RO0EQ44wPAXWInbSSZJh"
+  },
+  {
+   "data": "2026-11-23T08:19:28+00:00",
+   "fonte": "ANSA",
+   "titolo": "'Sostanza sconosciuta' nell'aria a un concerto rap a Manchester, 12mila evacuati",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/23/sostanza-sconosciuta-nellaria-a-un-concerto-rap-a-manchester-12-mila-evacuati_1d43a3d2-fd27-4119-9aa2-0d34c00dc2b0.html"
+  },
+  {
+   "data": "2026-11-23T08:18:33+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "De Gennaro, due lettere prima del suicidio: una al procuratore di Caltanissetta, l'altra da pubblicare",
+   "url": "https://www.adnkronos.com/cronaca/caso-de-gennaro-due-lettere-prima-della-morte_Ahre52g4kIIclwFLKuVw7"
+  },
+  {
+   "data": "2026-11-23T08:05:45+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Per il forte vento crolla parte di un campanile nel Piceno",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/23/per-il-forte-vento-crolla-parte-di-un-campanile-nel-piceno_41b013eb-3b69-4b4d-aec6-b6f7134b8ad1.html"
+  },
+  {
+   "data": "2026-11-23T08:05:28+00:00",
+   "fonte": "ANSA",
+   "titolo": "Cate Blanchett inaugura le luminarie natalizie sugli Champs-Elysées",
+   "url": "https://www.ansa.it/sito/videogallery/mondo/2026/11/22/cate-blanchett-inaugura-le-luminarie-natalizie-sugli-champs-elysees_1f71993a-9f20-496b-b8e7-a5ea697394f4.html"
+  },
+  {
+   "data": "2026-11-23T08:03:58+00:00",
+   "fonte": "ANSA",
+   "titolo": "Muti e i Wiener a Roma incantano con la Messa dell'Incoronazione di Mozart",
+   "url": "https://www.ansa.it/sito/notizie/cultura/musica/2026/11/22/muti-e-i-wiener-a-roma-incantano-con-la-messa-dellincoronazione-di-mozart_6be1fb55-89f5-454b-b9c4-dfad1bed276f.html"
+  },
+  {
+   "data": "2026-11-23T07:59:31+00:00",
+   "fonte": "ANSA",
+   "titolo": "'War', Sienna Miller e Dominic West nell'industria del divorzio",
+   "url": "https://www.ansa.it/sito/notizie/cultura/tv/2026/11/22/war-sienna-miller-e-dominic-west-nellindustria-del-divorzio_0b4bb9a2-114e-4332-aaf0-3193688185fc.html"
+  },
+  {
+   "data": "2026-11-23T07:51:07+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Meteo, nuova perturbazione da mercoledì: tornano piogge e neve anche a bassa quota",
+   "url": "https://www.adnkronos.com/cronaca/meteo-maltempo-previsioni-neve-pioggia_545qhszwAI1tUhmuhp1gb9"
+  },
+  {
+   "data": "2026-11-23T07:48:30+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Il legale di Contorno: 'Non parla da anni, ma quali pressioni da De Gennaro'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/23/il-legale-di-contorno-non-parla-da-anni-ma-quali-pressioni-da-de-gennaro_02ed0112-85a3-4c06-9530-cc73f80d84ed.html"
+  },
+  {
+   "data": "2026-11-23T07:41:48+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Ladri di auto di lusso arrestati a Milano, avevano un 'laboratorio' hi-tech",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/23/ladri-di-auto-di-lusso-arrestati-a-milano-avevano-un-laboratorio-hi-tech_a9660854-924d-4d0a-bd55-a3c908e50bbb.html"
+  },
+  {
+   "data": "2026-11-23T07:03:10+00:00",
+   "fonte": "ANSA",
+   "titolo": "PRIME PAGINE | I telefoni e gli appunti, i pm sulle tracce lasciate da De Gennaro",
+   "url": "https://www.ansa.it/sito/podcast/ansa_voice_daily/2026/11/23/prime-pagine-i-telefoni-e-gli-appunti-i-pm-sulle-tracce-lasciate-da-de-gennaro_eb33cfdd-397f-412f-a7df-4d41bbbc99fa.html"
+  },
+  {
+   "data": "2026-11-23T07:03:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina, Zelensky conferma raid in Libia contro navi russe. Tajani: \"Preoccupa esplosione a pochi chilometri da Italia\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/guerra-ucraina-russia-news-oggi-23-novembre-2026_2bbFB620h5TWkZZR3U7UGD"
+  },
+  {
+   "data": "2026-11-23T06:52:36+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Usura ed estorsione col metodo mafioso, 22 arresti nel Foggiano",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/23/usura-ed-estorsione-col-metodo-mafioso-22-arresti-nel-foggiano_a9dfcd25-5592-4775-88dd-0024577e45b5.html"
+  },
+  {
+   "data": "2026-11-23T06:46:54+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "I telefoni e gli appunti, i pm sulle tracce lasciate da De Gennaro",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/22/i-telefoni-e-gli-appunti-i-pm-sulle-tracce-lasciate-da-de-gennaro_385903ab-9075-4aaf-9711-57a1ec55cf07.html"
+  },
+  {
+   "data": "2026-11-23T06:34:06+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "I misteri degli hard disk sequestrati a De Gennaro, l'inchiesta di Caltanissetta va avanti",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/22/i-misteri-degli-hard-disk-sequestrati-a-de-gennaro-linchiesta-di-caltanissetta-va-avanti_52566da5-9294-4742-9faa-7ef371b1a12d.html"
+  },
+  {
+   "data": "2026-11-23T06:32:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Paura durante concerto a Manchester, sostanza misteriosa tra la folla: evacuati 12mila spettatori",
+   "url": "https://www.adnkronos.com/internazionale/esteri/concerto-manchester-sostanza-misteriosa_3sMh7p34atb4Q9MCbJN0D1"
+  },
+  {
+   "data": "2026-11-23T06:30:02+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il Nyt: 'Alice Huang contattava gli 007 cinesi durante la relazione il ceo di Nvidia'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/nordamerica/2026/11/23/nyt-alice-huang-contattava-gli-007-cinesi-durante-la-relazione-con_3b65cbb9-4e5d-4d2f-a3f3-a500f378a2e0.html"
+  },
+  {
+   "data": "2026-11-23T06:08:12+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Perché il nostro corpo accumula grasso proprio sui glutei?",
+   "url": "https://www.adnkronos.com/salute/grasso-sui-glutei-perche-la-spiegazione_4WU9iRIqsXM3obRrJWoxCM"
+  },
+  {
+   "data": "2026-11-23T05:56:29+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Serie A, oggi Monza-Fiorentina: orario, probabili formazioni e dove vederla in tv",
+   "url": "https://www.adnkronos.com/sport/monza-fiorentina-oggi-serie-a-orario-dove-vederla-tv-probabili-formazioni_47Vg4KmJoz0FA6AAXwkVtK"
   },
   {
    "data": "2026-11-22T22:40:46+00:00",
@@ -29,7 +179,7 @@
    "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/22/allinter-non-basta-la-tripletta-di-esposito-con-latalanta-finisce-4-4_33021a11-0a66-40a8-a1e9-6b52d22307f0.html"
   },
   {
-   "data": "2026-11-22T22:10:22+00:00",
+   "data": "2026-11-22T22:10:00+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Petrolio, gas e carbone dividono il mondo: alla Cop31 manca l'accordo, l'Europa boccia il testo finale",
    "url": "https://www.adnkronos.com/internazionale/esteri/cop31-fallita-combustibili-fossili-news_6ncFVaAdEz2QKJJuRr2wHK"
@@ -39,156 +189,6 @@
    "fonte": "ADNKRONOS",
    "titolo": "Manovra, FdI propone spray colorati per i violenti ai cortei. Avs insorge: \"Come il Cile di Pinochet\"",
    "url": "https://www.adnkronos.com/economia/manovra-fdi-spray-colorati-manifestanti-marchiati-polemica-opposizioni_5Lmx7blbxoCzVrpbRNznle"
-  },
-  {
-   "data": "2026-11-22T21:30:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Zappacosta 'para' su Thuram, poi mano di Bastoni: due rigori in Atalanta-Inter",
-   "url": "https://www.adnkronos.com/sport/zappacosta-thuram-rigore-proteste-atalanta-inter-cose-successo_2RwRnGvIUOdmARGsLKc0XK"
-  },
-  {
-   "data": "2026-11-22T21:22:57+00:00",
-   "fonte": "ANSA",
-   "titolo": "Alcaraz si laurea 'maestro', vince le sue prime Atp Finals",
-   "url": "https://www.ansa.it/sito/notizie/sport/tennis/speciali/atp_finals_2026/2026/11/22/atp-finals-alcaraz-batte-zverev-e-conquista-il-suo-primo-titolo-del_edfb3ff5-f27f-4b0d-9e7e-6c8409ae4446.html"
-  },
-  {
-   "data": "2026-11-22T21:13:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Alcaraz, trionfo alle Atp Finals e sfida all'Italia per la Davis: \"Darò il massimo\"",
-   "url": "https://www.adnkronos.com/sport/alcaraz-atp-finals-coppa-davis-sfida-italia-zverev_3tg3gLt5UazfO5LUsErJMs"
-  },
-  {
-   "data": "2026-11-22T20:54:01+00:00",
-   "fonte": "ANSA",
-   "titolo": "Grillo show, e avvisa: 'Se il giudice dice che il Movimento è mio me lo riprendo'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/22/grillo-show-e-avvisa-se-il-giudice-dice-che-il-movimento-e-mio-me-lo-riprendo_d85903d4-9afa-4b58-b602-96ed3ea730be.html"
-  },
-  {
-   "data": "2026-11-22T20:50:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Grillo: \"Se il giudice mi dà ragione, mi riprendo il M5S. Solo io posso cambiare l'Italia\"",
-   "url": "https://www.adnkronos.com/politica/beppe-grillo-che-tempo-che-fa-intervista_7uaCtsj9AgTVtN4LIQEZkc"
-  },
-  {
-   "data": "2026-11-22T20:36:19+00:00",
-   "fonte": "ANSA",
-   "titolo": "Trump apre ai democratici, pronto a collaborare col nuovo Congresso",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/22/trump-apre-ai-democratici-pronto-a-collaborare-col-nuovo-congresso_a7791188-3388-4e6f-bf39-202dd6c2e6a9.html"
-  },
-  {
-   "data": "2026-11-22T20:25:48+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Vento a 100 km orari spazza l'isola di Gorgona e la costa toscana",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/22/vento-a-100-km-orari-spazza-lisola-di-gorgona-e-la-costa-toscana_617d9a5b-96ad-4b7a-a50b-dbbb365f63a5.html"
-  },
-  {
-   "data": "2026-11-22T20:24:51+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Inter, si ferma Calhanoglu: infortunio contro l'Atalanta",
-   "url": "https://www.adnkronos.com/sport/infortunio-calhanoglu-atalanta-inter-come-sta-quando-torna_5iPzhItlDOCbi4xOShn4uI"
-  },
-  {
-   "data": "2026-11-22T20:18:06+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Siria, esplode una mina a Idlib: 5 bambini morti e uno ferito",
-   "url": "https://www.adnkronos.com/internazionale/esteri/siria-esplosione-mina-idlib-cinque-bambini-morti_1KOTVwjg7sgJL52mapUHXi"
-  },
-  {
-   "data": "2026-11-22T20:17:21+00:00",
-   "fonte": "ANSA",
-   "titolo": "I telefoni e gli appunti, i pm sulle tracce lasciate da De Gennaro",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/22/i-telefoni-e-gli-appunti-i-pm-sulle-tracce-lasciate-da-de-gennaro_385903ab-9075-4aaf-9711-57a1ec55cf07.html"
-  },
-  {
-   "data": "2026-11-22T20:04:35+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Torino si inchina ad Alcaraz: l'omaggio dopo il trionfo alle Atp Finals",
-   "url": "https://www.adnkronos.com/sport/torino-omaggio-alcaraz-atp-finals-mole-antonelliana-foto_AtQGWoX46hZdkD9xbwLNK"
-  },
-  {
-   "data": "2026-11-22T19:53:57+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Patrimoniale, scontro Tajani-Schlein: botta e risposta sulle tasse e sul summit di Parigi",
-   "url": "https://www.adnkronos.com/politica/patrimoniale-scontro-tajani-schlein-tasse-summit-parigi_14soFXa3cTLafxQUavV98s"
-  },
-  {
-   "data": "2026-11-22T19:47:14+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "#AccadeOggi",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/20/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
-  },
-  {
-   "data": "2026-11-22T19:43:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Atalanta, infortunio nel riscaldamento per Carnesecchi: al suo posto c'è Sportiello",
-   "url": "https://www.adnkronos.com/sport/carnesecchi-atalanta-inter-infortunio-riscaldamento-come-sta-quando-torna_3nfSxVOu3nYpoDyJ0ZYkHK"
-  },
-  {
-   "data": "2026-11-22T19:40:21+00:00",
-   "fonte": "ANSA",
-   "titolo": "Tornano i blitz dell'Ice, agenti mascherati seminano il terrore",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/22/tornano-i-blitz-dellice-agenti-mascherati-seminano-il-terrore-_4aac05d0-a3a8-408a-93bb-81adedbdda99.html"
-  },
-  {
-   "data": "2026-11-22T19:24:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Libia, nave da guerra russa distrutta nel porto di Bengasi: è la corvetta lanciamissili 'Merkury'",
-   "url": "https://www.adnkronos.com/internazionale/esteri/bengasi-esplosione-nave-russa-corvetta-merkury-attacco_42Qpcvj6I4XtMJkoCUCbyw"
-  },
-  {
-   "data": "2026-11-22T18:57:41+00:00",
-   "fonte": "ANSA",
-   "titolo": "Roma segreta, un Atlante svela luoghi nascosti da folle e cliché",
-   "url": "https://www.ansa.it/canale_viaggi/regione/lazio/2026/11/22/roma-segreta-un-atlante-svela-luoghi-nascosti-da-folle-e-cliche_0f1c2974-ef33-4236-9635-4ca556f65834.html"
-  },
-  {
-   "data": "2026-11-22T18:48:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Atalanta-Inter 4-4, Sarri ferma Chivu in rimonta e nerazzurri a -3 dalla Lazio",
-   "url": "https://www.adnkronos.com/sport/diretta-atalanta-inter-oggi-serie-a-risultato-live_46d51ErrcRcyHs3bf54Wne"
-  },
-  {
-   "data": "2026-11-22T18:45:15+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il padre di Augusto De Megni: 'De Gennaro ti dava fiducia anche con il non dire'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/22/il-padre-di-augusto-de-megni-de-gennaro-ti-dava-fiducia-anche-con-il-non-dire_eedeeec8-3372-4ace-8564-dd8bb948f06e.html"
-  },
-  {
-   "data": "2026-11-22T18:36:14+00:00",
-   "fonte": "ANSA",
-   "titolo": "Freddie Mercury, 35 anni fa l'annuncio choc: \"Ho l'Aids\". Due giorni dopo la morte della leggenda dei Queen",
-   "url": "https://www.ansa.it/sito/notizie/cultura/2026/11/22/freddie-mercury-35-anni-fa-lannuncio-dellaids-e-due-giorni-dopo-la-morte-della_3e295cca-c71b-430b-ab10-447cc6619701.html"
-  },
-  {
-   "data": "2026-11-22T18:35:16+00:00",
-   "fonte": "ANSA",
-   "titolo": "Niente accordo sui combustibili fossili, fallisce la Cop31",
-   "url": "https://www.ansa.it/ansa2030/notizie/energia_energie/2026/11/22/niente-accordo-sui-combustibili-fossili-fallisce-la-cop31_99eaed9c-073d-431f-8e97-9ceea7a67b6c.html"
-  },
-  {
-   "data": "2026-11-22T18:32:42+00:00",
-   "fonte": "ANSA",
-   "titolo": "Condannato per stupro, Portanova in campo contro la violenza",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/22/condannato-per-stupro-portanova-in-campo-contro-la-violenza_19f9ebbb-5528-43cc-8410-14a34658e0f1.html"
-  },
-  {
-   "data": "2026-11-22T18:31:05+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Auto con quattro ragazzi si ribalta in Puglia, muore un 17enne",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/22/auto-si-ribalta-nel-nord-barese-muore-un-17enne-e-altri-tre-feriti_4fda3f06-a5f6-4d2d-865f-b80f54d3da50.html"
-  },
-  {
-   "data": "2026-11-22T18:24:52+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il piano di William, 'Harry potrebbe perdere il titolo di principe'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/22/il-piano-di-william-harry-potrebbe-perdere-il-titolo-di-principe_783c95e2-22ef-44af-8646-029e02d72d99.html"
-  },
-  {
-   "data": "2026-11-22T17:52:19+00:00",
-   "fonte": "ANSA",
-   "titolo": "Sviluppatori licenziati per l'IA 'occupano' i software, li ricreano gratis",
-   "url": "https://www.ansa.it/canale_tecnologia/notizie/tecnologia/2026/11/22/ansa-sviluppatori-licenziati-per-lia-occupano-i-software-li-ricreano-gratis_67675254-2c99-4ca0-b317-ec7b4f4dd769.html"
   }
  ]
 }
