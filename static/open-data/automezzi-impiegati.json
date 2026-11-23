@@ -4,11 +4,11 @@
   "licenza": "CC BY 4.0",
   "periodo": {
     "dal": "2026-04-04",
-    "al": "2026-11-18",
-    "ultimo_numero": "236/2026"
+    "al": "2026-11-21",
+    "ultimo_numero": "239/2026"
   },
   "nota": "Dati PROVVISORI: censiti solo dall'adozione del nuovo gestionale, non coprono l'intero anno (mancano i mesi precedenti). Aggregati e anonimi, senza dati personali.",
-  "generato_il": "2026-11-19",
+  "generato_il": "2026-11-23",
   "dati": [
     {
       "automezzo": "AB01 Atego (Mezzo speciale)",
@@ -24,11 +24,11 @@
     },
     {
       "automezzo": "M05 Doblò (Autovettura)",
-      "interventi": 54
+      "interventi": 55
     },
     {
       "automezzo": "PA01 Cestello (Mezzo speciale)",
-      "interventi": 12
+      "interventi": 13
     },
     {
       "automezzo": "AB02 Actros (Autobotte)",

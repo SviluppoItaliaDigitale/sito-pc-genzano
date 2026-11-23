@@ -4,17 +4,17 @@
   "licenza": "CC BY 4.0",
   "periodo": {
     "dal": "2026-04-04",
-    "al": "2026-11-18",
-    "ultimo_numero": "236/2026"
+    "al": "2026-11-21",
+    "ultimo_numero": "239/2026"
   },
   "nota": "Dati PROVVISORI: censiti solo dall'adozione del nuovo gestionale, non coprono l'intero anno (mancano i mesi precedenti). Aggregati e anonimi, senza dati personali.",
-  "generato_il": "2026-11-19",
+  "generato_il": "2026-11-23",
   "dati": {
-    "Periodo (provvisorio)": "dal 4 aprile 2026 al 18 novembre 2026",
-    "Interventi registrati": 235,
-    "Interventi con automezzo": 184,
+    "Periodo (provvisorio)": "dal 4 aprile 2026 al 21 novembre 2026",
+    "Interventi registrati": 238,
+    "Interventi con automezzo": 186,
     "Automezzi impiegati (distinti)": 9,
-    "Ore di intervento totali": 688.3,
-    "Chilometri percorsi totali": 11404
+    "Ore di intervento totali": 692.6,
+    "Chilometri percorsi totali": 11424
   }
 }

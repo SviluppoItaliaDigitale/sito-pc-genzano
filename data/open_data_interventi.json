@@ -1,7 +1,7 @@
 {
  "titolo": "Interventi del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma",
  "fonte": "Registro interventi del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma, dati aggregati e anonimi",
- "aggiornato": "2026-11-18",
+ "aggiornato": "2026-11-21",
  "testi": {
   "tutto": "tutto il periodo",
   "rivivi": "Rivivi l'attività del Gruppo giorno per giorno"
@@ -1151,6 +1151,21 @@
    "d": "2026-11-18",
    "n": 1,
    "ore": 0.7
+  },
+  {
+   "d": "2026-11-19",
+   "n": 0,
+   "ore": 0.0
+  },
+  {
+   "d": "2026-11-20",
+   "n": 2,
+   "ore": 3.3
+  },
+  {
+   "d": "2026-11-21",
+   "n": 1,
+   "ore": 1.1
   }
  ],
  "serie": {
@@ -1163,7 +1178,7 @@
     "Agosto",
     "Settembre",
     "Ottobre",
-    "Novembre (fino al 18)"
+    "Novembre (fino al 21)"
    ],
    "chiavi": [
     "2026-04",
@@ -1188,7 +1203,7 @@
       52,
       46,
       48,
-      15
+      18
      ]
     },
     {
@@ -1203,7 +1218,7 @@
       227.2,
       133.6,
       94.9,
-      32.4
+      36.8
      ]
     },
     {
@@ -1218,7 +1233,7 @@
       1495,
       977,
       355,
-      151
+      163
      ]
     }
    ]
@@ -1248,8 +1263,8 @@
      "unita1": "intervento",
      "valori": [
       87,
-      67,
-      21,
+      69,
+      22,
       16,
       13,
       11,
@@ -1387,8 +1402,8 @@
     ],
     "2026-11": [
      0,
-     10,
-     2,
+     12,
+     3,
      2,
      0,
      0,
@@ -1420,9 +1435,9 @@
      "unita1": "intervento",
      "valori": [
       76,
-      22,
-      46,
-      54,
+      23,
+      47,
+      55,
       26,
       11
      ]
@@ -1487,9 +1502,9 @@
     ],
     "2026-11": [
      3,
-     1,
-     1,
-     8,
+     2,
+     2,
+     9,
      1,
      1
     ]
@@ -1516,8 +1531,8 @@
       72,
       66,
       64,
-      54,
-      12,
+      55,
+      13,
       11,
       6,
       4,
@@ -1607,8 +1622,8 @@
      1,
      8,
      0,
-     5,
-     3,
+     6,
+     4,
      0,
      2,
      0,
