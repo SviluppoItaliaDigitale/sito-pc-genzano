@@ -298,7 +298,9 @@
     document.getElementById('start').addEventListener('click', start);
     document.getElementById('restart').addEventListener('click', start);
     document.getElementById('ascolta').addEventListener('click', function(){
-      if (queue[idx]) queue[idx].play();
+      if (!queue[idx]) return;
+      if (window.AudioSintetico && window.AudioSintetico.ferma) window.AudioSintetico.ferma();
+      queue[idx].play();
     });
   })();
   </script>

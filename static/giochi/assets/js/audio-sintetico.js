@@ -55,6 +55,17 @@
 
   function getVolume() { return masterVolume; }
 
+  // Suoni programmati e non ancora finiti: ferma() li interrompe tutti, così una
+  // sirena lunga non continua sopra la domanda successiva.
+  var programmati = [];
+  function traccia(nodo) {
+    programmati.push(nodo);
+    nodo.onended = function () {
+      var i = programmati.indexOf(nodo);
+      if (i !== -1) programmati.splice(i, 1);
+    };
+  }
+
   // Primitiva: tono con inviluppo ADSR
   function tono(opts) {
     if (!init()) return;
@@ -77,6 +88,7 @@
       osc.connect(g); g.connect(ctx.destination);
       osc.start(t0);
       osc.stop(t0 + durata + 0.02);
+      traccia(osc);
     } catch (e) { /* noop */ }
   }
 
@@ -110,23 +122,34 @@
       g.connect(ctx.destination);
       src.start(t0);
       src.stop(t0 + durata + 0.05);
+      traccia(src);
     } catch (e) { /* noop */ }
   }
 
   // Registrazioni vere (MP3 in /giochi/assets/audio/, licenze nella pagina del gioco).
   // Se il browser non riesce a riprodurle, suona `riserva` (il suono sintetico).
   var audioInCorso = null;
+  var turno = 0; // cresce a ogni ferma(): i callback di una riproduzione annullata non valgono più
   function ferma() {
+    turno++;
     if (audioInCorso) {
       try { audioInCorso.pause(); } catch (e) { /* noop */ }
       audioInCorso = null;
+    }
+    var nodi = programmati;
+    programmati = [];
+    for (var i = 0; i < nodi.length; i++) {
+      try { nodi[i].onended = null; nodi[i].stop(0); } catch (e) { /* già finito */ }
     }
   }
   function registrazione(nome, riserva) {
     init();
     ferma();
     var usataRiserva = false;
-    function usaRiserva() {
+    var mio = turno;
+    function usaRiserva(err) {
+      // Riproduzione fermata da noi (risposta data, nuovo ascolto): nessuna riserva.
+      if (mio !== turno || (err && err.name === 'AbortError')) return;
       if (usataRiserva) return;
       usataRiserva = true;
       if (typeof riserva === 'function') riserva();
