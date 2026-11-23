@@ -57,27 +57,7 @@
     <p><a class="btn btn-primary btn-lg" data-s3d="scarica" href="#" download><i class="bi bi-download me-1" aria-hidden="true"></i> Scarica il file <span data-s3d="file"></span></a></p>
     <p>Il file si salva nella cartella «Download» del telefono o del computer. Ti serve nel passo 3.</p>
 
-    <h4 class="s3d-passo"><span class="s3d-num" aria-hidden="true">3</span> Ordina la stampa online</h4>
-    <p><a class="btn btn-outline-primary btn-lg" href="{{ $d.servizio.indirizzo }}" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right me-1" aria-hidden="true"></i> Apri {{ $d.servizio.nome }}<span class="visually-hidden"> (si apre in una nuova scheda)</span></a></p>
-    <ol class="s3d-elenco">
-      <li>{{ $d.servizio.nome }} si apre in una nuova scheda. Il sito è in inglese: se vuoi, usa la funzione «Traduci» del browser.</li>
-      <li>Carica il file <strong data-s3d="file"></strong>: trascinalo nel riquadro di caricamento oppure premi il pulsante per sceglierlo e cercalo nella cartella «Download».</li>
-      <li>Se il sito chiede l'unità di misura, scegli <strong>millimetri (mm)</strong>. Controlla che la lunghezza indicata sia di <strong>{{ $o.lunghezza_mm }} mm</strong>: se il numero è diverso, l'unità è sbagliata.</li>
-      <li>Come materiale scegli <strong>{{ $o.materiale }}</strong>, più resistente della plastica normale, e come colore <strong>{{ $o.colore }}</strong>. Se il sito chiede il riempimento («infill»), scegli il 100%: l'oggetto è piccolo e così diventa pieno e robusto. Lascia 1 come quantità.</li>
-      <li>Scegli l'offerta che preferisci per prezzo e tempi di consegna, scrivi il tuo indirizzo e paga. I metodi di pagamento dipendono dal paese e di solito comprendono carta e PayPal.</li>
-    </ol>
-
-    <h4 class="s3d-passo"><span class="s3d-num" aria-hidden="true">4</span> Montala quando arriva</h4>
-    <p>Ti servono:</p>
-    <ul>{{ range $o.occorrente }}<li>{{ . }}.</li>{{ end }}</ul>
-    <ol class="s3d-elenco">{{ range $o.montaggio }}<li>{{ . }}</li>{{ end }}</ol>
-    {{- with $o.retro }}
-    <figure class="s3d-retro">
-      <img src="{{ printf "stampa-3d/nominativi/%s/retro.webp" $o.id | relURL }}" alt="{{ . }}" loading="lazy">
-      <figcaption>{{ $o.didascalia_retro }}</figcaption>
-    </figure>
-    {{- end }}
-    {{ with $o.colorare }}<p>{{ . }}</p>{{ end }}
+    {{ partial "stampa3d-istruzioni.html" (dict "o" $o "d" $d "statico" false) }}
   </section>
   {{- end }}
   <p><button type="button" class="btn btn-outline-secondary" id="s3d-altro"><i class="bi bi-arrow-up me-1" aria-hidden="true"></i> Cerca un altro numero</button></p>
@@ -97,5 +77,14 @@
   {{- end }}
 </details>
 
-<noscript><p>Per la ricerca e la vista in 3D serve JavaScript attivo. Puoi comunque scaricare il tuo file dall'elenco qui sopra e seguire i passi di questa pagina.</p></noscript>
+<noscript>
+<p>Per la ricerca e la vista in 3D serve JavaScript attivo. Puoi comunque scaricare il tuo file dall'elenco qui sopra e seguire questi passi.</p>
+{{- range $d.oggetti }}
+<section class="s3d-oggetto">
+  <h3>{{ .nome }}</h3>
+  <p>{{ .descrizione }} Misura {{ .misure }} e pesa circa {{ .peso_g }} grammi.</p>
+  {{ partial "stampa3d-istruzioni.html" (dict "o" . "d" $d "statico" true) }}
+</section>
+{{- end }}
+</noscript>
 <script type="module" src="{{ "js/stampa3d-nominativo.js" | relURL }}?v={{ $vj }}"></script>
