@@ -148,7 +148,7 @@ Tre famiglie distinte: CLP per le sostanze chimiche (diamante bianco/rosso), ADR
 
 Sei al COC: allestisci un'area di accoglienza con budget limitato. **[Apri la scheda →](/catalogo-giochi/codice-arancione/)** · [Gioca subito →](/giochi/ragazzi/codice-arancione/)
 
-### [Emergency Responder](/catalogo-giochi/emergency-responder/)
+### [Soccorritore in emergenza](/catalogo-giochi/emergency-responder/)
 
 In emergenza pensi prima alle persone in pericolo, poi alla logistica. **[Apri la scheda →](/catalogo-giochi/emergency-responder/)** · [Gioca subito →](/giochi/ragazzi/emergency-responder/)
 

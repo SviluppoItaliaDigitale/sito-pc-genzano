@@ -132,6 +132,7 @@
 
   <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
   <script src="/app-shared/site-chrome.js"></script>
+  <script src="/giochi/infanzia/assets/infanzia.js"></script>
   <script src="/giochi/assets/js/progressione.js"></script>
   <script src="/giochi/assets/js/attestato.js"></script>
   <script src="/giochi/assets/js/audio-sintetico.js"></script>
@@ -229,7 +230,7 @@
           perEl.textContent = '💡 ' + c.perche;
           perEl.classList.remove('hide');
           // Sul telefono la spiegazione cade sotto le scelte: la si porta in vista.
-          if (perEl.scrollIntoView && perEl.getBoundingClientRect().bottom > window.innerHeight) { perEl.scrollIntoView({ block: 'nearest' }); }
+          if (window.InfInVista) window.InfInVista(perEl);
         }
         first = null;
         if (matched === iconeLivello.length) { lock = true; setTimeout(fineLivello, 1800); }

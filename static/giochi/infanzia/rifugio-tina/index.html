@@ -125,6 +125,7 @@
 
   <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
   <script src="/app-shared/site-chrome.js"></script>
+  <script src="/giochi/infanzia/assets/infanzia.js"></script>
   <script src="/giochi/assets/js/progressione.js"></script>
   <script src="/giochi/assets/js/attestato.js"></script>
   <script src="/giochi/assets/js/audio-sintetico.js"></script>
@@ -411,6 +412,7 @@
         spot.classList.add('right-flash');
         feedback.style.color = '#0f5132';
         feedback.textContent = '✅ ' + s.tipGiusto;
+        if (window.InfInVista) window.InfInVista(feedback);
         if (window.AudioSintetico) window.AudioSintetico.dingPositivo();
         progressBolli[idx].classList.add('on');
         progressBolli[idx].innerHTML = '<i class="bi bi-check-lg"></i>';
@@ -424,6 +426,7 @@
         spot.classList.add('wrong-flash');
         feedback.style.color = '#8B1F2E';
         feedback.textContent = '🐢 ' + (s.tipSbagliato[pos] || 'Riprova!');
+        if (window.InfInVista) window.InfInVista(feedback);
         errori++;
         if (window.AudioSintetico) window.AudioSintetico.tonoNeutro();
         setTimeout(function(){ spot.classList.remove('wrong-flash'); }, 900);

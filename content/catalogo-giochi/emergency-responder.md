@@ -1,6 +1,6 @@
 ---
-title: "Gioco: Emergency Responder"
-description: "Scheda del gioco Emergency Responder (11-19 anni e oltre): in emergenza pensi prima alle persone in pericolo, poi alla logistica."
+title: "Gioco: Soccorritore in emergenza"
+description: "Scheda del gioco Soccorritore in emergenza (11-19 anni e oltre): in emergenza pensi prima alle persone in pericolo, poi alla logistica."
 image: ""
 image_alt: ""
 date: 2026-05-28
@@ -21,7 +21,7 @@ sitemap:
   changefreq: monthly
 ---
 
-**Emergency Responder** è un gioco educativo gratuito del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**, pensato per la **scuola secondaria di primo e secondo grado**. Si gioca direttamente dal browser, senza account e senza scaricare nulla.
+**Soccorritore in emergenza** è un gioco educativo gratuito del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**, pensato per la **scuola secondaria di primo e secondo grado**. Si gioca direttamente dal browser, senza account e senza scaricare nulla.
 
 ## A chi è rivolto
 
@@ -47,7 +47,7 @@ sitemap:
 
 Puoi giocare adesso, gratis e senza registrazione. Si apre in una nuova pagina dello stesso sito.
 
-{{< bottone-gioco url="/giochi/ragazzi/emergency-responder/" testo="Apri «Emergency Responder»" >}}
+{{< bottone-gioco url="/giochi/ragazzi/emergency-responder/" testo="Apri «Soccorritore in emergenza»" >}}
 
 ## Approfondisci sul sito
 

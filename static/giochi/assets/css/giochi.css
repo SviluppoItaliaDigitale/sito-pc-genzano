@@ -302,3 +302,35 @@ html.a11y-pause-animations .btn-infanzia:hover {
   justify-content: center !important;
   gap: .5rem;
 }
+
+/* ── Bordi dei comandi dopo un tocco (Bootstrap Italia) ───────────────────
+   Bootstrap Italia, quando un elemento riceve il fuoco col mouse o col dito,
+   gli mette [data-focus-mouse=true] e impone «border-color: inherit !important»
+   a lui e al <button> che lo segue: i bordi giusto/sbagliato e quelli delle
+   risposte diventavano del colore del testo (neri o blu scuro).
+   Nei giochi (tutti hanno body[data-coach-game]) il bordo torna quello
+   dichiarato dal gioco nella variabile --giochi-bordo; dove il gioco non la
+   dichiara resta il comportamento di Bootstrap Italia (inherit).
+   Uso nei giochi: accanto a ogni border-color di un comando o di uno stato,
+   scrivere anche --giochi-bordo con lo stesso colore, es.
+   .answer-btn.correct { border-color: #198754; --giochi-bordo: #198754; } */
+body[data-coach-game] [data-focus-mouse=true]:not(.btn),
+body[data-coach-game] [data-focus-mouse=true]:not(.btn) + button {
+  border-color: var(--giochi-bordo, inherit) !important;
+}
+/* stesso difetto sul <button> che precede (regola :has di Bootstrap Italia);
+   regola separata: un browser che non conosce :has la ignora senza toccare
+   quella sopra */
+body[data-coach-game] button:has(~ [data-focus-mouse=true]:not(.btn)) {
+  border-color: var(--giochi-bordo, inherit) !important;
+}
+
+/* Link con aspetto di pulsante negli indici e nei giochi: almeno 44 px per il
+   tocco sulla LIM, testo centrato in verticale ("Torna alla scelta della
+   fascia" era alto 35 px). */
+.giochi-section a.btn {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

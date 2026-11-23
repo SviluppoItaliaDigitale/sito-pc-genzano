@@ -74,6 +74,12 @@
       .mr-col-mappa .map-container { margin-bottom: 0; }
       .mr-col-controlli .zona-btn { flex: 1 1 calc(50% - .5rem); }
     }
+
+    /* bordo conservato dopo il tocco (vedi giochi.css, --giochi-bordo) */
+    .map-item { --giochi-bordo: var(--rag-blu); }
+    .map-item.used { --giochi-bordo: #6b7785; }
+    .zona-btn { --giochi-bordo: #0066cc; }
+    .zona-btn[data-zona="nessuna"] { --giochi-bordo: #d9364f; }
   </style>
 </head>
 <body class="rag-body" data-coach-game="mappa-rischio">

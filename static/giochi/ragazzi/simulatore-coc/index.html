@@ -58,6 +58,12 @@
       height: 8px; background: #e9ecef; border-radius: 999px; overflow: hidden; margin: .2rem 0 .6rem;
     }
     .kpi-bar > div { height: 100%; background: var(--rag-verde); transition: width .3s; }
+
+    /* Revisione grafica: bordo delle funzioni visibile (3:1 sul bianco) e
+       bordo di stato conservato dopo il tocco (vedi giochi.css, --giochi-bordo). */
+    .funzione { border-color: #7d8ea3; --giochi-bordo: #7d8ea3; }
+    .funzione:hover, .funzione:focus { --giochi-bordo: var(--rag-blu); }
+    .funzione.selected { --giochi-bordo: var(--rag-blu); }
   </style>
 </head>
 <body class="rag-body" data-coach-game="simulatore-coc">
@@ -81,7 +87,7 @@
     <div class="container py-4">
 
       <div id="intro" class="rag-panel">
-        <h2>Riunione informativa operativo</h2>
+        <h2>Riunione operativa</h2>
         <p>Sei funzionario di sala al <strong>Centro Operativo Comunale (COC)</strong> di Genzano di Roma. La Regione Lazio ha diramato un'<strong>allerta arancione</strong> per rischio idrogeologico e temporali forti.</p>
         <p>Il tuo compito: per ogni evento che arriva, assegnare la <strong>funzione di supporto</strong> giusta tra le nove del gioco, uno schema semplificato derivato dal Metodo Augustus (1997). La Direttiva PCM 30 aprile 2021 ne elenca sedici e ogni Comune sceglie nel Piano quali attivare. Hai 8 eventi da gestire, estratti a sorte a ogni partita.</p>
         <details class="mb-3">

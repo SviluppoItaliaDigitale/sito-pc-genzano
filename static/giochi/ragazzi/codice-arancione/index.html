@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Codice Arancione — Giochi Ragazzi</title>
   <link rel="canonical" href="https://www.protezionecivilegenzano.it/giochi/ragazzi/codice-arancione/">
-  <meta name="description" content="Allestisci un'area di accoglienza per 200 sfollati rispettando i vincoli logistici e di sicurezza.">
+  <meta name="description" content="Allestisci un'area di accoglienza per gli sfollati rispettando i vincoli logistici e di sicurezza.">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
@@ -72,6 +72,11 @@
     @media (prefers-reduced-motion: reduce) {
       .scenario-icon { transition: none; }
     }
+
+    /* Revisione grafica: bordo delle risorse visibile (3:1 sul bianco) e
+       bordo di stato conservato dopo il tocco (vedi giochi.css, --giochi-bordo). */
+    .risorsa { border-color: #7d8ea3; --giochi-bordo: #7d8ea3; }
+    .risorsa:hover, .risorsa.attiva { --giochi-bordo: var(--rag-blu); }
   </style>
 </head>
 <body class="rag-body" data-coach-game="codice-arancione">
@@ -88,7 +93,7 @@
           </ol>
         </nav>
         <h1>Codice Arancione</h1>
-        <p class="lead">Allestisci un'area di accoglienza per 200 sfollati rispettando i vincoli.</p>
+        <p class="lead">Allestisci un'area di accoglienza per gli sfollati rispettando i vincoli.</p>
       </div>
     </div>
 

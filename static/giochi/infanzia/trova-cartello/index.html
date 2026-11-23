@@ -180,6 +180,7 @@
 
   <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
   <script src="/app-shared/site-chrome.js"></script>
+  <script src="/giochi/infanzia/assets/infanzia.js"></script>
   <script src="/giochi/assets/js/progressione.js"></script>
   <script src="/giochi/assets/js/attestato.js"></script>
   <script src="/giochi/assets/js/audio-sintetico.js"></script>
@@ -401,6 +402,7 @@
         var perche = CATALOGO[id].perche || '';
         feedbackEl.innerHTML = 'Giusto! Hai trovato ' + CATALOGO[id].nome + '.' +
           (perche ? ' <small style="display:block;margin-top:.3rem;font-weight:400;color:#0f5132;">💡 ' + perche + '</small>' : '');
+        if (window.InfInVista) window.InfInVista(feedbackEl);
         feedbackEl.style.color = '#1E6B34';
         cartelliEl.querySelectorAll('button').forEach(function (b) { b.disabled = true; if (b !== btn) b.classList.add('dim'); });
         if (window.AudioSintetico) window.AudioSintetico.dingPositivo();
@@ -415,6 +417,7 @@
         btn.classList.add('wrong');
         segnaEsito(btn, false);
         feedbackEl.textContent = 'Quasi! Riprova: cerca ' + CATALOGO[q.target].nome + '.';
+        if (window.InfInVista) window.InfInVista(feedbackEl);
         feedbackEl.style.color = '#B3261E';
         if (window.AudioSintetico) window.AudioSintetico.tonoNeutro();
         setTimeout(function () { btn.classList.remove('wrong'); togliEsito(btn); }, 900);

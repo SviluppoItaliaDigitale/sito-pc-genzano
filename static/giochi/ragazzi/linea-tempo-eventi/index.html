@@ -121,6 +121,12 @@
     @media (prefers-reduced-motion: reduce) { .evento-card { transition: none; } .evento-card:hover { transform: none; } }
     html.a11y-pause-anim .evento-card, html.a11y-pause-animations .evento-card { transition: none; }
     html.a11y-pause-anim .evento-card:hover, html.a11y-pause-animations .evento-card:hover { transform: none; }
+
+    /* bordo conservato dopo il tocco (vedi giochi.css, --giochi-bordo) */
+    .evento-card { --giochi-bordo: var(--rag-blu); }
+    .evento-card.scelta { --giochi-bordo: #8a5300; }
+    .timeline-slot { --giochi-bordo: #c7d4e3; }
+    .timeline-slot.filled { --giochi-bordo: var(--rag-blu); }
   </style>
 </head>
 <body class="rag-body" data-coach-game="linea-tempo-eventi">

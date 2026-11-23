@@ -157,6 +157,7 @@
 
   <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
   <script src="/app-shared/site-chrome.js"></script>
+  <script src="/giochi/infanzia/assets/infanzia.js"></script>
   <script src="/giochi/assets/js/audio-sintetico.js"></script>
   <script>
   (function () {
@@ -278,7 +279,7 @@
         perEl.textContent = '💡 ' + perche;
         perEl.classList.remove('hide');
         // Sul telefono la spiegazione cade sotto le scelte: la si porta in vista.
-        if (perEl.scrollIntoView && perEl.getBoundingClientRect().bottom > window.innerHeight) { perEl.scrollIntoView({ block: 'nearest' }); }
+        if (window.InfInVista) window.InfInVista(perEl);
       }
       if (tipo === giusto) {
         btn.classList.add('correct');

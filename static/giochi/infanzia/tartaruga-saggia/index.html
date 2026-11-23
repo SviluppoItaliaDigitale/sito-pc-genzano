@@ -42,15 +42,28 @@
     </div>
 
     <div id="intro" class="inf-card text-center">
-      <svg viewBox="0 0 180 120" width="160" height="110" role="img" aria-label="Tina la tartaruga saluta" focusable="false">
-        <ellipse cx="90" cy="105" rx="70" ry="6" fill="rgba(0,0,0,0.08)"/>
-        <path d="M 30 85 Q 30 35 90 30 Q 150 35 150 85 Z" fill="#4E8B3E" stroke="#2F5A25" stroke-width="2"/>
-        <circle cx="90" cy="25" r="18" fill="#8ABF78" stroke="#2F5A25" stroke-width="2"/>
-        <circle cx="84" cy="23" r="2.5" fill="#17324D"/>
-        <circle cx="96" cy="23" r="2.5" fill="#17324D"/>
-        <path d="M 86 30 Q 90 34 94 30" stroke="#17324D" stroke-width="2" fill="none" stroke-linecap="round"/>
-        <path d="M 72 18 Q 90 5 108 18 L 108 22 L 72 22 Z" fill="#D9364F" stroke="#8B1F2E" stroke-width="2"/>
-      </svg>
+      <svg viewBox="0 0 200 130" width="180" height="117" role="img" aria-label="Tina la tartaruga con il casco" focusable="false">
+          <ellipse cx="104" cy="121" rx="72" ry="6" fill="rgba(0,0,0,0.08)"/>
+          <path d="M 166 98 L 184 104 L 166 108 Z" fill="#8ABF78" stroke="#2F5A25" stroke-width="2" stroke-linejoin="round"/>
+          <ellipse cx="62" cy="110" rx="14" ry="9" fill="#8ABF78" stroke="#2F5A25" stroke-width="2"/>
+          <ellipse cx="146" cy="110" rx="14" ry="9" fill="#8ABF78" stroke="#2F5A25" stroke-width="2"/>
+          <path d="M 48 92 Q 36 82 38 72" stroke="#2F5A25" stroke-width="15" stroke-linecap="round" fill="none"/>
+          <path d="M 48 92 Q 36 82 38 72" stroke="#8ABF78" stroke-width="11" stroke-linecap="round" fill="none"/>
+          <path d="M 52 102 Q 52 42 104 38 Q 158 42 158 102 Z" fill="#4E8B3E" stroke="#2F5A25" stroke-width="2.5" stroke-linejoin="round"/>
+          <g fill="#5E9C4B" stroke="#2F5A25" stroke-width="2" stroke-linejoin="round">
+            <polygon points="104,52 122,62 122,82 104,92 86,82 86,62"/>
+            <path d="M 86 62 L 66 56 M 122 62 L 142 56 M 86 82 L 62 92 M 122 82 L 146 92 M 104 52 L 104 40 M 104 92 L 104 102" fill="none"/>
+          </g>
+          <path d="M 46 100 L 164 100 Q 168 100 168 104 Q 168 108 164 108 L 46 108 Q 42 108 42 104 Q 42 100 46 100 Z" fill="#6FA35C" stroke="#2F5A25" stroke-width="2"/>
+          <circle cx="36" cy="62" r="20" fill="#8ABF78" stroke="#2F5A25" stroke-width="2.5"/>
+          <circle cx="30" cy="63" r="3" fill="#17324D"/><circle cx="31" cy="62" r="1" fill="#fff"/>
+          <circle cx="44" cy="63" r="3" fill="#17324D"/><circle cx="45" cy="62" r="1" fill="#fff"/>
+          <circle cx="25" cy="70" r="3" fill="#E89AA0" opacity=".8"/><circle cx="49" cy="70" r="3" fill="#E89AA0" opacity=".8"/>
+          <path d="M 31 71 Q 37 76 43 71" stroke="#17324D" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <path d="M 16 56 Q 16 36 36 35 Q 56 36 56 56 Z" fill="#D9364F" stroke="#8B1F2E" stroke-width="2" stroke-linejoin="round"/>
+          <rect x="12" y="54" width="48" height="5" rx="2.5" fill="#8B1F2E"/>
+          <path d="M 26 42 Q 32 38 38 39" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".6"/>
+        </svg>
       <p class="h5 text-primary">Ciao! Sono Tina. Rispondi con <strong>SÌ</strong> o <strong>NO</strong>.</p>
       <button id="start-btn" class="inf-big-btn" style="background:var(--inf-blu);">
         <i class="bi bi-play-fill" aria-hidden="true"></i> Iniziamo!
@@ -101,6 +114,7 @@
 
   <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
   <script src="/app-shared/site-chrome.js"></script>
+  <script src="/giochi/infanzia/assets/infanzia.js"></script>
   <script src="/giochi/assets/js/progressione.js"></script>
   <script src="/giochi/assets/js/attestato.js"></script>
   <script src="/giochi/assets/js/audio-sintetico.js"></script>
@@ -220,11 +234,17 @@
         starsEl.textContent = stars;
         feedback.style.color = '#0f5132';
         feedback.innerHTML = '✅ ' + s.tip;
+        if (window.InfInVista) window.InfInVista(feedback);
         if (window.AudioSintetico) window.AudioSintetico.dingPositivo();
       } else {
         btn.classList.add('wrong');
         feedback.style.color = '#8B1F2E';
-        feedback.innerHTML = '🐢 ' + s.tip;
+        // Risposta sbagliata: il consiglio comincia con «Sì!», «No!», «Giusto!»...
+        // scritti per chi ha risposto bene. Qui si dice prima la risposta giusta
+        // e si toglie quella prima parola, che altrimenti sembrerebbe una conferma.
+        feedback.innerHTML = '🐢 La risposta giusta è <strong>' + (s.si ? 'SÌ' : 'NO') + '</strong>. ' +
+          s.tip.replace(/^(Sì|No|Giusto|Esatto|Bravissimo)! */, '');
+        if (window.InfInVista) window.InfInVista(feedback);
         if (window.AudioSintetico) window.AudioSintetico.tonoNeutro();
         if (window.GameCoach && window.GameCoach.hint) {
           window.GameCoach.hint('In emergenza: stai calmo, scegli il posto più sicuro, chiedi aiuto a un adulto. Se serve, chiama il 1-1-2.', '/cosa-fare-adesso/');

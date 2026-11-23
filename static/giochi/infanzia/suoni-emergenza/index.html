@@ -44,6 +44,8 @@
     }
     .ascolta:hover { transform: translateY(-2px); }
     .wave { display:inline-block; width: 80px; }
+    /* Link dei crediti dei suoni alti almeno 44 px anche con il dito (erano 20 px). */
+    details li a, details p a { display: inline-block; padding: .7rem 0; }
     /* Tip didattico: cosa fare quando si sente quel suono. */
     .azione-tip {
       display: block;
@@ -121,6 +123,7 @@
 
   <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
   <script src="/app-shared/site-chrome.js"></script>
+  <script src="/giochi/infanzia/assets/infanzia.js"></script>
   <script src="/giochi/assets/js/progressione.js"></script>
   <script src="/giochi/assets/js/attestato.js"></script>
   <script src="/giochi/assets/js/audio-sintetico.js"></script>
@@ -277,12 +280,14 @@
         // sente quel suono. Crea il legame "suono -> reazione" (livello 2
         // implicito: non solo identifica, ma sai cosa fare).
         feedback.innerHTML = '✅ Bravo! ' + target.era + '.<br><span class="azione-tip">💡 ' + target.azione + '</span>';
+        if (window.InfInVista) window.InfInVista(feedback);
         if (window.AudioSintetico) window.AudioSintetico.dingPositivo();
         if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
       } else {
         btn.classList.add('wrong');
         feedback.style.color = '#8B1F2E';
         feedback.innerHTML = '🐢 ' + target.era + '.<br><span class="azione-tip">💡 ' + target.azione + '</span>';
+        if (window.InfInVista) window.InfInVista(feedback);
         if (window.AudioSintetico) window.AudioSintetico.tonoNeutro();
         if (window.GameCoach && window.GameCoach.hint) {
           if (target.consiglio) {

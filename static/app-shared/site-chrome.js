@@ -765,7 +765,7 @@
     var percorso = window.location.pathname.replace(/^\/sito-pc-genzano/, '');
     var dentro = false;
     for (var i = 0; i < famiglie.length; i++) { if (percorso.indexOf(famiglie[i]) === 0) dentro = true; }
-    if (!dentro || percorso.indexOf('/giochi/assets/') === 0 || document.querySelector('.lim-pronto, .scheda-lim')) return;
+    if (!dentro || percorso.indexOf('/giochi/assets/') === 0 || document.querySelector('.lim-pronto, .scheda-lim, .arena-lim')) return;
     var main = document.querySelector('main') || document.body;
     var box = document.createElement('aside');
     box.className = 'lim-pronto d-print-none';

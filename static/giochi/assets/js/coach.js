@@ -395,7 +395,7 @@
     },
     'emergency-responder': {
       fascia: 'ragazzi',
-      titolo: 'Consigli per Emergency Responder',
+      titolo: 'Consigli per Soccorritore in emergenza',
       regola: 'In emergenza pensi prima alle persone in pericolo, poi alla logistica. Le tue scelte hanno conseguenze. Al COC arriva una chiamata random a partita: famiglia inagibile, falso allarme, turista in inglese.',
       come: [
         'Sicurezza personale prima: non puoi aiutare se ti fai male.',

@@ -126,6 +126,12 @@
     @media (prefers-reduced-motion: reduce) {
       .chapter-card, .answer-btn { transition: none; }
     }
+
+    /* bordo conservato dopo il tocco (vedi giochi.css, --giochi-bordo) */
+    .answer-btn { --giochi-bordo: #cfd6df; }
+    .answer-btn.correct { --giochi-bordo: #198754; }
+    .answer-btn.wrong { --giochi-bordo: #dc3545; }
+    .chapter-card { --giochi-bordo: transparent; }
   </style>
 </head>
 <body data-coach-game="cartelli-pericolo">

@@ -53,6 +53,11 @@
     .opt-btn:disabled { cursor: default; }
     .alfabeto-table span { background: #eef4fc; border-radius: 4px; padding: .3rem .5rem; }
     .alfabeto-table span b { color: var(--rag-blu); }
+
+    /* bordo conservato dopo il tocco (vedi giochi.css, --giochi-bordo) */
+    .opt-btn { --giochi-bordo: #7d8ea3; }
+    .opt-btn.correct { --giochi-bordo: #198754; }
+    .opt-btn.wrong { --giochi-bordo: #dc3545; }
   </style>
 </head>
 <body class="rag-body" data-coach-game="radio-emergency">

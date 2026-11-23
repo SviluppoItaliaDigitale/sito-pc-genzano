@@ -131,8 +131,13 @@ body.inf-body {
 }
 
 .inf-stars {
-  font-size: 2rem;
-  letter-spacing: .3rem;
+  /* Le stelle vanno a capo: con 12 o 25 stelle la riga usciva dallo schermo
+     (pagina piu' larga di 124 px a 375 e di 104 px a 1024). */
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: .1rem .35rem;
+  max-width: 34rem; margin-left: auto; margin-right: auto;
+  font-size: clamp(1.5rem, 6vw, 2rem);
+  line-height: 1.2;
   /* Stelle spente grigio medio (3,6:1 sul bianco, prima #ddd a 1,4:1); quelle
      accese gialle con il bordo bruno, che le stacca dal bianco (WCAG 1.4.11). */
   color: #7d8894;
@@ -179,10 +184,6 @@ body.inf-body {
 .inf-esito.no::before { content: "\2717"; }
 .inf-esito { font-size: 0; }
 .inf-esito::before { font-size: 1.6rem; }
-
-/* La spiegazione che compare dopo la risposta resta sopra la barra in basso
-   e sopra il pulsante SOS 112 del telefono quando la pagina la porta in vista. */
-.tina-perche { scroll-margin-bottom: 150px; }
 
 /* Riga di attribuzione dei pittogrammi ARASAAC: leggibile e con il link alto 44 px. */
 .inf-attribuzione { text-align: center; font-size: .85rem; color: #3d4752; margin: 1.5rem 0 0; }
