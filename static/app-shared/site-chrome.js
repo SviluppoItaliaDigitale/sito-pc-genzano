@@ -584,6 +584,7 @@
     var marker = document.querySelector(
       '#intro, #intro-screen, #game, #game-screen, #end, #end-screen, ' +
       '#select-screen, #game-card, #scenario-box, .gioco-fine, ' +
+      '#start-screen, #quiz-screen, #results-screen, .gsp, ' +
       '.scena-corrente, [data-gioco], .game-container'
     );
     if (!marker) return;
@@ -645,7 +646,9 @@
     }
     var comandi = document.createElement('div');
     comandi.id = 'gioco-comandi';
-    var schermo = pulsanteSchermoIntero();
+    // Un gioco con il suo «Schermo intero» (Genzano si prepara: porta a tutto schermo
+    // solo la mappa) non ne riceve un secondo nella barra.
+    var schermo = document.querySelector('#gsp-schermo, [data-schermo-intero-proprio]') ? null : pulsanteSchermoIntero();
     if (schermo) comandi.appendChild(schermo);
     comandi.appendChild(esci);
 
