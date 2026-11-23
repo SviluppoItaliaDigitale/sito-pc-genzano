@@ -103,7 +103,7 @@
       titolo: 'Consigli per i Suoni dell\'Emergenza',
       regola: 'Ogni emergenza ha il suo suono. Imparalo!',
       come: [
-        'La sirena dell\'ambulanza ha tre toni.',
+        'La sirena di ambulanza e pompieri ha due note, una bassa e l\'altra alta.',
         'Il tuono fa "boom" dopo il fulmine.',
         'L\'allarme della scuola dice di uscire in ordine.',
         'Con IT-alert il telefono fa un suono speciale: chiama subito un adulto.'

@@ -544,7 +544,10 @@ table tr:hover { background: #e8f4fd; }
     right: 1.5rem;
   }
 }
-.back-to-top.visible { opacity: 1; visibility: visible; }
+/* Bootstrap Italia rimpicciolisce .back-to-top al 70% (lo riporta a grandezza
+   solo con la sua classe .back-to-top-show, che il sito non usa): nelle pagine
+   statiche il pulsante usciva di 31 px, sotto i 44 richiesti sulla LIM. */
+.back-to-top.visible { opacity: 1; visibility: visible; transform: none; }
 .back-to-top:hover { background: var(--pc-secondary); transform: translateY(-3px); border-color: #ffbe2e; box-shadow: 0 6px 20px rgba(255, 102, 0, 0.6), 0 0 0 2px rgba(255,255,255,0.1) inset; }
 
 /* ── ANIMATIONS ── */
@@ -8598,6 +8601,13 @@ html.a11y-contrast-invert .gi-play, html.a11y-contrast-yellow-black .gi-play { b
 .lim-pronto a { color: #003366; font-weight: 600; text-decoration: underline; display: inline-flex; align-items: center; min-height: 44px; }
 .lim-pronto a:focus { outline: 3px solid #ffbe2e; outline-offset: 2px; }
 @media print { .lim-pronto { display: none !important; } }
+/* Nei giochi (barra del gioco, 23/11/2026) il riquadro resta ma in una riga
+   compatta, per lasciare l'altezza della LIM al gioco; il link «Torna ai giochi»
+   in cima ai giochi dell'infanzia è già «Torna al menu» della barra. */
+body.con-barra-gioco .lim-pronto { align-items: center; padding: 0.3rem 0.85rem; margin-bottom: 0.75rem;
+  font-size: 0.875rem; line-height: 1.4; text-align: left; }
+body.con-barra-gioco .lim-pronto-icona { font-size: 1.15rem; margin-top: 0; }
+body.con-barra-gioco .inf-main > nav[aria-label="Percorso"] { display: none; }
 
 /* ==========================================================================
    ILLUSTRAZIONI ANIMATE v1.0 (shortcode illustrazione-udl con «animazione»)

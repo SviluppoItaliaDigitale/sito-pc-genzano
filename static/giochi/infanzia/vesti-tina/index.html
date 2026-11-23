@@ -267,9 +267,13 @@
       });
     }
 
+    var inPassaggio = false; // dopo la risposta giusta: un secondo tocco non salta il turno
     function scegli(btn, it, r){
+      if (inPassaggio) return;
       if (window.AudioSintetico) window.AudioSintetico.init();
       if (it.ok){
+        inPassaggio = true;
+        grid.querySelectorAll('.oggetto-btn').forEach(function(b){ b.disabled = true; });
         btn.classList.add('giusto');
         feedback.style.color = '#0f5132';
         feedback.textContent = '✅ ' + r.tip;
@@ -277,6 +281,7 @@
         progressBolli[idx].classList.add('on');
         progressBolli[idx].innerHTML = '<i class="bi bi-check-lg"></i>';
         setTimeout(function(){
+          inPassaggio = false;
           idx++;
           if (idx >= ROUNDS.length) fineLivello();
           else mostraRound();
@@ -321,12 +326,14 @@
     }
 
     document.getElementById('next-level').addEventListener('click', function(){
+      // Doppio tocco: senza questo controllo il gioco cercava un livello inesistente.
+      if (levelUp.classList.contains('hide') || livello >= LIVELLI.length - 1) return;
       livello++;
       avviaLivello();
     });
 
     document.getElementById('restart').addEventListener('click', function(){
-      livello = 0; errori = 0;
+      livello = 0; errori = 0; inPassaggio = false;
       avviaLivello();
     });
 

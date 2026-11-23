@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>I Suoni dell'Emergenza — Giochi Piccoli Esploratori</title>
   <link rel="canonical" href="https://www.protezionecivilegenzano.it/giochi/infanzia/suoni-emergenza/">
-  <meta name="description" content="Riconosci 12 suoni dell'emergenza: ambulanza, pompieri, polizia, tuono, allarme, IT-alert, vento e altri. Gioco audio per bambini dai 3 ai 6 anni.">
+  <meta name="description" content="Riconosci 12 suoni dell'emergenza: sirena di ambulanza e pompieri, polizia, tuono, allarme, rilevatore di fumo, IT-alert, vento e altri. Gioco audio per bambini dai 3 ai 6 anni.">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
@@ -67,7 +67,7 @@
     </div>
 
     <div id="intro" class="inf-card text-center">
-      <p class="h5">Ascolterai 12 suoni dell'emergenza: ambulanza, pompieri, polizia, tuono, allarme, IT-alert, campanello, pioggia, vento, radio PC, allarme casa, cane. Il suono di IT-alert è solo un esempio: quello vero del telefono è diverso.</p>
+      <p class="h5">Ascolterai 12 suoni dell'emergenza: sirena di ambulanza e pompieri, polizia, tuono, allarme della scuola, IT-alert, campanello, pioggia, vento, radio PC, allarme di casa, rilevatore di fumo, cane. Il suono di IT-alert è solo un esempio: quello vero del telefono è diverso.</p>
       <button id="start" class="inf-big-btn" style="background:var(--inf-blu);"><i class="bi bi-play-fill"></i> Iniziamo</button>
     </div>
 
@@ -99,6 +99,21 @@
         <a href="../index.html" class="inf-back"><i class="bi bi-arrow-left"></i> Altri giochi</a>
       </div>
     </div>
+
+    <details class="inf-card suoni-crediti">
+      <summary>Per gli adulti: da dove vengono i suoni</summary>
+      <p>Tuono, pioggia, vento, cane, campanello, campanella della scuola e rilevatore di fumo sono registrazioni vere, pubblicate su Freesound con licenza <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.it" rel="noopener noreferrer" target="_blank">CC0 1.0<span class="visually-hidden"> (si apre in una nuova finestra)</span></a>, che ne permette il riuso libero. Le abbiamo accorciate e portate allo stesso volume.</p>
+      <ul>
+        <li>Tuono: «<span lang="en">Thunder</span>» di Fission9 (<a href="https://freesound.org/s/465314/" rel="noopener noreferrer" target="_blank">freesound.org/s/465314<span class="visually-hidden"> (si apre in una nuova finestra)</span></a>)</li>
+        <li>Pioggia: «<span lang="en">Big rain drops (2)</span>» di macdaddyno1 (<a href="https://freesound.org/s/396483/" rel="noopener noreferrer" target="_blank">freesound.org/s/396483<span class="visually-hidden"> (si apre in una nuova finestra)</span></a>)</li>
+        <li>Vento: «<span lang="en">wind3</span>» di eliasheuninck (<a href="https://freesound.org/s/29532/" rel="noopener noreferrer" target="_blank">freesound.org/s/29532<span class="visually-hidden"> (si apre in una nuova finestra)</span></a>)</li>
+        <li>Cane: «<span lang="en">Dog barks</span>» di 16FVolejnikovaA (<a href="https://freesound.org/s/498394/" rel="noopener noreferrer" target="_blank">freesound.org/s/498394<span class="visually-hidden"> (si apre in una nuova finestra)</span></a>)</li>
+        <li>Campanello: «<span lang="en">Doorbell Notification</span>» di TheBuilder15 (<a href="https://freesound.org/s/415763/" rel="noopener noreferrer" target="_blank">freesound.org/s/415763<span class="visually-hidden"> (si apre in una nuova finestra)</span></a>)</li>
+        <li>Campanella della scuola: «<span lang="en">School Bell</span>» di civvy (<a href="https://freesound.org/s/620392/" rel="noopener noreferrer" target="_blank">freesound.org/s/620392<span class="visually-hidden"> (si apre in una nuova finestra)</span></a>)</li>
+        <li>Rilevatore di fumo: «<span lang="en">Smoke detector alarm, close perspective</span>» di SpliceSound (<a href="https://freesound.org/s/369848/" rel="noopener noreferrer" target="_blank">freesound.org/s/369848<span class="visually-hidden"> (si apre in una nuova finestra)</span></a>)</li>
+      </ul>
+      <p>La sirena di ambulanza e pompieri è costruita nel browser con le note e i tempi del decreto del Ministero dei Trasporti del 17 ottobre 1980 (392 e 660 Hz, ciclo di 3 secondi). Polizia, allarme di casa, radio e IT-alert sono suoni di esempio costruiti nel browser: quello vero di IT-alert è diverso. Se una registrazione non si carica, il gioco usa un suono costruito nel browser.</p>
+    </details>
   </main>
 
   <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
@@ -114,24 +129,32 @@
     // Il campo `era` è la frase del riscontro, con l'articolo giusto per ogni suono.
     // `consiglio` e `link` (facoltativi) sostituiscono il suggerimento generico.
     var SUONI = [
-      { id: 'ambulanza', emo: '🚑', lbl: 'Ambulanza', era: 'Era l\'ambulanza', play: function(){ window.AudioSintetico.sirenaAmbulanza(1.5); },
-        azione: 'Quando la senti: stai lontano dalla strada, lascia passare l\'ambulanza, non correre.' },
-      { id: 'tuono', emo: '⛈️', lbl: 'Tuono', era: 'Era il tuono', play: function(){ window.AudioSintetico.tuono(); },
+      // Ambulanze e vigili del fuoco usano la stessa sirena a due note
+      // (DM 17/10/1980): per questo sono una voce sola.
+      { id: 'soccorso', emo: '🚑🚒', lbl: 'Ambulanza o pompieri', era: 'Era la sirena dell\'ambulanza o dei pompieri: suonano uguale', play: function(){ window.AudioSintetico.sirenaSoccorso(2); },
+        azione: 'Quando la senti: stai lontano dalla strada e lascia passare. Non correre.' },
+      { id: 'tuono', emo: '⛈️', lbl: 'Tuono', era: 'Era il tuono', play: function(){
+          window.AudioSintetico.registrazione('tuono', function(){ window.AudioSintetico.tuono(); });
+        },
         azione: 'Quando lo senti: torna in casa, stai lontano da finestre e oggetti elettrici.' },
-      { id: 'allarme', emo: '🔔', lbl: 'Allarme', era: 'Era l\'allarme della scuola', play: function(){ window.AudioSintetico.allarmeIncendio(1.2); },
-        azione: 'Quando suona a scuola: ti metti in fila col capofila e segui la maestra al punto di raccolta.' },
-      { id: 'campanello', emo: '🛎️', lbl: 'Campanello', era: 'Era il campanello', play: function(){ window.AudioSintetico.campanello(); },
+      { id: 'allarme', emo: '🔔', lbl: 'Allarme', era: 'Era l\'allarme della scuola', play: function(){
+          window.AudioSintetico.registrazione('campanella-scuola', function(){ window.AudioSintetico.allarmeIncendio(); });
+        },
+        azione: 'Quando suona l\'allarme della scuola (la maestra ti dice quale è): ti metti in fila col capofila e segui la maestra al punto di raccolta.' },
+      { id: 'campanello', emo: '🛎️', lbl: 'Campanello', era: 'Era il campanello', play: function(){
+          window.AudioSintetico.registrazione('campanello', function(){ window.AudioSintetico.campanello(); });
+        },
         azione: 'Quando suona alla porta: chiama un grande prima di aprire. Mai aprire da solo a sconosciuti.' },
       { id: 'italert', emo: '📱', lbl: 'IT-alert', era: 'Era il suono di IT-alert. Nel gioco è un esempio: quello vero è diverso', play: function(){ window.AudioSintetico.itAlert(); },
         azione: 'Quando il telefono fa un suono speciale, diverso dal solito: chiama subito un grande, che legge il messaggio.',
         consiglio: 'IT-alert = il telefono fa un suono speciale: chiama un grande.',
         link: '/comunicazioni/2026-07-10-app-it-alert-test-nazionale/' },
       { id: 'pioggia', emo: '🌧️', lbl: 'Pioggia', era: 'Era la pioggia', play: function(){
-          window.AudioSintetico.rumoreBianco({durata: 1.6, gain: 0.18});
+          window.AudioSintetico.registrazione('pioggia', function(){ window.AudioSintetico.rumoreBianco({durata: 1.6, gain: 0.18}); });
         },
         azione: 'Quando piove tantissimo: stai in casa, niente parchi, mai vicino a fiumi o sottopassi.' },
       { id: 'vento', emo: '💨', lbl: 'Vento', era: 'Era il vento', play: function(){
-          window.AudioSintetico.rumoreBianco({durata: 1.4, gain: 0.22, freq: 350});
+          window.AudioSintetico.registrazione('vento', function(){ window.AudioSintetico.rumoreBianco({durata: 1.8, gain: 0.22, filtroLowpass: 500}); });
         },
         azione: 'Quando soffia forte: chiudi le finestre, stai lontano da alberi, cartelloni, balconi.' },
       { id: 'radio', emo: '📻', lbl: 'Radio PC', era: 'Era la radio della Protezione Civile', play: function(){
@@ -139,15 +162,6 @@
           setTimeout(function(){ window.AudioSintetico.pipRadio(); }, 350);
         },
         azione: 'Quando senti la radio della PC: ascolta bene, sta comunicando informazioni utili agli adulti.' },
-      { id: 'pompieri', emo: '🚒', lbl: 'Pompieri', era: 'Erano i pompieri', play: function(){
-          var t = window.AudioSintetico.tono;
-          var d = 0.35;
-          for (var i = 0; i < 3; i++){
-            t({ freq: 450, durata: d, tipo: 'sawtooth', gain: 0.18, delay: i*d*2, attack: 0.05, release: 0.1 });
-            t({ freq: 650, durata: d, tipo: 'sawtooth', gain: 0.18, delay: i*d*2+d, attack: 0.05, release: 0.1 });
-          }
-        },
-        azione: 'Quando senti questa sirena lenta: lascia passare i pompieri. Poi chiedi a un grande se serve evacuare.' },
       { id: 'polizia', emo: '🚓', lbl: 'Polizia', era: 'Era la polizia', play: function(){
           var t = window.AudioSintetico.tono;
           var d = 0.08;
@@ -164,13 +178,26 @@
             t({ freq: 2400, durata: on, tipo: 'square', gain: 0.14, delay: i*(on+off), attack: 0.005, release: 0.02 });
           }
         },
-        azione: 'Quando suona a casa: avvisa subito un adulto, esci con calma, non aprire a nessuno.' },
+        azione: 'Quando suona a casa: avvisa subito un adulto, esci con calma, non aprire a nessuno.',
+        simili: ['fumo'] },
+      { id: 'fumo', emo: '🔥', lbl: 'Rilevatore di fumo', era: 'Era il rilevatore di fumo', play: function(){
+          window.AudioSintetico.registrazione('rilevatore-fumo', function(){
+            var t = window.AudioSintetico.tono;
+            for (var i = 0; i < 3; i++){ t({ freq: 3100, durata: 0.5, tipo: 'square', gain: 0.12, delay: i, attack: 0.01, release: 0.03 }); }
+          });
+        },
+        azione: 'Quando lo senti: chiama subito un grande ed esci di casa con lui. Non nasconderti.',
+        consiglio: 'Il rilevatore di fumo fa bip molto forti: chiama un grande ed esci con lui.',
+        link: '/rischi-prevenzione/rischio-incendio/',
+        simili: ['antifurto'] },
       { id: 'cane', emo: '🐕', lbl: 'Cane abbaia', era: 'Era il cane che abbaia', play: function(){
-          var t = window.AudioSintetico.tono;
-          var d = 0.13;
-          t({ freq: 300, durata: d, tipo: 'square', gain: 0.22, delay: 0, attack: 0.005, release: 0.05 });
-          t({ freq: 280, durata: d, tipo: 'square', gain: 0.22, delay: 0.28, attack: 0.005, release: 0.05 });
-          t({ freq: 320, durata: d, tipo: 'square', gain: 0.22, delay: 0.56, attack: 0.005, release: 0.05 });
+          window.AudioSintetico.registrazione('cane', function(){
+            var t = window.AudioSintetico.tono;
+            var d = 0.13;
+            t({ freq: 300, durata: d, tipo: 'square', gain: 0.22, delay: 0, attack: 0.005, release: 0.05 });
+            t({ freq: 280, durata: d, tipo: 'square', gain: 0.22, delay: 0.28, attack: 0.005, release: 0.05 });
+            t({ freq: 320, durata: d, tipo: 'square', gain: 0.22, delay: 0.56, attack: 0.005, release: 0.05 });
+          });
         },
         azione: 'Quando un cane abbaia forte: stai fermo, non correre, chiama un grande.' }
     ];
@@ -201,13 +228,17 @@
     }
 
     function show(){
+      if (window.AudioSintetico && window.AudioSintetico.ferma) window.AudioSintetico.ferma();
       var target = queue[idx];
       var roundN = idx < 4 ? 1 : 2;
       levelBadge.textContent = 'Round ' + roundN + ' di 2';
       scelta.innerHTML = '';
       feedback.textContent = '';
       // 4 opzioni: il target + 3 distrattori casuali
-      var distrattori = SUONI.filter(function(s){ return s.id !== target.id; });
+      // Niente suoni facili da confondere nella stessa domanda (campo `simili`).
+      var distrattori = SUONI.filter(function(s){
+        return s.id !== target.id && (target.simili || []).indexOf(s.id) === -1;
+      });
       var opts = shuffle([target].concat(shuffle(distrattori).slice(0, SCELTE_PER_ROUND - 1)));
       opts.forEach(function(s){
         var b = document.createElement('button');
@@ -223,6 +254,7 @@
     function scegli(scelto, target, btn){
       var btns = scelta.querySelectorAll('.inf-big-btn');
       btns.forEach(function(b){ b.disabled = true; });
+      if (window.AudioSintetico && window.AudioSintetico.ferma) window.AudioSintetico.ferma();
       if (scelto.id === target.id){
         btn.classList.add('correct');
         stars++;
@@ -243,7 +275,7 @@
           if (target.consiglio) {
             window.GameCoach.hint(target.consiglio, target.link);
           } else {
-            window.GameCoach.hint('Sirena ambulanza = 3 toni veloci. Tuono = boom dopo il fulmine. Allarme scuola = suono lungo.', '/allerte-meteo/');
+            window.GameCoach.hint('La sirena di ambulanza e pompieri ha due note, una bassa e l\'altra alta. Il tuono fa boom dopo il fulmine. L\'allarme della scuola suona a lungo.', '/allerte-meteo/');
           }
         }
       }
@@ -266,7 +298,9 @@
     document.getElementById('start').addEventListener('click', start);
     document.getElementById('restart').addEventListener('click', start);
     document.getElementById('ascolta').addEventListener('click', function(){
-      if (queue[idx]) queue[idx].play();
+      if (!queue[idx]) return;
+      if (window.AudioSintetico && window.AudioSintetico.ferma) window.AudioSintetico.ferma();
+      queue[idx].play();
     });
   })();
   </script>
