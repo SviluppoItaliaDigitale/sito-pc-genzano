@@ -120,7 +120,7 @@ body.gsp-body { background: var(--gsp-fondo); }
 .gsp-pannello h2:focus { outline: 3px solid #ffbe2e; outline-offset: 3px; }
 .gsp-ora { margin: 0 0 .2rem; color: #4a5560; font-weight: 600; font-size: .95rem; text-transform: none; }
 .gsp-domanda { font-weight: 700; margin: 1rem 0 .4rem; }
-.gsp-contatore { font-weight: 600; color: var(--gsp-blu); }
+.gsp-contatore { font-weight: 600; color: var(--gsp-blu); min-height: 3em; }
 
 .gsp-scenari { display: grid; gap: .6rem; margin: .8rem 0; }
 .gsp-scenario {

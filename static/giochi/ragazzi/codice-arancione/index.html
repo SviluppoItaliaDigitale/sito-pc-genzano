@@ -263,10 +263,18 @@
 
     /* Stato di partita */
     var scenario = null;
+    // Dopo un cambio di schermata, per 400 ms nessun tocco arriva a pulsanti o
+    // link: il secondo tocco di un doppio tocco cadrebbe su cio' che e' comparso
+    // sotto il dito (la scena nuova, la schermata finale, i link a fondo pagina).
+    var bloccoTocchi = 0;
+    document.addEventListener('click', function (e) {
+      if (Date.now() < bloccoTocchi) { e.preventDefault(); e.stopPropagation(); }
+    }, true);
+    function bloccaTocchi() { bloccoTocchi = Date.now() + 400; }
     var selezione = {};
     var sopravvenutoFatto = false;
-    // Doppio tocco (LIM): un tocco ripetuto sulla stessa risorsa entro 350 ms e'
-    // la coda del primo e non la toglie di nuovo; «Allestimento pronto» vale una volta.
+    // Doppio tocco (LIM): un secondo tocco entro 350 ms e' la coda del primo e non
+    // cambia le risorse; «Allestimento pronto» vale una volta.
     var ultimoTocco = { id: null, t: 0 }, finito = false;
 
     var intro = document.getElementById('intro'),
@@ -294,6 +302,7 @@
       selezione = {};
       sopravvenutoFatto = false;
       finito = false;
+      bloccaTocchi();
       intro.classList.add('hide'); end.classList.add('hide'); game.classList.remove('hide');
       sopravBox.classList.add('hide');
       // Aggiorna intestazione e briefing
@@ -319,7 +328,9 @@
         b.setAttribute('aria-pressed', attiva ? 'true' : 'false');
         b.addEventListener('click', function(){
           var ora = Date.now();
-          if (ultimoTocco.id === r.id && ora - ultimoTocco.t < 350) return;
+          // vale per qualsiasi risorsa: quando compare l'evento sopravvenuto la
+          // griglia scende e il secondo tocco cadrebbe su un'altra risorsa
+          if (ora - ultimoTocco.t < 350) return;
           ultimoTocco = { id: r.id, t: ora };
           if (attiva) delete selezione[r.id];
           else selezione[r.id] = r;
@@ -434,6 +445,7 @@
     });
 
     function finish(score, maxPunti, check){
+      bloccaTocchi();
       game.classList.add('hide');
       end.classList.remove('hide');
       document.getElementById('final-punti').textContent = score;

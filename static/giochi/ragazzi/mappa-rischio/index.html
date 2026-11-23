@@ -238,6 +238,14 @@
         feedback = document.getElementById('feedback');
 
     var active = null;
+    // Dopo un cambio di schermata, per 400 ms nessun tocco arriva a pulsanti o
+    // link: il secondo tocco di un doppio tocco cadrebbe su cio' che e' comparso
+    // sotto il dito (la scena nuova, la schermata finale, i link a fondo pagina).
+    var bloccoTocchi = 0;
+    document.addEventListener('click', function (e) {
+      if (Date.now() < bloccoTocchi) { e.preventDefault(); e.stopPropagation(); }
+    }, true);
+    function bloccaTocchi() { bloccoTocchi = Date.now() + 400; }
     var piazzamenti = {};
     // Doppio tocco (LIM): «Verifica tutti» vale una volta e, nel frattempo,
     // mappa e pulsanti non accettano altri piazzamenti.
@@ -251,6 +259,7 @@
       piazzamenti = {};
       active = null;
       verificato = false;
+      bloccaTocchi();
       mapEl.classList.remove('attesa');
       document.getElementById('reset-map').disabled = false;
       feedback.innerHTML = '';
@@ -398,6 +407,7 @@
     document.getElementById('restart').addEventListener('click', start);
 
     function finish(ok){
+      bloccaTocchi();
       game.classList.add('hide');
       end.classList.remove('hide');
       // Il massimo e' l'intero set: anche i distrattori contano, la loro

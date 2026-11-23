@@ -370,6 +370,14 @@
     var btnUff = document.querySelector('.btn-scelta.ufficiale'),
         btnBuf = document.querySelector('.btn-scelta.bufala');
     var queue = [], idx = 0, score = 0, uff = 0, buf = 0;
+    // Dopo un cambio di schermata, per 400 ms nessun tocco arriva a pulsanti o
+    // link: il secondo tocco di un doppio tocco cadrebbe su cio' che e' comparso
+    // sotto il dito (la scena nuova, la schermata finale, i link a fondo pagina).
+    var bloccoTocchi = 0;
+    document.addEventListener('click', function (e) {
+      if (Date.now() < bloccoTocchi) { e.preventDefault(); e.stopPropagation(); }
+    }, true);
+    function bloccaTocchi() { bloccoTocchi = Date.now() + 400; }
     // Doppio tocco (LIM): una risposta per notizia, un solo «Avanti»; un tocco
     // che arriva entro 400 ms dal cambio di notizia non conta.
     var risposto = false, prontoDa = 0, finito = false;
@@ -402,6 +410,7 @@
       btnUff.classList.remove('scelto'); btnBuf.classList.remove('scelto');
       risposto = false;
       prontoDa = Date.now() + 400;
+      bloccaTocchi();
       idxCur.textContent = (idx + 1);
       progressBar.style.width = ((idx / queue.length) * 100) + '%';
       if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
@@ -464,6 +473,7 @@
     function fine(){
       if (finito) return;
       finito = true;
+      bloccaTocchi();
       game.classList.add('hide');
       endScreen.classList.remove('hide');
       progressBar.style.width = '100%';

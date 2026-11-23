@@ -202,6 +202,14 @@
   <script>
   (function () {
     'use strict';
+    // Dopo un cambio di schermata, per 400 ms nessun tocco arriva a pulsanti o
+    // link: il secondo tocco di un doppio tocco cadrebbe su cio' che e' comparso
+    // sotto il dito (la scena nuova, la schermata finale, i link a fondo pagina).
+    var bloccoTocchi = 0;
+    document.addEventListener('click', function (e) {
+      if (Date.now() < bloccoTocchi) { e.preventDefault(); e.stopPropagation(); }
+    }, true);
+    function bloccaTocchi() { bloccoTocchi = Date.now() + 400; }
 
     // Ogni domanda definisce: pittogramma, risposte e spiegazione.
     // CLP: i pittogrammi ufficiali GHS01-GHS09 (cartella ghs/, pubblico dominio).
@@ -434,6 +442,7 @@
       domandaEl.textContent = 'Cosa rappresenta questo pittogramma?';
       risposto = false;
       prontoDa = Date.now() + 400;
+      bloccaTocchi();
       answersEl.innerHTML = '';
       shuffle(entry.q.opts).forEach(function (txt) {
         var btn = document.createElement('button');
@@ -484,6 +493,7 @@
     function finish() {
       if (finito) return;
       finito = true;
+      bloccaTocchi();
       quizScreen.classList.add('hide');
       endScreen.classList.remove('hide');
       endScoreEl.textContent = score;
@@ -501,6 +511,7 @@
     }
 
     anotherBtn.addEventListener('click', function () {
+      bloccaTocchi();
       endScreen.classList.add('hide');
       selectScreen.classList.remove('hide');
     });

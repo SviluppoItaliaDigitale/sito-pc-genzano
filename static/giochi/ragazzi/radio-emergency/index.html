@@ -256,6 +256,14 @@
         tabs = document.querySelectorAll('.mode-tabs button');
 
     var mode = 'alfabeto';
+    // Dopo un cambio di schermata, per 400 ms nessun tocco arriva a pulsanti o
+    // link: il secondo tocco di un doppio tocco cadrebbe su cio' che e' comparso
+    // sotto il dito (la scena nuova, la schermata finale, i link a fondo pagina).
+    var bloccoTocchi = 0;
+    document.addEventListener('click', function (e) {
+      if (Date.now() < bloccoTocchi) { e.preventDefault(); e.stopPropagation(); }
+    }, true);
+    function bloccaTocchi() { bloccoTocchi = Date.now() + 400; }
     var queue = [], idx = 0, punti = 0, punteggioMax = 0;
     var modeQueues = { alfabeto: [], formato: [], dettato: [] };
     // Ogni prova ricorda a che punto e' arrivata: cambiando scheda non si
@@ -339,6 +347,7 @@
       opzioni.innerHTML = '';
       risposto = false;
       prontoDa = Date.now() + 400;
+      bloccaTocchi();
       tabs.forEach(function(t){
         var m = t.dataset.mode, fatta = modeIdx[m] >= modeQueues[m].length;
         var segno = t.querySelector('.fatto');
@@ -438,6 +447,7 @@
     function finish(){
       if (finito) return;
       finito = true;
+      bloccaTocchi();
       giro++;
       game.classList.add('hide');
       end.classList.remove('hide');

@@ -108,6 +108,10 @@
        gioco). Fino al 23/11/2026 erano emoji: alcune (scala, bambino) sui
        browser delle LIM più vecchi uscivano come quadratini vuoti. */
     .cell .bi { line-height: 1; }
+    .cell.exit { color: #0f5132; }
+    /* Il giocatore non deve finire sotto la barra blu del gioco (in alto) né
+       sotto i comandi fissi del telefono (in basso) quando la mappa scorre. */
+    .mappa .cell { scroll-margin-top: 90px; scroll-margin-bottom: 150px; }
     .cell.player::after {
       content: "\f8fa"; /* bi-person-walking */
       font-family: bootstrap-icons !important;
@@ -169,6 +173,13 @@
         margin: 1rem auto .5rem;
         --cmd-size: clamp(44px, 13vw, 56px);
       }
+      /* Sotto i 992 px il sito mostra la barra di navigazione in basso (64 px)
+         e il pulsante SOS 112 a destra: i comandi stanno sopra la barra e a
+         sinistra, così non finiscono coperti. */
+      body.has-bottomnav .comandi { bottom: calc(64px + .4rem + env(safe-area-inset-bottom, 0px)); }
+    }
+    @media (max-width: 576px) {
+      .comandi { justify-content: start; padding-left: .6rem; }
     }
     @media (prefers-reduced-transparency: reduce) {
       .comandi { backdrop-filter: none; background: #fff; }

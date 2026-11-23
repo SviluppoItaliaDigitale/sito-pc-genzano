@@ -164,6 +164,14 @@
   <script>
   (function () {
     'use strict';
+    // Dopo un cambio di schermata, per 400 ms nessun tocco arriva a pulsanti o
+    // link: il secondo tocco di un doppio tocco cadrebbe su cio' che e' comparso
+    // sotto il dito (la scena nuova, la schermata finale, i link a fondo pagina).
+    var bloccoTocchi = 0;
+    document.addEventListener('click', function (e) {
+      if (Date.now() < bloccoTocchi) { e.preventDefault(); e.stopPropagation(); }
+    }, true);
+    function bloccaTocchi() { bloccoTocchi = Date.now() + 400; }
 
     // 3 scenari, ognuno 3 decisioni con punti per scelta
     const SCENARI = [
@@ -380,6 +388,7 @@
       document.getElementById('next-row').classList.add('hide');
       risposto = false;
       prontoDa = Date.now() + 400;
+      bloccaTocchi();
     }
 
     function onScelta(btn, scelta) {
@@ -431,6 +440,7 @@
     }
 
     function showResults() {
+      bloccaTocchi();
       game.classList.add('hide');
       results.classList.remove('hide');
       const totDec = SCENARI_PARTITA.reduce((a, s) => a + s.decisioni.length, 0);

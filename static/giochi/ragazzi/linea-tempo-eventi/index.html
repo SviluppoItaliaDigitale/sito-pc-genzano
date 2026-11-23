@@ -200,6 +200,14 @@
         esito = document.getElementById('esito');
 
     var draggedEl = null;
+    // Dopo un cambio di schermata, per 400 ms nessun tocco arriva a pulsanti o
+    // link: il secondo tocco di un doppio tocco cadrebbe su cio' che e' comparso
+    // sotto il dito (la scena nuova, la schermata finale, i link a fondo pagina).
+    var bloccoTocchi = 0;
+    document.addEventListener('click', function (e) {
+      if (Date.now() < bloccoTocchi) { e.preventDefault(); e.stopPropagation(); }
+    }, true);
+    function bloccaTocchi() { bloccoTocchi = Date.now() + 400; }
     var scelta = null; // tessera scelta col tocco, in attesa della posizione
     // Doppio tocco (LIM): una tessera appena posata non torna nel pool per un
     // secondo tocco arrivato entro 400 ms; «Verifica» vale una volta sola.
@@ -339,6 +347,7 @@
       // Estrae nuovi 8 eventi a ogni partita: pool di 16 totali per rigiocabilita'
       EVENTI = estraiEventi();
       verificato = false;
+      bloccaTocchi();
       resetBtn.disabled = false;
       scegli(null);
       pool.innerHTML = '';
@@ -388,6 +397,7 @@
     }
 
     function fine(score){
+      bloccaTocchi();
       game.classList.add('hide');
       endScreen.classList.remove('hide');
       document.getElementById('end-score').textContent = score + '/' + EVENTI.length;

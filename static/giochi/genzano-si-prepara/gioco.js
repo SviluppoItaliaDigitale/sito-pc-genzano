@@ -27,9 +27,16 @@
   var stato = null;
   // Doppio tocco (LIM): quando il pannello cambia schermata, un tocco che arriva
   // entro 450 ms e' la coda del tocco precedente e non deve scegliere nulla nella
-  // schermata nuova; un tocco ripetuto sulla stessa voce di preparazione non la
-  // toglie subito dopo averla messa.
+  // schermata nuova; un secondo tocco rapido nella lista della preparazione non
+  // toglie la voce appena messa (ne' quella che le sta sopra).
   var prontoDa = 0, ultimaPrep = { id: null, t: 0 };
+  // Lo stesso vale fuori dal pannello (link a fondo pagina che salgono sotto il
+  // dito quando il testo nuovo e' piu' corto del precedente).
+  document.addEventListener('click', function (e) {
+    if (Date.now() < prontoDa && !(e.target.closest && e.target.closest('[data-azione="ascolta"]'))) {
+      e.preventDefault(); e.stopPropagation();
+    }
+  }, true);
 
   // Suono sobrio alla scelta: un «ding» per la scelta giusta, un tono neutro
   // per le altre. Tace mentre il gioco legge ad alta voce.
@@ -467,7 +474,8 @@
     else if (a === 'prima') schermataPrima();
     else if (a === 'prep') {
       var id = b.getAttribute('data-id'), k = stato.prep.indexOf(id), ora = Date.now();
-      if (ultimaPrep.id === id && ora - ultimaPrep.t < 350) return;
+      // anche su un'altra voce: il contatore puo' andare a capo e spostare le voci
+      if (ora - ultimaPrep.t < 350) return;
       ultimaPrep = { id: id, t: ora };
       if (k >= 0) stato.prep.splice(k, 1); else stato.prep.push(id);
       aggiornaContatore();
