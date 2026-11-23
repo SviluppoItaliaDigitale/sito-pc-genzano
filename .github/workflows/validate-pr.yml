@@ -525,6 +525,12 @@ jobs:
       - name: "🗂️ Canale dichiarato in ogni articolo"
         run: python3 scripts/check-canale-articoli.py
 
+      # 23/11/2026: la pagina /stampa-3d/nominativi/ offre a ogni volontario
+      # i file del suo nominativo; un oggetto o un numero aggiunto in
+      # data/stampa_3d.yaml senza rigenerare i file darebbe un link rotto.
+      - name: "🖨️ File di stampa 3D presenti per ogni nominativo"
+        run: python3 scripts/genera-stampa-3d.py --check
+
       # 13/10/2026: il post sul soccorso alpino è uscito su Instagram e Facebook
       # con tre punti della sintesi tagliati a metà frase (e altri otto prima).
       # Il generatore non taglia più e si ferma se il testo non entra: qui il

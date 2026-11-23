@@ -8701,3 +8701,50 @@ body.con-barra-gioco .inf-main > nav[aria-label="Percorso"] { display: none; }
    pagina Allerte meteo diceva «potrebbe non rispecchiare il bollettino»
    anche con una verifica di pochi minuti prima. */
 .allerta-stantia[hidden] { display: none !important; }
+
+/* ==========================================================================
+ * STAMPA 3D NOMINATIVI v1.0 (23/11/2026) — shortcode stampa3d-nominativo + js/stampa3d-nominativo.js
+ * Pagina /stampa-3d/nominativi/: ricerca del numero, vista 3D che si gira, passi numerati.
+ * Comandi grandi (almeno 48 px) e testo grande, perché la usano volontari di ogni età.
+ * ========================================================================== */
+.s3d-etichetta { font-size: 1.25rem; font-weight: 700; color: #003366; margin-bottom: .2rem; }
+.s3d-aiuto { margin-bottom: .6rem; }
+.s3d-riga { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; }
+.s3d-prefisso { font-size: 1.5rem; font-weight: 700; color: #003366; }
+.s3d-campo { max-width: 9rem; font-size: 1.6rem; font-weight: 700; min-height: 3.2rem; }
+.s3d-cerca { min-height: 3.2rem; font-size: 1.2rem; }
+.s3d-errore { color: #a4161a; font-weight: 600; margin: .5rem 0 0; }
+.s3d-errore:empty { margin: 0; }
+.s3d-esito:focus { outline: none; }
+.s3d-esito:focus-visible { outline: 3px solid #ffbe2e; outline-offset: 4px; }
+.s3d-oggetto { border-top: 2px solid #d9dfe6; padding-top: 1rem; margin-bottom: 1.5rem; }
+.s3d-passo { display: flex; align-items: center; gap: .6rem; color: #003366; margin-top: 1.6rem; }
+.s3d-num { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto;
+  width: 2.2rem; height: 2.2rem; border-radius: 50%; background: #003366; color: #fff; font-size: 1.15rem; }
+.s3d-visore { position: relative; width: 100%; max-width: 760px; aspect-ratio: 11 / 5; min-height: 200px;
+  background: #eef2f6; border: 1px solid #c5ceda; border-radius: 6px; overflow: hidden; touch-action: none; }
+.s3d-visore .s3d-immagine { width: 100%; height: 100%; object-fit: contain; display: block; }
+.s3d-visore .s3d-tela { position: absolute; inset: 0; width: 100% !important; height: 100% !important; display: none; cursor: grab; }
+.s3d-visore.s3d-pronto .s3d-tela { display: block; }
+.s3d-caricamento { position: absolute; left: .6rem; bottom: .3rem; margin: 0; font-size: .9rem; color: #3d4a57; }
+.s3d-comandi { display: flex; flex-wrap: wrap; gap: .5rem; margin: .7rem 0 .4rem; max-width: 760px; }
+.s3d-comandi .btn { min-height: 48px; min-width: 48px; font-size: 1.05rem; }
+.s3d-elenco li { margin-bottom: .45rem; }
+.s3d-retro { max-width: 520px; margin: 1rem 0; }
+.s3d-retro img { width: 100%; height: auto; border-radius: 6px; }
+.s3d-retro figcaption { font-size: .95rem; color: #3d4a57; }
+.s3d-tutti { margin: 1.5rem 0; }
+.s3d-tutti summary { cursor: pointer; font-weight: 600; color: #003366; }
+.s3d-griglia { display: grid; grid-template-columns: repeat(auto-fill, minmax(6.5rem, 1fr)); gap: .3rem .8rem;
+  list-style: none; padding: 0; margin: .4rem 0 0; }
+.s3d-griglia a { display: inline-block; padding: .35rem 0; }
+html.a11y-contrast-invert .s3d-etichetta, html.a11y-contrast-invert .s3d-prefisso,
+html.a11y-contrast-invert .s3d-passo, html.a11y-contrast-invert .s3d-tutti summary { color: #fff; }
+html.a11y-contrast-yellow-black .s3d-etichetta, html.a11y-contrast-yellow-black .s3d-prefisso,
+html.a11y-contrast-yellow-black .s3d-passo, html.a11y-contrast-yellow-black .s3d-tutti summary { color: #ffff00; }
+@media print {
+  .s3d, .s3d-comandi, .s3d-tutti, #s3d-altro { display: none !important; }
+  .s3d-visore { border: 0; }
+  .s3d-visore .s3d-tela { display: none !important; }
+  .s3d-visore .s3d-immagine { position: static !important; clip: auto !important; width: 100% !important; height: auto !important; }
+}

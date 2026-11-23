@@ -37,7 +37,8 @@ def leggibile(byte):
 VIDEO = {".mp4", ".m4v", ".mov", ".webm", ".ogv"}
 AUDIO = {".m4a", ".mp3", ".wav", ".ogg", ".oga", ".opus", ".aac", ".flac"}
 PRESENTAZIONI = {".pptx", ".ppt", ".odp", ".key"}
-SEMPRE = VIDEO | AUDIO | PRESENTAZIONI
+MODELLI_3D = {".stl", ".3mf", ".scad"}  # 23/11/2026: circa 470 MB di file per la stampa 3D
+SEMPRE = VIDEO | AUDIO | PRESENTAZIONI | MODELLI_3D
 # Archivi da scaricare: la pagina che li linka resta, il file si apre da Aruba.
 ARCHIVI = {".zip"}
 # Raster non ottimizzati. WebP e SVG restano: sono già il formato delle foto e dei pittogrammi.
