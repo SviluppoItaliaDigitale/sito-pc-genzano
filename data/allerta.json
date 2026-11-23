@@ -9,16 +9,5 @@
     "titolo": "Previsto verde",
     "rischi": [],
     "data": "2026-11-24"
-  },
-  "avviso_meteo": {
-    "tipo": "vento",
-    "livello": "gialla",
-    "validita_inizio": "2026-11-22T10:00:00+01:00",
-    "validita_fine": "2026-11-23T13:00:00+01:00",
-    "url": "https://www.regione.lazio.it/sites/default/files/allertamentiregionali-allegati/2026/allertamento_21_11_2026.pdf",
-    "fonte_data": "2026-11-21",
-    "validita_dal": "dalla tarda mattinata",
-    "validita_durata": "18-24 ore",
-    "descrizione": "VENTI da forti a burrasca dai quadranti occidentali, con particolare riferimento ai settori costieri e montuosi esposti, con raffiche fino a burrasca forte specie lungo la dorsale appenninica"
   }
 }
