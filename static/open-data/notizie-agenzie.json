@@ -5,11 +5,89 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-11-22T20:29:38+00:00",
+  "generato": "2026-11-23T01:04:28+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-11-22T23:30:21+00:00",
+   "fonte": "ANSA",
+   "titolo": "Kiev: 'Il bilancio dell'attacco russo a Dymer è salito a sei morti'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/22/nave-militare-russa-colpita-a-bengasi-sono-stati-gli-ucraini-_957fd3f3-aa7b-4ed5-b2d5-03500486cfde.html"
+  },
+  {
+   "data": "2026-11-22T22:40:46+00:00",
+   "fonte": "ANSA",
+   "titolo": "L'ira di Eisenkot e Sa'ar per i coloni violenti, 'terrorismo ebraico'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/mediooriente/2026/11/22/lira-di-eisenkot-e-saar-per-i-coloni-violenti-terrorismo-ebraico_eb3844ea-33e9-4eb6-b93c-7f70f616f8e2.html"
+  },
+  {
+   "data": "2026-11-22T22:14:29+00:00",
+   "fonte": "ANSA",
+   "titolo": "All'Inter non basta la tripletta di Esposito, con l'Atalanta finisce 4-4",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/22/allinter-non-basta-la-tripletta-di-esposito-con-latalanta-finisce-4-4_33021a11-0a66-40a8-a1e9-6b52d22307f0.html"
+  },
+  {
+   "data": "2026-11-22T22:10:22+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Petrolio, gas e carbone dividono il mondo: alla Cop31 manca l'accordo, l'Europa boccia il testo finale",
+   "url": "https://www.adnkronos.com/internazionale/esteri/cop31-fallita-combustibili-fossili-news_6ncFVaAdEz2QKJJuRr2wHK"
+  },
+  {
+   "data": "2026-11-22T22:02:13+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Manovra, FdI propone spray colorati per i violenti ai cortei. Avs insorge: \"Come il Cile di Pinochet\"",
+   "url": "https://www.adnkronos.com/economia/manovra-fdi-spray-colorati-manifestanti-marchiati-polemica-opposizioni_5Lmx7blbxoCzVrpbRNznle"
+  },
+  {
+   "data": "2026-11-22T21:30:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Zappacosta 'para' su Thuram, poi mano di Bastoni: due rigori in Atalanta-Inter",
+   "url": "https://www.adnkronos.com/sport/zappacosta-thuram-rigore-proteste-atalanta-inter-cose-successo_2RwRnGvIUOdmARGsLKc0XK"
+  },
+  {
+   "data": "2026-11-22T21:22:57+00:00",
+   "fonte": "ANSA",
+   "titolo": "Alcaraz si laurea 'maestro', vince le sue prime Atp Finals",
+   "url": "https://www.ansa.it/sito/notizie/sport/tennis/speciali/atp_finals_2026/2026/11/22/atp-finals-alcaraz-batte-zverev-e-conquista-il-suo-primo-titolo-del_edfb3ff5-f27f-4b0d-9e7e-6c8409ae4446.html"
+  },
+  {
+   "data": "2026-11-22T21:13:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Alcaraz, trionfo alle Atp Finals e sfida all'Italia per la Davis: \"Darò il massimo\"",
+   "url": "https://www.adnkronos.com/sport/alcaraz-atp-finals-coppa-davis-sfida-italia-zverev_3tg3gLt5UazfO5LUsErJMs"
+  },
+  {
+   "data": "2026-11-22T20:54:01+00:00",
+   "fonte": "ANSA",
+   "titolo": "Grillo show, e avvisa: 'Se il giudice dice che il Movimento è mio me lo riprendo'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/22/grillo-show-e-avvisa-se-il-giudice-dice-che-il-movimento-e-mio-me-lo-riprendo_d85903d4-9afa-4b58-b602-96ed3ea730be.html"
+  },
+  {
+   "data": "2026-11-22T20:50:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Grillo: \"Se il giudice mi dà ragione, mi riprendo il M5S. Solo io posso cambiare l'Italia\"",
+   "url": "https://www.adnkronos.com/politica/beppe-grillo-che-tempo-che-fa-intervista_7uaCtsj9AgTVtN4LIQEZkc"
+  },
+  {
+   "data": "2026-11-22T20:36:19+00:00",
+   "fonte": "ANSA",
+   "titolo": "Trump apre ai democratici, pronto a collaborare col nuovo Congresso",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/22/trump-apre-ai-democratici-pronto-a-collaborare-col-nuovo-congresso_a7791188-3388-4e6f-bf39-202dd6c2e6a9.html"
+  },
+  {
+   "data": "2026-11-22T20:25:48+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Vento a 100 km orari spazza l'isola di Gorgona e la costa toscana",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/22/vento-a-100-km-orari-spazza-lisola-di-gorgona-e-la-costa-toscana_617d9a5b-96ad-4b7a-a50b-dbbb365f63a5.html"
+  },
+  {
+   "data": "2026-11-22T20:24:51+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Inter, si ferma Calhanoglu: infortunio contro l'Atalanta",
+   "url": "https://www.adnkronos.com/sport/infortunio-calhanoglu-atalanta-inter-come-sta-quando-torna_5iPzhItlDOCbi4xOShn4uI"
+  },
   {
    "data": "2026-11-22T20:18:06+00:00",
    "fonte": "ADNKRONOS",
@@ -23,28 +101,10 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/22/i-telefoni-e-gli-appunti-i-pm-sulle-tracce-lasciate-da-de-gennaro_385903ab-9075-4aaf-9711-57a1ec55cf07.html"
   },
   {
-   "data": "2026-11-22T20:16:14+00:00",
-   "fonte": "ANSA",
-   "titolo": "Nave militare russa colpita a Bengasi, 'sono stati gli ucraini'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/22/nave-militare-russa-colpita-a-bengasi-sono-stati-gli-ucraini-_957fd3f3-aa7b-4ed5-b2d5-03500486cfde.html"
-  },
-  {
    "data": "2026-11-22T20:04:35+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Torino si inchina ad Alcaraz: l'omaggio dopo il trionfo alle Atp Finals",
    "url": "https://www.adnkronos.com/sport/torino-omaggio-alcaraz-atp-finals-mole-antonelliana-foto_AtQGWoX46hZdkD9xbwLNK"
-  },
-  {
-   "data": "2026-11-22T20:01:38+00:00",
-   "fonte": "ANSA",
-   "titolo": "Serie A, in campo Atalanta-Inter DIRETTA",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/22/serie-a-in-campo-atalanta-inter-diretta_33021a11-0a66-40a8-a1e9-6b52d22307f0.html"
-  },
-  {
-   "data": "2026-11-22T20:00:51+00:00",
-   "fonte": "ANSA",
-   "titolo": "Alcaraz si laurea 'maestro', vince le sue prime Atp Finals",
-   "url": "https://www.ansa.it/sito/notizie/sport/tennis/speciali/atp_finals_2026/2026/11/22/atp-finals-alcaraz-batte-zverev-e-conquista-il-suo-primo-titolo-del_edfb3ff5-f27f-4b0d-9e7e-6c8409ae4446.html"
   },
   {
    "data": "2026-11-22T19:53:57+00:00",
@@ -85,7 +145,7 @@
   {
    "data": "2026-11-22T18:48:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Serie A, Atalanta-Inter 1-2 - Diretta",
+   "titolo": "Atalanta-Inter 4-4, Sarri ferma Chivu in rimonta e nerazzurri a -3 dalla Lazio",
    "url": "https://www.adnkronos.com/sport/diretta-atalanta-inter-oggi-serie-a-risultato-live_46d51ErrcRcyHs3bf54Wne"
   },
   {
@@ -93,12 +153,6 @@
    "fonte": "ANSA",
    "titolo": "Il padre di Augusto De Megni: 'De Gennaro ti dava fiducia anche con il non dire'",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/22/il-padre-di-augusto-de-megni-de-gennaro-ti-dava-fiducia-anche-con-il-non-dire_eedeeec8-3372-4ace-8564-dd8bb948f06e.html"
-  },
-  {
-   "data": "2026-11-22T18:44:11+00:00",
-   "fonte": "ANSA",
-   "titolo": "'Marcatori colorati per i violenti', polemica per la proposta di Fdi",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/22/marcatori-colorati-per-i-violenti-polemica-per-la-proposta-di-fdi_d72b7d13-fc79-4bda-a12e-df7c3c8f1053.html"
   },
   {
    "data": "2026-11-22T18:36:14+00:00",
@@ -120,15 +174,9 @@
   },
   {
    "data": "2026-11-22T18:31:05+00:00",
-   "fonte": "ANSA",
+   "fonte": "ANSA CRONACA",
    "titolo": "Auto con quattro ragazzi si ribalta in Puglia, muore un 17enne",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/22/auto-si-ribalta-nel-nord-barese-muore-un-17enne-e-altri-tre-feriti_4fda3f06-a5f6-4d2d-865f-b80f54d3da50.html"
-  },
-  {
-   "data": "2026-11-22T18:29:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Zverev-Alcaraz, tweener da favola di Carlos e il tedesco tira la racchetta: cos'è successo alle Atp Finals",
-   "url": "https://www.adnkronos.com/sport/alcaraz-tweener-finale-atp-finals-zverev-tira-racchetta-litiga_1kdhILSpfqtOWjLZeDv4HC"
   },
   {
    "data": "2026-11-22T18:24:52+00:00",
@@ -137,58 +185,10 @@
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/22/il-piano-di-william-harry-potrebbe-perdere-il-titolo-di-principe_783c95e2-22ef-44af-8646-029e02d72d99.html"
   },
   {
-   "data": "2026-11-22T18:16:47+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Milan, si ferma Goncalo Ramos: infortunio contro il Frosinone",
-   "url": "https://www.adnkronos.com/sport/infortunio-goncalo-ramos-milan-frosinone-come-sta-quando-torna_6PzWuukWnyxFC3ry5gEAic"
-  },
-  {
    "data": "2026-11-22T17:52:19+00:00",
    "fonte": "ANSA",
    "titolo": "Sviluppatori licenziati per l'IA 'occupano' i software, li ricreano gratis",
    "url": "https://www.ansa.it/canale_tecnologia/notizie/tecnologia/2026/11/22/ansa-sviluppatori-licenziati-per-lia-occupano-i-software-li-ricreano-gratis_67675254-2c99-4ca0-b317-ec7b4f4dd769.html"
-  },
-  {
-   "data": "2026-11-22T17:35:13+00:00",
-   "fonte": "ANSA",
-   "titolo": "Paura per Paredes, sviene in diretta alla festa del Boca",
-   "url": "https://www.ansa.it/sito/notizie/sport/2026/11/22/paura-per-paredes-sviene-in-diretta-alla-festa-del-boca_eb20b37f-b59e-4bad-8b9b-43371151d4d0.html"
-  },
-  {
-   "data": "2026-11-22T17:34:32+00:00",
-   "fonte": "ANSA",
-   "titolo": "A nuoto per tre giorni a Hormuz, 'basta guerra e inquinamento'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/22/a-nuoto-per-tre-giorni-a-hormuz-basta-guerra-e-inquinamento_281973af-a215-43a1-8e5d-853f9e94752e.html"
-  },
-  {
-   "data": "2026-11-22T17:28:55+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Valeria Marini: \"Il mio desiderio è avere una famiglia, ora ho una relazione ma non parlo\"",
-   "url": "https://www.adnkronos.com/spettacoli/valeria-marini-verissimo-oggi-22-novembre_5QWgSf1rbnXXCyizwZVz7i"
-  },
-  {
-   "data": "2026-11-22T17:10:37+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il Papa al pranzo con i poveri: 'Siamo tutti una famiglia'",
-   "url": "https://www.ansa.it/vaticano/notizie/2026/11/22/il-papa-al-pranzo-con-i-poveri-siamo-tutti-una-famiglia_a9ca6abe-d963-4cf1-9b67-a5826ba4a25e.html"
-  },
-  {
-   "data": "2026-11-22T17:04:18+00:00",
-   "fonte": "ANSA",
-   "titolo": "Morto Massimo Martelli, sceneggiatore e regista, da Anima mia a Sanremo hanno la sua firma",
-   "url": "https://www.ansa.it/sito/notizie/cultura/2026/11/22/morto-massimo-martelli-sceneggiatore-e-regista-di-programmi-tv-famosi-da-anima-mia-a-sanremo_4f24e798-dc62-450e-b7da-0f3e2ad0fc5c.html"
-  },
-  {
-   "data": "2026-11-22T16:56:12+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il ceo di Anthropic Amodei in Puglia per seguire la ristrutturazione della sua masseria",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/22/il-ceo-di-anthropic-amodei-in-puglia-per-seguire-la-ristrutturazione-della-sua-masseria_cc50a0b6-f6d9-4abb-8529-d30e025e254e.html"
-  },
-  {
-   "data": "2026-11-22T16:49:10+00:00",
-   "fonte": "ANSA",
-   "titolo": "Fenomeno 'Catnomics', i gatti fanno girare l'economia mondiale",
-   "url": "https://www.ansa.it/canale_lifestyle/notizie/pets/2026/11/22/fenomeno-catnomics-i-gatti-fanno-girare-leconomia-mondiale-_ab9da3d0-422c-4d48-bc13-96a3976ce5a6.html"
   }
  ]
 }
