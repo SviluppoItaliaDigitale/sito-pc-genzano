@@ -26,6 +26,7 @@ let fileBase = '';            // file STL del solo nominativo (da stampa3d.js)
 let nomeApplicato = '';       // nome e cognome nel file offerto ora
 let blobUrl = '';
 let giro = 0;
+let ultimaForma = null;       // { pos, lato } del file con il nome, per rimostrarlo
 
 function carica() {
   if (!librerie) {
@@ -60,6 +61,7 @@ function nomeFile() {
 function togliNome() {
   if (blobUrl) { URL.revokeObjectURL(blobUrl); blobUrl = ''; }
   nomeApplicato = '';
+  ultimaForma = null;
   if (conNomeTesto) { conNomeTesto.hidden = true; conNomeTesto.textContent = ''; }
 }
 
@@ -107,7 +109,8 @@ async function aggiungi() {
       document.querySelectorAll('[data-s3d="file"]').forEach(e => { e.textContent = nomeFile(); });
     }
     if (conNomeTesto) { conNomeTesto.textContent = ` e il nome «${testo}»`; conNomeTesto.hidden = false; }
-    document.dispatchEvent(new CustomEvent('s3d:geometria', { detail: { pos: r.pos, lato: r.lato } }));
+    ultimaForma = { pos: r.pos, lato: r.lato };
+    document.dispatchEvent(new CustomEvent('s3d:geometria', { detail: ultimaForma }));
     stato.textContent = r.lato === 'retro'
       ? `Fatto: «${testo}» è inciso sul retro. Premi «Retro» nella vista per vederlo, poi scarica il file.`
       : `Fatto: «${testo}» è sul davanti, in rilievo. Ora scarica il file.`;
@@ -136,7 +139,16 @@ if (box && campo && bottone && O && O.anteprima && O.anteprima.nome) {
   campo.addEventListener('keydown', ev => { if (ev.key === 'Enter') { ev.preventDefault(); aggiungi(); } });
   // nuovo nominativo: se c'era un nome, si rifà il file con lo stesso nome
   document.addEventListener('s3d:file', ev => {
-    if (ev.detail === fileBase) return;
+    if (ev.detail === fileBase) {
+      // stesso nominativo confermato di nuovo: stampa3d.js ha rimesso il file senza nome, si rimette quello con il nome
+      if (nomeApplicato && blobUrl && scarica) {
+        scarica.href = blobUrl;
+        scarica.setAttribute('download', nomeFile());
+        document.querySelectorAll('[data-s3d="file"]').forEach(e => { e.textContent = nomeFile(); });
+        if (ultimaForma) document.dispatchEvent(new CustomEvent('s3d:geometria', { detail: ultimaForma }));
+      }
+      return;
+    }
     fileBase = ev.detail;
     const prima = nomeApplicato;
     togliNome();
@@ -145,5 +157,6 @@ if (box && campo && bottone && O && O.anteprima && O.anteprima.nome) {
     if (prima && pulisci(campo.value) === prima && !(scarica && scarica.closest('[hidden]'))) aggiungi();
     else stato.textContent = '';
   });
-  window.addEventListener('pagehide', togliNome);
+  // se la pagina resta nella cache del browser (tasto Indietro) il file con il nome resta valido
+  window.addEventListener('pagehide', ev => { if (!ev.persisted) togliNome(); });
 }
