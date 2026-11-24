@@ -539,11 +539,11 @@ oggetti:
     colore: "blu"
     occorrente:
       - "biadesivo in schiuma per esterni, spesso 1 o 2 mm"
-      - "alcol per pulire la superficie"
+      - "per pulire la superficie, solo il detergente indicato dal libretto del casco"
     montaggio:
       - "Leggi il libretto del casco. Se non permette di incollare adesivi o etichette sulla calotta, non farlo: incolla l'etichetta sulla borsa del casco o usane un'altra sullo zaino."
       - "Se è permesso, scegli una zona poco curva, sul retro o sul fianco, lontana da prese d'aria, attacchi della visiera e del sottogola."
-      - "Pulisci la zona con l'alcol e lasciala asciugare."
+      - "Pulisci la zona solo con il detergente indicato dal libretto del casco e lasciala asciugare: altri prodotti possono rovinare la calotta."
       - "Metti il biadesivo in schiuma su tutto il retro dell'etichetta, appoggiala e premi bene per un minuto, partendo dal centro."
 
   - id: "righello-coordinate"
