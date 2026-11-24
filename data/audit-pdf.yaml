@@ -1,10 +1,10 @@
 ultimo_audit: '2026-11-24'
-totale: 150
+totale: 151
 riepilogo:
   ACCESSIBILE: 86
   PARZIALE: 11
   NON_ACCESSIBILE: 9
-  TERZO: 44
+  TERZO: 45
   ERRORE: 0
 documenti:
 - path: /allegati/2026/2026-05-08-dpc-art-39-rimborsi-volontari-lavoratori-autonomi.pdf
@@ -427,6 +427,20 @@ documenti:
   pages: 3
   errors: []
   text_chars_sample: 6419
+  origine: TERZO
+  origine_descrizione: Regione Lazio (BURL, DGR, determine, regolamenti regionali)
+  verdict: TERZO
+- path: /allegati/2026/regione-lazio-dgr-1154-2026-protocollo-ordine-geologi-burl-94.pdf
+  file: regione-lazio-dgr-1154-2026-protocollo-ordine-geologi-burl-94.pdf
+  size_kb: 476.7
+  sha256: b14f6e69fb58a0a25d2e054dab1b65c43720c31441caaafa7bef03268310a882
+  searchable: true
+  tagged: false
+  language: null
+  title: null
+  pages: 13
+  errors: []
+  text_chars_sample: 6588
   origine: TERZO
   origine_descrizione: Regione Lazio (BURL, DGR, determine, regolamenti regionali)
   verdict: TERZO
