@@ -42,6 +42,7 @@ oggetti:
       rilievo: "#f07d00"
       rilievo_mm: 1.0
       bandiera: [-36.5, 1.75, -23.75, 10.25]
+      nome: {zona: [-38, -13.1, 38, -6.1], lato: "retro"}   # riga di nome e cognome (static/js/stampa3d-nome-core.js)
     parametri:
       tipo: "petto"
       parte: "tutto"
@@ -81,6 +82,7 @@ oggetti:
       rilievo: "#f07d00"
       rilievo_mm: 1.0
       bandiera: [-29.0, 2.45, -19.25, 8.95]
+      nome: {zona: [-32.6, -6.3, 30.2, 0.7], lato: "retro"}   # riga di nome e cognome (static/js/stampa3d-nome-core.js)
     parametri:
       tipo: "portachiavi"
       parte: "tutto"
@@ -114,6 +116,7 @@ oggetti:
       rilievo: "#f07d00"
       rilievo_mm: 1.0
       bandiera: [-36.5, -2.25, -23.75, 6.25]
+      nome: {zona: [-38, -18.3, 38, -11.3], lato: "retro"}   # riga di nome e cognome (static/js/stampa3d-nome-core.js)
     parametri:
       tipo: "zaino"
       parte: "tutto"
@@ -149,6 +152,7 @@ oggetti:
       bandiera: [-36.5, 1.75, -23.75, 10.25]
       vista_3d: true
       fianco: -40   # si stampa in piedi sul lato sinistro (x = -40), senza supporti
+      nome: {zona: [-37, -29.5, 37, -22.5], lato: "fronte"}   # riga di nome e cognome (static/js/stampa3d-nome-core.js)
     parametri:
       tipo: "appendiabiti"
       parte: "tutto"
@@ -218,6 +222,7 @@ oggetti:
       vista_3d: true
       quota_scritte: 14.0   # piastra spostata di 9 mm sopra la clip (spazio_cintura + 3,5), spessa 5 mm
       fianco: -40   # si stampa in piedi sul lato sinistro (x = -40), senza supporti
+      nome: {zona: [-38.6, -33.3, 38.8, -26.3], lato: "retro"}   # riga di nome e cognome (static/js/stampa3d-nome-core.js)
     parametri:
       tipo: "cintura"
       parte: "tutto"
@@ -249,7 +254,14 @@ oggetti:
     categoria: "radio"
     breve: "Supporto da parete: la clip della radio si aggancia come su una cintura."
     sorgente: "ganci-nominativo.scad"
-    anteprima: *gancio
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-36.5, 1.75, -23.75, 10.25]
+      vista_3d: true
+      fianco: -40   # si stampa in piedi sul lato sinistro (x = -40), senza supporti
+      nome: {zona: [-37, -25.1, 37, -18.1], lato: "fronte"}   # riga di nome e cognome (static/js/stampa3d-nome-core.js)
     parametri:
       tipo: "radio"
       parte: "tutto"
@@ -285,6 +297,7 @@ oggetti:
       rilievo: "#f07d00"
       rilievo_mm: 1.0
       bandiera: [-39.5, 11.25, -26.75, 19.75]
+      nome: {zona: [-41, -24.7, 41, -17.7], lato: "retro"}   # riga di nome e cognome (static/js/stampa3d-nome-core.js)
     parametri:
       tipo: "tessera"
       parte: "tutto"
@@ -319,6 +332,7 @@ oggetti:
       rilievo: "#f07d00"
       rilievo_mm: 1.0
       bandiera: [-27.0, 2.35, -17.25, 8.85]
+      nome: {zona: [-30.8, -10.3, 30.8, -3.3], lato: "retro"}   # riga di nome e cognome (static/js/stampa3d-nome-core.js)
     parametri:
       tipo: "etichetta"
       parte: "tutto"
@@ -388,6 +402,7 @@ oggetti:
       bandiera: [-25.3, -38.25, -15.55, -31.75]
       vista_3d: true
       quota_scritte: 6.07   # le scritte stanno sulla cornice, sopra il fondo della tasca
+      nome: {zona: [-45.3, -48.2, 45.1, -41.2], lato: "retro"}   # riga di nome e cognome (static/js/stampa3d-nome-core.js)
     parametri:
       tipo: "tesserino"
       parte: "tutto"
@@ -463,6 +478,7 @@ oggetti:
       bandiera: [-29.5, 2.25, -18.25, 9.75]
       vista_3d: true
       fianco: -33   # si stampa in piedi sul lato sinistro (x = -33), senza supporti
+      nome: {zona: [-29.8, -16.2, 29.8, -10.2], lato: "fronte"}   # riga di nome e cognome (static/js/stampa3d-nome-core.js)
     parametri:
       tipo: "microfono"
       parte: "tutto"
@@ -498,6 +514,7 @@ oggetti:
       rilievo: "#f07d00"
       rilievo_mm: 1.0
       bandiera: [-25.3, 3.25, -15.55, 9.75]
+      nome: {zona: [-30.4, -14.3, 30.4, -7.3], lato: "retro"}   # riga di nome e cognome (static/js/stampa3d-nome-core.js)
     parametri:
       tipo: "avvolgicavo"
       parte: "tutto"
@@ -567,6 +584,7 @@ oggetti:
       rilievo: "#f07d00"
       rilievo_mm: 1.0
       bandiera: [-27.2, 8.5, -16.7, 15.5]
+      nome: {zona: [-59, -16.5, 59.2, -9.5], lato: "fronte"}   # riga di nome e cognome (static/js/stampa3d-nome-core.js)
     parametri:
       tipo: "righello"
       parte: "tutto"
@@ -605,6 +623,7 @@ oggetti:
       rilievo: "#f07d00"
       rilievo_mm: 1.0
       bandiera: [-25.3, 54.75, -15.55, 61.25]
+      nome: {zona: [-30.2, -71.3, 30.2, -64.3], lato: "retro"}   # riga di nome e cognome (static/js/stampa3d-nome-core.js)
     parametri:
       tipo: "segnalibro"
       parte: "tutto"

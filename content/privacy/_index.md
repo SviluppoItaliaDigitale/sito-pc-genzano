@@ -94,6 +94,8 @@ Alcune funzioni ricordano le tue scelte nella memoria locale del browser (*local
 
 Si cancellano cancellando i dati del sito dalle impostazioni del browser; le pagine salvate si possono togliere anche dalla pagina «I miei contenuti».
 
+Nome e cognome che scrivi per personalizzare un oggetto della [stampa 3D](/stampa-3d/) non vengono salvati, nemmeno nel browser: il file con il nome si prepara sul tuo telefono o computer e nome e cognome non vengono inviati a nessuno. Chiudendo la pagina restano solo nel file che hai scaricato.
+
 ## Statistiche di visita anonime
 
 Per capire quali contenuti sono più utili ai cittadini, il sito misura le visite con **GoatCounter**, uno strumento di statistica rispettoso della privacy:

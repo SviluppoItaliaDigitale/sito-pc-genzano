@@ -111,10 +111,17 @@ function geometria(pos) {
   const tri = TRICOLORE_HEX.map(h => new THREE.Color(h));
   const cb = new THREE.Color(a.base), cr = new THREE.Color(a.rilievo);
   const colori = new Float32Array(pos.length);
+  // Nome e cognome incisi sul retro (stampa3d-nome.js): fondo e pareti dell'incisione si colorano come le scritte
+  const retro = a.nome && a.nome.lato === 'retro' && Array.isArray(a.nome.zona) ? a.nome.zona : null;
+  const zmin = b.min.z;
   for (let t = 0; t < pos.length; t += 9) {
     const zm = Math.max(pc[t + 2], pc[t + 5], pc[t + 8]);
     const alto = zm > zb + 0.01 && zm <= zb + ril + 0.02;
     let cc = alto ? cr : cb;
+    if (retro && zm > zmin + 0.01 && zm <= zmin + 0.7) {
+      const cx = (pc[t] + pc[t + 3] + pc[t + 6]) / 3, cy = (pc[t + 1] + pc[t + 4] + pc[t + 7]) / 3;
+      if (cx >= retro[0] - 0.5 && cx <= retro[2] + 0.5 && cy >= retro[1] - 0.5 && cy <= retro[3] + 0.5) cc = cr;
+    }
     if (alto && a.bandiera) {
       const cx = (pc[t] + pc[t + 3] + pc[t + 6]) / 3, cy = (pc[t + 1] + pc[t + 4] + pc[t + 7]) / 3;
       const [x0, y0, x1, y1] = a.bandiera;
@@ -226,6 +233,26 @@ function motore() {
   }
 }
 
+/* Mostra una forma già pronta (posizione di stampa): il file STL scaricato o quello con nome e cognome. */
+function mostra(pos, chi) {
+  orienta(pos);
+  const geo = geometria(pos);
+  if (tre.mesh.geometry) tre.mesh.geometry.dispose();
+  tre.mesh.geometry = geo;
+  tre.mesh.visible = true;
+  tre.geoUrl = chi;
+  const c = tre.controlli;
+  c.minDistance = tre.distanza * 0.4;
+  c.maxDistance = tre.distanza * 2.5;
+  misura();
+  posiziona(1);
+  vista.img.classList.add('visually-hidden');          // resta per i lettori di schermo
+  vista.carica.hidden = true;
+  vista.comandi.hidden = false;
+  vista.box.classList.add('s3d-pronto');
+  disegna();
+}
+
 async function carica() {
   const mia = ++tre.richiesta;
   const url = tre.url;
@@ -236,22 +263,7 @@ async function carica() {
     if (!r.ok) throw new Error(r.status);
     const pos = leggiStl(await r.arrayBuffer());
     if (mia !== tre.richiesta) return;
-    orienta(pos);
-    const geo = geometria(pos);
-    if (tre.mesh.geometry) tre.mesh.geometry.dispose();
-    tre.mesh.geometry = geo;
-    tre.mesh.visible = true;
-    tre.geoUrl = url;
-    const c = tre.controlli;
-    c.minDistance = tre.distanza * 0.4;
-    c.maxDistance = tre.distanza * 2.5;
-    misura();
-    posiziona(1);
-    vista.img.classList.add('visually-hidden');          // resta per i lettori di schermo
-    vista.carica.hidden = true;
-    vista.comandi.hidden = false;
-    vista.box.classList.add('s3d-pronto');
-    disegna();
+    mostra(pos, url);
   } catch (e) {
     if (mia !== tre.richiesta) return;
     soloImmagine('La vista in 3D non si è caricata: guarda l\'immagine.');
@@ -285,3 +297,13 @@ function avvia() {
 
 tre.nuovoFile(window.pcgzS3dFile || '');
 document.addEventListener('s3d:file', ev => tre.nuovoFile(ev.detail));
+// Forma con nome e cognome, preparata da stampa3d-nome.js: si mostra senza scaricare nulla
+document.addEventListener('s3d:geometria', ev => {
+  const pos = ev.detail && ev.detail.pos;
+  if (!pos) return;
+  if (!tre.avviato) avvia();
+  tre.richiesta++;                       // un caricamento in corso non la sovrascrive
+  if (tre.rotto || !tre.mesh) return;    // senza vista 3D resta l'immagine: il file si scarica lo stesso
+  mostra(pos, 'nome');
+  if (ev.detail.lato === 'retro') posiziona(-1);
+});
