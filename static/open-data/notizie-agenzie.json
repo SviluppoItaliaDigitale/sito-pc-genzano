@@ -5,11 +5,113 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-11-23T21:27:27+00:00",
+  "generato": "2026-11-24T05:27:36+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-11-23T23:17:31+00:00",
+   "fonte": "ANSA",
+   "titolo": "Dramma alla Sapienza a Roma, 58enne trovato morto in tenda",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/23/dramma-alla-sapienza-a-roma-58enne-trovato-morto-in-tenda_83980849-c237-4b60-8612-fcc00916ecd4.html"
+  },
+  {
+   "data": "2026-11-23T23:03:44+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Obbligo gomme invernali, quando montarle e le multe per chi non è in regola: la guida Aci",
+   "url": "https://www.adnkronos.com/cronaca/obbligo-gomme-invernali-quando-multe_7dG46LlHPg9YFLusz2zZyz"
+  },
+  {
+   "data": "2026-11-23T23:02:24+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "De Gennaro, due inchieste sulla morte: la Dda di Firenze esamina le lettere lasciate dall'ex capo della polizia",
+   "url": "https://www.adnkronos.com/cronaca/gianni-de-gennaro-inchieste-morte-istigazione-al-suicidio_2OWH7YnRyxAHTTJSGgtrUD"
+  },
+  {
+   "data": "2026-11-23T23:02:01+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Previsioni meteo, scatta oggi l'allerta maltempo: le regioni a rischio pioggia e neve",
+   "url": "https://www.adnkronos.com/cronaca/previsioni-meteo-allerta-maltempo-regioni-rischio_3Bm96kwWQybjedTARuneaL"
+  },
+  {
+   "data": "2026-11-23T23:01:26+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Russia, 700mila soldati morti in Ucraina: la guerra di Putin e i numeri nascosti",
+   "url": "https://www.adnkronos.com/internazionale/esteri/russia-guerra-soldati-morti-ucraina-dati_QADYGpA7qQ6lPYVa6VJfd"
+  },
+  {
+   "data": "2026-11-23T22:15:01+00:00",
+   "fonte": "ANSA",
+   "titolo": "'A Gaza usate bombe come 13 atomiche, il 99% della terra è avvelenato'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/23/a-gaza-usate-bombe-come-13-atomiche-il-99-della-terra-e-avvelenato_34a2aeb0-24bb-41f5-8e1d-d22583e088d9.html"
+  },
+  {
+   "data": "2026-11-23T22:01:24+00:00",
+   "fonte": "ANSA",
+   "titolo": "Nuova ondata di allarmi bomba nelle scuole tedesche e danesi",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/23/allarmi-bomba-stamattina-in-centinaia-di-scuole-in-germania-e-danimarca_f62f1019-227e-4c45-8954-e1f2d4f46b67.html"
+  },
+  {
+   "data": "2026-11-23T21:58:42+00:00",
+   "fonte": "ANSA",
+   "titolo": "Serie A: il Monza risorge, Fiorentina travolta 3-0 al Brianteo",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/23/serie-a-il-monza-risorge-fiorentina-travolta-3-0-al-brianteo_c6a426b9-4dfb-4dc5-971a-b7d006162dfd.html"
+  },
+  {
+   "data": "2026-11-23T21:52:57+00:00",
+   "fonte": "ANSA",
+   "titolo": "Scontro Conte-Fdi in commissione Covid, 'stop and go' dei lavori",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/23/scontro-conte-fdi-in-commissione-covid-stop-and-go-dei-lavori_ced74e1b-8234-4514-86b9-7f526f0eb932.html"
+  },
+  {
+   "data": "2026-11-23T21:32:58+00:00",
+   "fonte": "ANSA",
+   "titolo": "Sinner vola dal 'guru' finlandese per operazione al ginocchio",
+   "url": "https://www.ansa.it/sito/notizie/sport/2026/11/23/sinner-vola-in-finlandia-per-loperazione-al-ginocchio_1b338822-6ab2-4899-8735-1a254f285307.html"
+  },
+  {
+   "data": "2026-11-23T21:29:46+00:00",
+   "fonte": "ANSA",
+   "titolo": "Lo strappo dell'Ue alla Cop31, 'ostacolati dagli interessi di pochi'",
+   "url": "https://www.ansa.it/ansa2030/notizie/green_blue/2026/11/23/la-delusione-di-pechino-per-il-mancato-accordo-alla-cop31-ma-la-transizione-verde-e-irreversibile_12f4492d-7ced-4afa-adff-6a39744369bf.html"
+  },
+  {
+   "data": "2026-11-23T21:29:32+00:00",
+   "fonte": "ANSA",
+   "titolo": "Paura al concerto in Inghilterra, 12.000 evacuati per sostanza irritante",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/23/sostanza-sconosciuta-nellaria-a-un-concerto-rap-a-manchester-12-mila-evacuati_1d43a3d2-fd27-4119-9aa2-0d34c00dc2b0.html"
+  },
+  {
+   "data": "2026-11-23T21:28:00+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il 'memoriale' di De Gennaro, sequestrati due hard disk",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/23/hard-disk-di-de-gennaro-sequestrato-nei-giorni-scorsi-a-un-membro-della-sua_0f667388-d03f-456e-a1c3-6859254e204a.html"
+  },
+  {
+   "data": "2026-11-23T21:27:45+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "La morte di Domenico, iniziativa pro chirurgo che eseguì il trapianto",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/23/la-morte-di-domenico-iniziativa-pro-chirurgo-che-esegui-il-trapianto_a7b1d990-c479-4f83-906a-fa474b4f4779.html"
+  },
+  {
+   "data": "2026-11-23T21:27:28+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Da Caltanissetta a Firenze, i pm e le 'altre verità' sulle stragi",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/23/da-caltanissetta-a-firenze-i-pm-e-le-altre-verita-sulle-stragi_c283acf3-83e8-425f-b6f4-e10f70508713.html"
+  },
+  {
+   "data": "2026-11-23T21:25:39+00:00",
+   "fonte": "ANSA",
+   "titolo": "Quarantasei anni fa il sisma in Irpinia, 'una ferita ancora aperta'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/23/quarantasei-anni-fa-il-terremoto-in-irpinia-lomaggio-delle-istituzioni_54b34000-a72f-46d4-bec2-1156a2c0804c.html"
+  },
+  {
+   "data": "2026-11-23T21:22:21+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Nuovi laboratori per la terapia genica, Sr-Tiget festeggia così i 30 anni",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/23/nuovi-laboratori-per-la-terapia-genica-sr-tiget-festeggia-cosi-i-30-anni_ea8c8313-3f44-4007-9e7b-526bf6e84e61.html"
+  },
   {
    "data": "2026-11-23T21:20:56+00:00",
    "fonte": "ANSA CRONACA",
@@ -17,16 +119,34 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/23/blindata-la-procura-di-caltanissetta-de-luca-al-lavoro_10825748-4d48-49ec-8a70-4ec83f72c96b.html"
   },
   {
-   "data": "2026-11-23T21:19:16+00:00",
+   "data": "2026-11-23T21:19:32+00:00",
+   "fonte": "ANSA",
+   "titolo": "Mattarella: 'Per un fisco più leggero contribuiscano tutti, serve progressività'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/23/mattarella-per-un-fisco-piu-leggero-contribuiscano-tutti-serve-progressivita_b77f620d-611d-4e8e-b64a-0b31f44c9803.html"
+  },
+  {
+   "data": "2026-11-23T21:17:38+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Il 'memoriale' di De Gennaro, sequestrati due hard disk",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/23/hard-disk-di-de-gennaro-sequestrato-nei-giorni-scorsi-a-un-membro-della-sua_0f667388-d03f-456e-a1c3-6859254e204a.html"
+   "titolo": "Sequestrati beni per quasi 19 milioni alla compagna di Felicino Riva",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/23/sequestrati-quasi-19-milioni-alla-compagna-di-felicino-riva-per-la-compravendita-di-palazzo_e65a8a32-a15a-4ee2-b2e4-c3e680fd3b4f.html"
   },
   {
    "data": "2026-11-23T21:16:20+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Il gip firma i domiciliari per Pisano, deciderà Montecitorio",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/23/il-gip-firma-i-domiciliari-per-pisano-decidera-montecitorio_132cea0f-2994-46c4-abea-f323c303c876.html"
+  },
+  {
+   "data": "2026-11-23T21:15:42+00:00",
+   "fonte": "ANSA",
+   "titolo": "Jensen Huang torna alla guida di Nvidia, Trump esulta",
+   "url": "https://www.ansa.it/sito/notizie/economia/aziende/2026/11/23/il-cda-di-nvidia-richiama-jensen-huang-alla-guida-rally-di-wall-street_74b46bf0-83fd-4c6e-8f4c-7b8b9842fa26.html"
+  },
+  {
+   "data": "2026-11-23T21:14:53+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Accoltella la convivente mentre scappa da una lite, è grave",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/23/accoltella-la-convivente-durante-una-lite-lei-e-grave_d6df3c24-0cce-4a07-bf4f-62f6e838ee73.html"
   },
   {
    "data": "2026-11-23T21:13:07+00:00",
@@ -36,9 +156,15 @@
   },
   {
    "data": "2026-11-23T21:11:32+00:00",
-   "fonte": "ANSA CRONACA",
+   "fonte": "ANSA",
    "titolo": "Delitto del trapano, dopo 31 anni arriva una condanna grazie al Dna",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/23/delitto-del-trapano-a-genova-carrozziere-condannato-a-30-anni_99601785-2511-4b8f-9944-35f6580afbc2.html"
+  },
+  {
+   "data": "2026-11-23T21:08:26+00:00",
+   "fonte": "ANSA",
+   "titolo": "Zelensky, 'in Libia azione esemplare'. Mosca studia la risposta",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/23/-zelensky-in-libia-azione-esemplare.-mosca-studia-la-risposta_819461b5-d139-49ae-9b7d-9d179e6481b3.html"
   },
   {
    "data": "2026-11-23T21:05:30+00:00",
@@ -63,132 +189,6 @@
    "fonte": "ADNKRONOS",
    "titolo": "Autostrada A4 al buio per il furto di una tonnellata di rame: due arresti al casello di Verona Est",
    "url": "https://www.adnkronos.com/cronaca/furto-rame-autostrada-buio-arresti_5xZlb6nhfKKjSPJaM8gP4c"
-  },
-  {
-   "data": "2026-11-23T19:16:12+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sondaggio politico, Fratelli d'Italia e Pd scendono. M5S cresce",
-   "url": "https://www.adnkronos.com/politica/sondaggio-tg-la7-elezioni-voto-oggi-23-novembre_75z3Z5LLl4W6EQuwz4oPt9"
-  },
-  {
-   "data": "2026-11-23T18:46:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Libia, fonti: \"Attacco ucraino contro navi russe con sostegno dell'intelligence britannica\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-russia-attacco-navi-libia_3sklayC4sKZBwGiScJFYyD"
-  },
-  {
-   "data": "2026-11-23T18:24:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Caso Boccia, processo per truffa a Pisa. Il teste: \"Le dissi di restituire 30mila euro, ma lei rispose 'sono fatti miei'\"",
-   "url": "https://www.adnkronos.com/cronaca/maria-rosaria-boccia-processo-per-truffa_6RAv1BSuLH93EvCPZeGoMH"
-  },
-  {
-   "data": "2026-11-23T17:57:42+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Casa, tenerla vuota costa 4mila euro l’anno, affittarla ne rende 11mila",
-   "url": "https://www.adnkronos.com/economia/casa-tenerla-vuota-costa-4mila-euro-lanno-affittarla-ne-rende-11mila_4C1MdAsYGMCDKHldlBL5jR"
-  },
-  {
-   "data": "2026-11-23T17:51:12+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Milan, Markus Krösche è pronto a sbarcare in rossonero: sarà il nuovo head of football",
-   "url": "https://www.adnkronos.com/sport/milan-krosche-il-nuovo-ds-rossonero_2WDEqCNNaBucK4yvWctHZh"
-  },
-  {
-   "data": "2026-11-23T17:49:04+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Totti e Bocchi, prove di matrimonio? \"C'era un anello sul water...\"",
-   "url": "https://www.adnkronos.com/spettacoli/totti-bocchi-belve-ballando-matrimonio_cbgOKC4ygi09Er5wKvNiP"
-  },
-  {
-   "data": "2026-11-23T17:44:45+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Taricani (UniCredit): \"Con Cdf SafeTeen impegnati a contrastare disagio giovanile\"",
-   "url": "https://www.adnkronos.com/cronaca/taricani-unicredit-con-cdf-safeteen-impegnati-a-contrastare-disagio-giovanile_38UZllyKyB3jPQjMq1bCX1"
-  },
-  {
-   "data": "2026-11-23T17:41:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Fisco, Mattarella: \"Per pagare meno tasse bisogna contribuire tutti\"",
-   "url": "https://www.adnkronos.com/politica/fisco-tasse-mattarella-incontro-primi-magistrati-tributari-in-tirocinio_5Qknxw9PKfT2ZRX7WrWBCP"
-  },
-  {
-   "data": "2026-11-23T17:33:18+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Iran, dissidente Karimi: \"Missili da 4.500 km minaccia reale, per Teheran anche l'Europa è ostile\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/iran-teheran-missili-lunga-gittata_67Z5udT84sqgYYkFU9DZLd"
-  },
-  {
-   "data": "2026-11-23T13:34:56+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Il racconto di Simona, 'dalla violenza non si esce mai'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/23/il-racconto-di-simona-dalla-violenza-non-si-esce-mai_9c20232b-9c56-4811-89a9-447a997c3e3f.html"
-  },
-  {
-   "data": "2026-11-23T13:32:55+00:00",
-   "fonte": "ANSA",
-   "titolo": "In corso l'assemblea dei giornalisti dell'ANSA, il sito potrebbe non essere aggiornato",
-   "url": "https://www.ansa.it/sito/notizie/flash/2026/11/23/in-corso-lassemblea-dei-giornalisti-dellansa-il-sito-potrebbe-non-essere-aggiornato_90b5e24a-4ae1-4f68-8ea4-54b4f1708744.html"
-  },
-  {
-   "data": "2026-11-23T13:30:20+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Fascicolo su De Gennaro a Firenze nell'ambito delle stragi di mafia",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/23/fascicolo-su-de-gennaro-a-firenze-nellambito-delle-stragi-di-mafia_3d17c7bb-b45d-40e9-8681-0f12154ff29e.html"
-  },
-  {
-   "data": "2026-11-23T13:19:58+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il fascicolo su De Gennaro a Firenze nell'ambito delle stragi di mafia",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/23/il-fascicolo-su-de-gennaro-a-firenze-nellambito-delle-stragi-di-mafia_0f667388-d03f-456e-a1c3-6859254e204a.html"
-  },
-  {
-   "data": "2026-11-23T12:56:47+00:00",
-   "fonte": "ANSA",
-   "titolo": "Accoltella la convivente durante una lite, lei è grave",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/23/accoltella-la-convivente-durante-una-lite-lei-e-grave_d6df3c24-0cce-4a07-bf4f-62f6e838ee73.html"
-  },
-  {
-   "data": "2026-11-23T12:49:16+00:00",
-   "fonte": "ANSA",
-   "titolo": "Grillo show, e avvisa: 'Se il giudice dice che il Movimento è mio me lo riprendo'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/22/grillo-show-e-avvisa-se-il-giudice-dice-che-il-movimento-e-mio-me-lo-riprendo_d85903d4-9afa-4b58-b602-96ed3ea730be.html"
-  },
-  {
-   "data": "2026-11-23T12:48:33+00:00",
-   "fonte": "ANSA",
-   "titolo": "Gisèle Pelicot denuncia: 'Una casa editrice ha diffuso mie foto intime'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/23/gisele-pelicot-denuncia-una-casa-editrice-ha-diffuso-mie-foto-intime_81aaf534-1963-41b5-bbdf-1f1a1efac54d.html"
-  },
-  {
-   "data": "2026-11-23T12:42:27+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Istigazione alla corruzione, 2 anni e 8 mesi all'ex eurodeputato Ciocca",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/23/istigazione-alla-corruzione-2-anni-e-8-mesi-allex-eurodeputato-ciocca_5a0e0c02-00f3-48a8-b50b-06df29014c81.html"
-  },
-  {
-   "data": "2026-11-23T12:12:34+00:00",
-   "fonte": "ANSA",
-   "titolo": "Sinner vola in Finlandia per l'operazione al ginocchio",
-   "url": "https://www.ansa.it/sito/notizie/sport/2026/11/23/sinner-vola-in-finlandia-per-loperazione-al-ginocchio_1b338822-6ab2-4899-8735-1a254f285307.html"
-  },
-  {
-   "data": "2026-11-23T12:10:25+00:00",
-   "fonte": "ANSA",
-   "titolo": "Per i media tedeschi 'Mosca è pronta a schierare un'arma nucleare nello spazio entro il 2026'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/23/per-i-media-tedeschi-mosca-e-pronta-a-schierare-unarma-nucleare-nello-spazio_30d84697-2090-481e-a7b1-1d9d7ebe82dd.html"
-  },
-  {
-   "data": "2026-11-23T12:01:07+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Martina morì in Svizzera, chiesta l'archiviazione per Cappato e 3 attivisti",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/23/martina-mori-in-svizzera-chiesta-larchiviazione-per-cappato-e-3-attivisti_0025a513-aeee-49fa-8aca-29e2d0e989aa.html"
-  },
-  {
-   "data": "2026-11-23T11:59:40+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Anche bambini e bambine nella delegazione dell'Unicef da Mattarella",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/23/anche-bambini-e-bambine-nella-delegazione-dellunicef-da-mattarella_b1e841c3-d0f9-4820-a575-2fa27c906335.html"
   }
  ]
 }
