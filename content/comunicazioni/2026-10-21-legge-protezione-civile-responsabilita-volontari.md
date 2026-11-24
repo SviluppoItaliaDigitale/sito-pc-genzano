@@ -2,7 +2,7 @@
 title: "Volontari di protezione civile: il Parlamento approva la nuova legge sulla responsabilità penale"
 date: 2026-10-21T00:02:00+02:00
 lastmod: 2026-11-24
-description: "La legge 212/2026 è in Gazzetta Ufficiale ed entra in vigore l'8 dicembre 2026: per i reati colposi i volontari di protezione civile rispondono solo per colpa grave."
+description: "La legge 212/2026, pubblicata in Gazzetta Ufficiale, entrerà in vigore l'8 dicembre 2026: per i reati colposi i volontari di protezione civile rispondono solo per colpa grave."
 badge: "Informazione"
 canale: "italia"
 priorita: "normale"
