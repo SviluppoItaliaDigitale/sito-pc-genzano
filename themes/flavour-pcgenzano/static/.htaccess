@@ -67,6 +67,10 @@ Redirect 301 /comunicazioni/2026-05-16-infiorata-genzano-2026.html https://www.p
 RedirectMatch 301 ^/assets/ https://www.protezionecivilegenzano.it/
 RedirectMatch 301 ^/cache/ https://www.protezionecivilegenzano.it/
 RedirectMatch 301 ^/immagini_web/ https://www.protezionecivilegenzano.it/
+# Stampa 3D (24/11/2026): i file di ogni oggetto sono passati nella cartella della sua pagina
+# (/stampa-3d/<oggetto>/), i modelli di partenza nel repository. I vecchi indirizzi restano validi.
+RedirectMatch 301 ^/stampa-3d/nominativi/([a-z0-9-]+)/(.+)$ https://www.protezionecivilegenzano.it/stampa-3d/$1/$2
+RedirectMatch 301 ^/stampa-3d/sorgenti/ https://www.protezionecivilegenzano.it/stampa-3d/
 
 # 410 Gone esplicito per i .php legacy del vecchio pannello admin Joomla
 # DEVE venire PRIMA del Redirect 301 della cartella /piano_protezione_civile/

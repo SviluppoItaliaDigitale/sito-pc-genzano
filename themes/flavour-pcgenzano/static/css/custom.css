@@ -8703,8 +8703,8 @@ body.con-barra-gioco .inf-main > nav[aria-label="Percorso"] { display: none; }
 .allerta-stantia[hidden] { display: none !important; }
 
 /* ==========================================================================
- * STAMPA 3D NOMINATIVI v1.0 (23/11/2026) — shortcode stampa3d-nominativo + js/stampa3d-nominativo.js
- * Pagina /stampa-3d/nominativi/: ricerca del numero, vista 3D che si gira, passi numerati.
+ * STAMPA 3D NOMINATIVI v2.0 (24/11/2026) — shortcode stampa3d + js/stampa3d.js
+ * Catalogo /stampa-3d/ per gruppi e una pagina per oggetto /stampa-3d/<id>/ con vista 3D che si gira.
  * Comandi grandi (almeno 48 px) e testo grande, perché la usano volontari di ogni età.
  * ========================================================================== */
 .s3d-etichetta { font-size: 1.25rem; font-weight: 700; color: #003366; margin-bottom: .2rem; }
@@ -8715,12 +8715,23 @@ body.con-barra-gioco .inf-main > nav[aria-label="Percorso"] { display: none; }
 .s3d-cerca { min-height: 3.2rem; font-size: 1.2rem; }
 .s3d-errore { color: #a4161a; font-weight: 600; margin: .5rem 0 0; }
 .s3d-errore:empty { margin: 0; }
-.s3d-esito:focus { outline: none; }
-.s3d-esito:focus-visible { outline: 3px solid #ffbe2e; outline-offset: 4px; }
-.s3d-oggetto { border-top: 2px solid #d9dfe6; padding-top: 1rem; margin-bottom: 1.5rem; }
-.s3d-passo { display: flex; align-items: center; gap: .6rem; color: #003366; margin-top: 1.6rem; }
-.s3d-num { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto;
-  width: 2.2rem; height: 2.2rem; border-radius: 50%; background: #003366; color: #fff; font-size: 1.15rem; }
+.s3d-stato { margin: .5rem 0 0; }
+.s3d-stato:empty { margin: 0; }
+.s3d-dimentica { font-size: inherit; min-height: 24px; }
+.s3d-guardi { margin-bottom: .6rem; }
+/* Catalogo: una scheda per oggetto con l'anteprima del proprio nominativo */
+.s3d-catalogo { list-style: none; padding: 0; margin: .8rem 0 1.5rem; display: grid; gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); }
+.s3d-voce { position: relative; border: 1px solid #c5ceda; border-radius: 6px; background: #fff; padding: .6rem .8rem .8rem;
+  display: flex; flex-direction: column; gap: .35rem; }
+.s3d-voce img { width: 100%; height: auto; aspect-ratio: 11 / 5; object-fit: contain; background: #eef2f6; border-radius: 4px; }
+.s3d-voce-link { display: flex; flex-direction: column; gap: .4rem; text-decoration: none; color: #003366; }
+.s3d-voce-link::after { content: ""; position: absolute; inset: 0; }
+.s3d-voce-nome { font-weight: 700; font-size: 1.1rem; text-decoration: underline; text-underline-offset: 3px; }
+.s3d-voce-breve { font-size: .95rem; color: #1a1a1a; }
+.s3d-voce:hover, .s3d-voce:focus-within { border-color: #003366; box-shadow: 0 2px 8px rgba(0, 51, 102, .15); }
+.s3d-voce-link:focus-visible { outline: none; }
+.s3d-voce:focus-within { outline: 3px solid #ffbe2e; outline-offset: 2px; }
 .s3d-visore { position: relative; width: 100%; max-width: 760px; aspect-ratio: 11 / 5; min-height: 200px;
   background: #eef2f6; border: 1px solid #c5ceda; border-radius: 6px; overflow: hidden; touch-action: pan-y; }
 .s3d-visore .s3d-immagine { width: 100%; height: 100%; object-fit: contain; display: block; }
@@ -8742,11 +8753,13 @@ body.con-barra-gioco .inf-main > nav[aria-label="Percorso"] { display: none; }
   list-style: none; padding: 0; margin: .4rem 0 0; }
 .s3d-griglia a { display: inline-block; padding: .35rem 0; }
 html.a11y-contrast-invert .s3d-etichetta, html.a11y-contrast-invert .s3d-prefisso,
-html.a11y-contrast-invert .s3d-passo, html.a11y-contrast-invert .s3d-tutti summary { color: #fff; }
+html.a11y-contrast-invert .s3d-tutti summary, html.a11y-contrast-invert .s3d-voce-link { color: #fff; }
 html.a11y-contrast-yellow-black .s3d-etichetta, html.a11y-contrast-yellow-black .s3d-prefisso,
-html.a11y-contrast-yellow-black .s3d-passo, html.a11y-contrast-yellow-black .s3d-tutti summary { color: #ffff00; }
+html.a11y-contrast-yellow-black .s3d-tutti summary, html.a11y-contrast-yellow-black .s3d-voce-link { color: #ffff00; }
 @media print {
-  .s3d, .s3d-comandi, .s3d-tutti, #s3d-altro { display: none !important; }
+  .s3d, .s3d-comandi, .s3d-tutti { display: none !important; }
+  .s3d-catalogo { grid-template-columns: repeat(3, 1fr); }
+  .s3d-voce { break-inside: avoid; }
   .s3d-visore { border: 0; }
   .s3d-visore .s3d-tela { display: none !important; }
   .s3d-visore .s3d-immagine { position: static !important; clip: auto !important; width: 100% !important; height: auto !important; }

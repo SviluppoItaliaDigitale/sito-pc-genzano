@@ -525,9 +525,11 @@ jobs:
       - name: "🗂️ Canale dichiarato in ogni articolo"
         run: python3 scripts/check-canale-articoli.py
 
-      # 23/11/2026: la pagina /stampa-3d/nominativi/ offre a ogni volontario
+      # 23/11/2026: le pagine /stampa-3d/<oggetto>/ offrono a ogni volontario
       # i file del suo nominativo; un oggetto o un numero aggiunto in
-      # data/stampa_3d.yaml senza rigenerare i file darebbe un link rotto.
+      # data/stampa_3d.yaml senza rigenerare i file darebbe un link rotto;
+      # dal 24/11/2026 controlla anche che ogni modello <id>.scad pubblicato
+      # coincida con il modello di partenza in scripts/stampa-3d/.
       - name: "🖨️ File di stampa 3D presenti per ogni nominativo"
         run: python3 scripts/genera-stampa-3d.py --check
 
