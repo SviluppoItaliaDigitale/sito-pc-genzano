@@ -70,6 +70,11 @@ RedirectMatch 301 ^/immagini_web/ https://www.protezionecivilegenzano.it/
 # Stampa 3D (24/11/2026): i file di ogni oggetto sono passati nella cartella della sua pagina
 # (/stampa-3d/<oggetto>/), i modelli di partenza nel repository. I vecchi indirizzi restano validi.
 RedirectMatch 301 ^/stampa-3d/nominativi/([a-z0-9-]+)/(.+)$ https://www.protezionecivilegenzano.it/stampa-3d/$1/$2
+# Ogni vecchio modello porta a un modello pubblicato della stessa famiglia, che fa tutti i suoi oggetti
+# (si sceglie con il parametro «tipo»); il resto della vecchia cartella porta al catalogo.
+RedirectMatch 301 ^/stampa-3d/sorgenti/targhetta-nominativo\.scad$ https://www.protezionecivilegenzano.it/stampa-3d/targhetta-petto/targhetta-petto.scad
+RedirectMatch 301 ^/stampa-3d/sorgenti/ganci-nominativo\.scad$ https://www.protezionecivilegenzano.it/stampa-3d/appendiabiti/appendiabiti.scad
+RedirectMatch 301 ^/stampa-3d/sorgenti/oggetti-nominativo\.scad$ https://www.protezionecivilegenzano.it/stampa-3d/tessera-multiuso/tessera-multiuso.scad
 RedirectMatch 301 ^/stampa-3d/sorgenti/ https://www.protezionecivilegenzano.it/stampa-3d/
 
 # 410 Gone esplicito per i .php legacy del vecchio pannello admin Joomla
