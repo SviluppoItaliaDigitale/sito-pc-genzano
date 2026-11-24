@@ -402,6 +402,28 @@ puntate:
   data: '2026-12-18'
 - id: rischio-incendio
   titolo: 'Incendi boschivi: prevenzione e comportamenti'
+  escludi:
+  - fuoco-dallo-spazio
+  - il-fuoco-buono
+  - padella
+  - triangolo
+  - velletri
+  - aprilia
+  - pomezia
+  - cecchina
+  - crans-montana
+  - sant-antonio
+  - ramo-albero
+  - open-data
+  - estintori
+  - incendi-domestici
+  - fuoco-prescritto
+  - ispra-incendi
+  - mezzi-aerei
+  - video
+  - chiusura-campagna
+  - esercitazione
+  - acqua-o-fuoco
   fonti:
   - content/rischi-prevenzione/rischio-incendio.md
   parole:
@@ -412,4 +434,26 @@ puntate:
   ufficiali:
   - https://iononrischio.protezionecivile.gov.it/it/preparati/incendi-boschivi/cosa-sapere/
   - https://iononrischio.protezionecivile.gov.it/it/preparati/incendi-boschivi/cosa-fare/
-  stato: da-fare
+  stato: scartata
+  tentativi: 2
+  motivo: '24/11/2026, secondo tentativo (stesse 9 fonti, Breve, istruzioni rafforzate;
+    audio 1:56) non superato: l''ordine delle azioni ora era giusto, ma le voci dicono
+    due volte «le fonti» (parola vietata) e leggono a voce pezzi delle istruzioni («un
+    tema per i cittadini di Genzano...», «ci sono delle regole da seguire in questo
+    ordine»). Da rifare con istruzioni_extra più brevi, senza citazioni fra virgolette
+    da ripetere.'
+  nota: '24/11/2026, primo tentativo (9 fonti, Breve, audio 3:01) non superato: per
+    l''incendio che minaccia la casa dice «prima di tutto entrare in casa» (le fonti
+    dicono di allontanarsi subito se si può in sicurezza, e di entrare in casa solo
+    se non si può); inverte l''ordine delle ultime possibilità (le fonti: se non puoi
+    allontanarti stenditi a terra; solo se non hai altra scelta attraversa il fuoco).
+    Il resto combaciava con le fonti. Al prossimo errore la puntata va in scartata.'
+  istruzioni_extra: 'ATTENZIONE, regole aggiuntive sull''ordine delle azioni, da rispettare
+    esattamente. Se un incendio minaccia la casa: prima "se puoi allontanarti in sicurezza,
+    fallo subito, nella direzione opposta al fumo e al fuoco"; solo dopo "se non puoi,
+    entra in casa e chiudi porte, finestre, persiane e tutte le prese d''aria". Non
+    dire "prima di tutto entra in casa". Se sei nel bosco: cerca una via di fuga sicura,
+    una strada o un corso d''acqua; se non puoi allontanarti, stenditi a terra in un
+    punto senza vegetazione; solo se non hai altra scelta, attraversa il fuoco dove
+    è meno intenso. Non cambiare quest''ordine. Non usare "chiarissimo", "benissimo",
+    "perfetto" né altri rafforzativi.'
