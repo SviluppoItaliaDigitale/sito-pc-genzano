@@ -77,7 +77,7 @@ L'ESA trasmette i lanci in diretta sui propri canali. L'orario è scomodo, le tr
 
 **Fonti istituzionali:**
 
-- [ESA — Missione FLEX](https://www.esa.int/Applications/Observing_the_Earth/FutureEO/FLEX)
-- [ESA — La fluorescenza della vegetazione](https://www.esa.int/Applications/Observing_the_Earth/FutureEO/FLEX/Fluorescence)
+- [ESA — Missione FLEX: dati essenziali](https://www.esa.int/articles/about-us/directorates/earth-observation-programmes/futureeo/flex/facts-and-figures)
+- [ESA — La fluorescenza della vegetazione](https://www.esa.int/articles/about-us/directorates/earth-observation-programmes/futureeo/flex/fluorescence)
 - [ESA — Copernicus Sentinel-3](https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel_3)
 - [Copernicus Data Space Ecosystem — accesso ai dati](https://dataspace.copernicus.eu/)

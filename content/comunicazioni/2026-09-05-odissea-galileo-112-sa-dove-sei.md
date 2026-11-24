@@ -78,5 +78,5 @@ Ulisse ci ha messo dieci anni. Con Galileo, dice l'Agenzia Spaziale Europea, ce 
 **Fonti istituzionali:**
 
 - [EUSPA — Il 112 e Galileo](https://www.euspa.europa.eu/newsroom-events/news/112-and-galileo-answering-call-and-saving-lives)
-- [ESA — Galileo](https://www.esa.int/Applications/Satellite_navigation/Galileo)
+- [ESA — Che cos'è Galileo](https://www.esa.int/articles/about-us/directorates/resilience-navigation-and-connectivity/navigation/galileo/what-is-galileo)
 - [European GNSS Service Centre](https://www.gsc-europa.eu/)
