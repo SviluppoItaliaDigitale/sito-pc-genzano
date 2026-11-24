@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-11-24T17:04",
+  "aggiornato": "2026-11-24T18:07",
   "data_lunga": "martedì 24 novembre 2026",
-  "aggiornato_label": "martedì 24 novembre 2026, ore 17:04",
+  "aggiornato_label": "martedì 24 novembre 2026, ore 18:07",
   "alba": "07:08",
   "tramonto": "16:42",
   "corrente": {
-    "temp": 10.7,
-    "percepita": 8.8,
+    "temp": 10.2,
+    "percepita": 8.4,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
-    "umidita": 81,
-    "vento": 9,
-    "raffiche": 44
+    "umidita": 80,
+    "vento": 7,
+    "raffiche": 42
   },
   "giorni": [
     {
@@ -44,7 +44,7 @@
       "cielo": "Rovesci",
       "tmax": 13,
       "tmin": 9,
-      "pioggia": 100,
+      "pioggia": 98,
       "pioggia_mm": 14.3,
       "raffiche": 71,
       "uv": 3,
@@ -56,7 +56,7 @@
       "cielo": "Temporale",
       "tmax": 12,
       "tmin": 8,
-      "pioggia": 76,
+      "pioggia": 90,
       "pioggia_mm": 10.6,
       "raffiche": 37,
       "uv": 3,
