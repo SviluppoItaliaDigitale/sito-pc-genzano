@@ -545,6 +545,11 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-title">Stampa 3D</p>
   <p class="ms-card-desc">Per i volontari: oggetti con il nominativo ALFA da scaricare o ordinare online, divisi per uso (giubbetto, radio, attrezzatura, sede), con vista in 3D e scheda tecnica.</p>
 </a>
+<a class="ms-card ms-edu" href="/elettronica-emergenza/">
+  <div class="ms-card-icon"><i class="bi bi-cpu"></i></div>
+  <p class="ms-card-title">Elettronica per l'emergenza</p>
+  <p class="ms-card-desc">Progetti con Arduino, ESP32 e Raspberry Pi per i volontari: sensore del livello dell'acqua, pluviometro, nodo Meshtastic per la squadra, schermo dell'allerta in sede. Codice, istruzioni e custodie da stampare.</p>
+</a>
 <a class="ms-card ms-edu" href="/esercitazioni/">
   <div class="ms-card-icon"><i class="bi bi-list-task"></i></div>
   <p class="ms-card-title">Addestramento e buone pratiche</p>

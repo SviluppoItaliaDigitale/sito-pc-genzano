@@ -2148,3 +2148,24 @@ ecoAmerica
 civvy
 eliasheuninck
 macdaddyno
+# Elettronica per l'emergenza (24/11/2026): termini tecnici e nomi di file dei progetti
+reed
+pressacavo
+pressacavi
+millefori
+antirimbalzo
+preset
+dBm
+dBi
+tkinter
+microSD
+blanking
+arduino
+esp
+ino
+config
+txt
+ini
+index
+schermoallerta
+pin
