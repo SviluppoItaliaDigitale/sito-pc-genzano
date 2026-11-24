@@ -60,7 +60,7 @@ Queste schede sono **strumenti operativi pronti da stampare A4** per personale, 
 
 ## Riferimenti istituzionali
 
-- **D.Lgs. 81/2008** (artt. 43-46) e **D.M. 2 settembre 2021** — gestione delle emergenze nei luoghi di lavoro: piano di emergenza ed esercitazioni almeno annuali
+- **D.Lgs. 81/2008** (artt. 43-46) e **D.M. 2 settembre 2021** — gestione delle emergenze nei luoghi di lavoro e, per il decreto del 2021, della sicurezza antincendio in esercizio e in emergenza: piano di emergenza ed esercitazioni antincendio almeno annuali, salvo diverse indicazioni delle regole tecniche di prevenzione incendi
 - **Regola tecnica di prevenzione incendi per le strutture sanitarie** — D.M. 18 settembre 2002, aggiornato dal D.M. 19 marzo 2015
 - **WHO/PAHO** — Hospital Safety Index, guida per i valutatori (2ª edizione); **Sphere Standards 2018**
 - Lezioni condivise dagli operatori del settore su emergenze reali (terremoto Centro Italia 2016, pandemia Covid-19 nelle RSA)
