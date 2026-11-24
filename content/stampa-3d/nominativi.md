@@ -3,7 +3,7 @@ title: "Oggetti con il tuo nominativo"
 description: "Scrivi il numero del tuo nominativo ALFA: vedi in 3D targhetta, portachiavi, ganci, tessera e targa da tavolo, scarichi il file e lo ordini online."
 layout: "single"
 date: 2026-11-23
-dataUltimaRevisione: "2026-11-24"
+dataUltimaRevisione: 2026-11-24
 image: ""
 tts: true
 indice: false
@@ -25,7 +25,7 @@ Il prezzo lo stabilisce il servizio di stampa e dipende da materiale, tempi e sp
 <details class="faq-item">
 <summary><strong>Ho una stampante 3D: posso stamparli io?</strong></summary>
 
-Sì. Usa il PETG, con strati da 0,2 mm e riempimento al 100%. Nessun oggetto ha bisogno di supporti, se lo stampi nella posizione in cui è salvato il file: targhetta, portachiavi, tessera ed etichette in piano con le scritte verso l'alto, i ganci e il porta radio in piedi sul lato sinistro, la targa da tavolo in piedi. Non girarli nel programma di stampa. Per le scritte di un altro colore, cambia filamento dove finisce la base e cominciano scritte e bordo: lo vedi nell'anteprima degli strati del programma di stampa.
+Sì. Usa il PETG, con strati da 0,2 mm e riempimento al 100%. Nessun oggetto ha bisogno di supporti, se lo stampi nella posizione in cui è salvato il file: targhetta, portachiavi, tessera ed etichette in piano con le scritte verso l'alto, i ganci e il porta radio in piedi sul lato sinistro, la targa da tavolo in piedi. Non girarli nel programma di stampa. Per avere le scritte di un altro colore cambiando filamento a metà stampa, il metodo funziona solo con gli oggetti stampati in piano (targhetta, portachiavi, tessera ed etichette): cambia filamento dove finisce la base e cominciano scritte e bordo, come vedi nell'anteprima degli strati del programma di stampa. Nei ganci, nel porta radio e nella targa da tavolo base e scritte crescono negli stessi strati: colora le scritte a mano con un pennarello a vernice oppure usa una stampante a più colori.
 
 </details>
 
