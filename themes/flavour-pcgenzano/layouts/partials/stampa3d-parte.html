@@ -105,11 +105,13 @@
 
 {{- else if eq $parte "nome" -}}
 {{- with $o.anteprima.nome }}
-<div class="s3d-nome" data-s3d="nome-box" hidden>
-  <label for="s3d-nome" class="form-label s3d-etichetta">2. Nome e cognome <span class="s3d-facoltativo">(se vuoi)</span></label>
-  <p id="s3d-nome-aiuto" class="s3d-aiuto">{{ if eq .lato "retro" }}Va sul retro, incisa: si legge girando l'oggetto.{{ else }}Va sul davanti, in rilievo, sotto le altre scritte.{{ end }} Il file si prepara su questo dispositivo: nome e cognome non vengono inviati né salvati.</p>
+{{- /* «etichetta» e «aiuto» facoltativi in anteprima.nome: per il portachiavi la riga può essere il nome del mezzo */}}
+{{- $etichetta := .etichetta | default "Nome e cognome" }}
+<div class="s3d-nome" data-s3d="nome-box" data-s3d-cosa="{{ lower $etichetta }}" hidden>
+  <label for="s3d-nome" class="form-label s3d-etichetta">2. {{ $etichetta }} <span class="s3d-facoltativo">(se vuoi)</span></label>
+  <p id="s3d-nome-aiuto" class="s3d-aiuto">{{ with .aiuto }}{{ . }} {{ end }}{{ if eq .lato "retro" }}Va sul retro, incisa: si legge girando l'oggetto.{{ else }}Va sul davanti, in rilievo, sotto le altre scritte.{{ end }} Il file si prepara su questo dispositivo: ciò che scrivi non viene inviato né salvato.</p>
   <div class="s3d-riga">
-    <input type="text" class="form-control form-control-lg s3d-campo-nome" id="s3d-nome" name="nome" autocomplete="name" maxlength="32" aria-describedby="s3d-nome-aiuto s3d-nome-errore">
+    <input type="text" class="form-control form-control-lg s3d-campo-nome" id="s3d-nome" name="nome" autocomplete="{{ if .etichetta }}off{{ else }}name{{ end }}" maxlength="32" aria-describedby="s3d-nome-aiuto s3d-nome-errore">
     <button type="button" class="btn btn-outline-primary btn-lg s3d-cerca" data-s3d="nome-aggiungi">Aggiungi</button>
   </div>
   <p id="s3d-nome-errore" class="s3d-errore" role="alert"></p>
