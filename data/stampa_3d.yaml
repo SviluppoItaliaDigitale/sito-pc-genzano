@@ -26,6 +26,10 @@ categorie:
     titolo: "Per la radio"
   - id: "attrezzatura"
     titolo: "Zaino, casco e attrezzatura"
+  - id: "campo"
+    titolo: "Al campo e in mensa"
+  - id: "kit"
+    titolo: "Kit, pile e schede"
   - id: "sede"
     titolo: "In sede e in sala operativa"
 
@@ -626,3 +630,383 @@ oggetti:
       - "Se vuoi, passa un nastro nel foro in alto e fai un nodo."
       - "Tienilo nel manuale, nel quaderno della sala radio o nella tasca dello zaino."
       - "Per compitare una parola alla radio, di' la parola dell'alfabeto per ogni lettera: per esempio «ALFA» si dice Alfa, Lima, Foxtrot, Alfa."
+
+  # ---------- Al campo e in mensa (famiglia campo-nominativo.scad) ----------
+  # «nome» = riquadro libero [x0, y0, x1, y1] dove il sito aggiunge la riga con nome e cognome,
+  # nelle stesse coordinate di «bandiera»; «quota_scritte» = quota della faccia delle scritte.
+
+  - id: "segna-tazza"
+    nome: "Segna tazza"
+    articolo: "il segna tazza"
+    descrizione: "Piccola targhetta con una clip che si infila sul manico della tazza, mai sul bordo dove si beve. Porta la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». Serve a riconoscere la propria tazza in mensa o al campo. Non tocca il cibo né le bevande e non va usato come stoviglia."
+    categoria: "campo"
+    breve: "Si infila sul manico della tazza, per riconoscerla in mensa."
+    sorgente: "campo-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-23.43, 6.5, -14.43, 12.5]
+      nome: [-25, -2, 25, 5]
+      quota_scritte: 2.5
+      vista_3d: true
+    parametri:
+      tipo: "tazza"
+      parte: "tutto"
+    misure: "6,8 × 3,2 cm, clip alta 8 mm"
+    lunghezza_mm: 68
+    peso_g: 7
+    scheda:
+      - ["Ingombro", "68 × 32 mm; targhetta spessa 3,5 mm, clip alta 8 mm"]
+      - ["Peso", "circa 7 g"]
+      - ["Clip", "foro ovale di 9 × 13 mm per un manico spesso 8 mm e largo 12 mm, con 0,5 mm di gioco per lato; bocca larga 6,5 mm, così la clip si apre un poco e resta ferma"]
+      - ["Manico", "per i manici delle tazze non c'è una misura unica: misura il tuo prima di ordinare; nel modello OpenSCAD si cambiano manico_largo e manico_spesso"]
+      - ["Altezza delle lettere", "nominativo 6 mm; righe piccole 4 mm"]
+      - ["Spazio per nome e cognome", "fascia libera di 50 × 7 mm sotto il nominativo"]
+      - ["Posizione di stampa", "in piano, già orientato nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "niente: si infila sul manico"
+    montaggio:
+      - "Misura il manico della tazza nel punto dove vuoi mettere la clip: deve essere spesso circa 8 mm e largo circa 12 mm."
+      - "Appoggia la bocca della clip sul manico, dal lato dell'apertura per le dita."
+      - "Spingi finché il manico entra nel foro: la clip si apre un poco e poi si richiude."
+      - "Controlla che la targhetta non arrivi al bordo della tazza, dove si beve."
+      - "Togli la clip prima di lavare la tazza in lavastoviglie."
+
+  - id: "etichetta-borraccia"
+    nome: "Etichetta per la borraccia"
+    articolo: "l'etichetta"
+    descrizione: "Targhetta con un occhiello rinforzato per un moschettone o un cordino, da appendere alla borraccia. Porta la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». Non tocca l'acqua né il cibo e non va usata come stoviglia."
+    categoria: "campo"
+    breve: "Si appende alla borraccia con un moschettone o un cordino."
+    sorgente: "campo-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-25.32, 7.5, -15.57, 14.0]
+      nome: [-30, -1, 30, 6]
+      quota_scritte: 3.5
+    parametri:
+      tipo: "borraccia"
+      parte: "tutto"
+    misure: "8,8 × 3,4 cm, spessa 4,5 mm"
+    lunghezza_mm: 88
+    peso_g: 12
+    scheda:
+      - ["Ingombro", "88 × 34 mm, spessa 4,5 mm (3,5 mm di base e 1 mm di scritte)"]
+      - ["Peso", "circa 12 g"]
+      - ["Occhiello", "diametro 22 mm con foro da 8 mm: 7 mm di plastica intorno al foro"]
+      - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4 mm"]
+      - ["Spazio per nome e cognome", "fascia libera di 60 × 7 mm sotto il nominativo"]
+      - ["Posizione di stampa", "in piano, già orientata nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "un piccolo moschettone con il filo spesso al massimo 7 mm, oppure un cordino"
+    montaggio:
+      - "Apri il moschettone e passalo nell'occhiello dell'etichetta."
+      - "Aggancia il moschettone all'anello o al tappo della borraccia, lontano dal beccuccio."
+      - "Con il cordino: passalo nell'occhiello e legalo al collo della borraccia con un nodo stretto."
+
+  - id: "porta-posate"
+    nome: "Porta posate"
+    articolo: "il porta posate"
+    descrizione: "Astuccio piatto in cui si infilano le posate vere di metallo: forchetta, coltello e cucchiaio. Sopra porta la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». Le posate non si stampano: le righe fra gli strati trattengono lo sporco. L'astuccio non tocca il cibo e non va usato come stoviglia: metti dentro solo posate pulite."
+    categoria: "campo"
+    breve: "Astuccio per le tue posate di metallo, da tenere nello zaino."
+    sorgente: "campo-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-55.32, 10.25, -45.57, 16.75]
+      nome: [-60, 1.5, 0, 8.5]
+      quota_scritte: 26.0
+      vista_3d: true
+      fianco: -107.25   # si stampa in piedi sul lato chiuso (x = -107,25), senza supporti
+    parametri:
+      tipo: "posate"
+      parte: "tutto"
+    misure: "21,5 × 5 cm, spesso 2,7 cm"
+    lunghezza_mm: 215
+    peso_g: 80
+    scheda:
+      - ["Ingombro", "215 × 50 mm, spesso 27 mm con le scritte"]
+      - ["Peso", "circa 80 g"]
+      - ["Spazio interno", "212 × 46 × 22 mm, pareti da 2 mm: entrano forchetta e cucchiaio da tavola (di solito lunghi 19-21 cm); il coltello (21-24,5 cm) può sporgere di qualche centimetro"]
+      - ["Apertura", "su un lato corto, con un incavo per le dita; foro di scolo da 6 mm sul fondo"]
+      - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4 mm"]
+      - ["Spazio per nome e cognome", "fascia libera di 60 × 7 mm sotto il nominativo"]
+      - ["Posizione di stampa", "in piedi sul lato chiuso, già orientato nel file, senza supporti; serve una stampante con almeno 22 cm di altezza utile"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "le tue posate di metallo, pulite"
+    montaggio:
+      - "Lava e asciuga le posate prima di metterle nell'astuccio."
+      - "Infilale dall'apertura, con i manici verso l'incavo per le dita."
+      - "Dopo l'uso lava le posate prima di rimetterle dentro; l'astuccio si lava a mano con acqua e sapone."
+
+  - id: "etichetta-gavetta"
+    nome: "Etichetta per la gavetta"
+    articolo: "l'etichetta"
+    descrizione: "Targhetta con un foro per il cordino, da legare alla gavetta. Porta la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». Non tocca il cibo e non va usata come stoviglia. Toglila prima di mettere la gavetta sul fuoco: la plastica si deforma con il calore."
+    categoria: "campo"
+    breve: "Si lega alla gavetta con un cordino, per riconoscerla al campo."
+    sorgente: "campo-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-25.32, 7.5, -15.57, 14.0]
+      nome: [-30, -1, 30, 6]
+      quota_scritte: 3.0
+    parametri:
+      tipo: "gavetta"
+      parte: "tutto"
+    misure: "8 × 3,4 cm, spessa 4 mm"
+    lunghezza_mm: 80
+    peso_g: 10
+    scheda:
+      - ["Ingombro", "80 × 34 mm, spessa 4 mm (3 mm di base e 1 mm di scritte)"]
+      - ["Peso", "circa 10 g"]
+      - ["Foro", "diametro 4,5 mm, in un occhiello da 14 mm, per un cordino sottile"]
+      - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4 mm"]
+      - ["Spazio per nome e cognome", "fascia libera di 60 × 7 mm sotto il nominativo"]
+      - ["Posizione di stampa", "in piano, già orientata nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "un cordino sottile, da 4 mm al massimo"
+    montaggio:
+      - "Passa il cordino nel foro dell'etichetta."
+      - "Lega il cordino al manico o all'anello della gavetta, con un nodo stretto."
+      - "Prima di mettere la gavetta sul fuoco o sul fornello, slega l'etichetta."
+
+  - id: "targhetta-brandina"
+    nome: "Targhetta per la brandina"
+    articolo: "la targhetta"
+    descrizione: "Targhetta con due asole alle estremità, da fissare alla brandina o alla tenda con due fascette o con una striscia di velcro. Porta la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». Serve a riconoscere il proprio posto al campo."
+    categoria: "campo"
+    breve: "Si fissa alla brandina o alla tenda con fascette o velcro."
+    sorgente: "campo-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-25.32, 7.5, -15.57, 14.0]
+      nome: [-30, -1, 30, 6]
+      quota_scritte: 3.0
+    parametri:
+      tipo: "brandina"
+      parte: "tutto"
+    misure: "9 × 3,4 cm, spessa 4 mm"
+    lunghezza_mm: 90
+    peso_g: 11
+    scheda:
+      - ["Ingombro", "90 × 34 mm, spessa 4 mm (3 mm di base e 1 mm di scritte)"]
+      - ["Peso", "circa 11 g"]
+      - ["Asole", "due, da 4,5 × 22 mm, alle estremità: per fascette spesse fino a 4 mm o velcro largo fino a 2 cm"]
+      - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4 mm"]
+      - ["Spazio per nome e cognome", "fascia libera di 60 × 7 mm sotto il nominativo"]
+      - ["Posizione di stampa", "in piano, già orientata nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "due fascette, meglio riutilizzabili, oppure una striscia di velcro a doppia faccia larga fino a 2 cm"
+    montaggio:
+      - "Appoggia la targhetta sul telaio della brandina o su un tirante della tenda, dove si vede."
+      - "Passa una fascetta in ogni asola e intorno al tubo o al tirante."
+      - "Stringi le fascette senza schiacciare la targhetta e taglia la parte in più."
+      - "Con il velcro: passa la striscia nelle due asole, avvolgila intorno al tubo e chiudila."
+
+  # ---------- Kit, pile e schede ----------
+
+  - id: "porta-pile-aa"
+    nome: "Porta pile stilo AA"
+    articolo: "il porta pile"
+    descrizione: "Contenitore aperto per 4 pile stilo AA, da tenere nel kit o sul tavolo della sala radio. Sul lato largo porta la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». Le pile restano in piedi e sporgono in alto, così si prendono con due dita."
+    categoria: "kit"
+    breve: "Tiene in ordine 4 pile stilo AA nel kit o in sala radio."
+    sorgente: "campo-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-25.32, 27.0, -15.57, 33.5]
+      nome: [-30, 18.5, 30, 25.5]
+      quota_scritte: 9.75
+      vista_3d: true
+      assi: [[1, 0, 0], [0, 0, 1], [0, -1, 0]]   # nella vista si sdraia con le scritte verso l'alto
+    parametri:
+      tipo: "pile_aa"
+      parte: "tutto"
+    misure: "7,2 × 2,1 cm, alto 3,6 cm"
+    lunghezza_mm: 72
+    peso_g: 32
+    scheda:
+      - ["Ingombro", "72 × 21 mm con le scritte, alto 36 mm"]
+      - ["Peso", "circa 32 g"]
+      - ["Sedi", "4, diametro 15,5 mm e profonde 34 mm: le pile AA misurano al massimo 14,5 × 50,5 mm (IEC 60086-2) e sporgono di circa 16 mm"]
+      - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4 mm, sul lato largo"]
+      - ["Spazio per nome e cognome", "fascia libera di 60 × 7 mm sotto il nominativo"]
+      - ["Posizione di stampa", "in piedi, con le sedi aperte in alto, già orientato nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "4 pile stilo AA"
+    montaggio:
+      - "Infila una pila in ogni sede, con il polo positivo in alto, così si vede subito quali sono cariche."
+      - "Tieni il porta pile in piedi nel kit o sul tavolo."
+
+  - id: "porta-pile-aaa"
+    nome: "Porta pile ministilo AAA"
+    articolo: "il porta pile"
+    descrizione: "Contenitore aperto per 4 pile ministilo AAA, da tenere nel kit o sul tavolo della sala radio. Sul lato largo porta la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». Le pile restano in piedi e sporgono in alto, così si prendono con due dita."
+    categoria: "kit"
+    breve: "Tiene in ordine 4 pile ministilo AAA nel kit o in sala radio."
+    sorgente: "campo-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-25.32, 25.0, -15.57, 31.5]
+      nome: [-28, 16.5, 28, 23.5]
+      quota_scritte: 7.75
+      vista_3d: true
+      assi: [[1, 0, 0], [0, 0, 1], [0, -1, 0]]   # nella vista si sdraia con le scritte verso l'alto
+    parametri:
+      tipo: "pile_aaa"
+      parte: "tutto"
+    misure: "6,4 × 1,7 cm, alto 3,4 cm"
+    lunghezza_mm: 64
+    peso_g: 26
+    scheda:
+      - ["Ingombro", "64 × 17 mm con le scritte, alto 34 mm"]
+      - ["Peso", "circa 26 g"]
+      - ["Sedi", "4, diametro 11,5 mm e profonde 32 mm: le pile AAA misurano al massimo 10,5 × 44,5 mm (IEC LR03, scheda Energizer EN92) e sporgono di circa 12 mm"]
+      - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4 mm, sul lato largo"]
+      - ["Spazio per nome e cognome", "fascia libera di 56 × 7 mm sotto il nominativo"]
+      - ["Posizione di stampa", "in piedi, con le sedi aperte in alto, già orientato nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "4 pile ministilo AAA"
+    montaggio:
+      - "Infila una pila in ogni sede, con il polo positivo in alto, così si vede subito quali sono cariche."
+      - "Tieni il porta pile in piedi nel kit o sul tavolo."
+
+  - id: "porta-schede"
+    nome: "Porta schede di memoria e SIM"
+    articolo: "il porta schede"
+    descrizione: "Vassoio con gli alloggi per 2 schede SD, 2 microSD e 2 nano SIM, ognuno con un incavo per il dito. Porta la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». Tiene in ordine le schede delle radio, delle fotocamere e dei telefoni di servizio, sul tavolo o nel cassetto."
+    categoria: "kit"
+    breve: "Tiene in ordine schede SD, microSD e nano SIM."
+    sorgente: "campo-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-25.32, 22.0, -15.57, 28.5]
+      nome: [-30, 13.5, 30, 20.5]
+      quota_scritte: 3.5
+      vista_3d: true
+    parametri:
+      tipo: "schede"
+      parte: "tutto"
+    misure: "11,7 × 6,4 cm, spesso 4,5 mm"
+    lunghezza_mm: 117
+    peso_g: 27
+    scheda:
+      - ["Ingombro", "117 × 64 mm, spesso 4,5 mm (3,5 mm di base e 1 mm di scritte)"]
+      - ["Peso", "circa 27 g"]
+      - ["Alloggi SD", "2, da 25 × 33 mm e profondi 2,2 mm: le schede SD misurano 24 × 32 × 2,1 mm"]
+      - ["Alloggi microSD", "2, da 12 × 16 mm e profondi 1,2 mm: le microSD misurano 11 × 15 × 1 mm"]
+      - ["Alloggi nano SIM", "2, da 9,8 × 13,3 mm e profondi 0,9 mm: le nano SIM misurano 8,8 × 12,3 × 0,67 mm (ETSI TS 102 221)"]
+      - ["Incavi per il dito", "uno per alloggio, sul bordo basso, con 1 mm di plastica sotto"]
+      - ["Spazio per nome e cognome", "fascia libera di 60 × 7 mm sotto il nominativo"]
+      - ["Posizione di stampa", "in piano, già orientato nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "niente: si appoggia sul tavolo o nel cassetto"
+    montaggio:
+      - "Appoggia ogni scheda nel suo alloggio, con l'etichetta in alto."
+      - "Per toglierla, premi con il dito sull'incavo e fai scivolare la scheda verso il bordo."
+      - "Il vassoio è aperto: tienilo in piano, in un cassetto o in una scatola."
+
+  # ---------- In sede ----------
+
+  - id: "segnalibro-registro"
+    nome: "Segnalibro per il registro"
+    articolo: "il segnalibro"
+    descrizione: "Segnalibro robusto, con cornice in rilievo, per il registro di sala operativa. Porta in alto la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma», nella parte che resta fuori dal registro."
+    categoria: "sede"
+    breve: "Segna la pagina del registro di sala operativa."
+    sorgente: "campo-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-25.32, 88.25, -15.57, 94.75]
+      nome: [-25, 79, 25, 86]
+      quota_scritte: 2.0
+    parametri:
+      tipo: "registro"
+      parte: "tutto"
+    misure: "6 × 20 cm, spesso 3 mm"
+    lunghezza_mm: 200
+    peso_g: 31
+    scheda:
+      - ["Ingombro", "60 × 200 mm, spesso 3 mm (2 mm di base e 1 mm di scritte e cornice)"]
+      - ["Peso", "circa 31 g"]
+      - ["Cornice", "in rilievo di 1 mm, larga 1,2 mm, che irrigidisce il segnalibro"]
+      - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4 mm, in alto"]
+      - ["Spazio per nome e cognome", "fascia libera di 50 × 7 mm sotto il nominativo"]
+      - ["Posizione di stampa", "in piano, già orientato nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "niente"
+    montaggio:
+      - "Infila il segnalibro nel registro con le scritte in alto, così restano fuori dalle pagine."
+      - "Spostalo alla pagina del turno quando prendi servizio."
+
+  - id: "cartellino-armadietto"
+    nome: "Cartellino per l'armadietto"
+    articolo: "il cartellino"
+    descrizione: "Cartellino da attaccare all'anta dell'armadietto con nastro biadesivo o con due viti. Porta la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». I fori delle viti sono alle estremità, lontani dalle scritte."
+    categoria: "sede"
+    breve: "Si attacca all'armadietto con biadesivo o due viti."
+    sorgente: "campo-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-25.32, 6.5, -15.57, 13.0]
+      nome: [-30, -2, 30, 5]
+      quota_scritte: 3.0
+    parametri:
+      tipo: "armadietto"
+      parte: "tutto"
+    misure: "9 × 3,6 cm, spesso 4 mm"
+    lunghezza_mm: 90
+    peso_g: 12
+    scheda:
+      - ["Ingombro", "90 × 36 mm, spesso 4 mm (3 mm di base e 1 mm di scritte)"]
+      - ["Peso", "circa 12 g"]
+      - ["Fori", "2 per viti a testa svasata da 4 mm (foro 4,4 mm, svasatura 8,8 mm), a 78 mm l'uno dall'altro, lontani dalle scritte"]
+      - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4 mm"]
+      - ["Spazio per nome e cognome", "fascia libera di 60 × 7 mm sotto il nominativo"]
+      - ["Posizione di stampa", "in piano, già orientato nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "nastro biadesivo di montaggio, oppure due viti a testa svasata da 4 mm adatte all'anta"
+    montaggio:
+      - "Pulisci e asciuga il punto dell'anta dove vuoi mettere il cartellino."
+      - "Con il biadesivo: incolla due strisce sul retro, lontano dai fori, e premi forte per 30 secondi."
+      - "Con le viti: appoggia il cartellino, segna i due fori, fora l'anta e avvita senza stringere troppo."
