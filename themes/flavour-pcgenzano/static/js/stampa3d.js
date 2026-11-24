@@ -127,3 +127,113 @@ if (daIndirizzo) {
 if (!iniziale) iniziale = ricordato();
 if (iniziale) campo.value = String(iniziale);
 applica(iniziale);
+
+/* ---------- Catalogo: cerca e gruppi ----------
+   Senza JavaScript il catalogo resta intero, diviso per gruppi. Con JavaScript compaiono il campo di
+   ricerca e i pulsanti dei gruppi (aria-pressed); il numero degli oggetti mostrati si annuncia. */
+const filtri = document.querySelector('[data-s3d="filtri"]');
+if (filtri) {
+  const cerca = document.getElementById('s3d-cerca');
+  const chip = Array.from(filtri.querySelectorAll('[data-s3d-filtro]'));
+  const conteggio = filtri.querySelector('[data-s3d="conteggio"]');
+  const nessuno = document.querySelector('[data-s3d="nessuno"]');
+  const voci = Array.from(document.querySelectorAll('.s3d-voce'));
+  const gruppi = Array.from(document.querySelectorAll('[data-s3d-gruppo]'));
+  let gruppo = '';
+  const norm = t => String(t || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').trim();
+  function filtra() {
+    const parole = norm(cerca.value).split(/\s+/).filter(Boolean);
+    let n = 0;
+    voci.forEach(li => {
+      const testo = norm(li.dataset.s3dTesto);
+      const si = (!gruppo || li.dataset.s3dCat === gruppo) && parole.every(p => testo.indexOf(p) >= 0);
+      li.hidden = !si;
+      if (si) n++;
+    });
+    gruppi.forEach(ul => {
+      const vuoto = !ul.querySelector('.s3d-voce:not([hidden])');
+      ul.hidden = vuoto;
+      const titolo = ul.previousElementSibling;
+      if (titolo && /^H[2-3]$/.test(titolo.tagName)) titolo.hidden = vuoto;
+    });
+    if (nessuno) nessuno.hidden = n > 0;
+    conteggio.textContent = n === voci.length ? `${n} oggetti.` : `${n} ${n === 1 ? 'oggetto' : 'oggetti'} su ${voci.length}.`;
+  }
+  chip.forEach(b => b.addEventListener('click', () => {
+    gruppo = b.dataset.s3dFiltro;
+    chip.forEach(c => c.setAttribute('aria-pressed', c === b ? 'true' : 'false'));
+    filtra();
+  }));
+  cerca.addEventListener('input', filtra);
+  filtri.hidden = false;
+  filtra();
+}
+
+/* ---------- Pagina di un oggetto: schede ----------
+   Le sezioni (data-s3d-titolo) diventano schede con il modello ARIA «tablist»: frecce, Inizio e Fine
+   per spostarsi. Un collegamento a #come-stamparlo o con data-s3d-vai apre la scheda giusta.
+   In stampa le sezioni tornano tutte visibili (CSS). */
+const schede = document.querySelector('[data-s3d="schede"]');
+if (schede) {
+  const sezioni = Array.from(schede.querySelectorAll('[data-s3d-titolo]'));
+  const lista = document.createElement('div');
+  lista.className = 's3d-tab d-print-none';
+  lista.setAttribute('role', 'tablist');
+  lista.setAttribute('aria-label', 'Informazioni sull\'oggetto');
+  const tab = sezioni.map((s, i) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.id = `s3d-tab-${s.id}`;
+    b.className = 's3d-tab-voce';
+    b.setAttribute('role', 'tab');
+    b.setAttribute('aria-controls', s.id);
+    b.textContent = s.dataset.s3dTitolo;
+    s.setAttribute('role', 'tabpanel');
+    s.setAttribute('aria-labelledby', b.id);
+    s.setAttribute('tabindex', '0');
+    const h = s.querySelector('h2');
+    if (h) h.classList.add('visually-hidden');
+    b.addEventListener('click', () => apri(i, false));
+    lista.appendChild(b);
+    return b;
+  });
+  function apri(i, fuoco) {
+    tab.forEach((b, k) => {
+      const si = k === i;
+      b.setAttribute('aria-selected', si ? 'true' : 'false');
+      b.tabIndex = si ? 0 : -1;
+      sezioni[k].hidden = !si;
+    });
+    if (fuoco) tab[i].focus();
+  }
+  lista.addEventListener('keydown', ev => {
+    const i = tab.indexOf(document.activeElement);
+    if (i < 0) return;
+    let j = null;
+    if (ev.key === 'ArrowRight') j = (i + 1) % tab.length;
+    else if (ev.key === 'ArrowLeft') j = (i - 1 + tab.length) % tab.length;
+    else if (ev.key === 'Home') j = 0;
+    else if (ev.key === 'End') j = tab.length - 1;
+    if (j === null) return;
+    ev.preventDefault();
+    apri(j, true);
+  });
+  schede.insertBefore(lista, schede.firstChild);
+  schede.classList.add('s3d-schede-attive');
+  const daHash = () => sezioni.findIndex(s => `#${s.id}` === location.hash);
+  apri(Math.max(0, daHash()), false);
+  window.addEventListener('hashchange', () => { const i = daHash(); if (i >= 0) apri(i, false); });
+  document.addEventListener('click', ev => {
+    const a = ev.target.closest('a[href^="#"]');
+    if (!a) return;
+    const i = sezioni.findIndex(s => `#${s.id}` === a.getAttribute('href'));
+    if (i < 0) return;
+    ev.preventDefault();
+    apri(i, false);
+    const fermo = matchMedia('(prefers-reduced-motion: reduce)').matches || document.documentElement.classList.contains('a11y-pause-anim');
+    lista.scrollIntoView({ block: 'start', behavior: fermo ? 'auto' : 'smooth' });
+    tab[i].focus({ preventScroll: true });
+  });
+  window.addEventListener('beforeprint', () => sezioni.forEach(s => { s.hidden = false; }));
+  window.addEventListener('afterprint', () => apri(Math.max(0, tab.findIndex(b => b.getAttribute('aria-selected') === 'true')), false));
+}

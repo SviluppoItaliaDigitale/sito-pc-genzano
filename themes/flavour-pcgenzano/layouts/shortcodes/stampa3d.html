@@ -1,135 +1,17 @@
 {{- /*
-  Shortcode stampa3d — oggetti da stampare in 3D con il nominativo dei volontari.
-  Dati: data/stampa_3d.yaml. File di ogni oggetto in static/stampa-3d/<id>/ (scripts/genera-stampa-3d.py),
-  nella stessa cartella della sua pagina /stampa-3d/<id>/ (content/stampa-3d/_content.gotmpl).
-  Parti:
-    {{% stampa3d parte="catalogo" %}}   catalogo per gruppi (titoli ## in Markdown, quindi con %)
-    {{< stampa3d parte="nominativo" >}}  campo del nominativo del catalogo
-    {{< stampa3d parte="vista|scarica|scheda|ordina|montaggio|file" oggetto="<id>" >}}  pagina dell'oggetto
-  Il nominativo scritto resta nel browser (localStorage, pcgenzano-stampa3d-nominativo) e vale su tutte
-  le pagine. Script: static/js/stampa3d.js (modulo) e, nelle pagine degli oggetti, static/js/stampa3d-vista.js (three.js).
-  Senza JavaScript restano le immagini d'esempio e l'elenco di tutti i file.
+  Shortcode stampa3d — catalogo della stampa 3D con il nominativo (/stampa-3d/).
+    {{< stampa3d parte="nominativo" >}}  campo del nominativo e dati per gli script
+    {{< stampa3d parte="filtri" >}}      ricerca e gruppi (compaiono solo con JavaScript)
+    {{% stampa3d parte="catalogo" %}}    oggetti per gruppi
+  Le parti stanno nel partial stampa3d-parte.html, usato anche dal layout stampa-3d/oggetto.html
+  delle pagine dei singoli oggetti. Dati: data/stampa_3d.yaml.
 */ -}}
-{{- $d := site.Data.stampa_3d -}}
-{{- if not $d }}{{ errorf "stampa3d: manca data/stampa_3d.yaml" }}{{ end -}}
-{{- $n := $d.nominativi -}}
 {{- $parte := .Get "parte" -}}
-{{- $id := .Get "oggetto" -}}
-{{- $o := dict -}}
-{{- if $id -}}
-  {{- range $d.oggetti }}{{ if eq .id $id }}{{ $o = . }}{{ end }}{{ end -}}
-  {{- if not $o.id }}{{ errorf "stampa3d: oggetto %q assente in data/stampa_3d.yaml (%s)" $id .Position }}{{ end -}}
-{{- end -}}
-{{- $pref := lower $n.prefisso -}}
-{{- $esempio := printf "%s-%03d" $pref $n.primo -}}
-{{- /* Sulla copia di anteprima di GitHub Pages i file STL e SCAD non ci sono (scripts/alleggerisci-copia-pages.py): si prendono dal sito su Aruba. */ -}}
-{{- $base := "stampa-3d/" | relURL -}}
-{{- if in site.BaseURL "github.io" }}{{ $base = printf "%sstampa-3d/" site.Params.productionBaseURL }}{{ end -}}
-{{- $vj := readFile "themes/flavour-pcgenzano/static/js/stampa3d.js" | hash.FNV32a -}}
-{{- $script := printf "<script type=\"module\" src=\"%s?v=%d\"></script>" ("js/stampa3d.js" | relURL) $vj -}}
-{{- $vv := readFile "themes/flavour-pcgenzano/static/js/stampa3d-vista.js" | hash.FNV32a -}}
-{{- $scriptVista := printf "<script type=\"module\" src=\"%s?v=%d\"></script>" ("js/stampa3d-vista.js" | relURL) $vv -}}
-
-
 {{- if eq $parte "nominativo" -}}
-<script type="application/json" id="s3d-dati">{{ dict "base" $base "prefisso" $n.prefisso "primo" $n.primo "ultimo" $n.ultimo "pagina" "catalogo" | jsonify | safeJS }}</script>
-<div class="card border-primary shadow-sm p-3 p-md-4 mb-4 s3d d-print-none">
-{{ partial "stampa3d-campo.html" (dict "n" $n "etichetta" "Il tuo nominativo" "pulsante" "Mostra") }}
-</div>
-{{ $script | safeHTML }}
-
-{{- else if eq $parte "catalogo" -}}
-{{- range $c := $d.categorie }}
-
-## {{ $c.titolo }}
-
-<ul class="s3d-catalogo no-gloss">
-{{- range where $d.oggetti "categoria" $c.id }}
-  <li class="s3d-voce">
-    <a class="s3d-voce-link" href="{{ printf "stampa-3d/%s/" .id | relURL }}" data-s3d-voce="{{ .id }}">
-      <img src="{{ printf "%s%s/%s.webp" $base .id $esempio }}" alt="" width="1100" height="500" loading="lazy" data-s3d-miniatura="{{ .id }}">
-      <span class="s3d-voce-nome">{{ .nome }}</span>
-    </a>
-    <span class="s3d-voce-breve">{{ .breve }} {{ .misure | strings.FirstUpper }}.</span>
-  </li>
-{{- end }}
-</ul>
-{{- end }}
-
-{{- else if eq $parte "vista" -}}
-{{- $dati := dict "base" $base "prefisso" $n.prefisso "primo" $n.primo "ultimo" $n.ultimo "pagina" "oggetto" "oggetto" (dict "id" $o.id "nome" $o.nome "anteprima" $o.anteprima) -}}
-<script type="application/json" id="s3d-dati">{{ $dati | jsonify | safeJS }}</script>
-<div class="card border-primary shadow-sm p-3 p-md-4 mb-3 s3d d-print-none">
-{{ partial "stampa3d-campo.html" (dict "n" $n "etichetta" "Scrivi il numero del tuo nominativo" "pulsante" "Mostra") }}
-</div>
-<p class="s3d-guardi">Stai guardando {{ $o.articolo }} con il nominativo <strong data-s3d="nominativo">{{ $n.prefisso }} {{ $n.primo }}</strong><span data-s3d="esempio">, come esempio</span>. Per girarlo trascina con il dito o con il mouse, oppure usa i pulsanti sotto la vista.</p>
-<div class="s3d-visore" role="group" aria-label="{{ $o.nome }} in 3D. Trascina con il dito o con il mouse per girarlo da ogni lato, oppure usa i pulsanti qui sotto.">
-  <img class="s3d-immagine" data-s3d="immagine" src="{{ printf "%s%s/%s.webp" $base $o.id $esempio }}" alt="{{ $o.nome }} con il nominativo {{ $n.prefisso }} {{ $n.primo }}, come esempio." width="1100" height="500">
-  <p class="s3d-caricamento" data-s3d="caricamento" hidden></p>
-</div>
-<div class="s3d-comandi" role="group" aria-label="Gira l'oggetto" hidden data-s3d="comandi">
-  <button type="button" class="btn btn-outline-primary" data-ruota="sinistra"><span aria-hidden="true">◀</span> Sinistra</button>
-  <button type="button" class="btn btn-outline-primary" data-ruota="su"><span aria-hidden="true">▲</span> Sopra</button>
-  <button type="button" class="btn btn-outline-primary" data-ruota="giu"><span aria-hidden="true">▼</span> Sotto</button>
-  <button type="button" class="btn btn-outline-primary" data-ruota="destra">Destra <span aria-hidden="true">▶</span></button>
-  <button type="button" class="btn btn-outline-primary" data-vista="davanti">Davanti</button>
-  <button type="button" class="btn btn-outline-primary" data-vista="retro">Retro</button>
-</div>
-<p class="small">Nella vista le scritte sono arancioni e la bandiera è colorata per farle vedere bene. Il servizio online stampa in un solo colore: {{ $o.articolo }} arriva blu, con le scritte in rilievo.</p>
-{{ $script | safeHTML }}
-{{ $scriptVista | safeHTML }}
-
-{{- else if eq $parte "scarica" -}}
-<div data-s3d="scarica-box" hidden>
-<p><a class="btn btn-primary btn-lg" data-s3d="scarica" href="#" download><i class="bi bi-download me-1" aria-hidden="true"></i> Scarica il file <span data-s3d="file"></span></a></p>
-<p>Il file si salva nella cartella «Download» del telefono o del computer. Ti serve per ordinare la stampa.</p>
-</div>
-<p data-s3d="scarica-vuoto">Scrivi il numero del tuo nominativo nel riquadro qui sopra: comparirà il pulsante per scaricare il tuo file. Puoi anche sceglierlo dall'elenco completo in fondo alla pagina, nella sezione «File del progetto».</p>
-
-{{- else if eq $parte "scheda" -}}
-{{ partial "stampa3d-scheda.html" $o }}
-
-{{- else if eq $parte "ordina" -}}
-<p>Non serve avere una stampante: ordini la stampa a un servizio online e la ricevi a casa.</p>
-<p><a class="btn btn-outline-primary btn-lg" href="{{ $d.servizio.indirizzo }}" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right me-1" aria-hidden="true"></i> Apri {{ $d.servizio.nome }}<span class="visually-hidden"> (si apre in una nuova scheda)</span></a></p>
-<ol class="s3d-elenco">
-  <li>{{ $d.servizio.nome }} si apre in una nuova scheda. Il sito è in inglese: se vuoi, usa la funzione «Traduci» del browser.</li>
-  <li>Carica il file che hai scaricato: trascinalo nel riquadro di caricamento oppure premi il pulsante per sceglierlo e cercalo nella cartella «Download».</li>
-  <li>Se il sito chiede l'unità di misura, scegli <strong>millimetri (mm)</strong>. Controlla che fra le misure indicate ci sia <strong>{{ $o.lunghezza_mm }} mm</strong>, la più grande: se non c'è, l'unità è sbagliata. Il file è già girato nella posizione giusta per la stampa: non serve cambiarla.</li>
-  <li>Come materiale scegli <strong>{{ $o.materiale }}</strong>, più resistente della plastica normale, e come colore <strong>{{ $o.colore }}</strong>. Se il sito chiede il riempimento («infill»), scegli il 100%: l'oggetto diventa pieno e robusto. Lascia 1 come quantità.</li>
-  <li>Scegli l'offerta che preferisci per prezzo e tempi di consegna, scrivi il tuo indirizzo e paga. I metodi di pagamento dipendono dal paese e di solito comprendono carta e PayPal.</li>
-</ol>
-
-{{- else if eq $parte "montaggio" -}}
-<p>Ti serve:</p>
-<ul>{{ range $o.occorrente }}<li>{{ . }}.</li>{{ end }}</ul>
-<ol class="s3d-elenco">{{ range $o.montaggio }}<li>{{ . }}</li>{{ end }}</ol>
-{{- with $o.retro }}
-<figure class="s3d-retro">
-  <img src="{{ printf "%s%s/retro.webp" $base $o.id }}" alt="{{ . }}" loading="lazy">
-  <figcaption>{{ $o.didascalia_retro }}</figcaption>
-</figure>
-{{- end }}
-
-{{- else if eq $parte "file" -}}
-{{- $scad := printf "static/stampa-3d/%s/%s.scad" $o.id $o.id -}}
-{{- $kb := 0 }}{{ with os.Stat $scad }}{{ $kb = math.Ceil (div (float .Size) 1024) }}{{ else }}{{ errorf "stampa3d: manca %s, lancia scripts/genera-stampa-3d.py" $scad }}{{ end -}}
-<p>Per stampare l'oggetto basta il file STL del tuo nominativo, nella sezione «Scarica il file». Qui sotto ci sono gli altri file, per chi li cerca.</p>
-<details class="s3d-tutti">
-  <summary>File STL per ogni nominativo, da {{ $n.prefisso }} {{ $n.primo }} a {{ $n.prefisso }} {{ $n.ultimo }}</summary>
-  <ul class="s3d-griglia">
-  {{- range seq $n.primo $n.ultimo }}
-    <li><a href="{{ printf "%s%s/%s-%03d.stl" $base $o.id $pref . }}" download>{{ $n.prefisso }} {{ . }}</a></li>
-  {{- end }}
-  </ul>
-</details>
-<details class="s3d-tutti">
-  <summary>Per esperti: modello da modificare con OpenSCAD</summary>
-  <p>Il modello non si apre nel browser e non si stampa così com'è: è un file per <a href="https://openscad.org/" target="_blank" rel="noopener noreferrer">OpenSCAD<span class="visually-hidden"> (si apre in una nuova scheda)</span></a>, un programma gratuito per il computer. Serve a chi vuole cambiare misure o scritte e poi creare da sé il file STL.</p>
-  <p><a href="{{ printf "%s%s/%s.scad" $base $o.id $o.id }}" download>Scarica il modello di {{ $o.nome | lower }}</a> (SCAD, {{ $kb }} KB)</p>
-</details>
-<p>Modello e file sono distribuiti con la stessa licenza del sito, CC BY-NC-SA 4.0: puoi usarli e modificarli citando il Gruppo, senza scopo commerciale (<a href="{{ "note-legali/#licenza-dei-contenuti" | relURL }}">note legali</a>).</p>
-
+{{ partial "stampa3d-parte.html" (dict "parte" "dati") }}
+{{ partial "stampa3d-parte.html" (dict "parte" "nominativo") }}
+{{- else if or (eq $parte "filtri") (eq $parte "catalogo") -}}
+{{ partial "stampa3d-parte.html" (dict "parte" $parte) }}
 {{- else -}}
-{{ errorf "stampa3d: parte %q sconosciuta (%s)" $parte .Position }}
+{{ errorf "stampa3d: la parte %q va nelle pagine degli oggetti (layout stampa-3d/oggetto.html): %s" $parte .Position }}
 {{- end -}}

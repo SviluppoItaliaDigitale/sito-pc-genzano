@@ -8764,3 +8764,58 @@ html.a11y-contrast-yellow-black .s3d-tutti summary, html.a11y-contrast-yellow-bl
   .s3d-visore .s3d-tela { display: none !important; }
   .s3d-visore .s3d-immagine { position: static !important; clip: auto !important; width: 100% !important; height: auto !important; }
 }
+
+/* ==========================================================================
+ * STAMPA 3D v2.1 (24/11/2026) — pagina oggetto come i siti di modelli 3D, filtri del catalogo,
+ * nome e cognome (js/stampa3d-nome.js), schede (js/stampa3d.js).
+ * ========================================================================== */
+.s3d-voce[hidden], .s3d-catalogo[hidden], .s3d-comandi[hidden], .s3d-filtri[hidden], .s3d-nome[hidden],
+.s3d-sezione[hidden], .s3d-nessuno[hidden], [data-s3d="scarica-box"][hidden], [data-s3d="scarica-vuoto"][hidden] { display: none !important; }
+/* Catalogo: cerca e gruppi */
+.s3d-filtri { margin: 0 0 1.2rem; padding: 1rem; background: #f4f7fb; border-radius: 6px; }
+.s3d-cerca-catalogo { max-width: 28rem; margin-bottom: .8rem; }
+.s3d-cerca-catalogo .form-control { min-height: 48px; font-size: 1.1rem; }
+.s3d-chip-fila { display: flex; flex-wrap: wrap; gap: .5rem; }
+.s3d-chip { min-height: 44px; padding: .35rem 1rem; border: 2px solid #003366; border-radius: 999px;
+  background: #fff; color: #003366; font-weight: 600; font-size: 1rem; }
+.s3d-chip[aria-pressed="true"] { background: #003366; color: #fff; }
+.s3d-chip[aria-pressed="true"]::before { content: "✓ "; }
+.s3d-chip:focus-visible { outline: 3px solid #ffbe2e; outline-offset: 2px; }
+.s3d-conteggio { margin: .7rem 0 0; font-size: .95rem; color: #3d4a57; }
+.s3d-nessuno { font-weight: 600; }
+.s3d-voce-foto { display: block; }
+.s3d-voce-etichette { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: auto; }
+.s3d-etichetta-misura, .s3d-etichetta-nome { font-size: .82rem; padding: .1rem .5rem; border-radius: 4px;
+  background: #eef2f6; color: #1a1a1a; border: 1px solid #c5ceda; }
+.s3d-etichetta-nome { background: #e7f0fa; color: #003366; border-color: #003366; font-weight: 600; }
+/* Pagina dell'oggetto */
+.s3d-pannello { border: 2px solid #003366; border-radius: 8px; padding: 1.1rem; background: #fff; }
+.s3d-pannello > h2 { color: #003366; margin-bottom: .9rem; }
+.s3d-pannello .s3d-form, .s3d-pannello .s3d-nome { padding-bottom: 1rem; margin-bottom: 1rem; border-bottom: 1px solid #dce3ec; }
+.s3d-facoltativo { font-weight: 400; font-size: 1rem; color: #3d4a57; }
+.s3d-campo-nome { flex: 1 1 12rem; min-height: 3.2rem; font-size: 1.2rem; }
+.s3d-fatti { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem 1rem; margin: 1rem 0 0; padding: 1rem;
+  background: #f4f7fb; border-radius: 6px; }
+.s3d-fatti dt { font-size: .85rem; font-weight: 600; color: #3d4a57; }
+.s3d-fatti dd { margin: 0; font-weight: 600; color: #1a1a1a; }
+.s3d-schede { margin-top: 2rem; }
+.s3d-tab { display: flex; flex-wrap: wrap; gap: .25rem; border-bottom: 2px solid #003366; margin-bottom: 1.2rem; }
+.s3d-tab-voce { min-height: 48px; padding: .5rem 1rem; border: 2px solid transparent; border-bottom: 0; border-radius: 6px 6px 0 0;
+  background: #eef2f6; color: #003366; font-weight: 600; font-size: 1.05rem; margin-bottom: -2px; }
+.s3d-tab-voce[aria-selected="true"] { background: #fff; border-color: #003366; border-bottom: 2px solid #fff; }
+.s3d-tab-voce:focus-visible { outline: 3px solid #ffbe2e; outline-offset: 2px; }
+.s3d-schede-attive .s3d-sezione:focus-visible { outline: 3px solid #ffbe2e; outline-offset: 4px; }
+.s3d-schede:not(.s3d-schede-attive) .s3d-sezione + .s3d-sezione { margin-top: 2rem; }
+@media (max-width: 575.98px) {
+  .s3d-tab-voce { flex: 1 1 45%; text-align: center; font-size: 1rem; padding: .5rem .4rem; }
+  .s3d-fatti { grid-template-columns: 1fr; }
+}
+html.a11y-contrast-invert .s3d-chip, html.a11y-contrast-invert .s3d-tab-voce { background: #000; color: #fff; border-color: #fff; }
+html.a11y-contrast-invert .s3d-chip[aria-pressed="true"], html.a11y-contrast-invert .s3d-tab-voce[aria-selected="true"] { background: #fff; color: #000; }
+html.a11y-contrast-yellow-black .s3d-chip, html.a11y-contrast-yellow-black .s3d-tab-voce { background: #000; color: #ffff00; border-color: #ffff00; }
+html.a11y-contrast-yellow-black .s3d-chip[aria-pressed="true"], html.a11y-contrast-yellow-black .s3d-tab-voce[aria-selected="true"] { background: #ffff00; color: #000; }
+@media print {
+  .s3d-filtri, .s3d-tab, .s3d-pannello { display: none !important; }
+  .s3d-sezione[hidden] { display: block !important; }
+  .s3d-sezione h2.visually-hidden { position: static !important; width: auto !important; height: auto !important; clip: auto !important; margin: 1.5rem 0 .5rem !important; }
+}

@@ -341,6 +341,9 @@ FileETag None
 # aprono nel browser come testo incomprensibile (segnalazione del 24/11/2026).
 AddType model/stl .stl
 AddType application/x-openscad .scad
+# Librerie per nome e cognome sugli oggetti (vendor/stampa3d): il browser le accetta solo con il tipo giusto.
+AddType application/wasm .wasm
+AddType text/javascript .mjs
 <IfModule mod_headers.c>
   <FilesMatch "\.(stl|scad)$">
     Header set Content-Disposition "attachment"
