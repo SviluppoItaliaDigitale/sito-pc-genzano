@@ -86,13 +86,9 @@ Pacchetti ZIP con il codice di alcune funzioni del sito (lettura ad alta voce, p
 
 Oggetti progettati dal Gruppo, con il file pronto da scaricare, la vista in 3D, la scheda tecnica con tutte le misure e le istruzioni per ordinarli a un servizio di stampa online. Non serve avere una stampante.
 
-| Pagina o file | Contenuto | Formato |
+| Pagina | Contenuto | Formato |
 |---|---|---|
-| [Oggetti con il tuo nominativo](/stampa-3d/nominativi/) | Per i volontari: scrivi il numero del tuo nominativo ALFA e scarichi targhetta da petto, portachiavi, etichette, ganci, porta radio, tessera multiuso e targa da tavolo | STL |
-| [Stampa 3D](/stampa-3d/) | Presentazione degli oggetti e regole per stamparli | Pagina |
-| [Modello di targhetta, portachiavi ed etichetta](/stampa-3d/sorgenti/targhetta-nominativo.scad) | Modello da modificare con il programma gratuito OpenSCAD | SCAD · 8 KB |
-| [Modello dei ganci e del porta radio](/stampa-3d/sorgenti/ganci-nominativo.scad) | Modello da modificare con OpenSCAD | SCAD · 10 KB |
-| [Modello di tessera multiuso, etichetta per l'attrezzatura e targa da tavolo](/stampa-3d/sorgenti/oggetti-nominativo.scad) | Modello da modificare con OpenSCAD | SCAD · 6 KB |
+| [Stampa 3D](/stampa-3d/) | Per i volontari: catalogo degli oggetti con il nominativo ALFA (targhetta, porta tesserino, tessera, portachiavi, fischietto, ganci, porta radio, supporto per il microfono, avvolgicavo, segnalibro con l'alfabeto fonetico, etichette, righello per le coordinate, targa da tavolo). Ogni oggetto ha la sua pagina con il file da scaricare e il modello da modificare con il programma gratuito OpenSCAD | STL · SCAD |
 
 ## Normativa Regionale (Lazio)
 

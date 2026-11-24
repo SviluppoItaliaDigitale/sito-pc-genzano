@@ -543,12 +543,7 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
 <a class="ms-card ms-edu" href="/stampa-3d/">
   <div class="ms-card-icon"><i class="bi bi-printer"></i></div>
   <p class="ms-card-title">Stampa 3D</p>
-  <p class="ms-card-desc">Oggetti progettati dal Gruppo da stampare in 3D, con vista in 3D e istruzioni per ordinarli online.</p>
-</a>
-<a class="ms-card ms-edu" href="/stampa-3d/nominativi/">
-  <div class="ms-card-icon"><i class="bi bi-person-badge"></i></div>
-  <p class="ms-card-title">Oggetti con il tuo nominativo</p>
-  <p class="ms-card-desc">Per i volontari: targhetta da petto, portachiavi, etichette, ganci, porta radio, tessera multiuso e targa da tavolo con il nominativo ALFA, da scaricare o ordinare online.</p>
+  <p class="ms-card-desc">Per i volontari: oggetti con il nominativo ALFA da scaricare o ordinare online, divisi per uso (giubbetto, radio, attrezzatura, sede), con vista in 3D e scheda tecnica.</p>
 </a>
 <a class="ms-card ms-edu" href="/esercitazioni/">
   <div class="ms-card-icon"><i class="bi bi-list-task"></i></div>

@@ -1,6 +1,8 @@
-# Oggetti da stampare in 3D con il nominativo dei volontari (pagina /stampa-3d/nominativi/).
-# Per un oggetto nuovo: aggiungi una voce in «oggetti» (se serve un tipo nuovo, anche nel modello in
-# static/stampa-3d/sorgenti/) e crea i file con «python3 scripts/genera-stampa-3d.py». La pagina li mostra da sola.
+# Oggetti da stampare in 3D con il nominativo dei volontari: catalogo in /stampa-3d/ e una pagina per
+# oggetto in /stampa-3d/<id>/ (content/stampa-3d/_content.gotmpl), con i suoi file nella stessa cartella.
+# Per un oggetto nuovo: aggiungi una voce in «oggetti» con la sua «categoria» (se serve un tipo nuovo,
+# anche nel modello di partenza in scripts/stampa-3d/) e crea i file con «python3 scripts/genera-stampa-3d.py».
+# Catalogo e pagina si aggiornano da soli.
 # Regole dei file: quelle di Craftcloud per la stampa FDM (un pezzo per file, millimetri,
 # pareti e tratti delle lettere dentro i minimi), controllate dallo script.
 # «bandiera» = riquadro del tricolore nel modello [x0, y0, x1, y1], per colorarlo nelle anteprime.
@@ -16,11 +18,24 @@ servizio:
   indirizzo: "https://craftcloud3d.com/"
   verificato: "2026-11-23"
 
+# Gruppi del catalogo, nell'ordine in cui compaiono
+categorie:
+  - id: "giubbetto"
+    titolo: "Sul giubbetto e in tasca"
+  - id: "radio"
+    titolo: "Per la radio"
+  - id: "attrezzatura"
+    titolo: "Zaino, casco e attrezzatura"
+  - id: "sede"
+    titolo: "In sede e in sala operativa"
+
 oggetti:
   - id: "targhetta-petto"
     nome: "Targhetta da petto"
     articolo: "la targhetta"
     descrizione: "Targhetta blu con la bandiera italiana, il nominativo in grande e, sotto, «Protezione Civile Genzano di Roma». Si appunta sulla divisa con una spilla da balia."
+    categoria: "giubbetto"
+    breve: "Si appunta sulla divisa con una spilla da balia."
     sorgente: "targhetta-nominativo.scad"
     anteprima:
       base: "#1d4f9a"
@@ -58,6 +73,8 @@ oggetti:
     nome: "Portachiavi"
     articolo: "il portachiavi"
     descrizione: "Portachiavi blu con la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma», con un occhiello rinforzato per l'anello. Utile per le chiavi dei mezzi e della sede."
+    categoria: "giubbetto"
+    breve: "Per le chiavi dei mezzi e della sede, con occhiello rinforzato."
     sorgente: "targhetta-nominativo.scad"
     anteprima:
       base: "#1d4f9a"
@@ -89,6 +106,8 @@ oggetti:
     nome: "Etichetta per lo zaino"
     articolo: "l'etichetta"
     descrizione: "Etichetta blu con la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma», con una fessura in alto per un laccio o una cinghia. Serve a riconoscere subito lo zaino o la borsa."
+    categoria: "attrezzatura"
+    breve: "Per riconoscere subito lo zaino o la borsa, con una fessura per il laccio."
     sorgente: "targhetta-nominativo.scad"
     anteprima:
       base: "#1d4f9a"
@@ -120,6 +139,8 @@ oggetti:
     nome: "Appendiabiti da armadietto"
     articolo: "l'appendiabiti"
     descrizione: "Gancio robusto per giacca, zaino o casco, con la piastra del nominativo, la bandiera italiana e «Protezione Civile Genzano di Roma». Il gancio è largo quanto la piastra. Si fissa nell'armadietto con due viti o con nastro biadesivo."
+    categoria: "sede"
+    breve: "Gancio per giacca, zaino o casco, da avvitare o incollare nell'armadietto."
     sorgente: "ganci-nominativo.scad"
     anteprima: &gancio
       base: "#1d4f9a"
@@ -154,6 +175,8 @@ oggetti:
     nome: "Gancio per l'anta"
     articolo: "il gancio"
     descrizione: "Gancio che si appoggia sopra l'anta dell'armadietto o della porta, senza viti né colla, con la piastra del nominativo, la bandiera italiana e un gancio largo quanto la piastra."
+    categoria: "sede"
+    breve: "Si appoggia sopra l'anta dell'armadietto, senza viti né colla."
     sorgente: "ganci-nominativo.scad"
     anteprima: *gancio
     parametri:
@@ -182,6 +205,8 @@ oggetti:
     nome: "Gancio portachiavi da cintura"
     articolo: "il gancio"
     descrizione: "Clip da infilare sulla cintura, con il nominativo, la bandiera italiana e un occhiello rinforzato dove agganci le chiavi. Un dentino con lo scivolo la tiene ferma sulla cintura."
+    categoria: "giubbetto"
+    breve: "Clip da cintura con un occhiello per le chiavi."
     sorgente: "ganci-nominativo.scad"
     anteprima: *gancio
     parametri:
@@ -212,6 +237,8 @@ oggetti:
     nome: "Porta radio portatile"
     articolo: "il porta radio"
     descrizione: "Supporto da parete per la radio portatile, con il nominativo e la bandiera italiana. Ha una barra spessa e alta come una cintura: la clip da cintura della radio ci si aggancia come sui pantaloni. Utile in sede o vicino ai caricabatterie."
+    categoria: "radio"
+    breve: "Supporto da parete: la clip della radio si aggancia come su una cintura."
     sorgente: "ganci-nominativo.scad"
     anteprima: *gancio
     parametri:
@@ -241,6 +268,8 @@ oggetti:
     nome: "Tessera multiuso"
     articolo: "la tessera"
     descrizione: "Tessera tascabile grande come una carta di credito, con la bandiera italiana, il nominativo, «Protezione Civile Genzano di Roma», la scritta «EMERGENZA 112», un righello di 7 cm e un'asola per il cordino o il moschettone."
+    categoria: "giubbetto"
+    breve: "Grande come una carta di credito, con «EMERGENZA 112» e un righello di 7 cm."
     sorgente: "oggetti-nominativo.scad"
     anteprima:
       base: "#1d4f9a"
@@ -273,6 +302,8 @@ oggetti:
     nome: "Etichetta per l'attrezzatura"
     articolo: "l'etichetta"
     descrizione: "Piccola etichetta con la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma», con due fessure per le fascette: si fissa a radio, torce, borse, maniglie e cinghie per riconoscere subito la propria attrezzatura."
+    categoria: "attrezzatura"
+    breve: "Si fissa con due fascette a radio, torce, borse e maniglie."
     sorgente: "oggetti-nominativo.scad"
     anteprima:
       base: "#1d4f9a"
@@ -304,6 +335,8 @@ oggetti:
     nome: "Targa da tavolo"
     articolo: "la targa"
     descrizione: "Targa a forma di tetto, da appoggiare sul tavolo della postazione in sala operativa, al COC o durante un evento, con la bandiera italiana, il nominativo in grande e «Protezione Civile Genzano di Roma»."
+    categoria: "sede"
+    breve: "Da appoggiare sul tavolo della postazione in sala operativa o a un evento."
     sorgente: "oggetti-nominativo.scad"
     anteprima:
       base: "#1d4f9a"
@@ -331,3 +364,256 @@ oggetti:
     montaggio:
       - "Appoggia la targa sul tavolo con la scritta verso chi arriva."
       - "Se il tavolo è in pendenza o all'aperto, metti sotto un pezzetto di biadesivo perché non scivoli."
+
+  - id: "porta-tesserino"
+    nome: "Porta tesserino"
+    articolo: "il porta tesserino"
+    categoria: "giubbetto"
+    breve: "Custodia rigida per il tesserino grande come una carta di credito, con l'asola per la clip."
+    descrizione: "Custodia rigida per un tesserino grande come una carta di credito (formato ID-1, 85,6 × 54 mm), con la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma» sulla fascia in basso. Il tesserino entra dall'alto e resta sotto i bordi; la linguetta in alto ha l'asola per la clip da badge o per un cordino."
+    sorgente: "strumenti-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-25.3, -38.25, -15.55, -31.75]
+      vista_3d: true
+      quota_scritte: 6.07   # le scritte stanno sulla cornice, sopra il fondo della tasca
+    parametri:
+      tipo: "tesserino"
+      parte: "tutto"
+    misure: "9,4 × 9,2 cm, spesso 7 mm"
+    lunghezza_mm: 94
+    peso_g: 32
+    scheda:
+      - ["Ingombro", "94 × 92 mm, spesso 7 mm (6 mm di cornice e 1 mm di scritte)"]
+      - ["Peso", "circa 32 g"]
+      - ["Tasca", "87,2 × 55,4 mm, alta 1,4 mm: entra un tesserino ID-1 da 85,6 × 54 mm, spesso fino a 1 mm; aperta in alto"]
+      - ["Bordi", "coprono 2 mm del tesserino su tre lati, con il lato di sotto inclinato di 46 gradi"]
+      - ["Linguetta", "40 × 13 mm, con asola da 15 × 4 mm per la clip da badge o il cordino"]
+      - ["Scritte", "nominativo alto 6,5 mm, righe piccole 4 mm"]
+      - ["Posizione di stampa", "in piano, con il fondo sul piano, già orientato nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "una clip da badge con il laccetto, oppure un cordino"
+    montaggio:
+      - "Tieni il porta tesserino con la scritta in basso e la linguetta in alto."
+      - "Infila il tesserino dall'alto, facendolo scivolare sopra la linguetta e sotto i bordi laterali, fino in fondo."
+      - "Passa il laccetto della clip o il cordino nell'asola della linguetta."
+      - "Prima di uscire controlla che il tesserino non scivoli fuori capovolgendo il porta tesserino."
+
+  - id: "fischietto"
+    nome: "Fischietto"
+    articolo: "il fischietto"
+    categoria: "giubbetto"
+    breve: "Fischietto senza pallina per farsi sentire, con il foro per il cordino."
+    descrizione: "Fischietto senza pallina, come la testa di un flauto dolce, con la bandiera italiana, il nominativo e «PC Genzano di Roma» sul retro. Senza pallina non si blocca con il freddo o con lo sporco. Ha un foro in alto per il cordino. Non è un dispositivo di sicurezza certificato: è un aiuto in più per farsi sentire."
+    sorgente: "strumenti-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [3, 0, 12, 6]
+      vista_3d: true
+      assi: [[0, 0, 1], [-1, 0, 0], [0, -1, 0]]   # nella vista si mette sdraiato, con le scritte verso l'alto
+    parametri:
+      tipo: "fischietto"
+      parte: "tutto"
+    misure: "5,6 × 1,6 cm, spesso 1,3 cm"
+    lunghezza_mm: 56
+    peso_g: 11
+    scheda:
+      - ["Ingombro", "56 × 16 mm, spesso 13 mm (12 mm di corpo e 1 mm di scritte)"]
+      - ["Peso", "circa 11 g"]
+      - ["Bocca", "fessura per il fiato da 8 × 1,2 mm sul fondo"]
+      - ["Suono", "finestra da 8 × 3 mm con lo spigolo che rompe il getto d'aria; canna chiusa da 9 × 8,4 × 22 mm con il tetto a punta"]
+      - ["Foro per il cordino", "diametro 3,6 mm, in alto, da parte a parte"]
+      - ["Scritte", "sul retro: nominativo alto 6 mm, riga piccola 4 mm"]
+      - ["Posizione di stampa", "in piedi, con la bocca sul piano, già orientato nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "un cordino sottile, da 3 mm al massimo"
+    montaggio:
+      - "Appena arriva, provalo: soffia nella fessura sul fondo, con la finestra rivolta in avanti. Se fa poco suono, togli con uno stuzzicadenti i fili di plastica rimasti nella fessura e nella finestra."
+      - "Passa il cordino nel foro in alto e fai un nodo."
+      - "Tienilo come aiuto in più, insieme a quanto previsto dalle procedure del Gruppo: non è un dispositivo di sicurezza certificato."
+
+  - id: "supporto-microfono"
+    nome: "Supporto per il microfono della radio"
+    articolo: "il supporto"
+    categoria: "radio"
+    breve: "Supporto da parete o da cruscotto per il microfono altoparlante della radio."
+    descrizione: "Supporto per il microfono altoparlante della radio portatile, con il nominativo e la bandiera italiana. Ha una barra stretta su cui si aggancia la clip a molla del microfono, come su un taschino. Si avvita alla parete della sede o si incolla con il biadesivo, per esempio vicino alla postazione radio."
+    sorgente: "ganci-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-29.5, 2.25, -18.25, 9.75]
+      vista_3d: true
+      fianco: -33   # si stampa in piedi sul lato sinistro (x = -33), senza supporti
+    parametri:
+      tipo: "microfono"
+      parte: "tutto"
+    misure: "6,6 × 7,5 cm, sporge 1,3 cm"
+    lunghezza_mm: 75
+    peso_g: 42
+    scheda:
+      - ["Ingombro", "66 × 75 mm, sporge 13 mm dalla parete"]
+      - ["Peso", "circa 42 g"]
+      - ["Barra", "spessa 3,5 mm e alta 24 mm, a 4,5 mm dalla piastra: la clip del microfono ci passa dietro"]
+      - ["Spazio fra i due appoggi", "36 mm vicino alla parete e 54 mm davanti: entrano le clip larghe fino a 3,5 cm"]
+      - ["Fori", "2 per viti a testa svasata da 4 mm (foro 4,4 mm, svasatura 8,8 mm), a 50 mm l'uno dall'altro"]
+      - ["Scritte", "nominativo alto 7,5 mm, righe piccole 4 mm, in rilievo di 1 mm"]
+      - ["Posizione di stampa", "in piedi sul lato sinistro, già orientato nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "due viti a testa svasata da 4 mm e i tasselli adatti alla parete, oppure nastro biadesivo di montaggio"
+    montaggio:
+      - "Appoggia il supporto con la barra in basso, segna i due fori, fora, metti i tasselli e avvita senza stringere troppo. In alternativa incollalo con due strisce di biadesivo e aspetta un giorno prima di usarlo."
+      - "Aggancia il microfono dall'alto, facendo scorrere la sua clip sulla barra: la clip passa dietro la barra."
+      - "Prima prova con il tuo microfono: la clip deve essere larga al massimo 3,5 cm."
+
+  - id: "avvolgicavo"
+    nome: "Avvolgicavo per l'auricolare"
+    articolo: "l'avvolgicavo"
+    categoria: "radio"
+    breve: "Per tenere in ordine il cavo dell'auricolare o del microfono quando non lo usi."
+    descrizione: "Piastrina su cui si avvolge il cavo dell'auricolare o del microfono della radio, con la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». Il cavo gira nei due incavi alle estremità e le due fessure ne bloccano i capi, così nello zaino non si aggroviglia."
+    sorgente: "strumenti-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-25.3, 3.25, -15.55, 9.75]
+    parametri:
+      tipo: "avvolgicavo"
+      parte: "tutto"
+    misure: "8 × 3,2 cm, spesso 4 mm"
+    lunghezza_mm: 80
+    peso_g: 9
+    scheda:
+      - ["Ingombro", "80 × 32 mm, spesso 4 mm (3 mm di base e 1 mm di scritte)"]
+      - ["Peso", "circa 9 g"]
+      - ["Incavi", "due, da 18 × 14 mm, alle estremità, dove si avvolge il cavo"]
+      - ["Fessure", "due, larghe 2,2 mm, una per linguetta: bloccano i capi di cavi fino a 2 mm"]
+      - ["Scritte", "nominativo alto 6,5 mm, righe piccole 4 mm, con cornice"]
+      - ["Posizione di stampa", "in piano, già orientato nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "niente"
+    montaggio:
+      - "Infila il cavo nella fessura di una linguetta, vicino allo spinotto, lasciando fuori qualche centimetro."
+      - "Avvolgi il cavo da un incavo all'altro, passando sopra e sotto la piastrina, senza tirare."
+      - "Quando resta poco cavo, infilalo nella fessura dell'altra linguetta: l'auricolare resta fermo."
+
+  - id: "etichetta-casco"
+    nome: "Etichetta per il casco"
+    articolo: "l'etichetta"
+    categoria: "attrezzatura"
+    breve: "Piastrina sottile con il nominativo, da incollare se il libretto del casco lo permette."
+    descrizione: "Piastrina sottile e leggera con la bandiera italiana, il nominativo in grande e «Protezione Civile Genzano», da incollare con il biadesivo sul casco o sulla sua borsa. Prima di incollarla leggi il libretto del casco: alcuni produttori non permettono adesivi, vernici o solventi sulla calotta, perché potrebbero indebolirla."
+    sorgente: "strumenti-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-30.95, 0, -18.95, 8]
+    parametri:
+      tipo: "casco"
+      parte: "tutto"
+    misure: "8 × 2,4 cm, spessa 2,2 mm"
+    lunghezza_mm: 80
+    peso_g: 4
+    scheda:
+      - ["Ingombro", "80 × 24 mm, spessa 2,2 mm (1,2 mm di base e 1 mm di scritte)"]
+      - ["Peso", "circa 4 g"]
+      - ["Scritte", "nominativo alto 8 mm, riga piccola 4 mm, in rilievo di 1 mm"]
+      - ["Fissaggio", "biadesivo in schiuma sul retro, che riempie la curva del casco; niente fori"]
+      - ["Posizione di stampa", "in piano, già orientata nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "biadesivo in schiuma per esterni, spesso 1 o 2 mm"
+      - "alcol per pulire la superficie"
+    montaggio:
+      - "Leggi il libretto del casco. Se non permette di incollare adesivi o etichette sulla calotta, non farlo: incolla l'etichetta sulla borsa del casco o usane un'altra sullo zaino."
+      - "Se è permesso, scegli una zona poco curva, sul retro o sul fianco, lontana da prese d'aria, attacchi della visiera e del sottogola."
+      - "Pulisci la zona con l'alcol e lasciala asciugare."
+      - "Metti il biadesivo in schiuma su tutto il retro dell'etichetta, appoggiala e premi bene per un minuto, partendo dal centro."
+
+  - id: "righello-coordinate"
+    nome: "Righello per le coordinate"
+    articolo: "il righello"
+    categoria: "attrezzatura"
+    breve: "Per leggere coordinate e distanze sulle carte in scala 1:25.000, 1:50.000 e 1:10.000."
+    descrizione: "Righello piatto per leggere le coordinate e misurare le distanze sulle carte topografiche, con la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». Negli angoli in alto ha due squadrette graduate, per le carte in scala 1:25.000 e 1:50.000, con una tacca ogni 100 metri; lungo il bordo basso una scala 1:10.000 da 0 a 1 km, con una tacca ogni 50 metri."
+    sorgente: "strumenti-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-27.2, 8.5, -16.7, 15.5]
+    parametri:
+      tipo: "righello"
+      parte: "tutto"
+    misure: "12 × 7 cm, spesso 3,5 mm"
+    lunghezza_mm: 120
+    peso_g: 28
+    scheda:
+      - ["Ingombro", "120 × 70 mm, spesso 3,5 mm (2,5 mm di base e 1 mm di tacche e scritte)"]
+      - ["Peso", "circa 28 g"]
+      - ["Angolo in alto a destra", "scala 1:25.000: tacche ogni 4 mm (100 m) per 40 mm (1 km), sul bordo alto e sul bordo destro"]
+      - ["Angolo in alto a sinistra", "scala 1:50.000: tacche ogni 2 mm (100 m) per 20 mm (1 km), sul bordo alto e sul bordo sinistro"]
+      - ["Bordo basso", "scala 1:10.000: tacche ogni 5 mm (50 m) per 100 mm (1 km)"]
+      - ["Tacche", "larghe 0,8 mm, lunghe 6 mm ogni 500 m e 3,5 mm le altre; angoli in alto vivi"]
+      - ["Posizione di stampa", "in piano, già orientato nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "niente"
+    montaggio:
+      - "Trova sulla carta il quadrato del reticolo chilometrico in cui sta il punto da leggere."
+      - "Con una carta in scala 1:25.000 usa l'angolo in alto a destra: metti lo spigolo esattamente sul punto, con i bordi del righello paralleli alle linee del reticolo."
+      - "Sul bordo alto leggi quanto dista il punto dalla linea verticale del reticolo alla sua sinistra; sul bordo destro quanto dista dalla linea orizzontale sotto. Ogni tacca vale 100 metri."
+      - "Aggiungi le due distanze ai valori delle due linee del reticolo, scritti sul bordo della carta: hai le coordinate del punto."
+      - "Con una carta in scala 1:50.000 usa l'angolo in alto a sinistra, dopo aver girato il righello di un quarto di giro in senso orario: lo spigolo va sul punto e si legge allo stesso modo."
+      - "Il bordo basso misura le distanze sulle carte in scala 1:10.000: ogni tacca vale 50 metri."
+
+  - id: "segnalibro-alfabeto"
+    nome: "Segnalibro con l'alfabeto fonetico"
+    articolo: "il segnalibro"
+    categoria: "radio"
+    breve: "L'alfabeto fonetico internazionale sempre a portata di mano, nel quaderno o nel manuale."
+    descrizione: "Segnalibro con l'alfabeto fonetico internazionale usato nelle comunicazioni radio, da Alfa a Zulu, la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». Serve a compitare nomi, sigle e targhe senza errori; ha un foro in alto per un nastro."
+    sorgente: "strumenti-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-25.3, 54.75, -15.55, 61.25]
+    parametri:
+      tipo: "segnalibro"
+      parte: "tutto"
+    misure: "6,4 × 15 cm, spesso 2,6 mm"
+    lunghezza_mm: 150
+    peso_g: 21
+    scheda:
+      - ["Ingombro", "64 × 150 mm, spesso 2,6 mm (1,6 mm di base e 1 mm di scritte)"]
+      - ["Peso", "circa 21 g"]
+      - ["Alfabeto", "le 26 lettere con le parole dell'alfabeto fonetico internazionale (ICAO e ITU), su due colonne, alte 4 mm"]
+      - ["Foro", "diametro 4 mm, in alto, per un nastro o un cordino"]
+      - ["Scritte", "nominativo alto 6,5 mm, con cornice"]
+      - ["Posizione di stampa", "in piano, già orientato nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "un nastro o un cordino sottile, se vuoi"
+    montaggio:
+      - "Se vuoi, passa un nastro nel foro in alto e fai un nodo."
+      - "Tienilo nel manuale, nel quaderno della sala radio o nella tasca dello zaino."
+      - "Per compitare una parola alla radio, di' la parola dell'alfabeto per ogni lettera: per esempio «ALFA» si dice Alfa, Lima, Foxtrot, Alfa."
