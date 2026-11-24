@@ -1,7 +1,7 @@
 ---
 title: "Nuova legge: più protezione per i volontari"
 date: 2026-10-21T00:02:00+02:00
-lastmod: 2026-11-12
+lastmod: 2026-11-24
 description: "La Camera approva una legge. La legge protegge di più i volontari di Protezione Civile."
 badge: "Informazione"
 priorita: "normale"
@@ -43,21 +43,19 @@ Sono protette anche le persone delle associazioni di volontariato.
 
 ## Cosa manca ancora
 
-Il Governo deve scrivere delle nuove regole precise. Si chiamano linee guida nazionali. Il Governo ha tempo 12 mesi per scriverle.
+Il Governo deve scrivere delle nuove regole precise. Si chiamano linee guida nazionali. Il Governo ha tempo 12 mesi per scriverle. I 12 mesi cominciano l'8 dicembre 2026.
 
-## La legge non è ancora attiva
-
-Attenzione: questa legge non è ancora in vigore. "In vigore" vuol dire attiva e valida.
+## Da quando vale la legge
 
 Il 12 novembre 2026 il Presidente della Repubblica ha firmato la legge. Il Presidente della Repubblica è Sergio Mattarella.
+
+Il 23 novembre 2026 la legge è uscita sulla Gazzetta Ufficiale. La Gazzetta Ufficiale è il giornale ufficiale delle leggi italiane. La legge ha il numero 212.
+
+La legge diventa attiva l'8 dicembre 2026. "Attiva" vuol dire "in vigore": da quel giorno vale per tutti.
 
 Il Presidente ha scritto anche una lettera al Parlamento e al Governo. Nella lettera dice questo: la protezione per i volontari è molto ampia. Per altri lavori le regole sono diverse. Il Presidente chiede regole simili per tutti, giuste ed equilibrate.
 
 La lettera non cambia la legge.
-
-Adesso la legge deve uscire sulla Gazzetta Ufficiale. La Gazzetta Ufficiale è il giornale ufficiale delle leggi italiane.
-
-La legge non diventa attiva subito dopo. Di solito una legge italiana diventa attiva 15 giorni dopo essere uscita sulla Gazzetta Ufficiale.
 
 ## Cosa puoi fare tu
 
@@ -65,5 +63,6 @@ Vuoi diventare volontario di Protezione Civile? Leggi la pagina "Diventa volonta
 
 ## Per approfondire
 
+- [Legge 212 del 2026 sulla Gazzetta Ufficiale](https://www.gazzettaufficiale.it/eli/id/2026/11/23/26G00228/sg)
 - [Diventa volontario](/diventa-volontario/)
 - [Normativa di Protezione Civile](/normativa/)

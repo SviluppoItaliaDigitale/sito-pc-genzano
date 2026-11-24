@@ -1,8 +1,8 @@
-ultimo_audit: '2026-11-23'
-totale: 149
+ultimo_audit: '2026-11-24'
+totale: 150
 riepilogo:
   ACCESSIBILE: 86
-  PARZIALE: 10
+  PARZIALE: 11
   NON_ACCESSIBILE: 9
   TERZO: 44
   ERRORE: 0
@@ -276,6 +276,20 @@ documenti:
   origine_descrizione: Gazzetta Ufficiale della Repubblica Italiana (testi legislativi
     originali)
   verdict: TERZO
+- path: /allegati/2026/legge-212-2026-protezione-civile-gu-273.pdf
+  file: legge-212-2026-protezione-civile-gu-273.pdf
+  size_kb: 1839.0
+  sha256: 819885a696eb47fe8079ccf76131d629254756277a9e4a0c3f25069a038639ae
+  searchable: true
+  tagged: false
+  language: null
+  title: null
+  pages: 4
+  errors: []
+  text_chars_sample: 15567
+  origine: GRUPPO
+  origine_descrizione: Classificazione di default (assumiamo nostro produzione)
+  verdict: PARZIALE
 - path: /allegati/2026/ordinanza-71-2026-infiorata-ragazzi-viabilita.pdf
   file: ordinanza-71-2026-infiorata-ragazzi-viabilita.pdf
   size_kb: 119.4
