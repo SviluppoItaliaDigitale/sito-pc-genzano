@@ -19,6 +19,8 @@ const errore = document.getElementById('s3d-nome-errore');
 const stato = document.querySelector('[data-s3d="nome-stato"]');
 const scarica = document.querySelector('[data-s3d="scarica"]');
 const conNomeTesto = document.querySelector('[data-s3d="con-nome"]');
+const COSA = (box && box.dataset.s3dCosa) || 'nome e cognome';
+const Cosa = COSA.charAt(0).toUpperCase() + COSA.slice(1);
 const VENDOR = new URL('../vendor/stampa3d/', import.meta.url);
 
 let librerie = null;          // promessa: { M, font }
@@ -79,9 +81,9 @@ async function aggiungi() {
       togliNome();
       document.dispatchEvent(new CustomEvent('s3d:file', { detail: fileBase }));
       ripristinaScarica();
-      stato.textContent = 'Nome e cognome tolti: il file ha solo il nominativo.';
+      stato.textContent = `${Cosa}: tolto dal file, che ha solo il nominativo.`;
     } else {
-      scriviErrore('Scrivi nome e cognome, oppure lascia il campo vuoto e scarica il file con il solo nominativo.');
+      scriviErrore(`Scrivi ${COSA}, oppure lascia il campo vuoto e scarica il file con il solo nominativo.`);
       campo.focus();
     }
     return;
@@ -90,7 +92,7 @@ async function aggiungi() {
   scriviErrore('');
   const mio = ++giro;
   bottone.disabled = true;
-  stato.textContent = 'Sto preparando il file con nome e cognome…';
+  stato.textContent = `Sto preparando il file con ${COSA}…`;
   try {
     const [{ M, font }, buf] = await Promise.all([
       carica(),
@@ -99,7 +101,12 @@ async function aggiungi() {
     if (mio !== giro) return;
     let r;
     try { r = conNome(buf, O.anteprima, testo, font, M); }
-    catch (e) { scriviErrore(e.message || 'Il file non si è potuto preparare.'); stato.textContent = ''; campo.focus(); return; }
+    catch (e) {
+      let msg = e.message || 'Il file non si è potuto preparare.';
+      // riga troppo lunga: con un'etichetta diversa (es. nome del mezzo) il consiglio vale per entrambi i casi
+      if (/non entrano/.test(msg) && box.dataset.s3dCosa !== 'nome e cognome') msg = 'Il testo non entra: accorcialo. Per una persona scrivi solo l\'iniziale del nome, per esempio «M. Rossi»; per un mezzo solo il modello, per esempio «Defender 130».';
+      scriviErrore(msg); stato.textContent = ''; campo.focus(); return;
+    }
     togliNome();
     blobUrl = URL.createObjectURL(new Blob([r.stl], { type: 'model/stl' }));
     nomeApplicato = testo;
@@ -117,7 +124,7 @@ async function aggiungi() {
   } catch (e) {
     if (mio !== giro) return;
     stato.textContent = '';
-    scriviErrore('Il file con nome e cognome non si è potuto preparare: controlla la connessione e riprova. Puoi comunque scaricare il file con il solo nominativo.');
+    scriviErrore(`Il file con ${COSA} non si è potuto preparare: controlla la connessione e riprova. Puoi comunque scaricare il file con il solo nominativo.`);
   } finally {
     if (mio === giro) bottone.disabled = false;
   }

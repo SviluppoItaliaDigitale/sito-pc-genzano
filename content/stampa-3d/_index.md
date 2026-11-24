@@ -46,7 +46,7 @@ Il servizio online stampa in un solo colore, ma la bandiera ha le tre fasce sepa
 <details class="faq-item">
 <summary><strong>Posso aggiungere nome e cognome?</strong></summary>
 
-Sì, negli oggetti con la scritta «Anche con nome e cognome». Nella pagina dell'oggetto scrivi nome e cognome e premi «Aggiungi»: il file si prepara sul tuo telefono o computer e nome e cognome non vengono inviati a nessuno né salvati dal sito. Sulle targhette e sugli oggetti piccoli vanno sul retro, incisi; sui ganci e sul righello vanno sul davanti. Se non entrano, scrivi solo l'iniziale del nome, per esempio «M. Rossi».
+Sì, negli oggetti con la scritta «Anche con nome e cognome». Nella pagina dell'oggetto scrivi nome e cognome e premi «Aggiungi»: il file si prepara sul tuo telefono o computer e nome e cognome non vengono inviati a nessuno né salvati dal sito. Sulle targhette e sugli oggetti piccoli vanno sul retro, incisi; sui ganci e sul righello vanno sul davanti. Se non entrano, scrivi solo l'iniziale del nome, per esempio «M. Rossi». Sul portachiavi, al posto di nome e cognome, puoi scrivere il nome del mezzo a cui vanno le chiavi, per esempio «Mercedes Actros».
 
 </details>
 

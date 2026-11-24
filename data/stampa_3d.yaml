@@ -86,7 +86,7 @@ oggetti:
       rilievo: "#f07d00"
       rilievo_mm: 1.0
       bandiera: [-29.0, 2.45, -19.25, 8.95]
-      nome: {zona: [-32.6, -6.3, 30.2, 0.7], lato: "retro"}   # riga di nome e cognome (static/js/stampa3d-nome-core.js)
+      nome: {zona: [-32.6, -6.3, 30.2, 0.7], lato: "retro", etichetta: "Nome e cognome o nome del mezzo", aiuto: "Per le chiavi di un mezzo scrivi il suo nome come nell'elenco dei mezzi, per esempio «Mercedes Actros» o «Fiat Doblò»; se è lungo, scrivi solo il modello."}   # riga di nome e cognome (static/js/stampa3d-nome-core.js)
     parametri:
       tipo: "portachiavi"
       parte: "tutto"
