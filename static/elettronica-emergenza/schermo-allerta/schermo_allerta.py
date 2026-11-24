@@ -168,14 +168,20 @@ class Stato:
             return sfondo, colore, "Stato dell'allerta da confermare", righe
 
         d = self.dato
-        vecchio = adesso - d["ultimo_controllo"] > timedelta(hours=self.cfg["ore_validita"])
+        scaduto = adesso - d["ultimo_controllo"] > timedelta(hours=self.cfg["ore_validita"])
+        # il livello vale per il giorno del controllo: dopo mezzanotte non si mostra come quello di oggi
+        altro_giorno = d["ultimo_controllo"].astimezone(FUSO).date() != adesso.astimezone(FUSO).date()
+        vecchio = scaduto or altro_giorno
         controllo = f"{data_estesa(d['ultimo_controllo'])} alle {d['ultimo_controllo']:%H:%M}"
         righe = []
         if vecchio:
             sfondo, colore = COLORI["da_confermare"]
             titolo = "Stato dell'allerta da confermare"
-            righe.append(f"Ultimo controllo del sito: {controllo}, oltre "
-                         f"{self.cfg['ore_validita']:g} ore fa.")
+            if scaduto:
+                righe.append(f"Ultimo controllo del sito: {controllo}, oltre "
+                             f"{self.cfg['ore_validita']:g} ore fa.")
+            else:
+                righe.append(f"Ultimo controllo del sito: {controllo}, prima della mezzanotte.")
             righe.append(f"Ultimo stato letto: {NOMI_LIVELLO[d['livello']].lower()}.")
             righe.append("Consulta il bollettino del Centro Funzionale della Regione Lazio.")
         else:

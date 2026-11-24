@@ -21,7 +21,7 @@ Un pluviometro a bascula raccoglie la pioggia con un imbuto e la fa cadere in un
 
 | Quantità | Componente | Note |
 |---|---|---|
-| 1 | Scheda di sviluppo ESP32 con modulo ESP32-WROOM-32 | per esempio ESP32-DevKitC di Espressif o una equivalente |
+| 1 | Scheda di sviluppo ESP32 con modulo ESP32-WROOM-32 | per esempio ESP32-DevKitC di Espressif o un'altra equivalente |
 | 1 | Pluviometro a bascula con contatto reed a due fili | si trova come ricambio per stazioni meteo |
 | 1 | Resistenza da 10 kΩ | consigliata con un cavo lungo |
 | 1 | Condensatore da 100 nF | facoltativo, riduce i disturbi sul cavo |

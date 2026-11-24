@@ -22,7 +22,7 @@ Questo dispositivo misura ogni pochi minuti la distanza fra un sensore montato i
 
 | Quantità | Componente | Note |
 |---|---|---|
-| 1 | Scheda di sviluppo ESP32 con modulo ESP32-WROOM-32 | per esempio ESP32-DevKitC di Espressif o una equivalente |
+| 1 | Scheda di sviluppo ESP32 con modulo ESP32-WROOM-32 | per esempio ESP32-DevKitC di Espressif o un'altra equivalente |
 | 1 | Sensore a ultrasuoni impermeabile JSN-SR04T, versione 3.0 | sonda con cavo e scheda di controllo |
 | 1 | LED rosso o giallo da 5 mm | |
 | 1 | Resistenza da 330 Ω | per il LED |
