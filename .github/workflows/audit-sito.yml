@@ -1381,6 +1381,22 @@ jobs:
           fi
 
           # ----------------------------------------------------------------
+          section "51. Cucina in emergenza: collegamenti ricontrollati di recente"
+          # 24/11/2026: il controllo dei collegamenti di /cucina-emergenza/ è
+          # mensile (controllo-cucina-emergenza.yml) e aggiorna la data
+          # «verificato» solo quando ha letto tutto. Se un giro salta, o un
+          # sito tiene dei collegamenti dietro una verifica anti-bot, la data
+          # invecchia senza che nessun run diventi rosso: qui si avvisa a 45
+          # giorni. Lo stesso comando ricontrolla anche la forma dei dati.
+          OUT51=$(python3 scripts/check-cucina-emergenza.py --eta 45 2>&1); RC51=$?
+          if [ "$RC51" -ne 0 ]; then
+            err "Sezione /cucina-emergenza/: collegamenti da ricontrollare o dati da correggere ($RC51):"
+            echo '```' >> "$REPORT"; echo "$OUT51" | grep -E "^- " >> "$REPORT"; echo '```' >> "$REPORT"
+          else
+            ok "Collegamenti di /cucina-emergenza/ controllati negli ultimi 45 giorni."
+          fi
+
+          # ----------------------------------------------------------------
           # Output
           # Garantisce default "false" se la variabile non è stata mai
           # toccata (improbabile con set +u ma difensivo per sicurezza).

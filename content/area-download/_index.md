@@ -183,6 +183,15 @@ Manuali tecnici prodotti da enti del Terzo Settore in collaborazione con il sist
 | [Il Libro del Risparmio — 120 azioni contro lo spreco alimentare](/manuali/FondazioneBarilla_Libro_del_Risparmio.pdf) | A cura di Fondazione Barilla con Università di Bologna. Guida pratica per ridurre lo spreco di cibo in casa e fuori casa: conservazione, cucina a zero spreco, avanzi, spesa consapevole | PDF · 27,3 MB |
 | [Recupero, raccolta e distribuzione di cibo per solidarietà sociale](/manuali/Caritas_Banco_Alimentare_Manuale_Emporio_Solidale.pdf) | A cura di Caritas Italiana e Fondazione Banco Alimentare. Manuale di corrette prassi operative per le organizzazioni caritative, validato dal Ministero della Salute: HACCP semplificato, semaforo di attenzione, tracciabilità | PDF · 4,1 MB |
 
+## Cucina in emergenza
+
+Documenti ufficiali per chi cucina in un campo o in una mensa di emergenza. I file restano sui siti degli enti che li pubblicano: qui trovi i collegamenti, controllati uno per uno.
+
+| Pagina | Contenuto | Formato |
+|---|---|---|
+| [Cucina in emergenza](/cucina-emergenza/) | Manuali e linee guida di ministeri, regioni, aziende sanitarie e Unione europea su igiene, allergeni, pasti per molte persone e donazioni; elenchi dei vini DOP e IGP e dei prodotti agroalimentari tradizionali | PDF sui siti degli enti |
+| [Disciplinari dei prodotti DOP, IGP e STG](/cucina-emergenza/disciplinari/) | Catalogo dei disciplinari dei prodotti agroalimentari italiani, con ricerca per nome, regione e tipo di prodotto | PDF sul sito del Ministero dell'agricoltura |
+
 ## Campagna "Io Non Rischio"
 
 Materiali informativi della campagna nazionale [Io Non Rischio](https://www.iononrischio.it/) promossa dal Dipartimento della Protezione Civile. Per ogni rischio sono disponibili un pieghevole sintetico e una scheda di approfondimento.

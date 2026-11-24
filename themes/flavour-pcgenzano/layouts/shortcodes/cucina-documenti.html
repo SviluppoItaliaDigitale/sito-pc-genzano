@@ -1,0 +1,38 @@
+{{- /*
+  Shortcode cucina-documenti — documenti ufficiali della sezione «Cucina in emergenza» (/cucina-emergenza/).
+    {{< cucina-documenti gruppo="campo" >}}       elenco dei documenti di un gruppo
+    {{< cucina-documenti mostra="verifica" >}}    riga con il giorno dell'ultimo controllo dei collegamenti
+  Dati: data/cucina_emergenza.yaml (solo PDF sui siti di enti pubblici, controllati da
+  scripts/check-cucina-emergenza.py). Con `scarica: true` il sito dell'ente fa scaricare il file invece
+  di aprirlo: il collegamento resta nella stessa scheda. `nota` è l'avvertenza del documento (età, a chi
+  è rivolto, che cosa non prenderne come istruzione): esce in un paragrafo suo, con l'etichetta «Da
+  sapere». CSS: sezione «CUCINA IN EMERGENZA v1.0».
+*/ -}}
+{{- $d := site.Data.cucina_emergenza -}}
+{{- if not $d }}{{ errorf "cucina-documenti: manca data/cucina_emergenza.yaml" }}{{ end -}}
+{{- if eq (.Get "mostra") "verifica" -}}
+<p class="cuc-verifica">Collegamenti controllati il <time datetime="{{ $d.verificato }}">{{ time $d.verificato | time.Format ":date_long" }}</time>.</p>
+{{- else -}}
+{{- $id := .Get "gruppo" -}}
+{{- $g := dict -}}
+{{- range $d.gruppi }}{{ if eq .id $id }}{{ $g = . }}{{ end }}{{ end -}}
+{{- if not $g.id }}{{ errorf "cucina-documenti: gruppo %q assente in data/cucina_emergenza.yaml: %s" $id .Position }}{{ end -}}
+<ul class="cuc-doc no-gloss">
+{{- range $g.documenti }}
+  {{- $peso := printf "%d\u00a0KB" (int .kb) -}}
+  {{- if ge (int .kb) 1024 }}{{ $peso = replace (printf "%.1f\u00a0MB" (div (float .kb) 1024.0)) "." "," }}{{ end }}
+  <li class="cuc-doc-voce" id="doc-{{ .id }}">
+    <p class="cuc-doc-titolo"><a href="{{ .url }}"{{ if not .scarica }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ .titolo }}<span class="visually-hidden"> (PDF, {{ if .scarica }}si scarica{{ else }}si apre in una nuova scheda{{ end }})</span></a></p>
+    <p class="cuc-doc-ente">{{ .ente }}</p>
+    <p class="cuc-doc-testo">{{ .testo }}</p>
+    {{- with .nota }}
+    <p class="cuc-doc-nota"><strong>Da sapere.</strong> {{ . }}</p>
+    {{- end }}
+    {{- with .pagina }}
+    <p class="cuc-doc-pagina"><a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .testo }}<span class="visually-hidden"> (si apre in una nuova scheda)</span></a></p>
+    {{- end }}
+    <p class="cuc-doc-dati"><span class="cuc-doc-formato">PDF</span> {{ .pagine }}&nbsp;{{ if eq (int .pagine) 1 }}pagina{{ else }}pagine{{ end }} · {{ $peso }}</p>
+  </li>
+{{- end }}
+</ul>
+{{- end -}}

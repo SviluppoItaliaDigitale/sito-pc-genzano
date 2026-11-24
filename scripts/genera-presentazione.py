@@ -882,6 +882,7 @@ content("Area download", [
     "Per ogni file sono indicati formato e dimensione (accessibilità).",
     "Un punto unico per atti, piani e materiali del Gruppo.",
     "Per i volontari: oggetti da stampare in 3D e progetti di elettronica per l'emergenza con Arduino, ESP32 e Raspberry Pi.",
+    "Cucina in emergenza: i documenti ufficiali per le cucine da campo e i disciplinari dei prodotti DOP, IGP e STG, sui siti degli enti pubblici.",
 ], N())
 
 content("Materiali pronti da scaricare", [

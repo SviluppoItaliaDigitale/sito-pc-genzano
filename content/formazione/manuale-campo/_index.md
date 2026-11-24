@@ -68,4 +68,5 @@ Il manuale è un **documento vivo**: ogni esercitazione, ogni missione reale, og
 - [Codice della Protezione Civile — Capo V (Volontariato)](/normativa/testo-unico-protezione-civile/capo-5-volontariato/)
 - [Evoluzione delle procedure di emergenza 1996-2026](/normativa/evoluzione-procedure-emergenza/)
 - [Piano di Emergenza Comunale](/piano-emergenza/)
+- [Cucina in emergenza: i documenti ufficiali](/cucina-emergenza/)
 - [Area Formazione](/formazione/)

@@ -1,0 +1,136 @@
+# Ricontrolla ogni mese i collegamenti della sezione «Cucina in emergenza»
+# (/cucina-emergenza/ e /cucina-emergenza/disciplinari/): solo file PDF sui siti
+# di enti governativi e istituzionali (regola di Alessandro del 24/11/2026).
+# scripts/check-cucina-emergenza.py --rete --file fa richieste vere, poche per
+# volta: ogni documento risponde ed è un PDF; per i testi di EUR-Lex chiede
+# all'archivio dell'Ufficio delle pubblicazioni dell'UE se il documento esiste e
+# se è uscita una versione consolidata più recente; ogni disciplinare è ancora
+# fra gli allegati della sua pagina del Ministero dell'agricoltura; di ogni PDF
+# del catalogo legge l'inizio, tre alla volta. Il sito del Ministero risponde
+# 502 quando riceve molte richieste insieme: per questo la pagina del catalogo
+# è fuori da lychee (check-links-sito.yml) e si controlla qui. Lo stesso sito ha
+# periodi in cui impiega 30-40 secondi a risposta: lo script aspetta fino a 90
+# secondi per richiesta e ha un tempo massimo (35 minuti di richieste, 12 di
+# browser); ciò che non fa in tempo a leggere lo dichiara «non controllato»,
+# non lo dà per buono. Un giro normale dura circa 4 minuti.
+# Esiti:
+# - tutto letto e nulla di rotto: la data «verificato» dei due file di dati
+#   diventa quella del giorno (commit di sfondo, lo pubblica deploy-coalescer.yml);
+# - collegamento rotto o fonte che non si fa leggere: issue in-place con le
+#   label `automazione` + `fonte-rotta` + `cucina-emergenza` e run rosso
+#   (regola guasti.md, punto 1); la data resta quella dell'ultimo giro riuscito;
+# - solo novità (allegato nuovo su una pagina del Ministero, elenco ufficiale
+#   cambiato, testo consolidato più recente) o collegamenti dietro una verifica
+#   anti-bot (il sito del Ministero della Salute, a tratti, risponde alle
+#   richieste automatiche con una pagina di verifica: non è un collegamento
+#   rotto e non si aggira, regola guasti.md punto 3): stessa issue senza
+#   `fonte-rotta`, run verde. Con una verifica anti-bot la data resta ferma:
+#   quei collegamenti non sono stati controllati.
+# La issue si chiude da sola al primo giro senza rilievi.
+name: "🍲 Cucina in emergenza: controllo mensile dei collegamenti"
+
+on:
+  schedule:
+    - cron: "23 5 5 * *"   # il 5 del mese: 06:23 italiane d'inverno, 07:23 d'estate
+  workflow_dispatch:
+
+concurrency:
+  group: controllo-cucina-emergenza
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  controlla:
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+
+      - name: "🌐 Browser per i siti che non rispondono a una richiesta semplice"
+        # Facoltativo: se non si installa, lo script prosegue con le sole
+        # richieste dirette e dichiara ciò che non ha potuto leggere.
+        continue-on-error: true
+        timeout-minutes: 10
+        run: |
+          pip install --quiet playwright==1.56.0
+          playwright install --with-deps chromium
+
+      - name: "🔎 Rileggi documenti, pagine del Ministero e PDF del catalogo"
+        id: controllo
+        # Lo script si ferma da solo entro circa 50 minuti nel caso peggiore
+        # (35 di richieste + 12 di browser + le ultime risposte in arrivo).
+        timeout-minutes: 58
+        shell: bash
+        run: |
+          python3 -c "import yaml" 2>/dev/null || pip install --quiet pyyaml
+          set +e
+          python3 scripts/check-cucina-emergenza.py --rete --file --browser --aggiorna-data --rapporto /tmp/rapporto.md
+          echo "uscita=$?" >> "$GITHUB_OUTPUT"
+
+      - name: "💾 Commit della data di verifica"
+        if: steps.controllo.outputs.uscita == '0' || steps.controllo.outputs.uscita == '3'
+        timeout-minutes: 5
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/cucina_emergenza.yaml data/disciplinari.json
+          if git diff --cached --quiet; then echo "Nessuna data da aggiornare."; exit 0; fi
+          git commit -m "[skip-cucina-emergenza] Cucina in emergenza: collegamenti ricontrollati"
+          for try in 1 2 3; do
+            if git pull --rebase --autostash origin main && git push origin HEAD:main; then
+              echo "Pubblicato (tentativo $try)."; exit 0
+            fi
+            echo "Push fallito, ritento ($try)..."; sleep 6
+          done
+          echo "::error::Push non riuscito dopo 3 tentativi"; exit 1
+
+      - name: "🚨 Apri, aggiorna o chiudi l'issue dei collegamenti"
+        if: always()
+        timeout-minutes: 5
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9
+        env:
+          USCITA: ${{ steps.controllo.outputs.uscita }}
+        with:
+          script: |
+            const fs = require('fs');
+            const uscita = process.env.USCITA;
+            let rapporto = fs.existsSync('/tmp/rapporto.md') ? fs.readFileSync('/tmp/rapporto.md', 'utf-8').trim() : null;
+            if (rapporto === null || !['0', '1', '2', '3'].includes(uscita)) {
+              core.setFailed(`Lo script non è arrivato in fondo (uscita «${uscita}», rapporto ${rapporto === null ? 'assente' : 'presente'}): guarda il log del passo precedente.`);
+              return;
+            }
+            // Il corpo di una issue non può superare 65.536 caratteri.
+            if (rapporto.length > 60000) rapporto = rapporto.slice(0, 60000) + '\n\n*Rapporto accorciato: il resto è nel log del run.*';
+            const title = 'Cucina in emergenza: collegamenti da ricontrollare';
+            const { owner, repo } = context.repo;
+            try {
+              await github.rest.issues.createLabel({ owner, repo, name: 'cucina-emergenza', color: '0e8a16',
+                description: 'Sezione /cucina-emergenza/: documenti ufficiali e disciplinari' });
+            } catch (e) { /* la label esiste già */ }
+            const aperte = await github.rest.issues.listForRepo({ owner, repo, state: 'open', labels: 'cucina-emergenza', per_page: 100 });
+            const issue = aperte.data.find(i => i.title === title);
+            if (uscita === '0') {
+              if (issue) {
+                await github.rest.issues.createComment({ owner, repo, issue_number: issue.number,
+                  body: 'Tutti i collegamenti della sezione sono stati riletti e non ci sono rilievi: chiudo automaticamente.' });
+                await github.rest.issues.update({ owner, repo, issue_number: issue.number, state: 'closed', state_reason: 'completed' });
+              }
+              return;
+            }
+            const guasto = uscita === '1' || uscita === '2';
+            const labels = guasto ? ['automazione', 'fonte-rotta', 'cucina-emergenza'] : ['automazione', 'cucina-emergenza'];
+            const body = [
+              'Il controllo mensile della sezione [Cucina in emergenza](https://www.protezionecivilegenzano.it/cucina-emergenza/) ha qualcosa da segnalare. La regola della sezione: solo collegamenti verificati a file PDF sui siti di enti governativi e istituzionali.',
+              '',
+              rapporto,
+              '',
+              '---', '*Issue generata da `controllo-cucina-emergenza.yml`; si chiude da sola al primo giro senza rilievi.*'
+            ].join('\n');
+            if (issue) await github.rest.issues.update({ owner, repo, issue_number: issue.number, body, labels });
+            else await github.rest.issues.create({ owner, repo, title, body, labels });
+            if (guasto) core.setFailed(uscita === '1' ? 'Collegamenti rotti o dati sbagliati.' : 'Una o più fonti non si sono fatte leggere.');
