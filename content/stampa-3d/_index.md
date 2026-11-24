@@ -10,9 +10,11 @@ aliases:
   - "/stampa-3d/nominativi/"
 ---
 
-Qui trovi gli oggetti che il Gruppo ha progettato per i volontari, con il nominativo, la bandiera italiana e la scritta «Protezione Civile Genzano di Roma». Scegli un oggetto: nella sua pagina lo guardi in 3D, scarichi il file con il tuo nominativo e trovi le istruzioni per ordinarlo a un servizio di stampa online. Non serve avere una stampante.
+Qui trovi gli oggetti che il Gruppo ha progettato per i volontari, con il nominativo, la bandiera italiana e la scritta «Protezione Civile Genzano di Roma». Scegli un oggetto: nella sua pagina lo guardi in 3D, scarichi il file con il tuo nominativo, se vuoi anche con nome e cognome, e trovi le istruzioni per ordinarlo a un servizio di stampa online. Non serve avere una stampante.
 
 {{< stampa3d parte="nominativo" >}}
+
+{{< stampa3d parte="filtri" >}}
 
 {{% stampa3d parte="catalogo" %}}
 
@@ -42,6 +44,13 @@ Il servizio online stampa in un solo colore, ma la bandiera ha le tre fasce sepa
 </details>
 
 <details class="faq-item">
+<summary><strong>Posso aggiungere nome e cognome?</strong></summary>
+
+Sì, negli oggetti con la scritta «Anche con nome e cognome». Nella pagina dell'oggetto scrivi nome e cognome e premi «Aggiungi»: il file si prepara sul tuo telefono o computer e nome e cognome non vengono inviati a nessuno né salvati dal sito. Sulle targhette e sugli oggetti piccoli vanno sul retro, incisi; sui ganci e sul righello vanno sul davanti. Se non entrano, scrivi solo l'iniziale del nome, per esempio «M. Rossi».
+
+</details>
+
+<details class="faq-item">
 <summary><strong>Il mio numero non c'è</strong></summary>
 
 I file vanno da ALFA 1 ad ALFA 100. Se ti serve un numero diverso, scrivi al Gruppo dalla pagina [Contatti](/contatti/).
@@ -58,7 +67,7 @@ No: secondo il servizio, non serve un account né per vedere i prezzi né per or
 <details class="faq-item">
 <summary><strong>Posso modificare un oggetto?</strong></summary>
 
-Sì. Nella pagina di ogni oggetto, alla voce «File del progetto», trovi il suo modello per [OpenSCAD](https://openscad.org/), un programma gratuito: si cambiano testi e misure senza disegnare a mano. Tutti i file dell'oggetto stanno nella stessa cartella della sua pagina.
+Sì. Nella pagina di ogni oggetto, nella scheda «Altri file», alla voce «Per esperti», trovi il suo modello per [OpenSCAD](https://openscad.org/), un programma gratuito per il computer: si cambiano testi e misure senza disegnare a mano. Il modello non si apre nel browser: serve solo a chi usa quel programma.
 
 </details>
 

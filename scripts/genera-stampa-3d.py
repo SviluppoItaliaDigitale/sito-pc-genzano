@@ -281,7 +281,7 @@ for (let t = 0; t < pos.length; t += 9) {
   let c = zm > zb + 0.01 && zm <= zb + ril + 0.02 ? cr : cb;
   if (c === cr && A.bandiera) {
     const [x0, y0, x1, y1] = A.bandiera, cx = (pc[t] + pc[t + 3] + pc[t + 6]) / 3, cy = (pc[t + 1] + pc[t + 4] + pc[t + 7]) / 3;
-    if (cx >= x0 - 0.1 && cx <= x1 + 0.1 && cy >= y0 - 0.1 && cy <= y1 + 0.1) c = tri[Math.min(2, Math.floor((cx - x0) / (x1 - x0) * 3))];
+    if (cx >= x0 - 0.1 && cx <= x1 + 0.1 && cy >= y0 - 0.1 && cy <= y1 + 0.1) c = tri[Math.max(0, Math.min(2, Math.floor((cx - x0) / (x1 - x0) * 3)))];   // il bordo sinistro può cadere poco prima di x0
   }
   for (let k = 0; k < 9; k += 3) { col[t + k] = c.r; col[t + k + 1] = c.g; col[t + k + 2] = c.b; }
 }
@@ -344,11 +344,45 @@ def anteprime_3d(voci):
         srv.shutdown()
 
 
+def controlla_pezzo(m):
+    """Le stesse regole dei file generati: niente supporti, chiuso, un pezzo, appoggiato sul piano."""
+    errori = []
+    sospesa = superficie_sospesa(m)
+    if sospesa > 60:
+        errori.append(f"{sospesa:.0f} mm² sospesi nel vuoto")
+    if not m.is_watertight:
+        errori.append("superficie non chiusa")
+    if len(m.split(only_watertight=False)) != 1:
+        errori.append("più di un pezzo")
+    if abs(m.bounds[0][2]) > 1e-3:
+        errori.append("non appoggia sul piano")
+    return errori
+
+
+def prova_nome(cartella):
+    """Nome e cognome aggiunti nel browser (static/js/stampa3d-nome-core.js): li crea scripts/prova-stampa3d-nome.mjs
+    per ALFA 100 con un nome lungo, poi qui si controlla ogni file come quelli generati."""
+    import trimesh
+    r = subprocess.run(["node", str(RADICE / "scripts/prova-stampa3d-nome.mjs"), str(cartella)])
+    errori = [] if r.returncode == 0 else ["il codice del sito non ha creato tutti i file con il nome"]
+    for f in sorted(cartella.glob("*.stl")):
+        errori += [f"{f.stem}: {e}" for e in controlla_pezzo(trimesh.load(f))]
+    if errori:
+        print("ERRORI:\n- " + "\n- ".join(errori))
+        return 1
+    print(f"Nome e cognome: {len(list(cartella.glob('*.stl')))} oggetti a posto.")
+    return 0
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--tutti", action="store_true", help="rifà anche i file già presenti")
     ap.add_argument("--check", action="store_true", help="controlla solo che i file ci siano tutti")
+    ap.add_argument("--prova-nome", metavar="CARTELLA",
+                    help="crea con il codice del sito (node) i file con nome e cognome e li controlla")
     a = ap.parse_args()
+    if a.prova_nome:
+        sys.exit(prova_nome(Path(a.prova_nome)))
     dati = yaml.safe_load(DATI.read_text(encoding="utf-8"))
     nom = dati["nominativi"]
     numeri = range(nom["primo"], nom["ultimo"] + 1)

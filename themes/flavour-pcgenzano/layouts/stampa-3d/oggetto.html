@@ -1,0 +1,58 @@
+{{- /*
+  Pagina di un oggetto della stampa 3D (/stampa-3d/<id>/, creata da content/stampa-3d/_content.gotmpl).
+  Impostata come i siti di modelli 3D: in alto la vista dell'oggetto e accanto il riquadro
+  «Personalizza e scarica» (nominativo, nome e cognome, file); sotto le schede Descrizione,
+  Come stamparlo, Come si monta e Altri file. Senza JavaScript le schede restano una sotto l'altra.
+  Parti in partials/stampa3d-parte.html; script js/stampa3d.js, stampa3d-vista.js, stampa3d-nome.js.
+*/ -}}
+{{ define "main" }}
+{{- $id := .Params.oggetto -}}
+{{- $o := dict -}}{{- range site.Data.stampa_3d.oggetti }}{{ if eq .id $id }}{{ $o = . }}{{ end }}{{ end -}}
+<div class="page-hero">
+  <div class="container">
+    {{ partial "breadcrumb.html" . }}
+    <h1>{{ .Title }}</h1>
+    <p class="lead mb-0 s3d-hero-breve">{{ .Description }}</p>
+  </div>
+</div>
+<div class="container py-4 s3d-pagina">
+  <div class="row g-4 align-items-start">
+    <div class="col-lg-7">
+      {{ partial "stampa3d-parte.html" (dict "parte" "visore" "oggetto" $id) }}
+    </div>
+    <div class="col-lg-5">
+      <section class="s3d-pannello s3d d-print-none" aria-labelledby="s3d-pannello-titolo">
+        <h2 id="s3d-pannello-titolo" class="h4">Personalizza e scarica</h2>
+        {{ partial "stampa3d-parte.html" (dict "parte" "campo" "oggetto" $id) }}
+        {{ partial "stampa3d-parte.html" (dict "parte" "nome" "oggetto" $id) }}
+        {{ partial "stampa3d-parte.html" (dict "parte" "scarica" "oggetto" $id) }}
+      </section>
+      {{ partial "stampa3d-parte.html" (dict "parte" "fatti" "oggetto" $id) }}
+    </div>
+  </div>
+
+  <div class="s3d-schede" data-s3d="schede">
+    <section class="s3d-sezione" id="descrizione" data-s3d-titolo="Descrizione">
+      <h2>Descrizione</h2>
+      <div class="article-body">{{ .Content }}</div>
+      {{ partial "stampa3d-parte.html" (dict "parte" "scheda" "oggetto" $id) }}
+    </section>
+    <section class="s3d-sezione" id="come-stamparlo" data-s3d-titolo="Come stamparlo">
+      <h2>Come stamparlo</h2>
+      {{ partial "stampa3d-parte.html" (dict "parte" "ordina" "oggetto" $id) }}
+    </section>
+    <section class="s3d-sezione" id="montaggio" data-s3d-titolo="{{ $o.titolo_montaggio | default "Come si monta" }}">
+      <h2>{{ $o.titolo_montaggio | default "Come si monta" }}</h2>
+      {{ partial "stampa3d-parte.html" (dict "parte" "montaggio" "oggetto" $id) }}
+    </section>
+    <section class="s3d-sezione" id="altri-file" data-s3d-titolo="Altri file">
+      <h2>Altri file</h2>
+      {{ partial "stampa3d-parte.html" (dict "parte" "file" "oggetto" $id) }}
+    </section>
+  </div>
+
+  <p class="mt-4"><a href="{{ "stampa-3d/" | relURL }}"><i class="bi bi-arrow-left me-1" aria-hidden="true"></i> Tutti gli oggetti da stampare</a></p>
+  {{ partial "page-tools.html" . }}
+</div>
+{{ partial "stampa3d-parte.html" (dict "parte" "dati" "oggetto" $id) }}
+{{ end }}
