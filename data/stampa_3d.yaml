@@ -208,7 +208,14 @@ oggetti:
     categoria: "giubbetto"
     breve: "Clip da cintura con un occhiello per le chiavi."
     sorgente: "ganci-nominativo.scad"
-    anteprima: *gancio
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-36.5, 1.75, -23.75, 10.25]
+      vista_3d: true
+      quota_scritte: 14.0   # piastra spostata di 9 mm sopra la clip (spazio_cintura + 3,5), spessa 5 mm
+      fianco: -40   # si stampa in piedi sul lato sinistro (x = -40), senza supporti
     parametri:
       tipo: "cintura"
       parte: "tutto"

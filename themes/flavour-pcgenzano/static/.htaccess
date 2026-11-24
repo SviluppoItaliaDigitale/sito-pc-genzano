@@ -337,6 +337,16 @@ FileETag None
   </FilesMatch>
 </IfModule>
 
+# File per la stampa 3D (STL e modelli OpenSCAD): si scaricano sempre, non si
+# aprono nel browser come testo incomprensibile (segnalazione del 24/11/2026).
+AddType model/stl .stl
+AddType application/x-openscad .scad
+<IfModule mod_headers.c>
+  <FilesMatch "\.(stl|scad)$">
+    Header set Content-Disposition "attachment"
+  </FilesMatch>
+</IfModule>
+
 # Charset esplicito nell'header Content-Type (le pagine sono già UTF-8 nel
 # <meta charset>, ma senza questa riga i client che seguono la RFC leggono
 # ISO-8859-1 e i feed/JSON senza meta risultano con accenti corrotti).

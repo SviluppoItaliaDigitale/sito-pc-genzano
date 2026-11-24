@@ -114,10 +114,7 @@
 {{- else if eq $parte "file" -}}
 {{- $scad := printf "static/stampa-3d/%s/%s.scad" $o.id $o.id -}}
 {{- $kb := 0 }}{{ with os.Stat $scad }}{{ $kb = math.Ceil (div (float .Size) 1024) }}{{ else }}{{ errorf "stampa3d: manca %s, lancia scripts/genera-stampa-3d.py" $scad }}{{ end -}}
-<p>Tutti i file di questo oggetto stanno nella stessa cartella della pagina.</p>
-<ul>
-  <li><a href="{{ printf "%s%s/%s.scad" $base $o.id $o.id }}" download>Modello di {{ $o.nome | lower }}</a> (file di testo per OpenSCAD, {{ $kb }} KB): si apre con <a href="https://openscad.org/" target="_blank" rel="noopener noreferrer">OpenSCAD<span class="visually-hidden"> (si apre in una nuova scheda)</span></a>, un programma gratuito. Cambi il nominativo e le misure senza disegnare a mano.</li>
-</ul>
+<p>Per stampare l'oggetto basta il file STL del tuo nominativo, nella sezione «Scarica il file». Qui sotto ci sono gli altri file, per chi li cerca.</p>
 <details class="s3d-tutti">
   <summary>File STL per ogni nominativo, da {{ $n.prefisso }} {{ $n.primo }} a {{ $n.prefisso }} {{ $n.ultimo }}</summary>
   <ul class="s3d-griglia">
@@ -125,6 +122,11 @@
     <li><a href="{{ printf "%s%s/%s-%03d.stl" $base $o.id $pref . }}" download>{{ $n.prefisso }} {{ . }}</a></li>
   {{- end }}
   </ul>
+</details>
+<details class="s3d-tutti">
+  <summary>Per esperti: modello da modificare con OpenSCAD</summary>
+  <p>Il modello non si apre nel browser e non si stampa così com'è: è un file per <a href="https://openscad.org/" target="_blank" rel="noopener noreferrer">OpenSCAD<span class="visually-hidden"> (si apre in una nuova scheda)</span></a>, un programma gratuito per il computer. Serve a chi vuole cambiare misure o scritte e poi creare da sé il file STL.</p>
+  <p><a href="{{ printf "%s%s/%s.scad" $base $o.id $o.id }}" download>Scarica il modello di {{ $o.nome | lower }}</a> (SCAD, {{ $kb }} KB)</p>
 </details>
 <p>Modello e file sono distribuiti con la stessa licenza del sito, CC BY-NC-SA 4.0: puoi usarli e modificarli citando il Gruppo, senza scopo commerciale (<a href="{{ "note-legali/#licenza-dei-contenuti" | relURL }}">note legali</a>).</p>
 
