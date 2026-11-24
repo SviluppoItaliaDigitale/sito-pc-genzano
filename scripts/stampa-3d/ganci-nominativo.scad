@@ -26,6 +26,8 @@ bandiera = true;
 /* [Misure] */
 // spessore dell'anta su cui si appoggia il gancio (mm)
 spessore_anta = 20;
+// spessore del ponte che passa sopra l'anta (mm): sta nella fessura fra anta chiusa e mobile, di pochi millimetri
+spessore_ponte = 2;
 // spazio per la cintura (mm): cinture spesse fino a 5 mm, il dentino lascia passare 3,5 mm e la linguetta si piega
 spazio_cintura = 5.5;
 // altezza utile per la cintura fra il ponte e il dentino (mm): entrano le cinture alte fino a 4 cm
@@ -172,9 +174,10 @@ module gancio() {
 // Ponte sopra l'anta e aletta che scende dietro, larghi quanto la piastra
 module ponte_anta() {
     D = spessore_anta;
+    P = spessore_ponte;
     profilo_x(H / 2 - 28, H / 2, -(D + 5), 0.5)
-        offset(r = 1.5) offset(delta = -1.5) union() {
-            translate([H / 2 - 5, -(D + 5)]) square([5, D + 5.5]);
+        offset(r = 0.8) offset(delta = -0.8) union() {
+            translate([H / 2 - P, -(D + 5)]) square([P, D + 5.5]);
             translate([H / 2 - 28, -(D + 5)]) square([28, 5]);
         }
 }

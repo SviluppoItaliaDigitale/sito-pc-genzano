@@ -182,13 +182,14 @@ oggetti:
     parametri:
       tipo: "anta"
       parte: "tutto"
-    misure: "8 × 6,3 cm, per ante spesse fino a 2 cm"
+    misure: "8 × 6,3 cm, per ante spesse fino a 2 cm con una fessura sopra di almeno 2,2 mm"
     lunghezza_mm: 80
     peso_g: 95
     scheda:
       - ["Ingombro", "80 × 63 mm, profondo 58 mm"]
       - ["Peso", "circa 95 g"]
       - ["Spazio per l'anta", "20 mm: va bene per ante spesse fino a 2 cm"]
+      - ["Ponte sopra l'anta", "2 mm: passa nella fessura fra anta chiusa e mobile"]
       - ["Aletta dietro", "alta 28 mm e spessa 5 mm; ponte sopra l'anta spesso 5 mm"]
       - ["Gancio", "largo 80 mm; 21 mm liberi fra la piastra e la punta"]
       - ["Posizione di stampa", "in piedi sul lato sinistro, già orientato nel file, senza supporti"]
@@ -197,6 +198,7 @@ oggetti:
     occorrente:
       - "niente: si appoggia e basta"
     montaggio:
+      - "Prima di stampare, chiudi l'anta e prova a infilare una moneta da 2 euro (spessa 2,2 mm) nella fessura in alto: se entra, il gancio ci passa. Se non entra, scegli l'appendiabiti, che si fissa con viti o biadesivo."
       - "Apri l'anta e appoggia il gancio sul bordo in alto, con la scritta verso l'esterno."
       - "La parte dietro scende all'interno dell'anta e tiene fermo il gancio."
       - "Prima di chiudere controlla che l'anta non sbatta contro il gancio. Va bene per ante spesse fino a 2 cm."
