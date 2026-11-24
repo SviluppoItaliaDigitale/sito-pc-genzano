@@ -4,7 +4,7 @@
     <ol class="s3d-elenco">
       <li>{{ .d.servizio.nome }} si apre in una nuova scheda. Il sito è in inglese: se vuoi, usa la funzione «Traduci» del browser.</li>
       <li>Carica il file {{ if .statico }}che hai scaricato dall'elenco{{ else }}<strong data-s3d="file"></strong>{{ end }}: trascinalo nel riquadro di caricamento oppure premi il pulsante per sceglierlo e cercalo nella cartella «Download».</li>
-      <li>Se il sito chiede l'unità di misura, scegli <strong>millimetri (mm)</strong>. Controlla che la lunghezza indicata sia di <strong>{{ .o.lunghezza_mm }} mm</strong>: se il numero è diverso, l'unità è sbagliata.</li>
+      <li>Se il sito chiede l'unità di misura, scegli <strong>millimetri (mm)</strong>. Controlla che fra le misure indicate ci sia <strong>{{ .o.lunghezza_mm }} mm</strong>, la più grande: se non c'è, l'unità è sbagliata. Il file è già girato nella posizione giusta per la stampa: non serve cambiarla.</li>
       <li>Come materiale scegli <strong>{{ .o.materiale }}</strong>, più resistente della plastica normale, e come colore <strong>{{ .o.colore }}</strong>. Se il sito chiede il riempimento («infill»), scegli il 100%: l'oggetto è piccolo e così diventa pieno e robusto. Lascia 1 come quantità.</li>
       <li>Scegli l'offerta che preferisci per prezzo e tempi di consegna, scrivi il tuo indirizzo e paga. I metodi di pagamento dipendono dal paese e di solito comprendono carta e PayPal.</li>
     </ol>

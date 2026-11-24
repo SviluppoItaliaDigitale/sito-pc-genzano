@@ -1,15 +1,15 @@
 ---
 title: "Oggetti con il tuo nominativo"
-description: "Scrivi il numero del tuo nominativo ALFA: vedi targhetta, portachiavi e ganci in 3D, scarichi il file e lo ordini online seguendo i passi."
+description: "Scrivi il numero del tuo nominativo ALFA: vedi in 3D targhetta, portachiavi, ganci, tessera e targa da tavolo, scarichi il file e lo ordini online."
 layout: "single"
 date: 2026-11-23
-dataUltimaRevisione: "2026-11-23"
+dataUltimaRevisione: "2026-11-24"
 image: ""
 tts: true
 indice: false
 ---
 
-Questa pagina è per i volontari del Gruppo. Scrivi il numero del tuo nominativo e trovi gli oggetti già pronti con il tuo nominativo, la bandiera italiana e la scritta «Protezione Civile Genzano di Roma»: targhetta da petto, portachiavi, etichetta per lo zaino, appendiabiti da armadietto, gancio per l'anta, gancio portachiavi da cintura e porta radio portatile.
+Questa pagina è per i volontari del Gruppo. Scrivi il numero del tuo nominativo e trovi gli oggetti già pronti con il tuo nominativo, la bandiera italiana e la scritta «Protezione Civile Genzano di Roma»: targhetta da petto, portachiavi, etichetta per lo zaino, appendiabiti da armadietto, gancio per l'anta, gancio portachiavi da cintura, porta radio portatile, tessera multiuso, etichetta per l'attrezzatura e targa da tavolo. Per ogni oggetto trovi anche la scheda tecnica con tutte le misure.
 
 {{< stampa3d-nominativo >}}
 
@@ -25,7 +25,7 @@ Il prezzo lo stabilisce il servizio di stampa e dipende da materiale, tempi e sp
 <details class="faq-item">
 <summary><strong>Ho una stampante 3D: posso stamparli io?</strong></summary>
 
-Sì. Usa il PETG, con strati da 0,2 mm e riempimento al 100%. Targhetta, portachiavi ed etichetta si stampano con le scritte verso l'alto e senza supporti; i ganci possono averne bisogno, secondo come li appoggi sul piatto. Per le scritte di un altro colore, cambia filamento dove finisce la base e cominciano scritte e bordo: lo vedi nell'anteprima degli strati del programma di stampa.
+Sì. Usa il PETG, con strati da 0,2 mm e riempimento al 100%. Nessun oggetto ha bisogno di supporti, se lo stampi nella posizione in cui è salvato il file: targhetta, portachiavi, tessera ed etichette in piano con le scritte verso l'alto, i ganci e il porta radio in piedi sul lato sinistro, la targa da tavolo in piedi. Non girarli nel programma di stampa. Per le scritte di un altro colore, cambia filamento dove finisce la base e cominciano scritte e bordo: lo vedi nell'anteprima degli strati del programma di stampa.
 
 </details>
 

@@ -37,7 +37,7 @@ Sulla piattaforma i volontari possono:
 - aggiornare i **propri dati personali** e le **disponibilità** settimanali;
 - consultare lo **storico delle attività** svolte.
 
-Sul sito trovi anche gli **oggetti da stampare in 3D con il tuo nominativo**: targhetta da petto, portachiavi, etichetta per lo zaino, ganci e porta radio. Scrivi il tuo numero nella pagina [Oggetti con il tuo nominativo](/stampa-3d/nominativi/) e segui i passi.
+Sul sito trovi anche gli **oggetti da stampare in 3D con il tuo nominativo**: targhetta da petto, portachiavi, etichette, ganci, porta radio, tessera multiuso e targa da tavolo. Scrivi il tuo numero nella pagina [Oggetti con il tuo nominativo](/stampa-3d/nominativi/) e segui i passi.
 
 ## Piattaforma usata
 

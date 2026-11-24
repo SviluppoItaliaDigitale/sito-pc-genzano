@@ -8722,7 +8722,7 @@ body.con-barra-gioco .inf-main > nav[aria-label="Percorso"] { display: none; }
 .s3d-num { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto;
   width: 2.2rem; height: 2.2rem; border-radius: 50%; background: #003366; color: #fff; font-size: 1.15rem; }
 .s3d-visore { position: relative; width: 100%; max-width: 760px; aspect-ratio: 11 / 5; min-height: 200px;
-  background: #eef2f6; border: 1px solid #c5ceda; border-radius: 6px; overflow: hidden; touch-action: none; }
+  background: #eef2f6; border: 1px solid #c5ceda; border-radius: 6px; overflow: hidden; touch-action: pan-y; }
 .s3d-visore .s3d-immagine { width: 100%; height: 100%; object-fit: contain; display: block; }
 .s3d-visore .s3d-tela { position: absolute; inset: 0; width: 100% !important; height: 100% !important; display: none; cursor: grab; }
 .s3d-visore.s3d-pronto .s3d-tela { display: block; }
@@ -8730,6 +8730,9 @@ body.con-barra-gioco .inf-main > nav[aria-label="Percorso"] { display: none; }
 .s3d-comandi { display: flex; flex-wrap: wrap; gap: .5rem; margin: .7rem 0 .4rem; max-width: 760px; }
 .s3d-comandi .btn { min-height: 48px; min-width: 48px; font-size: 1.05rem; }
 .s3d-elenco li { margin-bottom: .45rem; }
+.s3d-scheda { max-width: 760px; margin: .8rem 0 0; }
+.s3d-scheda caption { caption-side: top; font-weight: 600; color: #003366; font-style: normal; }
+.s3d-scheda th { width: 34%; font-weight: 600; color: #1a1a1a; }
 .s3d-retro { max-width: 520px; margin: 1rem 0; }
 .s3d-retro img { width: 100%; height: auto; border-radius: 6px; }
 .s3d-retro figcaption { font-size: .95rem; color: #3d4a57; }

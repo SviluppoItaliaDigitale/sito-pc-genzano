@@ -24,8 +24,10 @@ bandiera = true;
 /* [Misure] */
 // spessore dell'anta su cui si appoggia il gancio (mm)
 spessore_anta = 20;
-// spazio per la cintura (mm)
-spazio_cintura = 5;
+// spazio per la cintura (mm): cinture spesse fino a 5 mm, il dentino lascia passare 3,5 mm e la linguetta si piega
+spazio_cintura = 5.5;
+// altezza utile per la cintura fra il ponte e il dentino (mm): entrano le cinture alte fino a 4 cm
+altezza_cintura = 44;
 // altezza delle scritte e della cornice sopra la base (mm)
 rilievo = 1.0;
 // larghezza della cornice (mm)
@@ -50,16 +52,16 @@ SMUSSO = 0.6;
 
 // Fori per le viti (testa svasata da 4 mm), dove servono
 VITI = tipo == "appendiabiti" ? [[-33, 0], [33, 0]]
-     : tipo == "radio" ? [[-33, 0], [33, 0], [-33, -60], [33, -60]]
+     : tipo == "radio" ? [[-33, 0], [33, 0], [-30, -74], [30, -74]]
      : [];
 
 // Contorno visto di fronte
 module forma() {
     offset(r = R) square([L - 2 * R, H - 2 * R], center = true);
-    if (tipo == "appendiabiti" || tipo == "anta")        // linguetta sotto la piastra, dove nasce il gancio
-        translate([-13, -46]) offset(r = 4) offset(delta = -4) square([26, 40]);
+    if (tipo == "appendiabiti" || tipo == "anta")        // pannello sotto la piastra, largo quanto lei, dove nasce il gancio
+        translate([-L / 2, -46]) offset(r = R) offset(delta = -R) square([L, 40]);
     if (tipo == "radio")                                   // pannello sotto la piastra per il supporto
-        translate([-L / 2, -76]) offset(r = R) offset(delta = -R) square([L, 66]);
+        translate([-L / 2, -84]) offset(r = R) offset(delta = -R) square([L, 74]);
     if (tipo == "cintura")                                 // occhiello a destra per un moschettone
         hull() {
             translate([L / 2 + 6, 0]) circle(d = 18);
@@ -124,38 +126,70 @@ module blocco(a, b, r = 1.5) {
         translate([a[0], y, z]) rotate([0, 90, 0]) cylinder(r = r, h = b[0] - a[0]);
 }
 
-// Gancio davanti alla linguetta: braccio che esce, punta che risale e rinforzo alla radice
-module gancio() {
-    blocco([-11, -45, B - 0.5], [11, -35, B + 28]);                 // braccio, 10 mm di spessore
-    blocco([-11, -45, B + 21], [11, -23, B + 28]);                  // punta, 7 mm di spessore
-    hull() {                                                         // rinforzo a 45 gradi alla radice
-        translate([-11, -35, B - 0.5]) cube([22, 0.01, 7]);
-        translate([-11, -35, B - 0.5]) cube([22, 7, 0.01]);
+// Profilo disegnato nel piano y-z ed esteso per tutta la larghezza della piastra, con gli angoli
+// arrotondati come la piastra. I pezzi «di fianco» si stampano in piedi sul lato sinistro: ogni strato
+// poggia su quello sotto, senza supporti dentro le fessure (genera-stampa-3d.py li ruota).
+module profilo_x(y0, y1, z0, z1) {
+    intersection() {
+        rotate([90, 0, 90]) linear_extrude(L, center = true) children();
+        translate([0, (y0 + y1) / 2, z0])
+            linear_extrude(z1 - z0) offset(r = R) square([L - 2 * R, y1 - y0 - 2 * R], center = true);
     }
 }
 
-// Ponte sopra l'anta e aletta che scende dietro
+// Clip da cintura: ponte in alto, linguetta che scende dietro la piastra e dentino con lo scivolo
+// in basso. La cintura entra dal basso, il dentino la trattiene; per toglierla si solleva la linguetta.
+// La linguetta lavora come una molla: 3,5 mm di PETG per 49 mm, si apre di 1,5 mm con circa 2 kg.
+module clip_cintura() {
+    G = spazio_cintura; T = 3.5; Y0 = H / 2 - 5 - altezza_cintura - 5;
+    profilo_x(Y0, H / 2, -(G + T), 0.5)
+        offset(r = 0.8) offset(delta = -0.8) union() {
+            translate([H / 2 - 5, -(G + T)]) square([5, G + T + 0.5]);           // ponte in alto
+            translate([Y0, -(G + T)]) square([H / 2 - Y0, T]);                    // linguetta
+            polygon([[Y0, -G - 0.1], [Y0, -G + 0.6], [Y0 + 2, -G + 2],            // dentino: scivolo sotto,
+                     [Y0 + 4, -G + 2], [Y0 + 5.5, -G - 0.1]]);                    // fermo sopra
+        }
+}
+
+// Gancio davanti al pannello, largo quanto la piastra: braccio che esce, punta che risale e rinforzo
+// alla radice. Fra la piastra e la punta restano 21 mm per giacche, zaini e caschi.
+module gancio() {
+    profilo_x(-45, -23, B - 0.5, B + 28)
+        offset(r = 1.5) offset(delta = -1.5) union() {
+            translate([-45, B - 0.5]) square([10, 28.5]);                     // braccio, 10 mm di spessore
+            translate([-45, B + 21]) square([22, 7]);                         // punta, 7 mm di spessore
+            polygon([[-35.1, B - 0.5], [-35.1, B + 7], [-28, B - 0.5]]);      // rinforzo a 45 gradi
+        }
+}
+
+// Ponte sopra l'anta e aletta che scende dietro, larghi quanto la piastra
 module ponte_anta() {
     D = spessore_anta;
-    blocco([-15, H / 2 - 5, -(D + 5)], [15, H / 2, 0.5]);
-    blocco([-15, H / 2 - 28, -(D + 5)], [15, H / 2, -D]);
+    profilo_x(H / 2 - 28, H / 2, -(D + 5), 0.5)
+        offset(r = 1.5) offset(delta = -1.5) union() {
+            translate([H / 2 - 5, -(D + 5)]) square([5, D + 5.5]);
+            translate([H / 2 - 28, -(D + 5)]) square([28, 5]);
+        }
 }
 
-// Clip da cintura: ponte in alto e lingua che scende dietro la piastra, con un dentino che trattiene la cintura
-module clip_cintura() {
-    G = spazio_cintura;
-    blocco([-20, H / 2 - 5, -(G + 4)], [20, H / 2, 0.5]);
-    blocco([-20, -30, -(G + 4)], [20, H / 2, -G]);
-    blocco([-20, -30, -G - 0.5], [20, -25, -G + 1.5], 0.8);
-}
-
-// Supporto radio: «cinturone» finto su cui si aggancia la clip della radio, libero in alto
+// Supporto radio: barra spessa 4 mm e alta 38 mm, come una cintura, staccata 8 mm dalla parete e
+// tenuta solo dai due appoggi alle estremità. La clip della radio passa dietro la barra e scende
+// libera sotto, come su una cintura vera: la radio appoggia con la curva della clip sul bordo alto.
 module supporto_radio() {
-    blocco([-26, -72, B - 0.5], [26, -62, B + 12]);                // piede che lo tiene staccato dalla parete
-    blocco([-26, -72, B + 8], [26, -28, B + 12]);                  // lingua da 4 mm, 7,5 mm davanti alla piastra
+    Y0 = -64; Y1 = -26; A = 6;
+    profilo_x(Y0, Y1, B - 0.5, B + 12) translate([Y0, B + 8]) square([Y1 - Y0, 4]);
+    for (s = [-1, 1])                    // appoggi con il lato interno a scivolo (45°): di fianco si stampano senza supporti
+        intersection() {
+            hull() {
+                translate([s * (L / 2 - A / 2), (Y0 + Y1) / 2, B + 5.75]) cube([A, Y1 - Y0, 12.5], center = true);
+                translate([s * (L / 2 - (A + 13) / 2), (Y0 + Y1) / 2, B - 0.25]) cube([A + 13, Y1 - Y0, 0.5], center = true);
+            }
+            translate([0, (Y0 + Y1) / 2, B - 0.5])
+                linear_extrude(13) offset(r = R) square([L - 2 * R, Y1 - Y0 - 2 * R], center = true);
+        }
 }
 
-SPOSTA = tipo == "anta" ? spessore_anta + 5 : tipo == "cintura" ? spazio_cintura + 4 : 0;
+SPOSTA = tipo == "anta" ? spessore_anta + 5 : tipo == "cintura" ? spazio_cintura + 3.5 : 0;
 
 translate([0, 0, SPOSTA]) {
     if (parte == "tutto" || parte == "base") {

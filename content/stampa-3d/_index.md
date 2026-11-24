@@ -13,7 +13,7 @@ Qui trovi gli oggetti che il Gruppo ha progettato per la stampa 3D. Per ognuno c
 ## Oggetti disponibili
 
 <div class="consulta-rapida">
-{{< link-card url="/stampa-3d/nominativi/" icon="bi-person-badge" titolo="Oggetti con il tuo nominativo" desc="Per i volontari: scrivi il numero del tuo nominativo ALFA e trovi targhetta da petto, portachiavi, etichetta per lo zaino, ganci e porta radio." >}}
+{{< link-card url="/stampa-3d/nominativi/" icon="bi-person-badge" titolo="Oggetti con il tuo nominativo" desc="Per i volontari: scrivi il numero del tuo nominativo ALFA e trovi targhetta da petto, portachiavi, etichette, ganci, porta radio, tessera multiuso e targa da tavolo." >}}
 </div>
 
 ## Se vuoi modificarli
@@ -21,9 +21,10 @@ Qui trovi gli oggetti che il Gruppo ha progettato per la stampa 3D. Per ognuno c
 I file sono creati da un modello che si può aprire e modificare con [OpenSCAD](https://openscad.org/), un programma gratuito. Nel modello si cambiano i testi e le misure senza disegnare a mano.
 
 - [Modello di targhetta, portachiavi ed etichetta](/stampa-3d/sorgenti/targhetta-nominativo.scad) (file di testo OpenSCAD, 8 KB)
-- [Modello dei ganci e del porta radio](/stampa-3d/sorgenti/ganci-nominativo.scad) (file di testo OpenSCAD, 8 KB)
+- [Modello dei ganci e del porta radio](/stampa-3d/sorgenti/ganci-nominativo.scad) (file di testo OpenSCAD, 10 KB)
+- [Modello di tessera multiuso, etichetta per l'attrezzatura e targa da tavolo](/stampa-3d/sorgenti/oggetti-nominativo.scad) (file di testo OpenSCAD, 6 KB)
 
-I file rispettano le regole di stampa pubblicate dal servizio online che indichiamo: un solo pezzo per file, misure in millimetri, pareti e tratti delle lettere abbastanza spessi da stampare bene.
+I file rispettano le regole di stampa pubblicate dal servizio online che indichiamo: un solo pezzo per file, misure in millimetri, pareti e tratti delle lettere abbastanza spessi da stampare bene, nessuna parte sospesa che chieda supporti.
 
 ## Licenza
 

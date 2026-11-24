@@ -548,7 +548,7 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
 <a class="ms-card ms-edu" href="/stampa-3d/nominativi/">
   <div class="ms-card-icon"><i class="bi bi-person-badge"></i></div>
   <p class="ms-card-title">Oggetti con il tuo nominativo</p>
-  <p class="ms-card-desc">Per i volontari: targhetta da petto, portachiavi, etichetta per lo zaino, ganci e porta radio con il nominativo ALFA, da scaricare o ordinare online.</p>
+  <p class="ms-card-desc">Per i volontari: targhetta da petto, portachiavi, etichette, ganci, porta radio, tessera multiuso e targa da tavolo con il nominativo ALFA, da scaricare o ordinare online.</p>
 </a>
 <a class="ms-card ms-edu" href="/esercitazioni/">
   <div class="ms-card-icon"><i class="bi bi-list-task"></i></div>

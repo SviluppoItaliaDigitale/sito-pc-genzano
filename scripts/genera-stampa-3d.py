@@ -133,7 +133,40 @@ def unisci(a, b):
         return mf.Manifold(mf.Mesh(vert_properties=np.asarray(m.vertices, dtype=np.float32),
                                    tri_verts=np.asarray(m.faces, dtype=np.uint32)))
     r = (man(a) + man(b)).to_mesh()
-    return trimesh.Trimesh(vertices=r.vert_properties[:, :3], faces=r.tri_verts, process=True)
+    m = trimesh.Trimesh(vertices=r.vert_properties[:, :3], faces=r.tri_verts, process=True)
+    # L'unione in precisione singola può lasciare schegge di volume nullo sugli spigoli
+    # (nella targa da tavolo, al colmo): si tolgono, i pezzi veri restano tutti.
+    pezzi = m.split(only_watertight=False)
+    if len(pezzi) > 1:
+        veri = [p for p in pezzi if abs(p.volume) > 1.0]
+        if veri:
+            m = trimesh.util.concatenate(veri)
+    return m
+
+
+def superficie_sospesa(m):
+    """Area delle facce rivolte in basso (più di 45°) sotto le quali c'è vuoto per più di 3 mm:
+    in stampa resterebbero nel vuoto e chiederebbero supporti. Non contano i primi 2 mm sul piano,
+    i bordi delle lettere in rilievo e gli archi dei fori piccoli, che si stampano da soli."""
+    import numpy as np
+    n, c, a = m.face_normals, m.triangles_center, m.area_faces
+    giu = np.where((n[:, 2] < -0.71) & (c[:, 2] > 2.0))[0]
+    if not len(giu):
+        return 0.0
+    origini = c[giu] - [0, 0, 0.02]
+    vuoto = origini[:, 2].copy()                 # senza ostacoli si arriva al piano
+    dove, raggi, _ = m.ray.intersects_location(origini, np.tile([0, 0, -1.0], (len(giu), 1)), multiple_hits=True)
+    for p, r in zip(dove, raggi):
+        vuoto[r] = min(vuoto[r], origini[r, 2] - p[2])
+    import trimesh
+    sotto = giu[vuoto > 3.0]
+    # gli archi dei fori tondi (viti, occhielli) e i bordi stretti (rilievi da 1 mm su una parete)
+    # si stampano da soli: contano solo le zone sospese più grandi di 30 mm² e larghe più di 1,6 mm
+    gruppi = trimesh.graph.connected_components(m.face_adjacency, nodes=sotto) if len(sotto) else []
+    def largo(gr):
+        v = m.vertices[m.faces[gr].ravel()]
+        return min(np.ptp(v[:, 0]), np.ptp(v[:, 1])) > 1.6
+    return float(sum(a[gr].sum() for gr in gruppi if a[gr].sum() > 30 and largo(gr)))
 
 
 def genera(sorgente, parametri, testo, destinazione, colori=None, retro=None, base_stl=None):
@@ -146,7 +179,16 @@ def genera(sorgente, parametri, testo, destinazione, colori=None, retro=None, ba
         else:
             scad(sorgente, {**parametri, "riga1": testo}, tmp)
             m = trimesh.load(tmp)
+    if colori and colori.get("fianco") is not None:
+        # Stampa di fianco: il lato sinistro (x = fianco) va sul piano (z' = x - fianco, x' = -z), così
+        # ganci, fessure e alette si stampano senza supporti. Le anteprime lo rimettono dritto.
+        import numpy as np
+        m.apply_transform(trimesh.transformations.rotation_matrix(-np.pi / 2, [0, 1, 0]))
+        m.apply_translation([0, 0, -m.bounds[0][2]])
     errori = []
+    sospesa = superficie_sospesa(m)
+    if sospesa > 60:   # nessun oggetto deve chiedere supporti (archi dei fori e bordi da 1 mm non contano)
+        errori.append(f"{sospesa:.0f} mm² sospesi nel vuoto: servirebbero supporti")
     if not m.is_watertight:
         errori.append("superficie non chiusa")
     if len(m.split(only_watertight=False)) != 1:
@@ -175,20 +217,27 @@ const q = new URLSearchParams(location.search), A = JSON.parse(q.get('a'));
 const buf = await (await fetch(q.get('f'))).arrayBuffer(), dv = new DataView(buf), n = dv.getUint32(80, true);
 const pos = new Float32Array(n * 9);
 for (let i = 0; i < n; i++) for (let k = 0; k < 9; k++) pos[i * 9 + k] = dv.getFloat32(84 + i * 50 + 12 + k * 4, true);
+if (A.fianco) for (let i = 0; i < pos.length; i += 3) { const xs = pos[i]; pos[i] = pos[i + 2] + A.fianco; pos[i + 2] = -xs; }
+let pc = pos;
+if (A.inclina) {        // targa da tavolo: piastra con le scritte riportata in piano per colorarle
+  const [g, calo, meta] = A.inclina, a = g * Math.PI / 180, ca = Math.cos(a), sa = Math.sin(a);
+  pc = new Float32Array(pos.length);
+  for (let i = 0; i < pos.length; i += 3) { const y = pos[i + 1], z = pos[i + 2] + calo; pc[i] = pos[i]; pc[i + 1] = y * ca + z * sa - meta; pc[i + 2] = -y * sa + z * ca; }
+}
 const aree = new Map();
-for (let t = 0; t < pos.length; t += 9) {
-  const z0 = pos[t + 2]; if (Math.abs(z0 - pos[t + 5]) > 1e-3 || Math.abs(z0 - pos[t + 8]) > 1e-3) continue;
-  const nz = (pos[t + 3] - pos[t]) * (pos[t + 7] - pos[t + 1]) - (pos[t + 4] - pos[t + 1]) * (pos[t + 6] - pos[t]);
+for (let t = 0; t < pc.length; t += 9) {
+  const z0 = pc[t + 2]; if (Math.abs(z0 - pc[t + 5]) > 1e-3 || Math.abs(z0 - pc[t + 8]) > 1e-3) continue;
+  const nz = (pc[t + 3] - pc[t]) * (pc[t + 7] - pc[t + 1]) - (pc[t + 4] - pc[t + 1]) * (pc[t + 6] - pc[t]);
   if (nz > 0) aree.set(z0.toFixed(2), (aree.get(z0.toFixed(2)) || 0) + nz);
 }
 let zb = 0, best = 0; aree.forEach((v, k) => { if (v > best) { best = v; zb = parseFloat(k); } });
 const ril = A.rilievo_mm || 1, cb = new THREE.Color(A.base), cr = new THREE.Color(A.rilievo);
 const tri = ['#009246', '#ffffff', '#ce2b37'].map(c => new THREE.Color(c)), col = new Float32Array(pos.length);
 for (let t = 0; t < pos.length; t += 9) {
-  const zm = Math.max(pos[t + 2], pos[t + 5], pos[t + 8]);
+  const zm = Math.max(pc[t + 2], pc[t + 5], pc[t + 8]);
   let c = zm > zb + 0.01 && zm <= zb + ril + 0.02 ? cr : cb;
   if (c === cr && A.bandiera) {
-    const [x0, y0, x1, y1] = A.bandiera, cx = (pos[t] + pos[t + 3] + pos[t + 6]) / 3, cy = (pos[t + 1] + pos[t + 4] + pos[t + 7]) / 3;
+    const [x0, y0, x1, y1] = A.bandiera, cx = (pc[t] + pc[t + 3] + pc[t + 6]) / 3, cy = (pc[t + 1] + pc[t + 4] + pc[t + 7]) / 3;
     if (cx >= x0 - 0.1 && cx <= x1 + 0.1 && cy >= y0 - 0.1 && cy <= y1 + 0.1) c = tri[Math.min(2, Math.floor((cx - x0) / (x1 - x0) * 3))];
   }
   for (let k = 0; k < 9; k += 3) { col[t + k] = c.r; col[t + k + 1] = c.g; col[t + k + 2] = c.b; }
