@@ -32,10 +32,18 @@ for (const o of dati.oggetti) {
   const a = o.anteprima || {};
   if (!a.nome) continue;
   const stl = fs.readFileSync(path.join(ROOT, 'static/stampa-3d', o.id, 'alfa-100.stl'));
+  const buf = () => stl.buffer.slice(stl.byteOffset, stl.byteOffset + stl.byteLength);
   try {
-    const r = core.conNome(stl.buffer.slice(stl.byteOffset, stl.byteOffset + stl.byteLength), a, testo, font, M);
+    let r, usato = testo;
+    try { r = core.conNome(buf(), a, testo, font, M); }
+    catch (e) {
+      // nelle zone più corte il sito chiede l'iniziale del nome: si prova come farebbe il volontario
+      if (!/non entrano/.test(e.message)) throw e;
+      usato = testo.replace(/^(\S)\S*\s+(?:(\S)\S*\s+)?/, (m, a1, a2) => a2 ? `${a1}. ${a2}. ` : `${a1}. `);
+      r = core.conNome(buf(), a, usato, font, M);
+    }
     fs.writeFileSync(path.join(uscita, `${o.id}.stl`), Buffer.from(r.stl));
-    console.log(`${o.id}: ${r.lato}, misura ${r.size}`);
+    console.log(`${o.id}: ${r.lato}, misura ${r.size}${usato !== testo ? `, con l'iniziale («${usato}»)` : ''}`);
   } catch (e) {
     errori++;
     console.log(`${o.id}: ERRORE ${e.message}`);

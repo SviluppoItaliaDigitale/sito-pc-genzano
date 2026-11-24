@@ -651,7 +651,7 @@ oggetti:
       - "Per compitare una parola alla radio, di' la parola dell'alfabeto per ogni lettera: per esempio «ALFA» si dice Alfa, Lima, Foxtrot, Alfa."
 
   # ---------- Al campo e in mensa (famiglia campo-nominativo.scad) ----------
-  # «nome» = riquadro libero [x0, y0, x1, y1] dove il sito aggiunge la riga con nome e cognome,
+  # «nome» = zona libera [x0, y0, x1, y1] e lato («fronte»: in rilievo) dove il sito aggiunge la riga con nome e cognome,
   # nelle stesse coordinate di «bandiera»; «quota_scritte» = quota della faccia delle scritte.
 
   - id: "segna-tazza"
@@ -666,7 +666,7 @@ oggetti:
       rilievo: "#f07d00"
       rilievo_mm: 1.0
       bandiera: [-23.43, 6.5, -14.43, 12.5]
-      nome: [-25, -2, 25, 5]
+      nome: { zona: [-25, -2, 25, 5], lato: "fronte" }
       quota_scritte: 2.5
       vista_3d: true
     parametri:
@@ -706,7 +706,7 @@ oggetti:
       rilievo: "#f07d00"
       rilievo_mm: 1.0
       bandiera: [-25.32, 7.5, -15.57, 14.0]
-      nome: [-30, -1, 30, 6]
+      nome: { zona: [-30, -1, 30, 6], lato: "fronte" }
       quota_scritte: 3.5
     parametri:
       tipo: "borraccia"
@@ -742,7 +742,7 @@ oggetti:
       rilievo: "#f07d00"
       rilievo_mm: 1.0
       bandiera: [-55.32, 10.25, -45.57, 16.75]
-      nome: [-60, 1.5, 0, 8.5]
+      nome: { zona: [-60, 1.5, 0, 8.5], lato: "fronte" }
       quota_scritte: 26.0
       vista_3d: true
       fianco: -107.25   # si stampa in piedi sul lato chiuso (x = -107,25), senza supporti
@@ -781,7 +781,7 @@ oggetti:
       rilievo: "#f07d00"
       rilievo_mm: 1.0
       bandiera: [-25.32, 7.5, -15.57, 14.0]
-      nome: [-30, -1, 30, 6]
+      nome: { zona: [-30, -1, 30, 6], lato: "fronte" }
       quota_scritte: 3.0
     parametri:
       tipo: "gavetta"
@@ -817,7 +817,7 @@ oggetti:
       rilievo: "#f07d00"
       rilievo_mm: 1.0
       bandiera: [-25.32, 7.5, -15.57, 14.0]
-      nome: [-30, -1, 30, 6]
+      nome: { zona: [-30, -1, 30, 6], lato: "fronte" }
       quota_scritte: 3.0
     parametri:
       tipo: "brandina"
@@ -856,7 +856,7 @@ oggetti:
       rilievo: "#f07d00"
       rilievo_mm: 1.0
       bandiera: [-25.32, 27.0, -15.57, 33.5]
-      nome: [-30, 18.5, 30, 25.5]
+      nome: { zona: [-30, 18.5, 30, 25.5], lato: "fronte" }
       quota_scritte: 9.75
       vista_3d: true
       assi: [[1, 0, 0], [0, 0, 1], [0, -1, 0]]   # nella vista si sdraia con le scritte verso l'alto
@@ -893,7 +893,7 @@ oggetti:
       rilievo: "#f07d00"
       rilievo_mm: 1.0
       bandiera: [-25.32, 25.0, -15.57, 31.5]
-      nome: [-28, 16.5, 28, 23.5]
+      nome: { zona: [-28, 16.5, 28, 23.5], lato: "fronte" }
       quota_scritte: 7.75
       vista_3d: true
       assi: [[1, 0, 0], [0, 0, 1], [0, -1, 0]]   # nella vista si sdraia con le scritte verso l'alto
@@ -930,7 +930,7 @@ oggetti:
       rilievo: "#f07d00"
       rilievo_mm: 1.0
       bandiera: [-25.32, 22.0, -15.57, 28.5]
-      nome: [-30, 13.5, 30, 20.5]
+      nome: { zona: [-30, 13.5, 30, 20.5], lato: "fronte" }
       quota_scritte: 3.5
       vista_3d: true
     parametri:
@@ -971,7 +971,7 @@ oggetti:
       rilievo: "#f07d00"
       rilievo_mm: 1.0
       bandiera: [-25.32, 88.25, -15.57, 94.75]
-      nome: [-25, 79, 25, 86]
+      nome: { zona: [-25, 79, 25, 86], lato: "fronte" }
       quota_scritte: 2.0
     parametri:
       tipo: "registro"
@@ -1006,7 +1006,7 @@ oggetti:
       rilievo: "#f07d00"
       rilievo_mm: 1.0
       bandiera: [-25.32, 6.5, -15.57, 13.0]
-      nome: [-30, -2, 30, 5]
+      nome: { zona: [-30, -2, 30, 5], lato: "fronte" }
       quota_scritte: 3.0
     parametri:
       tipo: "armadietto"
