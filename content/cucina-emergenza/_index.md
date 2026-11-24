@@ -3,7 +3,7 @@ title: "Cucina in emergenza"
 description: "Documenti ufficiali per chi cucina in un campo o in una mensa di emergenza: igiene, allergeni, pasti per molte persone, donazioni, prodotti tipici."
 layout: "single"
 date: 2026-11-24
-dataUltimaRevisione: "2026-11-24"
+dataUltimaRevisione: "2026-11-25"
 image: ""
 tts: true
 ---
@@ -52,7 +52,7 @@ Sono i due regolamenti di base: le regole di igiene per chi tratta alimenti e i 
 
 ## Prodotti tipici: disciplinari ed elenchi
 
-In una cucina da campo possono arrivare prodotti del territorio, comprati o donati. Il disciplinare è il documento ufficiale che descrive un prodotto DOP, IGP o STG: la zona, le materie prime, il metodo con cui si ottiene.
+In una cucina da campo possono arrivare prodotti del territorio, comprati o donati. Il disciplinare è il documento ufficiale che descrive un prodotto DOP, IGP o STG: la zona, le materie prime, il metodo con cui si ottiene. Per molti prodotti DOP e IGP il catalogo collega anche la sintesi europea del disciplinare, il documento unico della Gazzetta ufficiale dell'Unione europea.
 
 {{< pulsante url="/cucina-emergenza/disciplinari/" testo="Apri il catalogo dei disciplinari" icona="bi-journal-text" >}}
 {{< pulsante url="/cucina-emergenza/disciplinari/?regione=lazio" testo="Solo i prodotti del Lazio" icona="bi-geo-alt" stile="outline" >}}
