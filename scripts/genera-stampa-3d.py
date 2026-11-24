@@ -370,7 +370,7 @@ def main():
         else:
             modello.parent.mkdir(parents=True, exist_ok=True)
             modello.write_text(testo_modello, encoding="utf-8")
-        if "controllo_viti" in sorgente.read_text(encoding="utf-8"):
+        if not a.check and "controllo_viti" in sorgente.read_text(encoding="utf-8"):
             viti += [(sorgente, ogg.get("parametri", {}), f'{nom["prefisso"]} {n}') for n in numeri]
         for n in numeri:
             dest = USCITA / ogg["id"] / nome_file(nom["prefisso"], n)
