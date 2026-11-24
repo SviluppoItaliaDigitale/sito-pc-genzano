@@ -548,7 +548,7 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
 <a class="ms-card ms-edu" href="/elettronica-emergenza/">
   <div class="ms-card-icon"><i class="bi bi-cpu"></i></div>
   <p class="ms-card-title">Elettronica per l'emergenza</p>
-  <p class="ms-card-desc">Progetti con Arduino, ESP32 e Raspberry Pi per i volontari: sensore del livello dell'acqua, pluviometro, nodo Meshtastic per la squadra, schermo dell'allerta in sede. Codice, istruzioni e custodie da stampare.</p>
+  <p class="ms-card-desc">Progetti con Arduino, ESP32 e Raspberry Pi per i volontari: sensore del livello dell'acqua, pluviometro, stazione meteo, monitor del caldo, batteria a 12 V, nodo Meshtastic e posizione dei mezzi, schermo dell'allerta, sismografo, ricevitore di aerei. Codice, istruzioni e custodie da stampare.</p>
 </a>
 <a class="ms-card ms-edu" href="/esercitazioni/">
   <div class="ms-card-icon"><i class="bi bi-list-task"></i></div>

@@ -96,7 +96,7 @@ Progetti con Arduino, ESP32 e Raspberry Pi a tema protezione civile, per i volon
 
 | Pagina | Contenuto | Formato |
 |---|---|---|
-| [Elettronica per l'emergenza](/elettronica-emergenza/) | Sensore del livello dell'acqua per un fosso o un sottopasso, pluviometro a bascula, nodo Meshtastic per i messaggi della squadra, schermo dell'allerta in sede con Raspberry Pi | INO · PY · SH · STL · SCAD |
+| [Elettronica per l'emergenza](/elettronica-emergenza/) | Sensore del livello dell'acqua, pluviometro, stazione meteo, monitor del caldo, controllo della batteria a 12 V, nodo Meshtastic e posizione dei mezzi, schermo dell'allerta in sede, sismografo Raspberry Shake, ricevitore di aerei ADS-B | INO · PY · SH · STL · SCAD |
 
 ## Normativa Regionale (Lazio)
 
