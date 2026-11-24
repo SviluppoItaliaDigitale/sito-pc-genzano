@@ -2,14 +2,16 @@
 // Scrivi il tuo nominativo in riga1, premi F6 per l'anteprima e F7 per salvare il file STL.
 // Lo stesso modello fa anche altri oggetti: si sceglie con il parametro «tipo».
 // Ganci con nominativo per i volontari della Protezione Civile di Genzano di Roma: appendiabiti da armadietto,
-// gancio per l'anta, gancio da cintura e porta radio portatile. Si cambiano solo i parametri qui sotto.
+// gancio per l'anta, gancio da cintura, porta radio portatile, supporto per torcia e clip da parasole. Si cambiano solo i parametri qui sotto.
 // Licenza: CC BY-NC-SA 4.0 — Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma.
 
 /* [Oggetto] */
 // appendiabiti = si avvita o si incolla nell'armadietto; anta = si appoggia sopra l'anta; cintura = clip da cintura;
 // radio = supporto da parete su cui si aggancia la clip della radio portatile;
-// microfono = supporto da parete o da cruscotto per il microfono altoparlante della radio
-tipo = "radio"; // [appendiabiti, anta, cintura, radio, microfono]
+// microfono = supporto da parete o da cruscotto per il microfono altoparlante della radio;
+// torcia = supporto da parete per una torcia tonda;
+// parasole = clip da infilare sull'aletta parasole del mezzo, con l'occhiello per il telecomando o le chiavi
+tipo = "radio"; // [appendiabiti, anta, cintura, radio, microfono, torcia, parasole]
 // tutto = pezzo unico; base e testo = pezzi separati per stampa a due colori;
 // controllo_viti = solo le parti delle scritte che finirebbero sulle teste delle viti (deve risultare vuoto)
 parte = "tutto"; // [tutto, base, testo, controllo_viti]
@@ -35,6 +37,11 @@ spessore_ponte = 2;
 spazio_cintura = 5.5;
 // altezza utile per la cintura fra il ponte e il dentino (mm): entrano le cinture alte fino a 4 cm
 altezza_cintura = 44;
+// diametro del corpo della torcia (mm). Maglite a 2 o 3 pile D: 39,67 mm (classiche) e 38,1 mm (ML300LX),
+// dalle schede del produttore su maglite.com (consultate il 24/11/2026). Per un'altra torcia misura il corpo.
+diametro_torcia = 39.7;
+// spessore dell'aletta parasole del mezzo (mm): misuralo con un righello prima di stampare, cambia da mezzo a mezzo
+spessore_parasole = 20;
 // altezza delle scritte e della cornice sopra la base (mm)
 rilievo = 1.0;
 // larghezza della cornice (mm)
@@ -51,18 +58,26 @@ MISURE = [
     ["anta",         [80, 34, 4, 5.0, 8.5, 6.0, 4.5, -2.3, -8.0, 6]],
     ["cintura",      [80, 34, 4, 5.0, 8.5, 6.0, 4.5, -2.3, -8.0, 6]],
     ["radio",        [80, 34, 4, 5.0, 8.5, 6.0, 4.5, -2.3, -8.0, 6]],
-    ["microfono",    [66, 30, 4, 5.0, 7.5, 6.0, 4.0, -2.0, -7.0, 6]]
+    ["microfono",    [66, 30, 4, 5.0, 7.5, 6.0, 4.0, -2.0, -7.0, 6]],
+    ["torcia",       [80, 34, 4, 5.0, 8.5, 6.0, 4.5, -2.3, -8.0, 6]],
+    ["parasole",     [80, 34, 4, 4.0, 8.5, 6.0, 4.5, -2.3, -8.0, 6]]
 ];
 M = MISURE[search([tipo], MISURE)[0]][1];
 L = M[0]; H = M[1]; R = M[2]; B = M[3];
 S1 = M[4]; Y1 = M[5]; S2 = M[6]; Y2 = M[7]; Y3 = M[8]; TX = M[9];
 SMUSSO = 0.6;
 
+// Anello del supporto torcia (spiegato più sotto): serve già qui per la posizione della terza vite
+TOR_D = diametro_torcia + 0.6; TOR_T = 3.5; TOR_R = TOR_D / 2 + TOR_T; TOR_Y = -10 - TOR_R - 12;   // 22 mm sotto la piastra: le viti in alto restano libere
+TOR_Z = B - 0.5 + TOR_R;                     // centro dell'anello: l'anello tocca la piastra
+TOR_BOCCA = diametro_torcia * 0.92;
+
 // Fori per le viti (testa svasata da 4 mm), dove servono: sotto le scritte, perché la testa della vite
 // non copra la bandiera o il nominativo (parte = "controllo_viti" lo verifica)
 VITI = tipo == "appendiabiti" ? [[-33, -11], [33, -11]]
      : tipo == "radio" ? [[-33, -11], [33, -11], [-30, -74], [30, -74]]
      : tipo == "microfono" ? [[-25, -21.5], [25, -21.5]]
+     : tipo == "torcia" ? [[-33, -11], [33, -11], [0, TOR_Y - TOR_R - 8]]
      : [];
 
 // Contorno visto di fronte
@@ -74,7 +89,9 @@ module forma() {
         translate([-L / 2, -84]) offset(r = R) offset(delta = -R) square([L, 74]);
     if (tipo == "microfono")                               // pannello sotto la piastra per il supporto
         translate([-L / 2, -60]) offset(r = R) offset(delta = -R) square([L, 50]);
-    if (tipo == "cintura")                                 // occhiello a destra per un moschettone
+    if (tipo == "torcia")                                  // pannello sotto la piastra per le due mezzelune
+        translate([-L / 2, TOR_Y - TOR_R - 15]) offset(r = R) offset(delta = -R) square([L, -TOR_Y + TOR_R + 15 - 10]);
+    if (tipo == "cintura" || tipo == "parasole")           // occhiello a destra per un moschettone
         hull() {
             translate([L / 2 + 6, 0]) circle(d = 18);
             translate([L / 2 - R, 0]) square([2 * R, 18], center = true);
@@ -82,7 +99,7 @@ module forma() {
 }
 
 module fori() {
-    if (tipo == "cintura") translate([L / 2 + 6, 0]) circle(d = 8);
+    if (tipo == "cintura" || tipo == "parasole") translate([L / 2 + 6, 0]) circle(d = 8);
 }
 
 module sagoma(inset = 0) {
@@ -203,7 +220,34 @@ module supporto_radio(Y0 = -64, Y1 = -26, G = 8, T = 4) {
         }
 }
 
-SPOSTA = tipo == "anta" ? spessore_anta + 5 : tipo == "cintura" ? spazio_cintura + 3.5 : 0;
+// Supporto torcia: anello a scatto largo quanto la piastra, con la torcia in orizzontale. L'anello è spesso 3,5 mm e
+// ha il foro 0,6 mm più largo del corpo; la bocca davanti è stretta il 92% del diametro, così la torcia si spinge
+// dentro, l'anello si apre un poco e la trattiene (con l'85% servirebbe una spinta troppo forte). La terza vite sta sotto l'anello, nel pannello.
+module supporto_torcia() {
+        profilo_x(TOR_Y - TOR_R, TOR_Y + TOR_R, B - 0.5, B - 0.5 + 2 * TOR_R)
+            offset(r = 0.8) offset(delta = -0.8) difference() {
+                union() {
+                    translate([TOR_Y, TOR_Z]) circle(r = TOR_R, $fn = 96);
+                    translate([TOR_Y - TOR_R, B - 0.5]) square([2 * TOR_R, TOR_R]);      // base piena contro la piastra
+                }
+                translate([TOR_Y, TOR_Z]) circle(d = TOR_D, $fn = 96);
+                translate([TOR_Y - TOR_BOCCA / 2, TOR_Z]) square([TOR_BOCCA, TOR_R + 1]);  // bocca davanti
+            }
+}
+
+// Clip da parasole: ponte sopra l'aletta e linguetta che scende dietro, come il gancio per l'anta, con il ponte
+// spesso 3 mm. Lo spazio è lo spessore dell'aletta più 0,5 mm; la linguetta scende di 24 mm.
+module clip_parasole() {
+    D = spessore_parasole + 0.5; P = 3;
+    profilo_x(H / 2 - 24, H / 2, -(D + 4), 0.5)
+        offset(r = 0.8) offset(delta = -0.8) union() {
+            translate([H / 2 - P, -(D + 4)]) square([P, D + 4.5]);
+            translate([H / 2 - 24, -(D + 4)]) square([24, 4]);
+        }
+}
+
+SPOSTA = tipo == "anta" ? spessore_anta + 5 : tipo == "cintura" ? spazio_cintura + 3.5
+       : tipo == "parasole" ? spessore_parasole + 4.5 : 0;
 
 translate([0, 0, SPOSTA]) {
     if (parte == "tutto" || parte == "base") {
@@ -214,6 +258,8 @@ translate([0, 0, SPOSTA]) {
         if (tipo == "radio") supporto_radio();
         // microfono: barra alta 24 mm e spessa 3,5 mm, a 4,5 mm dalla piastra, per la clip a molla del microfono
         if (tipo == "microfono") supporto_radio(-54, -30, 4.5, 3.5);
+        if (tipo == "torcia") supporto_torcia();
+        if (tipo == "parasole") clip_parasole();
     }
     if (parte == "controllo_viti")
         linear_extrude(1) intersection() { testi2d(); for (v = VITI) translate(v) circle(d = 10); }

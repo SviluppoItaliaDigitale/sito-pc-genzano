@@ -10,6 +10,8 @@ cartella static/stampa-3d/<id>/, dove sta anche la sua pagina: il modello <id>.s
 quell'oggetto, il file <prefisso>-NNN.stl per ogni nominativo (STL binario, in millimetri, un solo
 pezzo) e l'anteprima <prefisso>-NNN.webp disegnata dal file stesso, più retro.webp per il lato
 posteriore. Salta gli STL già presenti, salvo --tutti; il modello .scad si riscrive sempre.
+Un oggetto in due pezzi (per esempio scatola e coperchio) ha «secondo_pezzo» nel catalogo: il pezzo con
+le scritte cambia con il nominativo, il secondo è uguale per tutti e si crea una volta sola, con gli stessi controlli.
 Nei modelli con viti controlla che la testa delle viti non copra mai bandiera e scritte.
 Controlla le regole pubblicate da Craftcloud per la stampa FDM (support.craftcloud3d.com, articoli
 31 e 32, consultati il 23/11/2026): superficie chiusa, un pezzo per file, appoggio sul piano,
@@ -359,6 +361,20 @@ def controlla_pezzo(m):
     return errori
 
 
+def secondo_pezzo(sorgente, parametri, destinazione):
+    """Pezzo uguale per tutti i nominativi (scatola, tappo): si crea, si controlla come gli altri e si salva."""
+    import trimesh
+    with tempfile.TemporaryDirectory() as d:
+        tmp = Path(d) / "pezzo.stl"
+        scad(sorgente, parametri, tmp)
+        m = trimesh.load(tmp)
+    errori = controlla_pezzo(m)
+    if not errori:
+        destinazione.parent.mkdir(parents=True, exist_ok=True)
+        m.export(destinazione)
+    return errori
+
+
 def prova_nome(cartella):
     """Nome e cognome aggiunti nel browser (static/js/stampa3d-nome-core.js): li crea scripts/prova-stampa3d-nome.mjs
     per ALFA 100 con un nome lungo, poi qui si controlla ogni file come quelli generati."""
@@ -386,7 +402,7 @@ def main():
     dati = yaml.safe_load(DATI.read_text(encoding="utf-8"))
     nom = dati["nominativi"]
     numeri = range(nom["primo"], nom["ultimo"] + 1)
-    errori, lavori, viti = [], [], []
+    errori, lavori, viti, secondi = [], [], [], []
     cartella_basi = tempfile.TemporaryDirectory()
     categorie = {c["id"] for c in dati.get("categorie", [])}
     for ogg in dati["oggetti"]:
@@ -420,11 +436,21 @@ def main():
                     scad(sorgente, {**ogg.get("parametri", {}), "parte": "base"}, base_stl)
                 lavori.append((sorgente, ogg.get("parametri", {}), f'{nom["prefisso"]} {n}', dest,
                                ogg.get("anteprima"), retro, base_stl))
+        sp = ogg.get("secondo_pezzo")
+        if sp:
+            dest2 = USCITA / ogg["id"] / sp["file"]
+            if a.check:
+                if not dest2.exists():
+                    errori.append(f"manca {dest2.relative_to(RADICE)}")
+            elif a.tutti or not dest2.exists():
+                secondi.append((sorgente, {**ogg.get("parametri", {}), "parte": sp["parte"]}, dest2))
         if not a.check:
             errori += controlla_caratteri(sorgente)
     with ProcessPoolExecutor() as ex:
         errori += [e for e in ex.map(viti_coperte, *zip(*viti)) if e] if viti else []
         errori += [e for e in ex.map(genera, *zip(*lavori)) if e] if lavori else []
+    for sorgente, parametri, dest2 in secondi:
+        errori += [f"{dest2.name}: {e}" for e in secondo_pezzo(sorgente, parametri, dest2)]
     voci_3d = [(l[3], l[4]) for l in lavori if l[4] and l[4].get("vista_3d") and l[3].exists()]
     if voci_3d and not errori:
         anteprime_3d(voci_3d)

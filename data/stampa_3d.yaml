@@ -26,6 +26,8 @@ categorie:
     titolo: "Per la radio"
   - id: "attrezzatura"
     titolo: "Zaino, casco e attrezzatura"
+  - id: "intervento"
+    titolo: "In intervento e sul mezzo"
   - id: "campo"
     titolo: "Al campo e in mensa"
   - id: "kit"
@@ -1029,3 +1031,237 @@ oggetti:
       - "Pulisci e asciuga il punto dell'anta dove vuoi mettere il cartellino."
       - "Con il biadesivo: incolla due strisce sul retro, lontano dai fori, e premi forte per 30 secondi."
       - "Con le viti: appoggia il cartellino, segna i due fori, fora l'anta e avvita senza stringere troppo."
+
+  # --- Oggetti per l'intervento e il mezzo (24/11/2026): idee da ciò che si stampano da sé i vigili del fuoco
+  # (Praga, blog Prusa; Oceanside, MatterHackers) e dai modelli per soccorritori di Printables e MakerWorld.
+  # I disegni sono nostri: nessun file altrui è stato usato.
+  - id: "cuneo-fermaporta"
+    nome: "Cuneo fermaporta"
+    articolo: "il cuneo"
+    descrizione: "Cuneo da tenere nello zaino per bloccare aperta una porta durante un intervento, con il nominativo, la bandiera italiana e «PC Genzano di Roma» sul fianco. Sotto ha cinque denti bassi che fanno presa sul pavimento; in coda c'è un foro per agganciarlo a un moschettone. Si stampa in TPU, una plastica gommosa: prima di contarci, prova come tiene sul tuo pavimento, anche bagnato."
+    categoria: "intervento"
+    breve: "Blocca aperta una porta; in plastica gommosa, si aggancia allo zaino."
+    sorgente: "soccorso-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-26.32, 5.25, -16.57, 11.75]
+    parametri:
+      tipo: "cuneo"
+      parte: "tutto"
+    misure: "13 × 3 cm, largo 2,6 cm"
+    lunghezza_mm: 130
+    peso_g: 75
+    scheda:
+      - ["Ingombro", "130 mm di lunghezza, alto 3 mm in punta e 30 mm in coda, largo 26 mm (25 mm di corpo e 1 mm di scritte)"]
+      - ["Peso", "circa 75 g in TPU"]
+      - ["Presa", "cinque denti alti 1,3 mm sul lato che appoggia a terra"]
+      - ["Foro", "diametro 9 mm, in coda, per un moschettone o un cordino"]
+      - ["Scritte", "sul fianco: nominativo alto 6,5 mm e «PC Genzano di Roma» alto 4 mm"]
+      - ["Posizione di stampa", "sdraiato su un fianco, già orientato nel file, senza supporti"]
+    materiale: "TPU 95A"
+    colore: "arancione"
+    occorrente:
+      - "un moschettone o un cordino, se vuoi tenerlo agganciato allo zaino"
+    montaggio:
+      - "Infila la punta sotto la porta aperta, dalla parte verso cui la porta si chiuderebbe, con i denti verso il pavimento."
+      - "Spingilo con il piede finché la porta non si muove più."
+      - "Per toglierlo tiralo dalla coda o dal moschettone."
+      - "Non usarlo mai su porte tagliafuoco e uscite di sicurezza."
+      - "Prova la presa sul pavimento dove lo userai: su superfici lisce o bagnate può scivolare."
+
+  - id: "targhetta-sgancio"
+    nome: "Targhetta a sgancio rapido"
+    articolo: "la targhetta"
+    descrizione: "Targhetta con il nominativo e la bandiera italiana che si aggancia con una leggera pressione a un anello o al filo di un moschettone e si toglie con un colpo, anche con i guanti. Serve a lasciarla a chi tiene il conto della squadra, per esempio all'ingresso di una zona di intervento, e a riprenderla all'uscita."
+    categoria: "intervento"
+    breve: "Si aggancia a un anello e si toglie con i guanti, per lasciarla a chi conta la squadra."
+    sorgente: "soccorso-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-25.32, 7.5, -15.57, 14.0]
+      nome: { zona: [-30, -1, 30, 6], lato: "fronte" }
+    parametri:
+      tipo: "sgancio"
+      parte: "tutto"
+    misure: "8,2 × 3,4 cm, per anelli e moschettoni con il filo da 8 mm"
+    lunghezza_mm: 82
+    peso_g: 10
+    scheda:
+      - ["Ingombro", "82 × 34 mm, spessa 4 mm (3 mm di base e 1 mm di scritte)"]
+      - ["Peso", "circa 10 g"]
+      - ["Aggancio", "anello aperto a sinistra: foro da 8,6 mm, bocca da 7,2 mm, parete da 3,5 mm. Il file pronto è pensato per un filo da 8 mm, una misura d'esempio: misura il tuo e, se è diverso, cambia «filo» nel modello"]
+      - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4 mm"]
+      - ["Spazio per nome e cognome", "fascia libera di 60 × 7 mm sotto il nominativo"]
+      - ["Posizione di stampa", "in piano, già orientata nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "un anello o un moschettone con il filo da 8 mm: misura il tuo prima di stampare"
+    montaggio:
+      - "Prima di stampare misura con un righello il filo dell'anello o del moschettone: se non è da 8 mm, scarica il modello e cambia «filo», oppure chiedilo al Gruppo."
+      - "Appoggia la bocca dell'aggancio sul filo e premi: la targhetta entra con una leggera pressione. Prova la tenuta prima di usarla: se si sfila da sola o entra troppo dura, rifalla con un'altra misura del filo."
+      - "Per toglierla tirala con un colpo deciso, anche con i guanti."
+      - "Segui le procedure del Gruppo su dove lasciarla e da chi riprenderla: la targhetta è solo un aiuto per contare le persone e non sostituisce il registro della squadra."
+
+  - id: "scatola-guanti"
+    nome: "Scatola per i guanti"
+    articolo: "la scatola"
+    descrizione: "Scatola con il coperchio che scorre, per tenere qualche paio di guanti monouso pulito nello zaino o nel cassetto del mezzo. Il coperchio porta il nominativo, la bandiera italiana e «Protezione Civile Genzano di Roma». Sono due pezzi: il coperchio con il tuo nominativo e la scatola, uguale per tutti. La scatola è un contenitore: i guanti restano quelli comprati, con la loro marcatura."
+    categoria: "intervento"
+    breve: "Tiene puliti i guanti monouso nello zaino; coperchio scorrevole con il nominativo."
+    sorgente: "soccorso-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-29.32, 8.75, -19.57, 15.25]
+      nome: { zona: [-45, -24, 37, -17], lato: "fronte" }
+    parametri:
+      tipo: "guanti"
+      parte: "tutto"
+    secondo_pezzo:
+      parte: "scatola"
+      file: "scatola.stl"
+      nome: "la scatola"
+      peso_g: 65
+    misure: "11,6 × 7 cm, alta 3,6 cm"
+    lunghezza_mm: 122
+    peso_g: 86
+    scheda:
+      - ["Ingombro", "scatola 116 × 70 × 36 mm; coperchio 122 × 66 mm, spesso 3 mm, con la linguetta che sporge di 7,7 mm"]
+      - ["Peso", "circa 86 g in tutto: 21 g il coperchio, 65 g la scatola"]
+      - ["Spazio interno", "110 × 64 mm, alto 30 mm fino al coperchio: qualche paio di guanti piegati, quanti dipende da taglia e spessore"]
+      - ["Coperchio", "scorre in due scanalature alte 2,4 mm e profonde 1,5 mm, con 0,3 mm di gioco per lato; la parete dal lato d'ingresso è più bassa. Non ha un fermo: provalo prima e tieni la scatola con il coperchio in alto"]
+      - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4 mm"]
+      - ["Posizione di stampa", "due file, tutti e due in piano, già orientati, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "guanti monouso già confezionati, della tua taglia"
+    montaggio:
+      - "Stampa tutti e due i file: il coperchio con il tuo nominativo e la scatola."
+      - "Infila il coperchio nelle scanalature dal lato con la parete bassa, con le scritte verso l'alto, e spingilo fino in fondo."
+      - "Per aprire tira la linguetta che sporge."
+      - "Metti i guanti con le mani pulite e cambiali dopo ogni uso: la scatola li tiene in ordine, non li rende sterili."
+
+  - id: "capsula-vite"
+    nome: "Capsula a vite"
+    articolo: "la capsula"
+    descrizione: "Piccolo contenitore cilindrico con il tappo a vite, per fiammiferi o un biglietto con i tuoi dati di emergenza. Non metterci cibo o pastiglie da ingerire: la plastica stampata a strati non è adatta. Sul fianco porta il nominativo, la bandiera italiana e «PC Genzano di Roma»; il tappo ha un'aletta forata per il cordino. Sono due pezzi: il corpo con il tuo nominativo e il tappo, uguale per tutti."
+    categoria: "intervento"
+    breve: "Tubetto con il tappo a vite per fiammiferi o un biglietto con i tuoi dati."
+    sorgente: "soccorso-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [7.57, -3, 16.57, 3]
+      vista_3d: true
+      quota_scritte: 13.0
+      assi: [[0, 0, 1], [-1, 0, 0], [0, -1, 0]]   # nella vista si sdraia con le scritte verso l'alto
+    parametri:
+      tipo: "capsula"
+      parte: "tutto"
+    secondo_pezzo:
+      parte: "tappo"
+      file: "tappo.stl"
+      nome: "il tappo"
+      peso_g: 5
+    misure: "diametro 2,6 cm, alta 7,2 cm con il tappo"
+    lunghezza_mm: 70
+    peso_g: 28
+    scheda:
+      - ["Ingombro", "corpo diametro 26 mm (28 mm sulle scritte), alto 70 mm; con il tappo avvitato 72 mm"]
+      - ["Peso", "circa 28 g in tutto: 23 g il corpo, 5 g il tappo"]
+      - ["Spazio interno", "diametro 18 mm, profondo 68 mm"]
+      - ["Filetto", "a un principio, passo 5 mm, alto 10 mm, con 0,35 mm di gioco; il tappo chiude sulla spalla del corpo con 0,3 mm di margine in cima"]
+      - ["Tappo", "diametro 29 mm, alto 12,3 mm, con un'aletta e un foro da 4 mm per il cordino"]
+      - ["Posizione di stampa", "due file, tutti e due in piedi, già orientati, senza supporti"]
+    materiale: "PETG"
+    colore: "arancione"
+    occorrente:
+      - "un cordino sottile, da 3 mm al massimo, se vuoi legare il tappo"
+    montaggio:
+      - "Stampa tutti e due i file: il corpo con il tuo nominativo e il tappo."
+      - "Avvita il tappo senza forzare: se è duro, svitalo e togli i fili di plastica rimasti nel filetto."
+      - "La chiusura non è garantita a tenuta d'acqua: prima di fidarti mettila in acqua per qualche minuto e controlla, e per i fiammiferi usa anche un sacchetto."
+      - "Se ci metti un biglietto con i tuoi dati di salute, sappi che chi ti soccorre lo trova solo se gli dici dov'è."
+
+  - id: "supporto-torcia"
+    nome: "Supporto per torcia"
+    articolo: "il supporto"
+    descrizione: "Supporto da parete per una torcia tonda, da tenere in sede o nel vano attrezzi del mezzo, con il nominativo e la bandiera italiana sulla piastra. La torcia sta in orizzontale in un anello a scatto: si spinge dentro e si estrae tirandola in avanti. Il file pronto è per le torce Maglite a pile D; per un'altra torcia si cambia il diametro nel modello."
+    categoria: "intervento"
+    breve: "La torcia si aggancia a scatto, in sede o nel vano attrezzi del mezzo."
+    sorgente: "ganci-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-36.5, 1.75, -23.75, 10.25]
+      vista_3d: true
+      fianco: -40   # si stampa in piedi sul lato sinistro (x = -40), senza supporti
+    parametri:
+      tipo: "torcia"
+      parte: "tutto"
+    misure: "8 × 10,1 cm, per torce con il corpo da 38 a 40 mm"
+    lunghezza_mm: 101
+    peso_g: 108
+    scheda:
+      - ["Ingombro", "80 × 101 mm, sporge 43 mm dalla parete"]
+      - ["Peso", "circa 108 g"]
+      - ["Anello", "largo 80 mm, spesso 3,5 mm, foro da 40,3 mm e bocca da 36,5 mm: per il corpo da 39,67 mm delle Maglite a 2 o 3 pile D (scheda del produttore, maglite.com, consultata il 24/11/2026); con i 38,1 mm della ML300LX la torcia ha 2,2 mm di gioco e si muove un poco"]
+      - ["Fori", "3 per viti a testa svasata da 4 mm (foro 4,4 mm, svasatura 8,8 mm): due nella piastra, uno sotto l'anello"]
+      - ["Posizione di stampa", "in piedi sul lato sinistro, già orientato nel file, senza supporti"]
+    materiale: "ASA"
+    colore: "blu"
+    occorrente:
+      - "tre viti a testa svasata da 4 mm e i tasselli adatti alla parete o al pannello del mezzo"
+    montaggio:
+      - "Prima di stampare misura il corpo della torcia: il file pronto va bene da 38 a 40 mm. Per un'altra misura scarica il modello e cambia «diametro_torcia»."
+      - "Appoggia il supporto con l'anello in basso, segna i tre fori, fora e avvita senza stringere troppo."
+      - "Spingi la torcia nell'anello dal davanti: la bocca si apre un poco e la trattiene."
+      - "Mai nell'abitacolo: una torcia a pile D pesa fra 700 e 900 grammi e in una frenata diventa pericolosa. Sul mezzo solo nel vano attrezzi o in un punto chiuso, lontano dalle persone."
+      - "Prova l'inserimento con la tua torcia prima di avvitarlo: deve entrare con una spinta decisa e restare ferma."
+
+  - id: "clip-parasole"
+    nome: "Clip da parasole"
+    articolo: "la clip"
+    descrizione: "Clip che si infila sull'aletta parasole del mezzo, con il nominativo, la bandiera italiana e un occhiello per il telecomando del cancello della sede o per le chiavi. Senza viti né colla."
+    categoria: "intervento"
+    breve: "Sull'aletta parasole del mezzo, con l'occhiello per il telecomando o le chiavi."
+    sorgente: "ganci-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-36.5, 1.75, -23.75, 10.25]
+      vista_3d: true
+      quota_scritte: 28.5   # piastra spostata di 24,5 mm sopra la clip (spessore del parasole + 4,5), spessa 4 mm
+      fianco: -40   # si stampa in piedi sul lato sinistro (x = -40), senza supporti
+    parametri:
+      tipo: "parasole"
+      parte: "tutto"
+    misure: "9,5 × 3,4 cm; il file pronto è per alette spesse 2 cm"
+    lunghezza_mm: 95
+    peso_g: 31
+    scheda:
+      - ["Ingombro", "95 × 34 mm, profondo 30 mm"]
+      - ["Peso", "circa 31 g"]
+      - ["Spazio per l'aletta", "20,5 mm: 2 cm sono una misura d'esempio, non di un mezzo preciso. Misura la tua aletta e cambia «spessore_parasole» nel modello"]
+      - ["Linguetta dietro", "alta 24 mm e spessa 4 mm; ponte sopra l'aletta spesso 3 mm"]
+      - ["Occhiello", "diametro 18 mm, foro da 8 mm per anello o moschettone"]
+      - ["Posizione di stampa", "in piedi sul lato sinistro, già orientato nel file, senza supporti"]
+    materiale: "ASA"
+    colore: "blu"
+    occorrente:
+      - "un anello portachiavi o un piccolo moschettone"
+    montaggio:
+      - "Prima di stampare misura lo spessore dell'aletta parasole del mezzo: cambia da mezzo a mezzo. Il file pronto va bene per 2 cm; per un'altra misura scarica il modello e cambia «spessore_parasole»."
+      - "Infila la clip sull'aletta dall'alto, con le scritte verso chi guida."
+      - "Aggancia solo il telecomando o poche chiavi leggere: non devono pendere davanti al parabrezza, coprire la vista né stare sopra un airbag."
+      - "Prova la clip sul mezzo: se scivola quando abbassi l'aletta, rifalla con lo spessore misurato."
