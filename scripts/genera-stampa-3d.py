@@ -123,9 +123,10 @@ def maschera(m, z, scala, w, h, ox, oy, specchia=False):
 TRICOLORE = [(0, 146, 70), (255, 255, 255), (206, 43, 55)]
 
 
-def disegna(m, z_base, z_rilievo, colori, destinazione, specchia=False, z_incavi=None, bandiera=None):
+def disegna(m, z_base, z_rilievo, colori, destinazione, specchia=False, z_incavi=None, bandiera=None, incise=False):
     """Anteprima vista dall'alto: base colorata, rilievi del secondo colore con la loro ombra,
-    oppure (z_incavi) il retro con gli incavi disegnati più scuri, perché non sono fori passanti."""
+    oppure (z_incavi) il retro con gli incavi disegnati più scuri, perché non sono fori passanti;
+    con incise=True gli incavi sono le scritte, colorate come i rilievi e con il tricolore."""
     from PIL import Image, ImageChops, ImageFilter
     scala, bordo = 16, 6
     (x0, y0, _), (x1, y1, _) = m.bounds
@@ -139,8 +140,20 @@ def disegna(m, z_base, z_rilievo, colori, destinazione, specchia=False, z_incavi
     if z_incavi is not None:
         fondo = maschera(m, z_incavi, scala, w, h, ox, oy, specchia).convert("L")
         incavi = ImageChops.subtract(base, fondo)
-        img.paste((12, 40, 85), (0, 0), incavi)
-        img.paste((70, 120, 190), (0, 0), ImageChops.subtract(incavi, ImageChops.offset(incavi, 4, 5)))
+        if incise:
+            img.paste(colori["rilievo"], (0, 0), incavi)
+            if bandiera:   # la bandiera è a specchio nel file: vista dal retro torna con il verde a sinistra
+                from PIL import ImageDraw
+                bx0, by0, bx1, by1 = bandiera
+                for i, col in enumerate(TRICOLORE):
+                    fascia = Image.new("L", (w, h), 0)
+                    xa, xb = -bx1 + (bx1 - bx0) * i / 3, -bx1 + (bx1 - bx0) * (i + 1) / 3
+                    ImageDraw.Draw(fascia).rectangle([(xa - ox) * scala, (oy - by1) * scala, (xb - ox) * scala, (oy - by0) * scala], fill=255)
+                    img.paste(col, (0, 0), ImageChops.multiply(fascia, incavi))
+            img.paste((20, 45, 90), (0, 0), ImageChops.subtract(incavi, ImageChops.offset(incavi, -3, -4)))
+        else:
+            img.paste((12, 40, 85), (0, 0), incavi)
+            img.paste((70, 120, 190), (0, 0), ImageChops.subtract(incavi, ImageChops.offset(incavi, 4, 5)))
     if z_rilievo is not None:
         ril = maschera(m, z_rilievo, scala, w, h, ox, oy, specchia).convert("L")
         img.paste((10, 25, 50), (5, 7), ril.filter(ImageFilter.GaussianBlur(3)).point(lambda v: v * 0.6))
@@ -153,6 +166,19 @@ def disegna(m, z_base, z_rilievo, colori, destinazione, specchia=False, z_incavi
                 xa, xb = x0 + (x1 - x0) * i / 3, x0 + (x1 - x0) * (i + 1) / 3
                 ImageDraw.Draw(fascia).rectangle([(xa - ox) * scala, (oy - y1) * scala, (xb - ox) * scala, (oy - y0) * scala], fill=255)
                 img.paste(col, (0, 0), ImageChops.multiply(fascia, ril))
+    if incise and bandiera:
+        # Pezzo alto e stretto (cover): nel formato del catalogo, 1100 × 500, il retro intero a sinistra
+        # e a destra l'ingrandimento delle scritte, dalla bandiera alle due righe sotto
+        tela = Image.new("RGB", (1100, 500), "white")
+        intero = img.resize((int(w * 470 / h), 470), Image.LANCZOS)
+        tela.paste(intero, (20, 15))
+        bx0, by0, bx1, by1 = bandiera
+        scritte = img.crop((0, max(0, int((oy - (by1 + 3)) * scala)), w, min(h, int((oy - (by0 - 22)) * scala))))
+        k = min((1100 - intero.width - 60) / scritte.width, 470 / scritte.height)
+        scritte = scritte.resize((int(scritte.width * k), int(scritte.height * k)), Image.LANCZOS)
+        tela.paste(scritte, (intero.width + 40 + (1100 - intero.width - 60 - scritte.width) // 2, (500 - scritte.height) // 2))
+        tela.save(destinazione, "WEBP", quality=82, method=6)
+        return
     img = img.resize((w * 3 // 4, h * 3 // 4), Image.LANCZOS)
     img.save(destinazione, "WEBP", quality=82, method=6)
 
@@ -164,15 +190,15 @@ def scad(sorgente, parametri, uscita):
     subprocess.run(cmd + [str(sorgente)], check=True)
 
 
-def unisci(a, b):
-    """Unione booleana di due pezzi con manifold3d."""
+def unisci(a, b, sottrai=False):
+    """Unione booleana di due pezzi con manifold3d (con sottrai=True, differenza: scritte incise)."""
     import manifold3d as mf
     import numpy as np
     import trimesh
     def man(m):
         return mf.Manifold(mf.Mesh(vert_properties=np.asarray(m.vertices, dtype=np.float32),
                                    tri_verts=np.asarray(m.faces, dtype=np.uint32)))
-    r = (man(a) + man(b)).to_mesh()
+    r = (man(a) - man(b) if sottrai else man(a) + man(b)).to_mesh()
     m = trimesh.Trimesh(vertices=r.vert_properties[:, :3], faces=r.tri_verts, process=True)
     # L'unione in precisione singola può lasciare schegge di volume nullo sugli spigoli
     # (nella targa da tavolo, al colmo): si tolgono, i pezzi veri restano tutti.
@@ -215,7 +241,7 @@ def genera(sorgente, parametri, testo, destinazione, colori=None, retro=None, ba
         tmp = Path(d) / "pezzo.stl"
         if base_stl:
             scad(sorgente, {**parametri, "riga1": testo, "parte": "testo"}, tmp)
-            m = unisci(trimesh.load(base_stl), trimesh.load(tmp))
+            m = unisci(trimesh.load(base_stl), trimesh.load(tmp), sottrai=bool(colori and colori.get("incise")))
         else:
             scad(sorgente, {**parametri, "riga1": testo}, tmp)
             m = trimesh.load(tmp)
@@ -243,7 +269,11 @@ def genera(sorgente, parametri, testo, destinazione, colori=None, retro=None, ba
         alto = m.bounds[1][2]
         rilievo = float(re.search(r"^rilievo = ([\d.]+);", sorgente.read_text(encoding="utf-8"), re.M).group(1))
         base = alto - rilievo
-        if not colori.get("vista_3d"):
+        if colori.get("incise"):
+            # scritte incise sul retro, che sta sul piano: si guarda dal retro (a specchio), con le incisioni colorate
+            disegna(m, rilievo + 0.05, None, colori, destinazione.with_suffix(".webp"), specchia=True,
+                    z_incavi=0.05, bandiera=colori.get("bandiera"), incise=True)
+        elif not colori.get("vista_3d"):
             disegna(m, base - 0.1, base + 0.4, colori, destinazione.with_suffix(".webp"), bandiera=colori.get("bandiera"))
         if retro:
             disegna(m, base - 0.1, None, colori, retro, specchia=True, z_incavi=0.05)

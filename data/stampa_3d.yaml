@@ -34,6 +34,8 @@ categorie:
     titolo: "Kit, pile e schede"
   - id: "sede"
     titolo: "In sede e in sala operativa"
+  - id: "telefono"
+    titolo: "Per il telefono"
 
 oggetti:
   - id: "targhetta-petto"
@@ -1265,3 +1267,218 @@ oggetti:
       - "Infila la clip sull'aletta dall'alto, con le scritte verso chi guida."
       - "Aggancia solo il telecomando o poche chiavi leggere: non devono pendere davanti al parabrezza, coprire la vista né stare sopra un airbag."
       - "Prova la clip sul mezzo: se scivola quando abbassi l'aletta, rifalla con lo spessore misurato."
+
+  # Cover rinforzate per il telefono (24/11/2026): misure dai disegni dimensionali che Apple pubblica per chi
+  # progetta accessori (developer.apple.com, Accessory Design Guidelines, disegni del 09/09/2025, del 19/09/2024
+  # per iPhone 16 e del 09/03/2026 per iPhone 17e), consultati il 24/11/2026. iPhone è un marchio di Apple Inc.:
+  # si usa solo nella forma «per iPhone …», mai come nome dell'oggetto né con loghi Apple. Scritte incise sul retro
+  # a specchio («incise» nell'anteprima): la cover si stampa con il retro sul piano.
+  - id: "cover-iphone-17"
+    nome: "Cover rinforzata per iPhone 17"
+    articolo: "la cover"
+    descrizione: "Cover dall'aspetto robusto, con gli angoli rinforzati, il bordo rialzato sopra lo schermo e righe in rilievo sui fianchi per la presa. Sul retro porta incisi la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». Le misure vengono dai disegni che Apple pubblica per chi progetta accessori. Si stampa in TPU, una plastica gommosa: non è una protezione certificata contro le cadute. Non protegge il vetro della fotocamera, copre il carrellino della SIM e non va con le basi di ricarica. Prima stampane una e prova che il telefono entri e che i tasti funzionino. iPhone è un marchio di Apple Inc.: questa cover non è un prodotto Apple e Apple non l'ha approvata."
+    categoria: "telefono"
+    breve: "Cover gommosa con angoli rinforzati e il nominativo inciso sul retro."
+    sorgente: "cover-nominativo.scad"
+    anteprima:
+      base: "#30363d"
+      rilievo: "#f07d00"
+      rilievo_mm: 0.6
+      incise: true
+      bandiera: [16.71, -31.31, 27.21, -24.31]
+      nome: { zona: [-28, -58.31, 28, -51.31], lato: "retro" }
+    parametri:
+      tipo: "iphone17"
+      parte: "tutto"
+    misure: "15,6 × 7,8 cm, alta 1,1 cm"
+    lunghezza_mm: 155.9
+    peso_g: 34
+    scheda:
+      - ["Telefono", "iPhone 17: 71.45 × 149.61 mm, spesso 7,95 mm, dai disegni di Apple"]
+      - ["Ingombro", "155,9 × 77,8 mm agli angoli, alta 11,15 mm"]
+      - ["Pareti", "2 mm sui fianchi, 3 mm agli angoli; gioco di 0,3 mm per lato fra telefono e cover"]
+      - ["Retro", "2 mm, sotto i 2,1 mm che Apple indica perché ricarica senza fili e MagSafe funzionino; nessun pezzo di metallo"]
+      - ["Bordo sullo schermo", "1,2 mm più alto del vetro; copre 0,6 mm del telaio e non tocca il vetro"]
+      - ["Aperture", "due fotocamere e flash in alto a sinistra (vista dal retro); porta USB-C in basso, con un'asola per altoparlante e microfoni e un foro a parte per il microfono più esterno; il Controllo fotocamera resta scoperto, come chiede Apple; azione, volume e tasto laterale coperti da cuscinetti da premere, con una tasca interna perché i tasti sporgono 0,45 mm dal telaio"]
+      - ["Scritte", "incise 0,6 mm sul retro: nominativo alto 7 mm, righe piccole 4,5 mm"]
+      - ["Spazio per nome e cognome", "fascia di 56 × 7 mm in basso sul retro, incisa"]
+      - ["Limiti", "non protegge il vetro della fotocamera; copre il carrellino della SIM, che si raggiunge togliendo la cover; il fondo non entra nelle basi di ricarica; non è dichiarata conforme alle linee guida di Apple per gli accessori"]
+      - ["Posizione di stampa", "con il retro sul piano, già orientata nel file, senza supporti"]
+    materiale: "TPU 95A"
+    colore: "nero"
+    occorrente:
+      - "nessun pezzo in più"
+    montaggio:
+      - "Prima di ordinarne altre, stampane una e prova il telefono: deve entrare con una leggera pressione e restare fermo."
+      - "Infila prima la parte in basso, con la porta USB-C, poi spingi in dentro il bordo in alto, un angolo alla volta."
+      - "Premi i tasti attraverso i cuscinetti: devono rispondere senza sforzo. Se un tasto non risponde, non usare la cover."
+      - "La fotocamera resta più alta del retro della cover: appoggia il telefono sullo schermo, protetto dal bordo rialzato, e non sul dorso."
+      - "Per toglierla spingi il telefono da dietro attraverso l'apertura della fotocamera e sfila prima un angolo in alto."
+
+  - id: "cover-iphone-17-pro"
+    nome: "Cover rinforzata per iPhone 17 Pro"
+    articolo: "la cover"
+    descrizione: "Cover dall'aspetto robusto, con gli angoli rinforzati, il bordo rialzato sopra lo schermo e righe in rilievo sui fianchi per la presa. Sul retro porta incisi la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». Le misure vengono dai disegni che Apple pubblica per chi progetta accessori. Si stampa in TPU, una plastica gommosa: non è una protezione certificata contro le cadute. Non protegge il vetro della fotocamera, copre il carrellino della SIM e non va con le basi di ricarica. Prima stampane una e prova che il telefono entri e che i tasti funzionino. iPhone è un marchio di Apple Inc.: questa cover non è un prodotto Apple e Apple non l'ha approvata."
+    categoria: "telefono"
+    breve: "Cover gommosa con angoli rinforzati e il nominativo inciso sul retro."
+    sorgente: "cover-nominativo.scad"
+    anteprima:
+      base: "#30363d"
+      rilievo: "#f07d00"
+      rilievo_mm: 0.6
+      incise: true
+      bandiera: [16.71, -31.5, 27.21, -24.5]
+      nome: { zona: [-28, -58.5, 28, -51.5], lato: "retro" }
+    parametri:
+      tipo: "iphone17pro"
+      parte: "tutto"
+    misure: "15,6 × 7,8 cm, alta 1,2 cm"
+    lunghezza_mm: 156.2
+    peso_g: 31
+    scheda:
+      - ["Telefono", "iPhone 17 Pro: 71.85 × 150.01 mm, spesso 8,75 mm, dai disegni di Apple"]
+      - ["Ingombro", "156,2 × 78,2 mm agli angoli, alta 11,95 mm"]
+      - ["Pareti", "2 mm sui fianchi, 3 mm agli angoli; gioco di 0,3 mm per lato fra telefono e cover"]
+      - ["Retro", "2 mm, sotto i 2,1 mm che Apple indica perché ricarica senza fili e MagSafe funzionino; nessun pezzo di metallo"]
+      - ["Bordo sullo schermo", "1,2 mm più alto del vetro; copre 0,6 mm del telaio e non tocca il vetro"]
+      - ["Aperture", "fascia delle fotocamere su tutta la larghezza in alto; porta USB-C in basso, con un'asola per altoparlante e microfoni e un foro a parte per il microfono più esterno; il Controllo fotocamera resta scoperto, come chiede Apple; azione, volume e tasto laterale coperti da cuscinetti da premere, con una tasca interna perché i tasti sporgono 0,45 mm dal telaio"]
+      - ["Scritte", "incise 0,6 mm sul retro: nominativo alto 7 mm, righe piccole 4,5 mm"]
+      - ["Spazio per nome e cognome", "fascia di 56 × 7 mm in basso sul retro, incisa"]
+      - ["Limiti", "non protegge il vetro della fotocamera; copre il carrellino della SIM, che si raggiunge togliendo la cover; il fondo non entra nelle basi di ricarica; non è dichiarata conforme alle linee guida di Apple per gli accessori"]
+      - ["Posizione di stampa", "con il retro sul piano, già orientata nel file, senza supporti"]
+    materiale: "TPU 95A"
+    colore: "nero"
+    occorrente:
+      - "nessun pezzo in più"
+    montaggio:
+      - "Prima di ordinarne altre, stampane una e prova il telefono: deve entrare con una leggera pressione e restare fermo."
+      - "Infila prima la parte in basso, con la porta USB-C, poi spingi in dentro il bordo in alto, un angolo alla volta."
+      - "Premi i tasti attraverso i cuscinetti: devono rispondere senza sforzo. Se un tasto non risponde, non usare la cover."
+      - "La fotocamera resta più alta del retro della cover: appoggia il telefono sullo schermo, protetto dal bordo rialzato, e non sul dorso."
+      - "Per toglierla spingi il telefono da dietro attraverso l'apertura della fotocamera e sfila prima un angolo in alto."
+
+  - id: "cover-iphone-17-pro-max"
+    nome: "Cover rinforzata per iPhone 17 Pro Max"
+    articolo: "la cover"
+    descrizione: "Cover dall'aspetto robusto, con gli angoli rinforzati, il bordo rialzato sopra lo schermo e righe in rilievo sui fianchi per la presa. Sul retro porta incisi la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». Le misure vengono dai disegni che Apple pubblica per chi progetta accessori. Si stampa in TPU, una plastica gommosa: non è una protezione certificata contro le cadute. Non protegge il vetro della fotocamera, copre il carrellino della SIM e non va con le basi di ricarica. Prima stampane una e prova che il telefono entri e che i tasti funzionino. iPhone è un marchio di Apple Inc.: questa cover non è un prodotto Apple e Apple non l'ha approvata."
+    categoria: "telefono"
+    breve: "Cover gommosa con angoli rinforzati e il nominativo inciso sul retro."
+    sorgente: "cover-nominativo.scad"
+    anteprima:
+      base: "#30363d"
+      rilievo: "#f07d00"
+      rilievo_mm: 0.6
+      incise: true
+      bandiera: [16.71, -38.22, 27.21, -31.22]
+      nome: { zona: [-28, -65.22, 28, -58.22], lato: "retro" }
+    parametri:
+      tipo: "iphone17promax"
+      parte: "tutto"
+    misure: "17,0 × 8,4 cm, alta 1,2 cm"
+    lunghezza_mm: 169.6
+    peso_g: 36
+    scheda:
+      - ["Telefono", "iPhone 17 Pro Max: 77.98 × 163.43 mm, spesso 8,75 mm, dai disegni di Apple"]
+      - ["Ingombro", "169,6 × 84,4 mm agli angoli, alta 11,95 mm"]
+      - ["Pareti", "2 mm sui fianchi, 3 mm agli angoli; gioco di 0,3 mm per lato fra telefono e cover"]
+      - ["Retro", "2 mm, sotto i 2,1 mm che Apple indica perché ricarica senza fili e MagSafe funzionino; nessun pezzo di metallo"]
+      - ["Bordo sullo schermo", "1,2 mm più alto del vetro; copre 0,6 mm del telaio e non tocca il vetro"]
+      - ["Aperture", "fascia delle fotocamere su tutta la larghezza in alto; porta USB-C in basso, con un'asola per altoparlante e microfoni e un foro a parte per il microfono più esterno; il Controllo fotocamera resta scoperto, come chiede Apple; azione, volume e tasto laterale coperti da cuscinetti da premere, con una tasca interna perché i tasti sporgono 0,45 mm dal telaio"]
+      - ["Scritte", "incise 0,6 mm sul retro: nominativo alto 7 mm, righe piccole 4,5 mm"]
+      - ["Spazio per nome e cognome", "fascia di 56 × 7 mm in basso sul retro, incisa"]
+      - ["Limiti", "non protegge il vetro della fotocamera; copre il carrellino della SIM, che si raggiunge togliendo la cover; il fondo non entra nelle basi di ricarica; non è dichiarata conforme alle linee guida di Apple per gli accessori"]
+      - ["Posizione di stampa", "con il retro sul piano, già orientata nel file, senza supporti"]
+    materiale: "TPU 95A"
+    colore: "nero"
+    occorrente:
+      - "nessun pezzo in più"
+    montaggio:
+      - "Prima di ordinarne altre, stampane una e prova il telefono: deve entrare con una leggera pressione e restare fermo."
+      - "Infila prima la parte in basso, con la porta USB-C, poi spingi in dentro il bordo in alto, un angolo alla volta."
+      - "Premi i tasti attraverso i cuscinetti: devono rispondere senza sforzo. Se un tasto non risponde, non usare la cover."
+      - "La fotocamera resta più alta del retro della cover: appoggia il telefono sullo schermo, protetto dal bordo rialzato, e non sul dorso."
+      - "Per toglierla spingi il telefono da dietro attraverso l'apertura della fotocamera e sfila prima un angolo in alto."
+
+  - id: "cover-iphone-17e"
+    nome: "Cover rinforzata per iPhone 17e"
+    articolo: "la cover"
+    descrizione: "Cover dall'aspetto robusto, con gli angoli rinforzati, il bordo rialzato sopra lo schermo e righe in rilievo sui fianchi per la presa. Sul retro porta incisi la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». Le misure vengono dai disegni che Apple pubblica per chi progetta accessori. Si stampa in TPU, una plastica gommosa: non è una protezione certificata contro le cadute. Non protegge il vetro della fotocamera, copre il carrellino della SIM e non va con le basi di ricarica. Prima stampane una e prova che il telefono entri e che i tasti funzionino. iPhone è un marchio di Apple Inc.: questa cover non è un prodotto Apple e Apple non l'ha approvata."
+    categoria: "telefono"
+    breve: "Cover gommosa con angoli rinforzati e il nominativo inciso sul retro."
+    sorgente: "cover-nominativo.scad"
+    anteprima:
+      base: "#30363d"
+      rilievo: "#f07d00"
+      rilievo_mm: 0.6
+      incise: true
+      bandiera: [16.71, -29.86, 27.21, -22.86]
+      nome: { zona: [-28, -56.86, 28, -49.86], lato: "retro" }
+    parametri:
+      tipo: "iphone17e"
+      parte: "tutto"
+    misure: "15,3 × 7,8 cm, alta 1,1 cm"
+    lunghezza_mm: 153.2
+    peso_g: 36
+    scheda:
+      - ["Telefono", "iPhone 17e: 71.52 × 146.71 mm, spesso 7,80 mm, dai disegni di Apple"]
+      - ["Ingombro", "153,2 × 78,1 mm agli angoli, alta 11,00 mm"]
+      - ["Pareti", "2 mm sui fianchi, 3 mm agli angoli; gioco di 0,3 mm per lato fra telefono e cover"]
+      - ["Retro", "2 mm, sotto i 2,1 mm che Apple indica perché ricarica senza fili e MagSafe funzionino; nessun pezzo di metallo"]
+      - ["Bordo sullo schermo", "1,2 mm più alto del vetro; copre 0,6 mm del telaio e non tocca il vetro"]
+      - ["Aperture", "una fotocamera e flash in alto a sinistra (vista dal retro); porta USB-C in basso, con un'asola per altoparlante e microfoni e un foro a parte per il microfono più esterno; azione, volume e tasto laterale coperti da cuscinetti da premere, con una tasca interna perché i tasti sporgono 0,45 mm dal telaio"]
+      - ["Scritte", "incise 0,6 mm sul retro: nominativo alto 7 mm, righe piccole 4,5 mm"]
+      - ["Spazio per nome e cognome", "fascia di 56 × 7 mm in basso sul retro, incisa"]
+      - ["Limiti", "non protegge il vetro della fotocamera; copre il carrellino della SIM, che si raggiunge togliendo la cover; il fondo non entra nelle basi di ricarica; non è dichiarata conforme alle linee guida di Apple per gli accessori"]
+      - ["Posizione di stampa", "con il retro sul piano, già orientata nel file, senza supporti"]
+    materiale: "TPU 95A"
+    colore: "nero"
+    occorrente:
+      - "nessun pezzo in più"
+    montaggio:
+      - "Prima di ordinarne altre, stampane una e prova il telefono: deve entrare con una leggera pressione e restare fermo."
+      - "Infila prima la parte in basso, con la porta USB-C, poi spingi in dentro il bordo in alto, un angolo alla volta."
+      - "Premi i tasti attraverso i cuscinetti: devono rispondere senza sforzo. Se un tasto non risponde, non usare la cover."
+      - "La fotocamera sta appena sotto il retro della cover, a circa 0,3 mm: è poco, quindi appoggia il telefono sullo schermo, protetto dal bordo rialzato, e non sul dorso."
+      - "Per toglierla spingi il telefono da dietro attraverso l'apertura della fotocamera e sfila prima un angolo in alto."
+
+  - id: "cover-iphone-16"
+    nome: "Cover rinforzata per iPhone 16"
+    articolo: "la cover"
+    descrizione: "Cover dall'aspetto robusto, con gli angoli rinforzati, il bordo rialzato sopra lo schermo e righe in rilievo sui fianchi per la presa. Sul retro porta incisi la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». Le misure vengono dai disegni che Apple pubblica per chi progetta accessori. Si stampa in TPU, una plastica gommosa: non è una protezione certificata contro le cadute. Non protegge il vetro della fotocamera, copre il carrellino della SIM e non va con le basi di ricarica. Prima stampane una e prova che il telefono entri e che i tasti funzionino. iPhone è un marchio di Apple Inc.: questa cover non è un prodotto Apple e Apple non l'ha approvata."
+    categoria: "telefono"
+    breve: "Cover gommosa con angoli rinforzati e il nominativo inciso sul retro."
+    sorgente: "cover-nominativo.scad"
+    anteprima:
+      base: "#30363d"
+      rilievo: "#f07d00"
+      rilievo_mm: 0.6
+      incise: true
+      bandiera: [16.71, -30.32, 27.21, -23.32]
+      nome: { zona: [-28, -57.32, 28, -50.32], lato: "retro" }
+    parametri:
+      tipo: "iphone16"
+      parte: "tutto"
+    misure: "15,4 × 7,8 cm, alta 1,1 cm"
+    lunghezza_mm: 154.0
+    peso_g: 33
+    scheda:
+      - ["Telefono", "iPhone 16: 71.63 × 147.64 mm, spesso 7,81 mm, dai disegni di Apple"]
+      - ["Ingombro", "154,0 × 78,0 mm agli angoli, alta 11,01 mm"]
+      - ["Pareti", "2 mm sui fianchi, 3 mm agli angoli; gioco di 0,3 mm per lato fra telefono e cover"]
+      - ["Retro", "2 mm, sotto i 2,1 mm che Apple indica perché ricarica senza fili e MagSafe funzionino; nessun pezzo di metallo"]
+      - ["Bordo sullo schermo", "1,2 mm più alto del vetro; copre 0,6 mm del telaio e non tocca il vetro"]
+      - ["Aperture", "due fotocamere e flash in alto a sinistra (vista dal retro); porta USB-C in basso, con un'asola per altoparlante e microfoni e un foro a parte per il microfono più esterno; il Controllo fotocamera resta scoperto, come chiede Apple; azione, volume e tasto laterale coperti da cuscinetti da premere, con una tasca interna perché i tasti sporgono 0,45 mm dal telaio"]
+      - ["Scritte", "incise 0,6 mm sul retro: nominativo alto 7 mm, righe piccole 4,5 mm"]
+      - ["Spazio per nome e cognome", "fascia di 56 × 7 mm in basso sul retro, incisa"]
+      - ["Limiti", "non protegge il vetro della fotocamera; copre il carrellino della SIM, che si raggiunge togliendo la cover; il fondo non entra nelle basi di ricarica; non è dichiarata conforme alle linee guida di Apple per gli accessori"]
+      - ["Posizione di stampa", "con il retro sul piano, già orientata nel file, senza supporti"]
+    materiale: "TPU 95A"
+    colore: "nero"
+    occorrente:
+      - "nessun pezzo in più"
+    montaggio:
+      - "Prima di ordinarne altre, stampane una e prova il telefono: deve entrare con una leggera pressione e restare fermo."
+      - "Infila prima la parte in basso, con la porta USB-C, poi spingi in dentro il bordo in alto, un angolo alla volta."
+      - "Premi i tasti attraverso i cuscinetti: devono rispondere senza sforzo. Se un tasto non risponde, non usare la cover."
+      - "La fotocamera resta più alta del retro della cover: appoggia il telefono sullo schermo, protetto dal bordo rialzato, e non sul dorso."
+      - "Per toglierla spingi il telefono da dietro attraverso l'apertura della fotocamera e sfila prima un angolo in alto."
