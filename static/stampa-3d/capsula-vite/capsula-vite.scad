@@ -42,7 +42,7 @@ $fn = 48;
 MISURE = [
     ["cuneo",   [130, 30, 2, 25, 6.5, 8.5, 4.0, 17.0, 0, 64]],
     ["sgancio", [70, 34, 4, 3.0, 6.5, 10.75, 4.0, -4.5, -10.0, 0]],
-    ["guanti",  [122.2, 66.4, 3, 2.0, 6.5, 12.0, 4.0, -3.0, -8.5, -4]],
+    ["guanti",  [122.2, 66.0, 3, 2.0, 6.5, 12.0, 4.0, -3.0, -8.5, -4]],
     ["capsula", [26, 70, 0, 2.0, 6.0, 0, 4.0, 0, 0, 0]]
 ];
 M = MISURE[search([tipo], MISURE)[0]][1];
@@ -139,11 +139,11 @@ module cuneo_base() {
 
 /* ---------- Scatola dei guanti (secondo pezzo) ---------- */
 
-// Interno 110 × 64 mm, alto 30 mm fino alle scanalature. Pareti da 3 mm, fondo da 2 mm. Il coperchio (2 mm) scorre
-// in due scanalature alte 2,4 mm e profonde 1,5 mm nei lati lunghi e nel lato in fondo; dal lato d'ingresso la
+// Interno 110 × 64 mm, alto 30 mm fino alle scanalature. Pareti da 3 mm, fondo da 2 mm. Il coperchio (2 mm, largo 66)
+// scorre in due scanalature alte 3 mm e profonde 1,5 mm: 0,5 mm di gioco per lato, come la tolleranza dei servizi di stampa nei lati lunghi e nel lato in fondo; dal lato d'ingresso la
 // parete è più bassa, così il coperchio entra e la sua linguetta (7,7 mm) resta fuori per tirarlo. Gli angoli in fondo
 // alle scanalature sono arrotondati, così negli angoli della scatola restano 1,5 mm di parete.
-G_IN = [110, 64]; G_P = 3; G_FONDO = 2; G_ALTO = 30; G_SCAN = [2.4, 1.5]; G_LABBRO = 1.6;
+G_IN = [110, 64]; G_P = 3; G_FONDO = 2; G_ALTO = 30; G_SCAN = [3.0, 1.5]; G_LABBRO = 1.6;
 G_EST = G_IN + 2 * [G_P, G_P]; G_H = G_FONDO + G_ALTO + G_SCAN[0] + G_LABBRO;
 module scatola() {
     z0 = G_FONDO + G_ALTO;
@@ -165,7 +165,8 @@ module scatola() {
 
 // Corpo diametro 26 mm, alto 60 mm più il collo filettato di 10 mm; interno diametro 18 mm e profondo 68 mm.
 // Filetto a un principio con passo 5 mm, disegnato come un cerchio fuori centro che ruota salendo: i fianchi
-// restano sotto i 45 gradi, quindi il filetto si stampa senza supporti. Il tappo ha 0,35 mm di gioco.
+// restano sotto i 45 gradi, quindi il filetto si stampa senza supporti. Il tappo ha 0,5 mm di gioco, come la
+// tolleranza dei servizi di stampa.
 CA_R = 13; CA_IN = 9; CA_DRITTO = 60; CA_COLLO = 10; CA_PASSO = 5; CA_R0 = 10.8; CA_E = 0.7;
 module filetto(h, r) {
     linear_extrude(h, twist = -360 * h / CA_PASSO, slices = 4 * h, convexity = 4)
@@ -181,10 +182,10 @@ module capsula_corpo() {
         translate([0, 0, B]) cylinder(r = CA_IN, h = CA_DRITTO + CA_COLLO, $fn = 64);
     }
 }
-// Tappo: diametro 29 mm, alto 12,3 mm (10,3 di filetto e 2 di cielo), con un'aletta forata (4 mm) per il cordino.
-// I 0,3 mm in più lasciano gioco fra il cielo e la cima del collo, così il tappo chiude sulla spalla del corpo.
+// Tappo: diametro 29 mm, alto 12,5 mm (10,5 di filetto e 2 di cielo), con un'aletta forata (4 mm) per il cordino.
+// I 0,5 mm in più lasciano gioco fra il cielo e la cima del collo, così il tappo chiude sulla spalla del corpo.
 // Nel file è capovolto, con il cielo sul piano.
-CA_TAPPO_FONDO = CA_COLLO + 0.3;
+CA_TAPPO_FONDO = CA_COLLO + 0.5;
 module tappo() {
     translate([0, 0, CA_TAPPO_FONDO + 2]) rotate([180, 0, 0]) difference() {
         union() {
@@ -194,7 +195,7 @@ module tappo() {
                 translate([10, 0, CA_COLLO - 1]) cylinder(d = 10, h = 3);
             }
         }
-        translate([0, 0, -0.01]) filetto(CA_TAPPO_FONDO + 0.01, CA_R0 + 0.35);
+        translate([0, 0, -0.01]) filetto(CA_TAPPO_FONDO + 0.01, CA_R0 + 0.5);
         translate([14.5 + 3, 0, CA_COLLO - 2]) cylinder(d = 4, h = 6);
     }
 }

@@ -1128,14 +1128,14 @@ oggetti:
       file: "scatola.stl"
       nome: "la scatola"
       peso_g: 65
-    misure: "11,6 × 7 cm, alta 3,6 cm"
+    misure: "11,6 × 7 cm, alta 3,7 cm"
     lunghezza_mm: 122
     peso_g: 86
     scheda:
-      - ["Ingombro", "scatola 116 × 70 × 36 mm; coperchio 122 × 66 mm, spesso 3 mm, con la linguetta che sporge di 7,7 mm"]
+      - ["Ingombro", "scatola 116 × 70 × 37 mm; coperchio 122 × 66 mm, spesso 3 mm, con la linguetta che sporge di 7,7 mm"]
       - ["Peso", "circa 86 g in tutto: 21 g il coperchio, 65 g la scatola"]
       - ["Spazio interno", "110 × 64 mm, alto 30 mm fino al coperchio: qualche paio di guanti piegati, quanti dipende da taglia e spessore"]
-      - ["Coperchio", "scorre in due scanalature alte 2,4 mm e profonde 1,5 mm, con 0,3 mm di gioco per lato; la parete dal lato d'ingresso è più bassa. Non ha un fermo: provalo prima e tieni la scatola con il coperchio in alto"]
+      - ["Coperchio", "scorre in due scanalature alte 3 mm e profonde 1,5 mm, con 0,5 mm di gioco per lato, quanto la tolleranza dei servizi di stampa; la parete dal lato d'ingresso è più bassa. Non ha un fermo: provalo prima e tieni la scatola con il coperchio in alto"]
       - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4 mm"]
       - ["Posizione di stampa", "due file, tutti e due in piano, già orientati, senza supporti"]
     materiale: "PETG"
@@ -1171,15 +1171,15 @@ oggetti:
       file: "tappo.stl"
       nome: "il tappo"
       peso_g: 5
-    misure: "diametro 2,6 cm, alta 7,2 cm con il tappo"
+    misure: "diametro 2,6 cm, alta 7,3 cm con il tappo"
     lunghezza_mm: 70
     peso_g: 28
     scheda:
-      - ["Ingombro", "corpo diametro 26 mm (28 mm sulle scritte), alto 70 mm; con il tappo avvitato 72 mm"]
+      - ["Ingombro", "corpo diametro 26 mm (28 mm sulle scritte), alto 70 mm; con il tappo avvitato 72,5 mm"]
       - ["Peso", "circa 28 g in tutto: 23 g il corpo, 5 g il tappo"]
       - ["Spazio interno", "diametro 18 mm, profondo 68 mm"]
-      - ["Filetto", "a un principio, passo 5 mm, alto 10 mm, con 0,35 mm di gioco; il tappo chiude sulla spalla del corpo con 0,3 mm di margine in cima"]
-      - ["Tappo", "diametro 29 mm, alto 12,3 mm, con un'aletta e un foro da 4 mm per il cordino"]
+      - ["Filetto", "a un principio, passo 5 mm, alto 10 mm, con 0,5 mm di gioco, quanto la tolleranza dei servizi di stampa; il tappo chiude sulla spalla del corpo con 0,5 mm di margine in cima"]
+      - ["Tappo", "diametro 29 mm, alto 12,5 mm, con un'aletta e un foro da 4 mm per il cordino"]
       - ["Posizione di stampa", "due file, tutti e due in piedi, già orientati, senza supporti"]
     materiale: "PETG"
     colore: "arancione"
