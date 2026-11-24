@@ -290,7 +290,7 @@ Dopo i tre script, lo step di commit:
 1. chiede ogni documento di `data/cucina_emergenza.yaml` e controlla che risponda con un PDF; per i testi di EUR-Lex chiede all'archivio dell'Ufficio delle pubblicazioni dell'UE se il documento esiste e se è uscita una versione consolidata più recente;
 2. rilegge le pagine in cui il Ministero dell'agricoltura pubblica i disciplinari e controlla che ogni file di `data/disciplinari.json` sia ancora fra gli allegati; segnala gli allegati nuovi e un elenco ufficiale cambiato;
 3. legge l'inizio di ogni PDF del catalogo, tre alla volta;
-4. riprova con un browser ciò che una richiesta semplice non ha letto.
+4. riprova con un browser ciò che una richiesta semplice non ha letto; se il browser non è disponibile, il giro prosegue e il rapporto lo dice.
 
 **Esiti:**
 - tutto letto, nulla di rotto: la data «Collegamenti controllati il…» delle due pagine diventa quella del giorno (commit `[skip-cucina-emergenza]`, online al deploy successivo);

@@ -23,6 +23,7 @@ di enti governativi e istituzionali. Lo script la fa rispettare in due modi.
         nuovi e un elenco ufficiale cambiato si segnalano come novità.
       - --file: chiede anche l'inizio di ogni PDF del catalogo, tre alla volta.
       - --browser: ciò che una richiesta semplice non legge si riprova con Chromium (Playwright), se c'è.
+        Se Playwright manca o Chromium non parte, il controllo prosegue senza e il rapporto lo dice.
       - Verifiche anti-bot: se un sito risponde con una pagina di verifica o rifiuta la richiesta (403, 429),
         il collegamento non è rotto e non è controllato. Non si aggira: si dichiara nel rapporto, e la data
         di verifica non si aggiorna. Il sito del Ministero della Salute lo fa a tratti (24/11/2026).
@@ -97,6 +98,7 @@ non_letti = []    # (sito, testo): fonti che non si sono fatte leggere (uscita 2
 novita = []       # cose nuove sulle fonti, da valutare: non sono guasti (uscita 3)
 protetti = []     # collegamenti dietro una verifica anti-bot: non controllati in questo giro (uscita 3)
 da_rivedere = []  # (dove, url, nota): PDF che la richiesta semplice non ha letto, da riprovare con il browser
+senza_browser = []  # perché il ripiego con il browser, se chiesto, non è stato possibile
 metodi = Counter()
 
 
@@ -596,16 +598,29 @@ def controlla_file_del_catalogo(catalogo):
 
 def riprova_con_browser(voci):
     """Riprova con Chromium i PDF che la richiesta semplice non ha letto. Restituisce {indirizzo: (esito, nota)}
-    oppure None se Playwright non c'è. Una verifica anti-bot non si aggira: si dichiara."""
+    oppure None se il browser non è disponibile: Playwright non installato, oppure Chromium o le sue librerie
+    che non partono (il motivo va in «senza_browser»). In quel caso il controllo prosegue con ciò che ha già
+    letto e scrive il rapporto. Una verifica anti-bot non si aggira: si dichiara."""
     try:
         from playwright.sync_api import sync_playwright
     except ImportError:
+        senza_browser.append("Playwright non è installato")
         return None
     esiti, falliti = {}, Counter()
     fine = time.time() + TEMPO_BROWSER
-    with sync_playwright() as pw:
-        browser = pw.chromium.launch()
-        contesto = browser.new_context(locale="it-IT", viewport={"width": 1366, "height": 900})
+    try:
+        gestore = sync_playwright().start()
+    except Exception as e:
+        senza_browser.append(f"Playwright non parte ({type(e).__name__})")
+        return None
+    try:
+        try:
+            browser = gestore.chromium.launch()
+            contesto = browser.new_context(locale="it-IT", viewport={"width": 1366, "height": 900})
+        except Exception as e:
+            motivo_breve = (str(e).strip().splitlines() or [""])[0][:120]
+            senza_browser.append(f"Chromium non parte ({type(e).__name__}: {motivo_breve})")
+            return None
         for _, url, _ in voci:
             if time.time() > fine:
                 break
@@ -658,7 +673,15 @@ def riprova_con_browser(voci):
                 esiti[url] = ("no", f"{type(e).__name__}: {str(e)[:120]}")
                 falliti[sito(url)] += 1
             time.sleep(PAUSA)
-        browser.close()
+        try:
+            browser.close()
+        except Exception:  # un browser caduto a metà non cancella gli esiti già raccolti
+            pass
+    finally:
+        try:
+            gestore.stop()
+        except Exception:
+            pass
     return esiti
 
 
@@ -669,7 +692,8 @@ def chiudi_da_rivedere(con_browser):
     in_fila = [v for v in da_rivedere if v[2] != "EUR-Lex"] + [v for v in da_rivedere if v[2] == "EUR-Lex"]
     esiti = riprova_con_browser(in_fila[:MASSIMO_BROWSER]) if con_browser else None
     if con_browser and esiti is None:
-        print("Avviso: --browser chiesto, ma Playwright non è installato: si prosegue senza.", file=sys.stderr)
+        print(f"Avviso: --browser chiesto, ma il browser non è disponibile ({'; '.join(senza_browser)}): "
+              "si prosegue senza.", file=sys.stderr)
     for dove, url, nota in da_rivedere:
         esito, nota_browser = (esiti or {}).get(url, ("", ""))
         if esito == "pdf":
@@ -712,6 +736,8 @@ def rapporto(documenti, catalogo, con_rete, anche_file):
              f"Controllo fatto: {fatto}."]
     if metodi:
         righe.append("PDF letti: " + ", ".join(f"{n} con {m}" for m, n in sorted(metodi.items())) + ".")
+    if senza_browser:
+        righe.append("Ripiego con il browser non disponibile in questo giro: " + "; ".join(senza_browser) + ".")
     righe.append("")
     if errori:
         righe += ["### Collegamenti rotti o dati sbagliati", ""] + [f"- {e}" for e in errori] + [""]

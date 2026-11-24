@@ -8,7 +8,9 @@ se ne accorge. Due gruppi di prove, nessuna richiesta fuori dalla macchina:
      deve passare;
   2. risposte dei siti, con un server finto in locale: un PDF vero è letto, un 404 è un collegamento rotto,
      una pagina di verifica anti-bot o un rifiuto (403) non sono né rotti né controllati, una pagina qualsiasi
-     al posto del PDF è una fonte non letta.
+     al posto del PDF è una fonte non letta;
+  3. browser di riserva: se Playwright manca o Chromium non parte, il controllo non si interrompe, classifica
+     ciò che ha già letto e scrive il rapporto, che dice perché il ripiego è mancato.
 
 Uso:  python3 scripts/prova-check-cucina-emergenza.py public
 Lavora su copie in una cartella temporanea: i file del repository non si toccano. Uscita 0 se ogni prova
@@ -120,6 +122,78 @@ def esito(nome, riuscita, dettaglio=""):
     print(("ok  " if riuscita else "NO  ") + nome + (f" ({dettaglio})" if dettaglio and not riuscita else ""))
 
 
+class BrowserCheNonParte:
+    """Finto Playwright: c'è la libreria, ma Chromium (o una sua libreria di sistema) non si avvia."""
+
+    def __init__(self, dove):
+        self.dove = dove
+        self.fermato = False
+        self.chromium = types.SimpleNamespace(launch=self.lancia)
+
+    def __enter__(self):  # anche come «with sync_playwright() as pw», la forma che il controllo usava prima
+        return self.start()
+
+    def __exit__(self, *args):
+        self.stop()
+
+    def lancia(self):
+        raise RuntimeError("Executable doesn't exist at /percorso/chromium\nPlease run: playwright install")
+
+    def start(self):
+        if self.dove == "avvio":
+            raise OSError("driver non trovato")
+        return self
+
+    def stop(self):
+        self.fermato = True
+
+
+def prove_del_browser(controllo, base):
+    """Il ripiego con il browser è facoltativo: se non parte, il giro deve arrivare in fondo e scrivere il rapporto."""
+    vero = sys.modules.get("playwright.sync_api", "assente")
+    documenti, catalogo = controllo.carica()
+    casi = (("Chromium non parte", "lancio", "Chromium non parte"),
+            ("Playwright non parte", "avvio", "Playwright non parte"),
+            ("Playwright non è installato", None, "Playwright non è installato"))
+    try:
+        for nome, dove, motivo in casi:
+            finto = BrowserCheNonParte(dove)
+            sys.modules["playwright.sync_api"] = (types.SimpleNamespace(sync_playwright=lambda finto=finto: finto)
+                                                  if dove else None)  # None: l'importazione fallisce
+            for elenco in (controllo.errori, controllo.non_letti, controllo.protetti, controllo.da_rivedere,
+                           controllo.senza_browser):
+                elenco.clear()
+            controllo.metodi.clear()
+            controllo.di_fila.clear()
+            controllo.motivo.clear()
+            for percorso in ("/vero.pdf", "/manca.pdf", "/qualsiasi.pdf", "/verifica.pdf"):
+                controllo.controlla_pdf(f"documento «{percorso}»", base + percorso)
+            try:
+                controllo.chiudi_da_rivedere(True)
+                testo = controllo.rapporto(documenti, catalogo, True, False)
+                interrotto = ""
+            except Exception as e:  # è proprio ciò che la prova deve escludere
+                testo, interrotto = "", f"{type(e).__name__}: {e}"
+            esito(f"browser di riserva, {nome}: il controllo arriva in fondo e classifica ciò che ha letto",
+                  not interrotto and len(controllo.errori) == 1 and len(controllo.non_letti) == 1
+                  and len(controllo.protetti) == 1 and controllo.metodi["richiesta diretta"] == 1,
+                  interrotto or f"rotti {len(controllo.errori)}, non letti {len(controllo.non_letti)}, "
+                                f"protetti {len(controllo.protetti)}")
+            esito(f"browser di riserva, {nome}: il rapporto c'è e dice perché il ripiego è mancato",
+                  "Ripiego con il browser non disponibile" in testo and motivo in testo
+                  and "### Collegamenti rotti o dati sbagliati" in testo
+                  and "### Fonti che non si sono fatte leggere" in testo and "Please run" not in testo,
+                  testo[:300])
+            if dove == "lancio":
+                esito("browser di riserva: dopo un avvio fallito Playwright viene comunque fermato", finto.fermato)
+    finally:
+        if vero == "assente":
+            sys.modules.pop("playwright.sync_api", None)
+        else:
+            sys.modules["playwright.sync_api"] = vero
+        controllo.senza_browser.clear()
+
+
 def prove_delle_risposte():
     """Come lo script classifica le risposte di un sito: si usa un server finto su questa macchina."""
     spec = importlib.util.spec_from_file_location("controllo", RADICE / "scripts" / SCRIPT)
@@ -185,6 +259,7 @@ def prove_delle_risposte():
         esito("catalogo misto: tre PDF letti, un 404 fra i rotti, il file Word non si chiede",
               controllo.metodi["richiesta diretta"] == 3 and len(controllo.errori) == 1 and not controllo.non_letti,
               f"letti {controllo.metodi['richiesta diretta']}, rotti {controllo.errori}, non letti {controllo.non_letti}")
+        prove_del_browser(controllo, base)
     finally:
         server.shutdown()
 
