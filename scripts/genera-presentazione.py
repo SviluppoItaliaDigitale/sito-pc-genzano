@@ -881,6 +881,7 @@ content("Area download", [
     "Documenti ufficiali e modulistica scaricabili.",
     "Per ogni file sono indicati formato e dimensione (accessibilità).",
     "Un punto unico per atti, piani e materiali del Gruppo.",
+    "Per i volontari: oggetti da stampare in 3D e progetti di elettronica per l'emergenza con Arduino, ESP32 e Raspberry Pi.",
 ], N())
 
 content("Materiali pronti da scaricare", [

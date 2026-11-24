@@ -11,7 +11,7 @@ In questa sezione puoi consultare e scaricare documenti relativi all'attività d
 
 <div class="card bg-light border-0 mb-4">
 <div class="card-body p-3">
-<i class="bi bi-info-circle me-2" aria-hidden="true"></i> I documenti sono in formato PDF: per aprirli basta un browser moderno o un lettore PDF. I file per la stampa 3D (STL e SCAD) si aprono con i programmi indicati nella loro sezione.
+<i class="bi bi-info-circle me-2" aria-hidden="true"></i> I documenti sono in formato PDF: per aprirli basta un browser moderno o un lettore PDF. I file per la stampa 3D (STL e SCAD) e quelli dei progetti di elettronica si aprono con i programmi indicati nella loro sezione.
 </div>
 </div>
 
@@ -89,6 +89,14 @@ Oggetti progettati dal Gruppo, con il file pronto da scaricare, la vista in 3D, 
 | Pagina | Contenuto | Formato |
 |---|---|---|
 | [Stampa 3D](/stampa-3d/) | Per i volontari: catalogo degli oggetti con il nominativo ALFA (targhetta, porta tesserino, tessera, portachiavi, fischietto, ganci, porta radio, supporto per il microfono, avvolgicavo, segnalibro con l'alfabeto fonetico, etichette, righello per le coordinate, targa da tavolo). Ogni oggetto ha la sua pagina con il file da scaricare e il modello da modificare con il programma gratuito OpenSCAD | STL · SCAD |
+
+## Elettronica per l'emergenza
+
+Progetti con Arduino, ESP32 e Raspberry Pi a tema protezione civile, per i volontari: per ognuno a che cosa serve, i limiti, i componenti, i collegamenti, i passi di montaggio, il codice da scaricare e, dove serve, la custodia da stampare in 3D. Sono dispositivi non certificati: non sostituiscono le allerte ufficiali né il 112.
+
+| Pagina | Contenuto | Formato |
+|---|---|---|
+| [Elettronica per l'emergenza](/elettronica-emergenza/) | Sensore del livello dell'acqua per un fosso o un sottopasso, pluviometro a bascula, nodo Meshtastic per i messaggi della squadra, schermo dell'allerta in sede con Raspberry Pi | INO · PY · SH · STL · SCAD |
 
 ## Normativa Regionale (Lazio)
 

@@ -350,6 +350,21 @@ AddType text/javascript .mjs
   </FilesMatch>
 </IfModule>
 
+# Elettronica per l'emergenza: sketch, script e file di configurazione sono
+# pubblicati apposta per essere scaricati (24/11/2026). Solo nelle cartelle dei
+# progetti, solo questi tipi, sempre come testo semplice da scaricare: il
+# server non li esegue e il blocco qui sopra resta valido in tutto il resto
+# del sito. <If> si applica dopo <FilesMatch>, quindi qui l'accesso è aperto.
+<If "%{REQUEST_URI} =~ m#^/elettronica-emergenza/[a-z0-9-]+/[A-Za-z0-9_.-]+\.(py|sh|ini|ino|h|esempio)$#">
+  <IfModule mod_authz_core.c>
+    Require all granted
+  </IfModule>
+  ForceType "text/plain; charset=utf-8"
+  <IfModule mod_headers.c>
+    Header set Content-Disposition "attachment"
+  </IfModule>
+</If>
+
 # Charset esplicito nell'header Content-Type (le pagine sono già UTF-8 nel
 # <meta charset>, ma senza questa riga i client che seguono la RFC leggono
 # ISO-8859-1 e i feed/JSON senza meta risultano con accenti corrotti).
