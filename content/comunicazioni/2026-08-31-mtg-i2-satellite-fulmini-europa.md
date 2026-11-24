@@ -114,8 +114,8 @@ Un satellite nuovo non toglie nulla alle abitudini che salvano la giornata duran
 
 **Fonti istituzionali:**
 
-- [ESA — Meteosat Third Generation](https://www.esa.int/Applications/Observing_the_Earth/Meteorological_missions/meteosat_third_generation)
-- [ESA — Lightning Imager](https://www.esa.int/Applications/Observing_the_Earth/Meteorological_missions/meteosat_third_generation/Lightning_Imager)
+- [ESA — Meteosat Third Generation: dati essenziali](https://www.esa.int/articles/about-us/directorates/earth-observation-programmes/meteorological-missions/meteosat-third-generation/facts-and-figures)
+- [ESA — Lightning Imager](https://www.esa.int/articles/about-us/directorates/earth-observation-programmes/meteorological-missions/meteosat-third-generation/lightning-imager)
 - [ESA — Scheda tecnica MTG-I (PDF)](https://esamultimedia.esa.int/docs/EarthObservation/MTG-I_factsheet_260401.pdf)
 - [EUMETSAT — la serie Meteosat](https://www.eumetsat.int/our-satellites/meteosat-series)
 - [EUMETSAT — gli strumenti di Meteosat di terza generazione](https://www.eumetsat.int/meteosat-third-generation-instruments)
