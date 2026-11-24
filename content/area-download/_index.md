@@ -11,7 +11,7 @@ In questa sezione puoi consultare e scaricare documenti relativi all'attività d
 
 <div class="card bg-light border-0 mb-4">
 <div class="card-body p-3">
-<i class="bi bi-info-circle me-2" aria-hidden="true"></i> Tutti i documenti sono in formato PDF. Per visualizzarli è sufficiente un browser moderno o un lettore PDF.
+<i class="bi bi-info-circle me-2" aria-hidden="true"></i> I documenti sono in formato PDF: per aprirli basta un browser moderno o un lettore PDF. I file per la stampa 3D (STL e SCAD) si aprono con i programmi indicati nella loro sezione.
 </div>
 </div>
 
@@ -81,6 +81,18 @@ I quattro fogli della nuova Carta geologica d'Italia che coprono i Castelli Roma
 ## Componenti del sito da riusare (Open Kit)
 
 Pacchetti ZIP con il codice di alcune funzioni del sito (lettura ad alta voce, pannello di accessibilità, tabelle di comunicazione, feed CAP dell'allerta, Modalità Aula e altre), con istruzioni e licenza EUPL 1.2, per altri gruppi di protezione civile, associazioni e Comuni: vedi l'[Open Kit](/open-kit/).
+
+## Oggetti da stampare in 3D
+
+Oggetti progettati dal Gruppo, con il file pronto da scaricare, la vista in 3D, la scheda tecnica con tutte le misure e le istruzioni per ordinarli a un servizio di stampa online. Non serve avere una stampante.
+
+| Pagina o file | Contenuto | Formato |
+|---|---|---|
+| [Oggetti con il tuo nominativo](/stampa-3d/nominativi/) | Per i volontari: scrivi il numero del tuo nominativo ALFA e scarichi targhetta da petto, portachiavi, etichette, ganci, porta radio, tessera multiuso e targa da tavolo | STL |
+| [Stampa 3D](/stampa-3d/) | Presentazione degli oggetti e regole per stamparli | Pagina |
+| [Modello di targhetta, portachiavi ed etichetta](/stampa-3d/sorgenti/targhetta-nominativo.scad) | Modello da modificare con il programma gratuito OpenSCAD | SCAD · 8 KB |
+| [Modello dei ganci e del porta radio](/stampa-3d/sorgenti/ganci-nominativo.scad) | Modello da modificare con OpenSCAD | SCAD · 10 KB |
+| [Modello di tessera multiuso, etichetta per l'attrezzatura e targa da tavolo](/stampa-3d/sorgenti/oggetti-nominativo.scad) | Modello da modificare con OpenSCAD | SCAD · 6 KB |
 
 ## Normativa Regionale (Lazio)
 
