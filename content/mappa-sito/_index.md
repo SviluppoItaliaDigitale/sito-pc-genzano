@@ -653,7 +653,7 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
 <a class="ms-card ms-emerg" href="/formazione/kit-calamita-caregiver-familiari/">
   <div class="ms-card-icon"><i class="bi bi-heart-pulse-fill"></i></div>
   <p class="ms-card-title">Kit Caregiver familiari</p>
-  <p class="ms-card-desc">L. 205/2017 + Carta europea del caregiver (Eurocarers) + WHO Self-care 2022. Carta assistito, piano allettato.</p>
+  <p class="ms-card-desc">L. 205/2017 + COFACE «European Charter for Family Carers» + WHO Self-care 2022. Carta assistito, piano allettato.</p>
 </a>
 <a class="ms-card ms-emerg" href="/formazione/kit-calamita-strutture-sanitarie/">
   <div class="ms-card-icon"><i class="bi bi-hospital-fill"></i></div>
