@@ -281,7 +281,7 @@ for (let t = 0; t < pos.length; t += 9) {
   let c = zm > zb + 0.01 && zm <= zb + ril + 0.02 ? cr : cb;
   if (c === cr && A.bandiera) {
     const [x0, y0, x1, y1] = A.bandiera, cx = (pc[t] + pc[t + 3] + pc[t + 6]) / 3, cy = (pc[t + 1] + pc[t + 4] + pc[t + 7]) / 3;
-    if (cx >= x0 - 0.1 && cx <= x1 + 0.1 && cy >= y0 - 0.1 && cy <= y1 + 0.1) c = tri[Math.min(2, Math.floor((cx - x0) / (x1 - x0) * 3))];
+    if (cx >= x0 - 0.1 && cx <= x1 + 0.1 && cy >= y0 - 0.1 && cy <= y1 + 0.1) c = tri[Math.max(0, Math.min(2, Math.floor((cx - x0) / (x1 - x0) * 3)))];   // il bordo sinistro può cadere poco prima di x0
   }
   for (let k = 0; k < 9; k += 3) { col[t + k] = c.r; col[t + k + 1] = c.g; col[t + k + 2] = c.b; }
 }

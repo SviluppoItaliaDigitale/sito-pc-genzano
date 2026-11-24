@@ -126,7 +126,7 @@ function geometria(pos) {
       const cx = (pc[t] + pc[t + 3] + pc[t + 6]) / 3, cy = (pc[t + 1] + pc[t + 4] + pc[t + 7]) / 3;
       const [x0, y0, x1, y1] = a.bandiera;
       if (cx >= x0 - 0.1 && cx <= x1 + 0.1 && cy >= y0 - 0.1 && cy <= y1 + 0.1)
-        cc = tri[Math.min(2, Math.floor((cx - x0) / (x1 - x0) * 3))];
+        cc = tri[Math.max(0, Math.min(2, Math.floor((cx - x0) / (x1 - x0) * 3)))];   // il bordo sinistro può cadere poco prima di x0
     }
     for (let k = 0; k < 9; k += 3) { colori[t + k] = cc.r; colori[t + k + 1] = cc.g; colori[t + k + 2] = cc.b; }
   }
