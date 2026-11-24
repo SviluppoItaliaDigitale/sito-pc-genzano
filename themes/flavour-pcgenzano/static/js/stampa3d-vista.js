@@ -116,8 +116,19 @@ function geometria(pos) {
   const zmin = b.min.z;
   for (let t = 0; t < pos.length; t += 9) {
     const zm = Math.max(pc[t + 2], pc[t + 5], pc[t + 8]);
-    const alto = zm > zb + 0.01 && zm <= zb + ril + 0.02;
+    const alto = !a.incise && zm > zb + 0.01 && zm <= zb + ril + 0.02;
     let cc = alto ? cr : cb;
+    // Scritte incise sul retro che sta sul piano (cover): fondo e pareti delle incisioni come le scritte, bandiera
+    // a specchio nel file, quindi il verde sta dalla parte delle x più alte
+    if (a.incise && zm > zmin + 0.01 && zm <= zmin + ril + 0.05) {
+      cc = cr;
+      if (a.bandiera) {
+        const cx = (pc[t] + pc[t + 3] + pc[t + 6]) / 3, cy = (pc[t + 1] + pc[t + 4] + pc[t + 7]) / 3;
+        const [x0, y0, x1, y1] = a.bandiera;
+        if (cx >= x0 - 0.1 && cx <= x1 + 0.1 && cy >= y0 - 0.1 && cy <= y1 + 0.1)
+          cc = tri[2 - Math.max(0, Math.min(2, Math.floor((cx - x0) / (x1 - x0) * 3)))];
+      }
+    }
     if (retro && zm > zmin + 0.01 && zm <= zmin + 0.7) {
       const cx = (pc[t] + pc[t + 3] + pc[t + 6]) / 3, cy = (pc[t + 1] + pc[t + 4] + pc[t + 7]) / 3;
       if (cx >= retro[0] - 0.5 && cx <= retro[2] + 0.5 && cy >= retro[1] - 0.5 && cy <= retro[3] + 0.5) cc = cr;
@@ -245,7 +256,7 @@ function mostra(pos, chi) {
   c.minDistance = tre.distanza * 0.4;
   c.maxDistance = tre.distanza * 2.5;
   misura();
-  posiziona(1);
+  posiziona(O.anteprima && O.anteprima.incise ? -1 : 1);   // la cover si mostra dal retro, dove sono le scritte
   vista.img.classList.add('visually-hidden');          // resta per i lettori di schermo
   vista.carica.hidden = true;
   vista.comandi.hidden = false;

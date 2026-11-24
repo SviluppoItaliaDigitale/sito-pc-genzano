@@ -30,7 +30,7 @@ Il prezzo lo stabilisce il servizio di stampa e dipende da materiale, tempi e sp
 <details class="faq-item">
 <summary><strong>Ho una stampante 3D: posso stamparli io?</strong></summary>
 
-Sì. Usa il PETG, con strati da 0,2 mm e riempimento al 100%. Nessun oggetto ha bisogno di supporti, se lo stampi nella posizione in cui è salvato il file: non girarlo nel programma di stampa. In piano si stampano targhetta, portachiavi, tessera, porta tesserino, etichette, avvolgicavo, righello e segnalibro; in piedi sul lato sinistro i ganci, il porta radio e il supporto per il microfono; in piedi la targa da tavolo e il fischietto.
+Sì. Usa il PETG, con strati da 0,2 mm e riempimento al 100%. Nessun oggetto ha bisogno di supporti, se lo stampi nella posizione in cui è salvato il file: non girarlo nel programma di stampa. In piano si stampano targhetta, portachiavi, tessera, porta tesserino, etichette, avvolgicavo, righello e segnalibro; in piedi sul lato sinistro i ganci, il porta radio e il supporto per il microfono; in piedi la targa da tavolo e il fischietto. Le cover per il telefono si stampano in TPU 95A, una plastica gommosa, con il retro sul piano.
 
 Per avere le scritte di un altro colore cambiando filamento a metà stampa, il metodo funziona solo con gli oggetti stampati in piano: cambia filamento dove finisce la base e cominciano scritte e bordo, come vedi nell'anteprima degli strati del programma di stampa. Negli oggetti stampati in piedi base e scritte crescono negli stessi strati: colora le scritte a mano con un pennarello a vernice oppure usa una stampante a più colori.
 
@@ -54,6 +54,17 @@ Sì, negli oggetti con la scritta «Anche con nome e cognome». Nella pagina del
 <summary><strong>Il mio numero non c'è</strong></summary>
 
 I file vanno da ALFA 1 ad ALFA 100. Se ti serve un numero diverso, scrivi al Gruppo dalla pagina [Contatti](/contatti/).
+
+</details>
+
+<details class="faq-item">
+<summary><strong>C'è la cover per il mio telefono?</strong></summary>
+
+Per ora ci sono le cover per iPhone 17, iPhone 17 Pro, iPhone 17 Pro Max, iPhone 17e e iPhone 16. Le misure vengono dai disegni che Apple pubblica per chi progetta accessori, con la posizione esatta di tasti, porte e fotocamere. Per gli altri telefoni non abbiamo trovato disegni pubblici di questo tipo, e le misure dei siti di vendita (altezza, larghezza e spessore) non bastano per fare i fori al posto giusto. Se ti serve un altro modello, scrivi al Gruppo dalla pagina [Contatti](/contatti/).
+
+Le cover non proteggono il vetro della fotocamera, coprono il carrellino della SIM e non entrano nelle basi di ricarica. Non sono certificate contro le cadute: prima stampane una e prova il telefono.
+
+iPhone è un marchio di Apple Inc. Le cover non sono prodotti Apple e Apple non le ha approvate.
 
 </details>
 
