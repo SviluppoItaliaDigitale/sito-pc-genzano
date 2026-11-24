@@ -337,6 +337,10 @@ void setup() {
   server.onNotFound([]() { server.send(404, "text/plain; charset=utf-8", "Pagina non trovata"); });
   server.begin();
 #endif
+  // Gli impulsi arrivati durante l'avvio (fino a 20 secondi di attesa del Wi-Fi) non vanno in un solo blocco da
+  // 3 secondi: si scartano e il conteggio parte da qui. Il primo minuto dopo l'accensione la media e' piu' bassa.
+  bloccoCorrente = (uint32_t)(esp_timer_get_time() / (BLOCCO_S * 1000000LL));
+  impulsiContati = leggiImpulsi();
 }
 
 void loop() {

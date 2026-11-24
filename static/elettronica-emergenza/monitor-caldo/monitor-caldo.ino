@@ -68,14 +68,15 @@ static float fahrenheitInCelsius(float f) { return (f - 32.0f) / 1.8f; }
 
 // Indice di calore in gradi Fahrenheit, da temperatura in F e umidita' in %.
 // Metodo della pagina WPC "The Heat Index Equation":
-// 1) formula semplice; se la sua media con la temperatura e' sotto 80 F,
-//    il risultato e' la formula semplice;
+// 1) formula semplice, mediata con la temperatura; se questa media e' sotto 80 F,
+//    il risultato e' la media («the result averaged with the temperature»);
 // 2) altrimenti regressione di Rothfusz (NWS Technical Attachment SR 90-23),
 //    con la correzione per umidita' sotto il 13 % (fra 80 e 112 F) e quella
 //    per umidita' sopra l'85 % (fra 80 e 87 F).
 static float indiceCaloreF(float T, float RH) {
   float semplice = 0.5f * (T + 61.0f + ((T - 68.0f) * 1.2f) + (RH * 0.094f));
-  if ((semplice + T) / 2.0f < 80.0f) return semplice;
+  float media = (semplice + T) / 2.0f;
+  if (media < 80.0f) return media;
   float hi = -42.379f + 2.04901523f * T + 10.14333127f * RH - 0.22475541f * T * RH
              - 0.00683783f * T * T - 0.05481717f * RH * RH + 0.00122874f * T * T * RH
              + 0.00085282f * T * RH * RH - 0.00000199f * T * T * RH * RH;

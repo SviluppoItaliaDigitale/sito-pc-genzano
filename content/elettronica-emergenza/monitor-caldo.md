@@ -70,7 +70,7 @@ Il sensore sta fuori dalla scatola, all'estremità del cavo: dentro, il calore d
 
 Ogni 10 secondi lo sketch chiede una misura al sensore e ne controlla la somma di verifica: una lettura rovinata viene scartata. Calcola l'indice sulla mediana delle ultime cinque misure, così un valore storto non cambia lo stato dei LED. Dopo tre letture fallite di fila segnala «sensore da controllare».
 
-Il calcolo segue la pagina del NWS. Prima c'è una formula semplice. Se la sua media con la temperatura arriva a 80 °F, cioè 26,7 °C, si passa alla regressione di Rothfusz, con due correzioni: una per l'umidità sotto il 13 % e una per l'umidità sopra l'85 %. Lo sketch è stato provato al banco su oltre 28 000 combinazioni di temperatura e umidità: dà gli stessi valori di un calcolo di controllo separato. Riproduce anche i due esempi della pagina del NWS di Amarillo: con 100 °F e 55 % di umidità l'indice è 124 °F, con 100 °F e 15 % è 96 °F.
+Il calcolo segue la pagina del NWS. Prima c'è una formula semplice. Il suo risultato si fa in media con la temperatura: se la media resta sotto 80 °F, cioè 26,7 °C, l'indice è quella media; altrimenti si passa alla regressione di Rothfusz, con due correzioni: una per l'umidità sotto il 13 % e una per l'umidità sopra l'85 %. Lo sketch è stato provato al banco su oltre 28 000 combinazioni di temperatura e umidità: dà gli stessi valori di un calcolo di controllo separato. Riproduce anche i due esempi della pagina del NWS di Amarillo: con 100 °F e 55 % di umidità l'indice è 124 °F, con 100 °F e 15 % è 96 °F.
 
 ## Montaggio
 
