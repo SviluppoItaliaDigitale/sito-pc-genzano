@@ -56,8 +56,12 @@ jobs:
           # Solo issue con almeno una di queste label vengono valutate
           only-issue-labels: 'automazione,normativa-watcher,smoke-test,scarica-foto'
 
-          # MAI toccare issue con queste label (lavoro umano)
-          exempt-issue-labels: 'tracking,audit-followup,enhancement,bug,wontclose,pinned,urgente-permanente'
+          # MAI toccare issue con queste label (lavoro umano). `cucina-emergenza`
+          # (dal 24/11/2026): la issue di controllo-cucina-emergenza.yml si
+          # aggiorna una volta al mese e si chiude da sola quando i collegamenti
+          # tornano a posto; chiusa prima per inattività, nasconderebbe un
+          # guasto ancora aperto (guasti.md, punto 6).
+          exempt-issue-labels: 'tracking,audit-followup,enhancement,bug,wontclose,pinned,urgente-permanente,cucina-emergenza'
 
           # ===== PR (non usate qui ma richieste dall'action) =====
           days-before-pr-stale: -1

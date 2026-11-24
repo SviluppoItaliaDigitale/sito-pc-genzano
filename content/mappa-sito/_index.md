@@ -550,6 +550,11 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-title">Elettronica per l'emergenza</p>
   <p class="ms-card-desc">Progetti con Arduino, ESP32 e Raspberry Pi per i volontari: sensore del livello dell'acqua, pluviometro, stazione meteo, monitor del caldo, batteria a 12 V, nodo Meshtastic e posizione dei mezzi, schermo dell'allerta, sismografo, ricevitore di aerei. Codice, istruzioni e custodie da stampare.</p>
 </a>
+<a class="ms-card ms-edu" href="/cucina-emergenza/">
+  <div class="ms-card-icon"><i class="bi bi-cup-hot"></i></div>
+  <p class="ms-card-title">Cucina in emergenza</p>
+  <p class="ms-card-desc">Per chi cucina in un campo o in una mensa di emergenza: documenti ufficiali su igiene, allergeni, pasti per molte persone e donazioni, e il catalogo dei disciplinari DOP, IGP e STG.</p>
+</a>
 <a class="ms-card ms-edu" href="/esercitazioni/">
   <div class="ms-card-icon"><i class="bi bi-list-task"></i></div>
   <p class="ms-card-title">Addestramento e buone pratiche</p>

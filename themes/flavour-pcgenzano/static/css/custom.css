@@ -8819,3 +8819,70 @@ html.a11y-contrast-yellow-black .s3d-chip[aria-pressed="true"], html.a11y-contra
   .s3d-sezione[hidden] { display: block !important; }
   .s3d-sezione h2.visually-hidden { position: static !important; width: auto !important; height: auto !important; clip: auto !important; margin: 1.5rem 0 .5rem !important; }
 }
+
+/* ==========================================================================
+ * CUCINA IN EMERGENZA v1.0 (24/11/2026) — documenti ufficiali (shortcode cucina-documenti) e catalogo
+ * dei disciplinari DOP, IGP e STG (shortcode disciplinari, js/disciplinari.js).
+ * Nessuno sfondo proprio: testo e bordi sul fondo della pagina, così le modalità di contrasto del
+ * pannello accessibilità valgono senza varianti. Il riquadro dei filtri porta anche .bg-light, che
+ * quelle modalità trattano già come superficie chiara; qui prende la tinta dei riquadri del sito.
+ * ========================================================================== */
+.article-body ul.cuc-doc, .article-body ul.disc-elenco { list-style: none; padding: 0; margin: .6rem 0 1.6rem; }
+.article-body ul.cuc-doc > li, .article-body ul.disc-elenco > li { margin: 0; }
+
+/* Documenti: una scheda per documento, filetto blu a sinistra */
+.cuc-doc-voce { padding: .85rem 0 .85rem 1rem; border-left: 4px solid #003366; }
+.cuc-doc-voce + .cuc-doc-voce { margin-top: .9rem !important; }
+.cuc-doc-voce p { margin: 0; }
+.cuc-doc-titolo { font-size: 1.1rem; font-weight: 700; line-height: 1.35; }
+/* Titoli dei documenti e nomi dei prodotti non si spezzano con il trattino della sillabazione */
+.cuc-doc-titolo, .disc-nome { -webkit-hyphens: manual; hyphens: manual; }
+.cuc-doc-ente { font-size: .95rem; color: #3d4a57; margin-top: .15rem !important; }
+.cuc-doc-testo { margin-top: .4rem !important; }
+/* Avvertenza del documento: filetto ambra e l'etichetta «Da sapere» a parole, non solo l'aspetto */
+.cuc-doc-nota { margin-top: .45rem !important; padding-left: .7rem; border-left: 3px solid #b45309; }
+.cuc-doc-pagina { font-size: .95rem; margin-top: .3rem !important; }
+.cuc-doc-dati { font-size: .9rem; color: #3d4a57; margin-top: .4rem !important; }
+.cuc-doc-formato, .disc-tipo { display: inline-block; font-size: .78rem; font-weight: 700; line-height: 1.5;
+  padding: 0 .4rem; border: 1px solid currentColor; border-radius: 3px; white-space: nowrap; }
+.cuc-doc-formato { margin-right: .35rem; }
+.cuc-verifica { font-size: .95rem; color: #3d4a57; }
+
+/* Catalogo dei disciplinari */
+.disc-riepilogo { margin-bottom: 1.2rem; }
+.disc-filtri { margin: 0 0 1.5rem; padding: 1rem 1.25rem; border-left: 4px solid #003366; border-radius: 6px; }
+.disc-filtri.bg-light { background-color: #f4f7fb !important; }
+.disc-filtri[hidden], .disc-voce[hidden], .disc-gruppo[hidden], .disc-nessuno[hidden], .disc-azzera[hidden],
+.article-body h2[hidden] { display: none !important; }
+.disc-filtri-titolo { font-weight: 700; color: #003366; margin: 0 0 .6rem; }
+.disc-campi { display: flex; flex-wrap: wrap; align-items: flex-end; gap: .75rem 1rem; }
+.disc-campo { display: flex; flex-direction: column; gap: .25rem; flex: 1 1 12rem; min-width: 11rem; }
+/* Bootstrap Italia mette le etichette dei campi in posizione assoluta: qui stanno sopra il campo. */
+.disc-campo label { position: static; transform: none; width: auto; margin: 0; font-size: .95rem; font-weight: 600; color: #1a1a1a; }
+.disc-campo input, .disc-campo select { min-height: 44px; font-size: 1rem; color: #1a1a1a; background-color: #fff;
+  border: 1px solid #5c6f82; border-radius: 4px; padding: .4rem .6rem; width: 100%; }
+.disc-campo select { padding-right: 2rem; }
+.disc-campo input:focus, .disc-campo select:focus, .disc-azzera:focus { outline: 3px solid #ffbe2e; outline-offset: 2px; box-shadow: none; }
+.disc-azzera { min-height: 44px; }
+.disc-conteggio { margin: .75rem 0 0; font-weight: 600; color: #1a1a1a; min-height: 1.5em; }
+.article-body ul.disc-elenco { columns: 2 19rem; column-gap: 2.2rem; }
+.disc-voce { break-inside: avoid; padding: .55rem 0; border-bottom: 1px solid #c5ceda; line-height: 1.4; }
+.disc-nome { font-weight: 600; }
+.disc-tipo { margin-left: .25rem; vertical-align: .08em; }
+.disc-luogo, .disc-dati { display: block; font-size: .9rem; color: #3d4a57; }
+.disc-luogo { margin-top: .1rem; }
+.disc-fonte { font-size: .9rem; color: #3d4a57; margin: -.8rem 0 2rem; }
+.disc-nessuno { font-weight: 600; }
+@media (max-width: 575.98px) {
+  .disc-campo { flex: 1 1 100%; }
+  .disc-azzera { width: 100%; }
+}
+@media print {
+  .disc-voce[hidden], .disc-gruppo[hidden], .article-body h2[hidden] { display: none !important; }
+  .cuc-doc-voce { border-left: 2pt solid #000; break-inside: avoid; }
+  .cuc-doc-nota { border-left: 1.5pt solid #000; }
+  .cuc-doc-voce a[href]::after { word-break: break-all; font-weight: 400; font-size: .85em; }
+  /* Nel catalogo gli indirizzi dei file sono lunghi e tutti simili: in stampa restano i nomi. */
+  .disc-elenco a[href]::after, .disc-fonte a[href]::after, .disc-riepilogo a[href]::after { content: none !important; }
+  .disc-voce { border-bottom: .5pt solid #666; }
+}
