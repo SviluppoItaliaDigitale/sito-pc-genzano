@@ -67,6 +67,15 @@ Redirect 301 /comunicazioni/2026-05-16-infiorata-genzano-2026.html https://www.p
 RedirectMatch 301 ^/assets/ https://www.protezionecivilegenzano.it/
 RedirectMatch 301 ^/cache/ https://www.protezionecivilegenzano.it/
 RedirectMatch 301 ^/immagini_web/ https://www.protezionecivilegenzano.it/
+# Stampa 3D (24/11/2026): i file di ogni oggetto sono passati nella cartella della sua pagina
+# (/stampa-3d/<oggetto>/), i modelli di partenza nel repository. I vecchi indirizzi restano validi.
+RedirectMatch 301 ^/stampa-3d/nominativi/([a-z0-9-]+)/(.+)$ https://www.protezionecivilegenzano.it/stampa-3d/$1/$2
+# Ogni vecchio modello porta a un modello pubblicato della stessa famiglia, che fa tutti i suoi oggetti
+# (si sceglie con il parametro «tipo»); il resto della vecchia cartella porta al catalogo.
+RedirectMatch 301 ^/stampa-3d/sorgenti/targhetta-nominativo\.scad$ https://www.protezionecivilegenzano.it/stampa-3d/targhetta-petto/targhetta-petto.scad
+RedirectMatch 301 ^/stampa-3d/sorgenti/ganci-nominativo\.scad$ https://www.protezionecivilegenzano.it/stampa-3d/appendiabiti/appendiabiti.scad
+RedirectMatch 301 ^/stampa-3d/sorgenti/oggetti-nominativo\.scad$ https://www.protezionecivilegenzano.it/stampa-3d/tessera-multiuso/tessera-multiuso.scad
+RedirectMatch 301 ^/stampa-3d/sorgenti/ https://www.protezionecivilegenzano.it/stampa-3d/
 
 # 410 Gone esplicito per i .php legacy del vecchio pannello admin Joomla
 # DEVE venire PRIMA del Redirect 301 della cartella /piano_protezione_civile/
@@ -325,6 +334,16 @@ FileETag None
 <IfModule mod_authz_core.c>
   <FilesMatch "\.(bak|old|orig|save|swp|sql|log|ini|env|sh|py|inc|pem|key)$">
     Require all denied
+  </FilesMatch>
+</IfModule>
+
+# File per la stampa 3D (STL e modelli OpenSCAD): si scaricano sempre, non si
+# aprono nel browser come testo incomprensibile (segnalazione del 24/11/2026).
+AddType model/stl .stl
+AddType application/x-openscad .scad
+<IfModule mod_headers.c>
+  <FilesMatch "\.(stl|scad)$">
+    Header set Content-Disposition "attachment"
   </FilesMatch>
 </IfModule>
 

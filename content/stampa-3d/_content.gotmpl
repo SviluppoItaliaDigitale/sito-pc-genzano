@@ -1,0 +1,42 @@
+{{- /*
+  Una pagina per ogni oggetto di data/stampa_3d.yaml, in /stampa-3d/<id>/: nella stessa cartella
+  (static/stampa-3d/<id>/) stanno il modello <id>.scad, gli STL per ogni nominativo e le anteprime,
+  creati da scripts/genera-stampa-3d.py. Le parti interattive vengono dallo shortcode stampa3d.
+*/ -}}
+{{- $d := site.Data.stampa_3d -}}
+{{- range $d.oggetti -}}
+  {{- $testo := printf `%s Misura %s e pesa circa %d grammi.
+
+## Il tuo nominativo
+
+{{< stampa3d parte="vista" oggetto="%s" >}}
+
+## Scarica il file
+
+{{< stampa3d parte="scarica" oggetto="%s" >}}
+
+## Scheda tecnica
+
+{{< stampa3d parte="scheda" oggetto="%s" >}}
+
+## Come ordinarlo online
+
+{{< stampa3d parte="ordina" oggetto="%s" >}}
+
+## %s
+
+{{< stampa3d parte="montaggio" oggetto="%s" >}}
+
+## Altri file
+
+{{< stampa3d parte="file" oggetto="%s" >}}
+` .descrizione .misure .peso_g .id .id .id .id (.titolo_montaggio | default "Come si monta") .id .id -}}
+  {{- $.AddPage (dict
+      "path" .id
+      "kind" "page"
+      "title" .nome
+      "dates" (dict "date" (time.AsTime "2026-11-24"))
+      "params" (dict "description" .breve "oggetto" .id "tts" true "dataUltimaRevisione" "2026-11-24" "image" "")
+      "content" (dict "mediaType" "text/markdown" "value" $testo)
+  ) -}}
+{{- end -}}

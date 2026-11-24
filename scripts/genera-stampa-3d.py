@@ -5,12 +5,16 @@ e Playwright con Chromium per le anteprime in tre quarti dei ganci.
 La base di ogni oggetto si calcola una volta sola; per ogni nominativo OpenSCAD fa solo le scritte e
 manifold3d le unisce alla base (stesso risultato di OpenSCAD, trenta volte più veloce).
 
-Per ogni oggetto e ogni nominativo scrive in static/stampa-3d/nominativi/<id>/ il file <prefisso>-NNN.stl
-(STL binario, in millimetri, un solo pezzo per file) e l'anteprima <prefisso>-NNN.webp disegnata dal
-file stesso, più retro.webp per il lato posteriore. Salta i file già presenti, salvo --tutti.
+I modelli di partenza (famiglie di oggetti) stanno in scripts/stampa-3d/. Ogni oggetto ha la sua
+cartella static/stampa-3d/<id>/, dove sta anche la sua pagina: il modello <id>.scad già impostato per
+quell'oggetto, il file <prefisso>-NNN.stl per ogni nominativo (STL binario, in millimetri, un solo
+pezzo) e l'anteprima <prefisso>-NNN.webp disegnata dal file stesso, più retro.webp per il lato
+posteriore. Salta gli STL già presenti, salvo --tutti; il modello .scad si riscrive sempre.
+Nei modelli con viti controlla che la testa delle viti non copra mai bandiera e scritte.
 Controlla le regole pubblicate da Craftcloud per la stampa FDM (support.craftcloud3d.com, articoli
 31 e 32, consultati il 23/11/2026): superficie chiusa, un pezzo per file, appoggio sul piano,
-tratti delle lettere da 0,6 mm in su. Con --check controlla soltanto che i file ci siano tutti.
+tratti delle lettere da 0,6 mm in su. Con --check controlla soltanto che i file ci siano tutti e che
+i modelli pubblicati siano allineati a quelli di partenza.
 """
 import argparse
 import re
@@ -24,8 +28,8 @@ import yaml
 
 RADICE = Path(__file__).resolve().parent.parent
 DATI = RADICE / "data/stampa_3d.yaml"
-SORGENTI = RADICE / "static/stampa-3d/sorgenti"
-USCITA = RADICE / "static/stampa-3d/nominativi"
+SORGENTI = RADICE / "scripts/stampa-3d"
+USCITA = RADICE / "static/stampa-3d"
 TRATTO_MIN = 0.6
 
 
@@ -59,11 +63,45 @@ def controlla_caratteri(sorgente):
     for _tipo, valori in misure:
         m = [float(x) for x in valori.split(",")]
         coppie |= {(font, m[4]), (font2, m[6])}
+    # dimensioni scritte a mano nelle chiamate (riga(testo, x, y, 4, font2) o text(..., size = 4, font = font2))
+    nomi = {"font": font, "font2": font2}
+    for size, f in re.findall(r'riga\([^;]*?,\s*([\d.]+),\s*(font2?)\b', s):
+        coppie.add((nomi[f], float(size)))
+    for size, f in re.findall(r'size\s*=\s*([\d.]+),\s*font\s*=\s*(font2?)\b', s):
+        coppie.add((nomi[f], float(size)))
     for f, size in sorted(coppie):
         t = tratto_minimo(f, size)
         if t < TRATTO_MIN:
             errori.append(f"{sorgente.name}: {f} a {size} mm ha tratti di {t:.2f} mm (minimo {TRATTO_MIN})")
     return errori
+
+
+def modello_oggetto(sorgente, ogg):
+    """Testo del modello .scad pubblicato nella cartella dell'oggetto: il modello della famiglia con
+    i parametri dell'oggetto già impostati e due righe in testa su come usarlo."""
+    s = sorgente.read_text(encoding="utf-8")
+    for k, v in ogg.get("parametri", {}).items():
+        s, n = re.subn(rf'^{k} = "[^"]*";', f'{k} = "{v}";', s, count=1, flags=re.M)
+        if not n:
+            raise SystemExit(f"{sorgente.name}: manca il parametro {k} per {ogg['id']}")
+    testa = (f"// {ogg['nome']} con il nominativo. Modello per OpenSCAD (https://openscad.org/), gratuito.\n"
+             "// Scrivi il tuo nominativo in riga1, premi F6 per l'anteprima e F7 per salvare il file STL.\n"
+             "// Lo stesso modello fa anche altri oggetti: si sceglie con il parametro «tipo».\n")
+    return testa + s
+
+
+def viti_coperte(sorgente, parametri, testo):
+    """Nei modelli con viti, la parte «controllo_viti» contiene ciò che delle scritte finirebbe sotto
+    la testa di una vite: deve essere vuota. Torna il messaggio d'errore o None."""
+    with tempfile.TemporaryDirectory() as d:
+        out = Path(d) / "v.stl"
+        cmd = ["openscad", "-q", "-o", str(out)]
+        for k, v in {**parametri, "riga1": testo, "parte": "controllo_viti"}.items():
+            cmd += ["-D", f'{k}="{v}"']
+        subprocess.run(cmd + [str(sorgente)], capture_output=True)
+        if out.exists() and out.stat().st_size > 0:
+            return f"{parametri.get('tipo')} {testo}: la testa di una vite copre la bandiera o le scritte"
+    return None
 
 
 def maschera(m, z, scala, w, h, ox, oy, specchia=False):
@@ -218,6 +256,10 @@ const buf = await (await fetch(q.get('f'))).arrayBuffer(), dv = new DataView(buf
 const pos = new Float32Array(n * 9);
 for (let i = 0; i < n; i++) for (let k = 0; k < 9; k++) pos[i * 9 + k] = dv.getFloat32(84 + i * 50 + 12 + k * 4, true);
 if (A.fianco) for (let i = 0; i < pos.length; i += 3) { const xs = pos[i]; pos[i] = pos[i + 2] + A.fianco; pos[i + 2] = -xs; }
+if (A.assi) for (let i = 0; i < pos.length; i += 3) {   // oggetto girato per mostrare le scritte verso l'alto
+  const p = [pos[i], pos[i + 1], pos[i + 2]];
+  for (let k = 0; k < 3; k++) pos[i + k] = A.assi[k][0] * p[0] + A.assi[k][1] * p[1] + A.assi[k][2] * p[2];
+}
 let pc = pos;
 if (A.inclina) {        // targa da tavolo: piastra con le scritte riportata in piano per colorarle
   const [g, calo, meta] = A.inclina, a = g * Math.PI / 180, ca = Math.cos(a), sa = Math.sin(a);
@@ -231,6 +273,7 @@ for (let t = 0; t < pc.length; t += 9) {
   if (nz > 0) aree.set(z0.toFixed(2), (aree.get(z0.toFixed(2)) || 0) + nz);
 }
 let zb = 0, best = 0; aree.forEach((v, k) => { if (v > best) { best = v; zb = parseFloat(k); } });
+if (typeof A.quota_scritte === 'number') zb = A.quota_scritte;
 const ril = A.rilievo_mm || 1, cb = new THREE.Color(A.base), cr = new THREE.Color(A.rilievo);
 const tri = ['#009246', '#ffffff', '#ce2b37'].map(c => new THREE.Color(c)), col = new Float32Array(pos.length);
 for (let t = 0; t < pos.length; t += 9) {
@@ -309,13 +352,26 @@ def main():
     dati = yaml.safe_load(DATI.read_text(encoding="utf-8"))
     nom = dati["nominativi"]
     numeri = range(nom["primo"], nom["ultimo"] + 1)
-    errori, lavori = [], []
+    errori, lavori, viti = [], [], []
     cartella_basi = tempfile.TemporaryDirectory()
+    categorie = {c["id"] for c in dati.get("categorie", [])}
     for ogg in dati["oggetti"]:
         sorgente = SORGENTI / ogg["sorgente"]
         if not sorgente.exists():
             errori.append(f"manca il modello {sorgente.relative_to(RADICE)}")
             continue
+        if ogg.get("categoria") not in categorie:
+            errori.append(f"{ogg['id']}: categoria «{ogg.get('categoria')}» assente in «categorie»")
+        modello = USCITA / ogg["id"] / f'{ogg["id"]}.scad'
+        testo_modello = modello_oggetto(sorgente, ogg)
+        if a.check:
+            if not modello.exists() or modello.read_text(encoding="utf-8") != testo_modello:
+                errori.append(f"{modello.relative_to(RADICE)} non è allineato al modello di partenza: rilancia lo script")
+        else:
+            modello.parent.mkdir(parents=True, exist_ok=True)
+            modello.write_text(testo_modello, encoding="utf-8")
+        if not a.check and "controllo_viti" in sorgente.read_text(encoding="utf-8"):
+            viti += [(sorgente, ogg.get("parametri", {}), f'{nom["prefisso"]} {n}') for n in numeri]
         for n in numeri:
             dest = USCITA / ogg["id"] / nome_file(nom["prefisso"], n)
             if a.check:
@@ -333,6 +389,7 @@ def main():
         if not a.check:
             errori += controlla_caratteri(sorgente)
     with ProcessPoolExecutor() as ex:
+        errori += [e for e in ex.map(viti_coperte, *zip(*viti)) if e] if viti else []
         errori += [e for e in ex.map(genera, *zip(*lavori)) if e] if lavori else []
     voci_3d = [(l[3], l[4]) for l in lavori if l[4] and l[4].get("vista_3d") and l[3].exists()]
     if voci_3d and not errori:
