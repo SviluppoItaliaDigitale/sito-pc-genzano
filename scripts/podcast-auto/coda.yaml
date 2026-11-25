@@ -5,38 +5,71 @@
 # «escludi»: pezzi di percorso da non usare come fonte (fuori tema).
 # «ufficiali»: pagine di fonti istituzionali (indirizzi verificati, mai
 # indovinati), aggiunte quando il sito ha poco materiale su quel tema.
-# Stati: da-fare | scartata (con motivo) | programmata (con file e data di uscita).
+# Stati: da-fare | scartata (con motivo) | programmata (con file e data di uscita)
+# | rimandata (fuori stagione: non si prende finché non torna da-fare).
 # Ordine: si rifanno i temi sospesi il 05/11/2026, poi la stagione.
 
 puntate:
+- id: neve-gelo
+  titolo: 'Neve e gelo: come prepararsi'
+  fonti:
+  - content/dossier/neve-e-gelo.md
+  - content/conoscere/catalogo-dei-rischi/rischio-neve-gelo.md
+  parole: []
+  stato: programmata
+  istruzioni_extra: 'ATTENZIONE, regole aggiuntive. Queste istruzioni non si leggono
+    e non si ripetono a voce: non dire a chi è dedicata la puntata e non dire come
+    si pronuncia un numero. Per il 26 febbraio 2018 di'' solo che la neve imbiancò
+    i Colli Albani e che in alcune zone gli accumuli superarono i 20 centimetri: non
+    dire che caddero oltre 20 centimetri su tutti i Colli Albani. Elenca gli effetti
+    di neve e ghiaccio uno dopo l''altro, senza dire che uno porta all''altro. Dopo
+    un dato o un numero non aggiungere commenti e non usare aggettivi che la pagina
+    non usa. Sul Gruppo comunale di'' solo che in emergenza si chiama il 112, senza
+    la parola mai e senza la parola sempre. Non dire la parola fonti, tranne che per
+    la fonte di calore alternativa da tenere in casa. Riporta numeri e tempi come
+    sono scritti nelle pagine.'
+  tentativi: 2
+  nota: '25/11/2026, primo tentativo (2 fonti, Breve, audio 2:59) non superato: «Mai
+    chiamare direttamente» (assoluto aggiunto); «il Burian ha portato oltre 20 centimetri
+    di neve sui Colli Albani» (la pagina dice che in alcune zone gli accumuli superarono
+    i 20 centimetri); commenti aggiunti («notevole quantità», «molto insidioso», «numeri
+    che fanno riflettere»); «questo porta di conseguenza all''isolamento di case e
+    frazioni» (nesso che la pagina non fa); istruzioni lette a voce («un tema dedicato
+    ai cittadini di Genzano...», «pronunciato esattamente uno, uno, due»). Comportamenti
+    e avvisi combaciavano con le pagine. Al prossimo errore la puntata va in scartata.
+    Secondo tentativo (stesse 2 fonti, Breve, istruzioni rafforzate; audio 2:13) superato
+    dopo un taglio: tolto dall''audio il passaggio sulla tempesta di ghiaccio del
+    Quebec del 1998 (da 65,60 a 86,15 s dell''originale, nelle pause), dove le voci
+    dicevano «3,5 milioni di persone al buio» senza il «circa» della pagina; ricontrollato
+    con una nuova trascrizione, ogni frase confrontata con le due pagine. Durata finale
+    1:53.'
+  file: content/podcast/2026-12-22-neve-gelo.md
+  data: '2026-12-22'
 - id: rischio-sismico
   titolo: 'Il terremoto: cosa fare prima, durante e dopo'
   fonti:
   - content/rischi-prevenzione/rischio-sismico.md
-  parole:
-  - terremot
-  - sism
-  - scossa
-  - INGV
-  - Io non rischio
-  ufficiali:
-  - https://iononrischio.protezionecivile.gov.it/it/preparati/terremoto/cosa-sapere/
-  - https://iononrischio.protezionecivile.gov.it/it/preparati/terremoto/cosa-fare/
-  stato: scartata
-  motivo: '15/11/2026, due tentativi (1 e 37 fonti, formato Approfondimento, lunghezza
-    predefinita): spiegazioni tecniche aggiunte, scosse dei Colli Albani rese più
-    gravi; Norcia 2016 raccontata con un salvataggio del centro storico che le fonti
-    non dicono. Da rifare con lunghezza «Breve» e le istruzioni nuove.'
+  parole: []
+  stato: da-fare
+  motivo_precedente: '15/11/2026, due tentativi (1 e 37 fonti, formato Approfondimento,
+    lunghezza predefinita): spiegazioni tecniche aggiunte, scosse dei Colli Albani
+    rese più gravi; Norcia 2016 raccontata con un salvataggio del centro storico che
+    le fonti non dicono. Da rifare con lunghezza «Breve» e le istruzioni nuove.'
+  tentativi: 0
+  nota: '18/11/2026, rimessa in coda per decisione di Alessandro («anche quelle scartate!»):
+    terzo tentativo con una sola pagina come fonte (niente parole, niente pagine ufficiali),
+    lunghezza Breve e le istruzioni_extra già scritte.'
+  istruzioni_extra: 'ATTENZIONE, regole aggiuntive: non aggiungere spiegazioni tecniche
+    che la pagina non dà, non raccontare terremoti del passato se non come li racconta
+    la pagina, non rendere più gravi le scosse dei Colli Albani. Non usare "fondamentale",
+    "importantissimo", "sempre" o "mai" se non sono nella frase della pagina. Non
+    dire la parola "fonti". Non aggiungere esempi o situazioni che non sono nella
+    pagina.'
 - id: allerta-meteo
   titolo: 'Allerta meteo: che cosa vogliono dire i colori'
   fonti:
   - content/allerte-meteo/_index.md
-  - content/cosa-succede-quando-scatta-allerta/_index.md
-  parole:
-  - allert
-  - codice colore
-  - bollettin
-  - criticità
+  parole: []
   escludi:
   - allerta-stato
   - sismometri
@@ -45,20 +78,11 @@ puntate:
   - vulcani-colli-albani
   - ondate-calore
   - caldo-salute
-  ufficiali:
-  - https://iononrischio.protezionecivile.gov.it/it/approfondimento/il-roll-sullallerta-meteo-idro/
-  stato: scartata
-  tentativi: 2
-  nota: '17/11/2026, primo tentativo (audio del 15/11, lunghezza Breve) non superato:
-    apertura con una scena inventata (pioggia leggera e allerta rossa, «reazione comunissima»),
-    «seguendo sempre» le indicazioni (la fonte non dice sempre), «importantissima»,
-    «salvavita», «fondamentale», motivo del consiglio sul verde non nelle fonti. Al
-    prossimo errore la puntata va in scartata.'
-  motivo: '18/11/2026, secondo tentativo (stesse 30 fonti, Breve, istruzioni rafforzate;
-    audio 2:52) non superato: per l''allerta arancione dice «allagamenti di aree più
-    ampie» e «piccole esondazioni dei fiumi e dei canali», che le fonti non contengono
-    (le pagine parlano di allagamenti rapidi nelle zone basse e lungo i fossi, ruscellamento
-    e possibili smottamenti). Il resto combaciava con le fonti.'
+  stato: da-fare
+  tentativi: 0
+  nota: '18/11/2026, rimessa in coda per decisione di Alessandro («anche quelle scartate!»):
+    terzo tentativo con una sola pagina come fonte (niente parole, niente pagine ufficiali),
+    lunghezza Breve e le istruzioni_extra già scritte.'
   istruzioni_extra: 'ATTENZIONE, regole aggiuntive: non aprire con scene o situazioni
     immaginate (niente "immagina", niente pioggia leggera con allerta rossa) e non
     dire come reagisce la gente. Non dire "sempre" né "mai" se non sono nella frase
@@ -67,6 +91,11 @@ puntate:
     e non chiudere con riflessioni: riporta per ogni colore quello che le fonti dicono,
     nell''ordine verde, giallo, arancione, rosso. Non usare la parola "fonti": di''
     "canali non ufficiali".'
+  motivo_precedente: '18/11/2026, secondo tentativo (stesse 30 fonti, Breve, istruzioni
+    rafforzate; audio 2:52) non superato: per l''allerta arancione dice «allagamenti
+    di aree più ampie» e «piccole esondazioni dei fiumi e dei canali», che le fonti
+    non contengono (le pagine parlano di allagamenti rapidi nelle zone basse e lungo
+    i fossi, ruscellamento e possibili smottamenti). Il resto combaciava con le fonti.'
 - id: numero-112
   titolo: 'Il 112: un solo numero per ogni emergenza'
   fonti:
@@ -97,17 +126,8 @@ puntate:
   titolo: 'Piogge forti e allagamenti: come difendersi'
   fonti:
   - content/rischi-prevenzione/rischio-idrogeologico.md
-  parole:
-  - idrogeolog
-  - alluvion
-  - allagament
-  - frana
-  - frane
-  - esondazion
-  ufficiali:
-  - https://iononrischio.protezionecivile.gov.it/it/preparati/alluvione/cosa-sapere/
-  - https://iononrischio.protezionecivile.gov.it/it/preparati/alluvione/cosa-fare/
-  stato: scartata
+  parole: []
+  stato: da-fare
   escludi:
   - sarno
   - emilia-romagna-2023
@@ -133,19 +153,17 @@ puntate:
   - rischio-idrogeologico-estivo
   - polesine-1951
   - sardegna-2013
-  tentativi: 2
-  nota: '18/11/2026, primo tentativo (15 fonti, Breve, audio 2:53) non superato: «in
-    pochissimi minuti» (le pagine dicono «pochi»), chiusura «le cantine e i piani
-    interrati sono i primi luoghi ad allagarsi» (non nelle pagine, che li chiamano
-    «i punti più pericolosi»), enfasi «da seguire alla lettera». Il resto combaciava
-    con le pagine. Al prossimo errore la puntata va in scartata.'
+  tentativi: 0
+  nota: '18/11/2026, rimessa in coda per decisione di Alessandro («anche quelle scartate!»):
+    terzo tentativo con una sola pagina come fonte (niente parole, niente pagine ufficiali),
+    lunghezza Breve e le istruzioni_extra già scritte.'
   istruzioni_extra: 'ATTENZIONE, regole aggiuntive: ripeti i numeri e i tempi esattamente
     come sono scritti ("anche di uno o due metri in pochi minuti", non "pochissimi";
     "15 cm", "30-50 cm"). Non chiudere con un "ultimo pensiero" o con frasi riassuntive:
     l''ultima frase è l''invito al sito. Non dire quali luoghi si allagano per primi:
     di'' solo che cantine, seminterrati e piani terra sono i punti più pericolosi.
     Non usare "alla lettera", "pochissimo", "chiarissimo" né altri rafforzativi.'
-  motivo: '18/11/2026, secondo tentativo (15 fonti, Breve, istruzioni rafforzate;
+  motivo_precedente: '18/11/2026, secondo tentativo (15 fonti, Breve, istruzioni rafforzate;
     audio 2:49) non superato: «proprio a causa di questa rapidità [...] cantine, seminterrati
     e piani terra sono i punti più pericolosi» (nesso di causa che le pagine non fanno),
     commenti aggiunti («da non sottovalutare affatto», «la situazione possa mutare
@@ -173,13 +191,8 @@ puntate:
   titolo: 'Lo zaino di emergenza: che cosa metterci'
   fonti:
   - content/rischi-prevenzione/kit-emergenza/_index.md
-  parole:
-  - kit
-  - zaino
-  - scorta
-  ufficiali:
-  - https://iononrischio.protezionecivile.gov.it/it/video/kit-di-emergenza/
-  stato: scartata
+  parole: []
+  stato: da-fare
   escludi:
   - kit-calamita
   - kit-scuola
@@ -193,21 +206,20 @@ puntate:
   - kit-emergenza-auto
   - kit-emergenza-vacanze
   - giornata-mondiale-radio
-  tentativi: 2
-  nota: '18/11/2026, primo tentativo (9 fonti, Breve, audio 3:01) non superato: una
-    voce chiede «Cosa dicono le fonti?» e l''apertura parla di «un tema legato all''esplorazione».
-    Contenuti e quantità combaciavano con le pagine. Al prossimo errore la puntata
-    va in scartata.'
+  tentativi: 0
+  nota: '18/11/2026, rimessa in coda per decisione di Alessandro («anche quelle scartate!»):
+    terzo tentativo con una sola pagina come fonte (niente parole, niente pagine ufficiali),
+    lunghezza Breve e le istruzioni_extra già scritte.'
   istruzioni_extra: 'ATTENZIONE, regole aggiuntive: non dire mai la parola "fonti"
     e non chiedere "cosa dicono" le pagine: chiedi direttamente "cosa si mette nello
     zaino?". Apri dicendo che la puntata parla dello zaino di emergenza, senza parlare
     di esplorazione e senza "spunti da esplorare". Riporta le quantità esattamente
     come sono scritte ("circa 4 litri a persona al giorno per 3 giorni", "farmaci
     per almeno 7 giorni").'
-  motivo: '18/11/2026, secondo tentativo (9 fonti, Breve, istruzioni rafforzate; audio
-    2:31) non superato: «Mai chiamare direttamente» (assoluto aggiunto) e una voce
-    legge ad alta voce le istruzioni («Il numero di emergenza si pronuncia uno, uno,
-    due»). Quantità e contenuti dello zaino combaciavano con le pagine.'
+  motivo_precedente: '18/11/2026, secondo tentativo (9 fonti, Breve, istruzioni rafforzate;
+    audio 2:31) non superato: «Mai chiamare direttamente» (assoluto aggiunto) e una
+    voce legge ad alta voce le istruzioni («Il numero di emergenza si pronuncia uno,
+    uno, due»). Quantità e contenuti dello zaino combaciavano con le pagine.'
 - id: aree-emergenza
   titolo: Le aree di attesa di Genzano di Roma
   fonti:
@@ -221,10 +233,8 @@ puntate:
   - area di raccolta
   stato: scartata
   tentativi: 2
-  nota: '18/11/2026, primo tentativo (3 fonti, Breve, audio 3:17) non superato: «Passando
-    all''incendio in casa, le fonti dicono di uscire» (riferimento al materiale letto).
-    Tutto il resto combaciava parola per parola con le pagine. Al prossimo errore
-    la puntata va in scartata.'
+  nota: '18/11/2026: resta scartata per decisione di Alessandro («tranne le aree di
+    attesa»).'
   istruzioni_extra: 'ATTENZIONE, regole aggiuntive: non dire "le fonti dicono", "leggo",
     "si legge", "le indicazioni dicono": di'' direttamente che cosa fare ("in caso
     di incendio in casa: esci, chiudi la porta dietro di te, chiama il 112"). L''unico
@@ -397,8 +407,8 @@ puntate:
   stato: programmata
   file: content/podcast/2026-12-18-ondate-di-calore.md
   nota: '21/11/2026, primo tentativo (8 fonti, Breve, audio 2:57) superato: ogni affermazione
-    confrontata con le pagine fonte (bevande, casa, ore 11-18, anziani, bambini, crema SPF
-    50+, segni e intervento sul colpo di calore, 112).'
+    confrontata con le pagine fonte (bevande, casa, ore 11-18, anziani, bambini, crema
+    SPF 50+, segni e intervento sul colpo di calore, 112).'
   data: '2026-12-18'
 - id: rischio-incendio
   titolo: 'Incendi boschivi: prevenzione e comportamenti'
@@ -434,14 +444,8 @@ puntate:
   ufficiali:
   - https://iononrischio.protezionecivile.gov.it/it/preparati/incendi-boschivi/cosa-sapere/
   - https://iononrischio.protezionecivile.gov.it/it/preparati/incendi-boschivi/cosa-fare/
-  stato: scartata
+  stato: rimandata
   tentativi: 2
-  motivo: '24/11/2026, secondo tentativo (stesse 9 fonti, Breve, istruzioni rafforzate;
-    audio 1:56) non superato: l''ordine delle azioni ora era giusto, ma le voci dicono
-    due volte «le fonti» (parola vietata) e leggono a voce pezzi delle istruzioni («un
-    tema per i cittadini di Genzano...», «ci sono delle regole da seguire in questo
-    ordine»). Da rifare con istruzioni_extra più brevi, senza citazioni fra virgolette
-    da ripetere.'
   nota: '24/11/2026, primo tentativo (9 fonti, Breve, audio 3:01) non superato: per
     l''incendio che minaccia la casa dice «prima di tutto entrare in casa» (le fonti
     dicono di allontanarsi subito se si può in sicurezza, e di entrare in casa solo
@@ -453,7 +457,58 @@ puntate:
     fallo subito, nella direzione opposta al fumo e al fuoco"; solo dopo "se non puoi,
     entra in casa e chiudi porte, finestre, persiane e tutte le prese d''aria". Non
     dire "prima di tutto entra in casa". Se sei nel bosco: cerca una via di fuga sicura,
-    una strada o un corso d''acqua; se non puoi allontanarti, stenditi a terra in un
-    punto senza vegetazione; solo se non hai altra scelta, attraversa il fuoco dove
-    è meno intenso. Non cambiare quest''ordine. Non usare "chiarissimo", "benissimo",
+    una strada o un corso d''acqua; se non puoi allontanarti, stenditi a terra in
+    un punto senza vegetazione; solo se non hai altra scelta, attraversa il fuoco
+    dove è meno intenso. Non cambiare quest''ordine. Non usare "chiarissimo", "benissimo",
     "perfetto" né altri rafforzativi.'
+  motivo_precedente: '24/11/2026, secondo tentativo (stesse 9 fonti, Breve, istruzioni
+    rafforzate; audio 1:56) non superato: l''ordine delle azioni ora era giusto, ma
+    le voci dicono due volte «le fonti» (parola vietata) e leggono a voce pezzi delle
+    istruzioni («un tema per i cittadini di Genzano...», «ci sono delle regole da
+    seguire in questo ordine»). Da rifare con istruzioni_extra più brevi, senza citazioni
+    fra virgolette da ripetere.'
+  nota_stagione: '18/11/2026: rimandata alla stagione (maggio-giugno 2027), proposta
+    approvata da Alessandro. Per farla, rimettere stato: da-fare e tentativi: 0, con
+    istruzioni_extra più brevi.'
+- id: monossido-carbonio
+  titolo: Il monossido di carbonio in casa
+  fonti:
+  - content/comunicazioni/2026-11-16-monossido-stufa-video.md
+  parole: []
+  stato: da-fare
+  istruzioni_extra: 'ATTENZIONE, regole aggiuntive: riporta solo quello che dicono
+    le pagine, con numeri e tempi scritti esattamente come lì. Non aprire con scene
+    immaginate, non dire come reagisce la gente, non spiegare il motivo dei consigli
+    se la pagina non lo spiega. Non usare "fondamentale", "importantissimo", "salvavita",
+    "assolutamente", né "sempre" o "mai" se non sono nella frase della pagina. Non
+    dire la parola "fonti" e non dire "le pagine dicono". In emergenza si chiama il
+    112.'
+- id: animali-emergenza
+  titolo: Gli animali nell'emergenza
+  fonti:
+  - content/dossier/animali-nell-emergenza.md
+  - content/formazione/kit-calamita-animali-domestici/_index.md
+  parole: []
+  stato: da-fare
+  istruzioni_extra: 'ATTENZIONE, regole aggiuntive: riporta solo quello che dicono
+    le pagine, con numeri e tempi scritti esattamente come lì. Non aprire con scene
+    immaginate, non dire come reagisce la gente, non spiegare il motivo dei consigli
+    se la pagina non lo spiega. Non usare "fondamentale", "importantissimo", "salvavita",
+    "assolutamente", né "sempre" o "mai" se non sono nella frase della pagina. Non
+    dire la parola "fonti" e non dire "le pagine dicono". In emergenza si chiama il
+    112.'
+  nota: '18/11/2026: tema sospeso il 05/11 e mai entrato in coda; aggiunto su decisione
+    di Alessandro.'
+- id: rischio-industriale
+  titolo: 'Rischio industriale: che cosa fare'
+  fonti:
+  - content/rischi-prevenzione/rischio-industriale.md
+  parole: []
+  stato: da-fare
+  istruzioni_extra: 'ATTENZIONE, regole aggiuntive: riporta solo quello che dicono
+    le pagine, con numeri e tempi scritti esattamente come lì. Non aprire con scene
+    immaginate, non dire come reagisce la gente, non spiegare il motivo dei consigli
+    se la pagina non lo spiega. Non usare "fondamentale", "importantissimo", "salvavita",
+    "assolutamente", né "sempre" o "mai" se non sono nella frase della pagina. Non
+    dire la parola "fonti" e non dire "le pagine dicono". In emergenza si chiama il
+    112.'

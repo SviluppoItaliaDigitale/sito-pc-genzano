@@ -19,6 +19,8 @@ RADICE = Path(__file__).resolve().parents[2]
 PODCAST = RADICE / "content" / "podcast"
 GIORNI_USCITA = (1, 4)  # martedì e venerdì
 NOMI = {1: "martedì", 4: "venerdì"}
+# Uscite saltate per le feste: stesso elenco di pubblica-puntata.py.
+DATE_SALTATE = {date(2026, 12, 25), date(2027, 1, 1)}
 
 
 def main() -> int:
@@ -41,7 +43,7 @@ def main() -> int:
         inizio = min(date_attive)
         d = inizio
         while d <= oggi:
-            if d.weekday() in GIORNI_USCITA and d not in date_attive:
+            if d.weekday() in GIORNI_USCITA and d not in date_attive and d not in DATE_SALTATE:
                 mancate.append(d)
             d += timedelta(days=1)
     mancate = [d for d in mancate if d >= oggi - timedelta(days=14)]
