@@ -21,7 +21,7 @@
 // sinistra180 e centro180 = seconda versione dei due pezzi del piatto, con il foro da 180 mm
 // sinistra3, centro3, destra3 = terza versione, con le sedi sagomate: si stampa diritta, con il fondo sul piatto;
 // montato3 = terza versione montata, solo da guardare
-parte = "tutto"; // [tutto, base, testo, sinistra, centro, destra, sinistra180, centro180, clip, montato, sinistra3, centro3, destra3, montato3, sinistra_i, centro_i, destra_i, sinistra180_i, centro180_i, sinistra3_i, centro3_i, destra3_i, farfalle, farfalle3, rivetti_targhetta, rivetti_targhetta3, controllo_viti]
+parte = "tutto"; // [tutto, base, testo, sinistra, centro, destra, sinistra180, centro180, clip, montato, sinistra3, centro3, destra3, montato3, sinistra_i, centro_i, destra_i, sinistra180_i, centro180_i, sinistra3_i, centro3_i, destra3_i, farfalle, farfalle3, provino, rivetti_targhetta, rivetti_targhetta3, controllo_viti]
 tipo = "vassoio"; // [vassoio]
 
 /* [Testi] */
@@ -219,14 +219,16 @@ module piede(p) {
 // dadi hanno, a cavallo di ogni giunzione, sedi a coda di rondine alte quanto la parete. In ogni sede si preme una
 // chiavetta a farfalla: collo largo 6 mm, ali larghe 12 mm, lunga 14 mm. Lavora a trazione per tutta l'altezza,
 // quindi tiene sia quando il vassoio si porta dai manici sia quando si prende dal centro. Sulle facce inclinate ha
-// otto cordoncini che sporgono 0,3 mm: nella sede (0,15 mm di gioco) si schiacciano e la tengono ferma.
+// otto cordoncini che sporgono 0,3 mm: nella sede (0,2 mm di gioco) si schiacciano e la tengono ferma. Il gioco e i
+// cordoncini sono ipotesi di progetto: il provino (parte «provino») serve a provarli sulla propria stampante.
 // Un dente a V lungo la giunzione (sporge 1,8 mm, facce a più di 45 gradi, quindi si stampa senza supporti) entra
 // in una gola del pezzo accanto e impedisce ai pezzi di scorrere in altezza uno sull'altro.
 // Le sedi e i pezzi pieni intorno prendono il posto delle viti: i pezzi a incastro non hanno fori per le viti.
+// Alla seconda giunzione restano anche le due costole di allineamento dei pezzi con le viti.
 INC_PARTI = ["sinistra_i", "centro_i", "destra_i", "sinistra180_i", "centro180_i", "sinistra3_i", "centro3_i",
              "destra3_i", "interferenze", "interferenze3"];
 INC = len([for (q = INC_PARTI) if (q == parte) 1]) > 0;
-K_L = 14; K_COLLO = 6; K_ALA = 12; K_GIOCO = 0.15; K_BORDO = 3;
+K_L = 14; K_COLLO = 6; K_ALA = 12; K_GIOCO = 0.2; K_BORDO = 3;
 KY1 = 110; KY2 = [-85, 0, 85];                 // chiavette della prima e della seconda giunzione
 D_SPORGE = 1.8; D_MEZZA = 2.2;                 // dente a V: sporgenza e mezza altezza
 module chiave2d(e = 0) {
@@ -237,15 +239,16 @@ module chiave2d(e = 0) {
 // ogni strato. «testa» è lo spessore di una base più larga, che resta fuori dalla sede: fa da battuta e da presa.
 module chiavetta(alta, testa = 0) {
     translate([0, 0, testa]) {
-        linear_extrude(alta - 1.2) {
+        linear_extrude(alta - 3) {
             chiave2d();
             for (sx = [-1, 1], sy = [-1, 1], t = [0.3, 0.75])
                 translate([sx * t * K_L / 2, sy * (K_COLLO / 2 + t * (K_ALA - K_COLLO) / 2)]) circle(r = 0.3, $fn = 12);
         }
-        // invito: l'ultimo tratto è più stretto di 0,4 mm per parte
-        translate([0, 0, alta - 1.21]) linear_extrude(1.21) chiave2d(-0.4);
+        // invito: negli ultimi 3 mm la chiavetta si restringe a gradini, fino a 0,45 mm per parte
+        for (i = [0:2]) translate([0, 0, alta - 3.01 + i]) linear_extrude(1.01) chiave2d(-0.15 * (i + 1));
     }
-    if (testa > 0) linear_extrude(testa) offset(r = 2, $fn = 24) chiave2d();
+    // la base ha una linguetta che sporge 3 mm dall'ingrossamento della parete: da lì si fa leva per toglierla
+    if (testa > 0) linear_extrude(testa) { offset(r = 2, $fn = 24) chiave2d(); translate([-13, -4]) square([6, 8]); }
 }
 module sede_chiave(g, y, z0, alta) { translate([g, y, z0]) linear_extrude(alta) chiave2d(K_GIOCO); }
 module rinforzo(g, y, z0, alta) {
@@ -257,7 +260,7 @@ module dente(g, tratti, zc, e = 0) {
         polygon([[0.01, -D_MEZZA - 1.3 * e], [-D_SPORGE - e, 0], [0.01, D_MEZZA + 1.3 * e]]);
 }
 // tratti del dente: stanno lontani 5,5 mm dal centro di ogni chiavetta, per non entrare nelle sedi
-function tratti1(ys) = [[ys + 0.4, KY1 - 5.5], [KY1 + 5.5, 119.6], [-KY1 + 5.5, -ys - 0.4], [-119.6, -KY1 - 5.5]];
+function tratti1(ys) = [[ys + 1.4, KY1 - 5.5], [KY1 + 5.5, 118.4], [-KY1 + 5.5, -ys - 1.4], [-118.4, -KY1 - 5.5]];
 TRATTI2 = [[-118, -90.5], [-79.5, -5.5], [5.5, 79.5], [90.5, 118]];
 D_Z = 14.5; D_Z3 = 8;                          // quota del dente nei due vassoi
 // Tutto il vassoio pieno, senza i tagli delle giunzioni
@@ -585,6 +588,12 @@ K_ALTA = FLANGIA - PIANO - 0.4; K3_BASSA = 11.0; K3_ALTA = H3 - F3 - 0.4;
 // Una barretta bassa le tiene unite in stampa (più stabili sul piatto): si taglia a filo. Sta dal lato che resta fuori.
 if (parte == "farfalle") { for (i = [0:4]) translate([i * 22, 0, 0]) chiavetta(K_ALTA, 3); translate([0, -0.5, 0]) cube([88, 1, 0.6]); }
 if (parte == "farfalle3") { for (i = [0:4]) translate([i * 18, 0, 0]) chiavetta(i < 2 ? K3_BASSA : K3_ALTA); translate([0, -0.5, 0]) cube([72, 1, 0.6]); }
+// Provino: un blocchetto con una sede e una chiavetta alta 9 mm, per provare l'incastro prima di stampare il vassoio
+if (parte == "provino") {
+    difference() { rinforzo(0, 0, 0, 10); sede_chiave(0, 0, 1, 10); }
+    translate([22, 0, 0]) chiavetta(8.8);
+    translate([9, -0.5, 0]) cube([8, 1, 0.6]);
+}
 // Controlli: i pezzi a incastro montati con le chiavette non devono compenetrarsi (queste parti devono uscire vuote)
 if (parte == "interferenze") {
     intersection() { pezzo_sinistra(); pezzo_centro(); }
