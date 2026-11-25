@@ -188,7 +188,7 @@ module testo3d() {
 
 // Piede per la versione da tavolo: la targa si infila nella fessura, inclinata di 15 gradi
 module piede() {
-    fessura = B + rilievo + 0.4;
+    fessura = B + rilievo + 1.0;               // mezzo millimetro di gioco per parte: la tolleranza di una stampa a filo
     pl = tipo == "segnaposto" ? 35 : 50;       // mezza lunghezza del piede
     difference() {
         hull() {
