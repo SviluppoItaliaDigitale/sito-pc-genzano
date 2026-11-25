@@ -1611,6 +1611,52 @@ oggetti:
 
   # ---------- Kit, pile e schede ----------
 
+  # --- Apribottiglie per tappi a corona (25/11/2026, apribottiglie-nominativo.scad): il dente è una moneta da 5 centesimi
+
+  - id: "apribottiglie"
+    nome: "Apribottiglie per tappi a corona"
+    articolo: "l'apribottiglie"
+    descrizione: "Apribottiglie piatto per i tappi a corona delle bottiglie di vetro, con la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma» sul manico. Il dente che solleva il tappo è il bordo di una moneta da 5 centesimi infilata in una tasca: la plastica stampata da sola si consumerebbe dopo pochi tappi. Ha un foro per il cordino. Tocca solo il tappo, non la bevanda."
+    categoria: "campo"
+    breve: "Apre i tappi a corona; il dente è una moneta da 5 centesimi infilata nel pezzo."
+    sorgente: "apribottiglie-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [60.0, 29.0, 72.0, 37.0]
+      nome: { zona: [62, 3.5, 112, 10.5], lato: "fronte" }
+      quota_scritte: 4.0
+      vista_3d: true
+      assi: [[1, 0, 0], [0, 0, 1], [0, -1, 0]]   # nella vista si sdraia con le scritte verso l'alto
+    parametri:
+      tipo: "apribottiglie"
+      parte: "tutto"
+    misure: "13,2 × 5,3 cm, spesso 9 mm"
+    lunghezza_mm: 132
+    peso_g: 61
+    scheda:
+      - ["Ingombro", "132 × 53 mm, spesso 8 mm (9 mm con le scritte)"]
+      - ["Peso", "circa 61 g, più 4 g di moneta"]
+      - ["Dente", "una moneta da 5 centesimi di euro (21,25 mm di diametro, spessa 1,67 mm: misure della Banca centrale europea) in una tasca a metà spessore, 0,4 mm più larga e 0,3 mm più spessa della moneta. La moneta esce di 3 mm dentro l'apertura: è il suo bordo di metallo a entrare sotto il tappo"]
+      - ["Apertura", "tonda, larga 36 mm, per i tappi a corona da 26 mm, che fuori misurano 32,1 mm e sono alti 6 mm (norma DIN EN 17177, misure lette su una fonte di consultazione). Il lato dell'apertura verso il manico sta a 22 mm dal dente e appoggia sopra il tappo"]
+      - ["Foro", "da 5 mm, in un angolo del manico, per un cordino o un anello"]
+      - ["Altezza delle lettere", "nominativo 8 mm; righe piccole 4,5 mm"]
+      - ["Spazio per nome e cognome", "fascia libera di 50 × 7 mm sotto le scritte"]
+      - ["Scritte di un altro colore", "per come il pezzo è girato sul piatto di stampa, le scritte non sono l'ultimo strato: un cambio di filo non basta a colorarle. Lasciale del colore del pezzo: si leggono per il rilievo"]
+      - ["Posizione di stampa", "di taglio, in piedi su un lato lungo, già orientato nel file, senza supporti: così la tasca della moneta è una fessura verticale e gli strati corrono lungo il manico, nel verso in cui lavora. L'appoggio è largo solo 8 mm: aggiungi nel programma di stampa un bordo di adesione di 5 mm"]
+      - ["Da sapere", "il disegno è calcolato sulle misure del tappo e della moneta, non provato su una bottiglia vera: alla prima prova fai leva piano. Senza la moneta non funziona. Non è un attrezzo da lavoro: se il manico si incrina, buttalo. Si pulisce con un panno umido, non in lavastoviglie"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "una moneta da 5 centesimi di euro"
+      - "una goccia di colla istantanea, per fermare la moneta"
+    montaggio:
+      - "Togli il bordo di adesione e controlla che la fessura nella parete dell'apertura sia libera: se c'è qualche filo, passaci una lama sottile."
+      - "Infila la moneta nella fessura, dall'apertura, e spingila fino in fondo: devono restarne fuori 3 mm."
+      - "Metti una goccia di colla istantanea dove la moneta entra nella plastica e lascia asciugare."
+      - "Per aprire: infila il bordo della moneta sotto il tappo, appoggia sopra il tappo il lato opposto dell'apertura e alza il manico."
+
   - id: "porta-pile-aa"
     nome: "Porta pile stilo AA"
     articolo: "il porta pile"
