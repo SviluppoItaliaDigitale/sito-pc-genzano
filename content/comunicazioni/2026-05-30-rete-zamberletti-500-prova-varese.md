@@ -3,6 +3,7 @@ title: "Rete Zamberletti: a Varese la 500ª prova delle radiocomunicazioni d'eme
 date: 2026-05-30T00:02:00+02:00
 description: "Il 26 maggio 2026, a Villa Recalcati (Varese), la Rete Zamberletti ha celebrato la 500ª prova radio: oltre 40 anni di comunicazioni d'emergenza."
 badge: "Radiocomunicazioni"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-30-rete-zamberletti-500-prova-varese.webp"

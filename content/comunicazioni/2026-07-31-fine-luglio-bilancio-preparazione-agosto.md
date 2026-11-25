@@ -3,6 +3,7 @@ title: "Fine luglio: bilancio del mese e preparazione ad agosto"
 date: 2026-07-31T00:01:00+02:00
 description: "Fine luglio segna un momento di passaggio nell'estate. Bilancio delle attività del mese e sguardo al mese più critico per la Protezione Civile."
 badge: "Aggiornamento"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-31-fine-luglio-bilancio-preparazione-agosto.webp"

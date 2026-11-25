@@ -1,6 +1,6 @@
 ---
 title: "Materiali pronti da scaricare"
-description: "Video, infografiche e presentazioni sui rischi del territorio. Liberamente scaricabili e riutilizzabili per scuola, formazione e divulgazione."
+description: "Video, infografiche e presentazioni per la classe sui rischi del territorio. Liberamente scaricabili e riutilizzabili per scuola, formazione e divulgazione."
 layout: "list"
 tts: true
 toc: true
@@ -15,7 +15,7 @@ Li prepara il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma 
 
 - **Guarda i video** sul telefono o proiettali in classe.
 - **Scarica le infografiche** e condividile su WhatsApp, in classe, in famiglia.
-- **Usa le presentazioni** se sei un docente: sono pensate per un'ora di Educazione Civica.
+- **Usa le presentazioni** se sei un docente: un'ora di Educazione Civica, con il testo che puoi modificare e le note per chi insegna sotto ogni slide. Scegli il formato della tua lavagna: la pagina [Protezione civile sulla LIM](/lim/#le-presentazioni-da-scaricare) spiega quale.
 
 ## Licenza di uso
 

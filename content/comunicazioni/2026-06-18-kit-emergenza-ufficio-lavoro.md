@@ -3,6 +3,7 @@ title: "Kit di emergenza per ufficio e posto di lavoro"
 date: 2026-06-18T00:01:00+02:00
 description: "Molte persone passano più tempo al lavoro che a casa. Un kit di emergenza base in ufficio è un investimento di sicurezza per tutti i colleghi."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-18-kit-emergenza-ufficio-lavoro.webp"

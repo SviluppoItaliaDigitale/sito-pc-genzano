@@ -3,6 +3,7 @@ title: "Palo della luce danneggiato in corso Don Minzoni: area messa in sicurezz
 date: 2026-11-05T00:03:00+01:00
 description: "Giovedì pomeriggio un palo della luce urtato da un mezzo si è piegato in corso Don Minzoni. Il Gruppo ha delimitato l'area; il palo è stato rimosso."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-05-palo-luce-via-belardi-messa-in-sicurezza.webp"

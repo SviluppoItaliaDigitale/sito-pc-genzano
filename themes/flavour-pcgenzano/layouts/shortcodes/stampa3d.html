@@ -1,0 +1,17 @@
+{{- /*
+  Shortcode stampa3d — catalogo della stampa 3D con il nominativo (/stampa-3d/).
+    {{< stampa3d parte="nominativo" >}}  campo del nominativo e dati per gli script
+    {{< stampa3d parte="filtri" >}}      ricerca e gruppi (compaiono solo con JavaScript)
+    {{% stampa3d parte="catalogo" %}}    oggetti per gruppi
+  Le parti stanno nel partial stampa3d-parte.html, usato anche dal layout stampa-3d/oggetto.html
+  delle pagine dei singoli oggetti. Dati: data/stampa_3d.yaml.
+*/ -}}
+{{- $parte := .Get "parte" -}}
+{{- if eq $parte "nominativo" -}}
+{{ partial "stampa3d-parte.html" (dict "parte" "dati") }}
+{{ partial "stampa3d-parte.html" (dict "parte" "nominativo") }}
+{{- else if or (eq $parte "filtri") (eq $parte "catalogo") -}}
+{{ partial "stampa3d-parte.html" (dict "parte" $parte) }}
+{{- else -}}
+{{ errorf "stampa3d: la parte %q va nelle pagine degli oggetti (layout stampa-3d/oggetto.html): %s" $parte .Position }}
+{{- end -}}

@@ -3,6 +3,7 @@ title: "Una caramella colorata: la mossa giusta si fa prima"
 date: 2026-11-17T10:30:00+01:00
 description: "Un video di poco più di un minuto: Leo ha due anni e una capsula di detersivo sembra una caramella. Tu cosa faresti? Che cosa fare subito, chi chiamare e come prevenire."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-17-caramella-colorata-video.webp"

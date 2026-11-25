@@ -3,6 +3,7 @@ title: "Piano di emergenza condominiale: anche il palazzo ha bisogno del suo pia
 date: 2026-11-06
 description: "Il condominio è un'entità complessa in caso di emergenza. Serve un piano di emergenza condominiale, semplice ma operativo."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-06-piano-emergenza-condominio.webp"

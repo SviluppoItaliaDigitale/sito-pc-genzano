@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Il mio passaporto della sicurezza — Primaria e secondaria di primo grado</title>
+  <link rel="canonical" href="https://www.protezionecivilegenzano.it/formazione/schede-stampabili/passaporto-sicurezza/">
+  <meta name="description" content="Scheda fotocopiabile per la primaria e la secondaria di primo grado: un passaporto che l'alunno tiene per tutto l'anno, con sei tappe (prova di evacuazione, punto di raccolta, 112, piano familiare, zaino, una scheda per rischio) e lo spazio per la firma del docente quando la tappa è fatta. Senza punteggi.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .ps { font-size: 0.95rem; line-height: 1.45; }
+    .ps p { margin: 0.35rem 0; }
+    .ps .scheda-h2 { margin: 0.7rem 0 0.3rem; }
+    .ps-dati { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 0.3rem 1rem; margin: 0.3rem 0 0.5rem; }
+    .ps-dati span { display: flex; gap: 0.4rem; align-items: flex-end; font-weight: 700; color: var(--scheda-blu); }
+    .ps-dati span::after { content: ""; flex: 1; border-bottom: 1.5px solid var(--scheda-bordo); height: 1.2rem; }
+    .ps-tappe { list-style: none; padding: 0; margin: 0.3rem 0; }
+    .ps-tappa { display: grid; grid-template-columns: 56px minmax(0, 1fr) 11rem; gap: 0.6rem; align-items: center; border: 1.5px solid var(--scheda-bordo); border-radius: 6px; padding: 0.4rem 0.55rem; margin-bottom: 0.35rem; }
+    .ps-tappa img { width: 52px; height: 52px; object-fit: contain; }
+    .ps-tappa strong { color: var(--scheda-blu); display: block; font-size: 1.02rem; }
+    .ps-tappa p { margin: 0.1rem 0 0; }
+    .ps-firma { border-left: 1.5px dashed var(--scheda-bordo); padding-left: 0.55rem; font-size: 0.8rem; color: var(--scheda-grigio); display: grid; gap: 0.25rem; }
+    .ps-firma span { display: flex; gap: 0.3rem; align-items: flex-end; }
+    .ps-firma span::after { content: ""; flex: 1; border-bottom: 1.5px solid var(--scheda-bordo); height: 1.15rem; }
+    .ps-rischi { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0.25rem; margin-top: 0.25rem; }
+    .ps-rischi span { display: flex; gap: 0.3rem; align-items: flex-end; font-size: 0.88rem; }
+    .ps-rischi span::after { content: ""; flex: 1; border-bottom: 1.5px solid var(--scheda-bordo); height: 1.1rem; }
+    .ps-nota { margin-top: 0.4rem; padding: 0.4rem 0.7rem; background: #f1f5f9; border-left: 4px solid var(--scheda-blu); border-radius: 0 6px 6px 0; font-size: 0.9rem; }
+    .ps-guida { width: 100%; border-collapse: collapse; font-size: 0.85rem; margin: 0.3rem 0; }
+    .ps-guida th, .ps-guida td { border: 1px solid var(--scheda-bordo); padding: 0.3rem 0.45rem; vertical-align: top; text-align: left; }
+    .ps-guida thead th { background: var(--scheda-blu); color: #fff; }
+    .ps-guida tbody th { color: var(--scheda-blu); width: 17%; }
+    .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+    .ps .scheda-docente p { margin: 0.25rem 0; }
+    .ps .scheda-docente ul { margin: 0.15rem 0; padding-left: 1.1rem; }
+    .ps-attribuzione { font-size: 0.72rem; color: var(--scheda-grigio); margin-top: 0.4rem; }
+    @media (max-width: 600px) {
+      .ps-dati { grid-template-columns: minmax(0, 1fr); }
+      .ps-tappa { grid-template-columns: 48px minmax(0, 1fr); }
+      .ps-tappa img { width: 44px; height: 44px; }
+      .ps-firma { grid-column: 1 / -1; border-left: 0; border-top: 1.5px dashed var(--scheda-bordo); padding: 0.35rem 0 0; }
+      .ps-guida { display: block; overflow-x: auto; }
+    }
+    @media print {
+      .ps-tappa { grid-template-columns: 48px minmax(0, 1fr) 10rem; padding: 0.3rem 0.5rem; margin-bottom: 0.3rem; }
+      .ps-tappa img { width: 44px; height: 44px; }
+      .ps-tappa, .scheda-docente, .ps-guida tr { break-inside: avoid; }
+    }
+    /* Stampa su due fogli A4 (controllo fogli di stampa): testo all'88%
+       e spazi più stretti, così la scheda regge anche i caratteri più larghi. */
+    @media print {
+      html { font-size: 88%; }
+      .scheda-page { padding: 1cm 1.4cm 0.6cm; }
+      .scheda-header { margin-bottom: 0.5rem; padding-bottom: 0.4rem; }
+      .scheda-meta { margin-bottom: 0.5rem; padding: 0.35rem 0.7rem; }
+      .ps .scheda-h2 { margin: 0.45rem 0 0.2rem; }
+      .ps .scheda-intro { margin: 0.2rem 0 0.3rem; }
+      .scheda-footer { padding-top: 2mm; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/" aria-label="Torna alle schede">← Torna alle schede</a>
+    <span class="scheda-titolo">Il mio passaporto della sicurezza</span>
+    <a class="scheda-lim" href="/lim/" title="Si usa col dito sulla lavagna interattiva della classe, anche a schermo intero, e funziona sui browser delle lavagne meno recenti">Pronto per la LIM</a>
+    <button type="button" onclick="window.print()">Stampa o salva come PDF</button>
+  </div>
+
+  <main>
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Il mio passaporto della sicurezza</h1>
+        <div class="scheda-sottotitolo">Primaria · Secondaria di primo grado · Foglio 1 di 2</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 8-14 anni (dai 6 anni con l'adulto che legge)</span>
+      <span><strong>Durata:</strong> tutto l'anno scolastico</span>
+      <span><strong>Disciplina:</strong> Educazione civica</span>
+    </div>
+
+    <div class="ps">
+      <div class="ps-dati">
+        <span>Nome</span>
+        <span>Classe</span>
+        <span>Scuola</span>
+        <span>Anno scolastico</span>
+      </div>
+
+      <p class="scheda-intro">
+        Questo passaporto resta a te per tutto l'anno. Ogni tappa è una cosa da <strong>fare</strong>. Quando l'hai fatta, l'insegnante scrive la data e firma. Puoi fare le tappe nell'ordine che decide la classe.
+      </p>
+
+      <ol class="ps-tappe">
+        <li class="ps-tappa">
+          <img src="/pittogrammi/iso7010/uscita-emergenza-sinistra.svg" alt="Cartello verde: un omino che corre verso una porta">
+          <div><strong>1. La prova di evacuazione</strong>
+            <p>Ho fatto la prova con la mia classe. Ho seguito l'insegnante fino al punto di raccolta, come dice il piano della scuola.</p>
+          </div>
+          <div class="ps-firma"><span>Data</span><span>Firma</span></div>
+        </li>
+        <li class="ps-tappa">
+          <img src="/pittogrammi/iso7010/punto-raccolta.svg" alt="Cartello verde: quattro persone in mezzo e quattro frecce che puntano verso di loro">
+          <div><strong>2. Il cartello del punto di raccolta</strong>
+            <p>Ho riconosciuto il cartello del punto di raccolta della mia scuola. So dire o mostrare dove si trova.</p>
+          </div>
+          <div class="ps-firma"><span>Data</span><span>Firma</span></div>
+        </li>
+        <li class="ps-tappa">
+          <img src="/pittogrammi/arasaac/112.png" alt="Pittogramma: una mano che tiene un telefono con il numero 112">
+          <div><strong>3. Il numero 112</strong>
+            <p>In una prova in classe, con il telefono spento, ho detto chi sono, dove sono e che cosa succede.</p>
+          </div>
+          <div class="ps-firma"><span>Data</span><span>Firma</span></div>
+        </li>
+        <li class="ps-tappa">
+          <img src="/pittogrammi/arasaac/famiglia.png" alt="Pittogramma: una famiglia, due adulti e due bambini">
+          <div><strong>4. Il piano della mia famiglia</strong>
+            <p>Ho preparato il piano di emergenza con la mia famiglia o con un adulto di casa. In classe ho raccontato una cosa che abbiamo deciso.</p>
+          </div>
+          <div class="ps-firma"><span>Data</span><span>Firma</span></div>
+        </li>
+        <li class="ps-tappa">
+          <img src="/pittogrammi/arasaac/zaino.png" alt="Pittogramma: uno zaino verde e arancione">
+          <div><strong>5. Lo zaino di emergenza</strong>
+            <p>Ho scritto la lista dello zaino di emergenza. So dire a che cosa serve ogni cosa della lista.</p>
+          </div>
+          <div class="ps-firma"><span>Data</span><span>Firma</span></div>
+        </li>
+        <li class="ps-tappa">
+          <img src="/pittogrammi/iso7010/pericolo-generico.svg" alt="Cartello giallo a triangolo con un punto esclamativo">
+          <div><strong>6. Una scheda per ogni rischio</strong>
+            <p>Ho completato una scheda su un rischio. Scrivo quale.</p>
+            <div class="ps-rischi"><span>Rischio:</span><span>Rischio:</span><span>Rischio:</span></div>
+          </div>
+          <div class="ps-firma"><span>Data</span><span>Firma</span><span>Data</span><span>Firma</span><span>Data</span><span>Firma</span></div>
+        </li>
+      </ol>
+
+      <p class="ps-nota">Non ci sono punti e non c'è una classifica. Se hai avuto paura durante una prova, la tappa vale lo stesso: conta quello che hai fatto. In una vera emergenza si chiama il <strong>112</strong>.</p>
+
+      <p class="ps-attribuzione">Pittogrammi: ARASAAC (arasaac.org), Governo d'Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0; questo foglio eredita la stessa licenza. Segnali di sicurezza ISO 7010 da Wikimedia Commons (pubblico dominio).</p>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Il mio passaporto della sicurezza" · Primaria e secondaria di primo grado · rev. 2026</span>
+    </footer>
+
+  </article>
+
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <div class="scheda-titolo-principale" role="heading" aria-level="2">Come si fa ogni tappa</div>
+        <div class="scheda-sottotitolo">Il mio passaporto della sicurezza · Foglio 2 di 2</div>
+      </div>
+    </header>
+
+    <div class="ps">
+      <p>La tabella dice che cosa fa l'alunno in ogni tappa, per età. I materiali sono sul sito protezionecivilegenzano.it, nella sezione «Per le scuole».</p>
+
+      <table class="ps-guida">
+        <caption class="visually-hidden">Che cosa fa l'alunno in ogni tappa del passaporto, per la primaria e per la secondaria di primo grado, con i materiali del sito</caption>
+        <thead>
+          <tr><th scope="col">Tappa</th><th scope="col">Primaria</th><th scope="col">Secondaria di primo grado</th><th scope="col">Materiali del sito</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">1. Prova di evacuazione</th><td>Esce in fila con l'insegnante, senza correre, fino al punto di raccolta.</td><td>Come in primaria; dopo la prova dice che cosa ha funzionato e che cosa si può migliorare.</td><td>Storia sociale della prova di evacuazione; Dopo la prova di evacuazione</td></tr>
+          <tr><th scope="row">2. Punto di raccolta</th><td>Riconosce il cartello e lo indica sulla piantina della scuola o dal vivo.</td><td>Spiega a che cosa serve il punto di raccolta e perché lì si contano le persone.</td><td>A caccia di strumenti (fino alla 2ª)</td></tr>
+          <tr><th scope="row">3. Il 112</th><td>In una simulazione dice nome, luogo e che cosa succede.</td><td>Simula la chiamata e spiega che il 112 passa la chiamata all'ente giusto.</td><td>Chiamo il 112 (primaria e secondaria)</td></tr>
+          <tr><th scope="row">4. Piano familiare</th><td>Compila il piano con la famiglia e racconta in classe il punto di ritrovo scelto.</td><td>Aggiorna il piano con la famiglia e racconta una decisione presa.</td><td>Piano di emergenza familiare (primaria e secondaria); pagina Piano familiare</td></tr>
+          <tr><th scope="row">5. Zaino</th><td>Scrive o disegna la lista e spiega a che cosa serve ogni cosa.</td><td>Scrive la lista adatta alla propria famiglia, anche per chi ha bisogni particolari.</td><td>Pagina Kit di emergenza; Checklist del kit di emergenza</td></tr>
+          <tr><th scope="row">6. Una scheda per rischio</th><td>Completa una scheda della sua fascia su un rischio studiato in classe.</td><td>Completa una scheda e collega il rischio al territorio dei Castelli Romani.</td><td>Schede didattiche stampabili, per fascia</td></tr>
+        </tbody>
+      </table>
+
+      <div class="scheda-docente">
+        <p><strong>Per il docente.</strong> Le tappe riprendono i traguardi del <em>Curricolo verticale</em> e gli incontri del <em>Programma dell'anno</em> del sito: il quarto incontro, vicino a una prova di evacuazione, è un buon momento per le tappe 1 e 2. Consegnatelo a ottobre e firmate quando vedete l'azione fatta.</p>
+        <ul>
+          <li><strong>Si firma un'azione osservata</strong>, mai uno stato d'animo. Avere paura, piangere o chiedere aiuto non toglie la tappa. Non ci sono punti, voti o confronti fra compagni.</li>
+          <li><strong>Ognuno con le sue modalità.</strong> Chi ha un PEI fa la tappa nel modo che il piano prevede, anche con un adulto accanto. Chi era assente alla prova la completa alla successiva.</li>
+          <li><strong>Piano familiare e zaino restano a casa.</strong> Non chiedete di portare indirizzi, numeri o dati della famiglia: basta che l'alunno racconti una decisione. Lo zaino è una lista, non un acquisto. Se a casa non si riesce, l'alunno prepara il piano in classe con un modello.</li>
+          <li><strong>Il 112 si prova con un telefono spento o disegnato:</strong> il numero vero si chiama solo in una vera emergenza. Il Gruppo comunale di protezione civile non si attiva su chiamata dei cittadini.</li>
+        </ul>
+        <p><strong>Educazione civica</strong> (Linee guida, D.M. 183/2024): primo ciclo, traguardi n. 3 e n. 6. Il passaporto è uno strumento di progetto: la valutazione resta quella deliberata dalla scuola. Per osservare i progressi ci sono le rubriche valutative del sito.</p>
+      </div>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Il mio passaporto della sicurezza" · Primaria e secondaria di primo grado · rev. 2026</span>
+    </footer>
+
+  </article>
+  </main>
+
+</body>
+</html>

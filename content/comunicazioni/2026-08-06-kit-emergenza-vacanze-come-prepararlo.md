@@ -3,6 +3,7 @@ title: "Kit di emergenza per le vacanze: cosa mettere e perché"
 date: 2026-08-06
 description: "Prima di partire per le ferie, preparare un piccolo kit di emergenza riduce rischi e disagi. Cosa serve davvero, senza esagerare."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-06-kit-emergenza-vacanze-come-prepararlo.webp"

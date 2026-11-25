@@ -3,8 +3,8 @@
      scelto (partial canale-articolo.html: "gruppo" = Il Gruppo e il
      territorio, "approfondimenti" = magazine). Esclude versioni facili
      (versione_facile_di) e contenuti d'archivio (archiviato: true).
-     Uso: {{< ultime-comunicazioni canale="gruppo" numero="5" >}} */ -}}
-{{- $canale := .Get "canale" | default "gruppo" -}}
+     Uso: {{< ultime-comunicazioni canale="territorio" numero="5" >}} */ -}}
+{{- $canale := .Get "canale" | default "territorio" -}}{{- if eq $canale "gruppo" -}}{{- $canale = "territorio" -}}{{- end -}}
 {{- $n := int (.Get "numero" | default 5) -}}
 {{- $tutti := where (where site.RegularPages "Section" "comunicazioni") "Params.versione_facile_di" nil -}}
 {{- $scelti := slice -}}

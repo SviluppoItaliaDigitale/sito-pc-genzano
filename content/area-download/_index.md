@@ -11,7 +11,7 @@ In questa sezione puoi consultare e scaricare documenti relativi all'attività d
 
 <div class="card bg-light border-0 mb-4">
 <div class="card-body p-3">
-<i class="bi bi-info-circle me-2" aria-hidden="true"></i> Tutti i documenti sono in formato PDF. Per visualizzarli è sufficiente un browser moderno o un lettore PDF.
+<i class="bi bi-info-circle me-2" aria-hidden="true"></i> I documenti sono in formato PDF: per aprirli basta un browser moderno o un lettore PDF. I file per la stampa 3D (STL e SCAD) e quelli dei progetti di elettronica si aprono con i programmi indicati nella loro sezione.
 </div>
 </div>
 
@@ -31,6 +31,7 @@ In questa sezione puoi consultare e scaricare documenti relativi all'attività d
 | Documento | Formato |
 |---|---|
 | [Piano di Emergenza Comunale di PC](https://www.protezionecivilegenzano.it/area-download/normativa/Piano_Emergenza_Comunale_PC_Genzano.pdf) | PDF · 5,6 MB |
+| [Piano di Protezione Civile Comunale, versione pubblicata dal Comune](https://www.comune.genzanodiroma.roma.it/sites/comune.genzanodiroma.roma.it/files/2024-12/Piano%20di%20Protezione%20Civile%20Comunale%20-%20Genzano%20di%20Roma.pdf) | PDF · sito del Comune |
 | [Carta delle Aree di Emergenza e degli Edifici Strategici](https://www.protezionecivilegenzano.it/area-download/normativa/Aree_Emergenza_Edifici_Strategici_PC_Genzano.pdf) | PDF · 5,7 MB |
 | [Carta di Inquadramento Territoriale](https://www.protezionecivilegenzano.it/area-download/normativa/Inquadramento_Territoriale_PC_Genzano.pdf) | PDF · 5,7 MB |
 | [Carta Rischio Idrogeologico](https://www.protezionecivilegenzano.it/area-download/normativa/Rischio_Idrogeologico_PC_Genzano.pdf) | PDF · 5,4 MB |
@@ -80,6 +81,22 @@ I quattro fogli della nuova Carta geologica d'Italia che coprono i Castelli Roma
 ## Componenti del sito da riusare (Open Kit)
 
 Pacchetti ZIP con il codice di alcune funzioni del sito (lettura ad alta voce, pannello di accessibilità, tabelle di comunicazione, feed CAP dell'allerta, Modalità Aula e altre), con istruzioni e licenza EUPL 1.2, per altri gruppi di protezione civile, associazioni e Comuni: vedi l'[Open Kit](/open-kit/).
+
+## Oggetti da stampare in 3D
+
+Oggetti progettati dal Gruppo, con il file pronto da scaricare, la vista in 3D, la scheda tecnica con tutte le misure e le istruzioni per ordinarli a un servizio di stampa online. Non serve avere una stampante.
+
+| Pagina | Contenuto | Formato |
+|---|---|---|
+| [Stampa 3D](/stampa-3d/) | Per i volontari: catalogo degli oggetti con il nominativo ALFA (targhetta, porta tesserino, tessera, portachiavi, fischietto, ganci, porta radio, supporto per il microfono, avvolgicavo, segnalibro con l'alfabeto fonetico, etichette, righello per le coordinate, targa da tavolo). Ogni oggetto ha la sua pagina con il file da scaricare e il modello da modificare con il programma gratuito OpenSCAD | STL · SCAD |
+
+## Elettronica per l'emergenza
+
+Progetti con Arduino, ESP32 e Raspberry Pi a tema protezione civile, per i volontari: per ognuno a che cosa serve, i limiti, i componenti, i collegamenti, i passi di montaggio, il codice da scaricare e, dove serve, la custodia da stampare in 3D. Sono dispositivi non certificati: non sostituiscono le allerte ufficiali né il 112.
+
+| Pagina | Contenuto | Formato |
+|---|---|---|
+| [Elettronica per l'emergenza](/elettronica-emergenza/) | Sensore del livello dell'acqua, pluviometro, stazione meteo, monitor del caldo, controllo della batteria a 12 V, nodo Meshtastic e posizione dei mezzi, schermo dell'allerta in sede, sismografo Raspberry Shake, ricevitore di aerei ADS-B | INO · PY · SH · STL · SCAD |
 
 ## Normativa Regionale (Lazio)
 
@@ -165,6 +182,15 @@ Manuali tecnici prodotti da enti del Terzo Settore in collaborazione con il sist
 | [Manuale di Cucina in Emergenza](/manuali/DSEFIC_Manuale_Cucina_Emergenza_FIC.pdf) | A cura del DSEFIC — Dipartimento Solidarietà Emergenze della Federazione Italiana Cuochi. Protocolli per cucine da campo: zone, HACCP, alimentazioni speciali, ricette | PDF · 3,8 MB |
 | [Il Libro del Risparmio — 120 azioni contro lo spreco alimentare](/manuali/FondazioneBarilla_Libro_del_Risparmio.pdf) | A cura di Fondazione Barilla con Università di Bologna. Guida pratica per ridurre lo spreco di cibo in casa e fuori casa: conservazione, cucina a zero spreco, avanzi, spesa consapevole | PDF · 27,3 MB |
 | [Recupero, raccolta e distribuzione di cibo per solidarietà sociale](/manuali/Caritas_Banco_Alimentare_Manuale_Emporio_Solidale.pdf) | A cura di Caritas Italiana e Fondazione Banco Alimentare. Manuale di corrette prassi operative per le organizzazioni caritative, validato dal Ministero della Salute: HACCP semplificato, semaforo di attenzione, tracciabilità | PDF · 4,1 MB |
+
+## Cucina in emergenza
+
+Documenti ufficiali per chi cucina in un campo o in una mensa di emergenza. I file restano sui siti degli enti che li pubblicano: qui trovi i collegamenti, controllati uno per uno.
+
+| Pagina | Contenuto | Formato |
+|---|---|---|
+| [Cucina in emergenza](/cucina-emergenza/) | Manuali e linee guida di ministeri, regioni, aziende sanitarie e Unione europea su igiene, allergeni, pasti per molte persone e donazioni; elenchi dei vini DOP e IGP e dei prodotti agroalimentari tradizionali | PDF sui siti degli enti |
+| [Disciplinari dei prodotti DOP, IGP e STG](/cucina-emergenza/disciplinari/) | Catalogo dei disciplinari dei prodotti agroalimentari italiani e delle loro sintesi europee, con ricerca per nome, regione e tipo di prodotto | PDF sul sito del Ministero dell'agricoltura e su EUR-Lex |
 
 ## Campagna "Io Non Rischio"
 
@@ -263,7 +289,7 @@ Un **PDF accessibile** può essere letto da screen reader (NVDA, VoiceOver, Talk
 
 ## Vedi anche
 
-- [Materiali pronti](/risorse-pronte/) — podcast, infografiche, presentazioni e quiz scaricabili, divisi per tema
+- [Materiali pronti](/risorse-pronte/) — video, infografiche e presentazioni per la classe, divisi per tema
 - [Cartografia](/cartografia/) — mappe interattive del territorio
 - [Rischi e Prevenzione](/rischi-prevenzione/) — schede operative per ogni rischio
 - [Formazione](/formazione/) — kit didattici e schede stampabili

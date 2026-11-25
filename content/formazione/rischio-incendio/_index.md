@@ -11,7 +11,7 @@ Questa guida **non sostituisce** il corso di formazione antincendio certificato,
 
 ## Perché parlare di incendi a Genzano di Roma
 
-Il territorio di Genzano di Roma — al margine del **Parco dei Castelli Romani** — presenta rischio elevato di **incendi boschivi** (Classe C di pericolosità AIB) nel periodo giugno-settembre. La vegetazione mediterranea, i versanti collinari del lago di Nemi e le aree urbane a contatto con il bosco richiedono conoscenze di base sulla natura del fuoco, sulle sostanze estinguenti e sulle procedure di evacuazione.
+Il territorio di Genzano di Roma — al margine del **Parco dei Castelli Romani** — presenta rischio elevato di **incendi boschivi** (Classe C di pericolosità AIB) d'estate (campagna AIB 2026: dal 15 giugno al 15 ottobre). La vegetazione mediterranea, i versanti collinari del lago di Nemi e le aree urbane a contatto con il bosco richiedono conoscenze di base sulla natura del fuoco, sulle sostanze estinguenti e sulle procedure di evacuazione.
 
 Conoscere il fuoco significa:
 

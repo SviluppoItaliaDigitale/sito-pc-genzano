@@ -1,6 +1,15 @@
 {
+ "2026-04-04": [
+  "comunicazioni/2026-04-04-pianta-servizio-tecnico-via-della-selva-interventi"
+ ],
+ "2026-04-13": [
+  "comunicazioni/2026-04-13-alberi-piante-secche-muro-caduto-interventi"
+ ],
  "2026-04-15": [
   "comunicazioni/2026-04-15-frana-costone-nemi-chiusura-via-nemorense"
+ ],
+ "2026-04-17": [
+  "comunicazioni/2026-04-17-ramo-albero-vigili-fuoco-via-emilia-romagna-intervento"
  ],
  "2026-04-20": [
   "comunicazioni/2026-04-20-attivazione-incendio-cecchina-albano-laziale"
@@ -8,20 +17,89 @@
  "2026-05-02": [
   "comunicazioni/2026-05-02-albero-pericolante-rimozione-volontari-genzano"
  ],
+ "2026-05-10": [
+  "comunicazioni/2026-05-10-rami-via-napoli-voragine-via-stati-uniti-interventi"
+ ],
  "2026-05-15": [
   "comunicazioni/2026-05-15-giro-italia-formia-blockhaus-sicurezza"
+ ],
+ "2026-05-21": [
+  "comunicazioni/2026-05-30-incendi-sterpaglie-aprilia-pian-savelli-interventi"
+ ],
+ "2026-05-23": [
+  "comunicazioni/2026-05-30-incendi-sterpaglie-aprilia-pian-savelli-interventi"
+ ],
+ "2026-05-30": [
+  "comunicazioni/2026-05-30-incendi-sterpaglie-aprilia-pian-savelli-interventi"
+ ],
+ "2026-06-03": [
+  "comunicazioni/2026-06-03-incendio-boschivo-via-valle-verta-intervento"
+ ],
+ "2026-06-06": [
+  "comunicazioni/2026-06-22-rami-alberi-imbastari-piazza-dante-via-roma-appia-vecchia"
+ ],
+ "2026-06-13": [
+  "comunicazioni/2026-06-15-infiorata-servizio-incendi-sterpaglie-valle-verta-ferrovia"
+ ],
+ "2026-06-14": [
+  "comunicazioni/2026-06-15-infiorata-servizio-incendi-sterpaglie-valle-verta-ferrovia"
+ ],
+ "2026-06-15": [
+  "comunicazioni/2026-06-15-infiorata-servizio-incendi-sterpaglie-valle-verta-ferrovia"
+ ],
+ "2026-06-17": [
+  "comunicazioni/2026-06-22-rami-alberi-imbastari-piazza-dante-via-roma-appia-vecchia"
+ ],
+ "2026-06-19": [
+  "comunicazioni/2026-06-22-rami-alberi-imbastari-piazza-dante-via-roma-appia-vecchia"
+ ],
+ "2026-06-20": [
+  "comunicazioni/2026-06-20-servizio-saggio-danza-parco-sforza-cesarini"
  ],
  "2026-06-21": [
   "comunicazioni/2026-06-23-incendio-sterpaglie-aprilia-guardapasso"
  ],
+ "2026-06-22": [
+  "comunicazioni/2026-06-22-rami-alberi-imbastari-piazza-dante-via-roma-appia-vecchia"
+ ],
+ "2026-06-23": [
+  "comunicazioni/2026-06-23-ricerca-persona-dispersa-via-achille-grandi-carabinieri"
+ ],
+ "2026-06-24": [
+  "comunicazioni/2026-06-29-sterpaglie-via-del-lavoro-ramo-via-della-selva-interventi"
+ ],
  "2026-06-25": [
   "comunicazioni/2026-06-25-incendio-sterpaglie-albano-via-prelatura"
+ ],
+ "2026-06-26": [
+  "comunicazioni/2026-06-29-sterpaglie-via-del-lavoro-ramo-via-della-selva-interventi"
+ ],
+ "2026-06-28": [
+  "comunicazioni/2026-06-29-sterpaglie-via-del-lavoro-ramo-via-della-selva-interventi"
+ ],
+ "2026-06-29": [
+  "comunicazioni/2026-06-29-sterpaglie-via-del-lavoro-ramo-via-della-selva-interventi"
  ],
  "2026-07-01": [
   "comunicazioni/2026-07-01-via-roma-rimozione-albero-caduto-auto"
  ],
+ "2026-07-02": [
+  "comunicazioni/2026-07-03-rami-su-strada-fusto-olio-via-appia-interventi"
+ ],
+ "2026-07-03": [
+  "comunicazioni/2026-07-03-rami-su-strada-fusto-olio-via-appia-interventi"
+ ],
  "2026-07-05": [
   "comunicazioni/2026-07-05-incendio-velletri-caranella-via-del-sorbo"
+ ],
+ "2026-07-08": [
+  "comunicazioni/2026-07-10-rami-casina-rose-de-amicis-incendio-montegiove-interventi"
+ ],
+ "2026-07-09": [
+  "comunicazioni/2026-07-10-rami-casina-rose-de-amicis-incendio-montegiove-interventi"
+ ],
+ "2026-07-10": [
+  "comunicazioni/2026-07-10-rami-casina-rose-de-amicis-incendio-montegiove-interventi"
  ],
  "2026-07-12": [
   "comunicazioni/2026-07-13-assistenza-angelus-papa-castel-gandolfo"
@@ -276,5 +354,17 @@
  ],
  "2026-11-14": [
   "comunicazioni/2026-11-14-colletta-alimentare-banco-alimentare-genzano"
+ ],
+ "2026-11-16": [
+  "comunicazioni/2026-11-19-ramo-via-achille-grandi-supporto-vigili-fuoco-interventi"
+ ],
+ "2026-11-18": [
+  "comunicazioni/2026-11-19-ramo-via-achille-grandi-supporto-vigili-fuoco-interventi"
+ ],
+ "2026-11-20": [
+  "comunicazioni/2026-11-20-palo-via-chatillon-ramo-achille-grandi-albero-via-calabria-interventi"
+ ],
+ "2026-11-21": [
+  "comunicazioni/2026-11-20-palo-via-chatillon-ramo-achille-grandi-albero-via-calabria-interventi"
  ]
 }

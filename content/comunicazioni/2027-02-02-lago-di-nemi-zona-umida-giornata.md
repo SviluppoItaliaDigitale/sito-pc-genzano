@@ -3,6 +3,7 @@ title: "2 febbraio, Giornata mondiale delle zone umide: il lago di Nemi visto da
 date: 2027-02-02
 description: "Il lago di Nemi è una zona umida chiusa nel suo cratere, sotto Genzano. Che cosa lo rende fragile, perché d'inverno il Parco chiude l'emissario e che cosa puoi fare tu."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-02-02-lago-di-nemi-zona-umida-giornata.webp"

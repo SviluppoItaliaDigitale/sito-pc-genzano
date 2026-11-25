@@ -3,6 +3,7 @@ title: "Trenta secondi che contano: come gli smartphone hanno allertato il Venez
 date: 2026-06-26T00:03:00+02:00
 description: "Il 24 giugno il sistema di Android ha avvisato milioni di persone secondi prima della scossa. Come funziona, e perché non è una previsione."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-26-smartphone-sismometri-allerta-terremoto-venezuela.webp"
@@ -48,7 +49,9 @@ Il sistema è attivo dal 2020. Uno studio pubblicato su *Science* nel 2025 descr
 
 ## E in Italia? Il ruolo di IT-alert
 
-Il sistema di Android funziona anche in Italia, sui telefoni che lo hanno attivo. È uno strumento utile, ma **non sostituisce il canale ufficiale**.
+> **Nota di aggiornamento (19 novembre 2026).** La prima versione di questo articolo diceva che il sistema funzionava già in Italia. Non era così: a giugno Google non lo aveva attivato nel nostro Paese. Lo ha esteso all'Italia il 19 novembre 2026, con tre livelli di avviso invece di due. Lo spieghiamo in [Allerte terremoti di Android, da oggi anche in Italia](/comunicazioni/2026-11-19-allerte-terremoti-android-italia/).
+
+Anche dove è attivo, il sistema di Android è uno strumento utile ma **non sostituisce il canale ufficiale**.
 
 In Italia l'allarme pubblico ufficiale è **IT-alert**, gestito dal **Dipartimento della Protezione Civile**: invia messaggi sul telefono per gravi emergenze. Sono due cose diverse e complementari. Leggi la nostra scheda [IT-alert: come funziona e come reagire](/comunicazioni/2026-06-11-it-alert-come-funziona-reagire/).
 

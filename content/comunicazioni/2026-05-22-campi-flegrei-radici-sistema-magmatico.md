@@ -2,6 +2,7 @@
 title: "Campi Flegrei, una nuova immagine svela le radici profonde del magma fino a 50 km"
 date: 2026-05-22T00:05:00+02:00
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 description: "Uno studio INGV-INVOLCAN ricostruisce la struttura profonda dei Campi Flegrei fino a 50 km e individua la sorgente dei magmi. Cosa dice, senza allarmismi."

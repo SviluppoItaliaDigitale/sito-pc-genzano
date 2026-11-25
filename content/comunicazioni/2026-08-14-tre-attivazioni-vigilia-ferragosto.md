@@ -3,6 +3,7 @@ title: "Tre attivazioni alla vigilia di Ferragosto: Porta Medaglia, Pomezia e Ar
 date: 2026-08-14T00:05:00+02:00
 description: "Il 14 agosto 2026 le squadre del Gruppo sono intervenute su tre incendi di sterpaglie: via di Porta Medaglia, la ferrovia di Pomezia e Ardea."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-14-tre-attivazioni-vigilia-ferragosto.webp"

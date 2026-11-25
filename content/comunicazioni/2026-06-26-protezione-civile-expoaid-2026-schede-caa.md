@@ -3,6 +3,7 @@ title: "Il Dipartimento della Protezione Civile a ExpoAID 2026: le schede CAA pe
 date: 2026-06-26T00:06:00+02:00
 description: "Le schede in Comunicazione Aumentativa Alternativa per terremoto, alluvione e incendio, presentate dal Dipartimento a ExpoAID 2026. Scaricale qui."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-26-protezione-civile-expoaid-2026-schede-caa.webp"

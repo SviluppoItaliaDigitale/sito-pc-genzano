@@ -3,6 +3,7 @@ title: "Dentro la sala operativa: che cosa succede dopo una chiamata al 112"
 date: 2026-11-20T00:02:00+01:00
 description: "La chiamata al 112 vista da chi risponde: la Centrale Unica di Risposta, il passaggio agli enti di soccorso e le sale operative di protezione civile."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-20-dentro-la-sala-operativa.webp"

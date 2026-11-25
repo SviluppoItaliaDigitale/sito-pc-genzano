@@ -3,6 +3,7 @@ title: "Piano di evacuazione familiare: preparare la propria casa"
 date: 2026-07-29T00:01:00+02:00
 description: "In caso di emergenza ogni famiglia dovrebbe avere un piano chiaro. Come prepararlo, coinvolgendo tutti i membri, passo dopo passo."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-29-piano-evacuazione-familiare-preparazione.webp"
@@ -110,7 +111,7 @@ Il **piano** riflette questi elementi.
 ## Per rischio terremoto
 
 ### Durante
-- **Riparati** sotto un tavolo robusto, l'architrave di una porta portante o vicino a un muro maestro (indicazione DPC).
+- **Riparati** nel vano di una porta inserita in un muro portante, vicino a una parete portante o sotto una trave, oppure sotto un letto o un tavolo resistente (indicazione DPC).
 - **Stai lontano** da mobili pesanti, scaffali, vetrate.
 - **Proteggi** testa e collo con le braccia.
 - **Resta fermo** fino alla fine della scossa.

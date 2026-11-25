@@ -3,6 +3,7 @@ title: "Radio in emergenza: perché sono ancora fondamentali per la Protezione C
 date: 2026-05-03
 description: "Quando telefono e internet cadono, restano le radio. Il ruolo delle radiocomunicazioni e dei volontari radioamatori nel sistema di Protezione Civile."
 badge: "Radiocomunicazioni"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-03-radiocomunicazioni-emergenza-volontari.webp"
@@ -62,7 +63,7 @@ Nel volontariato di Protezione Civile i **radioamatori** hanno un ruolo specific
 Diventare volontario radioamatore di Protezione Civile richiede:
 
 1. La **patente di radioamatore** rilasciata dal Ministero (esame tecnico).
-2. Il **nominativo individuale** associato alla patente.
+2. Il **nominativo**, che il Ministero assegna alla stazione insieme all'autorizzazione generale.
 3. **Iscrizione a un gruppo di volontariato** riconosciuto.
 4. **Formazione specifica** sulle procedure di emergenza.
 

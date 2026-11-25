@@ -3,6 +3,7 @@ title: "I Nobel che ci proteggono: le schede da stampare per ogni scuola"
 date: 2026-10-07T00:06:00+02:00
 description: "Schede gratuite dall'infanzia alle superiori: le scoperte premiate con il Nobel che aiutano chi soccorre. Pronte da stampare, con note e soluzioni."
 badge: "Formazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-07-nobel-schede-stampabili-scuole.webp"

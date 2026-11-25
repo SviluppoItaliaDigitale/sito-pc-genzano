@@ -3,6 +3,7 @@ title: "Frane: un video in 3D per riconoscerle e mettersi al sicuro"
 date: 2026-11-12T00:03:00+01:00
 description: "Un video di poco più di un minuto, con voce e sottotitoli, mostra i segnali che annunciano una frana e che cosa fare se la terra si muove."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-12-frane-video-3d.webp"
@@ -97,7 +98,7 @@ I dati del terreno vengono dalle Mapzen Terrain Tiles, pubblicate su AWS Open Da
 
 Musica: «On My Way» di Kevin MacLeod ([incompetech.com](https://incompetech.com/)), con licenza [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), adattata per il video.
 
-Voce sintetica: modello distribuito con licenza Coqui Public Model License ([testo della licenza](https://huggingface.co/coqui/XTTS-v1/raw/main/LICENSE)).
+Voce sintetica: modello distribuito con licenza Coqui Public Model License ([testo della licenza](https://huggingface.co/coqui/XTTS-v2/blob/main/LICENSE.txt)).
 
 ## Per approfondire
 

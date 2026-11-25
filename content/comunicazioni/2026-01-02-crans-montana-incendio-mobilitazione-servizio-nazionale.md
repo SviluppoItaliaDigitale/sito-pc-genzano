@@ -3,6 +3,7 @@ title: "Incendio a Crans-Montana: mobilitato il Servizio nazionale per aiutare l
 date: 2026-01-02T00:03:00+01:00
 description: "Dopo l'incendio di Capodanno in un locale di Crans-Montana, il Ministro dispone la mobilitazione straordinaria del Servizio nazionale per i feriti ustionati."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-01-02-crans-montana-incendio-mobilitazione-servizio-nazionale.webp"

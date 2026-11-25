@@ -3,6 +3,7 @@ title: "Sicilia orientale, 13 dicembre 1990: il terremoto di Santa Lucia"
 date: 2026-12-13T00:02:00+01:00
 description: "Trentasei anni fa una scossa di magnitudo 5,6 colpì le province di Siracusa, Catania e Ragusa: 12 vittime nei crolli di Carlentini e oltre 13.000 senzatetto."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-13-santa-lucia-1990-terremoto-sicilia-orientale.webp"

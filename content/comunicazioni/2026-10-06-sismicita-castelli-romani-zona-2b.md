@@ -3,6 +3,7 @@ title: "Sismicità dei Castelli Romani: perché siamo in zona 2B"
 date: 2026-10-06
 description: "I Castelli Romani sono classificati in zona sismica 2B. Cosa significa, cosa comporta per le costruzioni, cosa devono sapere i cittadini."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-06-sismicita-castelli-romani-zona-2b.webp"
@@ -71,7 +72,7 @@ Per gli edifici esistenti la sicurezza dipende da come e quando sono stati costr
 
 ## Se arriva una scossa
 
-- **se in casa**: rifugio sotto un tavolo solido o in vano di porta portante; non uscire durante la scossa;
+- **se in casa**: rifugio sotto un tavolo solido o nel vano di una porta inserita in un muro portante; non uscire durante la scossa;
 - **se in strada**: spazi aperti, lontano da edifici, pali, cornicioni;
 - **se in auto**: fermarsi in luogo sicuro, non sotto ponti;
 - **dopo la scossa**: uscire con cautela, chiudere gas ed elettricità, seguire istruzioni ufficiali.

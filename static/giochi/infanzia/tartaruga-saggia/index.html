@@ -42,15 +42,28 @@
     </div>
 
     <div id="intro" class="inf-card text-center">
-      <svg viewBox="0 0 180 120" width="160" height="110" role="img" aria-label="Tina la tartaruga saluta" focusable="false">
-        <ellipse cx="90" cy="105" rx="70" ry="6" fill="rgba(0,0,0,0.08)"/>
-        <path d="M 30 85 Q 30 35 90 30 Q 150 35 150 85 Z" fill="#4E8B3E" stroke="#2F5A25" stroke-width="2"/>
-        <circle cx="90" cy="25" r="18" fill="#8ABF78" stroke="#2F5A25" stroke-width="2"/>
-        <circle cx="84" cy="23" r="2.5" fill="#17324D"/>
-        <circle cx="96" cy="23" r="2.5" fill="#17324D"/>
-        <path d="M 86 30 Q 90 34 94 30" stroke="#17324D" stroke-width="2" fill="none" stroke-linecap="round"/>
-        <path d="M 72 18 Q 90 5 108 18 L 108 22 L 72 22 Z" fill="#D9364F" stroke="#8B1F2E" stroke-width="2"/>
-      </svg>
+      <svg viewBox="0 0 200 130" width="180" height="117" role="img" aria-label="Tina la tartaruga con il casco" focusable="false">
+          <ellipse cx="104" cy="121" rx="72" ry="6" fill="rgba(0,0,0,0.08)"/>
+          <path d="M 166 98 L 184 104 L 166 108 Z" fill="#8ABF78" stroke="#2F5A25" stroke-width="2" stroke-linejoin="round"/>
+          <ellipse cx="62" cy="110" rx="14" ry="9" fill="#8ABF78" stroke="#2F5A25" stroke-width="2"/>
+          <ellipse cx="146" cy="110" rx="14" ry="9" fill="#8ABF78" stroke="#2F5A25" stroke-width="2"/>
+          <path d="M 48 92 Q 36 82 38 72" stroke="#2F5A25" stroke-width="15" stroke-linecap="round" fill="none"/>
+          <path d="M 48 92 Q 36 82 38 72" stroke="#8ABF78" stroke-width="11" stroke-linecap="round" fill="none"/>
+          <path d="M 52 102 Q 52 42 104 38 Q 158 42 158 102 Z" fill="#4E8B3E" stroke="#2F5A25" stroke-width="2.5" stroke-linejoin="round"/>
+          <g fill="#5E9C4B" stroke="#2F5A25" stroke-width="2" stroke-linejoin="round">
+            <polygon points="104,52 122,62 122,82 104,92 86,82 86,62"/>
+            <path d="M 86 62 L 66 56 M 122 62 L 142 56 M 86 82 L 62 92 M 122 82 L 146 92 M 104 52 L 104 40 M 104 92 L 104 102" fill="none"/>
+          </g>
+          <path d="M 46 100 L 164 100 Q 168 100 168 104 Q 168 108 164 108 L 46 108 Q 42 108 42 104 Q 42 100 46 100 Z" fill="#6FA35C" stroke="#2F5A25" stroke-width="2"/>
+          <circle cx="36" cy="62" r="20" fill="#8ABF78" stroke="#2F5A25" stroke-width="2.5"/>
+          <circle cx="30" cy="63" r="3" fill="#17324D"/><circle cx="31" cy="62" r="1" fill="#fff"/>
+          <circle cx="44" cy="63" r="3" fill="#17324D"/><circle cx="45" cy="62" r="1" fill="#fff"/>
+          <circle cx="25" cy="70" r="3" fill="#E89AA0" opacity=".8"/><circle cx="49" cy="70" r="3" fill="#E89AA0" opacity=".8"/>
+          <path d="M 31 71 Q 37 76 43 71" stroke="#17324D" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <path d="M 16 56 Q 16 36 36 35 Q 56 36 56 56 Z" fill="#D9364F" stroke="#8B1F2E" stroke-width="2" stroke-linejoin="round"/>
+          <rect x="12" y="54" width="48" height="5" rx="2.5" fill="#8B1F2E"/>
+          <path d="M 26 42 Q 32 38 38 39" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".6"/>
+        </svg>
       <p class="h5 text-primary">Ciao! Sono Tina. Rispondi con <strong>SÌ</strong> o <strong>NO</strong>.</p>
       <button id="start-btn" class="inf-big-btn" style="background:var(--inf-blu);">
         <i class="bi bi-play-fill" aria-hidden="true"></i> Iniziamo!
@@ -101,6 +114,7 @@
 
   <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
   <script src="/app-shared/site-chrome.js"></script>
+  <script src="/giochi/infanzia/assets/infanzia.js"></script>
   <script src="/giochi/assets/js/progressione.js"></script>
   <script src="/giochi/assets/js/attestato.js"></script>
   <script src="/giochi/assets/js/audio-sintetico.js"></script>
@@ -120,9 +134,9 @@
     var ROUND_2 = [
       { emoji: '🌧️', q: 'Piove tanto. Vai a giocare vicino al fiume?', si: false, tip: 'No! Quando piove tanto, stai lontano dai fiumi.' },
       { emoji: '🧯', q: 'Un adulto spegne un piccolo fuoco con l\'estintore. Lo guardi da lontano?', si: true, tip: 'Sì! Restare lontano è la scelta giusta.' },
-      { emoji: '🌳', q: 'C\'è un terremoto. Ti metti sotto il tavolo resistente?', si: true, tip: 'Sì! Sotto un tavolo robusto sei più al sicuro.' },
+      { emoji: '🏠', q: 'C\'è un terremoto. Ti metti sotto il tavolo resistente?', si: true, tip: 'Sì! Sotto un tavolo robusto sei più al sicuro.' },
       { emoji: '🚨', q: 'Senti un allarme: devi nasconderti senza dirlo a nessuno?', si: false, tip: 'No! Chiama sempre un grande vicino a te.' },
-      { emoji: '🚪', q: 'C\'è fumo in casa. Esci di corsa per le scale?', si: true, tip: 'Sì! Le scale sono sicure, mai l\'ascensore.' }
+      { emoji: '🚪', q: 'C\'è fumo in casa. Esci con un grande usando le scale?', si: true, tip: 'Sì! Si esce dalle scale, mai con l\'ascensore.' }
     ];
     var ROUND_3 = [
       { emoji: '⛈️', q: 'C\'è un temporale forte. Stai sotto un albero alto?', si: false, tip: 'No! L\'albero attira i fulmini. Vai dentro casa.' },
@@ -148,7 +162,7 @@
       { emoji: '💡', q: 'Esci da una stanza. Spegni la luce per non sprecare energia?', si: true, tip: 'Sì! Spegnere la luce aiuta tutti e protegge il pianeta.' },
       { emoji: '🧴', q: 'Trovi una bottiglia con il teschio disegnato sopra. La bevi se hai sete?', si: false, tip: 'No! Il teschio vuol dire VELENO. Mai bere bottiglie sconosciute.' },
       { emoji: '🚿', q: 'Mentre ti lavi i denti, lasci l\'acqua aperta tutto il tempo?', si: false, tip: 'No! Chiudi l\'acqua: si risparmia tanta acqua preziosa.' },
-      { emoji: '🪟', q: 'Senti il suono dell\'allarme antincendio a casa. Apri la finestra e chiami un grande?', si: true, tip: 'Sì! Avvisi un adulto e seguite insieme il piano di fuga.' }
+      { emoji: '🚨', q: 'Senti il suono dell\'allarme antincendio a casa. Chiami subito un grande?', si: true, tip: 'Sì! Avvisi un adulto e seguite insieme il piano di fuga.' }
     ];
     var ROUNDS = [ROUND_1, ROUND_2, ROUND_3, ROUND_4, ROUND_5];
 
@@ -168,6 +182,9 @@
     var roundUpTitolo = document.getElementById('round-up-titolo');
     var roundUpMsg = document.getElementById('round-up-msg');
     var idx = 0, stars = 0, queue = [], roundIdx = 0;
+    // Doppio tocco sul pulsante che avvia una partita, un livello o un round: il secondo tocco
+    // non deve finire sulla risposta che compare sotto il dito. Per mezzo secondo si ignora.
+    var sbloccoAl = 0;
 
     function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t;} return a; }
 
@@ -178,12 +195,15 @@
       game.classList.remove('hide');
       queue = shuffle(ROUNDS[roundIdx].slice());
       idx = 0;
+      sbloccoAl = Date.now() + 500;
       levelBadge.textContent = 'Round ' + (roundIdx + 1) + ' di ' + ROUNDS.length;
       show();
       if (window.AudioSintetico) window.AudioSintetico.init();
     }
 
     function start(){
+      // Doppio tocco su «Iniziamo» o «Ancora»: la partita parte una volta sola.
+      if (!game.classList.contains('hide')) return;
       roundIdx = 0; stars = 0;
       starsEl.textContent = '0';
       avviaRound();
@@ -200,7 +220,10 @@
       if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
     }
 
+    var inPassaggio = false;
     function answer(val){
+      if (inPassaggio || Date.now() < sbloccoAl) return;
+      inPassaggio = true;
       var s = queue[idx];
       var correct = (val === s.si);
       btnSi.disabled = true; btnNo.disabled = true;
@@ -211,17 +234,24 @@
         starsEl.textContent = stars;
         feedback.style.color = '#0f5132';
         feedback.innerHTML = '✅ ' + s.tip;
+        if (window.InfInVista) window.InfInVista(feedback);
         if (window.AudioSintetico) window.AudioSintetico.dingPositivo();
       } else {
         btn.classList.add('wrong');
         feedback.style.color = '#8B1F2E';
-        feedback.innerHTML = '🐢 ' + s.tip;
+        // Risposta sbagliata: il consiglio comincia con «Sì!», «No!», «Giusto!»...
+        // scritti per chi ha risposto bene. Qui si dice prima la risposta giusta
+        // e si toglie quella prima parola, che altrimenti sembrerebbe una conferma.
+        feedback.innerHTML = '🐢 La risposta giusta è <strong>' + (s.si ? 'SÌ' : 'NO') + '</strong>. ' +
+          s.tip.replace(/^(Sì|No|Giusto|Esatto|Bravissimo)! */, '');
+        if (window.InfInVista) window.InfInVista(feedback);
         if (window.AudioSintetico) window.AudioSintetico.tonoNeutro();
         if (window.GameCoach && window.GameCoach.hint) {
           window.GameCoach.hint('In emergenza: stai calmo, scegli il posto più sicuro, chiedi aiuto a un adulto. Se serve, chiama il 1-1-2.', '/cosa-fare-adesso/');
         }
       }
       setTimeout(function(){
+        inPassaggio = false;
         idx++;
         if (idx >= queue.length) fineRound();
         else show();
@@ -258,6 +288,8 @@
     document.getElementById('start-btn').addEventListener('click', start);
     document.getElementById('restart').addEventListener('click', start);
     document.getElementById('next-round').addEventListener('click', function(){
+      // Doppio tocco: il secondo tocco non deve saltare un round né cercarne uno che non esiste.
+      if (roundUp.classList.contains('hide') || roundIdx >= ROUNDS.length - 1) return;
       roundIdx++;
       avviaRound();
     });

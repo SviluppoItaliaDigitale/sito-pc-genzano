@@ -120,7 +120,7 @@ def classifica_file(path: Path) -> tuple[str, str, str] | None:
 DESC_TIPO = {
     "podcast":         "Podcast audio in forma di dialogo sul tema. Ascoltabile online o scaricabile per ascolto offline.",
     "infografica":     "Infografica formato quadrato pronta per condivisione social, stampa A4 e affissione in bacheca.",
-    "presentazione":   "Presentazione PowerPoint per docenti: 15 slide per un'ora di Educazione Civica in classe (formato modificabile).",
+    "presentazione":   "Presentazione PowerPoint per docenti, con le slide per un'ora di Educazione Civica in classe. Ogni slide è un'immagine in formato 16:9, da proiettare così com'è: il testo non si modifica.",
     "presentazione-pdf": "Stessa presentazione in formato PDF: apribile su qualsiasi dispositivo senza PowerPoint.",
     "quiz":            "Quiz a 10 domande a risposta multipla con difficoltà progressiva. Da usare in aula o in autoverifica.",
     "flashcard":       "Mazzo di 20 flashcard domanda/risposta in formato PDF stampabile per studio individuale o di gruppo.",

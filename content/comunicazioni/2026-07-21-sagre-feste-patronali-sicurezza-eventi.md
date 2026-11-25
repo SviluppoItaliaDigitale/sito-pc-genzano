@@ -3,6 +3,7 @@ title: "Sagre e feste patronali: sicurezza dei grandi eventi estivi"
 date: 2026-07-21
 description: "Ogni estate i Castelli Romani ospitano decine di sagre e feste. Dietro c'è un lavoro di pianificazione della sicurezza a cui la PC partecipa attivamente."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-21-sagre-feste-patronali-sicurezza-eventi.webp"

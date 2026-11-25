@@ -14,27 +14,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const categories = [
         {
-            title: 'Numeri di emergenza', icon: '\uD83D\uDCDE',
+            title: 'Numeri di emergenza', icon: 'bi-telephone-fill',
             pairs: [
-                { left: '112', right: 'Numero unico di emergenza nel Lazio' },
-                { left: '803 555', right: 'Sala Operativa Protezione Civile Lazio' },
-                { left: 'Chiamata al 112', right: 'Gratis, senza credito, da qualsiasi telefono' },
+                { left: '112', right: 'Il numero da chiamare per ogni emergenza' },
+                { left: '803 555', right: 'Sala Operativa regionale del Lazio, per segnalazioni non urgenti' },
+                { left: 'Telefono senza credito', right: 'Puoi chiamare lo stesso i soccorsi: è gratis' },
                 { left: '112 in Europa', right: 'Stesso numero in tutti i Paesi europei' },
                 { left: 'Cosa dire al 112', right: 'Cosa succede, dove sei, chi ha bisogno di aiuto' },
                 { left: 'Chiamata per scherzo', right: 'È un reato e toglie aiuto a chi ne ha davvero bisogno' }
             ]
         },
         {
-            title: 'Codici colore allerta', icon: '\uD83D\uDEA6',
+            title: 'Codici colore allerta', icon: 'bi-stoplights-fill',
             pairs: [
-                { left: '\uD83D\uDFE2 Verde', right: 'Nessuna allerta, tutto tranquillo' },
-                { left: '\uD83D\uDFE1 Giallo', right: 'Criticità ordinaria, presta attenzione' },
-                { left: '\uD83D\uDFE0 Arancione', right: 'Criticità moderata, fenomeni intensi' },
-                { left: '\uD83D\uDD34 Rosso', right: 'Criticità elevata, rischio alto' }
+                { left: 'Verde', colore: '#198754', right: 'Nessuna allerta, tutto tranquillo' },
+                { left: 'Giallo', colore: '#ffcc00', right: 'Criticità ordinaria, presta attenzione' },
+                { left: 'Arancione', colore: '#f07c00', right: 'Criticità moderata, fenomeni intensi' },
+                { left: 'Rosso', colore: '#d32f2f', right: 'Criticità elevata, rischio alto' }
             ]
         },
         {
-            title: 'Rischi e comportamenti', icon: '\u26A0\uFE0F',
+            title: 'Rischi e comportamenti', icon: 'bi-exclamation-triangle-fill',
             pairs: [
                 { left: 'Terremoto', right: 'Riparati sotto un tavolo, proteggiti la testa' },
                 { left: 'Alluvione', right: 'Sali ai piani alti, non scendere in cantina' },
@@ -45,40 +45,40 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         {
-            title: 'Oggetti dello zaino', icon: '\uD83C\uDF92',
+            title: 'Oggetti dello zaino', icon: 'bi-backpack2-fill',
             pairs: [
                 { left: 'Torcia a pile', right: 'Per vedere al buio senza fiamme' },
                 { left: 'Fischietto', right: 'Per farsi trovare dai soccorritori' },
                 { left: 'Radio a pile', right: 'Per ascoltare le notizie senza corrente' },
                 { left: 'Coperta termica', right: 'Per scaldarsi in caso di freddo' },
                 { left: 'Documenti (copie)', right: 'Per farsi identificare in emergenza' },
-                { left: 'Acqua (2 litri)', right: 'Per bere se manca l\'acqua potabile' }
+                { left: 'Acqua (circa 4 litri a persona al giorno)', right: 'Per bere e lavarsi se manca l\'acqua potabile' }
             ]
         },
         {
-            title: 'Cartelli di sicurezza', icon: '\uD83D\uDEA9',
+            title: 'Cartelli di sicurezza', icon: 'bi-signpost-2-fill',
             pairs: [
-                { left: '\uD83D\uDFE9 Verde', right: 'Uscita di emergenza e vie di fuga' },
-                { left: '\uD83D\uDFE5 Rosso', right: 'Dispositivi antincendio (estintore, idrante)' },
-                { left: '\u26A0\uFE0F Giallo triangolo', right: 'Avvertimento: pericolo generico' },
-                { left: '\uD83D\uDEAB Rosso con sbarra', right: 'Divieto: vietato fumare, vietato entrare' },
-                { left: '\uD83D\uDD35 Blu rotondo', right: 'Prescrizione: obbligo di DPI (casco, guanti)' },
-                { left: '\uD83D\uDFE9 Cassetta verde con croce bianca', right: 'Punto di primo soccorso' }
+                { left: 'Verde', iso: 'uscita-emergenza-destra', right: 'Uscita di emergenza e vie di fuga' },
+                { left: 'Rosso', iso: 'estintore', right: 'Dispositivi antincendio (estintore, idrante)' },
+                { left: 'Giallo triangolo', iso: 'pericolo-generico', right: 'Avvertimento: pericolo generico' },
+                { left: 'Rosso con sbarra', iso: 'divieto-generico', right: 'Divieto: vietato fumare, vietato entrare' },
+                { left: 'Blu rotondo', iso: 'obbligo-generico', right: 'Prescrizione: obbligo di DPI (casco, guanti)' },
+                { left: 'Verde con croce bianca', iso: 'cassetta-primo-soccorso', right: 'Punto di primo soccorso' }
             ]
         },
         {
-            title: 'Classi di fuoco', icon: '\uD83D\uDD25',
+            title: 'Classi di fuoco', icon: 'bi-fire',
             pairs: [
                 { left: 'Classe A', right: 'Materiali solidi: legno, carta, tessuti' },
                 { left: 'Classe B', right: 'Liquidi infiammabili: benzina, solventi' },
                 { left: 'Classe C', right: 'Gas infiammabili: metano, GPL' },
                 { left: 'Classe D', right: 'Metalli combustibili: magnesio, sodio' },
                 { left: 'Classe F', right: 'Oli e grassi da cucina' },
-                { left: 'Tecnica PASS', right: 'Prendi, Avvicinati, Schiaccia, Spazza' }
+                { left: 'Estintore', right: 'Lo usa solo un adulto formato, sulle fiamme appena nate' }
             ]
         },
         {
-            title: 'Ruoli in emergenza', icon: '\uD83D\uDC65',
+            title: 'Ruoli in emergenza', icon: 'bi-people-fill',
             pairs: [
                 { left: 'Vigili del Fuoco', right: 'Incendi, soccorso tecnico, sostanze pericolose' },
                 { left: 'Protezione Civile', right: 'Coordina aiuti e volontari in emergenza' },
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         {
-            title: 'Meteo e allerte', icon: '\uD83C\uDF24\uFE0F',
+            title: 'Meteo e allerte', icon: 'bi-cloud-lightning-rain-fill',
             pairs: [
                 { left: 'Temporale', right: 'Pioggia + fulmini + vento forte' },
                 { left: 'Nebbia', right: 'Visibilità ridotta, soprattutto in auto' },
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         {
-            title: 'Comunicazione di crisi', icon: '📢',
+            title: 'Comunicazione di crisi', icon: 'bi-megaphone-fill',
             pairs: [
                 { left: 'IT-alert', right: 'Messaggio d\'allarme ai cellulari nella zona di pericolo' },
                 { left: 'Fonti ufficiali', right: 'Comune, DPC, Centro Funzionale Regionale' },
@@ -113,6 +113,37 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     let selectedLeft = null, matched = 0, total = 0, errors = 0, currentCat = null;
+    // Doppio tocco: dopo un abbinamento sbagliato i tasti restano fermi finché le
+    // due caselle non tornano normali; `partita` cambia a ogni nuova partita, così
+    // un timer della partita precedente non tocca quella nuova.
+    let inPassaggio = false, partita = 0;
+
+    function suono(giusta) {
+        if (!window.AudioSintetico) return;
+        if (giusta) window.AudioSintetico.dingPositivo(); else window.AudioSintetico.tonoNeutro();
+    }
+
+    // Casella con figura: pittogramma ISO 7010 del cartello o campione del colore
+    // dell'allerta, sempre accanto alla parola (la figura non sostituisce il testo).
+    function riempiCasella(el, testo, pair) {
+        el.textContent = '';
+        if (pair && pair.iso) {
+            const img = document.createElement('img');
+            img.src = '/pittogrammi/iso7010/' + pair.iso + '.svg';
+            img.alt = '';
+            img.className = 'match-iso';
+            el.appendChild(img);
+        } else if (pair && pair.colore) {
+            const c = document.createElement('span');
+            c.className = 'match-colore';
+            c.style.backgroundColor = pair.colore;
+            c.setAttribute('aria-hidden', 'true');
+            el.appendChild(c);
+        }
+        const t = document.createElement('span');
+        t.textContent = testo;
+        el.appendChild(t);
+    }
 
     // Mappa titolo categoria → pagina teoria del sito
     const TEORIA_CAT = {
@@ -143,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
         categories.forEach(cat => {
             const col = document.createElement('div');
             col.className = 'col-6 col-md-3';
-            col.innerHTML = '<div class="cat-card" role="button" tabindex="0"><span class="cat-icon">' + cat.icon + '</span><span class="cat-title">' + cat.title + '</span></div>';
+            col.innerHTML = '<div class="cat-card" role="button" tabindex="0"><span class="cat-icon" aria-hidden="true"><i class="bi ' + cat.icon + '"></i></span><span class="cat-title">' + cat.title + '</span></div>';
             const catCard = col.querySelector('.cat-card');
             catCard.addEventListener('click', () => startCategory(cat));
             catCard.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); startCategory(cat); } });
@@ -156,13 +187,13 @@ document.addEventListener('DOMContentLoaded', () => {
         gameScreen.classList.remove('hide');
         catTitle.textContent = cat.title;
         currentCat = cat;
-        matched = 0; errors = 0; selectedLeft = null;
+        matched = 0; errors = 0; selectedLeft = null; inPassaggio = false; partita++;
         total = cat.pairs.length;
         matchedCount.textContent = 0;
         matchedTotal.textContent = total;
         gameFeedback.classList.add('hide');
 
-        const leftItems = shuffle(cat.pairs.map((p, i) => ({ id: i, text: p.left })));
+        const leftItems = shuffle(cat.pairs.map((p, i) => ({ id: i, text: p.left, pair: p })));
         const rightItems = shuffle(cat.pairs.map((p, i) => ({ id: i, text: p.right })));
 
         leftCol.innerHTML = '';
@@ -171,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
         leftItems.forEach(item => {
             const el = document.createElement('div');
             el.className = 'match-item';
-            el.textContent = item.text;
+            riempiCasella(el, item.text, item.pair);
             el.dataset.id = item.id;
             el.dataset.side = 'left';
             el.setAttribute('role', 'button');
@@ -196,7 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function selectItem(el, side) {
-        if (el.classList.contains('matched')) return;
+        if (inPassaggio || el.classList.contains('matched')) return;
 
         if (side === 'left') {
             leftCol.querySelectorAll('.match-item').forEach(e => e.classList.remove('selected'));
@@ -210,16 +241,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 el.classList.add('matched');
                 matched++;
                 matchedCount.textContent = matched;
+                suono(true);
                 gameFeedback.className = 'game-feedback correct';
                 gameFeedback.textContent = 'Giusto!';
                 gameFeedback.classList.remove('hide');
                 if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
                 selectedLeft = null;
                 if (matched === total) {
-                    setTimeout(showEnd, 800);
+                    inPassaggio = true;
+                    const questa = partita;
+                    setTimeout(() => { if (questa === partita) showEnd(); }, 800);
                 }
             } else {
                 errors++;
+                inPassaggio = true;
+                suono(false);
                 el.classList.add('wrong-flash');
                 selectedLeft.classList.add('wrong-flash');
                 gameFeedback.className = 'game-feedback wrong';
@@ -229,25 +265,29 @@ document.addEventListener('DOMContentLoaded', () => {
                     const t = TEORIA_CAT[currentCat.title] || { url: '/rischi-prevenzione/', titolo: 'rischi e prevenzione' };
                     window.GameCoach.hint('Pensa al collegamento più diretto. La pagina ' + t.titolo + ' del sito ti dà gli abbinamenti giusti.', t.url);
                 }
+                const questa = partita;
                 setTimeout(() => {
+                    if (questa !== partita) return;
                     el.classList.remove('wrong-flash');
                     if (selectedLeft) selectedLeft.classList.remove('wrong-flash', 'selected');
                     selectedLeft = null;
+                    inPassaggio = false;
                 }, 600);
             }
         }
     }
 
     function showEnd() {
+        if (!endScreen.classList.contains('hide')) return;
         gameScreen.classList.add('hide');
         endScreen.classList.remove('hide');
         if (errors === 0) { endMsg.textContent = 'Perfetto! Tutti abbinati senza errori!'; }
-        else if (errors <= 3) { endMsg.textContent = 'Bravo! Solo ' + errors + ' errore' + (errors > 1 ? 'i' : '') + '.'; }
+        else if (errors <= 3) { endMsg.textContent = 'Bravo! Solo ' + errors + ' error' + (errors > 1 ? 'i' : 'e') + '.'; }
         else { endMsg.textContent = 'Fatto! Hai commesso ' + errors + ' errori. Riprova per migliorare!'; }
         var punti = Math.max(0, total - errors);
         if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('abbina-impara', punti, total, '#end-screen');
     }
 
-    anotherBtn.addEventListener('click', renderCategories);
+    anotherBtn.addEventListener('click', () => { partita++; inPassaggio = false; renderCategories(); });
     renderCategories();
 });

@@ -3,6 +3,7 @@ title: "Maltempo al Sud: oltre 500 millimetri di pioggia in Calabria, Sardegna e
 date: 2026-01-21
 description: "Dal 18 gennaio alcune stazioni superano i 500 millimetri di pioggia in tutte e tre le regioni. Il picco a San Sostene (Catanzaro): 569,9 millimetri in 72 ore."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-01-21-maltempo-sud-oltre-500-millimetri.webp"

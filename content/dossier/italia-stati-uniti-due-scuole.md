@@ -103,7 +103,7 @@ Costi, contratti, rimborsi. In un sistema dove i fondi si aprono con una dichiar
 {{< /dossier-hotspot >}}
 
 {{< dossier-scena id="augustus" image="/images/dossier/italia-tendopoli-aquila.webp" alt="Campo di accoglienza della Protezione Civile dopo un terremoto: tende, un gazebo bianco e volontari in divisa gialla fluorescente, con uno striscione «Provincia di Rovigo — Servizio Protezione Civile»" align="top" kicker="Italia · il Metodo Augustus" title="Le funzioni<br>di supporto" credito="Foto: Trevi.zz · CC BY-SA 4.0, via Wikimedia Commons · L'Aquila 2009" >}}
-L'Italia organizza l'emergenza per **funzioni di supporto**, un'idea nata con il **Metodo Augustus** (1997), che si ispirò proprio all'esperienza della FEMA ma scelse una strada diversa: non una catena di comando, ma una rete di funzioni. Oggi il riferimento è la Direttiva del Presidente del Consiglio dei ministri del 30 aprile 2021, che ha superato quel metodo.
+L'Italia organizza l'emergenza per **funzioni di supporto**, un'idea nata con il **Metodo Augustus** (1997), che si ispirò proprio all'esperienza della FEMA ma scelse una strada diversa: non una catena di comando, ma una rete di funzioni. Oggi il riferimento è la Direttiva del Presidente del Consiglio dei ministri del 30 aprile 2021, che ha aggiornato nomi ed elenco delle funzioni.
 
 Ogni funzione è un settore — con un **referente** che la tiene viva **in tempo di pace** e la coordina in emergenza. La Direttiva del 2021 ne elenca **sedici**, tra cui assistenza alla popolazione; sanità e assistenza sociale; logistica; telecomunicazioni d'emergenza; servizi essenziali; censimento danni e rilievo dell'agibilità; **volontariato**; stampa e comunicazione. Non le numera: ogni Comune sceglie nel proprio Piano quali attivare e può accorparle.
 
@@ -111,7 +111,7 @@ Il nome viene da una massima attribuita all'imperatore Augusto: *il valore della
 {{< /dossier-scena >}}
 
 {{< dossier-dati id="augustus-dati" image="/images/dossier/italia-tendopoli-aquila.webp" alt="Campo della Protezione Civile dopo un terremoto" >}}
-{{< dossier-dato to="1997" label="L'anno del **Metodo Augustus**, primo schema di pianificazione per **funzioni di supporto**, ispirato alla FEMA e oggi superato dalla Direttiva del 2021" >}}
+{{< dossier-dato to="1997" label="L'anno del **Metodo Augustus**, primo schema di pianificazione per **funzioni di supporto**, ispirato alla FEMA e aggiornato dalla Direttiva del 2021" >}}
 {{< dossier-dato to="16" label="Le **funzioni di supporto** elencate dalla Direttiva del 2021, dal volontariato alla sanità, dalla logistica alle telecomunicazioni: il Comune sceglie quali attivare nel **COC**" >}}
 {{< dossier-dato to="5" label="Le **aree funzionali** dell'ICS americano. Due grammatiche diverse — per funzioni o per comando — verso lo stesso scopo: coordinare" >}}
 {{< /dossier-dati >}}

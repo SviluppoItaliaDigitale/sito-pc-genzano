@@ -3,6 +3,7 @@ title: "Neve e ghiaccio: prepararsi per l'inverno rigido"
 date: 2026-12-02
 description: "A Genzano di Roma nevica raramente ma non è impossibile. Come comportarsi se arriva neve o ghiaccio su strade e tetti."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-02-neve-e-ghiaccio-preparazione.webp"
@@ -14,12 +15,12 @@ draft: false
 versione_facile: "2026-12-02-neve-e-ghiaccio-preparazione-facile"
 ---
 
-A **Genzano di Roma**, **430 metri** slm, la **neve** in inverno è **rara** ma non impossibile. Negli ultimi decenni ricordiamo febbraio 2012 e febbraio 2018 con nevicate significative. Il **ghiaccio** notturno è invece **più frequente**. Come prepararsi e cosa fare.
+A **Genzano di Roma**, **458 metri** s.l.m., la **neve** in inverno è **rara** ma non impossibile. Negli ultimi decenni ricordiamo febbraio 2012 e febbraio 2018 con nevicate significative. Il **ghiaccio** notturno è invece **più frequente**. Come prepararsi e cosa fare.
 
 ## Il contesto climatologico
 
 ### Genzano e neve
-- **quota**: 430 m slm;
+- **quota**: 458 m s.l.m. (centro del comune, ISTAT 2021);
 - **media** giorni di neve all'anno: 1-3;
 - **accumulo** medio: 5-15 cm per evento;
 - **tendenza** attuale: nevicate più rare ma più intense quando avvengono.
@@ -85,7 +86,7 @@ A **Genzano di Roma**, **430 metri** slm, la **neve** in inverno è **rara** ma 
 ### Casa
 - **riscaldamento** al giusto livello (non massimo sprecato);
 - **temperatura** interna consigliata 18-20 °C;
-- **monossido carbonio**: monitoraggio continuo con rilevatori;
+- **monossido di carbonio**: monitoraggio continuo con rilevatori;
 - **stufe alternative** solo se omologate;
 - **mai** bracieri, fornelli gas non ventilati, barbecue in casa.
 
@@ -100,10 +101,10 @@ In Italia, la **responsabilità** dello sgombero neve/ghiaccio davanti alla prop
 - **rispettare** spazi di accessibilità (rampe, passi carrabili).
 
 ### Tetti
-- **verificare** carico neve: se eccessivo può cedere soffitti leggeri;
+- **verificare** carico di neve: se eccessivo può cedere soffitti leggeri;
 - **non salire** sul tetto per pulire (rischio caduta);
 - **ditte specializzate** se necessario;
-- **grondaie** possono fratturarsi per peso ghiaccio.
+- **grondaie** possono fratturarsi per il peso del ghiaccio.
 
 ### Rami caduti o pericolanti
 - **segnalare** al Comune o **112** se rischio per persone o cose;
@@ -162,7 +163,7 @@ In Italia, la **responsabilità** dello sgombero neve/ghiaccio davanti alla prop
 
 ### Caduta per ghiaccio
 - **non muovere** ferito se sospetto trauma colonna;
-- **112** se frattura sospetta o perdita coscienza;
+- **112** se frattura sospetta o perdita di coscienza;
 - **riscaldare** delicatamente se ipotermia lieve;
 - **non** strofinare parti congelate.
 
@@ -175,9 +176,9 @@ In caso di nevicata significativa:
 - **attività** didattiche a distanza possibili;
 - **ricorso** a genitori per assistenza bambini.
 
-## PC e emergenze neve
+## PC ed emergenze neve
 
-In caso di nevicata il Comune può attivare il Gruppo Comunale. Tra i [mezzi del Gruppo](/chi-siamo/) c'è un Mercedes Atego attrezzato con spazzaneve e spargisale. I volontari, quando attivati, possono supportare le persone fragili (sole, anziane, con disabilità). Per le emergenze si chiama il **112**.
+In caso di nevicata il Comune può attivare il Gruppo Comunale. Tra i [mezzi del Gruppo](/chi-siamo/) c'è un Mercedes Atego attrezzato con spazzaneve e spargisale. I volontari, quando attivati, possono supportare le persone con fragilità (sole, anziane, con disabilità). Per le emergenze si chiama il **112**.
 
 ## Cose da non fare
 

@@ -3,6 +3,7 @@ title: "Commemorazione dei defunti: memoria e cura collettiva"
 date: 2026-11-02
 description: "Il 2 novembre è una giornata di raccolta collettiva. Anche la Protezione Civile riconosce il valore della cura della memoria."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-02-commemorazione-defunti-cultura-lutto.webp"

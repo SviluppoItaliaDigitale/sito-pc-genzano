@@ -1,0 +1,12 @@
+{{- /* Campo del nominativo per le pagine della stampa 3D (shortcode stampa3d). Parametri: n (nominativi), etichetta, pulsante. */ -}}
+<form class="s3d-form" data-s3d="form" novalidate>
+  <label for="s3d-numero" class="form-label s3d-etichetta">{{ .etichetta }}</label>
+  <p id="s3d-aiuto" class="s3d-aiuto">Solo il numero: per {{ .n.prefisso }} 57 scrivi 57. Va bene un numero da {{ .n.primo }} a {{ .n.ultimo }}. Il sito lo ricorda su questo dispositivo, così lo ritrovi in tutti gli oggetti.</p>
+  <div class="s3d-riga">
+    <span class="s3d-prefisso" aria-hidden="true">{{ .n.prefisso }}</span>
+    <input type="text" class="form-control form-control-lg s3d-campo" id="s3d-numero" name="numero" inputmode="numeric" autocomplete="off" maxlength="12" aria-describedby="s3d-aiuto s3d-errore">
+    <button type="submit" class="btn btn-primary btn-lg s3d-cerca">{{ .pulsante }}</button>
+  </div>
+  <p id="s3d-errore" class="s3d-errore" role="alert"></p>
+  <p class="s3d-stato" data-s3d="stato" role="status"></p>
+</form>

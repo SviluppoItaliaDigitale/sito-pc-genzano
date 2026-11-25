@@ -3,6 +3,7 @@ title: "Attività al chiuso in estate: alternative sicure al caldo esterno"
 date: 2026-07-20T00:01:00+02:00
 description: "Nelle ore più calde è saggio stare al riparo. Luoghi pubblici climatizzati, attività per bambini e anziani: una mappa delle alternative al caldo esterno."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-20-attivita-chiuso-estate-alternative-sicure.webp"

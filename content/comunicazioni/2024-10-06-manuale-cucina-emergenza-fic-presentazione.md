@@ -3,6 +3,7 @@ title: "La Federazione Italiana Cuochi presenta il Manuale di Cucina in Emergenz
 date: 2024-10-06
 description: "Al Dipartimento della Protezione Civile il DSEFIC-FIC ha presentato il primo manuale operativo per la gestione delle cucine da campo."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2024-10-06-manuale-cucina-emergenza-fic-presentazione.webp"

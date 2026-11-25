@@ -3,6 +3,7 @@ title: "Previsioni meteo e bollettini di allerta: come funziona il sistema"
 date: 2026-04-20T00:01:00+02:00
 description: "Dai satelliti ai supercomputer, dai Centri Funzionali ai codici colore: come nasce un bollettino di Protezione Civile e come leggerlo."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-20-previsioni-meteo-bollettini-come-funzionano.webp"

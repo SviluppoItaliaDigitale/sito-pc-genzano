@@ -3,6 +3,7 @@ title: "Mareggiate: quando il mare invade la costa e che cosa fare"
 date: 2026-10-18T00:02:00+02:00
 description: "Vento, bassa pressione e marea possono spingere il mare oltre la spiaggia. Come si forma una mareggiata, come arriva l'avviso e come comportarsi sulla costa."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-18-mareggiate-allagamenti-costieri-cosa-fare.webp"

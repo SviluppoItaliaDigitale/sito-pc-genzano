@@ -3,6 +3,7 @@ title: "Giornata mondiale delle vittime della strada"
 date: 2026-11-17T00:01:00+01:00
 description: "Ogni anno la terza domenica di novembre ricorda le vittime di incidenti stradali. Numeri, fatti, prevenzione."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-17-giornata-vittime-strada.webp"

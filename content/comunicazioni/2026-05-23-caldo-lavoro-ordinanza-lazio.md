@@ -3,6 +3,7 @@ title: "Caldo e lavoro: stop ai lavori all'aperto nelle ore più calde in tutto 
 date: 2026-05-23T00:03:00+02:00
 description: "La Regione Lazio vieta il lavoro all'aperto dalle 12:30 alle 16 nei giorni a rischio alto, fino al 15 settembre 2026. Cosa prevede l'ordinanza e chi protegge."
 badge: "Prevenzione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-23-caldo-lavoro-ordinanza-lazio.webp"

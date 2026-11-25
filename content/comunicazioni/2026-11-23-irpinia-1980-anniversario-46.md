@@ -3,6 +3,7 @@ title: "23 novembre 1980: 46 anni dal terremoto dell'Irpinia"
 date: 2026-11-23T00:01:00+01:00
 description: "46 anni dal sisma che cambiò la Protezione Civile italiana. Irpinia 1980, un evento chiave nella storia del sistema nazionale."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-23-irpinia-1980-anniversario-46.webp"

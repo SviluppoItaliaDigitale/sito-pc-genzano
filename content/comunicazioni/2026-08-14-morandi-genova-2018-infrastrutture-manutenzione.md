@@ -4,6 +4,7 @@ date: 2026-08-14T00:02:00+02:00
 description: "Alle 11:36 del 14 agosto 2018 una sezione di 250 metri del Ponte Morandi di Genova crollava trascinando con sé pila 9 e gli stralli di sostegno."
 
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-14-morandi-genova-2018-infrastrutture-manutenzione.webp"

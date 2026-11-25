@@ -52,7 +52,7 @@ Anche gli standard internazionali danno un metodo: la [ISO 14090](/standard-iso/
 Per i Castelli Romani l'adattamento non è teoria: è la rilettura dei rischi che già conosciamo.
 
 - **Caldo**: anche il microclima collinare si scalda, e le giornate con almeno 30 °C sono più che raddoppiate fra il decennio 2005-2014 e il 2016-2025. Le [ondate di calore](/rischi-prevenzione/ondate-di-calore/) diventano un appuntamento stagionale, non un'anomalia.
-- **Incendi boschivi**: estati più calde e secche aumentano i giorni con condizioni favorevoli agli incendi durante la campagna AIB (giugno-settembre). Cosa fare è nella pagina [rischio incendio](/rischi-prevenzione/rischio-incendio/); come nasce un incendio nel [catalogo dei rischi](/conoscere/catalogo-dei-rischi/rischio-incendio/).
+- **Incendi boschivi**: estati più calde e secche aumentano i giorni con condizioni favorevoli agli incendi durante la campagna AIB (nel 2026 dal 15 giugno al 15 ottobre). Cosa fare è nella pagina [rischio incendio](/rischi-prevenzione/rischio-incendio/); come nasce un incendio nel [catalogo dei rischi](/conoscere/catalogo-dei-rischi/rischio-incendio/).
 - **Temporali intensi**: un'atmosfera più calda trattiene più vapore e può alimentare rovesci più concentrati e alluvioni-lampo; per le raffiche dei temporali la tendenza non è ancora chiara. I comportamenti sono nella pagina [temporali intensi](/rischi-prevenzione/temporali-intensi/).
 - **Siccità**: la pioggia che cade tutta insieme ricarica peggio suolo e falde, e le estati più asciutte allungano i periodi senz'acqua. È il «rischio lento» che spieghiamo nella scheda [rischio da deficit idrico](/conoscere/catalogo-dei-rischi/rischio-siccita/) e nella pagina operativa [siccità](/rischi-prevenzione/siccita/).
 

@@ -84,7 +84,7 @@ in calendario prima di cominciare la successiva.
   dopo due tentativi si possono rimettere in coda per un **terzo tentativo** con una sola
   pagina come fonte (`parole: []`, niente `ufficiali`) e le `istruzioni_extra` già scritte;
   il motivo dello scarto resta in `motivo_precedente`. Le aree di attesa restano scartate.
-- `stato: rimandata`: tema fuori stagione (caldo, incendi boschivi), non si prende finché
+- `stato: rimandata`: tema fuori stagione (incendi boschivi; il caldo era già in calendario), non si prende finché
   non torna `da-fare`.
 - Uscite saltate per le feste: `DATE_SALTATE` in `pubblica-puntata.py` e
   `controlla-magazzino.py` (25/12/2026 e 01/01/2027).

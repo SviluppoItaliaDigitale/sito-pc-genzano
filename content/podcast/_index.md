@@ -66,4 +66,4 @@ Il 5 novembre 2026 abbiamo tolto dal sito tutte le puntate precedenti, perché i
 
 ## Altri materiali
 
-- [Materiali pronti da scaricare](/risorse-pronte/): video, infografiche e presentazioni divisi per tema.
+- [Materiali pronti da scaricare](/risorse-pronte/): video, infografiche e presentazioni per la classe, divisi per tema.

@@ -3,6 +3,7 @@ title: "26 giugno: Giornata contro la droga e resilienza di comunità"
 date: 2026-06-21
 description: "La Giornata internazionale contro la droga è un'occasione per riflettere sul legame tra dipendenze, fragilità sociale e capacità di risposta alle emergenze."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-21-giornata-contro-droga-resilienza-comunita.webp"

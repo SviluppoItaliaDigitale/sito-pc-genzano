@@ -3,6 +3,7 @@ title: "Antincendio boschivo: dal triangolo del fuoco agli attrezzi manuali, la 
 date: 2026-04-11
 description: "Le basi dell'antincendio boschivo: combustione, tipi di incendio, attacco diretto e indiretto, attrezzature dal flabello al rastro, sicurezza degli operatori."
 badge: "Formazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-11-antincendio-boschivo-triangolo-fuoco-attrezzature-tecniche-attacco.webp"

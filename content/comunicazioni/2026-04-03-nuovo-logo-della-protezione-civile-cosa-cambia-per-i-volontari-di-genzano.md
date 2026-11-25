@@ -3,6 +3,7 @@ title: "Nuovo logo della Protezione Civile: cosa cambia per i volontari di Genza
 date: 2026-04-03
 description: "Il Dipartimento della Protezione Civile ha adottato una nuova identità visiva. Ecco cosa cambia per il Gruppo di Genzano di Roma."
 badge: "Comunicazione"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-03-nuovo-logo-della-protezione-civile-cosa-cambia-per-i-volontari-di-genzano.webp"

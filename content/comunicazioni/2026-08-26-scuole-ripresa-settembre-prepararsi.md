@@ -3,6 +3,7 @@ title: "Scuole di Genzano di Roma: riprendere a settembre con un Piano di Emerge
 date: 2026-08-26T00:01:00+02:00
 description: "A settembre riaprono le scuole. È il momento giusto per verificare Piani di Emergenza, prove di evacuazione, referenti di sicurezza."
 badge: "Prevenzione"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-26-scuole-ripresa-settembre-prepararsi.webp"

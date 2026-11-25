@@ -85,14 +85,12 @@
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/da-dove-comincio/" role="menuitem"><span>Da dove comincio?</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/cosa-fare-adesso/" role="menuitem"><span>Cosa Fare Adesso</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/allerte-meteo/" role="menuitem"><span>Allerte Meteo</span></a></li>' +
-                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/cartina-meteo-italia/" role="menuitem"><span>Cartina meteo Italia</span></a></li>' +
-                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/mappe-meteo-professionali/" role="menuitem"><span>Mappe meteo professionali</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/rischi-prevenzione/" role="menuitem"><span>Rischi e Prevenzione</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/cartografia/" role="menuitem"><span>Cartografia</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/numeri-utili/" role="menuitem"><span>Numeri Utili</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/piano-familiare/" role="menuitem"><span>Piano Familiare</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/kit-calamita/" role="menuitem"><span>Kit pronti per situazioni vulnerabili</span></a></li>' +
-                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/cruscotto/" role="menuitem"><span>Cruscotto del territorio</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/cruscotto/" role="menuitem"><span>Cruscotto e dati in tempo reale</span></a></li>' +
                   '</ul></div></div>' +
                 '</li>' +
                 '<li class="nav-item dropdown" role="none">' +
@@ -133,6 +131,7 @@
                   '</a>' +
                   '<div class="dropdown-menu" aria-labelledby="navDropdown-volontariato"><div class="link-list-wrapper"><ul class="link-list" role="menu">' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/diventa-volontario/" role="menuitem"><span>Diventa Volontario</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/volontari/" role="menuitem"><span>Formazione dei volontari</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/chi-siamo/" role="menuitem"><span>Chi Siamo</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/campagna-volontari/" role="menuitem"><span>La campagna social</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/per-gli-enti/" role="menuitem"><span>Per gli enti e le scuole</span></a></li>' +
@@ -201,8 +200,6 @@
                 '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/piano-emergenza/" style="color:rgba(255,255,255,0.85);">Piano di Emergenza</a></li>' +
                 '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/piano-familiare/" style="color:rgba(255,255,255,0.85);">Piano Familiare</a></li>' +
                 '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/allerte-meteo/" style="color:rgba(255,255,255,0.85);">Allerte Meteo</a></li>' +
-                '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/cartina-meteo-italia/" style="color:rgba(255,255,255,0.85);">Cartina meteo Italia</a></li>' +
-                '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/mappe-meteo-professionali/" style="color:rgba(255,255,255,0.85);">Mappe meteo professionali</a></li>' +
                 '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/area-download/" style="color:rgba(255,255,255,0.85);">Area Download</a></li>' +
                 '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/cartografia/" style="color:rgba(255,255,255,0.85);">Cartografia Operativa</a></li>' +
                 '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/cosa-fare-adesso/" style="color:rgba(255,255,255,0.85);">Cosa Fare Adesso</a></li>' +
@@ -308,6 +305,7 @@
       '</header>' +
       '<div class="a11y-dialog-body">' +
         '<p class="a11y-intro">Personalizza la lettura del sito. Le tue scelte vengono ricordate sul tuo dispositivo.</p>' +
+        '<p class="a11y-aiuto"><i class="bi bi-chat-dots-fill me-2" aria-hidden="true"></i>Non sai che cosa fare? Apri l\'<a href="' + SITE_URL + '/assistente/">Assistente virtuale</a>: ti guida con domande semplici.</p>' +
         '<fieldset class="a11y-section">' +
           '<legend class="a11y-section-title"><i class="bi bi-fonts me-2" aria-hidden="true"></i>Testo</legend>' +
           '<div class="a11y-control"><span class="a11y-control-label" id="a11yLblTextSize">Dimensione del testo</span>' +
@@ -567,6 +565,7 @@
     // Si attiva SOLO se la pagina ha marker tipici di un'app interattiva
     // (schermate intro/game/end). Esclude pagine hub e statiche.
     aggiungiPulsanteEsciGioco();
+    caricaSuoniGioco();
 
     // Riquadro «Pronto per la LIM» nei giochi, nei quiz e in Abili a proteggere (01/11/2026).
     aggiungiProntoLim();
@@ -585,6 +584,7 @@
     var marker = document.querySelector(
       '#intro, #intro-screen, #game, #game-screen, #end, #end-screen, ' +
       '#select-screen, #game-card, #scenario-box, .gioco-fine, ' +
+      '#start-screen, #quiz-screen, #results-screen, .gsp, ' +
       '.scena-corrente, [data-gioco], .game-container'
     );
     if (!marker) return;
@@ -602,62 +602,157 @@
     esci.href = menuHref;
     esci.setAttribute('aria-label', 'Esci dal gioco e torna al menu');
     esci.innerHTML = '<i class="bi bi-x-lg" aria-hidden="true"></i> <span class="gioco-esci-label">Torna al menu</span>';
-    esci.style.cssText = [
-      'background: #003366',
-      'color: #ffffff',
-      'text-decoration: none',
-      'padding: 0.55rem 1rem',
-      'border-radius: 24px',
-      'font-weight: 600',
-      'font-size: 0.95rem',
-      'box-shadow: 0 3px 10px rgba(0,0,0,0.25)',
-      'display: inline-flex',
-      'align-items: center',
-      'gap: 0.5rem',
-      'border: 2px solid #ffffff'
-    ].join(';');
-
     if (!document.getElementById('gioco-esci-btn-styles')) {
       var stile = document.createElement('style');
       stile.id = 'gioco-esci-btn-styles';
+      // Barra del gioco (23/11/2026): striscia blu del Gruppo che resta in cima allo
+      // schermo mentre si gioca, con il nome del gioco e i comandi. Occupa uno spazio
+      // suo: prima i comandi galleggiavano in alto a destra e coprivano parti del gioco
+      // (pulsanti del Cruciverba, contatore del Labirinto, «ricomincia» del Memory).
       stile.textContent = ''
-        + '#gioco-esci-btn:hover, #gioco-esci-btn:focus {'
-        + '  background: #002244 !important;'
-        + '  outline: 3px solid #ffbe2e;'
-        + '  outline-offset: 2px;'
-        + '}'
-        + '#gioco-esci-btn .gioco-esci-label, #gioco-schermo-btn .gioco-esci-label { white-space: nowrap; }'
-        + '#gioco-comandi { position: fixed; top: 1rem; right: 1rem; z-index: 9999; display: flex; flex-wrap: wrap; justify-content: flex-end; }'
+        + '#gioco-barra { position: -webkit-sticky; position: sticky; top: 0; z-index: 1020; background: #003366;'
+        + '  color: #ffffff; box-shadow: 0 3px 10px rgba(0,0,0,0.25); border-bottom: 3px solid #ffbe2e; }'
+        + '#gioco-barra .gioco-barra-interno { max-width: 1320px; margin: 0 auto; padding: 0.45rem 1rem; display: flex;'
+        + '  align-items: center; justify-content: space-between; }'
+        + '#gioco-barra .gioco-barra-titolo { font-weight: 700; font-size: 1.05rem; margin: 0 0.75rem 0 0; min-width: 0;'
+        + '  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #ffffff; }'
+        + '#gioco-barra .gioco-barra-titolo i { color: #ffbe2e; margin-right: 0.5rem; }'
+        + '#gioco-barra .gioco-barra-sinistra { display: flex; align-items: center; min-width: 0; }'
+        + '#gioco-barra .gioco-barra-lim { display: inline-flex; align-items: center; flex-shrink: 0; min-height: 44px;'
+        + '  padding: 0 0.8rem; margin-right: 0.5rem; border-radius: 24px; background: #15803d; color: #ffffff;'
+        + '  font-size: 0.85rem; font-weight: 700; text-decoration: none; white-space: nowrap; }'
+        + '#gioco-barra .gioco-barra-lim i { margin-right: 0.4rem; }'
+        + '#gioco-barra .gioco-barra-lim:hover, #gioco-barra .gioco-barra-lim:focus { background: #116b32; color: #ffffff;'
+        + '  outline: 3px solid #ffbe2e; outline-offset: 2px; }'
+        + '@media (max-width: 767.98px) { #gioco-barra .gioco-barra-lim { display: none; } }'
+        + '#gioco-comandi { display: flex; flex-wrap: nowrap; justify-content: flex-end; flex-shrink: 0; }'
         + '#gioco-comandi > * { margin-left: 0.5rem; min-height: 44px; }'
-        + '#gioco-schermo-btn { background: #ffffff; color: #003366; border: 2px solid #003366; padding: 0.55rem 1rem;'
-        + '  border-radius: 24px; font-weight: 600; font-size: 0.95rem; box-shadow: 0 3px 10px rgba(0,0,0,0.25);'
-        + '  display: inline-flex; align-items: center; cursor: pointer; font-family: inherit; }'
-        + '#gioco-schermo-btn i { margin-right: 0.5rem; }'
-        + '#gioco-schermo-btn:hover, #gioco-schermo-btn:focus { background: #e7f0fa; outline: 3px solid #ffbe2e; outline-offset: 2px; }'
-        + '@media (max-width: 480px) {'
-        + '  #gioco-esci-btn .gioco-esci-label, #gioco-schermo-btn .gioco-esci-label { display: none; }'
-        + '  #gioco-esci-btn, #gioco-schermo-btn { padding: 0.55rem 0.7rem !important; }'
-        + '  #gioco-schermo-btn i { margin-right: 0; }'
+        + '#gioco-comandi > a, #gioco-comandi > button { display: inline-flex; align-items: center; padding: 0.45rem 0.95rem;'
+        + '  border-radius: 24px; font-weight: 600; font-size: 0.95rem; font-family: inherit; cursor: pointer; line-height: 1.2;'
+        + '  text-decoration: none; border: 2px solid #ffffff; background: transparent; color: #ffffff; box-shadow: none; }'
+        + '#gioco-comandi > a { background: #ffffff; color: #003366; }'
+        + '#gioco-comandi i { margin-right: 0.45rem; }'
+        + '#gioco-comandi > a:hover, #gioco-comandi > a:focus { background: #e7f0fa; color: #003366; }'
+        + '#gioco-comandi > button:hover, #gioco-comandi > button:focus { background: rgba(255,255,255,0.15); }'
+        + '#gioco-comandi > *:focus { outline: 3px solid #ffbe2e; outline-offset: 2px; }'
+        + '#gioco-comandi .gioco-esci-label { white-space: nowrap; }'
+        + '@media (max-width: 767.98px) {'
+        + '  #gioco-comandi .gioco-esci-label { display: none; }'
+        + '  #gioco-comandi > a, #gioco-comandi > button { padding: 0.45rem 0.7rem; min-width: 44px; justify-content: center; }'
+        + '  #gioco-comandi i { margin-right: 0; }'
         + '}'
-        + '@media print { #gioco-comandi { display: none !important; } }';
+        + '@media print { #gioco-barra { display: none !important; } }';
       document.head.appendChild(stile);
     }
     var comandi = document.createElement('div');
     comandi.id = 'gioco-comandi';
-    var schermo = pulsanteSchermoIntero();
+    // Un gioco con il suo «Schermo intero» (Genzano si prepara: porta a tutto schermo
+    // solo la mappa) non ne riceve un secondo nella barra.
+    var schermo = document.querySelector('#gsp-schermo, [data-schermo-intero-proprio]') ? null : pulsanteSchermoIntero();
     if (schermo) comandi.appendChild(schermo);
     comandi.appendChild(esci);
-    document.body.appendChild(comandi);
-    // Sotto l'intestazione finché la si vede (così non copre Area Volontari, social e
-    // ricerca), in cima allo schermo appena si scorre: l'uscita resta sempre a portata.
-    var testata = document.querySelector('.it-header-wrapper, body > header, header:not(.a11y-dialog-header)');
-    var posiziona = function () {
-      var basso = testata ? testata.getBoundingClientRect().bottom : 0;
-      comandi.style.top = Math.max(16, basso + 12) + 'px';
+
+    var titoloGioco = '';
+    var h1 = document.querySelector('main h1') || document.querySelector('h1');
+    if (h1) titoloGioco = (h1.textContent || '').replace(/\s+/g, ' ').replace(/^\s+|\s+$/g, '');
+    if (!titoloGioco) titoloGioco = (document.title || '').split(/\s[—|-]\s/)[0];
+    var barra = document.createElement('div');
+    barra.id = 'gioco-barra';
+    barra.setAttribute('role', 'region');
+    barra.setAttribute('aria-label', 'Comandi del gioco');
+    var interno = document.createElement('div');
+    interno.className = 'gioco-barra-interno';
+    var titolo = document.createElement('p');
+    titolo.className = 'gioco-barra-titolo';
+    var icona = document.createElement('i');
+    icona.className = 'bi bi-controller';
+    icona.setAttribute('aria-hidden', 'true');
+    titolo.appendChild(icona);
+    titolo.appendChild(document.createTextNode(titoloGioco));
+    // Etichetta «Pronto per la LIM» sempre in vista durante la partita (23/11/2026):
+    // stessa promessa del riquadro nella pagina, verificata da scripts/check-lim.py.
+    var sinistra = document.createElement('div');
+    sinistra.className = 'gioco-barra-sinistra';
+    sinistra.appendChild(titolo);
+    var lim = document.createElement('a');
+    lim.className = 'gioco-barra-lim';
+    lim.href = SITE_URL + '/lim/';
+    lim.innerHTML = '<i class="bi bi-easel" aria-hidden="true"></i>Pronto per la LIM';
+    lim.title = 'Come usare i giochi sulla lavagna interattiva';
+    sinistra.appendChild(lim);
+    interno.appendChild(sinistra);
+    interno.appendChild(comandi);
+    barra.appendChild(interno);
+    var main = document.querySelector('main') || document.getElementById('main-content');
+    if (main && main.parentNode) main.parentNode.insertBefore(barra, main);
+    else document.body.insertBefore(barra, document.body.firstChild);
+    if (document.body.classList) document.body.classList.add('con-barra-gioco');
+    // Ciò che il gioco porta in vista (scrollIntoView, ancore) non finisce sotto la barra.
+    var spazioBarra = function () { document.documentElement.style.scrollPaddingTop = (barra.offsetHeight + 12) + 'px'; };
+    spazioBarra();
+    window.addEventListener('resize', spazioBarra);
+    avviaScorrimentoAlGioco(barra);
+  }
+
+  // Allo «Inizia» il gioco scorre fin sotto la barra (23/11/2026): sulla LIM a 1366x768
+  // intestazione, titolo e riquadri occupavano mezza altezza e la domanda restava in basso
+  // o fuori schermo. Scatta quando un tocco dentro la schermata iniziale la fa sparire.
+  // Scorrimento istantaneo: nessuna animazione (movimento ridotto e «Pausa animazioni»).
+  function avviaScorrimentoAlGioco(barra) {
+    // Schermate da cui si parte (intro, scelta, avvio) e schermate a passi (.screen):
+    // quando una sparisce dopo un tocco, si porta in vista quella che compare.
+    var INIZIALI = '#intro, #intro-screen, #start-screen, #select-screen, .screen, .gioco-intro, .schermata-iniziale';
+    var GIOCO = '#game, #game-screen, #quiz-screen, #story-screen, #game-card, #scenario-box, .game-container, .scena-corrente, [data-gioco]';
+    var visibile = function (el) { return !!(el && (el.offsetWidth || el.offsetHeight || el.getClientRects().length)); };
+    document.addEventListener('click', function (ev) {
+      var t = ev.target;
+      var iniziale = t && t.closest ? t.closest(INIZIALI) : null;
+      if (!iniziale) return;
+      setTimeout(function () {
+        if (visibile(iniziale)) return;
+        // Prima la schermata che ha preso il posto di quella iniziale (fratello visibile),
+        // poi i contenitori di gioco noti.
+        var fratelli = iniziale.parentNode ? iniziale.parentNode.children : [];
+        var candidati = [];
+        for (var f = 0; f < fratelli.length; f++) {
+          if (fratelli[f] !== iniziale && visibile(fratelli[f]) && !/^(SCRIPT|STYLE|NAV|H1)$/.test(fratelli[f].tagName)
+            && !(fratelli[f].className && /lim-pronto|inf-home|coach/.test(String(fratelli[f].className)))) {
+            candidati.push(fratelli[f]);
+            break;
+          }
+        }
+        var noti = document.querySelectorAll(GIOCO);
+        for (var n = 0; n < noti.length; n++) candidati.push(noti[n]);
+        for (var i = 0; i < candidati.length; i++) {
+          if (!visibile(candidati[i])) continue;
+          var y = candidati[i].getBoundingClientRect().top + (window.pageYOffset || 0) - barra.offsetHeight - 12;
+          window.scrollTo(0, Math.max(0, y));
+          return;
+        }
+      }, 120);
+    });
+  }
+
+  // Suoni dei giochi (23/11/2026): nei giochi di /giochi/ carica
+  // /giochi/assets/js/suoni-gioco.js, che aggiunge il pulsante «Suoni» ai comandi del
+  // gioco, la musica di fine partita e, nei giochi muti, un suono per la risposta giusta
+  // e per quella sbagliata. Il motore audio (audio-sintetico.js) si carica solo se il
+  // gioco non lo ha già: in quel caso il gioco ha suoni propri e non si raddoppiano.
+  function caricaSuoniGioco() {
+    if (!document.getElementById('gioco-comandi')) return;
+    var percorso = window.location.pathname;
+    var base = percorso.indexOf('/sito-pc-genzano/') === 0 ? '/sito-pc-genzano' : '';
+    if (percorso.replace(/^\/sito-pc-genzano/, '').indexOf('/giochi/') !== 0) return;
+    var suoniPropri = !!window.AudioSintetico;
+    var carica = function (src, poi) {
+      var sc = document.createElement('script');
+      sc.src = base + src;
+      sc.onload = poi;
+      document.body.appendChild(sc);
     };
-    posiziona();
-    window.addEventListener('scroll', posiziona, { passive: true });
-    window.addEventListener('resize', posiziona);
+    var avvia = function () { if (window.SuoniGioco) window.SuoniGioco.avvia(suoniPropri); };
+    var conSuoni = function () { carica('/giochi/assets/js/suoni-gioco.js', avvia); };
+    if (suoniPropri) conSuoni(); else carica('/giochi/assets/js/audio-sintetico.js', conSuoni);
   }
 
   // Riquadro «Pronto per la LIM» (regola lim-scuole.md delle regole del progetto, 01/11/2026): stesse

@@ -3,6 +3,7 @@ title: "Incendi domestici: cause più comuni e come prevenirli"
 date: 2026-05-13T00:01:00+02:00
 description: "La maggior parte degli incendi in Italia parte dalla cucina. Friggitrici, fornelli, elettrodomestici: cause e comportamenti corretti in caso di fiamma in casa."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-13-incendi-domestici-cucina-elettrodomestici.webp"
@@ -70,7 +71,7 @@ Un rilevatore di fumo a pile costa 10-20 euro, si attacca al soffitto con una vi
 
 ### Incendio in cucina con olio in fiamme
 
-- **Non gettare acqua**: provoca un'esplosione di olio bollente.
+- **Non gettare acqua**: fa schizzare l'olio bollente e allarga il fuoco.
 - **Non spostare la pentola**: sposti la fiamma e ti scotti.
 - **Spegni il fornello** se è sicuro avvicinarsi.
 - **Copri con un coperchio o una coperta antifiamma**.

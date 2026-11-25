@@ -3,6 +3,7 @@ title: "Monossido di carbonio: il killer silenzioso delle case italiane"
 date: 2026-10-02
 description: "Il monossido di carbonio è inodore, incolore e invisibile e può essere mortale. Come prevenirlo, riconoscere i sintomi e che cosa fare subito."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-02-monossido-carbonio-intossicazioni.webp"

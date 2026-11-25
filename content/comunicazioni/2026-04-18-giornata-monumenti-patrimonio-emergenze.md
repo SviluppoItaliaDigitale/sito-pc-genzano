@@ -3,6 +3,7 @@ title: "Giornata mondiale dei monumenti: tutela del patrimonio nelle emergenze"
 date: 2026-04-18T00:02:00+02:00
 description: "Il 18 aprile è la Giornata internazionale dei monumenti e dei siti. Proteggere il patrimonio culturale è parte integrante della Protezione Civile italiana."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-18-giornata-monumenti-patrimonio-emergenze.webp"

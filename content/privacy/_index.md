@@ -4,7 +4,7 @@ description: "Informativa sul trattamento dei dati personali e sull'uso dei cook
 layout: "single"
 toc: true
 tts: true
-dataUltimaRevisione: "2026-10-31"
+dataUltimaRevisione: "2026-11-24"
 ---
 
 Questa pagina spiega quali dati possono essere trattati durante la navigazione del sito e come sono gestiti cookie, widget esterni e strumenti interattivi.
@@ -89,9 +89,12 @@ Alcune funzioni ricordano le tue scelte nella memoria locale del browser (*local
 - le preferenze del pannello «Strumenti di accessibilità» e la velocità della lettura ad alta voce;
 - le pagine che salvi in [«I miei contenuti»](/i-miei-contenuti/);
 - i numeri e le caselle spuntate nel [calcolatore della scorta per 72 ore](/calcolatore-scorta/);
-- l'ultimo dato ricevuto dalle schede del cruscotto, mostrato se la fonte non risponde.
+- l'ultimo dato ricevuto dalle schede del cruscotto, mostrato se la fonte non risponde;
+- il numero del nominativo scritto nelle pagine della [stampa 3D](/stampa-3d/), finché non scegli «Non ricordarlo più».
 
 Si cancellano cancellando i dati del sito dalle impostazioni del browser; le pagine salvate si possono togliere anche dalla pagina «I miei contenuti».
+
+Nome e cognome che scrivi per personalizzare un oggetto della [stampa 3D](/stampa-3d/) non vengono salvati, nemmeno nel browser: il file con il nome si prepara sul tuo telefono o computer e nome e cognome non vengono inviati a nessuno. Chiudendo la pagina restano solo nel file che hai scaricato.
 
 ## Statistiche di visita anonime
 
@@ -138,7 +141,7 @@ Quando questo accade, il tuo browser contatta direttamente l'ente che pubblica i
 <tr><th scope="col">Pagina</th><th scope="col">Fonti contattate dal tuo browser</th></tr>
 </thead>
 <tbody>
-<tr><td><a href="/cruscotto/">Cruscotto del territorio</a></td><td>INGV, Dipartimento della Protezione Civile (radar), Open-Meteo, ARPA Lazio, ItaliaMeteo, ECMWF, EUMETSAT, NASA, USGS, Copernicus, OpenStreetMap.</td></tr>
+<tr><td><a href="/cruscotto/">Cruscotto e dati in tempo reale</a></td><td>INGV, Dipartimento della Protezione Civile (radar), Open-Meteo, ARPA Lazio, ItaliaMeteo, ECMWF, EUMETSAT, NASA, USGS, Copernicus, OpenStreetMap.</td></tr>
 <tr><td><a href="/allerte-meteo/">Allerte meteo</a></td><td>Radar del Dipartimento della Protezione Civile e sfondo cartografico OpenStreetMap.</td></tr>
 <tr><td><a href="/laboratorio-meteo/">Laboratorio meteo</a></td><td>Serie storiche Open-Meteo (dati ERA5).</td></tr>
 <tr><td><a href="/cartografia/">Cartografia operativa</a></td><td>Sfondo cartografico OpenStreetMap. La posizione è richiesta solo se premi «centra sulla mia posizione» e resta sul tuo dispositivo.</td></tr>

@@ -3,6 +3,7 @@ title: "Le zone di allerta del Lazio: come leggere il bollettino di criticità"
 date: 2026-05-07
 description: "Il Lazio è suddiviso in sette zone di allerta. Sapere in quale zona si trova Genzano di Roma."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-07-zone-allerta-lazio-come-leggere-bollettino.webp"

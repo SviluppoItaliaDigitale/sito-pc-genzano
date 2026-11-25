@@ -51,6 +51,11 @@
       display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(.6rem, 3vw, 1rem);
       width: 100%; max-width: 520px; margin: 0 auto;
     }
+    /* LIM e computer (23/11/2026): i quattro cartelli su una riga, cosi' a 1366x768
+       e 1024x768 domanda, cartelli e risposta di Tina si vedono senza scorrere. */
+    @media (min-width: 700px) {
+      .cartelli { grid-template-columns: repeat(4, minmax(0, 1fr)); max-width: 700px; }
+    }
     .cartello-btn {
       aspect-ratio: 1; width: 100%;
       border-radius: 20px; border: 4px solid transparent;
@@ -120,6 +125,8 @@
     }
     .progress-dots .dot.done { background: var(--inf-verde, #198754); }
     .progress-dots .dot.now  { background: var(--inf-blu, #003366); }
+    .inf-attribuzione { text-align: center; font-size: .8rem; color: #495057; margin: 1.5rem 0 0; }
+    .inf-attribuzione a { display: inline-block; padding: .4rem 0; color: #003366; }
   </style>
 </head>
 <body class="inf-body" data-coach-game="trova-cartello">
@@ -153,7 +160,7 @@
       <div class="round-up">
         <div class="stelle">⭐⭐⭐</div>
         <div class="titolo" id="round-up-titolo">Round 1 superato!</div>
-        <p class="mb-3">Pronto per altri 6 cartelli più difficili?</p>
+        <p class="mb-3">Pronto per altri 6 cartelli?</p>
         <button id="next-round" class="inf-big-btn" style="background:var(--inf-blu);"><i class="bi bi-arrow-right"></i> Round successivo</button>
       </div>
     </div>
@@ -168,10 +175,12 @@
         <a href="../index.html" class="inf-back"><i class="bi bi-arrow-left"></i> Altri giochi</a>
       </div>
     </div>
+    <p class="inf-attribuzione">Cartelli di sicurezza ISO 7010. Pittogrammi: Sergio Palao, <a href="/attribuzioni-pittogrammi/">ARASAAC (CC BY-NC-SA 4.0)</a>.</p>
   </main>
 
   <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
   <script src="/app-shared/site-chrome.js"></script>
+  <script src="/giochi/infanzia/assets/infanzia.js"></script>
   <script src="/giochi/assets/js/progressione.js"></script>
   <script src="/giochi/assets/js/attestato.js"></script>
   <script src="/giochi/assets/js/audio-sintetico.js"></script>
@@ -192,8 +201,8 @@
                    perche: 'Il fulmine giallo avvisa che lì c\'è la corrente elettrica: non toccare i cavi.' },
       scivolo:   { img: ISO  + 'pavimento-scivoloso.svg',     sfondo: 'sfondo-giallo', nome: 'attenzione: pavimento scivoloso',
                    perche: 'Il pavimento bagnato fa scivolare: cammina piano e con scarpe asciutte.' },
-      caduta:    { img: ISO  + 'pericolo-generico.svg',       sfondo: 'sfondo-giallo', nome: 'attenzione al rischio di caduta',
-                   perche: 'Il triangolo con il punto esclamativo dice "stai attento": qui si può cadere.' },
+      caduta:    { img: ISO  + 'pericolo-caduta.svg',       sfondo: 'sfondo-giallo', nome: 'attenzione al rischio di caduta',
+                   perche: 'Il triangolo giallo con la persona che cade dice "stai attento": qui si può cadere.' },
       fumo:      { img: ISO  + 'vietato-fumare.svg',          sfondo: 'sfondo-rosso',  nome: 'vietato fumare',
                    perche: 'I cartelli rotondi rossi sono divieti: qui non si può fumare perché può prendere fuoco.' },
       entrare:   { img: ISO  + 'vietato-pedoni.svg',          sfondo: 'sfondo-rosso',  nome: 'vietato entrare',
@@ -289,6 +298,9 @@
     var errors = 0;
     var domande = [];
     var roundIdx = 0;
+    // Doppio tocco sul pulsante che avvia una partita, un livello o un round: il secondo tocco
+    // non deve finire sulla risposta che compare sotto il dito. Per mezzo secondo si ignora.
+    var sbloccoAl = 0;
 
     function shuffle(arr) {
       var a = arr.slice();
@@ -302,6 +314,7 @@
     function avviaRound() {
       domande = shuffle(ROUNDS[roundIdx]);
       round = 0;
+      sbloccoAl = Date.now() + 500;
       endEl.classList.add('hide');
       roundUpEl.classList.add('hide');
       gameCard.classList.remove('hide');
@@ -363,30 +376,51 @@
       if (window.AudioSintetico) window.AudioSintetico.init();
     }
 
+    var inPassaggio = false;
+    // Esito visibile anche senza colori: bollino con spunta o croce (infanzia.css).
+    function segnaEsito(btn, ok) {
+      togliEsito(btn);
+      var s = document.createElement('span');
+      s.className = 'inf-esito' + (ok ? '' : ' no');
+      s.setAttribute('aria-hidden', 'true');
+      btn.appendChild(s);
+    }
+    function togliEsito(btn) {
+      var v = btn.querySelector('.inf-esito');
+      if (v) btn.removeChild(v);
+    }
+
     function scegli(id, btn) {
+      if (inPassaggio || Date.now() < sbloccoAl) return;
       var q = domande[round];
       if (id === q.target) {
+        inPassaggio = true;
         btn.classList.add('correct');
+        segnaEsito(btn, true);
         // Spiegazione didattica del cartello: 1 frase semplice (3-6 anni)
         // sul significato del simbolo, non solo la conferma.
         var perche = CATALOGO[id].perche || '';
         feedbackEl.innerHTML = 'Giusto! Hai trovato ' + CATALOGO[id].nome + '.' +
           (perche ? ' <small style="display:block;margin-top:.3rem;font-weight:400;color:#0f5132;">💡 ' + perche + '</small>' : '');
-        feedbackEl.style.color = '#198754';
+        if (window.InfInVista) window.InfInVista(feedbackEl);
+        feedbackEl.style.color = '#1E6B34';
         cartelliEl.querySelectorAll('button').forEach(function (b) { b.disabled = true; if (b !== btn) b.classList.add('dim'); });
-        if (window.AudioSintetico) window.AudioSintetico.tono({ freq: 659, durata: 0.18 });
+        if (window.AudioSintetico) window.AudioSintetico.dingPositivo();
         if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
         setTimeout(function () {
+          inPassaggio = false;
           round++;
           showRound();
         }, 2400);
       } else {
         errors++;
         btn.classList.add('wrong');
+        segnaEsito(btn, false);
         feedbackEl.textContent = 'Quasi! Riprova: cerca ' + CATALOGO[q.target].nome + '.';
-        feedbackEl.style.color = '#dc3545';
+        if (window.InfInVista) window.InfInVista(feedbackEl);
+        feedbackEl.style.color = '#B3261E';
         if (window.AudioSintetico) window.AudioSintetico.tonoNeutro();
-        setTimeout(function () { btn.classList.remove('wrong'); }, 500);
+        setTimeout(function () { btn.classList.remove('wrong'); togliEsito(btn); }, 900);
         if (window.GameCoach && window.GameCoach.hint) {
           window.GameCoach.hint('Verde = sicurezza (uscita, primo soccorso). Rosso = divieto. Giallo = attenzione. Blu = obbligo (casco, guanti).', '/pittogrammi/');
         }
@@ -421,8 +455,16 @@
       if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('trova-cartello', punti, totale, '#end');
     }
 
-    nextRoundBtn.addEventListener('click', function(){ roundIdx++; avviaRound(); });
-    restartBtn.addEventListener('click', start);
+    nextRoundBtn.addEventListener('click', function(){
+      // Doppio tocco: il secondo tocco non deve saltare un round né cercarne uno che non esiste.
+      if (roundUpEl.classList.contains('hide') || roundIdx >= ROUNDS.length - 1) return;
+      roundIdx++;
+      avviaRound();
+    });
+    restartBtn.addEventListener('click', function(){
+      if (endEl.classList.contains('hide')) return;
+      start();
+    });
     start();
   })();
   </script>

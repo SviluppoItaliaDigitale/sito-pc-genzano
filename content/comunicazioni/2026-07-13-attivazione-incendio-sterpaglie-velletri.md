@@ -3,6 +3,7 @@ title: "Incendio di sterpaglie a Velletri: oltre sei ore di intervento per la no
 date: 2026-07-13T00:02:00+02:00
 description: "La Sala Operativa regionale ha attivato il Gruppo con l'autobotte Mercedes Actros e la vasca mobile per elicotteri, a supporto dei Vigili del Fuoco."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-13-attivazione-incendio-sterpaglie-velletri.webp"

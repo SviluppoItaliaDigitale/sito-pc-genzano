@@ -3,6 +3,7 @@ title: "Ponte dell'Immacolata: viabilità, meteo e sicurezza"
 date: 2026-11-29
 description: "L'8 dicembre 2026 cade di martedì. Ponte lungo: come prepararsi con attenzione a traffico, meteo invernale e mercatini."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-29-ponte-immacolata-preparazione.webp"
@@ -21,7 +22,7 @@ L'**8 dicembre 2026** cade di **martedì**. Molti sfrutteranno il **5-8 dicembre
 - **5 dicembre** (sabato): partenze concentrate al mattino;
 - **6 dicembre** (domenica): traffico distribuito;
 - **7 dicembre** (lunedì): giornata-ponte con esodo verso le mete;
-- **8 dicembre** (martedì, festa Immacolata): punta di mercatini e visite;
+- **8 dicembre** (martedì, festa dell'Immacolata): punta di mercatini e visite;
 - **9 dicembre** (mercoledì): rientri.
 
 Il **ponte** è considerato l'**avvio** ufficiale della stagione natalizia turistica in Italia.
@@ -130,7 +131,7 @@ Durante il ponte:
 - **accompagnarli** se devono uscire (freddo, scivolamenti);
 - **riscaldamento** domestico garantito;
 - **scorte** alimentari e farmaceutiche adeguate;
-- **monossido carbonio**: controllo stufe e caldaie.
+- **monossido di carbonio**: controllo stufe e caldaie.
 
 ## Animali domestici
 

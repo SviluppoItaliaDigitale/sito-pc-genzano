@@ -3,6 +3,7 @@ title: "Where Are U: l'app del 112 che ti localizza in emergenza"
 date: 2026-04-27T00:02:00+02:00
 description: "Where Are U è l'app ufficiale del Numero Unico Europeo 112: invia automaticamente la tua posizione precisa alla Centrale Unica."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-27-app-where-are-u-112-localizzazione-emergenza.webp"

@@ -134,7 +134,7 @@ Il sito è progettato per rispettare le **WCAG 2.2 livello AA** e le linee guida
 ## <i class="bi bi-mortarboard-fill text-primary me-2" aria-hidden="true"></i>Per insegnanti e scuole {#faq-scuole}
 ### Avete materiale didattico gratuito?
 
-Sì. Sono disponibili kit didattici, schede stampabili, giochi educativi, storie e materiali inclusivi. Parti dalla pagina [Formazione e scuole](/formazione/) oppure dal cruscotto [Scuole: da dove cominciare](/formazione/scuole-da-dove-cominciare/).
+Sì. Sono disponibili kit didattici, schede stampabili, giochi educativi, storie e materiali inclusivi. Parti dalla pagina [Formazione e scuole](/formazione/) oppure dalla pagina [Scuole — parti da qui](/scuole/).
 
 ### I volontari vengono nelle scuole?
 

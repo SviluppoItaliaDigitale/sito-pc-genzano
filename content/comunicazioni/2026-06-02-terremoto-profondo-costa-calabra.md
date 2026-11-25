@@ -3,6 +3,7 @@ title: "Terremoto profondo Mw 6.1 al largo della Calabria, avvertito dal Lazio a
 date: 2026-06-02T00:02:00+02:00
 description: "Alle 0.12 l'INGV registra una scossa Mw 6.1 (ML 6.2) in mare, a oltre 250 km di profondità. Avvertita dal Lazio alla Sicilia, nessun danno segnalato."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-02-terremoto-profondo-costa-calabra.webp"

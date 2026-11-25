@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Missione cameretta — la mia stanza sicura se trema la terra</title>
+  <link rel="canonical" href="https://www.protezionecivilegenzano.it/formazione/schede-stampabili/missione-cameretta/">
+  <meta name="description" content="Scheda fotocopiabile per la scuola primaria: quattro missioni da fare a casa con un adulto per rendere più sicura la stanza dove si dorme in caso di terremoto. Che cosa può cadere, i mobili che fissa l'adulto, il posto dove ripararsi, la strada libera fino alla porta. Con disegno della stanza e vero o falso con soluzioni capovolte.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .mc { font-size: 0.95rem; line-height: 1.45; }
+    .mc p { margin: 0.35rem 0; }
+    .mc .scheda-h2 { margin: 0.65rem 0 0.25rem; }
+    .mc-missione { border: 1.5px solid var(--scheda-bordo); border-radius: 8px; padding: 0.45rem 0.7rem; margin: 0.4rem 0; break-inside: avoid; }
+    .mc-missione h3 { margin: 0 0 0.2rem; font-size: 1.02rem; color: var(--scheda-blu); }
+    .mc-missione h3 span { display: inline-block; min-width: 1.6rem; margin-right: 0.35rem; padding: 0 0.35rem; border-radius: 5px; background: var(--scheda-blu); color: #fff; text-align: center; }
+    .mc-missione ul { margin: 0.15rem 0; padding-left: 1.15rem; }
+    .mc-missione li { margin: 0.12rem 0; }
+    .mc-spunta { list-style: none; padding-left: 0 !important; columns: 2; column-gap: 1rem; }
+    .mc-spunta li { break-inside: avoid; }
+    .mc-spunta li::before { content: "☐ "; color: var(--scheda-blu); }
+    .mc-con-img { display: flex; gap: 0.7rem; align-items: flex-start; }
+    .mc-con-img img { width: 56px; height: 56px; flex-shrink: 0; }
+    .mc-adulto { margin-top: 0.4rem; padding: 0.45rem 0.7rem; background: #fff3cd; border-radius: 8px; border-left: 4px solid var(--scheda-oro); font-size: 0.9rem; }
+    .mc-paura { font-style: italic; }
+    .mc-legenda { list-style: none; padding: 0; margin: 0.25rem 0; display: flex; flex-wrap: wrap; gap: 0.3rem 1.2rem; font-size: 0.9rem; }
+    .mc-legenda strong { color: var(--scheda-blu); }
+    .mc .scheda-box-disegno { min-height: 9.5cm; margin: 0.35rem 0; }
+    .mc-vf { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin: 0.3rem 0; }
+    .mc-vf td { border-bottom: 1px solid #e9ecef; padding: 0.25rem 0.35rem; vertical-align: middle; }
+    .mc-vf td.mc-cella { width: 3.6rem; white-space: nowrap; color: var(--scheda-blu); font-weight: 700; }
+    .mc-casella { display: inline-block; width: 1rem; height: 1rem; border: 2px solid var(--scheda-bordo); border-radius: 3px; vertical-align: middle; margin-right: 0.15rem; }
+    .mc-firma { display: flex; gap: 1rem; flex-wrap: wrap; align-items: flex-end; margin-top: 0.3rem; font-size: 0.9rem; }
+    .mc-firma span.mc-linea { flex: 1; min-width: 8rem; border-bottom: 1.5px solid var(--scheda-bordo); height: 1.3rem; }
+    .mc .soluzione-capovolta { margin-top: 3mm; padding: 2.5mm 4mm; font-size: 0.85rem; }
+    .mc .scheda-docente p { margin: 0.25rem 0; }
+    .mc-attribuzione { font-size: 0.72rem; color: var(--scheda-grigio); margin-top: 0.35rem; }
+    @media (max-width: 600px) { .mc-spunta { columns: 1; } .mc-con-img { flex-direction: column; } }
+    @media print {
+      .mc-con-img img { width: 46px; height: 46px; }
+      .mc .scheda-docente, .mc-adulto { break-inside: avoid; }
+      .mc .scheda-box-disegno { min-height: 5.4cm; }
+      .mc-coppia { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0.5rem; }
+      .mc-coppia .mc-missione { margin: 0.3rem 0; }
+      .mc-coppia .mc-spunta { columns: 1; }
+      .scheda-page { padding: 1cm 1.4cm 0.6cm; }
+      .scheda-header { margin-bottom: 0.5rem; padding-bottom: 0.4rem; }
+      .scheda-meta { margin-bottom: 0.45rem; padding: 0.35rem 0.7rem; }
+      .mc .scheda-h2 { margin: 0.45rem 0 0.2rem; }
+      .scheda-footer { padding-top: 2mm; }
+    }
+    /* Controllo fogli di stampa: scala del testo all'88% e spazi stretti in
+       stampa, così la scheda resta su due fogli anche con i caratteri più larghi. */
+    @media print { html { font-size: 88%; } .scheda-page { padding: 0.8cm 1.3cm 0.5cm; } }
+  </style>
+</head>
+<body>
+
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/" aria-label="Torna alle schede">← Torna alle schede</a>
+    <span class="scheda-titolo">Missione cameretta</span>
+    <a class="scheda-lim" href="/lim/" title="Si usa col dito sulla lavagna interattiva della classe, anche a schermo intero, e funziona sui browser delle lavagne meno recenti">Pronto per la LIM</a>
+    <button type="button" onclick="window.print()">Stampa o salva come PDF</button>
+  </div>
+
+  <main>
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Missione cameretta: la mia stanza sicura se trema la terra</h1>
+        <div class="scheda-sottotitolo">Scuola primaria · Da fare a casa con un adulto · Foglio 1 di 2</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 6-11 anni e famiglie</span>
+      <span><strong>Durata:</strong> 30 minuti in classe + la missione a casa</span>
+      <span><strong>Discipline:</strong> Scienze, Educazione civica, Geografia</span>
+    </div>
+
+    <div class="mc">
+      <p class="scheda-intro">
+        Nella stanza dove dormi passi molte ore, anche di notte. Se la terra trema, contano le cose che stanno sopra e intorno al letto. Flavio ha fatto questa missione con il suo papà in un pomeriggio. Ora tocca a te, con un adulto di casa: quattro missioni, una alla volta.
+      </p>
+
+      <div class="mc-coppia">
+      <section class="mc-missione" aria-labelledby="mc-m1">
+        <h3 id="mc-m1"><span>1</span>Che cosa può cadere?</h3>
+        <p>Guarda in alto e intorno al letto. Durante una scossa gli oggetti possono cadere, scivolare o aprirsi. Spunta quello che trovi:</p>
+        <ul class="mc-spunta">
+          <li>Mensola sopra il letto</li>
+          <li>Quadro o specchio appeso</li>
+          <li>Libreria o armadio alto</li>
+          <li>Oggetti pesanti in alto</li>
+          <li>Lampada sul comodino</li>
+          <li>Vetri: finestra, specchio, vetrina</li>
+        </ul>
+      </section>
+
+      <section class="mc-missione" aria-labelledby="mc-m2">
+        <h3 id="mc-m2"><span>2</span>Lo sistema l'adulto</h3>
+        <p>Tu dici che cosa hai trovato. I lavori li fa sempre l'adulto, con gli attrezzi giusti:</p>
+        <ul>
+          <li>fissa alla parete librerie, scaffali e mobili alti;</li>
+          <li>allontana dal letto i mobili e gli oggetti pesanti;</li>
+          <li>appende quadri e specchi con ganci chiusi, che non si staccano;</li>
+          <li>sposta gli oggetti pesanti sui ripiani bassi.</li>
+        </ul>
+      </section>
+      </div>
+
+      <section class="mc-missione" aria-labelledby="mc-m3">
+        <h3 id="mc-m3"><span>3</span>Il mio posto riparo</h3>
+        <div class="mc-con-img">
+          <img src="/pittogrammi/arasaac/nascondersi-tavolo.png" alt="Pittogramma: una persona accucciata sotto un tavolo che si tiene con una mano">
+          <p>Con l'adulto scegli dove ripararti durante una scossa: sotto un tavolo robusto o sotto il letto, oppure vicino a un muro portante, che l'adulto sa riconoscere. Lontano da finestre, specchi e mobili che possono cadere. Al centro della stanza no: lì possono cadere oggetti e pezzi di intonaco. Se sei a letto, proteggi la testa con il cuscino.</p>
+        </div>
+      </section>
+
+      <section class="mc-missione" aria-labelledby="mc-m4">
+        <h3 id="mc-m4"><span>4</span>Strada libera fino alla porta</h3>
+        <div class="mc-con-img">
+          <img src="/pittogrammi/arasaac/torcia.png" alt="Pittogramma: una torcia elettrica">
+          <p>Dopo la scossa si esce con prudenza. Per terra non lasciare zaini, giochi o scatole fra il letto e la porta, e la porta non deve essere bloccata da un mobile. Tieni vicino al letto una torcia e un paio di scarpe chiuse: per terra possono esserci vetri e calcinacci.</p>
+        </div>
+      </section>
+
+      <p class="mc-paura">Se pensare al terremoto ti fa un po' paura, è normale. Preparare la stanza è proprio un modo per sentirsi più tranquilli.</p>
+
+      <div class="mc-adulto avvertenza">
+        <strong>Per l'adulto di casa.</strong> I lavori (forare, fissare, spostare mobili pesanti) li fa sempre un adulto: il bambino guarda, indica e decide con te. Per i muri portanti o per rinforzare la casa chiedi a un tecnico. Le indicazioni sono quelle del Dipartimento della Protezione Civile («Io non rischio») e della pagina «Rischio sismico» del sito.
+      </div>
+
+      <p class="mc-attribuzione">Pittogrammi: ARASAAC (arasaac.org), Governo d'Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. La scheda eredita la stessa licenza.</p>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Missione cameretta" · Primaria · rev. 2026</span>
+    </footer>
+
+  </article>
+
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <div class="scheda-titolo-principale" role="heading" aria-level="2">La mappa della mia stanza</div>
+        <div class="scheda-sottotitolo">Missione cameretta · Foglio 2 di 2</div>
+      </div>
+    </header>
+
+    <div class="mc">
+      <p>Disegna la tua stanza vista dall'alto, come la vedrebbe un uccellino dal soffitto: il letto, i mobili, la finestra, la porta. Poi usa questi segni:</p>
+      <ul class="mc-legenda">
+        <li><strong>X</strong> = una cosa che può cadere</li>
+        <li><strong>O</strong> = il mio posto riparo</li>
+        <li><strong>→</strong> = la strada fino alla porta</li>
+      </ul>
+      <div class="scheda-box-disegno" role="img" aria-label="Riquadro vuoto per disegnare la propria stanza vista dall'alto"></div>
+      <p>Se preferisci, raccontala a voce all'insegnante invece di disegnarla.</p>
+
+      <h2 class="scheda-h2">Vero o falso?</h2>
+      <table class="mc-vf">
+        <tbody>
+          <tr><td>1. Quando la terra trema, corro subito fuori dalla stanza.</td><td class="mc-cella"><span class="mc-casella"></span>V <span class="mc-casella"></span>F</td></tr>
+          <tr><td>2. Il centro della stanza è il posto più sicuro.</td><td class="mc-cella"><span class="mc-casella"></span>V <span class="mc-casella"></span>F</td></tr>
+          <tr><td>3. Una libreria alta va fissata al muro da un adulto.</td><td class="mc-cella"><span class="mc-casella"></span>V <span class="mc-casella"></span>F</td></tr>
+          <tr><td>4. Posso salire su una sedia e fissare la mensola da solo.</td><td class="mc-cella"><span class="mc-casella"></span>V <span class="mc-casella"></span>F</td></tr>
+          <tr><td>5. Torcia e scarpe vicino al letto mi servono dopo la scossa.</td><td class="mc-cella"><span class="mc-casella"></span>V <span class="mc-casella"></span>F</td></tr>
+          <tr><td>6. Dopo la scossa scendo con l'ascensore, così faccio prima.</td><td class="mc-cella"><span class="mc-casella"></span>V <span class="mc-casella"></span>F</td></tr>
+        </tbody>
+      </table>
+
+      <div class="mc-firma">
+        <span>Missione controllata con un adulto il giorno</span><span class="mc-linea" aria-label="Spazio per la data"></span>
+      </div>
+
+      <div class="scheda-docente">
+        <p><strong>Per il docente.</strong> Fonti: Dipartimento della Protezione Civile, «Io non rischio — Terremoto, cosa fare» e «Sei preparato?»; pagina <a href="/rischi-prevenzione/rischio-sismico/">«Rischio sismico»</a> del sito. A scuola vale il piano di emergenza; questa scheda riguarda la casa. Il gioco <a href="/giochi/primaria/caccia-al-rischio/">«Caccia al rischio»</a> fa trovare i pericoli in una cameretta disegnata; qui si guarda la propria stanza vera, con un adulto. Non tutti hanno una stanza propria: vale la stanza dove si dorme, anche condivisa.</p>
+        <p><strong>Che cosa osservare:</strong> l'alunno riconosce ciò che può cadere, indica un riparo adatto e una strada libera, sa che i lavori li fa l'adulto. Non si valutano il disegno né la casa. Il Gruppo comunale di protezione civile non si attiva su chiamata dei cittadini: in emergenza si chiama il 112.</p>
+      </div>
+
+      <div class="soluzione-capovolta">
+        <span class="titolo">Soluzioni per il docente (gira il foglio)</span>
+        <strong>1. F.</strong> Durante la scossa non si corre fuori: ci si ripara e si aspetta che finisca.
+        <strong>2. F.</strong> Al centro della stanza possono cadere oggetti, intonaco e parti del soffitto.
+        <strong>3. V.</strong> I mobili alti si fissano alla parete, e lo fa un adulto.
+        <strong>4. F.</strong> I lavori li fa sempre un adulto, con gli attrezzi giusti.
+        <strong>5. V.</strong> La torcia serve se manca la luce, le scarpe perché per terra possono esserci vetri e calcinacci.
+        <strong>6. F.</strong> Dopo la scossa l'ascensore non si usa: si scende a piedi, con attenzione alle scale.
+      </div>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Missione cameretta" · Primaria · rev. 2026</span>
+    </footer>
+
+  </article>
+  </main>
+
+</body>
+</html>

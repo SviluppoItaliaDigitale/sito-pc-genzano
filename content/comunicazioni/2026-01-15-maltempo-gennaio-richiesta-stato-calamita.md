@@ -3,6 +3,7 @@ title: "Maltempo del 5 e 6 gennaio: il Comune chiede lo stato di calamità natur
 date: 2026-01-15
 description: "La Giunta comunale chiede alla Regione Lazio lo stato di calamità naturale per frane, smottamenti ed erosioni causati dalle piogge del 5 e 6 gennaio."
 badge: "Comunicazione"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-01-15-maltempo-gennaio-richiesta-stato-calamita.webp"

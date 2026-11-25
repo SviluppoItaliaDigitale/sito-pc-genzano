@@ -7,7 +7,7 @@ badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-30-capodanno-petardi-sicurezza.webp"
-image_alt: "Segnale di divieto di botti e fuochi d'artificio in piazza italiana con cartello ordinanza comunale affisso vicino all'ingresso del comune"
+image_alt: "Cover dell'articolo: Capodanno: petardi e sicurezza"
 scadenza: "2027-01-02"
 area: "Genzano di Roma"
 allegati: []
@@ -25,50 +25,48 @@ I petardi fanno parte delle feste di Capodanno. Ma ogni anno molte persone si fa
 
 Ogni anno in Italia i petardi causano problemi:
 
-- centinaia di persone ferite ogni anno
+- ci sono persone ferite, soprattutto alle mani e agli occhi
 - molti feriti sono bambini e ragazzi
-- le mani e gli occhi sono le parti più colpite
-- alcuni restano invalidi
 - balconi e auto prendono fuoco
 - gli animali domestici hanno molta paura
 
 ## Le regole del Comune
 
-Il Sindaco di Genzano di Roma pubblica un'ordinanza. L'ordinanza è una regola ufficiale. Dice:
+Il Comune può fare un'ordinanza. L'ordinanza è una regola ufficiale. Può dire quando e dove non puoi usare i petardi.
 
-- quando puoi sparare petardi (esempio: solo dalle 23:00 del 31 dicembre alle 02:00 del 1 gennaio)
-- dove non puoi sparare (centro storico, parchi, boschi)
-- quali petardi sono vietati
-
-Controlla il sito del Comune: www.comune.genzanodiroma.roma.it. Chi non rispetta l'ordinanza paga una multa. La multa può essere da 50 a 500 euro.
+Controlla se c'è sul sito del Comune: www.comune.genzanodiroma.roma.it. Chi non rispetta l'ordinanza paga una multa. La multa può essere da 25 a 500 euro.
 
 ## Quali petardi puoi usare
 
 I petardi hanno categorie. Guarda la confezione:
 
-- **Categoria F1**: piccoli botti, possono usarli anche i ragazzi sotto i 14 anni
-- **Categoria F2**: fuochi più grandi, solo con un adulto vicino
-- **Categoria F3**: fuochi d'artificio potenti, solo per maggiorenni, solo in spazi grandi aperti
+- **Categoria F1**: piccoli fuochi. Si comprano dai 14 anni.
+- **Categoria F2**: fuochi più grandi. Si comprano solo dai 18 anni, con un documento.
+- **Categoria F3**: fuochi potenti. Solo dai 18 anni, con un permesso del questore o il porto d'armi.
+
+I petardi si comprano solo dai 18 anni.
 
 Non comprare mai petardi senza etichetta CE. Non comprare mai petardi ai mercati abusivi. Sono i più pericolosi.
 
 ## Dove e come usare i petardi
 
-Usa i petardi in spazio aperto. Stai lontano almeno 10 metri dagli edifici. Stai lontano dagli alberi. Stai lontano dalle auto e dai garage.
+Usa i petardi in spazio aperto. Stai lontano dalle case, dalle auto e dalle persone. Leggi sull'etichetta la distanza giusta. Stai lontano dagli alberi. Stai lontano dalle auto e dai garage.
 
 Non usare mai petardi:
 
 - dai balconi
-- in casa o in spazi chiusi
+- in casa, se l'etichetta dice solo spazi aperti
 - tenendoli in mano
 - verso le persone
 - con l'alcol
 
-Leggi sempre le istruzioni sulla confezione. Tieni un secchio d'acqua vicino. Se un petardo non si accende, aspetta 15 minuti prima di avvicinarti.
+Leggi sempre le istruzioni sulla confezione. Appoggia il petardo a terra. Accendilo e allontanati subito. Tieni un secchio d'acqua vicino.
+
+Se un petardo non scoppia, non toccarlo. Non accenderlo di nuovo. Chiama il 112.
 
 ## I bambini e i petardi
 
-I bambini non devono mai usare petardi da soli. Solo categoria F1 con un adulto vicino. Spiega ai bambini i rischi. Non fare gare di chi spara più forte.
+I bambini non comprano petardi. Non lasciarli mai soli vicino ai fuochi. Spiega ai bambini i rischi. Non fare gare di chi spara più forte.
 
 ## Gli animali domestici
 
@@ -76,7 +74,7 @@ I cani e i gatti sentono i botti molto più forte di noi. I botti li spaventano 
 
 Per proteggere il tuo animale:
 
-- chiudilo in casa prima delle 22:00
+- tienilo in casa e non lasciarlo solo
 - chiudi le finestre e le tapparelle
 - accendi la TV o la musica per coprire il rumore
 - stai vicino a lui per rassicurarlo
@@ -86,7 +84,7 @@ Se il tuo cane o gatto scappa per paura, chiama subito il canile municipale. Con
 
 ## Se qualcuno si fa male
 
-**Ustione da petardo**: metti subito acqua fresca per almeno 20 minuti. Non usare olio o dentifricio. Copri con una garza pulita.
+**Ustione da petardo**: metti subito acqua fresca corrente per almeno 20 minuti. Non usare burro, olio, ghiaccio o dentifricio. Copri con una garza pulita.
 
 **Mano o dito colpiti dall'esplosione**: non togliere nulla dalla ferita. Premi con un panno pulito. Chiama il 112, il numero unico di emergenza.
 

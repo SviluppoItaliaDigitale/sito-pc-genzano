@@ -3,6 +3,7 @@ title: "La sala radio di protezione civile: come si gestisce una chiamata e come
 date: 2026-04-17T00:01:00+02:00
 description: "Dal primo squillo alla firma sulla scheda: la procedura completa per l'operatore di sala radio che raccoglie una richiesta di intervento."
 badge: "Radiocomunicazioni"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-17-gestione-sala-radio-chiamata-emergenza-scheda-intervento.webp"

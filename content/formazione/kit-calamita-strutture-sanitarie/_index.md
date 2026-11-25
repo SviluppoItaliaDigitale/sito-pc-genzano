@@ -34,7 +34,7 @@ Queste schede sono **strumenti operativi pronti da stampare A4** per personale, 
 |---|---|
 | [Checklist evacuazione paziente non autosufficiente](/formazione/kit-calamita-strutture-sanitarie/06-checklist-evacuazione-paziente.html) | 1 scheda per paziente trasferito. Bag 72h + ausili + presidi. |
 | [Protocollo "Non separare la coppia"](/formazione/kit-calamita-strutture-sanitarie/07-protocollo-non-separare-coppia.html) | Coniugi/conviventi nella struttura. Tenerli insieme ogni volta che lo scenario lo consente. |
-| [Triage geriatrico per priorità logistica](/formazione/kit-calamita-strutture-sanitarie/08-triage-geriatrico-salt.html) | Verde/Giallo/Arancione/Rosso per ordine di evacuazione (ispirato a SALT, da validare con la direzione sanitaria). |
+| [Triage geriatrico per priorità logistica](/formazione/kit-calamita-strutture-sanitarie/08-triage-geriatrico-salt.html) | Verde/Giallo/Arancione/Rosso per ordine di evacuazione (ispirato a SALT, da adattare con la direzione sanitaria). |
 | [Comunicazione coi familiari in emergenza](/formazione/kit-calamita-strutture-sanitarie/09-comunicazione-familiari.html) | Una persona dedicata. Cosa dire, cosa NON dire, template telefonata. |
 | [Decompenso acuto post-evento](/formazione/kit-calamita-strutture-sanitarie/10-decompenso-acuto.html) | Riconoscere delirium, idratare, mobilizzare. Quando chiamare 112. |
 | [Prevenzione decubiti durante trasferimento](/formazione/kit-calamita-strutture-sanitarie/11-prevenzione-decubiti.html) | Scala di Braden, posizionamento, materasso anti-decubito. |
@@ -60,7 +60,7 @@ Queste schede sono **strumenti operativi pronti da stampare A4** per personale, 
 
 ## Riferimenti istituzionali
 
-- **D.Lgs. 81/2008** (artt. 43-46) e **D.M. 2 settembre 2021** — gestione delle emergenze nei luoghi di lavoro: piano di emergenza ed esercitazioni almeno annuali
+- **D.Lgs. 81/2008** (artt. 43-46) e **D.M. 2 settembre 2021** — gestione delle emergenze nei luoghi di lavoro e, per il decreto del 2021, della sicurezza antincendio in esercizio e in emergenza: piano di emergenza ed esercitazioni antincendio almeno annuali, salvo diverse indicazioni delle regole tecniche di prevenzione incendi
 - **Regola tecnica di prevenzione incendi per le strutture sanitarie** — D.M. 18 settembre 2002, aggiornato dal D.M. 19 marzo 2015
 - **WHO/PAHO** — Hospital Safety Index, guida per i valutatori (2ª edizione); **Sphere Standards 2018**
 - Lezioni condivise dagli operatori del settore su emergenze reali (terremoto Centro Italia 2016, pandemia Covid-19 nelle RSA)

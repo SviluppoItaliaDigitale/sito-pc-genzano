@@ -3,6 +3,7 @@ title: "Terremoto: cosa fare durante la scossa e nei minuti successivi"
 date: 2026-04-27T00:01:00+02:00
 description: "Poche regole chiare dal Dipartimento di Protezione Civile su come comportarsi durante un terremoto."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-27-terremoto-cosa-fare-durante-dopo-la-scossa.webp"

@@ -3,6 +3,7 @@ title: "Avezzano, 13 gennaio 1915: il terremoto della Marsica e la sua eredità"
 date: 2027-01-13T00:01:00+01:00
 description: "Alle 7:53 del 13 gennaio 1915 una scossa di magnitudo 7.0 distrusse Avezzano e tutto il bacino del Fucino."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-01-13-avezzano-1915-terremoto-marsica.webp"

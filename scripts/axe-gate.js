@@ -25,6 +25,9 @@ const PATHS = [
   // video, trascrizione) e la sua versione facile (riquadro «Italiano
   // semplice», che dava 2,39:1 di contrasto senza che il campione lo vedesse).
   '/rischi-prevenzione/rischio-incendio/', '/rischi-prevenzione/rischio-incendio-facile/',
+  // Dal 25/11/2026: il catalogo dei disciplinari, per il riquadro dei filtri
+  // (campo di ricerca, due menu, conteggio, pulsanti).
+  '/cucina-emergenza/disciplinari/',
 ];
 // elementi esclusi (widget di terzi / mappe / dialog non pertinenti al gate)
 const EXCLUDE = [['.leaflet-container'], ['iframe'], ['dialog']];

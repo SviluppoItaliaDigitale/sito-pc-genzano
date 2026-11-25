@@ -3,6 +3,7 @@ title: "Il satellite che vede i fulmini: cosa cambia per le allerte con MTG-I2"
 date: 2026-08-31T00:02:00+02:00
 description: "Il 27 agosto è partito da Kourou MTG-I2, terzo satellite Meteosat di terza generazione. A bordo lo strumento che sorveglia i fulmini in tempo reale."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-31-mtg-i2-satellite-fulmini-europa.webp"
@@ -113,8 +114,8 @@ Un satellite nuovo non toglie nulla alle abitudini che salvano la giornata duran
 
 **Fonti istituzionali:**
 
-- [ESA — Meteosat Third Generation](https://www.esa.int/Applications/Observing_the_Earth/Meteorological_missions/meteosat_third_generation)
-- [ESA — Lightning Imager](https://www.esa.int/Applications/Observing_the_Earth/Meteorological_missions/meteosat_third_generation/Lightning_Imager)
+- [ESA — Meteosat Third Generation: dati essenziali](https://www.esa.int/articles/about-us/directorates/earth-observation-programmes/meteorological-missions/meteosat-third-generation/facts-and-figures)
+- [ESA — Lightning Imager](https://www.esa.int/articles/about-us/directorates/earth-observation-programmes/meteorological-missions/meteosat-third-generation/lightning-imager)
 - [ESA — Scheda tecnica MTG-I (PDF)](https://esamultimedia.esa.int/docs/EarthObservation/MTG-I_factsheet_260401.pdf)
 - [EUMETSAT — la serie Meteosat](https://www.eumetsat.int/our-satellites/meteosat-series)
 - [EUMETSAT — gli strumenti di Meteosat di terza generazione](https://www.eumetsat.int/meteosat-third-generation-instruments)

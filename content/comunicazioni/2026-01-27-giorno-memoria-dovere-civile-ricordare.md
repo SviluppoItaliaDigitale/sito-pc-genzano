@@ -3,6 +3,7 @@ title: "Giorno della Memoria: il dovere civile di ricordare"
 date: 2026-01-27
 description: "Il 27 gennaio è il Giorno della Memoria. Per la Protezione Civile italiana, ricordare ha un significato preciso: la democrazia si difende ogni giorno."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-01-27-giorno-memoria-dovere-civile-ricordare.webp"

@@ -3,6 +3,7 @@ title: "Turchia-Siria, 6 febbraio 2023: il più grande dispiegamento internazion
 date: 2027-02-06
 description: "Alle 4:17 del 6 febbraio 2023 una scossa di magnitudo 7.8 colpì la Turchia meridionale e la Siria."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-02-06-turchia-siria-2023-terremoto-cooperazione-italiana.webp"

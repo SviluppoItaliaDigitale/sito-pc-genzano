@@ -3,6 +3,7 @@ title: "Sentinelle del tempo: l'osservazione meteo amatoriale come risorsa"
 date: 2026-03-03
 description: "Reti di osservatori meteo amatoriali contribuiscono alla conoscenza del territorio. Protezione Civile e cittadinanza attiva si incontrano anche in questo."
 badge: "Formazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-03-03-sentinelle-meteo-osservazione-amatoriale.webp"
@@ -19,7 +20,7 @@ Le stazioni amatoriali, ben gestite, contribuiscono in modo significativo alla *
 
 ## Perché serve una rete densa di osservazione
 
-Il tempo meteorologico **cambia rapidamente** anche su piccola scala. Tra Genzano di Roma (435 m), Lanuvio (300 m), Albano (420 m) e Rocca di Papa (680 m) le temperature, le precipitazioni e l'esposizione al vento possono differire molto.
+Il tempo meteorologico **cambia rapidamente** anche su piccola scala. Tra Genzano di Roma (458 m), Lanuvio (300 m), Albano (420 m) e Rocca di Papa (680 m) le temperature, le precipitazioni e l'esposizione al vento possono differire molto.
 
 Le stazioni ufficiali:
 

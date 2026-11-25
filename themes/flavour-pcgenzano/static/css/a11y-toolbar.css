@@ -1045,3 +1045,10 @@ html.a11y-big-cursor input[type="submit"],
 html.a11y-big-cursor [role="button"] {
   cursor: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M11 4 L11 18 L7 18 L13 26 L19 18 L15 18 L15 4 Z' fill='%23000' stroke='%23fff' stroke-width='1.5' stroke-linejoin='round'/%3E%3C/svg%3E") 13 4, pointer !important;
 }
+
+
+/* Rimando all'Assistente virtuale dentro il pannello (19/11/2026): su
+   telefono e tablet il pulsante dell'Assistente non galleggia più sulla
+   pagina. Testo #1a1a1a su #fff8e1 = 16,6:1; link #003366 = 12,5:1. */
+.a11y-aiuto{background:#fff8e1;border-left:4px solid #b45309;border-radius:4px;padding:.6rem .8rem;margin:0 0 1rem;font-size:.95rem;color:#1a1a1a}
+.a11y-aiuto a{color:#003366;font-weight:700;text-decoration:underline}

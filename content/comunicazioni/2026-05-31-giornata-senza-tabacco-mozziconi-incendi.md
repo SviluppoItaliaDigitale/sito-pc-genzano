@@ -3,6 +3,7 @@ title: "31 maggio: Giornata senza tabacco, mozziconi e rischio incendi"
 date: 2026-05-31T00:01:00+02:00
 description: "La Giornata mondiale senza tabacco tocca un tema di Protezione Civile: mozziconi mal smaltiti sono una delle cause principali di incendi boschivi in estate."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-31-giornata-senza-tabacco-mozziconi-incendi.webp"
@@ -32,7 +33,7 @@ I mozziconi buttati fuori dal finestrino di un'auto in corsa, che sembrano "spen
 
 ## I mesi critici
 
-Nei Castelli Romani il periodo di massima pericolosità è **giugno-settembre**. Le condizioni che aumentano il rischio:
+Nei Castelli Romani il periodo di massima pericolosità è l'estate: nel 2026 la campagna antincendio va **dal 15 giugno al 15 ottobre**. Le condizioni che aumentano il rischio:
 
 - **Temperature elevate** (>30 °C) prolungate.
 - **Bassa umidità** dell'aria e del suolo.

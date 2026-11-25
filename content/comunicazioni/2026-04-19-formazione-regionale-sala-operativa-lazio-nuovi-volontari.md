@@ -3,6 +3,7 @@ title: "Formazione regionale: un nostro formatore in Sala Operativa per i nuovi 
 date: 2026-04-19
 description: "Daniele Toscani, formatore regionale del Gruppo Comunale di Genzano di Roma, ha guidato le lezioni ai nuovi volontari del sistema regionale."
 badge: "Formazione"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-19-formazione-regionale-sala-operativa-lazio-nuovi-volontari.webp"

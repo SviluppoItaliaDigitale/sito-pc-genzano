@@ -118,4 +118,4 @@ La scelta finale sull'uso in classe spetta al docente e alla scuola, in coerenza
 - [Dirigenti scolastici, DSGA, RSPP e ASPP](/formazione/dirigenti-e-rspp/)
 - [Educazione civica](/formazione/educazione-civica/)
 - [Strumenti per le scuole](/formazione/scuole-strumenti/)
-- [Scuole: da dove cominciare](/formazione/scuole-da-dove-cominciare/)
+- [Scuole — parti da qui](/scuole/)

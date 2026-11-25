@@ -4,6 +4,7 @@ date: 2026-10-26T00:02:00+01:00
 description: "Alle 21:18 del 26 ottobre 2016 una scossa di magnitudo 5.9 colpì il Maceratese, esattamente due mesi dopo Amatrice."
 
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-26-terremoto-marche-2016-visso-camerino.webp"

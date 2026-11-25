@@ -3,6 +3,7 @@ title: "Incendi domestici: la prevenzione prima dell'accensione del riscaldament
 date: 2026-09-23T00:01:00+02:00
 description: "Stufe, camini, canne fumarie, impianti elettrici: prima di accendere il riscaldamento, controlli semplici evitano incendi domestici."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-23-prevenzione-incendi-domestici-autunno.webp"
@@ -59,7 +60,7 @@ Non obbligatori per legge nelle abitazioni, ma **fortemente raccomandati**:
 ### Estintore domestico
 Non obbligatorio ma utile:
 
-- modello **6 kg a polvere ABC** o **estintore di classe F** (per oli da cucina, norma UNI EN 2);
+- un estintore **a polvere ABC** per i fuochi comuni; per l'olio da cucina solo un **estintore di classe F** o la **coperta antifiamma**: polvere e anidride carbonica sull'olio sono pericolose;
 - posizione accessibile (ingresso, cucina);
 - **formazione** base di tutti i membri della famiglia all'uso.
 

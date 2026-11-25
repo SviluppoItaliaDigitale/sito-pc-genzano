@@ -4,6 +4,7 @@ date: 2026-08-23T00:02:00+02:00
 description: "Tre milioni di metri cubi di roccia precipitarono dal Pizzo Cengalo nelle Alpi Retiche svizzere il 23 agosto 2017."
 
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-23-pizzo-cengalo-bondo-2017-permafrost-cambiamento-climatico.webp"

@@ -3,6 +3,7 @@ title: "Frana di un costone nel territorio di Nemi: supporto alla chiusura di vi
 date: 2026-04-15T00:02:00+02:00
 description: "Il 15 aprile la Polizia Locale ha richiesto il supporto del nostro Gruppo per la chiusura di via Nemorense."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-15-frana-costone-nemi-chiusura-via-nemorense.webp"

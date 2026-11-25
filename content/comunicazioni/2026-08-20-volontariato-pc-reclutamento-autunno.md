@@ -3,6 +3,7 @@ title: "Diventare volontari di Protezione Civile: iscrizioni sempre aperte ai co
 date: 2026-08-20T00:01:00+02:00
 description: "Le iscrizioni ai corsi base del Gruppo Comunale Volontari di Protezione Civile sono sempre aperte. Chi può partecipare e cosa aspettarsi."
 badge: "Volontariato"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-20-volontariato-pc-reclutamento-autunno.webp"
@@ -31,7 +32,7 @@ Non occorrono titoli specifici né esperienze pregresse: tutte le competenze si 
 
 Le attività di un volontario del Gruppo, in condizioni ordinarie, sono:
 
-- **turni** di avvistamento antincendio durante la campagna AIB (giugno-settembre);
+- **turni** di avvistamento antincendio durante la campagna AIB (nel 2026 dal 15 giugno al 15 ottobre);
 - **presidio** di eventi pubblici comunali e sovracomunali;
 - **esercitazioni** periodiche (mensili o a chiamata);
 - **formazione** continua (radiocomunicazioni, primo soccorso, cartografia, sicurezza);

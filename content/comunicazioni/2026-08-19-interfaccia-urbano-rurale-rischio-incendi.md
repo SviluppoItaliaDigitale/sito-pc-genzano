@@ -3,6 +3,7 @@ title: "Interfaccia urbano-rurale: il rischio incendi che tocca le case"
 date: 2026-08-19T00:01:00+02:00
 description: "Le zone dove il costruito incontra il bosco sono quelle più esposte agli incendi di interfaccia. Come ridurre il rischio intorno alla propria abitazione."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-19-interfaccia-urbano-rurale-rischio-incendi.webp"

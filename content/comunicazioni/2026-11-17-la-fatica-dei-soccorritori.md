@@ -3,6 +3,7 @@ title: "La fatica dei soccorritori: stanchezza, stress e ritorno a casa"
 date: 2026-11-17T00:02:00+01:00
 description: "Stanchezza che si accumula, stress da evento critico, trauma vicario: i segnali da riconoscere e che cosa fanno le organizzazioni per chi soccorre."
 badge: "Volontariato"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-17-la-fatica-dei-soccorritori.webp"

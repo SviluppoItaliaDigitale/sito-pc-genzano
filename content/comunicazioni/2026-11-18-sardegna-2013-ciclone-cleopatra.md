@@ -3,6 +3,7 @@ title: "Sardegna, 18 novembre 2013: il ciclone Cleopatra e le alluvioni lampo"
 date: 2026-11-18T00:03:00+01:00
 description: "Tredici anni fa piogge oltre i 450 mm in dodici ore colpirono Olbia e la Gallura: sedici vittime e un disperso secondo la delibera dello stato di emergenza."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-18-sardegna-2013-ciclone-cleopatra.webp"

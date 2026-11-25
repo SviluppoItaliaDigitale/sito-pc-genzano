@@ -1,0 +1,195 @@
+# Ricontrolla ogni mese i collegamenti della sezione «Cucina in emergenza»
+# (/cucina-emergenza/ e /cucina-emergenza/disciplinari/): solo file PDF sui siti
+# di enti governativi e istituzionali (regola di Alessandro del 24/11/2026).
+# scripts/check-cucina-emergenza.py --rete --file fa richieste vere, poche per
+# volta: ogni documento risponde ed è un PDF; per i testi di EUR-Lex chiede
+# all'archivio dell'Ufficio delle pubblicazioni dell'UE se il documento esiste e
+# se è uscita una versione consolidata più recente; ogni disciplinare è ancora
+# fra gli allegati della sua pagina del Ministero dell'agricoltura; di ogni PDF
+# del catalogo legge l'inizio, tre alla volta. Per le sintesi europee del
+# catalogo (documento unico o scheda riepilogativa, con le rettifiche) legge con
+# una richiesta il registro europeo eAmbrosia e chiede all'archivio dell'Ufficio
+# delle pubblicazioni dell'UE, quaranta atti alla volta, se ogni atto collegato
+# esiste ancora e se ha una rettifica nuova. Il sito del Ministero risponde
+# 502 quando riceve molte richieste insieme: per questo la pagina del catalogo
+# è fuori da lychee (check-links-sito.yml) e si controlla qui. Lo stesso sito ha
+# periodi in cui impiega 30-40 secondi a risposta: lo script aspetta fino a 90
+# secondi per richiesta e ha un tempo massimo (35 minuti di richieste, 12 di
+# browser); ciò che non fa in tempo a leggere lo dichiara «non controllato»,
+# non lo dà per buono. Un giro normale dura da 4 a 7 minuti.
+# Disciplinari nuovi, tolti e aggiornati (Alessandro, 25/11/2026: «controlla
+# sempre»): ogni giro cerca i prodotti italiani registrati nel registro europeo
+# che il catalogo non ha, quelli del catalogo che non sono più registrati, gli
+# allegati nuovi o spariti nelle pagine del Ministero e i file che allo stesso
+# indirizzo pesano diversamente dal «byte» dei dati (aggiornati senza cambiare
+# indirizzo). Il rapporto lo dice in ogni giro, anche quando non c'è nulla, e
+# scrive «nessuno» solo se il confronto è stato fatto per intero. Un file
+# sparito è un collegamento rotto (run rosso); un prodotto cancellato dal
+# registro o un file aggiornato sono novità (run verde) e non fermano la data
+# di verifica, che dice solo quando i collegamenti sono stati riletti.
+# Letture e data: con --aggiorna-data lo script annota in
+# .manuale/cucina-emergenza-letture.json il giorno dell'ultima lettura riuscita
+# di ogni collegamento, da qualunque rete, e porta «verificato» dei due file di
+# dati al più vecchio di quei giorni: è la data da cui ogni collegamento è
+# stato riletto almeno una volta, e non torna mai indietro. Serve perché nessuna
+# rete legge tutto: il 25/11/2026 il sito dell'IZS chiudeva la connessione ai
+# server di GitHub e rispondeva in due secondi da un'altra rete, mentre il
+# Ministero della Salute si faceva leggere da qui (con il browser) e da quella,
+# a tratti, rispondeva con una pagina di verifica anti-bot. Le letture si
+# sommano: ciò che da qui non si legge si rilegge da un'altra rete con
+# `python3 scripts/check-cucina-emergenza.py --rete --browser --aggiorna-data`
+# e si pubblica con una PR (il rapporto nella issue lo spiega); fatto questo,
+# se il rapporto non elenca altro, la issue si chiude a mano. Sulle PR lo
+# stesso script, senza rete, blocca una data portata avanti a mano.
+# Esiti:
+# - tutto letto e nulla di rotto: la data «verificato» dei due file di dati
+#   diventa quella del giorno (commit di sfondo, lo pubblica deploy-coalescer.yml);
+# - collegamento rotto o fonte che non si fa leggere: issue in-place con le
+#   label `automazione` + `fonte-rotta` + `cucina-emergenza` e run rosso
+#   (regola guasti.md, punto 1); non si annota nessuna lettura e la data resta
+#   com'è. Vale come fonte non letta anche un giro con troppi collegamenti
+#   rimasti senza controllo: più di 5 e più di un quinto di quelli da aprire;
+# - solo novità (allegato nuovo su una pagina del Ministero, elenco ufficiale
+#   cambiato, testo consolidato più recente, pubblicazione o rettifica nuova
+#   nel registro europeo: per queste ultime si rilancia
+#   scripts/aggiorna-documenti-unici.py) o collegamenti dietro una verifica
+#   anti-bot (il sito del Ministero della Salute, a tratti, risponde alle
+#   richieste automatiche con una pagina di verifica: non è un collegamento
+#   rotto e non si aggira, regola guasti.md punto 3): stessa issue senza
+#   `fonte-rotta`, run verde. Con una verifica anti-bot quei collegamenti non
+#   sono stati controllati: le altre letture si annotano, e la data non va
+#   oltre il giorno della loro ultima lettura riuscita. Lo stesso vale per un
+#   collegamento a cui il sito non risponde in tempo, risponde con un errore
+#   del server (5xx) o chiude la connessione dalla macchina del controllo: non
+#   è rotto e non è controllato (guasti.md punto 3), si riapre da un'altra
+#   rete. Finché sono pochi: oltre la soglia scritta sopra il run diventa
+#   rosso. Se la data resta ferma più di 45 giorni lo dice audit-sito.yml,
+#   sezione 51.
+# La issue si chiude da sola al primo giro senza rilievi.
+name: "🍲 Cucina in emergenza: controllo mensile dei collegamenti"
+
+on:
+  schedule:
+    - cron: "23 5 5 * *"   # il 5 del mese: 06:23 italiane d'inverno, 07:23 d'estate
+  workflow_dispatch:
+
+concurrency:
+  group: controllo-cucina-emergenza
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  controlla:
+    # ubuntu-24.04 e non ubuntu-latest: il 25/11/2026 ubuntu-latest era già
+    # Ubuntu 26.04, che Playwright 1.56 non supporta («Playwright does not
+    # support chromium on ubuntu26.04-x64»): al primo giro il browser di riserva
+    # non si è installato. È la stessa coppia sistema-browser di
+    # controllo-fogli-stampa.yml e controllo-lim.yml: si aggiornano insieme.
+    runs-on: ubuntu-24.04
+    timeout-minutes: 75
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+
+      - name: "🌐 Browser per i siti che non rispondono a una richiesta semplice"
+        # Facoltativo: se non si installa, lo script prosegue con le sole
+        # richieste dirette e dichiara ciò che non ha potuto leggere.
+        continue-on-error: true
+        timeout-minutes: 10
+        run: |
+          pip install --quiet playwright==1.56.0
+          playwright install --with-deps chromium
+
+      - name: "🔎 Rileggi documenti, pagine del Ministero e PDF del catalogo"
+        id: controllo
+        # Lo script si ferma da solo entro circa 50 minuti nel caso peggiore
+        # (35 di richieste + 12 di browser + le ultime risposte in arrivo).
+        timeout-minutes: 58
+        shell: bash
+        run: |
+          python3 -c "import yaml" 2>/dev/null || pip install --quiet pyyaml
+          set +e
+          python3 scripts/check-cucina-emergenza.py --rete --file --browser --aggiorna-data --rapporto /tmp/rapporto.md
+          echo "uscita=$?" >> "$GITHUB_OUTPUT"
+
+      - name: "💾 Commit delle letture e della data di verifica"
+        # Solo da main: lanciato a mano da un ramo di lavoro salverebbe su main
+        # letture e data annotate da un codice non ancora unito.
+        if: github.ref == 'refs/heads/main' && (steps.controllo.outputs.uscita == '0' || steps.controllo.outputs.uscita == '3')
+        timeout-minutes: 5
+        shell: bash
+        # Il giro dura minuti, e intanto main può cambiare: anche il file delle
+        # letture, se una pull request ne ha annotate altre da un'altra rete.
+        # Per questo non si fa un rebase (andrebbe in conflitto, riga per riga):
+        # si riparte ogni volta dall'ultimo main e si sommano le letture del
+        # giro con --unisci-letture, che per ogni collegamento tiene il giorno
+        # più recente e ricalcola la data. Nessuna lettura si perde.
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          cp .manuale/cucina-emergenza-letture.json "$RUNNER_TEMP/letture-del-giro.json"
+          for try in 1 2 3; do
+            git fetch --quiet origin main
+            git reset --quiet --hard FETCH_HEAD
+            python3 scripts/check-cucina-emergenza.py --unisci-letture "$RUNNER_TEMP/letture-del-giro.json" > /tmp/unione.md || {
+              cat /tmp/unione.md
+              echo "::error::Le letture del giro non si sono potute sommare a quelle di main"; exit 1
+            }
+            git add data/cucina_emergenza.yaml data/disciplinari.json .manuale/cucina-emergenza-letture.json
+            if git diff --cached --quiet; then echo "Nessuna lettura e nessuna data da salvare."; exit 0; fi
+            git commit --quiet -m "[skip-cucina-emergenza] Cucina in emergenza: collegamenti ricontrollati"
+            if git push origin HEAD:main; then
+              echo "Pubblicato (tentativo $try)."; exit 0
+            fi
+            echo "Push non riuscito, ritento ($try)..."; sleep 6
+          done
+          echo "::error::Push non riuscito dopo 3 tentativi"; exit 1
+
+      - name: "🚨 Apri, aggiorna o chiudi l'issue dei collegamenti"
+        if: always()
+        timeout-minutes: 5
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9
+        env:
+          USCITA: ${{ steps.controllo.outputs.uscita }}
+        with:
+          script: |
+            const fs = require('fs');
+            const uscita = process.env.USCITA;
+            let rapporto = fs.existsSync('/tmp/rapporto.md') ? fs.readFileSync('/tmp/rapporto.md', 'utf-8').trim() : null;
+            if (rapporto === null || !['0', '1', '2', '3'].includes(uscita)) {
+              core.setFailed(`Lo script non è arrivato in fondo (uscita «${uscita}», rapporto ${rapporto === null ? 'assente' : 'presente'}): guarda il log del passo precedente.`);
+              return;
+            }
+            // Il corpo di una issue non può superare 65.536 caratteri.
+            if (rapporto.length > 60000) rapporto = rapporto.slice(0, 60000) + '\n\n*Rapporto accorciato: il resto è nel log del run.*';
+            const title = 'Cucina in emergenza: collegamenti da ricontrollare';
+            const { owner, repo } = context.repo;
+            try {
+              await github.rest.issues.createLabel({ owner, repo, name: 'cucina-emergenza', color: '0e8a16',
+                description: 'Sezione /cucina-emergenza/: documenti ufficiali e disciplinari' });
+            } catch (e) { /* la label esiste già */ }
+            const aperte = await github.rest.issues.listForRepo({ owner, repo, state: 'open', labels: 'cucina-emergenza', per_page: 100 });
+            const issue = aperte.data.find(i => i.title === title);
+            if (uscita === '0') {
+              if (issue) {
+                await github.rest.issues.createComment({ owner, repo, issue_number: issue.number,
+                  body: 'Tutti i collegamenti della sezione sono stati riletti e non ci sono rilievi: chiudo automaticamente.' });
+                await github.rest.issues.update({ owner, repo, issue_number: issue.number, state: 'closed', state_reason: 'completed' });
+              }
+              return;
+            }
+            const guasto = uscita === '1' || uscita === '2';
+            const labels = guasto ? ['automazione', 'fonte-rotta', 'cucina-emergenza'] : ['automazione', 'cucina-emergenza'];
+            const body = [
+              'Il controllo mensile della sezione [Cucina in emergenza](https://www.protezionecivilegenzano.it/cucina-emergenza/) ha qualcosa da segnalare. La regola della sezione: solo collegamenti verificati a file PDF sui siti di enti governativi e istituzionali.',
+              '',
+              rapporto,
+              '',
+              '---', '*Issue generata da `controllo-cucina-emergenza.yml`; si chiude da sola al primo giro senza rilievi.*'
+            ].join('\n');
+            if (issue) await github.rest.issues.update({ owner, repo, issue_number: issue.number, body, labels });
+            else await github.rest.issues.create({ owner, repo, title, body, labels });
+            if (guasto) core.setFailed(uscita === '1' ? 'Collegamenti rotti o dati sbagliati.' : 'Una o più fonti non si sono fatte leggere.');

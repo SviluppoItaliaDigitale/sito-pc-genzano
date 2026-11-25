@@ -3,6 +3,7 @@ title: "IT-alert: come funziona e come reagire a un messaggio"
 date: 2026-06-11T00:01:00+02:00
 description: "IT-alert è il sistema di allarme pubblico italiano. Come riconoscere un messaggio, cosa fare, perché non è una truffa."
 badge: "Comunicazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-11-it-alert-come-funziona-reagire.webp"

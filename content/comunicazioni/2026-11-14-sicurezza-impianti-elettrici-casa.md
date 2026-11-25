@@ -3,6 +3,7 @@ title: "Impianto elettrico di casa: sicurezza, controlli, buone pratiche"
 date: 2026-11-14T00:01:00+01:00
 description: "L'impianto elettrico è responsabile di molti incendi domestici. Norme, controlli periodici e buone abitudini per la sicurezza."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-14-sicurezza-impianti-elettrici-casa.webp"

@@ -3,6 +3,7 @@ title: "Tre fronti in un giorno: la bonifica sul Tuscolo, la ferrovia di Pomezia
 date: 2026-08-12T00:05:00+02:00
 description: "Il 12 agosto 2026 le squadre del Gruppo hanno lavorato su tre incendi: la bonifica sul Tuscolo, la ferrovia a Pomezia e la sera la Falcognana."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-12-tuscolo-falcognana-tre-fronti.webp"

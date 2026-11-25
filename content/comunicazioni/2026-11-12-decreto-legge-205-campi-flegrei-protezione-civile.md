@@ -3,6 +3,7 @@ title: "Campi Flegrei: un decreto-legge nomina un Commissario e stanzia 100 mili
 date: 2026-11-12T00:02:00+01:00
 description: "Il decreto-legge 205 dell'11 novembre 2026 riordina gli interventi sul bradisismo dei Campi Flegrei e contiene altre misure urgenti di protezione civile."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-12-decreto-legge-205-campi-flegrei-protezione-civile.webp"

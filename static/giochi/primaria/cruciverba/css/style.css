@@ -59,8 +59,8 @@
 /* ogni cella — la dimensione si adatta al viewport */
 .cell {
   position: relative;
-  width: clamp(24px, 7.5vw, 40px);
-  height: clamp(24px, 7.5vw, 40px);
+  width: clamp(26px, 7.5vw, 44px);
+  height: clamp(26px, 7.5vw, 44px);
   background: #fff;
   display: flex;
   align-items: center;
@@ -82,11 +82,13 @@
   background: transparent;
   padding: 0;
   line-height: 1;
-  caret-color: #ff6600;
+  caret-color: #003366;
 }
 .cell input:focus {
-  outline: 2px solid #ff6600;
-  outline-offset: -2px;
+  /* Blu del Gruppo: l'arancione di prima sul fondo chiaro della casella
+     stava a 2,7:1, sotto il 3:1 chiesto per l'indicatore del fuoco. */
+  outline: 3px solid #003366;
+  outline-offset: -3px;
   background: #fff3e0;
 }
 .cell.highlight input {
@@ -145,11 +147,16 @@
   padding: 0;
   margin: 0;
   list-style: none;
-  max-height: 260px;
+  max-height: 320px;
   overflow-y: auto;
 }
 .clues-list li {
-  padding: .35rem .2rem;
+  /* Ogni definizione si tocca per andare alla parola: almeno 44 px di
+     altezza, come gli altri comandi dei giochi sulla LIM. */
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  padding: .5rem .3rem;
   font-size: .88rem;
   line-height: 1.35;
   cursor: pointer;
@@ -169,6 +176,7 @@
 }
 .clues-list li .num {
   display: inline-block;
+  flex: 0 0 auto;
   min-width: 1.8em;
   font-weight: 700;
   color: #003366;
@@ -208,6 +216,7 @@
 @media (prefers-reduced-motion: reduce) {
   .cw-feedback { animation: none; }
 }
+html.a11y-pause-anim .cw-feedback { animation: none; }
 
 /* Sizing su mobile gestito direttamente da clamp() su .cell e .cell input */
 .cell-number { font-size: clamp(.5rem, 1.7vw, .6rem); }

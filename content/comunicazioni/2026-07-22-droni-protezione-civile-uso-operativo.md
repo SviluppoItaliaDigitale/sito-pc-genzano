@@ -3,6 +3,7 @@ title: "Droni e Protezione Civile: come stanno cambiando le operazioni"
 date: 2026-07-22
 description: "I droni (APR) sono sempre più integrati nel sistema di PC: ricerche, avvistamento, monitoraggio. Come funzionano, chi li usa, quali sono le regole."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-22-droni-protezione-civile-uso-operativo.webp"

@@ -3,6 +3,7 @@ title: "Gole del Raganello, 20 agosto 2018: la piena improvvisa nella forra di C
 date: 2027-08-20
 description: "Nove anni fa una piena improvvisa del torrente Raganello, nel Parco del Pollino, travolse gli escursionisti nella forra: dieci morti e undici feriti."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-08-20-raganello-2018-piena-torrente.webp"

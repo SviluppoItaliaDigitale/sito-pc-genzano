@@ -3,6 +3,7 @@ title: "11 febbraio: Giornata Europea del 112, un solo numero per ogni emergenza
 date: 2026-02-11
 description: "L'11 febbraio si celebra la Giornata Europea del 112. Un numero unico, gratuito, disponibile in tutta Europa: il riferimento per ogni emergenza nel Lazio."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-02-11-giornata-europea-112-numero-unico.webp"

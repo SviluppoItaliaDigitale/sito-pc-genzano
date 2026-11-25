@@ -2,6 +2,7 @@
 title: "Infiorata dei Ragazzi 2026: grazie a chi l'ha resa bella"
 date: 2026-05-31T00:02:00+02:00
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 description: "Grazie ai ragazzi, alle scuole, alle famiglie e ai visitatori per la 22ª Infiorata dei Ragazzi. Sulle nostre maglie c'è Olly, l'associazione che sosteniamo."

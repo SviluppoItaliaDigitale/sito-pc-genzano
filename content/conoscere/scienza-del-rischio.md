@@ -46,7 +46,7 @@ Fonte: DPC; D.Lgs. 1/2018.
 
 Il punto in cui la scienza diventa allerta operativa è la **rete dei Centri Funzionali**: una struttura nazionale (presso il Dipartimento) e una rete di **Centri Funzionali Decentrati** regionali. Per il Lazio opera il **Centro Funzionale Regionale**, che ogni giorno elabora e pubblica i **bollettini di criticità** (idrogeologica, idraulica, temporali) e gli **avvisi meteo**, attribuendo a ciascuna zona di allerta un **codice colore** — verde, giallo, arancione, rosso.
 
-I codici colore non descrivono l'intensità del fenomeno in sé, ma il **livello di criticità atteso** sul territorio, cioè i possibili effetti su persone e cose. Trovi i bollettini aggiornati nella pagina [Allerte meteo](/allerte-meteo/) e i dati in tempo reale nel [Cruscotto del territorio](/cruscotto/) e negli [Strumenti in tempo reale](/strumenti/).
+I codici colore non descrivono l'intensità del fenomeno in sé, ma il **livello di criticità atteso** sul territorio, cioè i possibili effetti su persone e cose. Trovi i bollettini aggiornati nella pagina [Allerte meteo](/allerte-meteo/) e i dati in tempo reale nel [Cruscotto e dati in tempo reale](/cruscotto/) e negli [Strumenti in tempo reale](/strumenti/).
 
 Fonte: DPC; Regione Lazio — Centro Funzionale Regionale.
 
@@ -60,7 +60,7 @@ Questo si lega al modello del rischio **R = Pericolosità × Vulnerabilità × E
 
 - [Le quattro fasi della protezione civile](/conoscere/le-quattro-fasi/) — il modello R = P × V × E.
 - [Il Servizio Nazionale](/conoscere/servizio-nazionale/) — chi fa cosa nel sistema.
-- [Allerte meteo](/allerte-meteo/), [Cruscotto del territorio](/cruscotto/) e [Strumenti in tempo reale](/strumenti/).
+- [Allerte meteo](/allerte-meteo/), [Cruscotto e dati in tempo reale](/cruscotto/) e [Strumenti in tempo reale](/strumenti/).
 - [Il catalogo dei rischi](/conoscere/catalogo-dei-rischi/) — ogni rischio spiegato come materia.
 
 ## Per approfondire — fonti istituzionali

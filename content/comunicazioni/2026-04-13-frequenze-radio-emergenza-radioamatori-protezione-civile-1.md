@@ -3,6 +3,7 @@ title: "Le frequenze radio della Rete Zamberletti: i radioamatori al servizio de
 date: 2026-04-13T00:01:00+02:00
 description: "La Rete Zamberletti: frequenze HF e VHF dei radioamatori per le emergenze, le prove di sintonia mensili tra le Prefetture e il ruolo nella protezione civile."
 badge: "Radiocomunicazioni"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-13-frequenze-radio-emergenza-radioamatori-protezione-civile-1.webp"

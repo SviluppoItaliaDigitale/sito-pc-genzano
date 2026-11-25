@@ -29,7 +29,7 @@ In Italia, ogni anno il 7-10% degli incendi boschivi parte da mozziconi di sigar
 
 ## I mesi più pericolosi
 
-Nei Castelli Romani il periodo più pericoloso è **da giugno a settembre**. Il rischio aumenta quando:
+Nei Castelli Romani il periodo più pericoloso è l'estate. Nel 2026 va **dal 15 giugno al 15 ottobre**. Il rischio aumenta quando:
 
 - fa molto caldo (oltre 30 gradi)
 - l'aria è secca

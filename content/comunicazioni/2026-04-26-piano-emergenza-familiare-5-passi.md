@@ -3,6 +3,7 @@ title: "Il piano di emergenza familiare in 5 passi"
 date: 2026-04-26T00:01:00+02:00
 description: "Un'ora di tempo, un foglio di carta, una conversazione con la famiglia. Cinque passi semplici per essere pronti quando l'imprevisto arriva."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-26-piano-emergenza-familiare-5-passi.webp"

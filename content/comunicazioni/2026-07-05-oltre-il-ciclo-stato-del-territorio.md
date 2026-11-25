@@ -3,6 +3,7 @@ title: "Oltre il ciclo: online la matrice dello stato del territorio e quattro n
 date: 2026-07-05T00:02:00+02:00
 description: "Online la pagina «Oltre il ciclo», la matrice dello stato del territorio e nuovi approfondimenti su clima, governance e prevenzione che funziona."
 badge: "Informazione"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-05-oltre-il-ciclo-stato-del-territorio.webp"

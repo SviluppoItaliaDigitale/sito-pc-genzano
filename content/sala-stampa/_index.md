@@ -29,9 +29,9 @@ I comunicati del Gruppo, con il testo da copiare e il PDF da scaricare. Le testa
 
 Avvisi, interventi e attività del Gruppo a Genzano e nei Castelli Romani, dal più recente:
 
-{{< ultime-comunicazioni canale="gruppo" numero="5" >}}
+{{< ultime-comunicazioni canale="territorio" numero="5" >}}
 
-- **Tutte le notizie del Gruppo:** [Il Gruppo e il territorio](/comunicazioni/#canale=gruppo). L'[archivio completo](/comunicazioni/) comprende anche gli approfondimenti.
+- **Tutte le notizie del Gruppo:** [Genzano e Castelli Romani](/comunicazioni/#canale=territorio). L'[archivio completo](/comunicazioni/) comprende anche gli approfondimenti.
 - **Per le redazioni che usano sistemi automatici:** il [feed RSS delle comunicazioni](/comunicazioni/index.xml) e l'[elenco delle ultime comunicazioni in formato JSON](/comunicazioni/index.json). Gli altri feed sono nella pagina [Feed RSS](/feed-rss/).
 - **I canali social:** [Facebook](https://www.facebook.com/protezionecivilegenzanodiroma), [Instagram](https://www.instagram.com/protezionecivilegenzano/), [Telegram](https://t.me/pcalfagenzano) e [X](https://x.com/alfagenzano). Le regole con cui li usiamo sono nella [Social media policy](/social-media-policy/).
 

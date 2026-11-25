@@ -3,6 +3,7 @@ title: "La Carta naturalistica dei Castelli Romani: leggere il vulcano su cui vi
 date: 2026-09-14T00:03:00+02:00
 description: "Una carta in scala 1:30.000 di Latium Volcano racconta il Vulcano Laziale, i laghi, le sorgenti, i boschi, i sentieri: cosa insegna a chi fa prevenzione."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-14-carta-naturalistica-castelli-romani-latium-volcano.webp"

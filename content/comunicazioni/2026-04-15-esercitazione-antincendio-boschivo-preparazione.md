@@ -3,6 +3,7 @@ title: "Esercitazione antincendio boschivo: come ci prepariamo"
 date: 2026-04-15T00:01:00+02:00
 description: "Ogni anno in primavera il Gruppo partecipa a esercitazioni AIB. Uno sguardo a cosa si fa, come ci si prepara e perché queste prove realistiche sono essenziali."
 badge: "Esercitazione"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-15-esercitazione-antincendio-boschivo-preparazione.webp"
@@ -13,7 +14,7 @@ allegati: []
 draft: false
 ---
 
-La **primavera** è tradizionalmente il periodo in cui i gruppi di Protezione Civile partecipano alle **esercitazioni AIB** (Antincendio Boschivo). Prima dell'inizio della **campagna estiva** — giugno-settembre — i volontari mettono in pratica procedure, mezzi e coordinamento in **scenari realistici**.
+La **primavera** è tradizionalmente il periodo in cui i gruppi di Protezione Civile partecipano alle **esercitazioni AIB** (Antincendio Boschivo). Prima dell'inizio della **campagna estiva** (nel 2026 dal 15 giugno al 15 ottobre) i volontari mettono in pratica procedure, mezzi e coordinamento in **scenari realistici**.
 
 L'esercitazione è uno strumento insostituibile: non è sufficiente **leggere un manuale** o **ripassare le radio**. Serve mettere le mani sulle cose, vedere come funziona la squadra, capire chi fa cosa in condizioni reali.
 

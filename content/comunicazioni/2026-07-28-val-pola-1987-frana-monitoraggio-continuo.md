@@ -4,6 +4,7 @@ date: 2026-07-28T00:02:00+02:00
 description: "28 luglio 1987 in Valtellina: 40 milioni di metri cubi di roccia precipitano dal monte Zandila. L'evacuazione preventiva cambiò il monitoraggio dei versanti."
 
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-28-val-pola-1987-frana-monitoraggio-continuo.webp"

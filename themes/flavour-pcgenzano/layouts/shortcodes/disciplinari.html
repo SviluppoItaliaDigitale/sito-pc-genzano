@@ -1,0 +1,163 @@
+{{- /*
+  Shortcode disciplinari — catalogo dei disciplinari DOP, IGP e STG (/cucina-emergenza/disciplinari/).
+    {{< disciplinari parte="riepilogo" >}}   quanti prodotti, da quale elenco, giorno del controllo
+    {{< disciplinari parte="filtri" >}}      ricerca, regione e tipo di prodotto (compaiono solo con JavaScript)
+    {{% disciplinari parte="catalogo" %}}    prodotti per tipo (con il «%», così i titoli entrano nell'indice di pagina)
+    {{< disciplinari parte="sintesi" >}}     quante sintesi europee ci sono e per quanti prodotti mancano
+  Dati: data/disciplinari.json. Ogni nome porta al PDF sul sito del Ministero dell'agricoltura, che lo fa
+  scaricare: per questo i collegamenti restano nella stessa scheda. Dove il Ministero pubblica solo un file
+  Word, o nessun file, la voce rimanda alla pagina del Ministero e non al file (regola della sezione: solo PDF).
+  `sintesi` è la sintesi europea del disciplinare di un prodotto DOP o IGP: il documento unico (regolamento
+  (UE) 2024/1143, articolo 50) o, per i più vecchi, la scheda riepilogativa, con le eventuali rettifiche.
+  Sono PDF di EUR-Lex, che li mostra nel browser: per questo si aprono in una nuova scheda. Li scrive nei
+  dati scripts/aggiorna-documenti-unici.py.
+  I collegamenti li ricontrolla scripts/check-cucina-emergenza.py. Script: js/disciplinari.js (entro
+  ECMAScript 2018). CSS: sezione «CUCINA IN EMERGENZA v1.0» (le righe nuove usano le classi che c'erano).
+  Ricerca (25/11/2026): ogni voce porta data-p, le parole che si cercano dall'inizio (nome, parole chiave
+  della classe e del prodotto dal campo `parole` dei dati, prima parola di ogni regione), e data-e, le parole
+  che si cercano intere (sigla, regioni e loro altri nomi da `alias_regioni`); data-r resta per il menu
+  delle regioni. Le STG hanno la regione della tradizione descritta nel disciplinare, e il gruppo lo dice
+  con la sua `nota`. La prova nel browser è scripts/prova-filtro-disciplinari.py, bloccante sulle PR.
+  Nel ramo «catalogo» non devono restare righe vuote dentro i blocchi HTML: il Markdown li spezzerebbe.
+*/ -}}
+{{- $d := site.Data.disciplinari -}}
+{{- if not $d }}{{ errorf "disciplinari: manca data/disciplinari.json" }}{{ end -}}
+{{- $parte := .Get "parte" -}}
+{{- $pagine := dict -}}
+{{- range $d.classi }}{{ $pagine = merge $pagine (dict .id .) }}{{ end -}}
+{{- $unici := 0 }}{{ $schede := 0 }}{{ $rettifiche := 0 }}{{ $indicazioni := 0 }}{{ $senzaPdf := 0 }}{{ $senzaPdfConSintesi := 0 -}}
+{{- range $d.voci -}}
+  {{- if ne .tipo "STG" }}{{ $indicazioni = add $indicazioni 1 }}{{ end -}}
+  {{- if ne .formato "pdf" }}{{ $senzaPdf = add $senzaPdf 1 }}{{ if .sintesi }}{{ $senzaPdfConSintesi = add $senzaPdfConSintesi 1 }}{{ end }}{{ end -}}
+  {{- with .sintesi -}}
+    {{- if eq .tipo "unico" }}{{ $unici = add $unici 1 }}{{ else }}{{ $schede = add $schede 1 }}{{ end -}}
+    {{- $rettifiche = add $rettifiche (len (.rettifiche | default (slice))) -}}
+  {{- end -}}
+{{- end -}}
+{{- $sintesi := add $unici $schede -}}
+
+{{- if eq $parte "riepilogo" -}}
+{{- $dop := len (where $d.voci "tipo" "DOP") -}}
+{{- $igp := len (where $d.voci "tipo" "IGP") -}}
+{{- $stg := len (where $d.voci "tipo" "STG") -}}
+<p class="disc-riepilogo">Nel catalogo ci sono {{ len $d.voci }} prodotti: {{ $dop }} DOP, {{ $igp }} IGP e {{ $stg }} STG. I prodotti DOP e IGP sono quelli dell'<a href="{{ $d.elenco_ufficiale.url }}" target="_blank" rel="noopener noreferrer">elenco del Ministero<span class="visually-hidden"> dell'agricoltura, della sovranità alimentare e delle foreste (si apre in una nuova scheda)</span></a> aggiornato al <time datetime="{{ $d.elenco_ufficiale.aggiornato }}">{{ time $d.elenco_ufficiale.aggiornato | time.Format ":date_long" }}</time>. Abbiamo controllato i collegamenti uno per uno il <time datetime="{{ $d.verificato }}">{{ time $d.verificato | time.Format ":date_long" }}</time>.</p>
+{{- if or $sintesi $senzaPdf }}
+<p class="disc-riepilogo">{{ if $sintesi }}Per {{ $sintesi }} prodotti DOP e IGP trovi anche la sintesi europea del disciplinare, in PDF. {{ end }}{{ if $senzaPdf }}Per {{ $senzaPdf }} prodotti il Ministero non pubblica il disciplinare in PDF: lì trovi il rimando alla sua pagina{{ if and $senzaPdfConSintesi (eq $senzaPdfConSintesi $senzaPdf) }} e la sintesi europea{{ else if $senzaPdfConSintesi }} e, dove c'è, la sintesi europea{{ end }}.{{ end }}</p>
+{{- end }}
+
+{{- else if eq $parte "sintesi" -}}
+<p class="disc-riepilogo">Le sintesi europee collegate sono {{ $sintesi }}: {{ $unici }} {{ if eq $unici 1 }}documento unico{{ else }}documenti unici{{ end }} e {{ $schede }} {{ if eq $schede 1 }}scheda riepilogativa{{ else }}schede riepilogative{{ end }}{{ if $rettifiche }}, con {{ $rettifiche }} {{ if eq $rettifiche 1 }}rettifica{{ else }}rettifiche{{ end }}{{ end }}.{{ with sub $indicazioni $sintesi }} Per {{ . }} {{ if eq . 1 }}prodotto{{ else }}prodotti{{ end }} DOP e IGP, nelle pubblicazioni che il registro europeo cita, non abbiamo trovato una sintesi da collegare.{{ end }}</p>
+
+{{- else if eq $parte "filtri" -}}
+{{- $conta := dict -}}
+{{- range $d.voci }}{{ range .regioni }}{{ $conta = merge $conta (dict . (add 1 (index $conta . | default 0))) }}{{ end }}{{ end -}}
+<div class="disc-filtri bg-light d-print-none" data-disc="filtri" hidden>
+  <p class="disc-filtri-titolo" id="disc-filtri-titolo">Cerca nel catalogo</p>
+  <div class="disc-campi" role="group" aria-labelledby="disc-filtri-titolo">
+    <div class="disc-campo disc-campo-cerca">
+      <label for="disc-cerca">Nome, tipo di prodotto o luogo</label>
+      <input type="search" id="disc-cerca" autocomplete="off" enterkeyhint="search" aria-describedby="disc-aiuto">
+    </div>
+    <div class="disc-campo">
+      <label for="disc-regione">Regione</label>
+      <select id="disc-regione">
+        <option value="">Tutte le regioni</option>
+        {{- range $nome, $n := $conta }}
+        <option value="{{ anchorize $nome }}">{{ $nome }} ({{ $n }})</option>
+        {{- end }}
+      </select>
+    </div>
+    <div class="disc-campo">
+      <label for="disc-gruppo">Tipo di prodotto</label>
+      <select id="disc-gruppo">
+        <option value="">Tutti i tipi</option>
+        {{- range $d.gruppi }}
+        <option value="{{ .id }}">{{ .titolo }}</option>
+        {{- end }}
+      </select>
+    </div>
+  </div>
+  <p class="small mt-2 mb-0" id="disc-aiuto">Puoi scrivere il nome di un prodotto o di un luogo, per esempio «pecorino» o «Norcia», oppure un tipo di prodotto: formaggi, salumi, olio, legumi, dolci. L’elenco sotto il riquadro cambia mentre scrivi o scegli.</p>
+  <p class="disc-conteggio" role="status" data-disc="conteggio"></p>
+  <div class="d-flex flex-column flex-sm-row flex-wrap gap-2 mt-2" data-disc="azioni">
+    <a class="btn btn-primary" href="#disc-trovati" data-disc="vai" hidden>Vai ai prodotti trovati</a>
+    <button type="button" class="btn btn-outline-primary disc-azzera" data-disc="azzera" hidden>Mostra tutti i prodotti</button>
+  </div>
+</div>
+{{- $vj := readFile "themes/flavour-pcgenzano/static/js/disciplinari.js" | hash.FNV32a }}
+<script src="{{ "js/disciplinari.js" | relURL }}?v={{ $vj }}" defer></script>
+
+{{- else if eq $parte "catalogo" -}}
+{{- $alias := $d.alias_regioni | default dict }}
+
+<p class="disc-riepilogo" id="disc-trovati" tabindex="-1" data-disc="trovati" hidden></p>
+
+<p class="disc-nessuno" tabindex="-1" data-disc="nessuno" hidden>Nessun prodotto corrisponde alla ricerca. <span data-disc="perche"></span>Controlla come hai scritto la parola, prova con il nome di un prodotto o di una regione, oppure premi «Mostra tutti i prodotti».</p>
+{{- range $g := $d.gruppi }}
+{{- with where $d.voci "classe" "in" $g.classi }}
+
+## {{ $g.titolo }} {#disc-{{ $g.id }}}
+
+<div class="disc-gruppo" data-disc-gruppo="{{ $g.id }}">
+{{- with $g.nota }}
+<p class="disc-nota">{{ . }}</p>
+{{- end }}
+<ul class="disc-elenco no-gloss">
+{{- range . }}
+{{- $slug := slice -}}
+{{- range .regioni }}{{ $slug = $slug | append (anchorize .) }}{{ end -}}
+{{- $peso := printf "%d\u00a0KB" (int .kb) -}}
+{{- if ge (int .kb) 1024 }}{{ $peso = replace (printf "%.1f\u00a0MB" (div (float .kb) 1024.0)) "." "," }}{{ end -}}
+{{- $pag := index $pagine .classe -}}
+{{- if not $pag }}{{ errorf "disciplinari: classe %q sconosciuta per «%s» in data/disciplinari.json" .classe .nome }}{{ end }}
+{{- $inizi := slice .nome -}}
+{{- with $pag.parole }}{{ $inizi = $inizi | append . }}{{ end -}}
+{{- with .parole }}{{ $inizi = $inizi | append . }}{{ end -}}
+{{- $intere := slice .tipo -}}
+{{- range .regioni -}}
+  {{- $intere = $intere | append . -}}
+  {{- $inizi = $inizi | append (replaceRE `[^\p{L}].*$` "" (replaceRE `^Provincia autonoma di ` "" .)) -}}
+  {{- range (index $alias . | default (slice)) -}}
+    {{- $intere = $intere | append . -}}
+    {{- $inizi = $inizi | append (replaceRE `[^\p{L}].*$` "" .) -}}
+  {{- end -}}
+{{- end }}
+<li class="disc-voce" data-r="{{ delimit $slug "|" }}" data-p="{{ lower (delimit $inizi " ") }}" data-e="{{ lower (delimit $intere " ") }}">
+<span class="disc-nome">{{ if eq .formato "pdf" }}<a href="{{ .url }}">{{ .nome }}<span class="visually-hidden">, disciplinare in PDF (si scarica)</span></a>{{ else }}{{ .nome }}{{ end }}</span> <span class="disc-tipo">{{ .tipo }}</span>
+{{- with .regioni }}
+<span class="disc-luogo">{{ delimit . ", " }}</span>
+{{- end }}
+{{- if eq .formato "pdf" }}
+<span class="disc-dati">PDF · {{ .pagine }}&nbsp;{{ if eq (int .pagine) 1 }}pagina{{ else }}pagine{{ end }} · {{ $peso }}</span>
+{{- else if eq .formato "docx" }}
+<span class="disc-dati disc-avviso">Il Ministero lo pubblica solo in formato Word, nella <a href="{{ $pag.pagina }}" target="_blank" rel="noopener noreferrer">sua pagina<span class="visually-hidden"> sul disciplinare «{{ .nome }}» (si apre in una nuova scheda)</span></a>.</span>
+{{- else }}
+<span class="disc-dati disc-avviso">Il disciplinare non è nella <a href="{{ $pag.pagina }}" target="_blank" rel="noopener noreferrer">pagina del Ministero<span class="visually-hidden"> dove dovrebbe stare «{{ .nome }}» (si apre in una nuova scheda)</span></a>.</span>
+{{- end }}
+{{- $nome := .nome }}
+{{- range .extra }}
+<span class="disc-dati disc-extra"><a href="{{ .url }}">{{ .etichetta }}<span class="visually-hidden"> del disciplinare «{{ $nome }}», PDF (si scarica)</span></a> · PDF · {{ .kb }}&nbsp;KB</span>
+{{- end }}
+{{- with .sintesi }}
+{{- $pesoUE := printf "%d\u00a0KB" (int .kb) -}}
+{{- if ge (int .kb) 1024 }}{{ $pesoUE = replace (printf "%.1f\u00a0MB" (div (float .kb) 1024.0)) "." "," }}{{ end }}
+<span class="disc-dati disc-extra">Sintesi europea: <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ if eq .tipo "unico" }}documento unico{{ else }}scheda riepilogativa{{ end }}<span class="visually-hidden"> di «{{ $nome }}», PDF su EUR-Lex (si apre in una nuova scheda)</span></a> · <time datetime="{{ .data }}">{{ time .data | time.Format ":date_long" }}</time> · PDF · {{ .pagine }}&nbsp;{{ if eq (int .pagine) 1 }}pagina{{ else }}pagine{{ end }} · {{ $pesoUE }}</span>
+{{- range .rettifiche }}
+{{- $pesoUE = printf "%d\u00a0KB" (int .kb) -}}
+{{- if ge (int .kb) 1024 }}{{ $pesoUE = replace (printf "%.1f\u00a0MB" (div (float .kb) 1024.0)) "." "," }}{{ end }}
+<span class="disc-dati disc-extra"><a href="{{ .url }}" target="_blank" rel="noopener noreferrer">Rettifica<span class="visually-hidden"> della sintesi europea di «{{ $nome }}», PDF su EUR-Lex (si apre in una nuova scheda)</span></a> · <time datetime="{{ .data }}">{{ time .data | time.Format ":date_long" }}</time> · PDF · {{ .pagine }}&nbsp;{{ if eq (int .pagine) 1 }}pagina{{ else }}pagine{{ end }} · {{ $pesoUE }}</span>
+{{- end }}
+{{- end }}
+</li>
+{{- end }}
+</ul>
+<p class="disc-fonte">Fonte: Ministero dell'agricoltura, della sovranità alimentare e delle foreste, {{ if eq (len $g.classi) 1 }}pagina{{ else }}pagine{{ end }}
+{{- range $i, $c := $g.classi }}{{ $p := index $pagine $c }}{{ if $i }},{{ end }} <a href="{{ $p.pagina }}" target="_blank" rel="noopener noreferrer">{{ $p.titolo }}<span class="visually-hidden"> (si apre in una nuova scheda)</span></a>{{ end }}.</p>
+</div>
+{{- end }}
+{{- end }}
+
+
+{{- else -}}
+{{ errorf "disciplinari: parte %q sconosciuta (riepilogo, filtri, catalogo, sintesi): %s" $parte .Position }}
+{{- end -}}

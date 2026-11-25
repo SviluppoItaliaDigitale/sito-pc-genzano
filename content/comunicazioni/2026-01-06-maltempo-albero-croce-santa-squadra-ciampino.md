@@ -3,6 +3,7 @@ title: "Maltempo del 6 gennaio a Genzano e a Ciampino"
 date: 2026-01-06
 description: "Un albero caduto alla Croce Santa, il sottopasso di via Montegiove di nuovo percorribile e una squadra con idrovora inviata a Ciampino."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-01-06-maltempo-albero-croce-santa-squadra-ciampino.webp"

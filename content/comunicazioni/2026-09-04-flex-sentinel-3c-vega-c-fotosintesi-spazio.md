@@ -3,6 +3,7 @@ title: "Il 15 settembre partiranno FLEX e Sentinel-3C: un satellite per misurare
 date: 2026-09-04T00:02:00+02:00
 description: "Un Vega-C porterà in orbita due satelliti europei. Uno misurerà la salute delle piante, l'altro continuerà a sorvegliare temperature e incendi."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-04-flex-sentinel-3c-vega-c-fotosintesi-spazio.webp"
@@ -76,7 +77,7 @@ L'ESA trasmette i lanci in diretta sui propri canali. L'orario è scomodo, le tr
 
 **Fonti istituzionali:**
 
-- [ESA — Missione FLEX](https://www.esa.int/Applications/Observing_the_Earth/FutureEO/FLEX)
-- [ESA — La fluorescenza della vegetazione](https://www.esa.int/Applications/Observing_the_Earth/FutureEO/FLEX/Fluorescence)
+- [ESA — Missione FLEX: dati essenziali](https://www.esa.int/articles/about-us/directorates/earth-observation-programmes/futureeo/flex/facts-and-figures)
+- [ESA — La fluorescenza della vegetazione](https://www.esa.int/articles/about-us/directorates/earth-observation-programmes/futureeo/flex/fluorescence)
 - [ESA — Copernicus Sentinel-3](https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel_3)
 - [Copernicus Data Space Ecosystem — accesso ai dati](https://dataspace.copernicus.eu/)

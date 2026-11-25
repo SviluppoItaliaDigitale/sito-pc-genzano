@@ -3,6 +3,7 @@ title: "Cambio ora solare: cosa cambia per la sicurezza serale"
 date: 2026-10-24T00:07:00+02:00
 description: "Nella notte fra sabato 24 e domenica 25 ottobre torna l'ora solare e la sera fa buio un'ora prima. Come adattare abitudini e sicurezza."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-25-cambio-ora-solare-preparazione-sera.webp"

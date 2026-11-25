@@ -3,6 +3,7 @@ title: "Terremoti in Venezuela: stato di emergenza per l'intervento all'estero"
 date: 2026-07-02T00:02:00+02:00
 description: "Il Consiglio dei ministri dichiara per sei mesi lo stato di emergenza per intervento all'estero dopo i terremoti del 24 giugno in Venezuela."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-02-stato-emergenza-estero-venezuela.webp"

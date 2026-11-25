@@ -253,6 +253,14 @@ dati:
         perche: "Nessuna fonte fissa al 1° giugno l'inizio del periodo AIB nel Lazio: la campagna 2026 parte il 15 giugno, l'ordinanza di Genzano il 17 giugno."
         contesto: 'incendi|AIB|boschi|fuochi'
         finestra: 200
+      # Aggiunta il 20/11/2026: 35 pagine scrivevano «giugno-settembre» per la
+      # stagione degli incendi. Restano ammesse solo le trascrizioni dei due video,
+      # che devono coincidere con l'audio (le date esatte stanno subito sotto).
+      - regex: '(?i)\bgiugno\s*(?:a|al|e|[-–])\s*settembre\b'
+        perche: "Per gli incendi si usano le date ufficiali: nel 2026 la campagna AIB del Lazio va dal 15 giugno al 15 ottobre e l'ordinanza di Genzano vieta i fuochi dal 17 giugno al 15 ottobre."
+        contesto: 'incend|AIB|boschi|fuoc'
+        finestra: 200
+        salvo_se_frase: 'quando fa caldo e piove poco|il pericolo è più alto|consigli caldo'
 
   - id: ustione-raffreddamento
     dato: "Quanto raffreddare un'ustione termica con acqua"
@@ -1173,7 +1181,7 @@ dati:
 
   - id: coc-funzioni-supporto
     dato: "Funzioni di supporto del Centro Operativo Comunale"
-    valore: "sedici funzioni senza numero (Direttiva PCM 30 aprile 2021), che il Comune sceglie, accorpa o riduce nel proprio Piano; il Metodo Augustus (1997, nove funzioni comunali numerate) è l'origine storica, superata"
+    valore: "sedici funzioni senza numero (Direttiva PCM 30 aprile 2021), che il Comune sceglie, accorpa o riduce nel proprio Piano; il Metodo Augustus (1997, nove funzioni comunali numerate) è l'origine storica, aggiornata dalla Direttiva del 2021"
     fonti:
       - nome: "Direttiva PCM 30 aprile 2021, Gazzetta Ufficiale n. 160 del 6 luglio 2021"
         url: "https://www.gazzettaufficiale.it/eli/gu/2021/07/06/160/sg/pdf"
@@ -1309,3 +1317,85 @@ dati:
     vietati:
       - regex: '\b5\s+novembre\s+(?:del\s+)?1854\b'
         perche: "Il 5 novembre è la data nel calendario giapponese dell'epoca: nel calendario gregoriano il terremoto è del 24 dicembre 1854."
+
+  # --- Voci aggiunte il 18/11/2026 dalla verifica dei video su COC e freddo.
+
+  - id: genzano-altitudine
+    dato: "Altitudine di Genzano di Roma"
+    valore: "458 m s.l.m. il centro del comune; territorio da 102 a 496 m, media 273 m (ISTAT, Altimetria dei Comuni al 31/12/2021)"
+    fonti:
+      - nome: "ISTAT, Altimetria dei Comuni al 31/12/2021"
+        url: "https://www.istat.it/it/archivio/156224"
+    vietati:
+      - regex: '\b4(?:25|30|35)\s*(?:m\b|metri|m\s*s\.?l\.?m)'
+        perche: "Il dato ISTAT 2021 del centro del comune è 458 m; 430 e 435 m non hanno fonte aggiornata."
+        contesto: 'Genzano'
+        finestra: 200
+
+  - id: coc-sede-genzano
+    dato: "Sede del Centro Operativo Comunale di Genzano di Roma"
+    valore: "il Piano comunale indica due sedi (Palazzetto dello sport Gino Cesaroni e Polizia Locale, via Roma 31) senza indicarne una principale"
+    fonti:
+      - nome: "Comune di Genzano di Roma, Piano di Protezione Civile Comunale, cap. 11"
+        url: "https://www.comune.genzanodiroma.roma.it/sites/comune.genzanodiroma.roma.it/files/2024-12/Piano%20di%20Protezione%20Civile%20Comunale%20-%20Genzano%20di%20Roma.pdf"
+    vietati:
+      - regex: '\bsede\s+(?:primaria|principale)\b'
+        perche: "Il Piano comunale non indica una sede principale del COC: va chiesto al Comune prima di scriverlo."
+        contesto: 'COC|Centro Operativo'
+        finestra: 300
+
+  - id: rcp-superficie-letto
+    dato: "Dove si fanno le compressioni toraciche se la persona è su un letto"
+    valore: "la superficie rigida è preferibile, ma non si sposta la persona da un letto a terra: si comincia lì e si comprime più a fondo"
+    fonti:
+      - nome: "IRC, Linee guida RCP 2025, cap. 4 «Basic Life Support adulto» (traduzione delle Linee guida ERC 2025)"
+        url: "https://www.ircouncil.it/wp-content/uploads/2026/02/CAPITOLO_4-BLS-ADULTO.pdf"
+    vietati:
+      - regex: '\bmai\s+sul\s+letto\b'
+        perche: "Le Linee guida IRC/ERC 2025 dicono di non spostare la persona dal letto a terra: si inizia sul letto premendo più a fondo."
+        contesto: 'compression|massaggio|RCP|rianimazion|superficie'
+        finestra: 200
+      - regex: '\b(?:sposta|porta|trasferisci)(?:la|lo)?\s+(?:a|sul)\s+(?:terra|pavimento)\b'
+        perche: "Spostare la persona dal letto al pavimento ritarda la prima compressione (Linee guida IRC/ERC 2025)."
+        contesto: 'compression|massaggio|RCP|rianimazion'
+        finestra: 200
+
+  - id: numero-1530-mare
+    dato: "Ambito del numero 1530 della Guardia Costiera"
+    valore: "emergenze in mare; per ogni emergenza il numero da chiamare resta il 112"
+    fonti:
+      - nome: "Guardia Costiera, comunicato «Mare e Laghi Sicuri 2026»"
+        url: "https://www.guardiacostiera.gov.it/portale/w/al-via-l-operazione-estiva-mare-e-laghi-sicuri-2026-"
+    vietati:
+      - regex: '1530[^.\n]{0,80}\blaghi\b'
+        perche: "Le fonti ufficiali della Guardia Costiera indicano il 1530 per le emergenze in mare; nessuna lo estende ai laghi (19/11/2026)."
+        contesto: '1530'
+        finestra: 120
+
+  - id: nuclei-educazione-civica
+    dato: "Nuclei concettuali dell'educazione civica"
+    valore: "tre nuclei: Costituzione; Sviluppo economico e sostenibilità; Cittadinanza digitale (Linee guida allegate al D.M. 183/2024)"
+    fonti:
+      - nome: "Ministero dell'Istruzione e del Merito, Linee guida per l'insegnamento dell'educazione civica (D.M. 183 del 7 settembre 2024)"
+        url: "https://www.istruzione.it/educazione_civica/norme.html"
+    vietati:
+      - regex: '\bCittadinanza\s+(?:scientifica|solidale)\b'
+        perche: "Il D.M. 183/2024 non ha nuclei con questi nomi: i nuclei sono Costituzione, Sviluppo economico e sostenibilità, Cittadinanza digitale."
+        contesto: '183/2024|educazione civica|nucle'
+        finestra: 200
+      - regex: '183/2024\s+—\s+Sostenibilità\b'
+        perche: "Il nome ufficiale del nucleo è «Sviluppo economico e sostenibilità»."
+        contesto: '183/2024'
+        finestra: 40
+
+  - id: emilia-romagna-2023-sfollati
+    dato: "Sfollati dell'alluvione dell'Emilia-Romagna di maggio 2023"
+    valore: "picco di 36.600 sfollati il 20 maggio 2023"
+    fonti:
+      - nome: "Regione Emilia-Romagna, scheda «Maggio 2023: numeri dell'emergenza» (cartella stampa del 2024): «Il 20 maggio si è toccato il picco massimo di 36.600 sfollati»"
+        url: "https://notizie.regione.emilia-romagna.it/comunicati/2024/giugno/201cuna-giornata-per-dire-grazie-alluvione-un-anno-dopo201d-oggi-al-palacattani-di-faenza-un-grande-evento-per-ringraziare-tutti-coloro-che-sono-intervenuti-nella-fase-di-emergenza-e-successivamente-il-ricordo-delle-vittime-bonaccini-e-priolo-201cnon/cartella-stampa/scheda_maggio-2023_numeri-emergenza.pdf"
+    vietati:
+      - regex: '\b50(?:\.000|mila| 000)\s+(?:persone\s+)?sfollat'
+        perche: "La Regione Emilia-Romagna indica un picco di 36.600 sfollati il 20 maggio 2023 (verificato il 20/11/2026)."
+        contesto: 'Emilia|Romagna|2023'
+        finestra: 300

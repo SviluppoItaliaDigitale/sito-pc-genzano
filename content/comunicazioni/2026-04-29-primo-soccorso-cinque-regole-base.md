@@ -3,6 +3,7 @@ title: "Primo soccorso: le cinque regole di base che tutti dovrebbero sapere"
 date: 2026-04-29T00:01:00+02:00
 description: "Non sostituisce un corso, ma conoscere poche regole essenziali può salvare una vita nei minuti che precedono l'arrivo del 112."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-29-primo-soccorso-cinque-regole-base.webp"
@@ -51,7 +52,7 @@ Avvicinati alla persona e chiama ad alta voce: "**Mi sente? Come sta?**". Se ser
 
 Se la persona è incosciente:
 
-1. **Mettila supina** su una superficie rigida, con cautela se sospetti traumi.
+1. **Mettila supina**, con cautela se sospetti traumi. Il pavimento va bene; se è su un letto, non spostarla a terra: si comincia lì.
 2. **Iperestendi la testa** con una mano sulla fronte e due dita sotto il mento: questa manovra apre le vie aeree.
 3. **Avvicina l'orecchio alla bocca della persona**: per 10 secondi guarda il torace, ascolta il respiro, senti l'aria sulla guancia.
 

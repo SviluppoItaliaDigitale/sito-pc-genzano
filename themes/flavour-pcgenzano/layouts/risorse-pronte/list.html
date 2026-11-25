@@ -116,7 +116,7 @@
                     <div class="risorsa-tipo mb-2">
                       {{ if eq $tipo "podcast" }}<i class="bi bi-headphones me-1" aria-hidden="true"></i>Podcast
                       {{ else if eq $tipo "infografica" }}<i class="bi bi-image me-1" aria-hidden="true"></i>Infografica
-                      {{ else if eq $tipo "presentazione" }}<i class="bi bi-file-earmark-slides me-1" aria-hidden="true"></i>Presentazione PPTX
+                      {{ else if eq $tipo "presentazione" }}<i class="bi bi-easel me-1" aria-hidden="true"></i>Presentazione per la classe
                       {{ else if eq $tipo "presentazione-pdf" }}<i class="bi bi-file-earmark-pdf me-1" aria-hidden="true"></i>Presentazione PDF
                       {{ else if eq $tipo "quiz" }}<i class="bi bi-check2-square me-1" aria-hidden="true"></i>Quiz
                       {{ else if eq $tipo "flashcard" }}<i class="bi bi-card-list me-1" aria-hidden="true"></i>Flashcard
@@ -146,12 +146,28 @@
                       Il tuo browser non supporta l'audio HTML5. <a href="{{ $fileUrl | relURL }}">Scarica il file</a>.
                     </audio>
                     {{ end }}
+                    {{ with .formati }}
+                    {{/* Presentazioni: un pulsante per ogni formato di schermo */}}
+                    <p class="small fw-semibold mb-1 mt-auto">Scegli il formato della tua lavagna:</p>
+                    <ul class="list-unstyled risorsa-formati mb-0">
+                      {{ range . }}
+                      <li class="mb-1">
+                        <a href="{{ .url | relURL }}" class="btn btn-sm btn-outline-primary w-100 text-start" download>
+                          <i class="bi {{ if hasSuffix .url ".pdf" }}bi-file-earmark-pdf{{ else }}bi-file-earmark-slides{{ end }} me-1" aria-hidden="true"></i>{{ .etichetta }}<span class="visually-hidden">: {{ $titolo }}</span>
+                          <span class="small">({{ if hasSuffix .url ".pdf" }}PDF{{ else }}PowerPoint{{ end }}, {{ .dimensione }})</span>
+                        </a>
+                      </li>
+                      {{ end }}
+                    </ul>
+                    <p class="small mt-2 mb-0"><a href="{{ "lim/" | relURL }}">Come scegliere il formato per la LIM</a></p>
+                    {{ else }}
                     {{ if $fileUrl }}
                     <a href="{{ $fileUrl | relURL }}" class="btn btn-sm btn-outline-primary mt-auto"
                        {{ if ne $tipo "podcast" }}download{{ end }}>
                       <i class="bi bi-download me-1" aria-hidden="true"></i>
                       {{ if eq $tipo "podcast" }}Scarica audio{{ else }}Scarica{{ end }}<span class="visually-hidden">: {{ $titolo }}</span>
                     </a>
+                    {{ end }}
                     {{ end }}
                   </div>
                 </div>

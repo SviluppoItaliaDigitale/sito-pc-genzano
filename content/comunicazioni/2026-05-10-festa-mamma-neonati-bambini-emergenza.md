@@ -3,6 +3,7 @@ title: "Festa della Mamma: un piano di emergenza per chi ha neonati e bambini pi
 date: 2026-05-10
 description: "Un kit pensato per neonati e bambini piccoli fa la differenza in un'emergenza. Cosa tenere pronto, come organizzarsi, a chi rivolgersi."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-10-festa-mamma-neonati-bambini-emergenza.webp"

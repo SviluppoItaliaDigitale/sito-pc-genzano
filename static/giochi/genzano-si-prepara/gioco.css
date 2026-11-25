@@ -58,7 +58,7 @@ body.gsp-body { background: var(--gsp-fondo); }
   max-height: 640px;
 }
 @media (max-width: 991.98px) { .gsp-mappa { height: 40vh; min-height: 240px; max-height: none; } }
-.gsp-pannello h2 { scroll-margin-top: 1rem; }
+.gsp-pannello h2 { scroll-margin-top: 84px; /* sotto la barra del gioco, sticky in alto */ }
 
 .gsp-camera {
   position: absolute;
@@ -120,7 +120,7 @@ body.gsp-body { background: var(--gsp-fondo); }
 .gsp-pannello h2:focus { outline: 3px solid #ffbe2e; outline-offset: 3px; }
 .gsp-ora { margin: 0 0 .2rem; color: #4a5560; font-weight: 600; font-size: .95rem; text-transform: none; }
 .gsp-domanda { font-weight: 700; margin: 1rem 0 .4rem; }
-.gsp-contatore { font-weight: 600; color: var(--gsp-blu); }
+.gsp-contatore { font-weight: 600; color: var(--gsp-blu); min-height: 3em; }
 
 .gsp-scenari { display: grid; gap: .6rem; margin: .8rem 0; }
 .gsp-scenario {
@@ -242,3 +242,11 @@ html.a11y-pause-anim .gsp-mappa.gsp-trema, html.a11y-pause-animations .gsp-mappa
    di attesa alto almeno 44 px, comodo col dito sulla lavagna. */
 .gsp-sotto-mappa .form-check { min-height: 44px; display: flex; align-items: center; }
 .gsp-sotto-mappa .form-check-label { min-height: 44px; display: inline-flex; align-items: center; }
+
+/* Bordo conservato dopo il tocco: Bootstrap Italia lo porterebbe al colore
+   del testo (vedi giochi.css, --giochi-bordo). */
+.gsp-azione, .gsp-scelta { --giochi-bordo: #b9c3cf; }
+.gsp-azione:hover:not(:disabled), .gsp-scelta:hover:not(:disabled),
+.gsp-azione[aria-pressed="true"], .gsp-scelta.gsp-scelta-tua { --giochi-bordo: var(--gsp-blu); }
+.gsp-scenario { --giochi-bordo: var(--gsp-blu); }
+.gsp-presto { --giochi-bordo: #8a96a3; }

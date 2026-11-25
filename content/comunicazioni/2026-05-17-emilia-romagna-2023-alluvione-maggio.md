@@ -3,6 +3,7 @@ title: "Alluvione dell'Emilia-Romagna, maggio 2023: il fango che ha cambiato la 
 date: 2026-05-17T00:02:00+02:00
 description: "Maggio 2023 in Emilia-Romagna: 350 mm di pioggia in 36 ore, esondazione di 23 fiumi, 17 vittime, 36.000 sfollati. L'alluvione più grave del XXI secolo."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-17-emilia-romagna-2023-alluvione-maggio.webp"
@@ -17,7 +18,7 @@ Sono passati **tre anni**. Fra il **16 e il 18 maggio 2023**, l'**Emilia-Romagna
 
 {{< foto src="/images/2026-04-23-emilia-romagna-2023-scout.webp"
          alt="Immagine satellitare NASA della fitta copertura nuvolosa sull'Italia durante l'ondata di maltempo che ha colpito l'Emilia-Romagna nel maggio 2023"
-         caption="Emilia-Romagna, maggio 2023. Il sistema nuvoloso ripreso da satellite durante le due ondate alluvionali a distanza di 15 giorni: 17 morti, 50.000 sfollati, 23 fiumi esondati. AGESCI Emilia-Romagna attiva la Segreteria Avanzata di Emergenza a Forlì con oltre 1.000 volontari formati col Corso Emergenza Alluvione. Foto: NASA — Public domain — via Wikimedia Commons." >}}
+         caption="Emilia-Romagna, maggio 2023. Il sistema nuvoloso ripreso da satellite durante le due ondate alluvionali a distanza di 15 giorni: 17 morti, oltre 36.000 sfollati, 23 fiumi esondati. AGESCI Emilia-Romagna attiva la Segreteria Avanzata di Emergenza a Forlì con oltre 1.000 volontari formati col Corso Emergenza Alluvione. Foto: NASA — Public domain — via Wikimedia Commons." >}}
 
 In poche ore esondarono **23 fra fiumi e torrenti**: il **Lamone**, il **Senio**, il **Santerno**, il **Sillaro**, il **Savio**, il **Montone**, il **Ronco**, il **Lavino**, il **Reno**, e tanti minori. Si verificarono **oltre 400 frane** sui versanti appenninici, alcune delle quali isolarono interi paesi. Comuni della Romagna come **Faenza, Forlì, Cesena, Conselice, Lugo, Castel Bolognese** furono allagati per giorni; metri di acqua sporca entrarono nelle case, nei magazzini, nelle fabbriche, negli ospedali.
 

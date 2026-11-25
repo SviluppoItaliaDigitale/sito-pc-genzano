@@ -31,18 +31,33 @@
     .opt-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: .5rem; margin-top: 1rem; }
     @media (max-width: 560px) { .opt-grid { grid-template-columns: 1fr; } }
     .opt-btn {
-      padding: .7rem; border-radius: 8px; border: 2px solid #e9ecef;
-      background: #fff; color: var(--rag-blu); cursor: pointer; font-weight: 500;
-      text-align: left;
+      padding: .7rem .9rem; border-radius: 8px; border: 2px solid #7d8ea3;
+      background: #fff; color: var(--rag-blu); cursor: pointer; font-weight: 600;
+      text-align: left; font-size: 1.02rem;
+      display: flex; align-items: center; justify-content: space-between; gap: .5rem;
     }
-    .opt-btn:hover, .opt-btn:focus { background: #eef4fc; border-color: var(--rag-blu); }
+    .opt-btn:not(:disabled):hover, .opt-btn:focus-visible { background: #eef4fc; border-color: var(--rag-blu); }
+    .opt-btn:focus-visible { outline: 3px solid var(--rag-blu); outline-offset: 2px; }
+    /* Esito: colore + icona (spunta o croce), mai il solo colore */
     .opt-btn.correct { background: #d1e7dd; border-color: #198754; color: #0f5132; }
     .opt-btn.wrong { background: #f8d7da; border-color: #dc3545; color: #8B1F2E; }
+    .opt-btn.correct::after, .opt-btn.wrong::after { font-family: bootstrap-icons; font-size: 1.25rem; line-height: 1; }
+    .opt-btn.correct::after { content: "\f26a"; color: #146c43; }
+    .opt-btn.wrong::after { content: "\f622"; color: #b02a37; }
     .alfabeto-table {
-      font-size: .85rem; display: grid; grid-template-columns: repeat(4, 1fr); gap: .4rem;
+      font-size: .85rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(128px, 1fr)); gap: .4rem;
     }
+    .mode-tabs button, .opt-btn, #invia { min-height: 44px; }
+    .mode-tabs button .fatto { color: var(--rag-verde); }
+    .mode-tabs button.active .fatto { color: #fff; }
+    .opt-btn:disabled { cursor: default; }
     .alfabeto-table span { background: #eef4fc; border-radius: 4px; padding: .3rem .5rem; }
     .alfabeto-table span b { color: var(--rag-blu); }
+
+    /* bordo conservato dopo il tocco (vedi giochi.css, --giochi-bordo) */
+    .opt-btn { --giochi-bordo: #7d8ea3; }
+    .opt-btn.correct { --giochi-bordo: #198754; }
+    .opt-btn.wrong { --giochi-bordo: #dc3545; }
   </style>
 </head>
 <body class="rag-body" data-coach-game="radio-emergency">
@@ -114,6 +129,7 @@
     </div>
   </main>
   <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/giochi/assets/js/audio-sintetico.js"></script>
   <script src="/app-shared/site-chrome.js"></script>
   <script src="/giochi/assets/js/progressione.js"></script>
   <script src="/giochi/assets/js/attestato.js"></script>
@@ -174,7 +190,7 @@
         spiega: 'Frasi brevi e chiare: la radio ha tempo limitato e va capita subito.'
       },
       {
-        domanda: 'In radioamatorialismo, "CQ" significa:',
+        domanda: 'Fra i radioamatori, "CQ" significa:',
         opzioni: [
           'Chiudo la frequenza',
           'Chiamata generale a tutte le stazioni',
@@ -182,7 +198,7 @@
           'Cambio canale'
         ],
         corretta: 1,
-        spiega: '"CQ" (dall\'inglese "seek you") è la chiamata generale: il radioamatore lancia "CQ CQ CQ" per cercare un contatto.'
+        spiega: '"CQ" (si pronuncia come l\'inglese "seek you", «ti cerco») è la chiamata generale: il radioamatore lancia "CQ CQ CQ" per cercare un contatto.'
       },
       {
         domanda: '"QRZ?" in radio significa:',
@@ -251,22 +267,57 @@
         tabs = document.querySelectorAll('.mode-tabs button');
 
     var mode = 'alfabeto';
+    // Dopo un cambio di schermata, per 400 ms nessun tocco arriva a pulsanti o
+    // link: il secondo tocco di un doppio tocco cadrebbe su cio' che e' comparso
+    // sotto il dito (la scena nuova, la schermata finale, i link a fondo pagina).
+    var bloccoTocchi = 0;
+    document.addEventListener('click', function (e) {
+      if (Date.now() < bloccoTocchi) { e.preventDefault(); e.stopPropagation(); }
+    }, true);
+    function bloccaTocchi() { bloccoTocchi = Date.now() + 400; }
     var queue = [], idx = 0, punti = 0, punteggioMax = 0;
     var modeQueues = { alfabeto: [], formato: [], dettato: [] };
+    // Ogni prova ricorda a che punto e' arrivata: cambiando scheda non si
+    // ricomincia e non si possono rifare (e ricontare) le domande gia' date.
+    var modeIdx = { alfabeto: 0, formato: 0, dettato: 0 };
+    // Doppio tocco (LIM): una risposta per domanda; il passaggio alla domanda
+    // successiva e' legato al turno (giro) in cui e' nato, cosi' un cambio di
+    // scheda nel frattempo non fa avanzare la prova sbagliata.
+    var risposto = false, giro = 0, prontoDa = 0, finito = false;
+
+    function suona(giusta){
+      var A = window.AudioSintetico;
+      if (A) { if (giusta) A.dingPositivo(); else A.tonoNeutro(); }
+    }
+    function dopoRisposta(ms){
+      var mio = ++giro, m = mode;
+      setTimeout(function(){
+        if (mio !== giro || m !== mode) return;
+        modeIdx[m]++; idx = modeIdx[m];
+        show();
+      }, ms);
+    }
+    function normalizza(s){
+      return String(s).toUpperCase().replace(/\bTRE\b/g, '3').replace(/\bSETTE\b/g, '7').replace(/[^A-Z0-9]/g, '');
+    }
 
     function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t;} return a; }
 
     function start(){
       intro.classList.add('hide'); end.classList.add('hide'); game.classList.remove('hide');
-      punti = 0; punteggioMax = 0;
+      punti = 0; punteggioMax = 0; finito = false;
+      modeIdx = { alfabeto: 0, formato: 0, dettato: 0 };
       puntiEl.textContent = 0;
       // Prepara domande alfabeto, 3 formato, 3 dettato
       modeQueues.alfabeto = shuffle(NATO.slice()).slice(0, 5).map(function(p){
         var opts = shuffle([p[1]].concat(shuffle(NATO.filter(function(q){ return q[0] !== p[0]; })).slice(0, 3).map(function(q){ return q[1]; })));
         return { tipo:'mc', testo: 'Come si dice in NATO la lettera <strong>' + p[0] + '</strong>?', opzioni: opts, corretta: opts.indexOf(p[1]), spiega: p[0] + ' = ' + p[1] };
       });
+      // Opzioni mescolate: la risposta giusta non sta sempre nello stesso posto.
       modeQueues.formato = MESSAGGI.slice().map(function(m){
-        return { tipo:'mc', testo: m.domanda, opzioni: m.opzioni, corretta: m.corretta, spiega: m.spiega };
+        var giusta = m.opzioni[m.corretta];
+        var opts = shuffle(m.opzioni.slice());
+        return { tipo:'mc', testo: m.domanda, opzioni: opts, corretta: opts.indexOf(giusta), spiega: m.spiega };
       });
       modeQueues.dettato = shuffle(DETTATO.slice()).slice(0, 3).map(function(d){
         return { tipo:'free', testo: 'Scrivi cosa significa: <strong>' + d.spell + '</strong>', risposta: d.frase, spiega: 'La decodifica corretta è <strong>' + d.frase + '</strong>.' };
@@ -276,9 +327,13 @@
 
     function switchMode(m){
       mode = m;
-      tabs.forEach(function(t){ t.classList.toggle('active', t.dataset.mode === m); });
+      giro++;
+      tabs.forEach(function(t){
+        t.classList.toggle('active', t.dataset.mode === m);
+        t.setAttribute('aria-pressed', t.dataset.mode === m ? 'true' : 'false');
+      });
       queue = modeQueues[m];
-      idx = 0;
+      idx = modeIdx[m];
       provaTot.textContent = queue.length;
       feedback.innerHTML = '';
       show();
@@ -288,16 +343,46 @@
       t.addEventListener('click', function(){ switchMode(t.dataset.mode); });
     });
 
+    function prossimaDaFare(){
+      var ordine = ['alfabeto', 'formato', 'dettato'];
+      for (var i = 0; i < ordine.length; i++) {
+        if (modeIdx[ordine[i]] < modeQueues[ordine[i]].length) return ordine[i];
+      }
+      return null;
+    }
+    var NOMI_PROVA = { alfabeto: 'Alfabeto NATO', formato: 'Formato messaggio', dettato: 'Dettato radio' };
+
     function show(){
       feedback.innerHTML = '';
       rispostaLibera.classList.add('hide');
       opzioni.innerHTML = '';
+      risposto = false;
+      prontoDa = Date.now() + 400;
+      bloccaTocchi();
+      tabs.forEach(function(t){
+        var m = t.dataset.mode, fatta = modeIdx[m] >= modeQueues[m].length;
+        var segno = t.querySelector('.fatto');
+        if (fatta && !segno) t.insertAdjacentHTML('beforeend', ' <i class="bi bi-check-circle-fill fatto" aria-label="completata"></i>');
+      });
       if (idx >= queue.length){
-        prompt.innerHTML = '<strong>Sezione completata.</strong> Usa le schede in alto per la prossima, oppure clicca <em>Concludi turno</em>.';
+        var poi = prossimaDaFare();
+        provaN.textContent = queue.length;
+        prompt.innerHTML = '<strong>Prova completata.</strong> ' + (poi
+          ? 'Passa alla prova <em>' + NOMI_PROVA[poi] + '</em>, oppure concludi il turno.'
+          : 'Hai fatto tutte e tre le prove: concludi il turno.');
+        if (poi) {
+          var vai = document.createElement('button');
+          vai.type = 'button';
+          vai.className = 'btn btn-primary mt-2';
+          vai.innerHTML = 'Vai a: ' + NOMI_PROVA[poi] + ' <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>';
+          vai.addEventListener('click', function(){ if (Date.now() >= prontoDa) switchMode(poi); });
+          opzioni.appendChild(vai);
+        }
         var btn = document.createElement('button');
-        btn.className = 'btn btn-success mt-2';
+        btn.type = 'button';
+        btn.className = 'btn ' + (poi ? 'btn-outline-success' : 'btn-success') + ' mt-2';
         btn.innerHTML = '<i class="bi bi-flag-fill me-1"></i> Concludi turno';
-        btn.addEventListener('click', finish);
+        btn.addEventListener('click', function(){ if (Date.now() >= prontoDa) finish(); });
         opzioni.appendChild(btn);
         return;
       }
@@ -307,55 +392,74 @@
       if (q.tipo === 'mc'){
         q.opzioni.forEach(function(opt, i){
           var b = document.createElement('button');
+          b.type = 'button';
           b.className = 'opt-btn';
           b.innerHTML = opt;
           b.addEventListener('click', function(){
+            if (risposto || Date.now() < prontoDa) return;
+            risposto = true;
             opzioni.querySelectorAll('.opt-btn').forEach(function(x){ x.disabled = true; });
             punteggioMax++;
+            suona(i === q.corretta);
             if (i === q.corretta){
               b.classList.add('correct');
               punti++; puntiEl.textContent = punti;
-              feedback.innerHTML = '<div class="alert alert-success py-2 mb-0"><i class="bi bi-check-circle-fill me-1"></i> ' + q.spiega + '</div>';
+              feedback.innerHTML = '<div class="alert alert-success mb-0"><strong>Giusto.</strong> ' + q.spiega + '</div>';
               if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
             } else {
               b.classList.add('wrong');
               opzioni.querySelectorAll('.opt-btn')[q.corretta].classList.add('correct');
-              feedback.innerHTML = '<div class="alert alert-warning py-2 mb-0"><i class="bi bi-x-circle-fill me-1"></i> ' + q.spiega + '</div>';
+              feedback.innerHTML = '<div class="alert alert-warning mb-0"><strong>Sbagliato.</strong> ' + q.spiega + '</div>';
               if (window.GameCoach && window.GameCoach.hint) {
                 window.GameCoach.hint('Alfabeto NATO: A=Alfa, B=Bravo, C=Charlie, D=Delta, E=Echo… Numeri cifra-per-cifra: 112 = "uno-uno-due". Termini: "passo"=aspetto risposta, "chiudo"=fine comunicazione.', '/comunicazioni/?categoria=Radiocomunicazioni');
               }
             }
-            setTimeout(function(){ idx++; show(); }, 1700);
+            dopoRisposta(1700);
           });
           opzioni.appendChild(b);
         });
       } else {
         rispostaLibera.classList.remove('hide');
         inputLibero.value = '';
+        inputLibero.disabled = false;
+        invia.disabled = false;
         inputLibero.focus();
       }
     }
 
+    inputLibero.addEventListener('keydown', function(e){
+      if (e.key === 'Enter') { e.preventDefault(); invia.click(); }
+    });
     invia.addEventListener('click', function(){
-      if (idx >= queue.length) return;
+      if (idx >= queue.length || risposto) return;
       var q = queue[idx];
       if (q.tipo !== 'free') return;
+      if (!inputLibero.value.trim()) { inputLibero.focus(); return; }
+      risposto = true;
+      invia.disabled = true;
+      inputLibero.disabled = true;
       punteggioMax++;
-      var v = inputLibero.value.trim().toUpperCase();
-      if (v === q.risposta.toUpperCase()){
+      // Si accettano spazi, trattini e numeri scritti in lettere («BRAVO TRE»).
+      var giusta = normalizza(inputLibero.value) === normalizza(q.risposta);
+      suona(giusta);
+      if (giusta){
         punti++; puntiEl.textContent = punti;
-        feedback.innerHTML = '<div class="alert alert-success py-2 mb-0"><i class="bi bi-check-circle-fill me-1"></i> Perfetto! ' + q.spiega + '</div>';
+        feedback.innerHTML = '<div class="alert alert-success mb-0">Perfetto! ' + q.spiega + '</div>';
         if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
       } else {
-        feedback.innerHTML = '<div class="alert alert-warning py-2 mb-0"><i class="bi bi-x-circle-fill me-1"></i> Hai scritto "' + inputLibero.value + '". ' + q.spiega + '</div>';
+        feedback.innerHTML = '<div class="alert alert-warning mb-0">Hai scritto «' + inputLibero.value.replace(/[&<>"']/g, function(c){ return '&#' + c.charCodeAt(0) + ';'; }) + '». ' + q.spiega + '</div>';
         if (window.GameCoach && window.GameCoach.hint) {
           window.GameCoach.hint('Decodifica NATO: ogni parola corrisponde a una lettera. Esempio: Alfa=A, Bravo=B, Charlie=C. La parola finale è la sequenza delle lettere iniziali.', '/comunicazioni/?categoria=Radiocomunicazioni');
         }
       }
-      setTimeout(function(){ idx++; show(); }, 1800);
+      dopoRisposta(1800);
     });
 
     function finish(){
+      if (finito) return;
+      finito = true;
+      bloccaTocchi();
+      giro++;
       game.classList.add('hide');
       end.classList.remove('hide');
       document.getElementById('final-punti').textContent = punti;

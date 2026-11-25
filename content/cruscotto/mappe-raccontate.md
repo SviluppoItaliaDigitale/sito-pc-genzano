@@ -113,7 +113,7 @@ Il [Laboratorio meteo](/laboratorio-meteo/) disegna grafici con i dati del clima
 
 ## Vedi anche
 
-- [Cruscotto del territorio](/cruscotto/): le schede con i dati aggiornati.
+- [Cruscotto e dati in tempo reale](/cruscotto/): le schede con i dati aggiornati.
 - [Laboratorio meteo](/laboratorio-meteo/): i grafici del clima dei Castelli Romani, da costruire e scaricare.
 - [Allerte meteo](/allerte-meteo/): il livello di oggi e che cosa fare, colore per colore.
 - [Lo stato del territorio](/stato-del-territorio/): il quadro rischio per rischio, con le fonti.

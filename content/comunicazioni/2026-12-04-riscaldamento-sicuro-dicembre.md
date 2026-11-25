@@ -3,6 +3,7 @@ title: "Riscaldamento sicuro: stufe, camini e caldaie a dicembre"
 date: 2026-12-04
 description: "Dicembre è il mese di picco del riscaldamento. Ricapitoliamo le regole per stufe, camini, caldaie e impianti alternativi."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-04-riscaldamento-sicuro-dicembre.webp"
@@ -30,7 +31,7 @@ A **dicembre** il **riscaldamento** funziona a pieno regime. È anche il mese di
 - **legna** bagnata o non stagionata;
 - **stufe** troppo vicine a materiali infiammabili;
 - **ventole** di aspirazione grasse;
-- **guaste** elettriche.
+- **guasti** elettrici.
 
 ### Ustioni
 - **superfici** calde di stufe;

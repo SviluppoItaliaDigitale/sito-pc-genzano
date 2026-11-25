@@ -3,6 +3,7 @@ title: "10 dicembre: Giornata dei Diritti Umani"
 date: 2026-12-10
 description: "Il 10 dicembre è la Giornata Internazionale dei Diritti Umani. Diritti, dignità e Protezione Civile: un legame essenziale."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-10-giornata-diritti-umani.webp"

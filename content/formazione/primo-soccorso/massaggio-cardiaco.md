@@ -24,7 +24,7 @@ Inizia subito se, dopo aver controllato coscienza e respiro (vedi [riconoscere l
 
 ## La posizione del soccorritore
 
-1. Sdraia la persona **sulla schiena**, su una **superficie rigida** (pavimento, mai sul letto o sul divano)
+1. Sdraia la persona **sulla schiena**. Una superficie rigida, come il pavimento, rende le compressioni più efficaci; ma se la persona è **su un letto non spostarla a terra**: comincia lì e premi più a fondo, per compensare il materasso (Linee guida IRC 2025, capitolo 4)
 2. **Inginocchiati accanto** al torace della persona
 3. **Scopri il torace** — sposta o taglia vestiti se serve, per appoggiare le mani sulla pelle
 

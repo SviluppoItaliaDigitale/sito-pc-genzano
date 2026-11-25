@@ -3,6 +3,7 @@ title: "La Regione Lazio finanzia i Coordinamenti del volontariato di protezione
 date: 2026-10-13T00:02:00+02:00
 description: "Approvata la convenzione tra Regione Lazio e gli 8 Coordinamenti del volontariato di PC. Alla FEPIVOL, il coordinamento del nostro Gruppo, 30.000 euro."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-13-regione-lazio-convenzione-coordinamenti-volontariato-fepivol.webp"

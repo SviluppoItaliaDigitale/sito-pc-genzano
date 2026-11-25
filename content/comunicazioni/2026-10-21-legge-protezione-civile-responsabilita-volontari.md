@@ -1,9 +1,10 @@
 ---
 title: "Volontari di protezione civile: il Parlamento approva la nuova legge sulla responsabilità penale"
 date: 2026-10-21T00:02:00+02:00
-lastmod: 2026-11-12
-description: "Approvata in via definitiva e promulgata la legge che limita alla colpa grave la responsabilità penale colposa dei volontari di protezione civile."
+lastmod: 2026-11-24
+description: "La legge 212/2026, pubblicata in Gazzetta Ufficiale, entrerà in vigore l'8 dicembre 2026: per i reati colposi i volontari di protezione civile rispondono solo per colpa grave."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-21-legge-protezione-civile-responsabilita-volontari.webp"
@@ -11,6 +12,9 @@ image_alt: "Cover dell'articolo: Volontari di protezione civile, il Parlamento a
 scadenza: ""
 area: "Italia"
 allegati:
+  - titolo: "Legge 12 novembre 2026, n. 212 — testo pubblicato nella Gazzetta Ufficiale, Serie generale n. 273 del 23 novembre 2026 (estratto: pagine della legge)"
+    url: "/allegati/2026/legge-212-2026-protezione-civile-gu-273.pdf"
+    dimensione: "1,8 MB"
   - titolo: "Disegno di legge 3076, approvato dal Senato il 4 agosto 2026 — testo trasmesso alla Camera"
     url: "/allegati/2026/camera-ac3076-protezione-civile-approvato-21-10-2026.pdf"
     dimensione: "196 KB"
@@ -19,12 +23,16 @@ social_punti:
   - "Approvazione definitiva alla Camera il 21 ottobre 2026: 131 voti favorevoli, 95 astensioni, nessun contrario"
   - "Per i reati colposi, il volontario risponde solo per colpa grave; chi ha seguito linee guida o buone pratiche adeguate al caso non è punibile"
   - "Nuove sezioni contrattuali per il personale delle strutture di protezione civile di Regioni, Comuni, Province e Città metropolitane"
-  - "Il 12 novembre 2026 il Presidente della Repubblica ha promulgato la legge; entrerà in vigore 15 giorni dopo la pubblicazione in Gazzetta Ufficiale"
+  - "Legge 12 novembre 2026, n. 212, pubblicata in Gazzetta Ufficiale il 23 novembre 2026: entra in vigore l'8 dicembre 2026"
 versione_facile: "2026-10-21-legge-protezione-civile-responsabilita-volontari-facile"
 draft: false
 ---
 
 La Camera dei Deputati ha approvato in via definitiva, **mercoledì 21 ottobre 2026**, il disegno di legge «Disposizioni in materia di protezione civile» (atto Camera 3076). Il Senato lo aveva già approvato il 4 agosto 2026, come atto Senato 1779. Il voto finale: **131 favorevoli, 95 astensioni, nessun contrario**, su 226 deputati presenti in Aula.
+
+## Aggiornamento del 24 novembre 2026: la legge è in Gazzetta Ufficiale
+
+La legge è stata pubblicata nella **Gazzetta Ufficiale n. 273 del 23 novembre 2026** come **legge 12 novembre 2026, n. 212**, «Disposizioni in materia di protezione civile». Come scrive la Gazzetta, **entra in vigore l'8 dicembre 2026**. Il testo pubblicato corrisponde a quello descritto in questa pagina: gli articoli 42-*bis* e 42-*ter* sono nell'articolo 6. Il termine di dodici mesi per le linee guida nazionali decorre dall'entrata in vigore della disposizione, quindi dall'8 dicembre 2026.
 
 ## Aggiornamento del 12 novembre 2026: la legge è stata promulgata
 
@@ -38,7 +46,7 @@ Nella lettera il Presidente spiega di aver firmato per la portata complessiva de
 
 Per questo il Presidente invita Parlamento e Governo a valutare se convenga introdurre regole diverse per singoli settori senza un coordinamento con criteri omogenei. L'obiettivo indicato è un quadro coerente, in cui eventuali regimi diversi siano ragionevoli ed equi.
 
-La lettera non cambia il testo approvato: la legge resta quella descritta qui sotto. Ora manca la pubblicazione in Gazzetta Ufficiale; la legge entrerà in vigore quindici giorni dopo.
+La lettera non cambia il testo approvato: la legge resta quella descritta qui sotto.
 
 ## Che cosa ha approvato il Parlamento
 
@@ -78,13 +86,14 @@ La parte iniziale della legge (articoli 1-5) riguarda il personale, dirigenziale
 
 ## Che cosa manca ancora
 
-La legge è stata promulgata il 12 novembre 2026, ma **non è ancora vigente**: deve essere pubblicata in Gazzetta Ufficiale. Il testo non prevede una data propria: vale la regola generale delle leggi italiane, cioè il quindicesimo giorno dopo la pubblicazione. Solo da quel momento decorrono i termini della legge, incluso quello di dodici mesi per le linee guida nazionali. Il Ministro per la protezione civile e le politiche del mare dovrà poi presentare alle Camere, ogni due anni, una relazione sull'attuazione della legge.
+La legge entra in vigore l'**8 dicembre 2026**. Da quel giorno decorrono i dodici mesi per le linee guida nazionali, che il Presidente del Consiglio dei ministri (o l'Autorità politica delegata) deve adottare con direttiva. Finché non ci sono, vale il riferimento alle buone pratiche. Il Ministro per la protezione civile e le politiche del mare dovrà poi presentare alle Camere, ogni due anni, una relazione sull'attuazione della legge. La legge non prevede nuovi oneri per la finanza pubblica.
 
-Seguiremo la pubblicazione in Gazzetta Ufficiale e aggiorneremo la pagina del [Codice della protezione civile](/normativa/testo-unico-protezione-civile/capo-6-misure-strumenti/) non appena la legge sarà vigente.
+La pagina del [Codice della protezione civile](/normativa/testo-unico-protezione-civile/capo-6-misure-strumenti/) dà già conto dei due nuovi articoli.
 
 ## Per approfondire
 
 - Sul nostro sito: [Codice della protezione civile, Capo VI](/normativa/testo-unico-protezione-civile/capo-6-misure-strumenti/) · [Diventare volontari del Gruppo](/diventa-volontario/) · [Normativa di protezione civile](/normativa/)
+- Fonte primaria: [legge 12 novembre 2026, n. 212, in Gazzetta Ufficiale n. 273 del 23 novembre 2026](https://www.gazzettaufficiale.it/eli/id/2026/11/23/26G00228/sg)
 - Fonte primaria: [comunicato e lettera del Presidente della Repubblica del 12 novembre 2026](https://www.quirinale.it/it/notizie/mattarella-promulga-legge-recante-disposizioni-materia-protezione-civile-invia-lettera-presidenti-camere-presidente-consiglio-ministri)
 - Fonte primaria: [scheda del provvedimento sul sito della Camera dei Deputati (atto Camera 3076)](https://www.camera.it/leg19/126?tab=1&leg=19&idDocumento=3076&sede=&tipo=)
 - Copia sul sito: [testo del disegno di legge, come approvato dal Senato e trasmesso alla Camera](/allegati/2026/camera-ac3076-protezione-civile-approvato-21-10-2026.pdf)

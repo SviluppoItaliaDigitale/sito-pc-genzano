@@ -10,7 +10,7 @@ Questo kit è pensato per i docenti della **scuola secondaria di primo grado** c
 
 I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma e si prestano all'uso nelle ore di scienze, geografia, educazione civica e tecnologia.
 
-> 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-primo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-primo-grado.zip) (~778 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
+> 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-primo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-primo-grado.zip) (~1,9 MB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
 
 ---
 
@@ -165,7 +165,7 @@ Genzano di Roma sorge sui **Colli Albani**, un complesso vulcanico quiescente si
 |---|---|---|
 | **Sismico** | Medio | Zona sismica 2B — possibili scosse avvertite dalla popolazione |
 | **Idrogeologico** | Medio-alto in alcune zone | Fossi, impluvi e versanti collinari soggetti a frane e allagamenti localizzati |
-| **Incendio boschivo** | Alto in estate | Vasta copertura boschiva, periodo critico giugno-settembre |
+| **Incendio boschivo** | Alto in estate | Vasta copertura boschiva, periodo critico d'estate (nel 2026 dal 15 giugno al 15 ottobre) |
 | **Meteorologico** | Variabile | Temporali intensi, grandinate, vento forte, ondate di calore |
 | **Vulcanico** | Vulcano quiescente (non spento), monitorato | Colli Albani quiescenti, sorvegliati dall'INGV; per il DPC il pericolo concreto oggi sono le emissioni di gas dal suolo, non l'eruzione |
 
@@ -251,7 +251,7 @@ Scaricate un bollettino di allerta reale dal sito dell'[Agenzia di Protezione Ci
 **Durante**:
 - Non scendere in cantine, garage o piani interrati
 - Non attraversare strade o sottopassi allagati, né a piedi né in auto
-- Se sei in auto e l'acqua è ferma, esci e raggiungi un punto più alto; se la corrente è forte, resta dentro, chiama il 112 e, se l'acqua entra, sali sul tetto
+- Se sei in auto e l'acqua è ferma, esci e raggiungi un punto più alto; se la corrente è forte, resta dentro e chiama il 112
 - Raggiungi i piani alti dell'edificio in cui ti trovi
 
 **Dopo**: bevi l'acqua del rubinetto solo se ordinanze o avvisi del Comune non lo vietano. Non toccare impianti elettrici bagnati.
@@ -506,6 +506,42 @@ Schede pronte per la stampa specifiche per la scuola secondaria di primo grado:
 - 👉 [**Maremoto: la fisica e i comportamenti**](/formazione/schede-stampabili/maremoto-comportamenti-secondaria/) — come si genera un maremoto (velocità dell'onda in mare aperto e in costa), il Sistema di Allertamento SiAM, i tre segnali naturali e i comportamenti di autoprotezione. Mini verifica e soluzioni. *(scienze, geografia, ed. civica)*
 - 👉 [**IT-alert e comunicazioni ufficiali**](/formazione/schede-stampabili/it-alert-comunicazioni-secondaria/) — capire il sistema nazionale di allarme pubblico: anatomia di un messaggio (rischio/area/tempo/azione/fonte), esempio realistico, risposta in 140 caratteri, mini quiz. *(ed. civica, cittadinanza digitale, italiano)*
 - 👉 [**Notizie false in emergenza**](/formazione/schede-stampabili/fake-news-emergenza-secondaria/) — riconoscere e fermare la disinformazione: regola dei 3 controlli (fonte/data/conferma), checklist "prima di condividere", classifica delle notizie a gruppi e mini quiz. *(ed. civica digitale, italiano)*
+
+**Dentro le materie, fuori dall'aula e per crescere** — altre schede per la classe e per gli adulti:
+
+- 👉 [**Il mio passaporto della sicurezza**](/formazione/schede-stampabili/passaporto-sicurezza/) — le tappe dell'anno, dalla prova di evacuazione al piano familiare, con la firma del docente quando sono fatte. Senza punteggi.
+- 👉 [**In gita o in Erasmus: chiedere aiuto in inglese**](/formazione/schede-stampabili/inglese-gite-erasmus/) — le frasi in inglese per chiedere aiuto in viaggio, chiamare il 112 e capire un avviso (livello A2-B1).
+- 👉 [**Prova o emergenza in palestra**](/formazione/schede-stampabili/educazione-fisica-palestra/) — per il docente di educazione fisica: palestra, spogliatoi e campo esterno, la scossa durante la lezione, un alunno che si fa male. *(per il docente)*
+- 👉 [**Per il supplente: la sicurezza della classe**](/formazione/schede-stampabili/kit-docente-supplente/) — da compilare e lasciare sulla cattedra: piano di emergenza, aprifila e chiudifila, punto di raccolta, chi chiamare. *(per il supplente)*
+- 👉 [**Che cosa vuol dire «50 mm di pioggia»?**](/formazione/schede-stampabili/matematica-50mm-pioggia/) — matematica con la pioggia: dai millimetri ai litri e ai metri cubi, e perché il colore dell'allerta lo decide il Centro Funzionale. *(matematica, scienze)*
+- 👉 [**Gli spaghetti e la magnitudo: quanto è forte un terremoto?**](/formazione/schede-stampabili/scienze-spaghetti-terremoto/) — laboratorio con gli spaghetti: energia e magnitudo, magnitudo e intensità MCS. *(scienze)*
+- 👉 [**Il gas che resta in basso: l'anidride carbonica dei Colli Albani**](/formazione/schede-stampabili/co2-cantine-colli-albani/) — il degassamento dei Colli Albani: perché la CO₂ si raccoglie in basso, segnali e comportamenti prudenti. *(scienze, chimica)*
+- 👉 [**Cinque minuti, una scelta: dilemmi da proiettare al cambio dell'ora**](/formazione/schede-stampabili/cinque-minuti-dilemmi/) — una carta al giorno da proiettare al cambio dell'ora, con risposta capovolta e la pagina del sito da cui viene.
+- 👉 [**Ti ricordi quella volta? Intervista a un nonno**](/formazione/schede-stampabili/intervista-ai-nonni/) — memoria di un'emergenza vissuta raccolta da un anziano e confrontata con le fonti. *(storia, italiano)*
+- 👉 [**Due ore senza corrente: una simulazione a tempo**](/formazione/schede-stampabili/due-ore-senza-corrente/) — simulazione a tempo con ruoli e conto della batteria, senza candele.
+- 👉 [**Chi lavora sul rischio: professioni e percorsi**](/formazione/schede-stampabili/orientamento-professioni-rischio/) — orientamento alle professioni della protezione civile, collegato alle Linee guida per l'orientamento (D.M. 328/2022).
+- 👉 [**Se il clima ti preoccupa: dalla preoccupazione alle azioni**](/formazione/schede-stampabili/eco-ansia-azione/) — dall'eco-ansia alle azioni concrete di preparazione.
+- 👉 [**La chat in tilt: che cosa inoltro in un'emergenza**](/formazione/schede-stampabili/chat-in-tilt/) — che cosa inoltrare in un'emergenza e la responsabilità di chi inoltra.
+- 👉 [**Il telefono e la radio in emergenza**](/formazione/schede-stampabili/radio-112-telefono/) — 112 da telefono bloccato o senza credito, linee sature, radio e radioamatori.
+- 👉 [**Il compagno-guida nella prova di evacuazione**](/formazione/schede-stampabili/compagno-guida/) — accompagnare un compagno nella prova di evacuazione, chiedendo prima che aiuto vuole.
+- 👉 [**Accanto a un compagno spaventato: il primo aiuto tra pari**](/formazione/schede-stampabili/pronto-soccorso-emotivo-pari/) — il primo aiuto tra pari, dal primo soccorso psicologico dell'OMS (non è terapia).
+- 👉 [**Rubrica dei compiti di realtà di protezione civile**](/formazione/schede-stampabili/rubrica-compiti-realta/) — le stesse cinque voci per valutare prodotto e lavoro di gruppo. *(per il docente)*
+- 👉 [**Controlla, chiama, comprimi: il primo soccorso a misura di età**](/formazione/schede-stampabili/primo-soccorso-eta-kids-save-lives/) — il primo soccorso a misura di età secondo le Linee guida IRC/ERC 2025 e «Kids Save Lives»; non sostituisce un corso.
+- 👉 [**In gita nel Parco dei Castelli Romani: prima di partire**](/formazione/schede-stampabili/gita-parco-castelli-romani/) — allerta, zaino e regole del bosco prima di un'uscita della classe.
+- 👉 [**Fogli per la famiglia: giugno e dicembre**](/formazione/schede-stampabili/fogli-stagionali-giugno-dicembre/) — i consigli di stagione da portare a casa a giugno e a dicembre. *(per le famiglie)*
+- 👉 [**Il percorso da casa a scuola: un'indagine civica**](/formazione/schede-stampabili/indagine-percorso-casa-scuola/) — dalla mappa del tragitto, senza dati personali, alla segnalazione agli enti. *(educazione civica)*
+
+**Prove di evacuazione, famiglie e personale** — schede per la classe e per gli adulti della scuola:
+
+- 👉 [**La prova di evacuazione: la mia storia**](/formazione/schede-stampabili/storia-sociale-prova-evacuazione/) — storia sociale con pittogrammi da leggere nei giorni prima della prova, per chi è nello spettro autistico o ha altre necessità comunicative, da personalizzare con nomi, luogo e suono della propria scuola. *(con il docente di sostegno)*
+- 👉 [**La sirena a scuola: che cosa faccio**](/formazione/schede-stampabili/sirena-scuola-nuovi-arrivati/) — sei frasi in italiano semplice con pittogrammi per chi è appena arrivato in Italia, con una riga «Nella tua lingua» per il mediatore culturale.
+- 👉 [**Quando non si esce: restare al riparo dentro la scuola**](/formazione/schede-stampabili/restare-al-chiuso/) — temporale, fumo, nube o ordine delle autorità: che cosa fa la classe, chi decide, perché le famiglie non devono correre a scuola. Con quattro scenari e soluzioni capovolte.
+- 👉 [**Dopo la prova di evacuazione**](/formazione/schede-stampabili/debriefing-prova-evacuazione/) — 10 minuti per capire come è andata: griglia di osservazione per la classe, domande per il docente, modulo di segnalazione per il referente della sicurezza.
+- 👉 [**Il giorno dopo una scossa o un'allerta**](/formazione/schede-stampabili/il-giorno-dopo-docente/) — per il docente: 10 minuti per accogliere paure e voci in classe, che cosa dire e che cosa evitare, le fonti ufficiali per smontare una voce falsa. *(per il docente)*
+- 👉 [**Se a scuola scatta un'emergenza — foglio per le famiglie**](/formazione/schede-stampabili/patto-corresponsabilita-emergenze/) — da allegare al Patto di corresponsabilità o ai documenti di inizio anno: che cosa fa la scuola, che cosa fanno i genitori, ritiro dei figli e chiusure. *(per le famiglie)*
+- 👉 [**Assemblea dei genitori: 4 schermate sulle emergenze**](/formazione/schede-stampabili/assemblea-genitori-emergenze/) — da proiettare o stampare all'assemblea di inizio anno: piano e prove, cosa succede in orario scolastico, ritiro e chiusure, piano familiare. *(per le famiglie)*
+- 👉 [**Scheda di evacuazione personalizzata**](/formazione/schede-stampabili/evacuazione-personalizzata-pei/) — modello da compilare con la famiglia, accanto al PEI, per un'alunna o un alunno con disabilità: spostamenti e ausili, chi accompagna, come comunicare, percorso e punto di raccolta. *(per il docente di sostegno)*
+- 👉 [**Prova o emergenza: la scheda per il personale**](/formazione/schede-stampabili/scheda-personale-ata/) — per collaboratori scolastici, mensa ed educatori del pre e post-scuola: il proprio compito, il sostituto, chiavi, quadri e punto di raccolta. *(per il personale)*
 
 **Schede curriculari trasversali** (matematica, italiano, ed. civica, scienze):
 

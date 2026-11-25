@@ -3,6 +3,7 @@ title: "La lancia che spegne attraverso il muro, senza aprire la porta"
 date: 2026-08-22T00:02:00+02:00
 description: "Acqua a 300 bar e abrasivo: la lancia perforante attacca l'incendio dall'esterno, senza dare al fuoco l'aria che aspetta. Ecco come funziona."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-22-lancia-cobra-spegnere-attraverso-muro.webp"

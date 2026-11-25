@@ -3,6 +3,7 @@ title: "Ramo sulla carreggiata al Secondo Stradone Muti: intervento lampo in mez
 date: 2026-08-04T00:03:00+02:00
 description: "Il 4 agosto 2026 una squadra del Gruppo ha rimosso un ramo caduto sulla carreggiata al Secondo Stradone Muti, con la Polizia Locale sul posto."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-04-ramo-carreggiata-secondo-stradone-muti.webp"

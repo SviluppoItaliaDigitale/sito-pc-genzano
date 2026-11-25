@@ -3,6 +3,7 @@ title: "Dieci anni dal sisma del Centro Italia: la memoria come prevenzione"
 date: 2026-10-28T00:01:00+01:00
 description: "Dieci anni fa il sisma del Centro Italia devastava Amatrice, Norcia, Arquata del Tronto. Un anniversario per ricordare e imparare."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-28-centro-italia-2016-memoria.webp"

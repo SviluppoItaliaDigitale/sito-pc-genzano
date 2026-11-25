@@ -6,6 +6,7 @@ layout: "single"
 aliases:
   - /numeri-utili/
 dataUltimaRevisione: "2026-11-12"
+glossario_inline: false
 ---
 
 <!-- cache-bust: 2026-05-29 forza re-upload FTP dopo aggiunta voce di menu globale "Conoscere la Protezione Civile" -->

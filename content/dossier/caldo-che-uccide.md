@@ -66,7 +66,7 @@ Le città scaldano più della campagna. Asfalto, cemento e tetti accumulano calo
 
 Secondo l'**ISPRA**, in una grande città la temperatura può salire **fino a 3 gradi** più che nelle zone rurali vicine. Cresce così il numero di **notti tropicali** — quando la minima non scende sotto i 20 gradi — e il corpo non recupera.
 
-Genzano è diversa: è un comune collinare dei Castelli, a circa **435 metri**, di norma **più fresco** del centro di Roma. Ma anche da noi, nelle ondate più intense, può capitare qualche notte tropicale.
+Genzano è diversa: è un comune collinare dei Castelli, a circa **458 metri**, di norma **più fresco** del centro di Roma. Ma anche da noi, nelle ondate più intense, può capitare qualche notte tropicale.
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="piano-caldo" image="/images/dossier/heat-piano-caldo.webp" alt="Mappa dell'Europa colorata dall'arancione al rosso scuro che mostra l'anomalia della temperatura dell'aria in superficie nel 2022, con legenda da meno di 0 a oltre 2 gradi e loghi Unione Europea, Copernicus e Climate Change Service" align="top" kicker="Dal dato al bollettino" title="Prevedere<br>per proteggere" credito="© Unione Europea · Copernicus Climate Change Service · anomalia di temperatura 2022 · CC BY" >}}
@@ -84,6 +84,6 @@ Bere spesso senza aspettare la sete, evitare le ore più calde, tenere la casa f
 {{< dossier-fonti >}}
 - **Immagini:** temperatura di terra e mare nel Mediterraneo (ESA, CC BY) · temperatura dell'aria in Europa e anomalia 2003 (NASA Earth Observatory, pubblico dominio) · siccità del Po 2022 e anomalia di temperatura in Europa 2022 (Unione Europea, Copernicus, CC BY) · anomalia del mare nel Mediterraneo (Unione Europea, Copernicus Marine Service, CC BY) · temperatura del suolo di Tokyo (NASA Earth Observatory, dati Landsat 8 NASA/USGS, pubblico dominio).
 - **Fonti:** [Ministero della Salute — Caldo e salute](https://www.salute.gov.it/new/it/tema/ondate-di-calore) (bollettini per le città, Roma inclusa; numero di pubblica utilità 1500) · [ISPRA — Cambiamenti climatici e ondate di calore](https://www.isprambiente.gov.it/it/attivita/ambiente-e-salute/temi/cambiamenti-climatici-ondate-di-calore) (isola di calore urbana, notti tropicali) · [ASL Roma 6](https://www.aslroma6.it/) (azienda sanitaria competente per Genzano).
-- **Sul nostro sito:** [Quando manca l'acqua](/dossier/quando-manca-l-acqua/) · [Il clima che cambia i rischi](/dossier/il-clima-che-cambia-i-rischi/) · [L'aria che respiriamo](/dossier/l-aria-che-respiriamo/) · [Ondate di calore: cosa fare](/rischi-prevenzione/ondate-di-calore/) · [Proteggere anziani e persone fragili](/rischi-prevenzione/persone-necessita-specifiche/) · [Cruscotto del territorio](/cruscotto/).
+- **Sul nostro sito:** [Quando manca l'acqua](/dossier/quando-manca-l-acqua/) · [Il clima che cambia i rischi](/dossier/il-clima-che-cambia-i-rischi/) · [L'aria che respiriamo](/dossier/l-aria-che-respiriamo/) · [Ondate di calore: cosa fare](/rischi-prevenzione/ondate-di-calore/) · [Proteggere anziani e persone fragili](/rischi-prevenzione/persone-necessita-specifiche/) · [Cruscotto e dati in tempo reale](/cruscotto/).
 - Dossier a cura del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**. Guida divulgativa: in emergenza chiama il **112**.
 {{< /dossier-fonti >}}

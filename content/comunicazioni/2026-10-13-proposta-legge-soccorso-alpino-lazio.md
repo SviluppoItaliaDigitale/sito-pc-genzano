@@ -3,6 +3,7 @@ title: "Soccorso alpino: in commissione la proposta di legge regionale sul Lazio
 date: 2026-10-13T00:03:00+02:00
 description: "La XII Commissione del Consiglio regionale ha avviato l'esame: più coordinamento con 118 e 112, e nuove risorse per il 2026-2028. Non è ancora legge."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-13-proposta-legge-soccorso-alpino-lazio.webp"

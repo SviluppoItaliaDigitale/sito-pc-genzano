@@ -10,12 +10,14 @@ toc: true
 sitemap:
   priority: 0.7
   changefreq: monthly
-dataUltimaRevisione: "2026-05-28"
+dataUltimaRevisione: "2026-11-23"
 ---
 
 Il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** mette a disposizione una raccolta di **giochi educativi gratuiti** sulla sicurezza e sulla protezione civile, divisi in tre fasce d'età: **infanzia (3-6 anni)**, **scuola primaria (6-11 anni)** e **ragazzi e adulti (11-19 anni e oltre)**.
 
-Questa pagina è il **catalogo informativo** dei giochi: per ognuno trovi una scheda con fascia d'età, durata stimata, obiettivo didattico, indicazioni di accessibilità e collegamenti alle pagine del sito per approfondire il tema. I giochi si aprono in una pagina dedicata e funzionano direttamente dal browser, senza account e senza scaricare nulla.
+Questa pagina è il **catalogo informativo** dei giochi: per ognuno trovi una scheda con fascia d'età, durata stimata, obiettivo didattico, indicazioni di accessibilità e collegamenti alle pagine del sito per approfondire il tema. I giochi si aprono in una pagina dedicata e funzionano direttamente dal browser, senza account e senza installare nulla.
+
+**Pronti per la LIM.** Tutti i giochi si usano col dito sulla lavagna interattiva della classe, anche a schermo intero, e funzionano sui browser delle lavagne meno recenti. Durante la partita la barra in alto offre «Schermo intero», «Suoni» e «Torna al menu». Come usarli in classe e quali controlli facciamo: [Materiali pronti per la LIM](/lim/).
 
 > Cerchi l'esperienza interattiva con badge e progressi? Vai all'**[Arena PC Genzano](/giochi/)**, il launcher dei giochi con classifica personale.
 
@@ -146,7 +148,7 @@ Tre famiglie distinte: CLP per le sostanze chimiche (diamante bianco/rosso), ADR
 
 Sei al COC: allestisci un'area di accoglienza con budget limitato. **[Apri la scheda →](/catalogo-giochi/codice-arancione/)** · [Gioca subito →](/giochi/ragazzi/codice-arancione/)
 
-### [Emergency Responder](/catalogo-giochi/emergency-responder/)
+### [Soccorritore in emergenza](/catalogo-giochi/emergency-responder/)
 
 In emergenza pensi prima alle persone in pericolo, poi alla logistica. **[Apri la scheda →](/catalogo-giochi/emergency-responder/)** · [Gioca subito →](/giochi/ragazzi/emergency-responder/)
 
@@ -185,6 +187,10 @@ Tutti i giochi sono pubblicati con licenza **Creative Commons CC BY-NC-SA 4.0** 
 - [Percorsi didattici pronti](/formazione/percorsi-didattici/)
 - [Schede stampabili per la scuola](/formazione/schede-stampabili/)
 - [Kit didattici per fascia](/formazione/)
+
+### Grazie a docenti ed educatori
+
+Ringraziamo i docenti e gli educatori che ci scrivono con costanza: segnalano ciò che in classe non funziona, propongono temi nuovi e ci chiedono di adattare i giochi alle diverse età. Molti miglioramenti sono nati così, compresa la compatibilità con le lavagne interattive, che abbiamo rivisto dopo le segnalazioni arrivate dalle scuole. Per mandarci un suggerimento scrivi dalla pagina [Contatti](/contatti/).
 
 ## Accessibilità complessiva
 

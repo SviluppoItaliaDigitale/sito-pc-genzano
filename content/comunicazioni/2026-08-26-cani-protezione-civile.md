@@ -4,6 +4,7 @@ date: 2026-08-26T00:02:00+02:00
 description: "Il ruolo delle unità cinofile nella Protezione Civile italiana: ricerca dispersi in superficie, in macerie, sotto valanga."
 
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-26-cani-protezione-civile.webp"

@@ -29,15 +29,15 @@ Questa classificazione a quattro fasi è il **cuore operativo** del sistema: ogn
 
 Definisce che il Servizio Nazionale è composto da una **pluralità di soggetti**, secondo il principio del **"sistema"**. Non esiste un'unica struttura che "fa protezione civile": c'è una **rete** di enti pubblici, volontariato e strutture operative che agiscono in modo coordinato sotto la responsabilità delle autorità competenti.
 
-## Articolo 4 — Composizione del Servizio nazionale
-
-L'articolo 4 elenca **chi fa parte** del Servizio Nazionale. Ne fanno parte, come **autorità di protezione civile** e secondo i rispettivi ordinamenti:
+Il comma 1 indica le **autorità di protezione civile**, che esercitano le funzioni di indirizzo politico secondo il principio di sussidiarietà:
 
 - il **Presidente del Consiglio dei Ministri** (autorità nazionale)
 - i **Presidenti delle Regioni e delle Province autonome** (autorità territoriali)
 - i **Sindaci** e i **Sindaci metropolitani** (autorità territoriali)
 
-Concorrono inoltre al Servizio le **amministrazioni dello Stato**, le **Regioni**, le **Città metropolitane**, le **Province** e i **Comuni**, insieme al **Dipartimento della Protezione Civile** (struttura di coordinamento nazionale), alle **strutture operative** e al **volontariato organizzato**. Il dettaglio delle singole funzioni è poi sviluppato nel **Capo II**.
+## Articolo 4 — Componenti del Servizio nazionale
+
+L'articolo 4 indica le **componenti** del Servizio Nazionale: lo **Stato**, le **Regioni**, le **Province autonome di Trento e di Bolzano** e gli **enti locali**. Ciascuna attua le attività di protezione civile secondo il proprio ordinamento e le proprie competenze, e può stipulare convenzioni con le strutture operative e i soggetti concorrenti dell'articolo 13. Il dettaglio delle singole funzioni è poi sviluppato nel **Capo II**.
 
 ## Articolo 5 — Attribuzioni del Presidente del Consiglio dei ministri
 

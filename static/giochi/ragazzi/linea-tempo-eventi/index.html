@@ -79,6 +79,54 @@
     .stat-box .num { font-size: 1.5rem; font-weight: 800; color: var(--rag-blu); }
     .stat-box .lbl { font-size: .78rem; color: #5b6b7c; }
     .verifica-wrap { display: flex; gap: .5rem; flex-wrap: wrap; }
+
+    /* ── Impaginazione (revisione grafica): tessere in griglia, tessera scelta
+       ben visibile, a schermo largo tessere e linea del tempo affiancate così
+       sulla LIM non si scorre fra la tessera e la posizione. */
+    .lt-container { max-width: 860px; }
+    .pool-events {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(min(190px, 100%), 1fr));
+      align-items: stretch; align-content: start;
+    }
+    .pool-events .evento-card { max-width: none; width: 100%; }
+    .pool-events:empty { min-height: 0; display: block; }
+    .pool-events:empty::before {
+      content: "Tutte le tessere sono sulla linea del tempo."; color: #3d4b5c; font-weight: 600; font-size: .92rem;
+    }
+    .evento-card { min-height: 44px; line-height: 1.35; }
+    .evento-card strong { font-size: .95rem; }
+    .evento-card small { color: #4a5866; }
+    .evento-card.scelta {
+      background: #fff3cd; border-color: #8a5300;
+      outline: 4px solid #8a5300; outline-offset: 2px; box-shadow: none;
+    }
+    .evento-card.scelta::after {
+      content: "Scelta: ora tocca una posizione"; display: block; margin-top: .3rem;
+      font-size: .78rem; font-weight: 700; color: #6c3e00;
+    }
+    .timeline-strip { background: #eef4fc; padding-left: 1.3rem; }
+    .timeline-slot > .evento-card { flex: 1 1 auto; max-width: none; }
+    .timeline-slot.correct::after, .timeline-slot.wrong::after {
+      font-family: bootstrap-icons; font-size: 1.4rem; line-height: 1; flex: 0 0 auto;
+    }
+    .timeline-slot.correct::after { content: "\f26a"; color: #146c43; }
+    .timeline-slot.wrong::after { content: "\f622"; color: #b02a37; }
+    @media (min-width: 992px) {
+      .lt-container { max-width: 1140px; }
+      #intro.intro-card { max-width: 860px; margin-left: auto; margin-right: auto; }
+      .lt-layout { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 1.2rem; align-items: start; }
+      .lt-col-pool { position: sticky; top: 72px; }
+      .lt-col-pool .pool-events { max-height: calc(100vh - 140px); overflow-y: auto; margin-bottom: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) { .evento-card { transition: none; } .evento-card:hover { transform: none; } }
+    html.a11y-pause-anim .evento-card, html.a11y-pause-animations .evento-card { transition: none; }
+    html.a11y-pause-anim .evento-card:hover, html.a11y-pause-animations .evento-card:hover { transform: none; }
+
+    /* bordo conservato dopo il tocco (vedi giochi.css, --giochi-bordo) */
+    .evento-card { --giochi-bordo: var(--rag-blu); }
+    .evento-card.scelta { --giochi-bordo: #8a5300; }
+    .timeline-slot { --giochi-bordo: #c7d4e3; }
+    .timeline-slot.filled { --giochi-bordo: var(--rag-blu); }
   </style>
 </head>
 <body class="rag-body" data-coach-game="linea-tempo-eventi">
@@ -95,15 +143,15 @@
           </ol>
         </nav>
         <h1>Linea del Tempo della Protezione Civile</h1>
-        <p class="lead">Otto eventi che hanno cambiato l'Italia. Trascinali al posto giusto, dal più antico al più recente.</p>
+        <p class="lead">Otto eventi che hanno cambiato l'Italia. Mettili al posto giusto, dal più antico al più recente.</p>
       </div>
     </div>
 
-    <div class="container py-4" style="max-width: 860px;">
+    <div class="container py-4 lt-container">
 
       <section id="intro" class="intro-card">
         <h2 class="h4 mb-3">La memoria serve alla prevenzione</h2>
-        <p>La storia italiana è segnata da disastri-evento che, pezzo dopo pezzo, hanno costruito il sistema nazionale di Protezione Civile: dal <strong>Vajont 1963</strong> al sistema <strong>IT-alert 2024</strong>. Ogni grande catastrofe ha portato a una norma o a una riforma: Sarno → PAI, L'Aquila → riforma della comunicazione del rischio, Centro Italia → consolidamento COC.</p>
+        <p>La storia italiana è segnata da disastri-evento che, pezzo dopo pezzo, hanno costruito il sistema nazionale di Protezione Civile: dal <strong>Vajont 1963</strong> al sistema <strong>IT-alert 2024</strong>. Molte catastrofi hanno lasciato una lezione diventata regola: dopo l'Irpinia nasce il Dipartimento della Protezione Civile, dopo Sarno arrivano i Piani di assetto idrogeologico.</p>
         <p class="small text-muted"><i class="bi bi-hand-index me-1" aria-hidden="true"></i>Colloca le <strong>8 tessere evento</strong> nella striscia temporale, dal più antico al più recente: trascinale col mouse, oppure tocca una tessera e poi la posizione (va bene anche sulla lavagna interattiva). Quando tutte sono collocate, premi "Verifica".</p>
         <p class="small"><i class="bi bi-shuffle me-1"></i> <strong>Pool di 16 eventi</strong>: ad ogni partita ne pesca 8 random, la sequenza è diversa ogni volta.</p>
         <div class="d-flex flex-wrap gap-2">
@@ -114,11 +162,16 @@
 
       <section id="game" class="hide">
         <div class="gioco-card-wrap">
-          <div class="pool-label"><i class="bi bi-collection"></i> Tessere da collocare</div>
-          <div id="pool" class="pool-events" aria-label="Tessere da collocare"></div>
-
-          <div class="pool-label"><i class="bi bi-calendar3"></i> Linea del tempo (dal più antico al più recente)</div>
-          <div id="timeline" class="timeline-strip" aria-label="Slot cronologici"></div>
+          <div class="lt-layout">
+            <div class="lt-col-pool">
+              <div class="pool-label"><i class="bi bi-collection" aria-hidden="true"></i> Tessere da collocare</div>
+              <div id="pool" class="pool-events" aria-label="Tessere da collocare"></div>
+            </div>
+            <div class="lt-col-linea">
+              <div class="pool-label"><i class="bi bi-calendar3" aria-hidden="true"></i> Linea del tempo (dal più antico al più recente)</div>
+              <div id="timeline" class="timeline-strip" aria-label="Slot cronologici"></div>
+            </div>
+          </div>
 
           <div class="verifica-wrap">
             <button id="verifica-btn" class="btn btn-primary" disabled><i class="bi bi-check2-circle me-1"></i>Verifica</button>
@@ -146,6 +199,7 @@
   </main>
 
   <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/giochi/assets/js/audio-sintetico.js"></script>
   <script src="/app-shared/site-chrome.js"></script>
   <script src="/giochi/assets/js/progressione.js"></script>
   <script src="/giochi/assets/js/attestato.js"></script>
@@ -160,20 +214,20 @@
        -> riforma comunicazione del rischio; Centro Italia -> consolidamento COC). */
     var POOL_EVENTI = [
       { id:'vajont', anno:1963, titolo:'Disastro del Vajont', dett:'Frana nel bacino: 1.917 vittime. Spinge la legislazione su sicurezza dighe e bacini.' },
-      { id:'friuli', anno:1976, titolo:'Terremoto del Friuli', dett:'Magnitudo 6.5, 965 vittime. Nasce la "modalita\' Friuli" di ricostruzione decentrata.' },
+      { id:'friuli', anno:1976, titolo:'Terremoto del Friuli', dett:'Magnitudo 6.5, 965 vittime. Nasce il "modello Friuli" di ricostruzione affidata ai Comuni.' },
       { id:'irpinia', anno:1980, titolo:'Terremoto Irpinia', dett:'Magnitudo 6.9, 2734 vittime. Spinta decisiva alla creazione del Dipartimento PC.' },
-      { id:'dpc', anno:1982, titolo:'Nasce il DPC', dett:'Decreto Zamberletti: Ministro per il Coordinamento della Protezione Civile.' },
+      { id:'dpc', anno:1982, titolo:'Nasce il DPC', dett:'Zamberletti diventa Ministro per il coordinamento della protezione civile: nasce il Dipartimento presso la Presidenza del Consiglio.' },
       { id:'seveso', anno:1982, titolo:'Direttiva Seveso CEE', dett:'Quadro europeo per il rischio industriale dopo l\'incidente di Seveso (1976).' },
       { id:'legge225', anno:1992, titolo:'Legge 225/1992', dett:'Istituisce il Servizio Nazionale della Protezione Civile (poi sostituita dal Codice PC del 2018).' },
       { id:'sarno', anno:1998, titolo:'Frana di Sarno', dett:'159 vittime. Conduce alla Legge 267/1998 e ai Piani di Assetto Idrogeologico (PAI).' },
       { id:'direttiva2008', anno:2008, titolo:'Direttiva PCM 3/12/2008', dett:'Indirizzi operativi per la gestione delle emergenze: definisce il modello di coordinamento nazionale.' },
-      { id:'laquila', anno:2009, titolo:'Terremoto de L\'Aquila', dett:'Magnitudo 6.3, 309 vittime. Caso "Commissione Grandi Rischi": riforma comunicazione del rischio.' },
-      { id:'centroitalia', anno:2016, titolo:'Sisma Centro Italia', dett:'Amatrice, Norcia, Arquata: sequenza prolungata. Consolida il sistema COC/COM.' },
+      { id:'laquila', anno:2009, titolo:'Terremoto de L\'Aquila', dett:'Magnitudo 6.3, 309 vittime. Il processo alla Commissione Grandi Rischi apre il dibattito sulla comunicazione del rischio.' },
+      { id:'centroitalia', anno:2016, titolo:'Sisma Centro Italia', dett:'Amatrice, Accumoli, Arquata del Tronto: la scossa del 24 agosto causa 299 vittime. La sequenza prosegue fino al 2017.' },
       { id:'codice', anno:2018, titolo:'Codice PC (D.Lgs 1/2018)', dett:'Riforma organica del Servizio Nazionale: razionalizza componenti e strutture operative.' },
       { id:'morandi', anno:2018, titolo:'Crollo Ponte Morandi', dett:'Genova, 43 vittime. Spinta a riforma manutenzione infrastrutture e norme di vigilanza.' },
-      { id:'vaia', anno:2018, titolo:'Tempesta Vaia', dett:'Vento estremo nel Triveneto: 8,5 milioni di metri cubi di alberi abbattuti, 14 vittime. Caso simbolo del clima estremo.' },
+      { id:'vaia', anno:2018, titolo:'Tempesta Vaia', dett:'Vento oltre i 200 km/h sulle Alpi orientali: circa 8 milioni di metri cubi di alberi abbattuti. Caso simbolo degli eventi meteo estremi.' },
       { id:'direttiva-pcm', anno:2021, titolo:'Direttiva PCM 30/4/2021', dett:'Indirizzi per la predisposizione dei piani di protezione civile ai diversi livelli territoriali.' },
-      { id:'emilia', anno:2023, titolo:'Alluvione Emilia-Romagna', dett:'17 vittime, 23 fiumi esondati. Riforma protezione territoriale e gestione invasi.' },
+      { id:'emilia', anno:2023, titolo:'Alluvione Emilia-Romagna', dett:'Maggio 2023: 17 vittime e 23 fiumi esondati in pochi giorni.' },
       { id:'italert', anno:2024, titolo:'IT-alert operativo', dett:'Avvio del sistema nazionale di allarme pubblico via cell broadcast (provato dal 2022).' }
     ];
 
@@ -199,7 +253,18 @@
         esito = document.getElementById('esito');
 
     var draggedEl = null;
+    // Dopo un cambio di schermata, per 400 ms nessun tocco arriva a pulsanti o
+    // link: il secondo tocco di un doppio tocco cadrebbe su cio' che e' comparso
+    // sotto il dito (la scena nuova, la schermata finale, i link a fondo pagina).
+    var bloccoTocchi = 0;
+    document.addEventListener('click', function (e) {
+      if (Date.now() < bloccoTocchi) { e.preventDefault(); e.stopPropagation(); }
+    }, true);
+    function bloccaTocchi() { bloccoTocchi = Date.now() + 400; }
     var scelta = null; // tessera scelta col tocco, in attesa della posizione
+    // Doppio tocco (LIM): una tessera appena posata non torna nel pool per un
+    // secondo tocco arrivato entro 400 ms; «Verifica» vale una volta sola.
+    var ultimaPosa = 0, verificato = false, ultimaTessera = { el: null, t: 0 };
 
     function scegli(c){
       if (scelta) scelta.classList.remove('scelta');
@@ -231,6 +296,11 @@
       c.setAttribute('role', 'button');
       c.addEventListener('click', function(e){
         e.stopPropagation();
+        if (verificato) return;
+        // secondo tocco rapido sulla stessa tessera: non la deseleziona
+        var ora = Date.now();
+        if (c === ultimaTessera.el && ora - ultimaTessera.t < 350) return;
+        ultimaTessera = { el: c, t: ora };
         // con un'altra tessera già scelta, toccare una tessera collocata vuol dire
         // «metti qui quella scelta»: le due si scambiano
         if (scelta && scelta !== c && c.classList.contains('in-slot')) {
@@ -266,9 +336,11 @@
         collocaInSlot(draggedEl, s);
       });
       s.addEventListener('click', function(){
+        if (verificato) return;
         // con una tessera scelta: la colloca qui (scambiando l'eventuale inquilino)
         if (scelta) { var c = scelta; scegli(null); collocaInSlot(c, s); return; }
         // altrimenti, se lo slot è occupato, riporta la tessera al pool
+        if (verificato || Date.now() - ultimaPosa < 400) return;
         var card = s.querySelector('.evento-card');
         if (card) riportaAlPool(card);
       });
@@ -288,6 +360,7 @@
       else if (inquilino) riportaAlPool(inquilino);
       slot.appendChild(card);
       slot.classList.add('filled');
+      ultimaPosa = Date.now();
       card.classList.add('in-slot');
       card.removeAttribute('draggable');
       card.setAttribute('draggable', 'true'); // resta drag per riscambio
@@ -313,10 +386,12 @@
       if (draggedEl) riportaAlPool(draggedEl);
     });
     pool.addEventListener('click', function(){
+      if (verificato) return;
       if (scelta && scelta.classList.contains('in-slot')) { var c = scelta; scegli(null); riportaAlPool(c); }
     });
 
     function aggiornaVerifica(){
+      if (verificato) { verificaBtn.disabled = true; return; }
       var tutti = timeline.querySelectorAll('.timeline-slot.filled').length === EVENTI.length;
       verificaBtn.disabled = !tutti;
     }
@@ -324,6 +399,9 @@
     function setup(){
       // Estrae nuovi 8 eventi a ogni partita: pool di 16 totali per rigiocabilita'
       EVENTI = estraiEventi();
+      verificato = false;
+      bloccaTocchi();
+      resetBtn.disabled = false;
       scegli(null);
       pool.innerHTML = '';
       timeline.innerHTML = '';
@@ -336,6 +414,11 @@
     }
 
     function verifica(){
+      if (verificato) return;
+      verificato = true;
+      verificaBtn.disabled = true;
+      resetBtn.disabled = true;
+      scegli(null);
       var slots = timeline.querySelectorAll('.timeline-slot');
       var ordinati = EVENTI.slice().sort(function(a,b){ return a.anno - b.anno; });
       var score = 0;
@@ -354,17 +437,20 @@
         else { s.classList.add('wrong'); rev.textContent = 'Era: ' + tuo.anno + ' — Qui andava: ' + corretto.titolo + ' (' + corretto.anno + ')'; }
         card.appendChild(rev);
       });
+      // Un solo suono per tutta la linea: giusto se almeno metà delle tessere è al suo posto.
+      if (window.AudioSintetico) { if (score * 2 >= EVENTI.length) window.AudioSintetico.dingPositivo(); else window.AudioSintetico.tonoNeutro(); }
       if (window.GameCoach) {
         if (score === EVENTI.length && window.GameCoach.clearHint) {
           window.GameCoach.clearHint();
         } else if (score < EVENTI.length && window.GameCoach.hint) {
-          window.GameCoach.hint('Cronologia chiave: Vajont 1963, Friuli 1976, Irpinia 1980 (nascita PC moderna), L\'Aquila 2009 (valutazione rischio sismico), Centro Italia 2016 (sistema COC/COM consolidato).', '/normativa/');
+          window.GameCoach.hint('Cronologia chiave: Vajont 1963, Friuli 1976, Irpinia 1980, nascita del Dipartimento 1982, legge 225 del 1992, Sarno 1998, L\'Aquila 2009, Codice della protezione civile 2018.', '/normativa/');
         }
       }
-      setTimeout(fine.bind(null, score), 900);
+      setTimeout(fine.bind(null, score), 1600);
     }
 
     function fine(score){
+      bloccaTocchi();
       game.classList.add('hide');
       endScreen.classList.remove('hide');
       document.getElementById('end-score').textContent = score + '/' + EVENTI.length;

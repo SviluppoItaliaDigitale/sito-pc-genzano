@@ -3,6 +3,7 @@ title: "Il piano di emergenza della scuola spiegato ai genitori"
 date: 2027-01-07
 description: "Che cos'è il piano di emergenza della scuola, quali norme lo prevedono, quante prove di evacuazione si fanno e che cosa conviene chiedere alla scuola dei figli."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-01-07-piano-emergenza-scuola-genitori.webp"

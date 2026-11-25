@@ -3,6 +3,7 @@ title: "Maltempo, 9 ottobre: cinque interventi del Gruppo tra alberi, rami e un 
 date: 2026-10-09T00:03:00+02:00
 description: "Venerdì 9 ottobre cinque interventi del Gruppo a Genzano: un pino alla scuola Marchesi, un albero in via Polonia, rami e un tombino."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-09-maltempo-genzano-interventi-9-ottobre.webp"

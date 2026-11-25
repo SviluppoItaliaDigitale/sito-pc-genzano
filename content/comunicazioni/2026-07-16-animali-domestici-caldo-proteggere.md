@@ -3,6 +3,7 @@ title: "Animali domestici in estate: come proteggerli dal caldo"
 date: 2026-07-16
 description: "Cani, gatti e altri animali domestici soffrono il caldo estremo quanto e più di noi. Comportamenti di autoprotezione e segnali di pericolo da conoscere."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-16-animali-domestici-caldo-proteggere.webp"

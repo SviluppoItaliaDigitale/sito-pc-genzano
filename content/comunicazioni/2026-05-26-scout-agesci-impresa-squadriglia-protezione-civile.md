@@ -3,6 +3,7 @@ title: "Scout AGESCI di Genzano in visita al Gruppo per un'impresa di squadrigli
 date: 2026-05-26T00:04:00+02:00
 description: "Una squadriglia scout AGESCI di Genzano ha visitato il nostro deposito mezzi per un'impresa di squadriglia sulla protezione civile."
 badge: "Attività"
+canale: "territorio"
 priorita: normale
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-26-scout-agesci-impresa-squadriglia-protezione-civile.webp"

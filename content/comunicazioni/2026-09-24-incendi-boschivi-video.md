@@ -3,6 +3,7 @@ title: "Incendi boschivi in un video: come nascono e come comportarsi"
 date: 2026-09-24T00:02:00+02:00
 description: "Un video di due minuti, con voce e sottotitoli, spiega come nasce un incendio boschivo e cosa fare, dai bambini agli adulti."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-24-incendi-boschivi-video.webp"
@@ -39,7 +40,7 @@ Un incendio boschivo nasce **quasi sempre da una persona**: un mozzicone, un fia
 
 Poi il fuoco cresce con l'erba secca, il caldo e il vento. Il vento porta le scintille lontano e accende nuovi focolai. In salita il fuoco corre ancora più veloce.
 
-Da noi il periodo più pericoloso va **da giugno a settembre**, quando fa caldo e piove poco.
+Da noi il periodo più pericoloso è l'estate, quando fa caldo e piove poco: nel 2026 la campagna antincendio regionale va **dal 15 giugno al 15 ottobre**.
 
 ## Come evitarlo
 

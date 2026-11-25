@@ -3,6 +3,7 @@ title: "Chiavi recuperate da un tombino nel centro storico di Genzano"
 date: 2026-07-20T00:03:00+02:00
 description: "Su richiesta della Polizia Locale, i volontari del Gruppo hanno recuperato delle chiavi cadute in un tombino."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-20-chiavi-tombino-centro-storico.webp"

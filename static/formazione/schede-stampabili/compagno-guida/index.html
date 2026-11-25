@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Il compagno-guida nella prova di evacuazione</title>
+  <link rel="canonical" href="https://www.protezionecivilegenzano.it/formazione/schede-stampabili/compagno-guida/">
+  <meta name="description" content="Scheda fotocopiabile per la primaria e la secondaria di primo grado. Il compagno-guida accompagna nella prova di evacuazione un compagno con disabilità o appena arrivato: che cosa fa, che cosa non fa, come chiedere prima che aiuto vuole. La responsabilità della sicurezza resta agli adulti. Con situazioni da discutere e soluzioni capovolte.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .cg { font-size: 0.95rem; line-height: 1.45; }
+    .cg p { margin: 0.35rem 0; }
+    .cg .scheda-h2 { margin: 0.7rem 0 0.3rem; }
+    .cg-chi { border-left: 4px solid var(--scheda-blu); background: #f1f5f9; padding: 0.45rem 0.7rem; border-radius: 0 6px 6px 0; }
+    .cg-passi { list-style: none; padding: 0; margin: 0.3rem 0; }
+    .cg-passi li { display: flex; gap: 0.6rem; align-items: center; padding: 0.28rem 0; border-bottom: 1px solid #e9ecef; }
+    .cg-passi img { width: 44px; height: 44px; flex-shrink: 0; }
+    .cg-passi .cg-senza-img { width: 44px; flex-shrink: 0; }
+    .cg-no { border: 1.5px solid #c1121f; background: #fdf2f3; border-radius: 6px; padding: 0.4rem 0.7rem; margin-top: 0.4rem; }
+    .cg-no strong:first-child { color: #842029; }
+    .cg-no ul { margin: 0.2rem 0; padding-left: 1.1rem; }
+    .cg-no li { margin: 0.1rem 0; }
+    .cg-paura { font-style: italic; margin-top: 0.4rem; }
+    .cg-sit { list-style: none; padding: 0; margin: 0.25rem 0; }
+    .cg-sit li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0.6rem; align-items: center; border: 1.5px solid var(--scheda-bordo); border-radius: 6px; padding: 0.3rem 0.55rem; margin-bottom: 0.28rem; }
+    .cg-scelte { display: flex; flex-direction: column; gap: 0.1rem; font-size: 0.82rem; white-space: nowrap; }
+    .cg-casella { display: inline-block; width: 0.95rem; height: 0.95rem; border: 2px solid var(--scheda-bordo); border-radius: 3px; vertical-align: middle; margin-right: 0.25rem; }
+    .cg-domande { margin: 0.25rem 0; padding-left: 1.2rem; }
+    .cg-domande li { margin: 0.25rem 0; }
+    .cg-riga { border-bottom: 1.5px solid var(--scheda-bordo); height: 1.3rem; margin-top: 0.1rem; }
+    .cg-attribuzione { font-size: 0.72rem; color: var(--scheda-grigio); margin-top: 0.4rem; }
+    .cg .scheda-docente p { margin: 0.25rem 0; }
+    .cg .scheda-docente ul { margin: 0.15rem 0; padding-left: 1.1rem; }
+    .cg .soluzione-capovolta { margin-top: 2mm; padding: 2.5mm 4mm; font-size: 0.85rem; }
+    @media (max-width: 600px) {
+      .cg-sit li { grid-template-columns: minmax(0, 1fr); }
+      .cg-scelte { flex-direction: row; flex-wrap: wrap; gap: 0.6rem; white-space: normal; }
+    }
+    @media print {
+      .cg-passi img { width: 36px; height: 36px; }
+      .cg-passi .cg-senza-img { width: 36px; }
+      .cg-sit li, .cg-no, .scheda-docente { break-inside: avoid; }
+    }
+    /* controllo fogli di stampa: scala e spazi per stare in due fogli A4 con tutte le serie di caratteri */
+    @media print {
+      html { font-size: 88%; }
+      .scheda-page { padding: 0.8cm 1.3cm 0.4cm; }
+      .scheda-header { margin-bottom: 0.5rem; padding-bottom: 0.4rem; }
+      .scheda-meta { margin-bottom: 0.5rem; padding: 0.35rem 0.7rem; }
+      .cg .scheda-h2 { margin: 0.45rem 0 0.2rem; }
+      .scheda-footer { padding-top: 2mm; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/" aria-label="Torna alle schede">← Torna alle schede</a>
+    <span class="scheda-titolo">Il compagno-guida</span>
+    <a class="scheda-lim" href="/lim/" title="Si usa col dito sulla lavagna interattiva della classe, anche a schermo intero, e funziona sui browser delle lavagne meno recenti">Pronto per la LIM</a>
+    <button type="button" onclick="window.print()">Stampa o salva come PDF</button>
+  </div>
+
+  <main>
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Il compagno-guida nella prova di evacuazione</h1>
+        <div class="scheda-sottotitolo">Primaria e secondaria di primo grado · Foglio 1 di 3</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 8-13 anni</span>
+      <span><strong>Durata:</strong> 40 minuti</span>
+      <span><strong>Discipline:</strong> Educazione civica, Italiano</span>
+    </div>
+
+    <div class="cg">
+      <p class="scheda-intro">
+        Nella prova di evacuazione tutta la classe esce insieme. Qualcuno però può avere bisogno di un compagno vicino: chi si muove in un altro modo, chi vede o sente poco, chi si spaventa con i rumori forti, chi è appena arrivato e non conosce ancora la scuola o la lingua. Quel compagno vicino è il <strong>compagno-guida</strong>.
+      </p>
+
+      <div class="cg-chi">
+        <p><strong>Chi lo decide.</strong> L'insegnante sceglie il compagno-guida insieme al compagno da accompagnare e, se serve, alla sua famiglia. Si può dire di no: non è un obbligo. C'è sempre anche un sostituto, per i giorni in cui uno dei due è assente.</p>
+      </div>
+
+      <h2 class="scheda-h2">Che cosa fa il compagno-guida</h2>
+      <ul class="cg-passi">
+        <li><img src="/pittogrammi/arasaac/ascoltare.png" alt="Pittogramma: una persona che ascolta"><span><strong>Prima della prova chiede</strong>: «Come vuoi che ti aiuti?». Poi ascolta la risposta. Ognuno sa che cosa gli serve: c'è chi vuole tenere il braccio e chi preferisce solo qualcuno accanto.</span></li>
+        <li><img src="/pittogrammi/arasaac/camminare.png" alt="Pittogramma: due persone che camminano insieme sul marciapiede"><span><strong>Impara il percorso insieme a lui</strong>, con l'insegnante, prima della prova: la porta, le scale, l'uscita, il punto di raccolta.</span></li>
+        <li><img src="/pittogrammi/arasaac/allarme.png" alt="Pittogramma: una luce di allarme accesa"><span><strong>Quando suona l'allarme</strong> gli dice con calma che cosa succede: «È l'allarme. Usciamo in fila con la maestra». Se il compagno non sente, glielo fa capire con un gesto concordato.</span></li>
+        <li><span class="cg-senza-img" aria-hidden="true"></span><span><strong>Cammina accanto a lui</strong>, al suo passo, e lo avvisa prima di scale, porte e gradini. Se vuole, lui gli tiene il braccio o la spalla.</span></li>
+        <li><img src="/pittogrammi/arasaac/aspettare.png" alt="Pittogramma: persone sedute che aspettano"><span><strong>Al punto di raccolta resta con lui</strong> finché l'insegnante non fa l'appello. Non lo lascia solo.</span></li>
+      </ul>
+
+      <div class="cg-no">
+        <p><strong>Che cosa non fa il compagno-guida</strong></p>
+        <ul>
+          <li>Non spinge una carrozzina e non solleva nessuno: lo fanno gli adulti che hanno imparato come si fa.</li>
+          <li>Non tocca un ausilio, come il bastone o la carrozzina, senza chiedere.</li>
+          <li>Non decide lui il percorso e non prende scorciatoie: segue l'insegnante.</li>
+          <li>Se vi separate, non torna indietro a cercarlo: lo dice subito a un adulto.</li>
+          <li><strong>Non è responsabile della sicurezza del compagno.</strong> Di quella si occupano gli adulti della scuola. Il compagno-guida aiuta, e basta.</li>
+        </ul>
+      </div>
+      <p class="cg-paura">Se durante la prova hai paura anche tu, è normale. Dillo all'insegnante: anche con la paura puoi seguire questi passi.</p>
+
+      <p class="cg-attribuzione">Pittogrammi: ARASAAC (arasaac.org), Governo d'Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0.</p>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Il compagno-guida" · Primaria e secondaria I · rev. 2026</span>
+    </footer>
+
+  </article>
+
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <div class="scheda-titolo-principale" role="heading" aria-level="2">Prova tu: Flavio fa il compagno-guida</div>
+        <div class="scheda-sottotitolo">Il compagno-guida · Foglio 2 di 3</div>
+      </div>
+    </header>
+
+    <div class="cg">
+      <p>Flavio è il compagno-guida di Elio, che è arrivato da poco in Italia, e di Lina, che usa la carrozzina. Che cosa fa Flavio? Segna una casella. Puoi anche dirlo a voce o indicare.</p>
+      <p style="font-size:0.85rem;font-style:italic;color:var(--scheda-grigio)">Situazioni inventate per l'esercizio.</p>
+
+      <ol class="cg-sit">
+        <li><span><strong>1.</strong> Prima della prova Flavio chiede a Lina come preferisce essere aiutata.</span><span class="cg-scelte"><span><span class="cg-casella"></span>Va bene</span><span><span class="cg-casella"></span>Non va bene</span><span><span class="cg-casella"></span>Lo chiede a un adulto</span></span></li>
+        <li><span><strong>2.</strong> Suona l'allarme. Elio non capisce le parole della maestra. Flavio gli dice «È la prova, usciamo» e gli fa il gesto concordato.</span><span class="cg-scelte"><span><span class="cg-casella"></span>Va bene</span><span><span class="cg-casella"></span>Non va bene</span><span><span class="cg-casella"></span>Lo chiede a un adulto</span></span></li>
+        <li><span><strong>3.</strong> Per fare prima, Flavio prende la carrozzina di Lina e la spinge di corsa verso le scale.</span><span class="cg-scelte"><span><span class="cg-casella"></span>Va bene</span><span><span class="cg-casella"></span>Non va bene</span><span><span class="cg-casella"></span>Lo chiede a un adulto</span></span></li>
+        <li><span><strong>4.</strong> L'aula di Lina è al primo piano e lei non può fare le scale. Flavio non sa che cosa fare.</span><span class="cg-scelte"><span><span class="cg-casella"></span>Va bene</span><span><span class="cg-casella"></span>Non va bene</span><span><span class="cg-casella"></span>Lo chiede a un adulto</span></span></li>
+        <li><span><strong>5.</strong> In corridoio Flavio perde di vista Elio. Torna indietro da solo a cercarlo.</span><span class="cg-scelte"><span><span class="cg-casella"></span>Va bene</span><span><span class="cg-casella"></span>Non va bene</span><span><span class="cg-casella"></span>Lo chiede a un adulto</span></span></li>
+        <li><span><strong>6.</strong> Al punto di raccolta Flavio resta vicino a Elio fino all'appello.</span><span class="cg-scelte"><span><span class="cg-casella"></span>Va bene</span><span><span class="cg-casella"></span>Non va bene</span><span><span class="cg-casella"></span>Lo chiede a un adulto</span></span></li>
+      </ol>
+
+      <p><strong>7. Prepariamoci in coppia.</strong> Fate le domande al compagno che accompagnerete, oppure fatele a vicenda. Scrivete o disegnate la risposta.</p>
+      <ol class="cg-domande">
+        <li>Come vuoi che ti avvisi quando suona l'allarme?<div class="cg-riga" aria-label="Spazio per la risposta"></div></li>
+        <li>Vuoi tenermi il braccio, oppure preferisci che ti cammini solo accanto?<div class="cg-riga" aria-label="Spazio per la risposta"></div></li>
+        <li>C'è qualcosa che ti aiuta se c'è rumore o confusione?<div class="cg-riga" aria-label="Spazio per la risposta"></div></li>
+      </ol>
+
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Il compagno-guida" · Primaria e secondaria I · rev. 2026</span>
+    </footer>
+
+  </article>
+
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <div class="scheda-titolo-principale" role="heading" aria-level="2">Per il docente</div>
+        <div class="scheda-sottotitolo">Il compagno-guida · Foglio 3 di 3</div>
+      </div>
+    </header>
+
+    <div class="cg">
+      <div class="scheda-docente">
+        <p><strong>Per il docente.</strong> Il compagno-guida è un aiuto fra pari, non un ruolo di sicurezza. Chi accompagna l'alunno con disabilità, come lo si aiuta sulle scale e dove attende i soccorsi lo stabiliscono il piano di emergenza della scuola e, per lui, la <a href="/formazione/schede-stampabili/evacuazione-personalizzata-pei/">scheda di evacuazione personalizzata</a> concordata con la famiglia. La gestione delle emergenze spetta al dirigente scolastico e alle persone che ha incaricato (D.Lgs. 81/2008, artt. 18 e 43). Per chi è appena arrivato c'è la scheda <a href="/formazione/schede-stampabili/sirena-scuola-nuovi-arrivati/">La sirena a scuola: che cosa faccio</a>.</p>
+        <ul>
+          <li>Scegliete il compagno-guida con l'alunno da accompagnare e chiedete il consenso di entrambi. Indicate un sostituto.</li>
+          <li>In classe non si parla della diagnosi del compagno: si parla di che cosa gli serve, con le sue parole o con quelle concordate con la famiglia.</li>
+          <li>Provate il percorso insieme, prima dell'esercitazione. Dopo la prova chiedete a tutti e due com'è andata.</li>
+        </ul>
+        <p>Fonti: Dipartimento dei Vigili del Fuoco, «Il soccorso alle persone disabili: indicazioni per la gestione dell'emergenza», come riportato nelle linee guida dell'Università di Ferrara (2019): annunciarsi, lasciare che la persona spieghi di che cosa ha bisogno, descrivere prima le azioni, avvisare di scale e porte, non lasciarla sola all'esterno. Il Gruppo comunale di protezione civile non si attiva su chiamata dei cittadini: in emergenza si chiama il 112.</p>
+      </div>
+
+      <div class="soluzione-capovolta">
+        <span class="titolo">Soluzioni per il docente (gira il foglio)</span>
+        <strong>1. Va bene:</strong> prima si chiede. <strong>2. Va bene:</strong> parole semplici e gesto concordato prima.
+        <strong>3. Non va bene:</strong> non si spinge la carrozzina e non si corre; aiutano gli adulti.
+        <strong>4. Lo chiede a un adulto:</strong> dove attende Lina e chi resta con lei lo dice il piano della scuola.
+        <strong>5. Non va bene:</strong> non si torna indietro; lo si dice subito a un adulto.
+        <strong>6. Va bene:</strong> non lo lascia solo fino all'appello.
+        <strong>7.</strong> Non c'è una risposta giusta: conta quella del compagno.
+      </div>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Il compagno-guida" · Primaria e secondaria I · rev. 2026</span>
+    </footer>
+
+  </article>
+  </main>
+
+</body>
+</html>

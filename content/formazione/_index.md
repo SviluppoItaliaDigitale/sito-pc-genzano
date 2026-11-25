@@ -4,7 +4,7 @@ description: "Corsi per volontari, materiali per le scuole, giochi educativi e r
 layout: "single"
 toc: true
 tts: true
-dataUltimaRevisione: "2026-05-06"
+dataUltimaRevisione: "2026-11-23"
 ---
 
 La formazione aiuta volontari, cittadini e scuole a riconoscere i rischi e ad agire con più sicurezza. In questa pagina trovi i percorsi principali e i materiali più utili.
@@ -15,7 +15,7 @@ Scegli il percorso più adatto al tuo bisogno.
 
 <div class="row g-3 mb-4">
 <div class="col-md-6 col-lg-4"><div class="card h-100 shadow-sm"><div class="card-body"><h2 class="h5">Sono un cittadino</h2><p>Leggi le azioni di autoprotezione per terremoto, alluvione, incendio, temporali, vento, caldo, blackout ed evacuazione.</p><a href="/formazione/cosa-fare-in-caso-di/" class="btn btn-primary">Apri la guida per il cittadino</a></div></div></div>
-<div class="col-md-6 col-lg-4"><div class="card h-100 shadow-sm"><div class="card-body"><h2 class="h5">Sono un docente</h2><p>Trova kit didattici, schede stampabili, percorsi pronti, attività inclusive e materiali per educazione civica.</p><a href="/formazione/scuole-da-dove-cominciare/" class="btn btn-primary">Scegli i materiali per la scuola</a></div></div></div>
+<div class="col-md-6 col-lg-4"><div class="card h-100 shadow-sm"><div class="card-body"><h2 class="h5">Sono un docente</h2><p>Trova kit didattici, schede stampabili, percorsi pronti, attività inclusive e materiali per educazione civica.</p><a href="/scuole/" class="btn btn-primary">Scegli i materiali per la scuola</a></div></div></div>
 <div class="col-md-6 col-lg-4"><div class="card h-100 shadow-sm"><div class="card-body"><h2 class="h5">Voglio diventare volontario</h2><p>Scopri requisiti, corso base, impegno richiesto e modalità di adesione al Gruppo Comunale.</p><a href="/diventa-volontario/" class="btn btn-primary">Leggi come diventare volontario</a></div></div></div>
 <div class="col-md-6 col-lg-4"><div class="card h-100 shadow-sm"><div class="card-body"><h2 class="h5">Cerco materiali accessibili</h2><p>Consulta kit e schede per anziani, persone con disabilità, caregiver, bambini fragili e persone con difficoltà linguistiche.</p><a href="/formazione/kit-fragilita-vulnerabilita/" class="btn btn-primary">Vai ai kit accessibili</a></div></div></div>
 <div class="col-md-6 col-lg-4"><div class="card h-100 shadow-sm"><div class="card-body"><h2 class="h5">Voglio imparare giocando</h2><p>Apri giochi educativi gratuiti per infanzia, primaria, ragazzi e famiglie, senza registrazione.</p><a href="/giochi/" class="btn btn-primary">Apri i giochi della sicurezza</a> <a href="/catalogo-giochi/" class="btn btn-outline-primary mt-2 mt-md-0">Catalogo informativo</a></div></div></div>
@@ -43,18 +43,26 @@ I volontari già operativi partecipano ad aggiornamenti ed esercitazioni periodi
 - simulazioni coordinate con il sistema regionale;
 - incontri con altri enti del sistema di protezione civile.
 
+Simulatore d'esame, quiz di allenamento, scenari guidati e presentazioni dei moduli per gli istruttori sono raccolti in una pagina sola.
+
+<div class="consulta-rapida">
+{{< link-card url="/formazione/volontari/" icon="bi-mortarboard" titolo="Formazione dei volontari" desc="Simulatore d'esame a tempo con attestato, allenamento con le spiegazioni e presentazioni del corso base." >}}
+</div>
+
 ## Materiale didattico per le scuole
 
 Le illustrazioni didattiche sono affiancate da **testo esplicativo**, descrizioni alternative e indicazioni stampabili. Un'immagine aiuta a comprendere un passaggio, ma non deve essere l'unico modo per ottenere un'informazione importante.
 
 Il sito raccoglie materiali per docenti, studenti e famiglie. Sono disponibili kit per fasce d'età, schede stampabili, attività inclusive, giochi educativi, storie e percorsi pronti.
 
+**Grazie a docenti ed educatori.** Molti di questi materiali sono nati o migliorati grazie ai suggerimenti che docenti ed educatori ci mandano con costanza: segnalazioni dalle classi, idee per temi nuovi, richieste di adattamento alle diverse età. Per mandarne uno scrivi dalla pagina [Contatti](/contatti/).
+
 ### Percorso guidato per scuole e famiglie
 
 Non sai da dove partire? Scegli la tua situazione: ogni scelta ti porta ai materiali già pronti.
 
 <div class="consulta-rapida">
-{{< link-card url="/formazione/scuole-da-dove-cominciare/" icon="bi-signpost-2" titolo="Prima volta? Parti da qui" desc="Scegli il tuo ruolo e arriva subito ai materiali giusti." >}}
+{{< link-card url="/scuole/" icon="bi-signpost-2" titolo="Prima volta? Parti da qui" desc="Scegli il tuo ruolo e arriva subito ai materiali giusti." >}}
 {{< link-card url="/formazione/programma-dell-anno/" icon="bi-calendar3" titolo="Programma dell'anno" desc="Cinque incontri da ottobre a maggio per ogni età, con le lezioni già composte e il lavoro finale della classe." >}}
 {{< link-card url="/formazione/il-gruppo-a-scuola/" icon="bi-people" titolo="Il Gruppo nella tua scuola" desc="Incontri in classe, prove di evacuazione affiancate, giornate di plesso e uscite con i volontari." >}}
 {{< link-card url="/formazione/verifica-prima-e-dopo/" icon="bi-clipboard-data" titolo="Verifica prima e dopo" desc="Cinque domande senza voto e senza nomi per capire che cosa ha imparato la classe." >}}
@@ -68,6 +76,7 @@ Non sai da dove partire? Scegli la tua situazione: ogni scelta ti porta ai mater
 {{< link-card url="/formazione/percorsi-didattici/" icon="bi-clock-history" titolo="Quanto tempo hai?" desc="Una lezione da un'ora, mezza giornata o un progetto: pacchetti con durata e obiettivi." >}}
 <a class="cr-card" href="#kit"><span class="cr-icon" aria-hidden="true"><i class="bi bi-mortarboard"></i></span><span class="cr-corpo"><span class="cr-titolo">Per fascia d'età</span><span class="cr-desc">Kit dedicati per infanzia, primaria, secondaria di primo e secondo grado.</span></span></a>
 {{< link-card url="/formazione/scuole-checklist-docente/" icon="bi-check2-square" titolo="Prepara la lezione" desc="Parole e tempi giusti per spiegare i rischi senza creare allarmismo." >}}
+{{< link-card url="/formazione/curricolo-verticale/" icon="bi-bar-chart-steps" titolo="Curricolo verticale" desc="Che cosa impara ogni età, dai 3 ai 19 anni, con i materiali da cui partire: pronto per il PTOF." >}}
 {{< link-card url="/formazione/educazione-civica/" icon="bi-bank" titolo="Educazione civica" desc="Collega le attività ai nuclei dell'insegnamento di educazione civica (D.M. 183/2024)." >}}
 {{< link-card url="/formazione/dirigenti-e-rspp/" icon="bi-clipboard-check" titolo="Dirigenti e RSPP" desc="Ruoli, limiti, responsabilità e formazione scuola-lavoro (ex PCTO)." >}}
 {{< link-card url="/formazione/in-famiglia-dopo-la-lezione/" icon="bi-house-heart" titolo="A casa, in famiglia" desc="Azioni concrete per continuare a casa dopo la lezione." >}}
@@ -121,8 +130,8 @@ Le storie aiutano bambini e bambine ad avvicinarsi alla protezione civile senza 
 
 - [La Protezione Civile nella scuola](https://www.protezionecivilegenzano.it/documenti/download/PC_scuola.pdf) — manuale DPC e Ministero dell'Istruzione.
 - [La Protezione Civile in famiglia](https://www.protezionecivilegenzano.it/documenti/download/PC_famiglia.pdf) — buone pratiche da adottare in famiglia.
-- [Quiz di Protezione Civile](/quizpc/) — verifica le tue conoscenze.
-- [Piattaforma e-learning](/formazionepc/) — formazione a distanza per volontari.
+- [Quiz di Protezione Civile](/quizpc/) — simulatore d'esame e allenamento, raccolti in [Formazione dei volontari](/formazione/volontari/).
+- [Piattaforma a scenari](/formazionepc/) — esercitazioni a scelte guidate per i volontari.
 
 ## Approfondimenti dall'archivio
 
@@ -137,7 +146,7 @@ Tutti gli articoli su formazione e scuole sono filtrabili nell'[archivio delle c
 
 ## Vedi anche
 
-- [Scuole: da dove cominciare](/formazione/scuole-da-dove-cominciare/) — materiali per ruolo
+- [Scuole — parti da qui](/scuole/) — materiali per ruolo
 - [Educazione civica](/formazione/educazione-civica/) — moduli per docenti
 - [Rischi e prevenzione](/rischi-prevenzione/) — comportamenti per scenario
 - [Diventa volontario](/diventa-volontario/) — come entrare nel Gruppo

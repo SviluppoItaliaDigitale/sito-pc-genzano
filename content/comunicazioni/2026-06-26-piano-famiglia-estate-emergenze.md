@@ -3,6 +3,7 @@ title: "Il piano di famiglia per l'estate: cosa preparare"
 date: 2026-06-26T00:01:00+02:00
 description: "L'estate cambia ritmi, luoghi e rischi della famiglia. Un piano familiare di emergenza adeguato alla stagione è semplice da preparare e molto utile."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-26-piano-famiglia-estate-emergenze.webp"

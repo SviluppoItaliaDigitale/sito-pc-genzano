@@ -3,6 +3,7 @@ title: "Rientro dal ponte: sicurezza stradale e stanchezza"
 date: 2026-12-09
 description: "Il 9 dicembre è giorno di rientri e ripresa della normalità dopo il ponte. Attenzione a stanchezza e condizioni stradali."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-09-rientro-post-ponte-sicurezza-stradale.webp"
@@ -120,7 +121,7 @@ Da martedì:
 - **uffici** aperti;
 - **riunioni** spesso concentrate nei primi giorni;
 - **email** accumulate (smistare con calma);
-- **colleghi**: scambiarsi auguri e esperienze della festa;
+- **colleghi**: scambiarsi auguri ed esperienze della festa;
 - **concentrazione** progressiva (non pretendere massima operatività subito).
 
 ## Il lato psicologico
@@ -139,7 +140,7 @@ Il rientro può essere **difficile**:
 - **contatti** sociali;
 - **calma** nei primi giorni.
 
-## Pensiero ad anziani
+## Pensiero agli anziani
 
 Gli **anziani** soli vivono la fine del ponte come:
 - **solitudine** riemergente (la famiglia tornata);
@@ -147,7 +148,7 @@ Gli **anziani** soli vivono la fine del ponte come:
 - **rischi** sanitari (influenza, cadute);
 - **bisogno** di contatti.
 
-Una **chiamata** o **visita** ad un familiare anziano nei prossimi giorni è un gesto semplice ma importante.
+Una **chiamata** o **visita** a un familiare anziano nei prossimi giorni è un gesto semplice ma importante.
 
 ## Verso le feste
 

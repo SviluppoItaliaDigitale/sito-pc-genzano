@@ -3,6 +3,7 @@ title: "Venezia, 12 novembre 2019: l'acqua alta eccezionale di 187 centimetri"
 date: 2027-11-12
 description: "Otto anni fa la marea raggiunse 187 cm a Punta della Salute, secondo valore dal 1872 dopo il 1966. Due giorni dopo fu dichiarato lo stato di emergenza."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-11-12-venezia-2019-acqua-alta.webp"

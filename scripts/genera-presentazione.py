@@ -470,7 +470,7 @@ def slide_sistema(num):
 
 
 def slide_cruscotto(num):
-    s = base_slide("Cruscotto del territorio — dati in tempo reale", num)
+    s = base_slide("Cruscotto e dati in tempo reale", num)
     srcs = [("Scientifiche", "INGV (sismica, vulcani)"),
             ("Meteo e satellite", "ItaliaMeteo, EUMETSAT, ECMWF, Copernicus"),
             ("Istituzionali", "DPC, ARPA Lazio")]
@@ -489,7 +489,7 @@ def slide_cruscotto(num):
     # (/cruscotto/mappe-raccontate/) e dichiara la sua fonte; la licenza è
     # quella di ciascuna fonte, scritta dove la fonte la indica (il radar
     # ItaliaMeteo è CC BY-SA), non una sola CC BY 4.0 per tutto.
-    put(cb, [("Cruscotto del territorio", 15, WHITE, True),
+    put(cb, [("Cruscotto e dati in tempo reale", 15, WHITE, True),
              ("Aggregazione privacy-first", 11, RGBColor(0xCF, 0xDD, 0xEC), False),
              ("Ogni scheda spiegata a parole", 11, RGBColor(0xCF, 0xDD, 0xEC), False),
              ("Fonte dichiarata per ogni scheda", 11, RGBColor(0xCF, 0xDD, 0xEC), False)])
@@ -881,6 +881,8 @@ content("Area download", [
     "Documenti ufficiali e modulistica scaricabili.",
     "Per ogni file sono indicati formato e dimensione (accessibilità).",
     "Un punto unico per atti, piani e materiali del Gruppo.",
+    "Per i volontari: oggetti da stampare in 3D e progetti di elettronica per l'emergenza con Arduino, ESP32 e Raspberry Pi.",
+    "Cucina in emergenza: i documenti ufficiali per le cucine da campo e i disciplinari dei prodotti DOP, IGP e STG, sui siti degli enti pubblici.",
 ], N())
 
 content("Materiali pronti da scaricare", [

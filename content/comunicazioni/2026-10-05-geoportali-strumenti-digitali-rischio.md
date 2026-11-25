@@ -3,6 +3,7 @@ title: "Geoportali: come leggere le mappe di rischio del proprio territorio"
 date: 2026-10-05T00:01:00+02:00
 description: "I geoportali pubblici mettono a disposizione mappe di rischio sismico, idrogeologico, AIB. Uno strumento civico utile anche al singolo cittadino."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-05-geoportali-strumenti-digitali-rischio.webp"

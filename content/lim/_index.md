@@ -3,7 +3,7 @@ title: "Protezione civile sulla LIM: giochi, schede e lezioni per la lavagna int
 description: "Giochi, storie, schede, quiz e lezioni di protezione civile pronti per la LIM: si usano col dito, a schermo intero, anche sulle lavagne con browser non aggiornato."
 layout: "list"
 faq_schema: true
-dataUltimaRevisione: "2026-11-01"
+dataUltimaRevisione: "2026-11-20"
 ---
 
 I materiali del sito per le scuole sono pensati per essere usati **sulla lavagna interattiva multimediale (LIM)** della classe: giochi, storie, schede, quiz, il libro che si esplora, gli esperimenti e lo strumento che compone una lezione. Le pagine che lo sono portano il riquadro **«Pronto per la LIM»**.
@@ -40,6 +40,16 @@ Se un controllo non va a buon fine, il problema viene segnalato e corretto prima
 - [Esperimenti e attività](/formazione/esperimenti/), [Laboratorio meteo](/laboratorio-meteo/) e [Quanto sei preparato?](/quiz-preparazione/).
 - [Percorsi didattici pronti](/formazione/percorsi-didattici/) e i kit per [infanzia](/formazione/kit-scuola-infanzia/), [primaria](/formazione/kit-scuola-primaria/), [secondaria di primo grado](/formazione/kit-scuola-secondaria-primo-grado/) e [secondaria di secondo grado](/formazione/kit-scuola-secondaria-secondo-grado/).
 - [Abili a proteggere](/abili-a-proteggere/) e le [tabelle di comunicazione](/tabelle-comunicazione/), per la classe inclusiva.
+
+## Le presentazioni da scaricare
+
+In [Risorse pronte](/risorse-pronte/) ci sono presentazioni sui rischi per un'ora di Educazione Civica. Ogni presentazione ha un pulsante per ogni formato di schermo:
+
+- **16:9**: i monitor interattivi e le TV più diffusi oggi, anche quelli 4K. Il PDF è vettoriale e resta nitido a ogni risoluzione;
+- **16:10**: alcune lavagne e molti portatili collegati al proiettore;
+- **4:3**: le LIM più vecchie con il proiettore sopra la lavagna.
+
+Nel dubbio scarica il 16:9: se sulla lavagna compaiono due bande nere sopra e sotto, prova il 4:3. Il PDF si apre su qualsiasi computer. Il PowerPoint si apre con PowerPoint, LibreOffice Impress e con i programmi delle lavagne: il testo si può modificare e sotto ogni slide, nelle note, trovi che cosa dire e quali domande fare alla classe.
 
 ## Domande frequenti
 

@@ -3,6 +3,7 @@ title: "Solstizio d'inverno: il giorno più corto dell'anno"
 date: 2026-12-21
 description: "Il 21 dicembre è il solstizio d'inverno. Simbolicamente la luce tornerà a crescere. Cultura, natura e riflessione."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-21-solstizio-inverno-luce-tornera.webp"

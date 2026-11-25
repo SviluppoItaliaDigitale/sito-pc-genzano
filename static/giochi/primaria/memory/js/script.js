@@ -34,12 +34,15 @@
       explain: 'I cartelli verdi indicano le uscite di sicurezza. Segui sempre le frecce, mai tornare indietro a prendere lo zaino.' },
     { id: 'punto-raccolta', sign: 'punto-raccolta', name: 'Punto di raccolta', action: 'Mi fermo qui in fila',
       explain: 'Dopo l\'evacuazione tutti si ritrovano qui. Resta in fila con l\'insegnante: serve per sapere chi è uscito.' },
-    { id: 'scala', sign: 'scala-antincendio', name: 'Scala antincendio', action: 'Mai ascensore se c\'è allarme',
-      explain: 'Durante un\'evacuazione (incendio, terremoto, allarme) MAI l\'ascensore: usa sempre le scale.' },
+    // Fino al 23/11/2026 qui c'era scala-antincendio (F003), abbinato a «Mai
+    // ascensore»: quel cartello indica dove si trova una scala per lo spegnimento,
+    // non le scale da usare per uscire. Sostituito con un divieto chiaro.
+    { id: 'fumare', sign: 'vietato-fumare', name: 'Vietato fumare', action: 'Qui non si fuma',
+      explain: 'Il cerchio rosso con la barra è un divieto. Sigarette e fiammiferi possono far partire un incendio.' },
     { id: 'primo-soccorso', sign: 'cassetta-primo-soccorso', name: 'Cassetta di primo soccorso', action: 'Bende e medicazioni',
       explain: 'La cassetta verde con la croce bianca contiene cerotti, bende e disinfettante per le piccole ferite.' },
     { id: 'dae', sign: 'defibrillatore-dae', name: 'Defibrillatore (DAE)', action: 'Aiuta chi ha un malore al cuore',
-      explain: 'Il DAE riavvia il cuore quando smette di battere. Lo usano gli adulti formati: tu chiama subito il 112.' },
+      explain: 'Il DAE dà una scarica elettrica che può far ripartire il cuore e spiega con la voce che cosa fare. Tu chiama subito il 112 e avvisa un adulto.' },
     { id: 'elettrico', sign: 'pericolo-elettrico', name: 'Pericolo elettrico', action: 'Non toccare i fili',
       explain: 'Il triangolo giallo col fulmine avvisa di alta tensione. Mai toccare cavi scoperti o pali della luce.' },
     { id: 'infiammabile', sign: 'materiale-infiammabile', name: 'Materiale infiammabile', action: 'Lontano da fiamme',
@@ -70,6 +73,15 @@
   let hasFlipped = false;
   let lockBoard = false;
   let firstCard = null, secondCard = null;
+  // Doppio tocco: `partita` cambia a ogni nuova griglia, così il timer che
+  // rigira due carte sbagliate non tocca la partita successiva.
+  let partita = 0;
+  let finito = false;
+
+  function suono(giusta) {
+    if (!window.AudioSintetico) return;
+    if (giusta) window.AudioSintetico.dingPositivo(); else window.AudioSintetico.tonoNeutro();
+  }
 
   function shuffle(array){
     for (let i = array.length - 1; i > 0; i--) {
@@ -92,6 +104,9 @@
   }
 
   function creaGriglia(){
+    partita++;
+    finito = false;
+    resetTurno();
     grid.innerHTML = '';
     matchedPairs = 0;
     moves = 0;
@@ -149,7 +164,7 @@
   }
 
   function flipCard(){
-    if (lockBoard || this.classList.contains('matched') || this === firstCard) return;
+    if (finito || lockBoard || this.classList.contains('matched') || this.classList.contains('flipped') || this === firstCard) return;
     this.classList.add('flipped');
     if (!hasFlipped) {
       hasFlipped = true;
@@ -180,6 +195,7 @@
     secondCard.removeEventListener('click', flipCard);
     matchedPairs++;
     pairsCountSpan.textContent = matchedPairs;
+    suono(true);
     showMatchToast(firstCard);
 
     // Spiegazione didattica del segnale appena abbinato
@@ -193,14 +209,19 @@
     resetTurno();
 
     if (matchedPairs === LIVELLI[livelloCorrente].coppie) {
-      setTimeout(fineLivello, 800);
+      finito = true;
+      const questa = partita;
+      setTimeout(() => { if (questa === partita) fineLivello(); }, 800);
     }
   }
 
   function sbagliaCoppia(){
+    suono(false);
+    const a = firstCard, b = secondCard, questa = partita;
     setTimeout(() => {
-      firstCard.classList.remove('flipped');
-      secondCard.classList.remove('flipped');
+      if (questa !== partita) return;
+      a.classList.remove('flipped');
+      b.classList.remove('flipped');
       resetTurno();
     }, 1200);
     if (window.GameCoach && window.GameCoach.hint) {
@@ -255,7 +276,7 @@
   });
 
   // Restart dal win screen — rigioca stesso livello
-  restartButton.addEventListener('click', () => avviaLivello(livelloCorrente));
+  restartButton.addEventListener('click', () => { if (winScreen.classList.contains('hide')) return; avviaLivello(livelloCorrente); });
 
   // Cambia livello dal win screen
   document.querySelectorAll('[data-cambia-livello]').forEach(btn => {
@@ -268,6 +289,8 @@
   // Reset livello in corso
   if (resetLevelBtn) {
     resetLevelBtn.addEventListener('click', () => {
+      partita++;
+      resetTurno();
       gameScreen.classList.add('hide');
       introScreen.classList.remove('hide');
     });

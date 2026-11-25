@@ -98,9 +98,9 @@ Fonte: ISPRA, *Ecosistemi e incendi boschivi in Italia: inquadramento del proble
 
 ## La campagna AIB e la previsione del pericolo
 
-In Italia l'attività di **lotta agli incendi boschivi (AIB)** si concentra nella **campagna estiva**, di norma da giugno a settembre, quando la vegetazione è più secca. È il periodo in cui il volontariato di protezione civile, insieme ai Vigili del Fuoco e alle squadre regionali, intensifica la sorveglianza del territorio. Il nostro Gruppo vi partecipa: lo raccontiamo nelle schede sulle [prime settimane della campagna AIB 2026](/comunicazioni/2026-06-30-bilancio-primo-mese-aib-2026/) e sulle [attrezzature e tecniche di attacco](/comunicazioni/2026-04-11-antincendio-boschivo-triangolo-fuoco-attrezzature-tecniche-attacco/).
+In Italia l'attività di **lotta agli incendi boschivi (AIB)** si concentra nella **campagna estiva**, nel Lazio, nel 2026, dal 15 giugno al 15 ottobre, quando la vegetazione è più secca. È il periodo in cui il volontariato di protezione civile, insieme ai Vigili del Fuoco e alle squadre regionali, intensifica la sorveglianza del territorio. Il nostro Gruppo vi partecipa: lo raccontiamo nelle schede sulle [prime settimane della campagna AIB 2026](/comunicazioni/2026-06-30-bilancio-primo-mese-aib-2026/) e sulle [attrezzature e tecniche di attacco](/comunicazioni/2026-04-11-antincendio-boschivo-triangolo-fuoco-attrezzature-tecniche-attacco/).
 
-Ogni giorno, durante la campagna, il **Centro Funzionale Regionale del Lazio** pubblica il **Bollettino di pericolosità da incendi boschivi**, elaborato con il modello previsionale **RISICO** sviluppato dalla **Fondazione CIMA**. Il bollettino stima il pericolo per ciascuna zona di allerta con quattro livelli — **basso, medio, moderato, elevato** —, ai quali il nostro sito associa i colori verde, giallo, arancione e rosso. Il territorio di **Genzano di Roma rientra nella zona AIB 9** (Castelli Romani). Il nostro sito riporta automaticamente il livello aggiornato nella barra di allerta della homepage e nel [Cruscotto del territorio](/cruscotto/).
+Ogni giorno, durante la campagna, il **Centro Funzionale Regionale del Lazio** pubblica il **Bollettino di pericolosità da incendi boschivi**, elaborato con il modello previsionale **RISICO** sviluppato dalla **Fondazione CIMA**. Il bollettino stima il pericolo per ciascuna zona di allerta con quattro livelli — **basso, medio, moderato, elevato** —, ai quali il nostro sito associa i colori verde, giallo, arancione e rosso. Il territorio di **Genzano di Roma rientra nella zona AIB 9** (Castelli Romani). Il nostro sito riporta automaticamente il livello aggiornato nella barra di allerta della homepage e nel [Cruscotto e dati in tempo reale](/cruscotto/).
 
 Attenzione a non confondere i ruoli: il pericolo previsto **non** è un incendio in corso. Quando un incendio scoppia, il numero da chiamare è sempre il **112**, che smista l'intervento ai Vigili del Fuoco e alle squadre AIB.
 
@@ -123,7 +123,7 @@ Il volontariato di protezione civile, come il nostro Gruppo, contribuisce soprat
 - [Il fuoco nei nostri boschi: un video in 3D sugli incendi boschivi](/comunicazioni/2026-10-24-incendi-boschivi-video-3d/) — come nasce e corre un incendio, sul rilievo dei Castelli Romani.
 - [Il triangolo del fuoco e la prevenzione](/comunicazioni/2026-04-13-triangolo-del-fuoco-prevenzione-incendi/).
 - [Le prime settimane di campagna AIB: il punto al 30 giugno](/comunicazioni/2026-06-30-bilancio-primo-mese-aib-2026/) e [attrezzature e tecniche di attacco](/comunicazioni/2026-04-11-antincendio-boschivo-triangolo-fuoco-attrezzature-tecniche-attacco/).
-- [Le quattro fasi della protezione civile](/conoscere/le-quattro-fasi/) e il [Cruscotto del territorio](/cruscotto/).
+- [Le quattro fasi della protezione civile](/conoscere/le-quattro-fasi/) e il [Cruscotto e dati in tempo reale](/cruscotto/).
 
 ## Per approfondire — fonti istituzionali
 

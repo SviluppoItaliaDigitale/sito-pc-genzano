@@ -3,6 +3,7 @@ title: "Quattro incendi in due giorni: la Falcognana, Albano e infine Genzano"
 date: 2026-09-09T00:02:00+02:00
 description: "Tra l'8 e il 9 settembre il Gruppo è uscito quattro volte per incendi di vegetazione. L'ultimo era in casa nostra, nella zona industriale."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-09-quattro-incendi-falcognana-albano-genzano.webp"

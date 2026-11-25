@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Due ore senza corrente — una simulazione a tempo</title>
+  <link rel="canonical" href="https://www.protezionecivilegenzano.it/formazione/schede-stampabili/due-ore-senza-corrente/">
+  <meta name="description" content="Scheda fotocopiabile per la 5ª primaria e la secondaria di primo grado: una simulazione a tappe di due ore senza corrente, a 0, 10, 30, 60 e 120 minuti. Che cosa smette di funzionare, come ci si organizza in famiglia, il conto della batteria del telefono, che cosa chiedere alla propria scuola. Senza candele, con soluzioni capovolte.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .dc { font-size: 0.95rem; line-height: 1.45; }
+    .dc p { margin: 0.35rem 0; }
+    .dc .scheda-h2 { margin: 0.65rem 0 0.25rem; }
+    .dc-tappa { display: grid; grid-template-columns: 5.2rem minmax(0, 1fr); gap: 0.6rem; border: 1.5px solid var(--scheda-bordo); border-radius: 8px; padding: 0.4rem 0.6rem; margin: 0.35rem 0; break-inside: avoid; }
+    .dc-ora { border-right: 3px solid var(--scheda-blu); padding-right: 0.4rem; color: var(--scheda-blu); font-weight: 700; line-height: 1.2; }
+    .dc-ora span { display: block; font-size: 1.35rem; }
+    .dc-ora small { display: block; font-weight: 400; color: var(--scheda-grigio); }
+    .dc-tappa p { margin: 0.1rem 0; }
+    .dc-compito { font-weight: 700; color: #7a3d06; }
+    .dc-righe { display: block; height: 1.3rem; border-bottom: 1.5px solid var(--scheda-bordo); }
+    .dc-tabella { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin: 0.3rem 0; }
+    .dc-tabella th, .dc-tabella td { border: 1.5px solid var(--scheda-bordo); padding: 0.25rem 0.4rem; text-align: left; vertical-align: middle; }
+    .dc-tabella th { background: #e7f0fa; color: var(--scheda-blu); }
+    .dc-tabella td.dc-c { text-align: center; width: 4.6rem; }
+    .dc-casella { display: inline-block; width: 1rem; height: 1rem; border: 2px solid var(--scheda-bordo); border-radius: 3px; vertical-align: middle; }
+    .dc-ipotesi { border-left: 4px solid var(--scheda-oro); background: #fff8e1; padding: 0.4rem 0.7rem; border-radius: 0 6px 6px 0; font-size: 0.9rem; }
+    .dc-conti { margin: 0.3rem 0; padding-left: 1.3rem; }
+    .dc-conti li { margin: 0.3rem 0; }
+    .dc-conti .dc-righe { margin-top: 0.15rem; }
+    .dc-ruoli { list-style: none; padding: 0; margin: 0.3rem 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0.35rem; }
+    .dc-ruoli li { border: 1.5px solid var(--scheda-bordo); border-radius: 6px; padding: 0.35rem 0.55rem; display: flex; gap: 0.5rem; align-items: center; }
+    .dc-ruoli img { width: 40px; height: 40px; flex-shrink: 0; }
+    .dc-ruoli strong { color: var(--scheda-blu); }
+    .dc-scuola { border-left: 4px solid var(--scheda-blu); background: #f1f5f9; padding: 0.45rem 0.7rem; border-radius: 0 6px 6px 0; }
+    .dc-scuola ul { margin: 0.1rem 0; padding-left: 1.1rem; }
+    .dc-scuola li { margin: 0; }
+    .dc .avvertenza { margin-top: 0.45rem; padding: 0.45rem 0.7rem; background: #fff3cd; border-radius: 8px; border-left: 4px solid var(--scheda-oro); font-size: 0.88rem; }
+    .dc .scheda-docente p { margin: 0.25rem 0; }
+    .dc .soluzione-capovolta { margin-top: 3mm; padding: 2.5mm 4mm; font-size: 0.84rem; line-height: 1.4; }
+    .dc-attribuzione { font-size: 0.72rem; color: var(--scheda-grigio); margin-top: 0.35rem; }
+    @media (max-width: 600px) {
+      .dc-tappa { grid-template-columns: minmax(0, 1fr); }
+      .dc-ora { border-right: 0; border-bottom: 3px solid var(--scheda-blu); padding: 0 0 0.2rem; }
+      .dc-ruoli { grid-template-columns: minmax(0, 1fr); }
+    }
+    @media print {
+      .dc .scheda-docente, .dc .avvertenza, .dc-scuola, .dc-ipotesi { break-inside: avoid; }
+      .scheda-page { padding: 0.8cm 1.3cm 0.5cm; }
+      .scheda-header { margin-bottom: 0.5rem; padding-bottom: 0.4rem; }
+      .scheda-meta { margin-bottom: 0.45rem; padding: 0.35rem 0.7rem; }
+      .dc .scheda-h2 { margin: 0.45rem 0 0.2rem; }
+      .scheda-footer { padding-top: 2mm; }
+    }
+    .visually-hidden { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+    /* Controllo fogli di stampa: scala del testo all'88% in stampa, così ogni
+       foglio regge anche i caratteri più larghi senza mandare la fascia delle
+       affiliazioni su un foglio in più. */
+    @media print { html { font-size: 88%; } }
+  </style>
+</head>
+<body>
+
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/" aria-label="Torna alle schede">← Torna alle schede</a>
+    <span class="scheda-titolo">Due ore senza corrente</span>
+    <a class="scheda-lim" href="/lim/" title="Si usa col dito sulla lavagna interattiva della classe, anche a schermo intero, e funziona sui browser delle lavagne meno recenti">Pronto per la LIM</a>
+    <button type="button" onclick="window.print()">Stampa o salva come PDF</button>
+  </div>
+
+  <main>
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Due ore senza corrente: una simulazione a tempo</h1>
+        <div class="scheda-sottotitolo">Primaria (5ª) · Secondaria di primo grado · Foglio 1 di 3</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 10-14 anni</span>
+      <span><strong>Durata:</strong> 50 minuti</span>
+      <span><strong>Discipline:</strong> Tecnologia, Matematica, Educazione civica</span>
+    </div>
+
+    <div class="dc">
+      <p class="scheda-intro">
+        Ai Castelli Romani i fili della corrente passano fra boschi e colline: con il vento forte o un temporale, un ramo che cade sulla linea può lasciare al buio un quartiere. Di solito la corrente torna presto, a volte ci vogliono ore. In questa simulazione seguite due ore, tappa per tappa, e decidete che cosa fare.
+      </p>
+
+      <h2 class="scheda-h2">La storia (un esempio inventato)</h2>
+      <p>È un pomeriggio di novembre. Flavio è a casa con il papà e la sorella Maria. Fuori soffia un vento forte.</p>
+
+      <div class="dc-tappa">
+        <div class="dc-ora"><span>0</span>minuti<small>ore 17.00</small></div>
+        <div>
+          <p>Di colpo si spengono le luci, la televisione e il modem del Wi-Fi. Fuori sta facendo buio.</p>
+          <p class="dc-compito">Con che cosa fate luce? Dove si trova?</p>
+          <span class="dc-righe" aria-label="Spazio per la risposta"></span>
+        </div>
+      </div>
+
+      <div class="dc-tappa">
+        <div class="dc-ora"><span>10</span>minuti<small>ore 17.10</small></div>
+        <div>
+          <p>La corrente non è tornata. Il papà si chiede come accorgersi del momento in cui torna.</p>
+          <p class="dc-compito">Che cosa fate con televisione e computer? E con le lampade?</p>
+          <span class="dc-righe" aria-label="Spazio per la risposta"></span>
+        </div>
+      </div>
+
+      <div class="dc-tappa">
+        <div class="dc-ora"><span>30</span>minuti<small>ore 17.30</small></div>
+        <div>
+          <p>Maria vuole un gelato dal congelatore. Flavio vorrebbe un succo dal frigorifero.</p>
+          <p class="dc-compito">Aprite frigorifero e congelatore? Perché?</p>
+          <span class="dc-righe" aria-label="Spazio per la risposta"></span>
+        </div>
+      </div>
+
+      <div class="dc-tappa">
+        <div class="dc-ora"><span>60</span>minuti<small>ore 18.00</small></div>
+        <div>
+          <p>Il telefono del papà è al 40%. Sul pianerottolo abita la signora Lina, che vive da sola e usa il bastone.</p>
+          <p class="dc-compito">Come avete notizie senza consumare il telefono? Chi va dalla signora Lina, e come?</p>
+          <span class="dc-righe" aria-label="Spazio per la risposta"></span>
+        </div>
+      </div>
+
+      <div class="dc-tappa">
+        <div class="dc-ora"><span>120</span>minuti<small>ore 19.00</small></div>
+        <div>
+          <p>La lampada lasciata accesa si illumina: la corrente è tornata.</p>
+          <p class="dc-compito">Riaccendete tutto insieme? Che cosa controllate?</p>
+          <span class="dc-righe" aria-label="Spazio per la risposta"></span>
+        </div>
+      </div>
+
+      <p>Se pensare al buio ti mette un po' di ansia, è normale. Avere un compito da fare, come tenere la torcia o ascoltare la radio, aiuta.</p>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Due ore senza corrente" · Primaria 5ª e secondaria di primo grado · rev. 2026</span>
+    </footer>
+
+  </article>
+
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <div class="scheda-titolo-principale" role="heading" aria-level="2">Che cosa funziona ancora? E chi fa che cosa?</div>
+        <div class="scheda-sottotitolo">Due ore senza corrente · Foglio 2 di 3</div>
+      </div>
+    </header>
+
+    <div class="dc">
+      <h2 class="scheda-h2">Funziona o no, senza corrente?</h2>
+      <p>Segna una casella per ogni riga. «Dipende» vuol dire che la risposta cambia da casa a casa, o col passare del tempo.</p>
+      <div class="scheda-tabella-scorrevole">
+        <table class="dc-tabella">
+          <caption class="visually-hidden">Tabella da compilare: per ogni oggetto, se funziona, non funziona o dipende</caption>
+          <thead>
+            <tr><th scope="col">Oggetto</th><th scope="col" class="dc-c">Funziona</th><th scope="col" class="dc-c">Non funziona</th><th scope="col" class="dc-c">Dipende</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>a. Le lampadine di casa</td><td class="dc-c"><span class="dc-casella"></span></td><td class="dc-c"><span class="dc-casella"></span></td><td class="dc-c"><span class="dc-casella"></span></td></tr>
+            <tr><td>b. La torcia a pile</td><td class="dc-c"><span class="dc-casella"></span></td><td class="dc-c"><span class="dc-casella"></span></td><td class="dc-c"><span class="dc-casella"></span></td></tr>
+            <tr><td>c. La radio a pile</td><td class="dc-c"><span class="dc-casella"></span></td><td class="dc-c"><span class="dc-casella"></span></td><td class="dc-c"><span class="dc-casella"></span></td></tr>
+            <tr><td>d. Il modem del Wi-Fi, attaccato alla presa</td><td class="dc-c"><span class="dc-casella"></span></td><td class="dc-c"><span class="dc-casella"></span></td><td class="dc-c"><span class="dc-casella"></span></td></tr>
+            <tr><td>e. Il telefono cellulare</td><td class="dc-c"><span class="dc-casella"></span></td><td class="dc-c"><span class="dc-casella"></span></td><td class="dc-c"><span class="dc-casella"></span></td></tr>
+            <tr><td>f. Il frigorifero tenuto chiuso</td><td class="dc-c"><span class="dc-casella"></span></td><td class="dc-c"><span class="dc-casella"></span></td><td class="dc-c"><span class="dc-casella"></span></td></tr>
+            <tr><td>g. L'ascensore del palazzo</td><td class="dc-c"><span class="dc-casella"></span></td><td class="dc-c"><span class="dc-casella"></span></td><td class="dc-c"><span class="dc-casella"></span></td></tr>
+            <tr><td>h. L'acqua del rubinetto</td><td class="dc-c"><span class="dc-casella"></span></td><td class="dc-c"><span class="dc-casella"></span></td><td class="dc-c"><span class="dc-casella"></span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="scheda-h2">Il conto della batteria</h2>
+      <div class="dc-ipotesi">
+        <strong>Ipotesi dell'esercizio.</strong> I numeri sono inventati per fare i conti, non misurati su un telefono vero. Il telefono parte dal 60%. Guardando video consuma 20 punti ogni ora. In risparmio energetico, con pochi messaggi, consuma 5 punti ogni ora.
+      </div>
+      <ol class="dc-conti">
+        <li>Se il papà guarda video per due ore, quanta batteria resta alle 19.00?<span class="dc-righe" aria-label="Spazio per il calcolo"></span></li>
+        <li>Se lo tiene in risparmio energetico per due ore, quanta batteria resta?<span class="dc-righe" aria-label="Spazio per il calcolo"></span></li>
+        <li>Guardando sempre video, dopo quante ore il telefono si spegne del tutto? Perché conviene tenere carica la batteria, se c'è bisogno di chiamare il 112?<span class="dc-righe" aria-label="Spazio per il calcolo"></span></li>
+      </ol>
+
+      <h2 class="scheda-h2">Chi fa che cosa</h2>
+      <p>A gruppi di quattro, ognuno sceglie un compito. Si può anche scambiare a metà.</p>
+      <ul class="dc-ruoli">
+        <li><img src="/pittogrammi/arasaac/torcia.png" alt="Pittogramma: una torcia elettrica"><span><strong>Custode della luce.</strong> Tiene la torcia e sa dove sono le pile di scorta.</span></li>
+        <li><img src="/pittogrammi/arasaac/radio.png" alt="Pittogramma: una radio a pile con l'antenna"><span><strong>Ascoltatore.</strong> Accende la radio a pile e riferisce solo le notizie dei canali ufficiali.</span></li>
+        <li><img src="/pittogrammi/arasaac/orologio.png" alt="Pittogramma: un orologio da polso"><span><strong>Cronometrista.</strong> Annuncia le tappe e scrive l'ora di ogni decisione.</span></li>
+        <li><img src="/pittogrammi/arasaac/aiutare.png" alt="Pittogramma: una persona che aiuta un'altra"><span><strong>Vicino attento.</strong> Pensa a chi ha bisogno di aiuto e propone, con un adulto, come passare a trovarlo.</span></li>
+      </ul>
+
+      <p class="dc-attribuzione">Pittogrammi: ARASAAC (arasaac.org), Governo d'Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. La scheda eredita la stessa licenza.</p>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Due ore senza corrente" · Primaria 5ª e secondaria di primo grado · rev. 2026</span>
+    </footer>
+
+  </article>
+
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <div class="scheda-titolo-principale" role="heading" aria-level="2">E se succede a scuola?</div>
+        <div class="scheda-sottotitolo">Due ore senza corrente · Foglio 3 di 3</div>
+      </div>
+    </header>
+
+    <div class="dc">
+      <div class="dc-scuola">
+        <p><strong>Intervista il responsabile della sicurezza della scuola</strong> (o il docente che vi accompagna da lui). Scrivi le risposte: valgono per la vostra scuola, non per tutte.</p>
+        <ul>
+          <li>Quando manca la corrente, quali luci si accendono da sole?<span class="dc-righe" aria-label="Spazio per la risposta"></span></li>
+          <li>La campanella e l'allarme di evacuazione funzionano lo stesso? Come?<span class="dc-righe" aria-label="Spazio per la risposta"></span></li>
+          <li>Se manca la corrente durante la lezione, che cosa fa la classe? Chi decide?<span class="dc-righe" aria-label="Spazio per la risposta"></span></li>
+          <li>Ci sono ascensori? Che cosa succede se qualcuno resta dentro?<span class="dc-righe" aria-label="Spazio per la risposta"></span></li>
+        </ul>
+      </div>
+
+      <h2 class="scheda-h2">Una cosa da fare a casa</h2>
+      <p>Scegline una e falla entro una settimana, con un adulto: provare la torcia, mettere le pile di scorta accanto alla torcia, scrivere su carta i numeri utili, chiedere a casa se l'acqua arriva anche senza corrente.</p>
+      <span class="dc-righe" aria-label="Spazio per scrivere la cosa scelta"></span>
+
+      <div class="avvertenza">
+        <strong>Per il docente e per le famiglie.</strong> La simulazione si fa a parole: nessuno stacca il quadro elettrico e nessuno accende candele, perché la fiamma può causare un incendio. Se una persona resta bloccata in ascensore o un apparecchio salvavita resta senza corrente, si chiama il <strong>112</strong>. Per chiedere quando torna la luce il 112 non si chiama.
+      </div>
+
+      <div class="scheda-docente">
+        <p><strong>Per il docente.</strong> Come si svolge: gruppi di quattro con i ruoli del foglio 2. Leggi una tappa del foglio 1 ogni cinque minuti; poi tabella e batteria (15 minuti) e confronto (10 minuti). Il foglio 3 si completa dopo l'intervista al responsabile della sicurezza; se il vostro piano dice altro, vale il piano.</p>
+        <p><strong>Le altre schede sul blackout.</strong> <a href="/formazione/schede-stampabili/blackout-primaria/">«Blackout: la casa senza corrente»</a> dà regole e kit, <a href="/formazione/schede-stampabili/blackout-infanzia/">«Quando va via la luce»</a> è per l'infanzia, <a href="/formazione/schede-stampabili/blackout-servizi-essenziali-secondaria/">«Blackout e servizi essenziali»</a> tratta i servizi della città e una prova di quindici minuti a casa. Questa è una simulazione in classe a tappe, con il tempo che passa e il conto della batteria. Fonte delle risposte: pagina <a href="/rischi-prevenzione/blackout/">«Blackout e interruzione servizi»</a> del sito.</p>
+        <p><strong>Che cosa osservare:</strong> il gruppo sceglie la torcia, tiene chiusi frigorifero e congelatore, risparmia la batteria, pensa a chi è solo. Il Gruppo comunale di protezione civile non si attiva su chiamata dei cittadini.</p>
+      </div>
+
+      <div class="soluzione-capovolta">
+        <span class="titolo">Soluzioni per il docente (gira il foglio)</span>
+        <strong>Tappe.</strong> 0: la torcia, tenuta in un posto che tutti conoscono; niente candele. 10: si staccano le spine di televisione e computer, che uno sbalzo al ritorno della corrente può rovinare; resta acceso l'interruttore di una sola lampada, per capire quando torna. 30: frigorifero e congelatore restano chiusi: il cibo si conserva per molte ore, nel congelatore fino a 24. 60: notizie dalla radio a pile, telefono usato poco; dalla signora Lina va un adulto, con la torcia e per le scale, se si può senza rischi. 120: elettrodomestici riaccesi uno alla volta, controllo del congelatore.
+        <strong>Tabella.</strong> a non funziona · b funziona finché durano le pile · c funziona · d non funziona · e funziona finché dura la batteria · f dipende: il motore è fermo, ma chiuso resta freddo per molte ore · g non funziona · h dipende dall'impianto del palazzo.
+        <strong>Batteria.</strong> 1) 60 − 20 − 20 = 20%. 2) 60 − 5 − 5 = 50%. 3) 60 : 20 = 3 ore; con la batteria carica si può chiamare il 112 se c'è un pericolo vero. I risultati valgono per i numeri dell'ipotesi.
+      </div>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Due ore senza corrente" · Primaria 5ª e secondaria di primo grado · rev. 2026</span>
+    </footer>
+
+  </article>
+  </main>
+
+</body>
+</html>

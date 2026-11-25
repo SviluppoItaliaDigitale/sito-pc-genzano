@@ -3,6 +3,7 @@ title: "Scout e Protezione Civile: una storia di servizio che parte da Firenze"
 date: 2026-04-23T00:03:00+02:00
 description: "Dal fango di Firenze 1966 all'alluvione dell'Emilia-Romagna 2023, il rapporto tra scoutismo italiano e Protezione Civile."
 badge: "Volontariato"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-23-scout-protezione-civile-storia-servizio.webp"
@@ -139,7 +140,7 @@ Tra il **17 giugno e il 10 settembre 2017** organizzano **cinque route di strada
 
 ## Emilia-Romagna 2023: la SAE attivata a Forlì
 
-**Maggio 2023**. L'**alluvione dell'Emilia-Romagna**: 17 vittime, 50.000 sfollati, danni per oltre 8 miliardi di euro. L'Agenzia Regionale di Protezione Civile attiva l'**AGESCI Emilia-Romagna**.
+**Maggio 2023**. L'**alluvione dell'Emilia-Romagna**: 17 vittime, 36.600 sfollati al momento più critico, danni per oltre 8 miliardi di euro. L'Agenzia Regionale di Protezione Civile attiva l'**AGESCI Emilia-Romagna**.
 
 Da **giovedì 25 maggio**, il Settore Protezione Civile apre a **Forlì** la **Segreteria Avanzata di Emergenza (SAE)**, operativa **24 ore su 24** presso la sede della Zona di Forlì. La SAE coordina sul posto persone e mezzi attivi nei servizi di supporto alla popolazione, gestisce i rapporti con i Centri Operativi Comunali (COC), incrocia le richieste di servizio con le disponibilità dei volontari arrivati da tutta la regione.
 
@@ -149,7 +150,7 @@ In sei settimane, AGESCI Emilia-Romagna raccoglie **42.700 euro** di donazioni a
 
 {{< foto src="/images/2026-04-23-emilia-romagna-2023-scout.webp"
          alt="Immagine satellitare NASA dell'alluvione dell'Emilia-Romagna del maggio 2023"
-         caption="Maggio 2023: il sistema nuvoloso che ha investito l'Emilia-Romagna durante l'alluvione, ripreso da satellite. 17 vittime, 50.000 sfollati, oltre 8 miliardi di danni. AGESCI ha attivato la Segreteria Avanzata di Emergenza a Forlì, formando oltre mille volontari in due serate su YouTube. Foto: NASA — Public domain — via Wikimedia Commons." >}}
+         caption="Maggio 2023: il sistema nuvoloso che ha investito l'Emilia-Romagna durante l'alluvione, ripreso da satellite. 17 vittime, 36.600 sfollati al momento più critico, oltre 8 miliardi di danni. AGESCI ha attivato la Segreteria Avanzata di Emergenza a Forlì, formando oltre mille volontari in due serate su YouTube. Foto: NASA — Public domain — via Wikimedia Commons." >}}
 
 ## Formazione: il Corso Sicurezza e i percorsi specifici
 

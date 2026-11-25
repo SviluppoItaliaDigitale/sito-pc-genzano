@@ -3,6 +3,7 @@ title: "Vento forte: un video in 3D su che cosa fare prima, durante e dopo"
 date: 2026-11-12T00:07:00+01:00
 description: "Un video di poco più di un minuto, con voce e sottotitoli, mostra che cosa fare quando è previsto vento forte: in casa, a piedi, in auto e dopo le raffiche."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-12-vento-forte-video-3d.webp"
@@ -95,7 +96,7 @@ I dati del terreno vengono dalle Mapzen Terrain Tiles, pubblicate su AWS Open Da
 
 Musica: «Easy Lemon» di Kevin MacLeod ([incompetech.com](https://incompetech.com/)), con licenza [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), adattata per il video.
 
-Voce sintetica: modello distribuito con licenza Coqui Public Model License ([testo della licenza](https://huggingface.co/coqui/XTTS-v1/raw/main/LICENSE)).
+Voce sintetica: modello distribuito con licenza Coqui Public Model License ([testo della licenza](https://huggingface.co/coqui/XTTS-v2/blob/main/LICENSE.txt)).
 
 ## Per approfondire
 

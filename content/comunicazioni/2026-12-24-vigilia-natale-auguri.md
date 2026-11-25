@@ -3,6 +3,7 @@ title: "Vigilia di Natale: auguri dalla Protezione Civile"
 date: 2026-12-24
 description: "Vigilia di Natale 2026. Auguri sinceri dalla Protezione Civile di Genzano di Roma a tutta la cittadinanza."
 badge: "Comunicazione"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-24-vigilia-natale-auguri.webp"

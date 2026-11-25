@@ -3,6 +3,7 @@ title: "Maltempo: allerta rossa in Sardegna e in parte della Sicilia per il 19 g
 date: 2026-01-18
 description: "Avviso di maltempo per Sardegna, Sicilia e Calabria: per lunedì 19 gennaio allerta rossa su gran parte della Sardegna e su un settore della Sicilia."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-01-18-maltempo-sud-allerta-rossa-sardegna-sicilia.webp"

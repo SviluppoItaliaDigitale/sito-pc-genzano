@@ -3,6 +3,7 @@ title: "Vincolo idrogeologico nel Lazio: la Regione propone di sostituire le map
 date: 2026-11-03T00:03:00+01:00
 description: "Non è ancora approvato: la proposta n. 64/2026 aggiorna le zone vincolate con 538 mappe digitali per i 378 Comuni del Lazio. Audizioni fino all'11 novembre."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-03-vincolo-idrogeologico-lazio-mappe-1923-riordino.webp"

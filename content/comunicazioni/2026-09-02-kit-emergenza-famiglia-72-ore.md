@@ -3,6 +3,7 @@ title: "Il kit di emergenza per la famiglia: cosa serve davvero per 72 ore"
 date: 2026-09-02T00:01:00+02:00
 description: "Un kit ben fatto può fare la differenza nelle prime 72 ore di un'emergenza. Cosa mettere davvero nello zaino, senza cadere nel superfluo."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-02-kit-emergenza-famiglia-72-ore.webp"

@@ -3,6 +3,7 @@ title: "Quattro incendi in un pomeriggio, dalla Cisternense a Latina"
 date: 2026-09-01T00:04:00+02:00
 description: "Il 1° settembre le squadre del Gruppo sono uscite quattro volte per incendi di vegetazione e rifiuti, tra Aprilia e Latina, su attivazione della SOUP."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-01-quattro-incendi-pomeriggio-cisternense-latina.webp"

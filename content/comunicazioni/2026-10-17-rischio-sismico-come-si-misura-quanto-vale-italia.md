@@ -3,6 +3,7 @@ title: "Il rischio sismico: che cos'è, come si misura, quanto vale in Italia"
 date: 2026-10-17T00:02:00+02:00
 description: "Pericolosità, vulnerabilità ed esposizione: come si calcola il rischio sismico, perché Genzano è in zona 2B e quanto pesa un terremoto sulle case."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-17-rischio-sismico-come-si-misura-quanto-vale-italia.webp"

@@ -3,6 +3,7 @@ title: "Laghi di Nemi e Albano: sicurezza in acqua e sulle sponde"
 date: 2026-05-19T00:01:00+02:00
 description: "I laghi dei Castelli Romani sono un patrimonio naturale da rispettare. Regole di sicurezza per chi nuota, pesca o frequenta le sponde in estate."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-19-sicurezza-laghi-nemi-albano.webp"

@@ -3,6 +3,7 @@ title: "Giornata mondiale della radio: perché tenere una radio a pile nel kit d
 date: 2026-02-13
 description: "Il 13 febbraio è la Giornata mondiale della radio, proclamata dall'UNESCO nel 2011. Nelle emergenze la radio resta un canale di informazioni affidabili."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-02-13-giornata-mondiale-radio.webp"

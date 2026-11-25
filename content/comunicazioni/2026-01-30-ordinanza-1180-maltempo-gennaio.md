@@ -3,6 +3,7 @@ title: "Ordinanza n. 1180: i primi interventi dopo il maltempo di gennaio al Sud
 date: 2026-01-30
 description: "L'ordinanza nomina commissari i Presidenti di Calabria, Sardegna e Sicilia, fissa gli aiuti per famiglie e imprese e prevede misure per la frana di Niscemi."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-01-30-ordinanza-1180-maltempo-gennaio.webp"

@@ -3,6 +3,7 @@ title: "Quattro volte sul Tuscolo in un mese: cinque ore di lavoro tra una barac
 date: 2026-08-28T00:02:00+02:00
 description: "Doppia attivazione il 27 agosto: al mattino la verifica con il drone di un abbruciamento in via del Lavoro, la sera il quarto intervento del mese sul Tuscolo."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-28-tuscolo-quarta-uscita-drone-abbruciamento.webp"

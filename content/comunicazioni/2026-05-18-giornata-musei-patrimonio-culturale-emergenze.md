@@ -3,6 +3,7 @@ title: "18 maggio: Giornata dei Musei e tutela del patrimonio in emergenza"
 date: 2026-05-18
 description: "Terremoti, alluvioni, incendi: anche il patrimonio artistico e culturale è fragile. Come la Protezione Civile collabora alla sua tutela."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-18-giornata-musei-patrimonio-culturale-emergenze.webp"

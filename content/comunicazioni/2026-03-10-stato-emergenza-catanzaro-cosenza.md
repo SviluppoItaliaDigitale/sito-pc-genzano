@@ -3,6 +3,7 @@ title: "Stato di emergenza per il maltempo di febbraio nelle province di Catanza
 date: 2026-03-10T00:02:00+01:00
 description: "Il 10 marzo il Consiglio dei ministri dichiara per 12 mesi lo stato di emergenza per il maltempo dall'11 al 20 febbraio in Calabria. Primi 15 milioni."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-03-10-stato-emergenza-catanzaro-cosenza.webp"

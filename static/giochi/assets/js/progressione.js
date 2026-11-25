@@ -39,7 +39,7 @@
     'posiziona-cartelli':     { nome: 'Posiziona i Cartelli',       fascia: 'primaria', icona: 'bi-sign-turn-right-fill' },
     // Ragazzi 11-19 (giochi)
     'simulatore-coc':         { nome: 'Simulatore COC',             fascia: 'ragazzi',  icona: 'bi-diagram-3-fill' },
-    'emergency-responder':    { nome: 'Emergency Responder',        fascia: 'ragazzi',  icona: 'bi-person-walking' },
+    'emergency-responder':    { nome: 'Soccorritore in emergenza',        fascia: 'ragazzi',  icona: 'bi-person-walking' },
     'mappa-rischio':          { nome: 'La Mappa del Rischio',       fascia: 'ragazzi',  icona: 'bi-geo-alt-fill' },
     'radio-emergency':        { nome: 'Radio Emergency',            fascia: 'ragazzi',  icona: 'bi-broadcast' },
     'codice-arancione':       { nome: 'Codice Arancione',           fascia: 'ragazzi',  icona: 'bi-bounding-box' },

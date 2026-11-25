@@ -3,6 +3,7 @@ title: "Festa del Pane: tre giorni di presidio, e un incendio da spegnere la dom
 date: 2026-09-21T00:02:00+02:00
 description: "Dal 18 al 20 settembre i volontari hanno presidiato le aree pedonali della Festa del Pane. Domenica sera l'ultima chiamata: un incendio in via Garibaldi."
 badge: "Aggiornamento"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-21-festa-del-pane-2026-tre-giorni-presidio-resoconto.webp"

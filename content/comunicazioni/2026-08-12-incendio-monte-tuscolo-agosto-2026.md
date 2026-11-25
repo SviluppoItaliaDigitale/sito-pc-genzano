@@ -3,6 +3,7 @@ title: "Vasto incendio sul Monte Tuscolo: nove ore dei volontari di Genzano"
 date: 2026-08-12T00:03:00+02:00
 description: "L'11 agosto 2026 il Gruppo è stato attivato dalla SOUP sull'incendio del Tuscolo. Nove ore di lavoro con autobotte e modulo, fino a tarda notte."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-12-incendio-monte-tuscolo-agosto-2026.webp"

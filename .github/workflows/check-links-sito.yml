@@ -97,6 +97,11 @@ jobs:
           # e restavano fuori gli articoli e ogni pagina annidata (scoperto il
           # 17/10/2026). Nessun commento DENTRO args: il blocco diventa una riga
           # sola e la shell scarterebbe tutto ciò che segue il «#».
+          # Il catalogo dei disciplinari (public/cucina-emergenza/disciplinari)
+          # resta fuori: ha più di 330 collegamenti al sito del Ministero
+          # dell'agricoltura, che risponde 502 quando riceve molte richieste
+          # insieme. Li rilegge tre alla volta controllo-cucina-emergenza.yml,
+          # ogni mese.
           args: >-
             --cache
             --max-cache-age 1d
@@ -123,6 +128,7 @@ jobs:
             --exclude "^https://x\.com/intent/post"
             --exclude-path "public/vendor"
             --exclude-path "public/app-shared"
+            --exclude-path "public/cucina-emergenza/disciplinari"
             'public/**/*.html'
           output: ./lychee-report.md
           fail: false

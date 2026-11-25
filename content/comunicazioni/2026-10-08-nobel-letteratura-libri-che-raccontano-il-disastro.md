@@ -3,6 +3,7 @@ title: "Nobel per la letteratura: tre scrittori premiati che hanno raccontato il
 date: 2026-10-08T00:02:00+02:00
 description: "Oggi si annuncia il Nobel per la letteratura. Camus, Saramago e Aleksievič hanno raccontato epidemie e catastrofi: cosa insegnano a chi prepara le comunità."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-08-nobel-letteratura-libri-che-raccontano-il-disastro.webp"

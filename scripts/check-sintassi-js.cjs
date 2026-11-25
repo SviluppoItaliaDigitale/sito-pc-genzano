@@ -21,6 +21,9 @@ const ECCEZIONI = [
   // Libro che si esplora: la scena 3D richiede WebGL 2 e moduli ES2022 (three.js r160);
   // la versione testuale e le schede A4 dello stesso libro funzionano ovunque.
   /\/vendor\/three\//, /\/js\/libro-3d\.js$/,
+  // Stampa 3D, nome e cognome sugli oggetti (manifold-3d in WebAssembly, opentype.js, import()
+  // dinamico); senza, restano l'immagine dell'oggetto e il file con il solo nominativo.
+  /\/js\/stampa3d-nome\.js$/, /\/vendor\/stampa3d\//,
   // Sala situazioni: strumento per la sala operativa, non per le scuole.
   /\/monitor\/index\.html$/,
   // Indice di ricerca generato da Pagefind: artefatto di build, non usato dalle pagine di scuola.

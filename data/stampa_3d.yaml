@@ -1,0 +1,1484 @@
+# Oggetti da stampare in 3D con il nominativo dei volontari: catalogo in /stampa-3d/ e una pagina per
+# oggetto in /stampa-3d/<id>/ (content/stampa-3d/_content.gotmpl), con i suoi file nella stessa cartella.
+# Per un oggetto nuovo: aggiungi una voce in «oggetti» con la sua «categoria» (se serve un tipo nuovo,
+# anche nel modello di partenza in scripts/stampa-3d/) e crea i file con «python3 scripts/genera-stampa-3d.py».
+# Catalogo e pagina si aggiornano da soli.
+# Regole dei file: quelle di Craftcloud per la stampa FDM (un pezzo per file, millimetri,
+# pareti e tratti delle lettere dentro i minimi), controllate dallo script.
+# «bandiera» = riquadro del tricolore nel modello [x0, y0, x1, y1], per colorarlo nelle anteprime.
+# Materiale consigliato: PETG, più resistente agli urti e al caldo del PLA (in auto d'estate il PLA si deforma).
+
+nominativi:
+  prefisso: "ALFA"
+  primo: 1
+  ultimo: 100
+
+servizio:
+  nome: "Craftcloud"
+  indirizzo: "https://craftcloud3d.com/"
+  verificato: "2026-11-23"
+
+# Gruppi del catalogo, nell'ordine in cui compaiono
+categorie:
+  - id: "giubbetto"
+    titolo: "Sul giubbetto e in tasca"
+  - id: "radio"
+    titolo: "Per la radio"
+  - id: "attrezzatura"
+    titolo: "Zaino, casco e attrezzatura"
+  - id: "intervento"
+    titolo: "In intervento e sul mezzo"
+  - id: "campo"
+    titolo: "Al campo e in mensa"
+  - id: "kit"
+    titolo: "Kit, pile e schede"
+  - id: "sede"
+    titolo: "In sede e in sala operativa"
+  - id: "telefono"
+    titolo: "Per il telefono"
+
+oggetti:
+  - id: "targhetta-petto"
+    nome: "Targhetta da petto"
+    articolo: "la targhetta"
+    descrizione: "Targhetta blu con la bandiera italiana, il nominativo in grande e, sotto, «Protezione Civile Genzano di Roma». Si appunta sulla divisa con una spilla da balia."
+    categoria: "giubbetto"
+    breve: "Si appunta sulla divisa con una spilla da balia."
+    sorgente: "targhetta-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-36.5, 1.75, -23.75, 10.25]
+      nome: {zona: [-38, -13.1, 38, -6.1], lato: "retro"}   # riga di nome e cognome (static/js/stampa3d-nome-core.js)
+    parametri:
+      tipo: "petto"
+      parte: "tutto"
+      fissaggio: "balia"
+    misure: "8 × 3 cm, spessa 3,4 mm"
+    lunghezza_mm: 80
+    peso_g: 8
+    scheda:
+      - ["Ingombro", "80 × 30 mm, spessa 3,4 mm (2,4 mm di base e 1 mm di scritte)"]
+      - ["Peso", "circa 8 g"]
+      - ["Scritte e cornice", "in rilievo di 1 mm; cornice larga 1,2 mm"]
+      - ["Altezza delle lettere", "nominativo 8,5 mm; righe piccole 4,5 mm, tratto più sottile 0,7 mm"]
+      - ["Fissaggio", "scanalatura sul retro larga 1,6 mm e profonda 1,3 mm per una spilla da balia lunga 45 mm; due incavi da 6,5 × 6,5 mm, profondi 1,4 mm"]
+      - ["Posizione di stampa", "in piano, già orientata nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "una spilla da balia di metallo lunga 4,5 cm (si trova in merceria)"
+      - "colla istantanea in gel per plastica e metallo"
+    montaggio:
+      - "Gira la targhetta: sul retro c'è una scanalatura con due incavi quadrati alle estremità."
+      - "Chiudi la spilla da balia e appoggiala nella scanalatura: la molla e la testa entrano nei due incavi, la punta resta verso l'esterno."
+      - "Apri la spilla e metti due gocce di colla nella scanalatura, sotto la parte che non si apre."
+      - "Premi per un minuto, poi lascia asciugare per un'ora prima di usarla."
+    retro: "Retro della targhetta da petto: una scanalatura orizzontale nella parte alta, con un incavo quadrato a ciascuna estremità."
+    didascalia_retro: "Il retro: nella scanalatura va la spilla, negli incavi quadrati la molla e la testa."
+
+  - id: "portachiavi"
+    nome: "Portachiavi"
+    articolo: "il portachiavi"
+    descrizione: "Portachiavi blu con la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma», con un occhiello rinforzato per l'anello. Utile per le chiavi dei mezzi e della sede."
+    categoria: "giubbetto"
+    breve: "Per le chiavi dei mezzi e della sede, con occhiello rinforzato."
+    sorgente: "targhetta-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-29.0, 2.45, -19.25, 8.95]
+      nome: {zona: [-32.6, -6.3, 30.2, 0.7], lato: "retro", etichetta: "Nome e cognome o nome del mezzo", aiuto: "Per le chiavi di un mezzo scrivi il suo nome come nell'elenco dei mezzi, per esempio «Mercedes Actros» o «Fiat Doblò»; se è lungo, scrivi solo il modello."}   # riga di nome e cognome (static/js/stampa3d-nome-core.js)
+    parametri:
+      tipo: "portachiavi"
+      parte: "tutto"
+    misure: "7,7 × 2,6 cm, spesso 5 mm"
+    lunghezza_mm: 77
+    peso_g: 10
+    scheda:
+      - ["Ingombro", "77 × 26 mm, spesso 5 mm (4 mm di base e 1 mm di scritte)"]
+      - ["Peso", "circa 10 g"]
+      - ["Occhiello", "diametro 16 mm, foro da 5 mm per l'anello"]
+      - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4,5 mm"]
+      - ["Posizione di stampa", "in piano, già orientato nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "un anello portachiavi da 25 mm (si trova in ferramenta)"
+    montaggio:
+      - "Apri l'anello con l'unghia o con la punta di un cacciavite."
+      - "Infila l'occhiello del portachiavi nell'anello e fallo girare finché esce dall'altra parte."
+      - "Aggiungi le chiavi allo stesso modo."
+
+  - id: "etichetta-zaino"
+    nome: "Etichetta per lo zaino"
+    articolo: "l'etichetta"
+    descrizione: "Etichetta blu con la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma», con una fessura in alto per un laccio o una cinghia. Serve a riconoscere subito lo zaino o la borsa."
+    categoria: "attrezzatura"
+    breve: "Per riconoscere subito lo zaino o la borsa, con una fessura per il laccio."
+    sorgente: "targhetta-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-36.5, -2.25, -23.75, 6.25]
+      nome: {zona: [-38, -18.3, 38, -11.3], lato: "retro"}   # riga di nome e cognome (static/js/stampa3d-nome-core.js)
+    parametri:
+      tipo: "zaino"
+      parte: "tutto"
+    misure: "8 × 4,2 cm, spessa 5 mm"
+    lunghezza_mm: 80
+    peso_g: 17
+    scheda:
+      - ["Ingombro", "80 × 42 mm, spessa 5 mm (4 mm di base e 1 mm di scritte)"]
+      - ["Peso", "circa 17 g"]
+      - ["Fessura", "26 × 5,5 mm, in alto, per laccio o cinghia"]
+      - ["Altezza delle lettere", "nominativo 8,5 mm; righe piccole 4,5 mm"]
+      - ["Posizione di stampa", "in piano, già orientata nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "un laccio, una fascetta riutilizzabile o un piccolo moschettone"
+    montaggio:
+      - "Passa il laccio nella fessura in alto dell'etichetta."
+      - "Lega il laccio a una cinghia o a una maniglia dello zaino, in un punto dove l'etichetta si vede."
+      - "Stringi bene il nodo: l'etichetta deve restare ferma anche quando corri."
+
+  - id: "appendiabiti"
+    nome: "Appendiabiti da armadietto"
+    articolo: "l'appendiabiti"
+    descrizione: "Gancio robusto per giacca, zaino o casco, con la piastra del nominativo, la bandiera italiana e «Protezione Civile Genzano di Roma». Il gancio è largo quanto la piastra. Si fissa nell'armadietto con due viti o con nastro biadesivo."
+    categoria: "sede"
+    breve: "Gancio per giacca, zaino o casco, da avvitare o incollare nell'armadietto."
+    sorgente: "ganci-nominativo.scad"
+    anteprima: &gancio
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-36.5, 1.75, -23.75, 10.25]
+      vista_3d: true
+      fianco: -40   # si stampa in piedi sul lato sinistro (x = -40), senza supporti
+      nome: {zona: [-37, -29.5, 37, -22.5], lato: "fronte"}   # riga di nome e cognome (static/js/stampa3d-nome-core.js)
+    parametri:
+      tipo: "appendiabiti"
+      parte: "tutto"
+    misure: "8 × 6,3 cm, sporge 3,3 cm"
+    lunghezza_mm: 80
+    peso_g: 71
+    scheda:
+      - ["Ingombro", "80 × 63 mm, sporge 33 mm dalla parete"]
+      - ["Peso", "circa 71 g"]
+      - ["Piastra", "spessa 5 mm, scritte in rilievo di 1 mm"]
+      - ["Gancio", "largo 80 mm; braccio spesso 10 mm, punta alta 7 mm; 21 mm liberi fra la piastra e la punta; rinforzo a 45 gradi alla base"]
+      - ["Fori", "2 per viti a testa svasata da 4 mm (foro 4,4 mm, svasatura 8,8 mm), a 66 mm l'uno dall'altro"]
+      - ["Posizione di stampa", "in piedi sul lato sinistro, già orientato nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "due viti a testa svasata da 4 mm e i tasselli adatti alla parete, oppure nastro biadesivo di montaggio per esterni"
+    montaggio:
+      - "Pulisci e asciuga il punto dell'armadietto dove vuoi metterlo."
+      - "Con le viti: appoggia l'appendiabiti con il gancio in basso, segna i due fori, fora, metti i tasselli e avvita senza stringere troppo."
+      - "Con il biadesivo: incolla due strisce sul retro, premi forte per 30 secondi e aspetta un giorno prima di appendere oggetti pesanti."
+
+  - id: "gancio-anta"
+    nome: "Gancio per l'anta"
+    articolo: "il gancio"
+    descrizione: "Gancio che si appoggia sopra l'anta dell'armadietto o della porta, senza viti né colla, con la piastra del nominativo, la bandiera italiana e un gancio largo quanto la piastra."
+    categoria: "sede"
+    breve: "Si appoggia sopra l'anta dell'armadietto, senza viti né colla."
+    sorgente: "ganci-nominativo.scad"
+    anteprima: *gancio
+    parametri:
+      tipo: "anta"
+      parte: "tutto"
+    misure: "8 × 6,3 cm, per ante spesse fino a 2 cm con una fessura sopra di almeno 2,2 mm"
+    lunghezza_mm: 80
+    peso_g: 95
+    scheda:
+      - ["Ingombro", "80 × 63 mm, profondo 58 mm"]
+      - ["Peso", "circa 95 g"]
+      - ["Spazio per l'anta", "20 mm: va bene per ante spesse fino a 2 cm"]
+      - ["Ponte sopra l'anta", "2 mm: passa nella fessura fra anta chiusa e mobile"]
+      - ["Aletta dietro", "alta 28 mm e spessa 5 mm; ponte sopra l'anta spesso 5 mm"]
+      - ["Gancio", "largo 80 mm; 21 mm liberi fra la piastra e la punta"]
+      - ["Posizione di stampa", "in piedi sul lato sinistro, già orientato nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "niente: si appoggia e basta"
+    montaggio:
+      - "Prima di stampare, chiudi l'anta e prova a infilare una moneta da 2 euro (spessa 2,2 mm) nella fessura in alto: se entra, il gancio ci passa. Se non entra, scegli l'appendiabiti, che si fissa con viti o biadesivo."
+      - "Apri l'anta e appoggia il gancio sul bordo in alto, con la scritta verso l'esterno."
+      - "La parte dietro scende all'interno dell'anta e tiene fermo il gancio."
+      - "Prima di chiudere controlla che l'anta non sbatta contro il gancio. Va bene per ante spesse fino a 2 cm."
+
+  - id: "gancio-cintura"
+    nome: "Gancio portachiavi da cintura"
+    articolo: "il gancio"
+    descrizione: "Clip da infilare sulla cintura, con il nominativo, la bandiera italiana e un occhiello rinforzato dove agganci le chiavi. Un dentino con lo scivolo la tiene ferma sulla cintura."
+    categoria: "giubbetto"
+    breve: "Clip da cintura con un occhiello per le chiavi."
+    sorgente: "ganci-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-36.5, 1.75, -23.75, 10.25]
+      vista_3d: true
+      quota_scritte: 14.0   # piastra spostata di 9 mm sopra la clip (spazio_cintura + 3,5), spessa 5 mm
+      fianco: -40   # si stampa in piedi sul lato sinistro (x = -40), senza supporti
+      nome: {zona: [-38.6, -33.3, 38.8, -26.3], lato: "retro"}   # riga di nome e cognome (static/js/stampa3d-nome-core.js)
+    parametri:
+      tipo: "cintura"
+      parte: "tutto"
+    misure: "9,5 × 5,4 cm, per cinture alte fino a 4 cm e spesse fino a 5 mm"
+    lunghezza_mm: 95
+    peso_g: 42
+    scheda:
+      - ["Ingombro", "95 × 54 mm, spesso 15 mm"]
+      - ["Peso", "circa 42 g"]
+      - ["Spazio per la cintura", "5,5 mm di spessore e 44 mm di altezza: cinture spesse fino a 5 mm e alte fino a 4 cm"]
+      - ["Dentino", "lascia un passaggio di 3,5 mm; scivolo sotto per far entrare la cintura, fermo sopra per non farla uscire"]
+      - ["Linguetta a molla", "80 × 49 mm, spessa 3,5 mm: si apre di 1,5 mm con una spinta di circa 2 kg"]
+      - ["Occhiello", "diametro 18 mm, foro da 8 mm per anello o moschettone"]
+      - ["Posizione di stampa", "in piedi sul lato sinistro, già orientato nel file, senza supporti; così la linguetta è robusta nella direzione in cui si piega"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "un anello portachiavi o un piccolo moschettone"
+    montaggio:
+      - "Tieni la clip con la scritta verso di te e infilala sulla cintura dall'alto: la cintura passa fra la piastra e la linguetta dietro."
+      - "Spingi in basso finché il bordo alto della cintura arriva al ponte della clip: il dentino scatta sotto la cintura e la tiene."
+      - "Per toglierla solleva con un dito il fondo della linguetta e sfila la clip verso l'alto."
+      - "Aggancia le chiavi all'occhiello a destra, con l'anello o con un moschettone per staccarle al volo."
+
+  - id: "porta-radio"
+    nome: "Porta radio portatile"
+    articolo: "il porta radio"
+    descrizione: "Supporto da parete per la radio portatile, con il nominativo e la bandiera italiana. Ha una barra spessa e alta come una cintura: la clip da cintura della radio ci si aggancia come sui pantaloni. Utile in sede o vicino ai caricabatterie."
+    categoria: "radio"
+    breve: "Supporto da parete: la clip della radio si aggancia come su una cintura."
+    sorgente: "ganci-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-36.5, 1.75, -23.75, 10.25]
+      vista_3d: true
+      fianco: -40   # si stampa in piedi sul lato sinistro (x = -40), senza supporti
+      nome: {zona: [-37, -25.1, 37, -18.1], lato: "fronte"}   # riga di nome e cognome (static/js/stampa3d-nome-core.js)
+    parametri:
+      tipo: "radio"
+      parte: "tutto"
+    misure: "8 × 10,1 cm, barra spessa 4 mm e alta 38 mm"
+    lunghezza_mm: 101
+    peso_g: 78
+    scheda:
+      - ["Ingombro", "80 × 101 mm, sporge 17 mm dalla parete"]
+      - ["Peso", "circa 78 g"]
+      - ["Barra", "spessa 4 mm e alta 38 mm, a 8 mm dalla piastra: la clip della radio ci passa dietro e scende libera sotto"]
+      - ["Spazio fra i due appoggi", "42 mm vicino alla parete e 68 mm davanti: entrano le clip larghe fino a 4 cm"]
+      - ["Fori", "4 per viti a testa svasata da 4 mm (foro 4,4 mm, svasatura 8,8 mm)"]
+      - ["Posizione di stampa", "in piedi sul lato sinistro, già orientato nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "quattro viti a testa svasata da 4 mm e i tasselli adatti alla parete"
+    montaggio:
+      - "Appoggia il porta radio al muro con la barra in basso, segna i quattro fori, fora e metti i tasselli."
+      - "Avvita senza stringere troppo: la plastica non deve incrinarsi."
+      - "Aggancia la radio dall'alto, facendo scorrere la sua clip da cintura sulla barra, come su una cintura: la clip passa dietro la barra e la curva della clip appoggia sul bordo alto."
+      - "Prima prova con la tua radio: la clip deve essere larga al massimo 4 cm."
+
+  - id: "tessera-multiuso"
+    nome: "Tessera multiuso"
+    articolo: "la tessera"
+    descrizione: "Tessera tascabile grande come una carta di credito, con la bandiera italiana, il nominativo, «Protezione Civile Genzano di Roma», la scritta «EMERGENZA 112», un righello di 7 cm e un'asola per il cordino o il moschettone."
+    categoria: "giubbetto"
+    breve: "Grande come una carta di credito, con «EMERGENZA 112» e un righello di 7 cm."
+    sorgente: "oggetti-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-39.5, 11.25, -26.75, 19.75]
+      nome: {zona: [-41, -24.7, 41, -17.7], lato: "retro"}   # riga di nome e cognome (static/js/stampa3d-nome-core.js)
+    parametri:
+      tipo: "tessera"
+      parte: "tutto"
+    misure: "8,6 × 5,4 cm, spessa 4 mm"
+    lunghezza_mm: 86
+    peso_g: 19
+    scheda:
+      - ["Ingombro", "86 × 54 mm come una carta di credito, spessa 4 mm (3 mm di base e 1 mm di scritte)"]
+      - ["Peso", "circa 19 g"]
+      - ["Righello", "in rilievo lungo il bordo basso, da 0 a 7 cm, tacche ogni 5 mm larghe 0,8 mm"]
+      - ["Asola", "3,6 × 14 mm, a destra, per cordino, anello o moschettone"]
+      - ["Scritte", "nominativo alto 8,5 mm, «EMERGENZA 112» alto 6,5 mm, righe piccole 4,5 mm"]
+      - ["Posizione di stampa", "in piano, già orientata nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "un cordino, un anello o un piccolo moschettone, se vuoi appenderla"
+    montaggio:
+      - "Tienila nel portafoglio o nella tasca della divisa: il numero di emergenza è sempre a portata di mano."
+      - "Per misurare appoggia lo 0 del righello all'inizio di ciò che misuri: ogni tacca lunga è un centimetro, quella corta mezzo."
+      - "Se vuoi appenderla, passa il cordino o il moschettone nell'asola a destra."
+
+  - id: "etichetta-attrezzatura"
+    nome: "Etichetta per l'attrezzatura"
+    articolo: "l'etichetta"
+    descrizione: "Piccola etichetta con la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma», con due fessure per le fascette: si fissa a radio, torce, borse, maniglie e cinghie per riconoscere subito la propria attrezzatura."
+    categoria: "attrezzatura"
+    breve: "Si fissa con due fascette a radio, torce, borse e maniglie."
+    sorgente: "oggetti-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-27.0, 2.35, -17.25, 8.85]
+      nome: {zona: [-30.8, -10.3, 30.8, -3.3], lato: "retro"}   # riga di nome e cognome (static/js/stampa3d-nome-core.js)
+    parametri:
+      tipo: "etichetta"
+      parte: "tutto"
+    misure: "7,6 × 2,4 cm, spessa 4 mm"
+    lunghezza_mm: 76
+    peso_g: 8
+    scheda:
+      - ["Ingombro", "76 × 24 mm, spessa 4 mm (3 mm di base e 1 mm di scritte)"]
+      - ["Peso", "circa 8 g"]
+      - ["Fessure", "due, da 2,4 × 6,5 mm, alle estremità: entrano fascette larghe fino a 5 mm"]
+      - ["Scritte", "nominativo alto 6,5 mm, righe piccole 4 mm"]
+      - ["Posizione di stampa", "in piano, già orientata nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "due fascette di plastica larghe fino a 5 mm, meglio se riapribili"
+    montaggio:
+      - "Infila una fascetta nella fessura di sinistra dal davanti e falla uscire dietro."
+      - "Gira la fascetta intorno alla maniglia, alla cinghia o al manico dell'attrezzo e chiudila, senza tirare troppo."
+      - "Fai lo stesso con la fessura di destra, poi taglia le code delle fascette."
+
+  - id: "targa-tavolo"
+    nome: "Targa da tavolo"
+    articolo: "la targa"
+    descrizione: "Targa a forma di tetto, da appoggiare sul tavolo della postazione in sala operativa, al COC o durante un evento, con la bandiera italiana, il nominativo in grande e «Protezione Civile Genzano di Roma»."
+    categoria: "sede"
+    breve: "Da appoggiare sul tavolo della postazione in sala operativa o a un evento."
+    sorgente: "oggetti-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-57.0, 0.5, -33.0, 16.5]
+      vista_3d: true
+      inclina: [65, 2, 23]   # angolo, taglio alla base e mezza altezza della piastra: per colorare le scritte
+    parametri:
+      tipo: "tavolo"
+      parte: "tutto"
+    misure: "14 × 4,1 cm, profonda 3,9 cm"
+    lunghezza_mm: 140
+    peso_g: 54
+    scheda:
+      - ["Ingombro", "140 mm di larghezza, alta 41 mm, profonda 39 mm"]
+      - ["Peso", "circa 54 g"]
+      - ["Forma", "due piastre spesse 3,5 mm inclinate di 65 gradi, unite in alto e aperte sotto"]
+      - ["Scritte", "nominativo alto 16 mm, righe piccole 5,5 mm, in rilievo di 1 mm"]
+      - ["Posizione di stampa", "in piedi, già orientata nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "niente: si appoggia sul tavolo"
+    montaggio:
+      - "Appoggia la targa sul tavolo con la scritta verso chi arriva."
+      - "Se il tavolo è in pendenza o all'aperto, metti sotto un pezzetto di biadesivo perché non scivoli."
+
+  - id: "porta-tesserino"
+    nome: "Porta tesserino"
+    articolo: "il porta tesserino"
+    categoria: "giubbetto"
+    breve: "Custodia rigida per il tesserino grande come una carta di credito, con l'asola per la clip."
+    descrizione: "Custodia rigida per un tesserino grande come una carta di credito (formato ID-1, 85,6 × 54 mm), con la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma» sulla fascia in basso. Il tesserino entra dall'alto e resta sotto i bordi; la linguetta in alto ha l'asola per la clip da badge o per un cordino."
+    sorgente: "strumenti-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-25.3, -38.25, -15.55, -31.75]
+      vista_3d: true
+      quota_scritte: 6.07   # le scritte stanno sulla cornice, sopra il fondo della tasca
+      nome: {zona: [-45.3, -48.2, 45.1, -41.2], lato: "retro"}   # riga di nome e cognome (static/js/stampa3d-nome-core.js)
+    parametri:
+      tipo: "tesserino"
+      parte: "tutto"
+    misure: "9,4 × 9,2 cm, spesso 7 mm"
+    lunghezza_mm: 94
+    peso_g: 32
+    scheda:
+      - ["Ingombro", "94 × 92 mm, spesso 7 mm (6 mm di cornice e 1 mm di scritte)"]
+      - ["Peso", "circa 32 g"]
+      - ["Tasca", "87,2 × 55,4 mm, alta 1,4 mm: entra un tesserino ID-1 da 85,6 × 54 mm, spesso fino a 1 mm; aperta in alto"]
+      - ["Bordi", "coprono 2 mm del tesserino su tre lati, con il lato di sotto inclinato di 46 gradi"]
+      - ["Linguetta", "40 × 13 mm, con asola da 15 × 4 mm per la clip da badge o il cordino"]
+      - ["Scritte", "nominativo alto 6,5 mm, righe piccole 4 mm"]
+      - ["Posizione di stampa", "in piano, con il fondo sul piano, già orientato nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "una clip da badge con il laccetto, oppure un cordino"
+    montaggio:
+      - "Tieni il porta tesserino con la scritta in basso e la linguetta in alto."
+      - "Infila il tesserino dall'alto, facendolo scivolare sopra la linguetta e sotto i bordi laterali, fino in fondo."
+      - "Passa il laccetto della clip o il cordino nell'asola della linguetta."
+      - "Prima di uscire controlla che il tesserino non scivoli fuori capovolgendo il porta tesserino."
+
+  - id: "fischietto"
+    nome: "Fischietto"
+    articolo: "il fischietto"
+    categoria: "giubbetto"
+    breve: "Fischietto senza pallina per farsi sentire, con il foro per il cordino."
+    descrizione: "Fischietto senza pallina, come la testa di un flauto dolce, con la bandiera italiana, il nominativo e «PC Genzano di Roma» sul retro. Senza pallina non si blocca con il freddo o con lo sporco. Ha un foro in alto per il cordino. Non è un dispositivo di sicurezza certificato: è un aiuto in più per farsi sentire."
+    sorgente: "strumenti-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [3, 0, 12, 6]
+      vista_3d: true
+      assi: [[0, 0, 1], [-1, 0, 0], [0, -1, 0]]   # nella vista si mette sdraiato, con le scritte verso l'alto
+    parametri:
+      tipo: "fischietto"
+      parte: "tutto"
+    misure: "5,6 × 1,6 cm, spesso 1,3 cm"
+    lunghezza_mm: 56
+    peso_g: 11
+    scheda:
+      - ["Ingombro", "56 × 16 mm, spesso 13 mm (12 mm di corpo e 1 mm di scritte)"]
+      - ["Peso", "circa 11 g"]
+      - ["Bocca", "fessura per il fiato da 8 × 1,2 mm sul fondo"]
+      - ["Suono", "finestra da 8 × 3 mm con lo spigolo che rompe il getto d'aria; canna chiusa da 9 × 8,4 × 22 mm con il tetto a punta"]
+      - ["Foro per il cordino", "diametro 3,6 mm, in alto, da parte a parte"]
+      - ["Scritte", "sul retro: nominativo alto 6 mm, riga piccola 4 mm"]
+      - ["Posizione di stampa", "in piedi, con la bocca sul piano, già orientato nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "un cordino sottile, da 3 mm al massimo"
+    montaggio:
+      - "Appena arriva, provalo: soffia nella fessura sul fondo, con la finestra rivolta in avanti. Se fa poco suono, togli con uno stuzzicadenti i fili di plastica rimasti nella fessura e nella finestra."
+      - "Passa il cordino nel foro in alto e fai un nodo."
+      - "Tienilo come aiuto in più, insieme a quanto previsto dalle procedure del Gruppo: non è un dispositivo di sicurezza certificato."
+
+  - id: "supporto-microfono"
+    nome: "Supporto per il microfono della radio"
+    articolo: "il supporto"
+    categoria: "radio"
+    breve: "Supporto da parete o da cruscotto per il microfono altoparlante della radio."
+    descrizione: "Supporto per il microfono altoparlante della radio portatile, con il nominativo e la bandiera italiana. Ha una barra stretta su cui si aggancia la clip a molla del microfono, come su un taschino. Si avvita alla parete della sede o si incolla con il biadesivo, per esempio vicino alla postazione radio."
+    sorgente: "ganci-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-29.5, 2.25, -18.25, 9.75]
+      vista_3d: true
+      fianco: -33   # si stampa in piedi sul lato sinistro (x = -33), senza supporti
+      nome: {zona: [-29.8, -16.2, 29.8, -10.2], lato: "fronte"}   # riga di nome e cognome (static/js/stampa3d-nome-core.js)
+    parametri:
+      tipo: "microfono"
+      parte: "tutto"
+    misure: "6,6 × 7,5 cm, sporge 1,3 cm"
+    lunghezza_mm: 75
+    peso_g: 42
+    scheda:
+      - ["Ingombro", "66 × 75 mm, sporge 13 mm dalla parete"]
+      - ["Peso", "circa 42 g"]
+      - ["Barra", "spessa 3,5 mm e alta 24 mm, a 4,5 mm dalla piastra: la clip del microfono ci passa dietro"]
+      - ["Spazio fra i due appoggi", "36 mm vicino alla parete e 54 mm davanti: entrano le clip larghe fino a 3,5 cm"]
+      - ["Fori", "2 per viti a testa svasata da 4 mm (foro 4,4 mm, svasatura 8,8 mm), a 50 mm l'uno dall'altro"]
+      - ["Scritte", "nominativo alto 7,5 mm, righe piccole 4 mm, in rilievo di 1 mm"]
+      - ["Posizione di stampa", "in piedi sul lato sinistro, già orientato nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "due viti a testa svasata da 4 mm e i tasselli adatti alla parete, oppure nastro biadesivo di montaggio"
+    montaggio:
+      - "Appoggia il supporto con la barra in basso, segna i due fori, fora, metti i tasselli e avvita senza stringere troppo. In alternativa incollalo con due strisce di biadesivo e aspetta un giorno prima di usarlo."
+      - "Aggancia il microfono dall'alto, facendo scorrere la sua clip sulla barra: la clip passa dietro la barra."
+      - "Prima prova con il tuo microfono: la clip deve essere larga al massimo 3,5 cm."
+
+  - id: "avvolgicavo"
+    nome: "Avvolgicavo per l'auricolare"
+    articolo: "l'avvolgicavo"
+    categoria: "radio"
+    breve: "Per tenere in ordine il cavo dell'auricolare o del microfono quando non lo usi."
+    descrizione: "Piastrina su cui si avvolge il cavo dell'auricolare o del microfono della radio, con la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». Il cavo gira nei due incavi alle estremità e le due fessure ne bloccano i capi, così nello zaino non si aggroviglia."
+    sorgente: "strumenti-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-25.3, 3.25, -15.55, 9.75]
+      nome: {zona: [-30.4, -14.3, 30.4, -7.3], lato: "retro"}   # riga di nome e cognome (static/js/stampa3d-nome-core.js)
+    parametri:
+      tipo: "avvolgicavo"
+      parte: "tutto"
+    misure: "8 × 3,2 cm, spesso 4 mm"
+    lunghezza_mm: 80
+    peso_g: 9
+    scheda:
+      - ["Ingombro", "80 × 32 mm, spesso 4 mm (3 mm di base e 1 mm di scritte)"]
+      - ["Peso", "circa 9 g"]
+      - ["Incavi", "due, da 18 × 14 mm, alle estremità, dove si avvolge il cavo"]
+      - ["Fessure", "due, larghe 2,2 mm, una per linguetta: bloccano i capi di cavi fino a 2 mm"]
+      - ["Scritte", "nominativo alto 6,5 mm, righe piccole 4 mm, con cornice"]
+      - ["Posizione di stampa", "in piano, già orientato nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "niente"
+    montaggio:
+      - "Infila il cavo nella fessura di una linguetta, vicino allo spinotto, lasciando fuori qualche centimetro."
+      - "Avvolgi il cavo da un incavo all'altro, passando sopra e sotto la piastrina, senza tirare."
+      - "Quando resta poco cavo, infilalo nella fessura dell'altra linguetta: l'auricolare resta fermo."
+
+  - id: "etichetta-casco"
+    nome: "Etichetta per il casco"
+    articolo: "l'etichetta"
+    categoria: "attrezzatura"
+    breve: "Piastrina sottile con il nominativo, da incollare se il libretto del casco lo permette."
+    descrizione: "Piastrina sottile e leggera con la bandiera italiana, il nominativo in grande e «Protezione Civile Genzano», da incollare con il biadesivo sul casco o sulla sua borsa. Prima di incollarla leggi il libretto del casco: alcuni produttori non permettono adesivi, vernici o solventi sulla calotta, perché potrebbero indebolirla."
+    sorgente: "strumenti-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-30.95, 0, -18.95, 8]
+    parametri:
+      tipo: "casco"
+      parte: "tutto"
+    misure: "8 × 2,4 cm, spessa 2,2 mm"
+    lunghezza_mm: 80
+    peso_g: 4
+    scheda:
+      - ["Ingombro", "80 × 24 mm, spessa 2,2 mm (1,2 mm di base e 1 mm di scritte)"]
+      - ["Peso", "circa 4 g"]
+      - ["Scritte", "nominativo alto 8 mm, riga piccola 4 mm, in rilievo di 1 mm"]
+      - ["Fissaggio", "biadesivo in schiuma sul retro, che riempie la curva del casco; niente fori"]
+      - ["Posizione di stampa", "in piano, già orientata nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "biadesivo in schiuma per esterni, spesso 1 o 2 mm"
+      - "per pulire la superficie, solo il detergente indicato dal libretto del casco"
+    montaggio:
+      - "Leggi il libretto del casco. Se non permette di incollare adesivi o etichette sulla calotta, non farlo: incolla l'etichetta sulla borsa del casco o usane un'altra sullo zaino."
+      - "Se è permesso, scegli una zona poco curva, sul retro o sul fianco, lontana da prese d'aria, attacchi della visiera e del sottogola."
+      - "Pulisci la zona solo con il detergente indicato dal libretto del casco e lasciala asciugare: altri prodotti possono rovinare la calotta."
+      - "Metti il biadesivo in schiuma su tutto il retro dell'etichetta, appoggiala e premi bene per un minuto, partendo dal centro."
+
+  - id: "righello-coordinate"
+    nome: "Righello per le coordinate"
+    articolo: "il righello"
+    categoria: "attrezzatura"
+    breve: "Per leggere coordinate e distanze sulle carte in scala 1:25.000, 1:50.000 e 1:10.000."
+    descrizione: "Righello piatto per leggere le coordinate e misurare le distanze sulle carte topografiche, con la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». Negli angoli in alto ha due squadrette graduate, per le carte in scala 1:25.000 e 1:50.000, con una tacca ogni 100 metri; lungo il bordo basso una scala 1:10.000 da 0 a 1 km, con una tacca ogni 50 metri."
+    sorgente: "strumenti-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-27.2, 8.5, -16.7, 15.5]
+      nome: {zona: [-59, -16.5, 59.2, -9.5], lato: "fronte"}   # riga di nome e cognome (static/js/stampa3d-nome-core.js)
+    parametri:
+      tipo: "righello"
+      parte: "tutto"
+    misure: "12 × 7 cm, spesso 3,5 mm"
+    lunghezza_mm: 120
+    peso_g: 28
+    scheda:
+      - ["Ingombro", "120 × 70 mm, spesso 3,5 mm (2,5 mm di base e 1 mm di tacche e scritte)"]
+      - ["Peso", "circa 28 g"]
+      - ["Angolo in alto a destra", "scala 1:25.000: tacche ogni 4 mm (100 m) per 40 mm (1 km), sul bordo alto e sul bordo destro"]
+      - ["Angolo in alto a sinistra", "scala 1:50.000: tacche ogni 2 mm (100 m) per 20 mm (1 km), sul bordo alto e sul bordo sinistro"]
+      - ["Bordo basso", "scala 1:10.000: tacche ogni 5 mm (50 m) per 100 mm (1 km)"]
+      - ["Tacche", "larghe 0,8 mm, lunghe 6 mm ogni 500 m e 3,5 mm le altre; angoli in alto vivi"]
+      - ["Posizione di stampa", "in piano, già orientato nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "niente"
+    montaggio:
+      - "Trova sulla carta il quadrato del reticolo chilometrico in cui sta il punto da leggere."
+      - "Con una carta in scala 1:25.000 usa l'angolo in alto a destra: metti lo spigolo esattamente sul punto, con i bordi del righello paralleli alle linee del reticolo."
+      - "Sul bordo alto leggi quanto dista il punto dalla linea verticale del reticolo alla sua sinistra; sul bordo destro quanto dista dalla linea orizzontale sotto. Ogni tacca vale 100 metri."
+      - "Aggiungi le due distanze ai valori delle due linee del reticolo, scritti sul bordo della carta: hai le coordinate del punto."
+      - "Con una carta in scala 1:50.000 usa l'angolo in alto a sinistra, dopo aver girato il righello di un quarto di giro in senso orario: lo spigolo va sul punto e si legge allo stesso modo."
+      - "Il bordo basso misura le distanze sulle carte in scala 1:10.000: ogni tacca vale 50 metri."
+
+  - id: "segnalibro-alfabeto"
+    nome: "Segnalibro con l'alfabeto fonetico"
+    articolo: "il segnalibro"
+    categoria: "radio"
+    breve: "L'alfabeto fonetico internazionale sempre a portata di mano, nel quaderno o nel manuale."
+    descrizione: "Segnalibro con l'alfabeto fonetico internazionale usato nelle comunicazioni radio, da Alfa a Zulu, la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». Serve a compitare nomi, sigle e targhe senza errori; ha un foro in alto per un nastro."
+    sorgente: "strumenti-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-25.3, 54.75, -15.55, 61.25]
+      nome: {zona: [-30.2, -71.3, 30.2, -64.3], lato: "retro"}   # riga di nome e cognome (static/js/stampa3d-nome-core.js)
+    parametri:
+      tipo: "segnalibro"
+      parte: "tutto"
+    misure: "6,4 × 15 cm, spesso 2,6 mm"
+    lunghezza_mm: 150
+    peso_g: 21
+    scheda:
+      - ["Ingombro", "64 × 150 mm, spesso 2,6 mm (1,6 mm di base e 1 mm di scritte)"]
+      - ["Peso", "circa 21 g"]
+      - ["Alfabeto", "le 26 lettere con le parole dell'alfabeto fonetico internazionale (ICAO e ITU), su due colonne, alte 4 mm"]
+      - ["Foro", "diametro 4 mm, in alto, per un nastro o un cordino"]
+      - ["Scritte", "nominativo alto 6,5 mm, con cornice"]
+      - ["Posizione di stampa", "in piano, già orientato nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "un nastro o un cordino sottile, se vuoi"
+    montaggio:
+      - "Se vuoi, passa un nastro nel foro in alto e fai un nodo."
+      - "Tienilo nel manuale, nel quaderno della sala radio o nella tasca dello zaino."
+      - "Per compitare una parola alla radio, di' la parola dell'alfabeto per ogni lettera: per esempio «ALFA» si dice Alfa, Lima, Foxtrot, Alfa."
+
+  # ---------- Al campo e in mensa (famiglia campo-nominativo.scad) ----------
+  # «nome» = zona libera [x0, y0, x1, y1] e lato («fronte»: in rilievo) dove il sito aggiunge la riga con nome e cognome,
+  # nelle stesse coordinate di «bandiera»; «quota_scritte» = quota della faccia delle scritte.
+
+  - id: "segna-tazza"
+    nome: "Segna tazza"
+    articolo: "il segna tazza"
+    descrizione: "Piccola targhetta con una clip che si infila sul manico della tazza, mai sul bordo dove si beve. Porta la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». Serve a riconoscere la propria tazza in mensa o al campo. Non tocca il cibo né le bevande e non va usato come stoviglia."
+    categoria: "campo"
+    breve: "Si infila sul manico della tazza, per riconoscerla in mensa."
+    sorgente: "campo-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-23.43, 6.5, -14.43, 12.5]
+      nome: { zona: [-25, -2, 25, 5], lato: "fronte" }
+      quota_scritte: 2.5
+      vista_3d: true
+    parametri:
+      tipo: "tazza"
+      parte: "tutto"
+    misure: "6,8 × 3,2 cm, clip alta 8 mm"
+    lunghezza_mm: 68
+    peso_g: 7
+    scheda:
+      - ["Ingombro", "68 × 32 mm; targhetta spessa 3,5 mm, clip alta 8 mm"]
+      - ["Peso", "circa 7 g"]
+      - ["Clip", "foro ovale di 9 × 13 mm per un manico spesso 8 mm e largo 12 mm, con 0,5 mm di gioco per lato; bocca larga 6,5 mm, così la clip si apre un poco e resta ferma"]
+      - ["Manico", "per i manici delle tazze non c'è una misura unica: misura il tuo prima di ordinare; nel modello OpenSCAD si cambiano manico_largo e manico_spesso"]
+      - ["Altezza delle lettere", "nominativo 6 mm; righe piccole 4 mm"]
+      - ["Spazio per nome e cognome", "fascia libera di 50 × 7 mm sotto il nominativo"]
+      - ["Posizione di stampa", "in piano, già orientato nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "niente: si infila sul manico"
+    montaggio:
+      - "Misura il manico della tazza nel punto dove vuoi mettere la clip: deve essere spesso circa 8 mm e largo circa 12 mm."
+      - "Appoggia la bocca della clip sul manico, dal lato dell'apertura per le dita."
+      - "Spingi finché il manico entra nel foro: la clip si apre un poco e poi si richiude."
+      - "Controlla che la targhetta non arrivi al bordo della tazza, dove si beve."
+      - "Togli la clip prima di lavare la tazza in lavastoviglie."
+
+  - id: "etichetta-borraccia"
+    nome: "Etichetta per la borraccia"
+    articolo: "l'etichetta"
+    descrizione: "Targhetta con un occhiello rinforzato per un moschettone o un cordino, da appendere alla borraccia. Porta la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». Non tocca l'acqua né il cibo e non va usata come stoviglia."
+    categoria: "campo"
+    breve: "Si appende alla borraccia con un moschettone o un cordino."
+    sorgente: "campo-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-25.32, 7.5, -15.57, 14.0]
+      nome: { zona: [-30, -1, 30, 6], lato: "fronte" }
+      quota_scritte: 3.5
+    parametri:
+      tipo: "borraccia"
+      parte: "tutto"
+    misure: "8,8 × 3,4 cm, spessa 4,5 mm"
+    lunghezza_mm: 88
+    peso_g: 12
+    scheda:
+      - ["Ingombro", "88 × 34 mm, spessa 4,5 mm (3,5 mm di base e 1 mm di scritte)"]
+      - ["Peso", "circa 12 g"]
+      - ["Occhiello", "diametro 22 mm con foro da 8 mm: 7 mm di plastica intorno al foro"]
+      - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4 mm"]
+      - ["Spazio per nome e cognome", "fascia libera di 60 × 7 mm sotto il nominativo"]
+      - ["Posizione di stampa", "in piano, già orientata nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "un piccolo moschettone con il filo spesso al massimo 7 mm, oppure un cordino"
+    montaggio:
+      - "Apri il moschettone e passalo nell'occhiello dell'etichetta."
+      - "Aggancia il moschettone all'anello o al tappo della borraccia, lontano dal beccuccio."
+      - "Con il cordino: passalo nell'occhiello e legalo al collo della borraccia con un nodo stretto."
+
+  - id: "porta-posate"
+    nome: "Porta posate"
+    articolo: "il porta posate"
+    descrizione: "Astuccio piatto in cui si infilano le posate vere di metallo: forchetta, coltello e cucchiaio. Sopra porta la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». Le posate non si stampano: le righe fra gli strati trattengono lo sporco. L'astuccio non tocca il cibo e non va usato come stoviglia: metti dentro solo posate pulite."
+    categoria: "campo"
+    breve: "Astuccio per le tue posate di metallo, da tenere nello zaino."
+    sorgente: "campo-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-55.32, 10.25, -45.57, 16.75]
+      nome: { zona: [-60, 1.5, 0, 8.5], lato: "fronte" }
+      quota_scritte: 26.0
+      vista_3d: true
+      fianco: -107.25   # si stampa in piedi sul lato chiuso (x = -107,25), senza supporti
+    parametri:
+      tipo: "posate"
+      parte: "tutto"
+    misure: "21,5 × 5 cm, spesso 2,7 cm"
+    lunghezza_mm: 215
+    peso_g: 80
+    scheda:
+      - ["Ingombro", "215 × 50 mm, spesso 27 mm con le scritte"]
+      - ["Peso", "circa 80 g"]
+      - ["Spazio interno", "212 × 46 × 22 mm, pareti da 2 mm: entrano forchetta e cucchiaio da tavola (di solito lunghi 19-21 cm); il coltello (21-24,5 cm) può sporgere di qualche centimetro"]
+      - ["Apertura", "su un lato corto, con un incavo per le dita; foro di scolo da 6 mm sul fondo"]
+      - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4 mm"]
+      - ["Spazio per nome e cognome", "fascia libera di 60 × 7 mm sotto il nominativo"]
+      - ["Posizione di stampa", "in piedi sul lato chiuso, già orientato nel file, senza supporti; serve una stampante con almeno 22 cm di altezza utile"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "le tue posate di metallo, pulite"
+    montaggio:
+      - "Lava e asciuga le posate prima di metterle nell'astuccio."
+      - "Infilale dall'apertura, con i manici verso l'incavo per le dita."
+      - "Dopo l'uso lava le posate prima di rimetterle dentro; l'astuccio si lava a mano con acqua e sapone."
+
+  - id: "etichetta-gavetta"
+    nome: "Etichetta per la gavetta"
+    articolo: "l'etichetta"
+    descrizione: "Targhetta con un foro per il cordino, da legare alla gavetta. Porta la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». Non tocca il cibo e non va usata come stoviglia. Toglila prima di mettere la gavetta sul fuoco: la plastica si deforma con il calore."
+    categoria: "campo"
+    breve: "Si lega alla gavetta con un cordino, per riconoscerla al campo."
+    sorgente: "campo-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-25.32, 7.5, -15.57, 14.0]
+      nome: { zona: [-30, -1, 30, 6], lato: "fronte" }
+      quota_scritte: 3.0
+    parametri:
+      tipo: "gavetta"
+      parte: "tutto"
+    misure: "8 × 3,4 cm, spessa 4 mm"
+    lunghezza_mm: 80
+    peso_g: 10
+    scheda:
+      - ["Ingombro", "80 × 34 mm, spessa 4 mm (3 mm di base e 1 mm di scritte)"]
+      - ["Peso", "circa 10 g"]
+      - ["Foro", "diametro 4,5 mm, in un occhiello da 14 mm, per un cordino sottile"]
+      - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4 mm"]
+      - ["Spazio per nome e cognome", "fascia libera di 60 × 7 mm sotto il nominativo"]
+      - ["Posizione di stampa", "in piano, già orientata nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "un cordino sottile, da 4 mm al massimo"
+    montaggio:
+      - "Passa il cordino nel foro dell'etichetta."
+      - "Lega il cordino al manico o all'anello della gavetta, con un nodo stretto."
+      - "Prima di mettere la gavetta sul fuoco o sul fornello, slega l'etichetta."
+
+  - id: "targhetta-brandina"
+    nome: "Targhetta per la brandina"
+    articolo: "la targhetta"
+    descrizione: "Targhetta con due asole alle estremità, da fissare alla brandina o alla tenda con due fascette o con una striscia di velcro. Porta la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». Serve a riconoscere il proprio posto al campo."
+    categoria: "campo"
+    breve: "Si fissa alla brandina o alla tenda con fascette o velcro."
+    sorgente: "campo-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-25.32, 7.5, -15.57, 14.0]
+      nome: { zona: [-30, -1, 30, 6], lato: "fronte" }
+      quota_scritte: 3.0
+    parametri:
+      tipo: "brandina"
+      parte: "tutto"
+    misure: "9 × 3,4 cm, spessa 4 mm"
+    lunghezza_mm: 90
+    peso_g: 11
+    scheda:
+      - ["Ingombro", "90 × 34 mm, spessa 4 mm (3 mm di base e 1 mm di scritte)"]
+      - ["Peso", "circa 11 g"]
+      - ["Asole", "due, da 4,5 × 22 mm, alle estremità: per fascette spesse fino a 4 mm o velcro largo fino a 2 cm"]
+      - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4 mm"]
+      - ["Spazio per nome e cognome", "fascia libera di 60 × 7 mm sotto il nominativo"]
+      - ["Posizione di stampa", "in piano, già orientata nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "due fascette, meglio riutilizzabili, oppure una striscia di velcro a doppia faccia larga fino a 2 cm"
+    montaggio:
+      - "Appoggia la targhetta sul telaio della brandina o su un tirante della tenda, dove si vede."
+      - "Passa una fascetta in ogni asola e intorno al tubo o al tirante."
+      - "Stringi le fascette senza schiacciare la targhetta e taglia la parte in più."
+      - "Con il velcro: passa la striscia nelle due asole, avvolgila intorno al tubo e chiudila."
+
+  # ---------- Kit, pile e schede ----------
+
+  - id: "porta-pile-aa"
+    nome: "Porta pile stilo AA"
+    articolo: "il porta pile"
+    descrizione: "Contenitore aperto per 4 pile stilo AA, da tenere nel kit o sul tavolo della sala radio. Sul lato largo porta la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». Le pile restano in piedi e sporgono in alto, così si prendono con due dita."
+    categoria: "kit"
+    breve: "Tiene in ordine 4 pile stilo AA nel kit o in sala radio."
+    sorgente: "campo-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-25.32, 27.0, -15.57, 33.5]
+      nome: { zona: [-30, 18.5, 30, 25.5], lato: "fronte" }
+      quota_scritte: 9.75
+      vista_3d: true
+      assi: [[1, 0, 0], [0, 0, 1], [0, -1, 0]]   # nella vista si sdraia con le scritte verso l'alto
+    parametri:
+      tipo: "pile_aa"
+      parte: "tutto"
+    misure: "7,2 × 2,1 cm, alto 3,6 cm"
+    lunghezza_mm: 72
+    peso_g: 32
+    scheda:
+      - ["Ingombro", "72 × 21 mm con le scritte, alto 36 mm"]
+      - ["Peso", "circa 32 g"]
+      - ["Sedi", "4, diametro 15,5 mm e profonde 34 mm: le pile AA misurano al massimo 14,5 × 50,5 mm (IEC 60086-2) e sporgono di circa 16 mm"]
+      - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4 mm, sul lato largo"]
+      - ["Spazio per nome e cognome", "fascia libera di 60 × 7 mm sotto il nominativo"]
+      - ["Posizione di stampa", "in piedi, con le sedi aperte in alto, già orientato nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "4 pile stilo AA"
+    montaggio:
+      - "Infila una pila in ogni sede, con il polo positivo in alto, così si vede subito quali sono cariche."
+      - "Tieni il porta pile in piedi nel kit o sul tavolo."
+
+  - id: "porta-pile-aaa"
+    nome: "Porta pile ministilo AAA"
+    articolo: "il porta pile"
+    descrizione: "Contenitore aperto per 4 pile ministilo AAA, da tenere nel kit o sul tavolo della sala radio. Sul lato largo porta la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». Le pile restano in piedi e sporgono in alto, così si prendono con due dita."
+    categoria: "kit"
+    breve: "Tiene in ordine 4 pile ministilo AAA nel kit o in sala radio."
+    sorgente: "campo-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-25.32, 25.0, -15.57, 31.5]
+      nome: { zona: [-28, 16.5, 28, 23.5], lato: "fronte" }
+      quota_scritte: 7.75
+      vista_3d: true
+      assi: [[1, 0, 0], [0, 0, 1], [0, -1, 0]]   # nella vista si sdraia con le scritte verso l'alto
+    parametri:
+      tipo: "pile_aaa"
+      parte: "tutto"
+    misure: "6,4 × 1,7 cm, alto 3,4 cm"
+    lunghezza_mm: 64
+    peso_g: 26
+    scheda:
+      - ["Ingombro", "64 × 17 mm con le scritte, alto 34 mm"]
+      - ["Peso", "circa 26 g"]
+      - ["Sedi", "4, diametro 11,5 mm e profonde 32 mm: le pile AAA misurano al massimo 10,5 × 44,5 mm (IEC LR03, scheda Energizer EN92) e sporgono di circa 12 mm"]
+      - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4 mm, sul lato largo"]
+      - ["Spazio per nome e cognome", "fascia libera di 56 × 7 mm sotto il nominativo"]
+      - ["Posizione di stampa", "in piedi, con le sedi aperte in alto, già orientato nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "4 pile ministilo AAA"
+    montaggio:
+      - "Infila una pila in ogni sede, con il polo positivo in alto, così si vede subito quali sono cariche."
+      - "Tieni il porta pile in piedi nel kit o sul tavolo."
+
+  - id: "porta-schede"
+    nome: "Porta schede di memoria e SIM"
+    articolo: "il porta schede"
+    descrizione: "Vassoio con gli alloggi per 2 schede SD, 2 microSD e 2 nano SIM, ognuno con un incavo per il dito. Porta la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». Tiene in ordine le schede delle radio, delle fotocamere e dei telefoni di servizio, sul tavolo o nel cassetto."
+    categoria: "kit"
+    breve: "Tiene in ordine schede SD, microSD e nano SIM."
+    sorgente: "campo-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-25.32, 22.0, -15.57, 28.5]
+      nome: { zona: [-30, 13.5, 30, 20.5], lato: "fronte" }
+      quota_scritte: 3.5
+      vista_3d: true
+    parametri:
+      tipo: "schede"
+      parte: "tutto"
+    misure: "11,7 × 6,4 cm, spesso 4,5 mm"
+    lunghezza_mm: 117
+    peso_g: 27
+    scheda:
+      - ["Ingombro", "117 × 64 mm, spesso 4,5 mm (3,5 mm di base e 1 mm di scritte)"]
+      - ["Peso", "circa 27 g"]
+      - ["Alloggi SD", "2, da 25 × 33 mm e profondi 2,2 mm: le schede SD misurano 24 × 32 × 2,1 mm"]
+      - ["Alloggi microSD", "2, da 12 × 16 mm e profondi 1,2 mm: le microSD misurano 11 × 15 × 1 mm"]
+      - ["Alloggi nano SIM", "2, da 9,8 × 13,3 mm e profondi 0,9 mm: le nano SIM misurano 8,8 × 12,3 × 0,67 mm (ETSI TS 102 221)"]
+      - ["Incavi per il dito", "uno per alloggio, sul bordo basso, con 1 mm di plastica sotto"]
+      - ["Spazio per nome e cognome", "fascia libera di 60 × 7 mm sotto il nominativo"]
+      - ["Posizione di stampa", "in piano, già orientato nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "niente: si appoggia sul tavolo o nel cassetto"
+    montaggio:
+      - "Appoggia ogni scheda nel suo alloggio, con l'etichetta in alto."
+      - "Per toglierla, premi con il dito sull'incavo e fai scivolare la scheda verso il bordo."
+      - "Il vassoio è aperto: tienilo in piano, in un cassetto o in una scatola."
+
+  # ---------- In sede ----------
+
+  - id: "segnalibro-registro"
+    nome: "Segnalibro per il registro"
+    articolo: "il segnalibro"
+    descrizione: "Segnalibro robusto, con cornice in rilievo, per il registro di sala operativa. Porta in alto la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma», nella parte che resta fuori dal registro."
+    categoria: "sede"
+    breve: "Segna la pagina del registro di sala operativa."
+    sorgente: "campo-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-25.32, 88.25, -15.57, 94.75]
+      nome: { zona: [-25, 79, 25, 86], lato: "fronte" }
+      quota_scritte: 2.0
+    parametri:
+      tipo: "registro"
+      parte: "tutto"
+    misure: "6 × 20 cm, spesso 3 mm"
+    lunghezza_mm: 200
+    peso_g: 31
+    scheda:
+      - ["Ingombro", "60 × 200 mm, spesso 3 mm (2 mm di base e 1 mm di scritte e cornice)"]
+      - ["Peso", "circa 31 g"]
+      - ["Cornice", "in rilievo di 1 mm, larga 1,2 mm, che irrigidisce il segnalibro"]
+      - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4 mm, in alto"]
+      - ["Spazio per nome e cognome", "fascia libera di 50 × 7 mm sotto il nominativo"]
+      - ["Posizione di stampa", "in piano, già orientato nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "niente"
+    montaggio:
+      - "Infila il segnalibro nel registro con le scritte in alto, così restano fuori dalle pagine."
+      - "Spostalo alla pagina del turno quando prendi servizio."
+
+  - id: "cartellino-armadietto"
+    nome: "Cartellino per l'armadietto"
+    articolo: "il cartellino"
+    descrizione: "Cartellino da attaccare all'anta dell'armadietto con nastro biadesivo o con due viti. Porta la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». I fori delle viti sono alle estremità, lontani dalle scritte."
+    categoria: "sede"
+    breve: "Si attacca all'armadietto con biadesivo o due viti."
+    sorgente: "campo-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-25.32, 6.5, -15.57, 13.0]
+      nome: { zona: [-30, -2, 30, 5], lato: "fronte" }
+      quota_scritte: 3.0
+    parametri:
+      tipo: "armadietto"
+      parte: "tutto"
+    misure: "9 × 3,6 cm, spesso 4 mm"
+    lunghezza_mm: 90
+    peso_g: 12
+    scheda:
+      - ["Ingombro", "90 × 36 mm, spesso 4 mm (3 mm di base e 1 mm di scritte)"]
+      - ["Peso", "circa 12 g"]
+      - ["Fori", "2 per viti a testa svasata da 4 mm (foro 4,4 mm, svasatura 8,8 mm), a 78 mm l'uno dall'altro, lontani dalle scritte"]
+      - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4 mm"]
+      - ["Spazio per nome e cognome", "fascia libera di 60 × 7 mm sotto il nominativo"]
+      - ["Posizione di stampa", "in piano, già orientato nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "nastro biadesivo di montaggio, oppure due viti a testa svasata da 4 mm adatte all'anta"
+    montaggio:
+      - "Pulisci e asciuga il punto dell'anta dove vuoi mettere il cartellino."
+      - "Con il biadesivo: incolla due strisce sul retro, lontano dai fori, e premi forte per 30 secondi."
+      - "Con le viti: appoggia il cartellino, segna i due fori, fora l'anta e avvita senza stringere troppo."
+
+  # --- Oggetti per l'intervento e il mezzo (24/11/2026): idee da ciò che si stampano da sé i vigili del fuoco
+  # (Praga, blog Prusa; Oceanside, MatterHackers) e dai modelli per soccorritori di Printables e MakerWorld.
+  # I disegni sono nostri: nessun file altrui è stato usato.
+  - id: "cuneo-fermaporta"
+    nome: "Cuneo fermaporta"
+    articolo: "il cuneo"
+    descrizione: "Cuneo da tenere nello zaino per bloccare aperta una porta durante un intervento, con il nominativo, la bandiera italiana e «PC Genzano di Roma» sul fianco. Sotto ha cinque denti bassi che fanno presa sul pavimento; in coda c'è un foro per agganciarlo a un moschettone. Si stampa in TPU, una plastica gommosa: prima di contarci, prova come tiene sul tuo pavimento, anche bagnato."
+    categoria: "intervento"
+    breve: "Blocca aperta una porta; in plastica gommosa, si aggancia allo zaino."
+    sorgente: "soccorso-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-26.32, 5.25, -16.57, 11.75]
+    parametri:
+      tipo: "cuneo"
+      parte: "tutto"
+    misure: "13 × 3 cm, largo 2,6 cm"
+    lunghezza_mm: 130
+    peso_g: 75
+    scheda:
+      - ["Ingombro", "130 mm di lunghezza, alto 3 mm in punta e 30 mm in coda, largo 26 mm (25 mm di corpo e 1 mm di scritte)"]
+      - ["Peso", "circa 75 g in TPU"]
+      - ["Presa", "cinque denti alti 1,3 mm sul lato che appoggia a terra"]
+      - ["Foro", "diametro 9 mm, in coda, per un moschettone o un cordino"]
+      - ["Scritte", "sul fianco: nominativo alto 6,5 mm e «PC Genzano di Roma» alto 4 mm"]
+      - ["Posizione di stampa", "sdraiato su un fianco, già orientato nel file, senza supporti"]
+    materiale: "TPU 95A"
+    colore: "arancione"
+    occorrente:
+      - "un moschettone o un cordino, se vuoi tenerlo agganciato allo zaino"
+    montaggio:
+      - "Infila la punta sotto la porta aperta, dalla parte verso cui la porta si chiuderebbe, con i denti verso il pavimento."
+      - "Spingilo con il piede finché la porta non si muove più."
+      - "Per toglierlo tiralo dalla coda o dal moschettone."
+      - "Non usarlo mai su porte tagliafuoco e uscite di sicurezza."
+      - "Prova la presa sul pavimento dove lo userai: su superfici lisce o bagnate può scivolare."
+
+  - id: "targhetta-sgancio"
+    nome: "Targhetta a sgancio rapido"
+    articolo: "la targhetta"
+    descrizione: "Targhetta con il nominativo e la bandiera italiana che si aggancia con una leggera pressione a un anello o al filo di un moschettone e si toglie con un colpo, anche con i guanti. Serve a lasciarla a chi tiene il conto della squadra, per esempio all'ingresso di una zona di intervento, e a riprenderla all'uscita."
+    categoria: "intervento"
+    breve: "Si aggancia a un anello e si toglie con i guanti, per lasciarla a chi conta la squadra."
+    sorgente: "soccorso-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-25.32, 7.5, -15.57, 14.0]
+      nome: { zona: [-30, -1, 30, 6], lato: "fronte" }
+    parametri:
+      tipo: "sgancio"
+      parte: "tutto"
+    misure: "8,2 × 3,4 cm, per anelli e moschettoni con il filo da 8 mm"
+    lunghezza_mm: 82
+    peso_g: 10
+    scheda:
+      - ["Ingombro", "82 × 34 mm, spessa 4 mm (3 mm di base e 1 mm di scritte)"]
+      - ["Peso", "circa 10 g"]
+      - ["Aggancio", "anello aperto a sinistra: foro da 8,6 mm, bocca da 7,2 mm, parete da 3,5 mm. Il file pronto è pensato per un filo da 8 mm, una misura d'esempio: misura il tuo e, se è diverso, cambia «filo» nel modello"]
+      - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4 mm"]
+      - ["Spazio per nome e cognome", "fascia libera di 60 × 7 mm sotto il nominativo"]
+      - ["Posizione di stampa", "in piano, già orientata nel file, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "un anello o un moschettone con il filo da 8 mm: misura il tuo prima di stampare"
+    montaggio:
+      - "Prima di stampare misura con un righello il filo dell'anello o del moschettone: se non è da 8 mm, scarica il modello e cambia «filo», oppure chiedilo al Gruppo."
+      - "Appoggia la bocca dell'aggancio sul filo e premi: la targhetta entra con una leggera pressione. Prova la tenuta prima di usarla: se si sfila da sola o entra troppo dura, rifalla con un'altra misura del filo."
+      - "Per toglierla tirala con un colpo deciso, anche con i guanti."
+      - "Segui le procedure del Gruppo su dove lasciarla e da chi riprenderla: la targhetta è solo un aiuto per contare le persone e non sostituisce il registro della squadra."
+
+  - id: "scatola-guanti"
+    nome: "Scatola per i guanti"
+    articolo: "la scatola"
+    descrizione: "Scatola con il coperchio che scorre, per tenere qualche paio di guanti monouso pulito nello zaino o nel cassetto del mezzo. Il coperchio porta il nominativo, la bandiera italiana e «Protezione Civile Genzano di Roma». Sono due pezzi: il coperchio con il tuo nominativo e la scatola, uguale per tutti. La scatola è un contenitore: i guanti restano quelli comprati, con la loro marcatura."
+    categoria: "intervento"
+    breve: "Tiene puliti i guanti monouso nello zaino; coperchio scorrevole con il nominativo."
+    sorgente: "soccorso-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-29.32, 8.75, -19.57, 15.25]
+      nome: { zona: [-45, -24, 37, -17], lato: "fronte" }
+    parametri:
+      tipo: "guanti"
+      parte: "tutto"
+    secondo_pezzo:
+      parte: "scatola"
+      file: "scatola.stl"
+      nome: "la scatola"
+      peso_g: 65
+    misure: "11,6 × 7 cm, alta 3,7 cm"
+    lunghezza_mm: 122
+    peso_g: 86
+    scheda:
+      - ["Ingombro", "scatola 116 × 70 × 37 mm; coperchio 122 × 66 mm, spesso 3 mm, con la linguetta che sporge di 7,7 mm"]
+      - ["Peso", "circa 86 g in tutto: 21 g il coperchio, 65 g la scatola"]
+      - ["Spazio interno", "110 × 64 mm, alto 30 mm fino al coperchio: qualche paio di guanti piegati, quanti dipende da taglia e spessore"]
+      - ["Coperchio", "scorre in due scanalature alte 3 mm e profonde 1,5 mm, con 0,5 mm di gioco per lato, quanto la tolleranza dei servizi di stampa; la parete dal lato d'ingresso è più bassa. Non ha un fermo: provalo prima e tieni la scatola con il coperchio in alto"]
+      - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4 mm"]
+      - ["Posizione di stampa", "due file, tutti e due in piano, già orientati, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "guanti monouso già confezionati, della tua taglia"
+    montaggio:
+      - "Stampa tutti e due i file: il coperchio con il tuo nominativo e la scatola."
+      - "Infila il coperchio nelle scanalature dal lato con la parete bassa, con le scritte verso l'alto, e spingilo fino in fondo."
+      - "Per aprire tira la linguetta che sporge."
+      - "Metti i guanti con le mani pulite e cambiali dopo ogni uso: la scatola li tiene in ordine, non li rende sterili."
+
+  - id: "capsula-vite"
+    nome: "Capsula a vite"
+    articolo: "la capsula"
+    descrizione: "Piccolo contenitore cilindrico con il tappo a vite, per fiammiferi o un biglietto con i tuoi dati di emergenza. Non metterci cibo o pastiglie da ingerire: la plastica stampata a strati non è adatta. Sul fianco porta il nominativo, la bandiera italiana e «PC Genzano di Roma»; il tappo ha un'aletta forata per il cordino. Sono due pezzi: il corpo con il tuo nominativo e il tappo, uguale per tutti."
+    categoria: "intervento"
+    breve: "Tubetto con il tappo a vite per fiammiferi o un biglietto con i tuoi dati."
+    sorgente: "soccorso-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [7.57, -3, 16.57, 3]
+      vista_3d: true
+      quota_scritte: 13.0
+      assi: [[0, 0, 1], [-1, 0, 0], [0, -1, 0]]   # nella vista si sdraia con le scritte verso l'alto
+    parametri:
+      tipo: "capsula"
+      parte: "tutto"
+    secondo_pezzo:
+      parte: "tappo"
+      file: "tappo.stl"
+      nome: "il tappo"
+      peso_g: 5
+    misure: "diametro 2,6 cm, alta 7,3 cm con il tappo"
+    lunghezza_mm: 70
+    peso_g: 28
+    scheda:
+      - ["Ingombro", "corpo diametro 26 mm (28 mm sulle scritte), alto 70 mm; con il tappo avvitato 72,5 mm"]
+      - ["Peso", "circa 28 g in tutto: 23 g il corpo, 5 g il tappo"]
+      - ["Spazio interno", "diametro 18 mm, profondo 68 mm"]
+      - ["Filetto", "a un principio, passo 5 mm, alto 10 mm, con 0,5 mm di gioco, quanto la tolleranza dei servizi di stampa; il tappo chiude sulla spalla del corpo con 0,5 mm di margine in cima"]
+      - ["Tappo", "diametro 29 mm, alto 12,5 mm, con un'aletta e un foro da 4 mm per il cordino"]
+      - ["Posizione di stampa", "due file, tutti e due in piedi, già orientati, senza supporti"]
+    materiale: "PETG"
+    colore: "arancione"
+    occorrente:
+      - "un cordino sottile, da 3 mm al massimo, se vuoi legare il tappo"
+    montaggio:
+      - "Stampa tutti e due i file: il corpo con il tuo nominativo e il tappo."
+      - "Avvita il tappo senza forzare: se è duro, svitalo e togli i fili di plastica rimasti nel filetto."
+      - "La chiusura non è garantita a tenuta d'acqua: prima di fidarti mettila in acqua per qualche minuto e controlla, e per i fiammiferi usa anche un sacchetto."
+      - "Se ci metti un biglietto con i tuoi dati di salute, sappi che chi ti soccorre lo trova solo se gli dici dov'è."
+
+  - id: "supporto-torcia"
+    nome: "Supporto per torcia"
+    articolo: "il supporto"
+    descrizione: "Supporto da parete per una torcia tonda, da tenere in sede o nel vano attrezzi del mezzo, con il nominativo e la bandiera italiana sulla piastra. La torcia sta in orizzontale in un anello a scatto: si spinge dentro e si estrae tirandola in avanti. Il file pronto è per le torce Maglite a pile D; per un'altra torcia si cambia il diametro nel modello."
+    categoria: "intervento"
+    breve: "La torcia si aggancia a scatto, in sede o nel vano attrezzi del mezzo."
+    sorgente: "ganci-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-36.5, 1.75, -23.75, 10.25]
+      vista_3d: true
+      fianco: -40   # si stampa in piedi sul lato sinistro (x = -40), senza supporti
+    parametri:
+      tipo: "torcia"
+      parte: "tutto"
+    misure: "8 × 10,1 cm, per torce con il corpo da 38 a 40 mm"
+    lunghezza_mm: 101
+    peso_g: 108
+    scheda:
+      - ["Ingombro", "80 × 101 mm, sporge 43 mm dalla parete"]
+      - ["Peso", "circa 108 g"]
+      - ["Anello", "largo 80 mm, spesso 3,5 mm, foro da 40,3 mm e bocca da 36,5 mm: per il corpo da 39,67 mm delle Maglite a 2 o 3 pile D (scheda del produttore, maglite.com, consultata il 24/11/2026); con i 38,1 mm della ML300LX la torcia ha 2,2 mm di gioco e si muove un poco"]
+      - ["Fori", "3 per viti a testa svasata da 4 mm (foro 4,4 mm, svasatura 8,8 mm): due nella piastra, uno sotto l'anello"]
+      - ["Posizione di stampa", "in piedi sul lato sinistro, già orientato nel file, senza supporti"]
+    materiale: "ASA"
+    colore: "blu"
+    occorrente:
+      - "tre viti a testa svasata da 4 mm e i tasselli adatti alla parete o al pannello del mezzo"
+    montaggio:
+      - "Prima di stampare misura il corpo della torcia: il file pronto va bene da 38 a 40 mm. Per un'altra misura scarica il modello e cambia «diametro_torcia»."
+      - "Appoggia il supporto con l'anello in basso, segna i tre fori, fora e avvita senza stringere troppo."
+      - "Spingi la torcia nell'anello dal davanti: la bocca si apre un poco e la trattiene."
+      - "Mai nell'abitacolo: una torcia a pile D pesa fra 700 e 900 grammi e in una frenata diventa pericolosa. Sul mezzo solo nel vano attrezzi o in un punto chiuso, lontano dalle persone."
+      - "Prova l'inserimento con la tua torcia prima di avvitarlo: deve entrare con una spinta decisa e restare ferma."
+
+  - id: "clip-parasole"
+    nome: "Clip da parasole"
+    articolo: "la clip"
+    descrizione: "Clip che si infila sull'aletta parasole del mezzo, con il nominativo, la bandiera italiana e un occhiello per il telecomando del cancello della sede o per le chiavi. Senza viti né colla."
+    categoria: "intervento"
+    breve: "Sull'aletta parasole del mezzo, con l'occhiello per il telecomando o le chiavi."
+    sorgente: "ganci-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-36.5, 1.75, -23.75, 10.25]
+      vista_3d: true
+      quota_scritte: 28.5   # piastra spostata di 24,5 mm sopra la clip (spessore del parasole + 4,5), spessa 4 mm
+      fianco: -40   # si stampa in piedi sul lato sinistro (x = -40), senza supporti
+    parametri:
+      tipo: "parasole"
+      parte: "tutto"
+    misure: "9,5 × 3,4 cm; il file pronto è per alette spesse 2 cm"
+    lunghezza_mm: 95
+    peso_g: 31
+    scheda:
+      - ["Ingombro", "95 × 34 mm, profondo 30 mm"]
+      - ["Peso", "circa 31 g"]
+      - ["Spazio per l'aletta", "20,5 mm: 2 cm sono una misura d'esempio, non di un mezzo preciso. Misura la tua aletta e cambia «spessore_parasole» nel modello"]
+      - ["Linguetta dietro", "alta 24 mm e spessa 4 mm; ponte sopra l'aletta spesso 3 mm"]
+      - ["Occhiello", "diametro 18 mm, foro da 8 mm per anello o moschettone"]
+      - ["Posizione di stampa", "in piedi sul lato sinistro, già orientato nel file, senza supporti"]
+    materiale: "ASA"
+    colore: "blu"
+    occorrente:
+      - "un anello portachiavi o un piccolo moschettone"
+    montaggio:
+      - "Prima di stampare misura lo spessore dell'aletta parasole del mezzo: cambia da mezzo a mezzo. Il file pronto va bene per 2 cm; per un'altra misura scarica il modello e cambia «spessore_parasole»."
+      - "Infila la clip sull'aletta dall'alto, con le scritte verso chi guida."
+      - "Aggancia solo il telecomando o poche chiavi leggere: non devono pendere davanti al parabrezza, coprire la vista né stare sopra un airbag."
+      - "Prova la clip sul mezzo: se scivola quando abbassi l'aletta, rifalla con lo spessore misurato."
+
+  # Cover rinforzate per il telefono (24/11/2026): misure dai disegni dimensionali che Apple pubblica per chi
+  # progetta accessori (developer.apple.com, Accessory Design Guidelines, disegni del 09/09/2025, del 19/09/2024
+  # per iPhone 16 e del 09/03/2026 per iPhone 17e), consultati il 24/11/2026. iPhone è un marchio di Apple Inc.:
+  # si usa solo nella forma «per iPhone …», mai come nome dell'oggetto né con loghi Apple. Scritte incise sul retro
+  # a specchio («incise» nell'anteprima): la cover si stampa con il retro sul piano.
+  - id: "cover-iphone-17"
+    nome: "Cover rinforzata per iPhone 17"
+    articolo: "la cover"
+    descrizione: "Cover dall'aspetto robusto, con gli angoli rinforzati, il bordo rialzato sopra lo schermo e righe in rilievo sui fianchi per la presa. Sul retro porta incisi la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». Le misure vengono dai disegni che Apple pubblica per chi progetta accessori. Si stampa in TPU, una plastica gommosa: non è una protezione certificata contro le cadute. Non protegge il vetro della fotocamera, copre il carrellino della SIM e non va con le basi di ricarica. Prima stampane una e prova che il telefono entri e che i tasti funzionino. iPhone è un marchio di Apple Inc.: questa cover non è un prodotto Apple e Apple non l'ha approvata."
+    categoria: "telefono"
+    breve: "Cover gommosa con angoli rinforzati e il nominativo inciso sul retro."
+    sorgente: "cover-nominativo.scad"
+    anteprima:
+      base: "#30363d"
+      rilievo: "#f07d00"
+      rilievo_mm: 0.6
+      incise: true
+      bandiera: [16.71, -31.31, 27.21, -24.31]
+      nome: { zona: [-28, -58.31, 28, -51.31], lato: "retro" }
+    parametri:
+      tipo: "iphone17"
+      parte: "tutto"
+    misure: "15,6 × 7,8 cm, alta 1,1 cm"
+    lunghezza_mm: 155.9
+    peso_g: 34
+    scheda:
+      - ["Telefono", "iPhone 17: 71.45 × 149.61 mm, spesso 7,95 mm, dai disegni di Apple"]
+      - ["Ingombro", "155,9 × 77,8 mm agli angoli, alta 11,15 mm"]
+      - ["Pareti", "2 mm sui fianchi, 3 mm agli angoli; gioco di 0,3 mm per lato fra telefono e cover"]
+      - ["Retro", "2 mm, sotto i 2,1 mm che Apple indica perché ricarica senza fili e MagSafe funzionino; nessun pezzo di metallo"]
+      - ["Bordo sullo schermo", "1,2 mm più alto del vetro; copre 0,6 mm del telaio e non tocca il vetro"]
+      - ["Aperture", "due fotocamere e flash in alto a sinistra (vista dal retro); porta USB-C in basso, con un'asola per altoparlante e microfoni e un foro a parte per il microfono più esterno; il Controllo fotocamera resta scoperto, come chiede Apple; azione, volume e tasto laterale coperti da cuscinetti da premere, con una tasca interna perché i tasti sporgono 0,45 mm dal telaio"]
+      - ["Scritte", "incise 0,6 mm sul retro: nominativo alto 7 mm, righe piccole 4,5 mm"]
+      - ["Spazio per nome e cognome", "fascia di 56 × 7 mm in basso sul retro, incisa"]
+      - ["Limiti", "non protegge il vetro della fotocamera; copre il carrellino della SIM, che si raggiunge togliendo la cover; il fondo non entra nelle basi di ricarica; non è dichiarata conforme alle linee guida di Apple per gli accessori"]
+      - ["Posizione di stampa", "con il retro sul piano, già orientata nel file, senza supporti"]
+    materiale: "TPU 95A"
+    colore: "nero"
+    occorrente:
+      - "nessun pezzo in più"
+    montaggio:
+      - "Prima di ordinarne altre, stampane una e prova il telefono: deve entrare con una leggera pressione e restare fermo."
+      - "Infila prima la parte in basso, con la porta USB-C, poi spingi in dentro il bordo in alto, un angolo alla volta."
+      - "Premi i tasti attraverso i cuscinetti: devono rispondere senza sforzo. Se un tasto non risponde, non usare la cover."
+      - "La fotocamera resta più alta del retro della cover: appoggia il telefono sullo schermo, protetto dal bordo rialzato, e non sul dorso."
+      - "Per toglierla spingi il telefono da dietro attraverso l'apertura della fotocamera e sfila prima un angolo in alto."
+
+  - id: "cover-iphone-17-pro"
+    nome: "Cover rinforzata per iPhone 17 Pro"
+    articolo: "la cover"
+    descrizione: "Cover dall'aspetto robusto, con gli angoli rinforzati, il bordo rialzato sopra lo schermo e righe in rilievo sui fianchi per la presa. Sul retro porta incisi la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». Le misure vengono dai disegni che Apple pubblica per chi progetta accessori. Si stampa in TPU, una plastica gommosa: non è una protezione certificata contro le cadute. Non protegge il vetro della fotocamera, copre il carrellino della SIM e non va con le basi di ricarica. Prima stampane una e prova che il telefono entri e che i tasti funzionino. iPhone è un marchio di Apple Inc.: questa cover non è un prodotto Apple e Apple non l'ha approvata."
+    categoria: "telefono"
+    breve: "Cover gommosa con angoli rinforzati e il nominativo inciso sul retro."
+    sorgente: "cover-nominativo.scad"
+    anteprima:
+      base: "#30363d"
+      rilievo: "#f07d00"
+      rilievo_mm: 0.6
+      incise: true
+      bandiera: [16.71, -31.5, 27.21, -24.5]
+      nome: { zona: [-28, -58.5, 28, -51.5], lato: "retro" }
+    parametri:
+      tipo: "iphone17pro"
+      parte: "tutto"
+    misure: "15,6 × 7,8 cm, alta 1,2 cm"
+    lunghezza_mm: 156.2
+    peso_g: 31
+    scheda:
+      - ["Telefono", "iPhone 17 Pro: 71.85 × 150.01 mm, spesso 8,75 mm, dai disegni di Apple"]
+      - ["Ingombro", "156,2 × 78,2 mm agli angoli, alta 11,95 mm"]
+      - ["Pareti", "2 mm sui fianchi, 3 mm agli angoli; gioco di 0,3 mm per lato fra telefono e cover"]
+      - ["Retro", "2 mm, sotto i 2,1 mm che Apple indica perché ricarica senza fili e MagSafe funzionino; nessun pezzo di metallo"]
+      - ["Bordo sullo schermo", "1,2 mm più alto del vetro; copre 0,6 mm del telaio e non tocca il vetro"]
+      - ["Aperture", "fascia delle fotocamere su tutta la larghezza in alto; porta USB-C in basso, con un'asola per altoparlante e microfoni e un foro a parte per il microfono più esterno; il Controllo fotocamera resta scoperto, come chiede Apple; azione, volume e tasto laterale coperti da cuscinetti da premere, con una tasca interna perché i tasti sporgono 0,45 mm dal telaio"]
+      - ["Scritte", "incise 0,6 mm sul retro: nominativo alto 7 mm, righe piccole 4,5 mm"]
+      - ["Spazio per nome e cognome", "fascia di 56 × 7 mm in basso sul retro, incisa"]
+      - ["Limiti", "non protegge il vetro della fotocamera; copre il carrellino della SIM, che si raggiunge togliendo la cover; il fondo non entra nelle basi di ricarica; non è dichiarata conforme alle linee guida di Apple per gli accessori"]
+      - ["Posizione di stampa", "con il retro sul piano, già orientata nel file, senza supporti"]
+    materiale: "TPU 95A"
+    colore: "nero"
+    occorrente:
+      - "nessun pezzo in più"
+    montaggio:
+      - "Prima di ordinarne altre, stampane una e prova il telefono: deve entrare con una leggera pressione e restare fermo."
+      - "Infila prima la parte in basso, con la porta USB-C, poi spingi in dentro il bordo in alto, un angolo alla volta."
+      - "Premi i tasti attraverso i cuscinetti: devono rispondere senza sforzo. Se un tasto non risponde, non usare la cover."
+      - "La fotocamera resta più alta del retro della cover: appoggia il telefono sullo schermo, protetto dal bordo rialzato, e non sul dorso."
+      - "Per toglierla spingi il telefono da dietro attraverso l'apertura della fotocamera e sfila prima un angolo in alto."
+
+  - id: "cover-iphone-17-pro-max"
+    nome: "Cover rinforzata per iPhone 17 Pro Max"
+    articolo: "la cover"
+    descrizione: "Cover dall'aspetto robusto, con gli angoli rinforzati, il bordo rialzato sopra lo schermo e righe in rilievo sui fianchi per la presa. Sul retro porta incisi la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». Le misure vengono dai disegni che Apple pubblica per chi progetta accessori. Si stampa in TPU, una plastica gommosa: non è una protezione certificata contro le cadute. Non protegge il vetro della fotocamera, copre il carrellino della SIM e non va con le basi di ricarica. Prima stampane una e prova che il telefono entri e che i tasti funzionino. iPhone è un marchio di Apple Inc.: questa cover non è un prodotto Apple e Apple non l'ha approvata."
+    categoria: "telefono"
+    breve: "Cover gommosa con angoli rinforzati e il nominativo inciso sul retro."
+    sorgente: "cover-nominativo.scad"
+    anteprima:
+      base: "#30363d"
+      rilievo: "#f07d00"
+      rilievo_mm: 0.6
+      incise: true
+      bandiera: [16.71, -38.22, 27.21, -31.22]
+      nome: { zona: [-28, -65.22, 28, -58.22], lato: "retro" }
+    parametri:
+      tipo: "iphone17promax"
+      parte: "tutto"
+    misure: "17,0 × 8,4 cm, alta 1,2 cm"
+    lunghezza_mm: 169.6
+    peso_g: 36
+    scheda:
+      - ["Telefono", "iPhone 17 Pro Max: 77.98 × 163.43 mm, spesso 8,75 mm, dai disegni di Apple"]
+      - ["Ingombro", "169,6 × 84,4 mm agli angoli, alta 11,95 mm"]
+      - ["Pareti", "2 mm sui fianchi, 3 mm agli angoli; gioco di 0,3 mm per lato fra telefono e cover"]
+      - ["Retro", "2 mm, sotto i 2,1 mm che Apple indica perché ricarica senza fili e MagSafe funzionino; nessun pezzo di metallo"]
+      - ["Bordo sullo schermo", "1,2 mm più alto del vetro; copre 0,6 mm del telaio e non tocca il vetro"]
+      - ["Aperture", "fascia delle fotocamere su tutta la larghezza in alto; porta USB-C in basso, con un'asola per altoparlante e microfoni e un foro a parte per il microfono più esterno; il Controllo fotocamera resta scoperto, come chiede Apple; azione, volume e tasto laterale coperti da cuscinetti da premere, con una tasca interna perché i tasti sporgono 0,45 mm dal telaio"]
+      - ["Scritte", "incise 0,6 mm sul retro: nominativo alto 7 mm, righe piccole 4,5 mm"]
+      - ["Spazio per nome e cognome", "fascia di 56 × 7 mm in basso sul retro, incisa"]
+      - ["Limiti", "non protegge il vetro della fotocamera; copre il carrellino della SIM, che si raggiunge togliendo la cover; il fondo non entra nelle basi di ricarica; non è dichiarata conforme alle linee guida di Apple per gli accessori"]
+      - ["Posizione di stampa", "con il retro sul piano, già orientata nel file, senza supporti"]
+    materiale: "TPU 95A"
+    colore: "nero"
+    occorrente:
+      - "nessun pezzo in più"
+    montaggio:
+      - "Prima di ordinarne altre, stampane una e prova il telefono: deve entrare con una leggera pressione e restare fermo."
+      - "Infila prima la parte in basso, con la porta USB-C, poi spingi in dentro il bordo in alto, un angolo alla volta."
+      - "Premi i tasti attraverso i cuscinetti: devono rispondere senza sforzo. Se un tasto non risponde, non usare la cover."
+      - "La fotocamera resta più alta del retro della cover: appoggia il telefono sullo schermo, protetto dal bordo rialzato, e non sul dorso."
+      - "Per toglierla spingi il telefono da dietro attraverso l'apertura della fotocamera e sfila prima un angolo in alto."
+
+  - id: "cover-iphone-17e"
+    nome: "Cover rinforzata per iPhone 17e"
+    articolo: "la cover"
+    descrizione: "Cover dall'aspetto robusto, con gli angoli rinforzati, il bordo rialzato sopra lo schermo e righe in rilievo sui fianchi per la presa. Sul retro porta incisi la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». Le misure vengono dai disegni che Apple pubblica per chi progetta accessori. Si stampa in TPU, una plastica gommosa: non è una protezione certificata contro le cadute. Non protegge il vetro della fotocamera, copre il carrellino della SIM e non va con le basi di ricarica. Prima stampane una e prova che il telefono entri e che i tasti funzionino. iPhone è un marchio di Apple Inc.: questa cover non è un prodotto Apple e Apple non l'ha approvata."
+    categoria: "telefono"
+    breve: "Cover gommosa con angoli rinforzati e il nominativo inciso sul retro."
+    sorgente: "cover-nominativo.scad"
+    anteprima:
+      base: "#30363d"
+      rilievo: "#f07d00"
+      rilievo_mm: 0.6
+      incise: true
+      bandiera: [16.71, -29.86, 27.21, -22.86]
+      nome: { zona: [-28, -56.86, 28, -49.86], lato: "retro" }
+    parametri:
+      tipo: "iphone17e"
+      parte: "tutto"
+    misure: "15,3 × 7,8 cm, alta 1,1 cm"
+    lunghezza_mm: 153.2
+    peso_g: 36
+    scheda:
+      - ["Telefono", "iPhone 17e: 71.52 × 146.71 mm, spesso 7,80 mm, dai disegni di Apple"]
+      - ["Ingombro", "153,2 × 78,1 mm agli angoli, alta 11,00 mm"]
+      - ["Pareti", "2 mm sui fianchi, 3 mm agli angoli; gioco di 0,3 mm per lato fra telefono e cover"]
+      - ["Retro", "2 mm, sotto i 2,1 mm che Apple indica perché ricarica senza fili e MagSafe funzionino; nessun pezzo di metallo"]
+      - ["Bordo sullo schermo", "1,2 mm più alto del vetro; copre 0,6 mm del telaio e non tocca il vetro"]
+      - ["Aperture", "una fotocamera e flash in alto a sinistra (vista dal retro); porta USB-C in basso, con un'asola per altoparlante e microfoni e un foro a parte per il microfono più esterno; azione, volume e tasto laterale coperti da cuscinetti da premere, con una tasca interna perché i tasti sporgono 0,45 mm dal telaio"]
+      - ["Scritte", "incise 0,6 mm sul retro: nominativo alto 7 mm, righe piccole 4,5 mm"]
+      - ["Spazio per nome e cognome", "fascia di 56 × 7 mm in basso sul retro, incisa"]
+      - ["Limiti", "non protegge il vetro della fotocamera; copre il carrellino della SIM, che si raggiunge togliendo la cover; il fondo non entra nelle basi di ricarica; non è dichiarata conforme alle linee guida di Apple per gli accessori"]
+      - ["Posizione di stampa", "con il retro sul piano, già orientata nel file, senza supporti"]
+    materiale: "TPU 95A"
+    colore: "nero"
+    occorrente:
+      - "nessun pezzo in più"
+    montaggio:
+      - "Prima di ordinarne altre, stampane una e prova il telefono: deve entrare con una leggera pressione e restare fermo."
+      - "Infila prima la parte in basso, con la porta USB-C, poi spingi in dentro il bordo in alto, un angolo alla volta."
+      - "Premi i tasti attraverso i cuscinetti: devono rispondere senza sforzo. Se un tasto non risponde, non usare la cover."
+      - "La fotocamera sta appena sotto il retro della cover, a circa 0,3 mm: è poco, quindi appoggia il telefono sullo schermo, protetto dal bordo rialzato, e non sul dorso."
+      - "Per toglierla spingi il telefono da dietro attraverso l'apertura della fotocamera e sfila prima un angolo in alto."
+
+  - id: "cover-iphone-16"
+    nome: "Cover rinforzata per iPhone 16"
+    articolo: "la cover"
+    descrizione: "Cover dall'aspetto robusto, con gli angoli rinforzati, il bordo rialzato sopra lo schermo e righe in rilievo sui fianchi per la presa. Sul retro porta incisi la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». Le misure vengono dai disegni che Apple pubblica per chi progetta accessori. Si stampa in TPU, una plastica gommosa: non è una protezione certificata contro le cadute. Non protegge il vetro della fotocamera, copre il carrellino della SIM e non va con le basi di ricarica. Prima stampane una e prova che il telefono entri e che i tasti funzionino. iPhone è un marchio di Apple Inc.: questa cover non è un prodotto Apple e Apple non l'ha approvata."
+    categoria: "telefono"
+    breve: "Cover gommosa con angoli rinforzati e il nominativo inciso sul retro."
+    sorgente: "cover-nominativo.scad"
+    anteprima:
+      base: "#30363d"
+      rilievo: "#f07d00"
+      rilievo_mm: 0.6
+      incise: true
+      bandiera: [16.71, -30.32, 27.21, -23.32]
+      nome: { zona: [-28, -57.32, 28, -50.32], lato: "retro" }
+    parametri:
+      tipo: "iphone16"
+      parte: "tutto"
+    misure: "15,4 × 7,8 cm, alta 1,1 cm"
+    lunghezza_mm: 154.0
+    peso_g: 33
+    scheda:
+      - ["Telefono", "iPhone 16: 71.63 × 147.64 mm, spesso 7,81 mm, dai disegni di Apple"]
+      - ["Ingombro", "154,0 × 78,0 mm agli angoli, alta 11,01 mm"]
+      - ["Pareti", "2 mm sui fianchi, 3 mm agli angoli; gioco di 0,3 mm per lato fra telefono e cover"]
+      - ["Retro", "2 mm, sotto i 2,1 mm che Apple indica perché ricarica senza fili e MagSafe funzionino; nessun pezzo di metallo"]
+      - ["Bordo sullo schermo", "1,2 mm più alto del vetro; copre 0,6 mm del telaio e non tocca il vetro"]
+      - ["Aperture", "due fotocamere e flash in alto a sinistra (vista dal retro); porta USB-C in basso, con un'asola per altoparlante e microfoni e un foro a parte per il microfono più esterno; il Controllo fotocamera resta scoperto, come chiede Apple; azione, volume e tasto laterale coperti da cuscinetti da premere, con una tasca interna perché i tasti sporgono 0,45 mm dal telaio"]
+      - ["Scritte", "incise 0,6 mm sul retro: nominativo alto 7 mm, righe piccole 4,5 mm"]
+      - ["Spazio per nome e cognome", "fascia di 56 × 7 mm in basso sul retro, incisa"]
+      - ["Limiti", "non protegge il vetro della fotocamera; copre il carrellino della SIM, che si raggiunge togliendo la cover; il fondo non entra nelle basi di ricarica; non è dichiarata conforme alle linee guida di Apple per gli accessori"]
+      - ["Posizione di stampa", "con il retro sul piano, già orientata nel file, senza supporti"]
+    materiale: "TPU 95A"
+    colore: "nero"
+    occorrente:
+      - "nessun pezzo in più"
+    montaggio:
+      - "Prima di ordinarne altre, stampane una e prova il telefono: deve entrare con una leggera pressione e restare fermo."
+      - "Infila prima la parte in basso, con la porta USB-C, poi spingi in dentro il bordo in alto, un angolo alla volta."
+      - "Premi i tasti attraverso i cuscinetti: devono rispondere senza sforzo. Se un tasto non risponde, non usare la cover."
+      - "La fotocamera resta più alta del retro della cover: appoggia il telefono sullo schermo, protetto dal bordo rialzato, e non sul dorso."
+      - "Per toglierla spingi il telefono da dietro attraverso l'apertura della fotocamera e sfila prima un angolo in alto."

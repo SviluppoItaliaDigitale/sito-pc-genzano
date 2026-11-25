@@ -3,6 +3,7 @@ title: "La catena delle comunicazioni in protezione civile: DPC, COR, COM, COI, 
 date: 2026-04-16
 description: "Come le informazioni viaggiano dall'evento fino alla decisione operativa: dal Dipartimento della Protezione Civile al Centro Operativo Comunale."
 badge: "Radiocomunicazioni"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-16-catena-comunicazioni-protezione-civile-dpc-cor-com-coc.webp"
@@ -81,7 +82,7 @@ Al COR viene assegnata la **gestione dei COM** operativi nel proprio territorio.
 
 Il **COM — Centro Operativo Misto** è il livello intermedio tra COR e COC. Viene **attivato in aree colpite** che comprendono più Comuni, per coordinare l'intervento a scala sovracomunale.
 
-All'interno del COM operano le **funzioni di supporto** definite dalla Direttiva PCM 30 aprile 2021 (sedici, non numerate, tra cui Volontariato, Telecomunicazioni d'emergenza, Logistica, Assistenza alla popolazione). Il Metodo Augustus degli anni '90, con le funzioni numerate da 1 a 9 o da 1 a 14, è lo schema storico superato.
+All'interno del COM operano le **funzioni di supporto** definite dalla Direttiva PCM 30 aprile 2021 (sedici, non numerate, tra cui Volontariato, Telecomunicazioni d'emergenza, Logistica, Assistenza alla popolazione). Il Metodo Augustus degli anni '90, con le funzioni numerate da 1 a 9 o da 1 a 14, è lo schema storico, aggiornato dalla Direttiva del 2021.
 
 Il compito del COM è il **coordinamento logistico e di risorse** tra i vari **COC** e i **campi di accoglienza** attivati nella zona di sua competenza. Non prende decisioni politiche (quelle restano ai Sindaci), ma gestisce la filiera operativa.
 

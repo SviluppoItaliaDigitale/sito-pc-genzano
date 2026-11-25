@@ -3,6 +3,7 @@ title: "Senigallia, 3 maggio 2014: l'esondazione del Misa"
 date: 2027-05-03
 description: "Tredici anni fa il fiume Misa allagò gran parte di Senigallia e dei paesi a monte: tre vittime e centinaia di persone evacuate."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-05-03-senigallia-2014-alluvione-misa.webp"

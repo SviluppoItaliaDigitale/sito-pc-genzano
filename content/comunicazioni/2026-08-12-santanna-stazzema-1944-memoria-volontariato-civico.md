@@ -3,6 +3,7 @@ title: "Sant'Anna di Stazzema, 12 agosto 1944: la memoria che fonda il volontari
 date: 2026-08-12T00:02:00+02:00
 description: "Il 12 agosto 1944 le SS massacrarono 560 civili a Sant'Anna di Stazzema, fra cui 130 bambini. Una memoria che fonda il volontariato civico."
 badge: "Comunicazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-12-santanna-stazzema-1944-memoria-volontariato-civico.webp"

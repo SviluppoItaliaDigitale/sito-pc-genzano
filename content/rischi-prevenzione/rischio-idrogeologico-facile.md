@@ -60,7 +60,7 @@ Per controllare le allerte, guarda la pagina [Allerte meteo](/allerte-meteo/).
 - Pochi centimetri d'acqua fermano il motore.
 - Se l'auto si ferma e l'acqua è ferma, esci. Vai a piedi in un punto più alto.
 - Se l'acqua corre forte, resta nell'auto. Chiama il 112.
-- Se l'acqua entra nell'auto, sali sul tetto.
+- Se l'auto resta bloccata nell'acqua, chiama il 112.
 
 ## Dopo
 

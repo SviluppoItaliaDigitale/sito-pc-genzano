@@ -3,6 +3,7 @@ title: "Antincendio boschivo 2026: gli adempimenti operativi della Regione Lazio
 date: 2026-06-14T00:02:00+02:00
 description: "La Regione Lazio ha inviato alle organizzazioni di volontariato le indicazioni per la campagna antincendio boschivo 2026: radio, app, sicurezza."
 badge: "Volontariato"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-14-campagna-aib-2026-adempimenti-operativi-regione-lazio.webp"
@@ -63,7 +64,7 @@ Sono limiti precisi che mettono al primo posto la sicurezza degli operatori e de
 
 Il messaggio per la popolazione resta semplice e non cambia: **se avvisti un incendio, chiama subito il 112**, il Numero Unico Europeo per le emergenze. La Centrale Unica smista la chiamata ai Vigili del Fuoco e alle squadre antincendio. I volontari di Protezione Civile **non si attivano su chiamata diretta dei cittadini**: intervengono solo quando li attiva la Sala Operativa regionale.
 
-Nel periodo di massima pericolosità (di norma da giugno a settembre) bastano pochi comportamenti per ridurre il rischio: non bruciare residui vegetali nelle giornate ventose, non abbandonare rifiuti o mozziconi, tenere puliti i terreni vicino alle abitazioni.
+Nel periodo di massima pericolosità (nel 2026 dal 15 giugno al 15 ottobre) bastano pochi comportamenti per ridurre il rischio: non bruciare residui vegetali nelle giornate ventose, non abbandonare rifiuti o mozziconi, tenere puliti i terreni vicino alle abitazioni.
 
 ## Per approfondire
 

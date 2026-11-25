@@ -3,6 +3,7 @@ title: "Allagamenti, alluvioni e alberi pericolanti: gli interventi tecnici del 
 date: 2026-04-09
 description: "Come si gestiscono caditoie tappate, garage allagati, strade invase dal fango e alberi caduti: attrezzature, procedure e sicurezza degli operatori."
 badge: "Informazione"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-09-allagamenti-alluvioni-alberi-pericolanti-interventi-tecnici.webp"
@@ -154,7 +155,7 @@ Durante l'**emergenza Ucraina (2022)** il Gruppo ha operato con un **minibus Mer
 
 ## Emergenze neve: quando l'Atego diventa spazzaneve
 
-Genzano è a circa 435 metri di altitudine: le nevicate sono rare ma non eccezionali. Quando arrivano, il **Mercedes Atego** del Gruppo viene allestito in configurazione invernale:
+Genzano è a circa 458 metri di altitudine: le nevicate sono rare ma non eccezionali. Quando arrivano, il **Mercedes Atego** del Gruppo viene allestito in configurazione invernale:
 
 - il **cassone** sostituisce la cisterna
 - si monta uno **spargisale da 1 m³** con comando da cabina

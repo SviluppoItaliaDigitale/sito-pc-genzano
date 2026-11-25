@@ -3,6 +3,7 @@ title: "Qualità dell'aria in inverno: il PM10 e cosa possiamo fare"
 date: 2026-11-09
 description: "D'inverno la qualità dell'aria peggiora per via di riscaldamento e traffico. Il PM10 è l'indicatore principale. Cosa possiamo fare."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-09-qualita-aria-pm10-inverno.webp"

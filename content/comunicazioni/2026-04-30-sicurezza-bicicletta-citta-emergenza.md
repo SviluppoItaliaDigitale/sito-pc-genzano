@@ -3,6 +3,7 @@ title: "Andare in bicicletta in sicurezza: anche la mobilità è prevenzione"
 date: 2026-04-30T00:01:00+02:00
 description: "La Giornata mondiale della bicicletta ricorda che la mobilità dolce è un tema di sicurezza e salute. Poche regole, in città e sulle strade dei Castelli Romani."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-30-sicurezza-bicicletta-citta-emergenza.webp"

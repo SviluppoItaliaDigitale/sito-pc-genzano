@@ -3,6 +3,7 @@ title: "I nostri volontari all'Open Day antincendio boschivo del 9 maggio ad Apr
 date: 2026-05-08T00:02:00+02:00
 description: "Sabato 9 maggio 2026 una rappresentanza del Gruppo Comunale prende parte all'Open Day di Aprilia su tecnologie e prevenzione antincendio boschivo."
 badge: "Formazione"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-08-open-day-antincendio-boschivo-aprilia.webp"
@@ -18,7 +19,7 @@ draft: false
 
 ## Perché ci andiamo
 
-L'**antincendio boschivo (AIB)** è una delle attività operative del Sistema di Protezione Civile, con periodo di massima pericolosità tra **giugno e settembre**. La stagione 2026 è alle porte: l'Open Day è un'occasione per i volontari di:
+L'**antincendio boschivo (AIB)** è una delle attività operative del Sistema di Protezione Civile, con la campagna estiva che nel 2026 va **dal 15 giugno al 15 ottobre**. La stagione 2026 è alle porte: l'Open Day è un'occasione per i volontari di:
 
 - toccare con mano le **nuove tecnologie** disponibili sul mercato per lo spegnimento e la prevenzione;
 - aggiornarsi sui **dispositivi di protezione individuale** (DPI) di nuova generazione, che migliorano la sicurezza degli operatori durante gli interventi;

@@ -432,7 +432,7 @@
     function s3Prossimo(){
       var box=document.getElementById('sat-s3-next');
       caricaSatelliteJs().then(ommSentinel3).then(function(omm){
-        var OBS={longitude:GENZANO[1]*Math.PI/180,latitude:GENZANO[0]*Math.PI/180,height:0.435};
+        var OBS={longitude:GENZANO[1]*Math.PI/180,latitude:GENZANO[0]*Math.PI/180,height:0.458};
         var AU=149597870.7, R=6371, out=[], S3_GIORNI=5; // cinque giorni: fra un giorno e l'altro la traccia si sposta di ~550 km, e per un satellite solo possono passare 2-3 giorni senza un passaggio entro 600 km
         function soleEl(t,gmst){
           var jd=satellite.jday(t.getUTCFullYear(),t.getUTCMonth()+1,t.getUTCDate(),t.getUTCHours(),t.getUTCMinutes(),t.getUTCSeconds());

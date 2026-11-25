@@ -3,6 +3,7 @@ title: "San Nicola: tradizione e sicurezza per i bambini"
 date: 2026-12-06
 description: "Il 6 dicembre è tradizionalmente legato a San Nicola e ai bambini. Cogliamo l'occasione per parlare di sicurezza dei piccoli."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-06-san-nicola-tradizione-bambini.webp"
@@ -13,7 +14,7 @@ allegati: []
 draft: false
 ---
 
-Il **6 dicembre** è la festa di **San Nicola**, patrono dei bambini nella tradizione cattolica ed europea. Una figura popolare in **Bari** (dove si conservano le reliquie) e in **Paesi dell'est**. Cogliamo l'occasione per parlare di **sicurezza** e **tutela** dei più piccoli.
+Il **6 dicembre** è la festa di **San Nicola**, patrono dei bambini nella tradizione cattolica ed europea. Una figura popolare a **Bari** (dove si conservano le reliquie) e nei **Paesi dell'est**. Cogliamo l'occasione per parlare di **sicurezza** e **tutela** dei più piccoli.
 
 ## Chi è San Nicola
 
@@ -46,7 +47,7 @@ Cogliamo l'occasione per ripassare alcuni principi di **sicurezza dei bambini** 
 - **tavoli** stabili, niente tovaglie pendenti;
 - **pulsantiere** cucina con protezioni;
 - **farmaci** in alto e chiusi;
-- **prodotti pulizia** in armadi chiusi a chiave;
+- **prodotti di pulizia** in armadi chiusi a chiave;
 - **sorveglianza** costante.
 
 ### 3-6 anni
@@ -135,7 +136,7 @@ Cogliamo l'occasione per ripassare alcuni principi di **sicurezza dei bambini** 
 
 ### Cosa fare
 - **valutare** gravità (frequenza respiratoria, colorito, coscienza);
-- **non panico** (il bambino percepisce);
+- **niente panico** (il bambino percepisce);
 - **chiamare 112** se grave;
 - **chiamare Guardia Medica** o pediatra se non grave;
 - **informare** scuola o caregiver.
@@ -158,7 +159,7 @@ Cogliamo l'occasione per ripassare alcuni principi di **sicurezza dei bambini** 
 ### Disabilità
 - **stesse** regole di sicurezza, adattate;
 - **caregiver** preparato;
-- **dispositivi** medici sempre con bambino (emergency kit);
+- **dispositivi** medici sempre con il bambino (emergency kit);
 - **piani** di evacuazione scolastici che includano bambini con disabilità.
 
 ### Allergie

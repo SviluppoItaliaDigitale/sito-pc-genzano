@@ -3,6 +3,7 @@ title: "Donare sangue e plasma: un gesto che salva vite"
 date: 2026-12-14
 description: "Nel periodo delle feste le scorte di sangue calano. Chi può donare, come si fa e dove informarsi nel Lazio e nei Castelli Romani."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-14-donazione-sangue-bilancio-annuale.webp"

@@ -106,7 +106,7 @@ Le **2 pagine di supporto** (`kit-emergenza.md`, `persone-necessita-specifiche.m
 Genzano di Roma è nel territorio dei Castelli Romani, con versanti collinari soggetti a fenomeni di erosione e frane localizzate. In caso di allerta idrogeologica, indicare sempre l'area interessata e i comportamenti di autoprotezione raccomandati dal Piano di Protezione Civile comunale.
 
 ### Rischio incendi boschivi (AIB)
-Il periodo di massima pericolosità è giugno–settembre. Nel Lazio il numero da chiamare è **il 112** (NUE): la Centrale Unica smista l'intervento a vigili del fuoco e squadre AIB. Non chiamare direttamente il gruppo di volontari per segnalare incendi attivi.
+Il periodo di massima pericolosità è l'estate: nel 2026 la campagna antincendio regionale va dal 15 giugno al 15 ottobre e l'ordinanza di Genzano vieta i fuochi dal 17 giugno al 15 ottobre (registro `aib-2026-grave-pericolosita` in `data/dati_canonici.yaml`). Nel Lazio il numero da chiamare è **il 112** (NUE): la Centrale Unica smista l'intervento a vigili del fuoco e squadre AIB. Non chiamare direttamente il gruppo di volontari per segnalare incendi attivi.
 
 **Zona AIB di Genzano di Roma = 9** (Castelli Romani), come da PDF ufficiale "Tabelle Comuni_Zone Allerta AIB" 2019 della Regione Lazio (`/zone_allerta_aib_comuni/`). La pagina «Bollettini di Pericolosità incendi boschivi» del Centro Funzionale Regionale (`www.regione.lazio.it/protezione-civile/centro-funzionale-regionale/bollettini-rischi-incendi`, dall'autunno 2026; prima su `protezionecivile.regione.lazio.it`) pubblica il "Bollettino di Pericolosità da Incendi Boschivi" quotidianamente durante la campagna AIB (modello previsionale RISICOLazio in collaborazione con Fondazione CIMA). Lo script `scripts/check-rischi-incendi.py` (gira ogni 5 min via `check-allerta.yml`, vedi rule `10-automazioni-github-actions.md`) parsa il PDF, estrae la Zona 9 e popola il blocco `rischio_incendi` in `data/allerta.json`. Mapping: BASSO→verde (nascosto in homepage perché baseline estiva), MEDIO→gialla, MODERATO→arancione, ELEVATO→rossa. Fuori stagione (di norma novembre-maggio) il blocco viene rimosso (cessazione automatica).
 
@@ -124,7 +124,7 @@ Nel Lazio, dal 2015, **l'unico numero di emergenza per il cittadino è il 112** 
 |---|---|
 | 112 | Numero Unico Emergenze (NUE) — qualsiasi emergenza |
 | 803 555 | Sala Operativa Protezione Civile Lazio — segnalazioni non urgenti |
-| 1530 | Guardia Costiera — emergenze in mare e sui laghi |
+| 1530 | Guardia Costiera — emergenze in mare |
 
 Non citare numeri di emergenza non verificati. Non presentare più 115/118/1515 come numeri da chiamare: il cittadino deve memorizzare un solo numero, il 112. I numeri del gruppo di volontari non sostituiscono il 112.
 

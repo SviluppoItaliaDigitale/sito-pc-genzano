@@ -163,7 +163,7 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
 </a>
 <a class="ms-card ms-tool" href="/cruscotto/">
   <div class="ms-card-icon"><i class="bi bi-speedometer2"></i></div>
-  <p class="ms-card-title">Cruscotto del territorio</p>
+  <p class="ms-card-title">Cruscotto e dati in tempo reale</p>
   <p class="ms-card-desc">Dati di rischio in tempo reale in un'unica pagina: terremoti, vulcani, radar pioggia, satellite, meteo, allerta, incendi, aria e mare.</p>
   <span class="ms-card-arrow">Apri il cruscotto →</span>
 </a>
@@ -253,7 +253,7 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
 <a class="ms-card ms-emerg" href="/rischi-prevenzione/rischio-incendio/">
   <div class="ms-card-icon"><i class="bi bi-fire"></i></div>
   <p class="ms-card-title">Incendi boschivi</p>
-  <p class="ms-card-desc">Periodo AIB giugno-settembre, prevenzione, segnalazione tramite 112.</p>
+  <p class="ms-card-desc">Campagna AIB 2026 dal 15 giugno al 15 ottobre, prevenzione, segnalazione tramite 112.</p>
 </a>
 <a class="ms-card ms-emerg" href="/rischi-prevenzione/temporali-intensi/">
   <div class="ms-card-icon"><i class="bi bi-lightning-charge-fill"></i></div>
@@ -343,12 +343,7 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
 <a class="ms-card ms-edu" href="/scuole/">
   <div class="ms-card-icon"><i class="bi bi-people-fill"></i></div>
   <p class="ms-card-title">Scuole — parti da qui</p>
-  <p class="ms-card-desc">4 percorsi per ruolo: sono un/una docente, sono dirigente scolastico (RSPP/DSGA/DPO), sono un genitore, sono uno studente o studentessa. Ogni card porta in 2 click ai materiali giusti.</p>
-</a>
-<a class="ms-card ms-edu" href="/formazione/scuole-da-dove-cominciare/">
-  <div class="ms-card-icon"><i class="bi bi-compass-fill"></i></div>
-  <p class="ms-card-title">Scuole: da dove cominciare</p>
-  <p class="ms-card-desc">Cruscotto unico per ogni ruolo: scegli se sei docente di infanzia/primaria/sec I/sec II, di sostegno/BES, Dirigente/DSGA/RSPP, oppure genitore — e in 2 click arrivi ai materiali giusti.</p>
+  <p class="ms-card-desc">Pagina unica per le scuole: percorsi per docenti di ogni ordine, sostegno, dirigenti, DSGA e RSPP, genitori e studenti, con i materiali consigliati per ciascuno.</p>
 </a>
 <a class="ms-card ms-edu" href="/formazione/programma-dell-anno/">
   <div class="ms-card-icon"><i class="bi bi-calendar3"></i></div>
@@ -414,6 +409,11 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <div class="ms-card-icon"><i class="bi bi-journals"></i></div>
   <p class="ms-card-title">Quadro normativo per la scuola</p>
   <p class="ms-card-desc">Riepilogo delle norme che regolano l'uso dei materiali del Gruppo nelle scuole: Educazione Civica, PCTO, sicurezza, inclusione, privacy, accessibilità. Una pagina, una fonte unica di verità.</p>
+</a>
+<a class="ms-card ms-edu" href="/formazione/curricolo-verticale/">
+  <div class="ms-card-icon"><i class="bi bi-bar-chart-steps"></i></div>
+  <p class="ms-card-title">Curricolo verticale</p>
+  <p class="ms-card-desc">Traguardi di protezione civile dall'infanzia alla quinta superiore, con i materiali per ogni età, da inserire nel PTOF e nell'educazione civica.</p>
 </a>
 <a class="ms-card ms-edu" href="/formazione/educazione-civica/">
   <div class="ms-card-icon"><i class="bi bi-mortarboard-fill"></i></div>
@@ -535,6 +535,26 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-title">Schede "1 minuto per proteggerti"</p>
   <p class="ms-card-desc">Sei micro-schede A5 stampabili con azioni concrete di autoprotezione in un minuto: torcia, 112, punto di ritrovo, kit auto, terremoto per bambini, documenti essenziali. Per casa, bacheca, sede.</p>
 </a>
+<a class="ms-card ms-edu" href="/formazione/volontari/">
+  <div class="ms-card-icon"><i class="bi bi-mortarboard"></i></div>
+  <p class="ms-card-title">Formazione dei volontari</p>
+  <p class="ms-card-desc">Simulatore d'esame a tempo con attestato, quiz di allenamento con le spiegazioni, scenari guidati e presentazioni del corso base per gli istruttori, in PDF e PowerPoint.</p>
+</a>
+<a class="ms-card ms-edu" href="/stampa-3d/">
+  <div class="ms-card-icon"><i class="bi bi-printer"></i></div>
+  <p class="ms-card-title">Stampa 3D</p>
+  <p class="ms-card-desc">Per i volontari: oggetti con il nominativo ALFA da scaricare o ordinare online, divisi per uso (giubbetto, radio, attrezzatura, sede), con vista in 3D e scheda tecnica.</p>
+</a>
+<a class="ms-card ms-edu" href="/elettronica-emergenza/">
+  <div class="ms-card-icon"><i class="bi bi-cpu"></i></div>
+  <p class="ms-card-title">Elettronica per l'emergenza</p>
+  <p class="ms-card-desc">Progetti con Arduino, ESP32 e Raspberry Pi per i volontari: sensore del livello dell'acqua, pluviometro, stazione meteo, monitor del caldo, batteria a 12 V, nodo Meshtastic e posizione dei mezzi, schermo dell'allerta, sismografo, ricevitore di aerei. Codice, istruzioni e custodie da stampare.</p>
+</a>
+<a class="ms-card ms-edu" href="/cucina-emergenza/">
+  <div class="ms-card-icon"><i class="bi bi-cup-hot"></i></div>
+  <p class="ms-card-title">Cucina in emergenza</p>
+  <p class="ms-card-desc">Per chi cucina in un campo o in una mensa di emergenza: documenti ufficiali su igiene, allergeni, pasti per molte persone e donazioni, e il catalogo dei disciplinari DOP, IGP e STG.</p>
+</a>
 <a class="ms-card ms-edu" href="/esercitazioni/">
   <div class="ms-card-icon"><i class="bi bi-list-task"></i></div>
   <p class="ms-card-title">Addestramento e buone pratiche</p>
@@ -638,7 +658,7 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
 <a class="ms-card ms-emerg" href="/formazione/kit-calamita-caregiver-familiari/">
   <div class="ms-card-icon"><i class="bi bi-heart-pulse-fill"></i></div>
   <p class="ms-card-title">Kit Caregiver familiari</p>
-  <p class="ms-card-desc">L. 205/2017 + Carta europea del caregiver (Eurocarers) + WHO Self-care 2022. Carta assistito, piano allettato.</p>
+  <p class="ms-card-desc">L. 205/2017 + COFACE «European Charter for Family Carers» + WHO Self-care 2022. Carta assistito, piano allettato.</p>
 </a>
 <a class="ms-card ms-emerg" href="/formazione/kit-calamita-strutture-sanitarie/">
   <div class="ms-card-icon"><i class="bi bi-hospital-fill"></i></div>

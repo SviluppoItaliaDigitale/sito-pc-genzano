@@ -4,6 +4,7 @@ date: 2026-07-27
 lastmod: 2026-10-20
 description: "Essere volontario di PC espone a stress psicologico significativo. La cura della propria salute mentale non è debolezza."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-27-salute-mentale-volontari-stress-emergenze.webp"

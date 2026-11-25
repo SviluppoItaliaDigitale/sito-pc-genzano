@@ -4,6 +4,7 @@ date: 2026-10-29T00:01:00+01:00
 description: "Fra il 27 e il 30 ottobre 2018 una tempesta atlantica di intensità eccezionale colpì il nord-est italiano con raffiche fino a 200 km/h."
 
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-29-tempesta-vaia-2018-vento-foreste-cambiamento-climatico.webp"

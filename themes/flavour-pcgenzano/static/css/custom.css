@@ -544,7 +544,10 @@ table tr:hover { background: #e8f4fd; }
     right: 1.5rem;
   }
 }
-.back-to-top.visible { opacity: 1; visibility: visible; }
+/* Bootstrap Italia rimpicciolisce .back-to-top al 70% (lo riporta a grandezza
+   solo con la sua classe .back-to-top-show, che il sito non usa): nelle pagine
+   statiche il pulsante usciva di 31 px, sotto i 44 richiesti sulla LIM. */
+.back-to-top.visible { opacity: 1; visibility: visible; transform: none; }
 .back-to-top:hover { background: var(--pc-secondary); transform: translateY(-3px); border-color: #ffbe2e; box-shadow: 0 6px 20px rgba(255, 102, 0, 0.6), 0 0 0 2px rgba(255,255,255,0.1) inset; }
 
 /* ── ANIMATIONS ── */
@@ -4591,6 +4594,11 @@ html.a11y-hide-sos-fab .sos-button { display: none !important; }
 html.a11y-hide-translate-button .lang-toggle,
 html.a11y-hide-translate-button #lang-modal { display: none !important; }
 /* ==========================================================================
+ * v2.2 (19/11/2026): sotto i 992 px (stessa soglia della barra in basso e
+ * del SOS 112) il pulsante non si mostra. Sul telefono i pulsanti
+ * flottanti erano sei e coprivano il testo: l'Assistente resta raggiungibile
+ * dal pannello degli strumenti di accessibilità (riquadro in cima) e dal
+ * riquadro di conferma del 112 («Cosa devo fare?»).
  * fine ASSISTENTE FAB v2.1
  * ==========================================================================
  */
@@ -8593,6 +8601,13 @@ html.a11y-contrast-invert .gi-play, html.a11y-contrast-yellow-black .gi-play { b
 .lim-pronto a { color: #003366; font-weight: 600; text-decoration: underline; display: inline-flex; align-items: center; min-height: 44px; }
 .lim-pronto a:focus { outline: 3px solid #ffbe2e; outline-offset: 2px; }
 @media print { .lim-pronto { display: none !important; } }
+/* Nei giochi (barra del gioco, 23/11/2026) il riquadro resta ma in una riga
+   compatta, per lasciare l'altezza della LIM al gioco; il link «Torna ai giochi»
+   in cima ai giochi dell'infanzia è già «Torna al menu» della barra. */
+body.con-barra-gioco .lim-pronto { align-items: center; padding: 0.3rem 0.85rem; margin-bottom: 0.75rem;
+  font-size: 0.875rem; line-height: 1.4; text-align: left; }
+body.con-barra-gioco .lim-pronto-icona { font-size: 1.15rem; margin-top: 0; }
+body.con-barra-gioco .inf-main > nav[aria-label="Percorso"] { display: none; }
 
 /* ==========================================================================
    ILLUSTRAZIONI ANIMATE v1.0 (shortcode illustrazione-udl con «animazione»)
@@ -8660,4 +8675,214 @@ html.a11y-contrast-invert .gi-play, html.a11y-contrast-yellow-black .gi-play { b
 .assistente-volontari .av-anteprima {
   white-space: pre-wrap; overflow-wrap: anywhere; font-family: inherit; font-size: .95rem; color: #1a1a1a;
   background: #fff; border: 2px dashed var(--pc-primary); border-radius: 6px; padding: .75rem; margin: 0;
+}
+
+/* =====================================================================
+   DA GENZANO — riquadro fisso nell'archivio v1.0 (19/11/2026)
+   Le notizie del territorio degli ultimi 30 giorni in cima a
+   /comunicazioni/, sopra l'elenco completo. Stessa famiglia visiva del
+   box strumenti (fondo azzurro, filetto blu a sinistra). Testo #1a1a1a
+   su #e7f0fa = 15,4:1; link #003366 su #e7f0fa = 11,6:1.
+   ===================================================================== */
+.da-genzano-box{background:#e7f0fa;border-left:4px solid #003366;border-radius:6px;padding:1rem 1.25rem}
+.da-genzano-box h2{color:#003366;margin:0 0 .6rem}
+.da-genzano-box li{margin-bottom:.35rem;line-height:1.45}
+.da-genzano-box li a{color:#003366;font-weight:600}
+.da-genzano-box .notizia-data{color:#3d4a57;font-size:.85rem}
+@media print{.da-genzano-box{background:#fff;border-left-color:#000}}
+
+@media (max-width: 991.98px) {
+  .assistente-fab { display: none !important; }
+}
+
+/* Avviso «dato da confermare» dello stato allerta (19/11/2026): il
+   riquadro porta `hidden` finché il controllo è recente, ma la classe
+   d-flex di Bootstrap (display:flex !important) lo mostrava sempre, e la
+   pagina Allerte meteo diceva «potrebbe non rispecchiare il bollettino»
+   anche con una verifica di pochi minuti prima. */
+.allerta-stantia[hidden] { display: none !important; }
+
+/* ==========================================================================
+ * STAMPA 3D NOMINATIVI v2.0 (24/11/2026) — shortcode stampa3d + js/stampa3d.js
+ * Catalogo /stampa-3d/ per gruppi e una pagina per oggetto /stampa-3d/<id>/ con vista 3D che si gira.
+ * Comandi grandi (almeno 48 px) e testo grande, perché la usano volontari di ogni età.
+ * ========================================================================== */
+.s3d-etichetta { font-size: 1.25rem; font-weight: 700; color: #003366; margin-bottom: .2rem; }
+.s3d-aiuto { margin-bottom: .6rem; }
+.s3d-riga { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; }
+.s3d-prefisso { font-size: 1.5rem; font-weight: 700; color: #003366; }
+.s3d-campo { max-width: 9rem; font-size: 1.6rem; font-weight: 700; min-height: 3.2rem; }
+.s3d-cerca { min-height: 3.2rem; font-size: 1.2rem; }
+.s3d-errore { color: #a4161a; font-weight: 600; margin: .5rem 0 0; }
+.s3d-errore:empty { margin: 0; }
+.s3d-stato { margin: .5rem 0 0; }
+.s3d-stato:empty { margin: 0; }
+.s3d-dimentica { font-size: inherit; min-height: 24px; }
+.s3d-guardi { margin-bottom: .6rem; }
+/* Catalogo: una scheda per oggetto con l'anteprima del proprio nominativo */
+.s3d-catalogo { list-style: none; padding: 0; margin: .8rem 0 1.5rem; display: grid; gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); }
+.s3d-voce { position: relative; border: 1px solid #c5ceda; border-radius: 6px; background: #fff; padding: .6rem .8rem .8rem;
+  display: flex; flex-direction: column; gap: .35rem; }
+.s3d-voce img { width: 100%; height: auto; aspect-ratio: 11 / 5; object-fit: contain; background: #eef2f6; border-radius: 4px; }
+.s3d-voce-link { display: flex; flex-direction: column; gap: .4rem; text-decoration: none; color: #003366; }
+.s3d-voce-link::after { content: ""; position: absolute; inset: 0; }
+.s3d-voce-nome { font-weight: 700; font-size: 1.1rem; text-decoration: underline; text-underline-offset: 3px; }
+.s3d-voce-breve { font-size: .95rem; color: #1a1a1a; }
+.s3d-voce:hover, .s3d-voce:focus-within { border-color: #003366; box-shadow: 0 2px 8px rgba(0, 51, 102, .15); }
+.s3d-voce-link:focus-visible { outline: none; }
+.s3d-voce:focus-within { outline: 3px solid #ffbe2e; outline-offset: 2px; }
+.s3d-visore { position: relative; width: 100%; max-width: 760px; aspect-ratio: 11 / 5; min-height: 200px;
+  background: #eef2f6; border: 1px solid #c5ceda; border-radius: 6px; overflow: hidden; touch-action: pan-y; }
+.s3d-visore .s3d-immagine { width: 100%; height: 100%; object-fit: contain; display: block; }
+.s3d-visore .s3d-tela { position: absolute; inset: 0; width: 100% !important; height: 100% !important; display: none; cursor: grab; }
+.s3d-visore.s3d-pronto .s3d-tela { display: block; }
+.s3d-caricamento { position: absolute; left: .6rem; bottom: .3rem; margin: 0; font-size: .9rem; color: #3d4a57; }
+.s3d-comandi { display: flex; flex-wrap: wrap; gap: .5rem; margin: .7rem 0 .4rem; max-width: 760px; }
+.s3d-comandi .btn { min-height: 48px; min-width: 48px; font-size: 1.05rem; }
+.s3d-elenco li { margin-bottom: .45rem; }
+.s3d-scheda { max-width: 760px; margin: .8rem 0 0; }
+.s3d-scheda caption { caption-side: top; font-weight: 600; color: #003366; font-style: normal; }
+.s3d-scheda th { width: 34%; font-weight: 600; color: #1a1a1a; }
+.s3d-retro { max-width: 520px; margin: 1rem 0; }
+.s3d-retro img { width: 100%; height: auto; border-radius: 6px; }
+.s3d-retro figcaption { font-size: .95rem; color: #3d4a57; }
+.s3d-tutti { margin: 1.5rem 0; }
+.s3d-tutti summary { cursor: pointer; font-weight: 600; color: #003366; }
+.s3d-griglia { display: grid; grid-template-columns: repeat(auto-fill, minmax(6.5rem, 1fr)); gap: .3rem .8rem;
+  list-style: none; padding: 0; margin: .4rem 0 0; }
+.s3d-griglia a { display: inline-block; padding: .35rem 0; }
+html.a11y-contrast-invert .s3d-etichetta, html.a11y-contrast-invert .s3d-prefisso,
+html.a11y-contrast-invert .s3d-tutti summary, html.a11y-contrast-invert .s3d-voce-link { color: #fff; }
+html.a11y-contrast-yellow-black .s3d-etichetta, html.a11y-contrast-yellow-black .s3d-prefisso,
+html.a11y-contrast-yellow-black .s3d-tutti summary, html.a11y-contrast-yellow-black .s3d-voce-link { color: #ffff00; }
+@media print {
+  .s3d, .s3d-comandi, .s3d-tutti { display: none !important; }
+  .s3d-catalogo { grid-template-columns: repeat(3, 1fr); }
+  .s3d-voce { break-inside: avoid; }
+  .s3d-visore { border: 0; }
+  .s3d-visore .s3d-tela { display: none !important; }
+  .s3d-visore .s3d-immagine { position: static !important; clip: auto !important; width: 100% !important; height: auto !important; }
+}
+
+/* ==========================================================================
+ * STAMPA 3D v2.1 (24/11/2026) — pagina oggetto come i siti di modelli 3D, filtri del catalogo,
+ * nome e cognome (js/stampa3d-nome.js), schede (js/stampa3d.js).
+ * ========================================================================== */
+.s3d-voce[hidden], .s3d-catalogo[hidden], .s3d-comandi[hidden], .s3d-filtri[hidden], .s3d-nome[hidden],
+.s3d-sezione[hidden], .s3d-nessuno[hidden], [data-s3d="scarica-box"][hidden], [data-s3d="scarica-vuoto"][hidden] { display: none !important; }
+/* Catalogo: cerca e gruppi */
+.s3d-filtri { margin: 0 0 1.2rem; padding: 1rem; background: #f4f7fb; border-radius: 6px; }
+.s3d-cerca-catalogo { max-width: 28rem; margin-bottom: .8rem; }
+.s3d-cerca-catalogo .form-control { min-height: 48px; font-size: 1.1rem; }
+.s3d-chip-fila { display: flex; flex-wrap: wrap; gap: .5rem; }
+.s3d-chip { min-height: 44px; padding: .35rem 1rem; border: 2px solid #003366; border-radius: 999px;
+  background: #fff; color: #003366; font-weight: 600; font-size: 1rem; }
+.s3d-chip[aria-pressed="true"] { background: #003366; color: #fff; }
+.s3d-chip[aria-pressed="true"]::before { content: "✓ "; }
+.s3d-chip:focus-visible { outline: 3px solid #ffbe2e; outline-offset: 2px; }
+.s3d-conteggio { margin: .7rem 0 0; font-size: .95rem; color: #3d4a57; }
+.s3d-nessuno { font-weight: 600; }
+.s3d-voce-foto { display: block; }
+.s3d-voce-etichette { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: auto; }
+.s3d-etichetta-misura, .s3d-etichetta-nome { font-size: .82rem; padding: .1rem .5rem; border-radius: 4px;
+  background: #eef2f6; color: #1a1a1a; border: 1px solid #c5ceda; }
+.s3d-etichetta-nome { background: #e7f0fa; color: #003366; border-color: #003366; font-weight: 600; }
+/* Pagina dell'oggetto */
+.s3d-pannello { border: 2px solid #003366; border-radius: 8px; padding: 1.1rem; background: #fff; }
+.s3d-pannello > h2 { color: #003366; margin-bottom: .9rem; }
+.s3d-pannello .s3d-form, .s3d-pannello .s3d-nome { padding-bottom: 1rem; margin-bottom: 1rem; border-bottom: 1px solid #dce3ec; }
+.s3d-facoltativo { font-weight: 400; font-size: 1rem; color: #3d4a57; }
+.s3d-campo-nome { flex: 1 1 12rem; min-height: 3.2rem; font-size: 1.2rem; }
+.s3d-fatti { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem 1rem; margin: 1rem 0 0; padding: 1rem;
+  background: #f4f7fb; border-radius: 6px; }
+.s3d-fatti dt { font-size: .85rem; font-weight: 600; color: #3d4a57; }
+.s3d-fatti dd { margin: 0; font-weight: 600; color: #1a1a1a; }
+.s3d-schede { margin-top: 2rem; }
+.s3d-tab { display: flex; flex-wrap: wrap; gap: .25rem; border-bottom: 2px solid #003366; margin-bottom: 1.2rem; }
+.s3d-tab-voce { min-height: 48px; padding: .5rem 1rem; border: 2px solid transparent; border-bottom: 0; border-radius: 6px 6px 0 0;
+  background: #eef2f6; color: #003366; font-weight: 600; font-size: 1.05rem; margin-bottom: -2px; }
+.s3d-tab-voce[aria-selected="true"] { background: #fff; border-color: #003366; border-bottom: 2px solid #fff; }
+.s3d-tab-voce:focus-visible { outline: 3px solid #ffbe2e; outline-offset: 2px; }
+.s3d-schede-attive .s3d-sezione:focus-visible { outline: 3px solid #ffbe2e; outline-offset: 4px; }
+.s3d-schede:not(.s3d-schede-attive) .s3d-sezione + .s3d-sezione { margin-top: 2rem; }
+@media (max-width: 575.98px) {
+  .s3d-tab-voce { flex: 1 1 45%; text-align: center; font-size: 1rem; padding: .5rem .4rem; }
+  .s3d-fatti { grid-template-columns: 1fr; }
+}
+html.a11y-contrast-invert .s3d-chip, html.a11y-contrast-invert .s3d-tab-voce { background: #000; color: #fff; border-color: #fff; }
+html.a11y-contrast-invert .s3d-chip[aria-pressed="true"], html.a11y-contrast-invert .s3d-tab-voce[aria-selected="true"] { background: #fff; color: #000; }
+html.a11y-contrast-yellow-black .s3d-chip, html.a11y-contrast-yellow-black .s3d-tab-voce { background: #000; color: #ffff00; border-color: #ffff00; }
+html.a11y-contrast-yellow-black .s3d-chip[aria-pressed="true"], html.a11y-contrast-yellow-black .s3d-tab-voce[aria-selected="true"] { background: #ffff00; color: #000; }
+@media print {
+  .s3d-filtri, .s3d-tab, .s3d-pannello { display: none !important; }
+  .s3d-sezione[hidden] { display: block !important; }
+  .s3d-sezione h2.visually-hidden { position: static !important; width: auto !important; height: auto !important; clip: auto !important; margin: 1.5rem 0 .5rem !important; }
+}
+
+/* ==========================================================================
+ * CUCINA IN EMERGENZA v1.0 (24/11/2026) — documenti ufficiali (shortcode cucina-documenti) e catalogo
+ * dei disciplinari DOP, IGP e STG (shortcode disciplinari, js/disciplinari.js).
+ * Nessuno sfondo proprio: testo e bordi sul fondo della pagina, così le modalità di contrasto del
+ * pannello accessibilità valgono senza varianti. Il riquadro dei filtri porta anche .bg-light, che
+ * quelle modalità trattano già come superficie chiara; qui prende la tinta dei riquadri del sito.
+ * ========================================================================== */
+.article-body ul.cuc-doc, .article-body ul.disc-elenco { list-style: none; padding: 0; margin: .6rem 0 1.6rem; }
+.article-body ul.cuc-doc > li, .article-body ul.disc-elenco > li { margin: 0; }
+
+/* Documenti: una scheda per documento, filetto blu a sinistra */
+.cuc-doc-voce { padding: .85rem 0 .85rem 1rem; border-left: 4px solid #003366; }
+.cuc-doc-voce + .cuc-doc-voce { margin-top: .9rem !important; }
+.cuc-doc-voce p { margin: 0; }
+.cuc-doc-titolo { font-size: 1.1rem; font-weight: 700; line-height: 1.35; }
+/* Titoli dei documenti e nomi dei prodotti non si spezzano con il trattino della sillabazione */
+.cuc-doc-titolo, .disc-nome { -webkit-hyphens: manual; hyphens: manual; }
+.cuc-doc-ente { font-size: .95rem; color: #3d4a57; margin-top: .15rem !important; }
+.cuc-doc-testo { margin-top: .4rem !important; }
+/* Avvertenza del documento: filetto ambra e l'etichetta «Da sapere» a parole, non solo l'aspetto */
+.cuc-doc-nota { margin-top: .45rem !important; padding-left: .7rem; border-left: 3px solid #b45309; }
+.cuc-doc-pagina { font-size: .95rem; margin-top: .3rem !important; }
+.cuc-doc-dati { font-size: .9rem; color: #3d4a57; margin-top: .4rem !important; }
+.cuc-doc-formato, .disc-tipo { display: inline-block; font-size: .78rem; font-weight: 700; line-height: 1.5;
+  padding: 0 .4rem; border: 1px solid currentColor; border-radius: 3px; white-space: nowrap; }
+.cuc-doc-formato { margin-right: .35rem; }
+.cuc-verifica { font-size: .95rem; color: #3d4a57; }
+
+/* Catalogo dei disciplinari */
+.disc-riepilogo { margin-bottom: 1.2rem; }
+.disc-filtri { margin: 0 0 1.5rem; padding: 1rem 1.25rem; border-left: 4px solid #003366; border-radius: 6px; }
+.disc-filtri.bg-light { background-color: #f4f7fb !important; }
+.disc-filtri[hidden], .disc-voce[hidden], .disc-gruppo[hidden], .disc-nessuno[hidden], .disc-azzera[hidden],
+.article-body h2[hidden] { display: none !important; }
+.disc-filtri-titolo { font-weight: 700; color: #003366; margin: 0 0 .6rem; }
+.disc-campi { display: flex; flex-wrap: wrap; align-items: flex-end; gap: .75rem 1rem; }
+.disc-campo { display: flex; flex-direction: column; gap: .25rem; flex: 1 1 12rem; min-width: 11rem; }
+/* Bootstrap Italia mette le etichette dei campi in posizione assoluta: qui stanno sopra il campo. */
+.disc-campo label { position: static; transform: none; width: auto; margin: 0; font-size: .95rem; font-weight: 600; color: #1a1a1a; }
+.disc-campo input, .disc-campo select { min-height: 44px; font-size: 1rem; color: #1a1a1a; background-color: #fff;
+  border: 1px solid #5c6f82; border-radius: 4px; padding: .4rem .6rem; width: 100%; }
+.disc-campo select { padding-right: 2rem; }
+.disc-campo input:focus, .disc-campo select:focus, .disc-azzera:focus { outline: 3px solid #ffbe2e; outline-offset: 2px; box-shadow: none; }
+.disc-azzera { min-height: 44px; }
+.disc-conteggio { margin: .75rem 0 0; font-weight: 600; color: #1a1a1a; min-height: 1.5em; }
+.article-body ul.disc-elenco { columns: 2 19rem; column-gap: 2.2rem; }
+.disc-voce { break-inside: avoid; padding: .55rem 0; border-bottom: 1px solid #c5ceda; line-height: 1.4; }
+.disc-nome { font-weight: 600; }
+.disc-tipo { margin-left: .25rem; vertical-align: .08em; }
+.disc-luogo, .disc-dati { display: block; font-size: .9rem; color: #3d4a57; }
+.disc-luogo { margin-top: .1rem; }
+.disc-fonte { font-size: .9rem; color: #3d4a57; margin: -.8rem 0 2rem; }
+.disc-nessuno { font-weight: 600; }
+@media (max-width: 575.98px) {
+  .disc-campo { flex: 1 1 100%; }
+  .disc-azzera { width: 100%; }
+}
+@media print {
+  .disc-voce[hidden], .disc-gruppo[hidden], .article-body h2[hidden] { display: none !important; }
+  .cuc-doc-voce { border-left: 2pt solid #000; break-inside: avoid; }
+  .cuc-doc-nota { border-left: 1.5pt solid #000; }
+  .cuc-doc-voce a[href]::after { word-break: break-all; font-weight: 400; font-size: .85em; }
+  /* Nel catalogo gli indirizzi dei file sono lunghi e tutti simili: in stampa restano i nomi. */
+  .disc-elenco a[href]::after, .disc-fonte a[href]::after, .disc-riepilogo a[href]::after { content: none !important; }
+  .disc-voce { border-bottom: .5pt solid #666; }
 }

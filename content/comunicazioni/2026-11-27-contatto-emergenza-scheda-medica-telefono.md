@@ -3,6 +3,7 @@ title: "Contatto di emergenza e scheda medica sul telefono: come impostarli"
 date: 2026-11-27
 description: "Allergie, farmaci, una persona da avvisare: iPhone e molti Android li mostrano anche a telefono bloccato. Come impostarli in cinque minuti e che cosa scrivere."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-27-contatto-emergenza-scheda-medica-telefono.webp"

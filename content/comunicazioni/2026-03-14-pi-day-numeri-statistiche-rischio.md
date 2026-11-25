@@ -3,6 +3,7 @@ title: "Pi Day: numeri e statistiche dei rischi territoriali"
 date: 2026-03-14
 description: "Il 14 marzo è il Pi Day, giornata internazionale della matematica. Anche la Protezione Civile vive di numeri: statistiche, probabilità."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-03-14-pi-day-numeri-statistiche-rischio.webp"
@@ -51,12 +52,12 @@ I sistemi **GIS** (Geographic Information System) permettono di **sovrapporre** 
 
 Senza pretesa di essere esaustivi, alcuni dati utili sul nostro territorio:
 
-- **Altitudine media**: circa **435 m s.l.m.** (il centro storico).
+- **Altitudine**: da 102 a 496 m s.l.m.; il centro del comune è a **458 m** (ISTAT, 2021).
 - **Superficie comunale**: circa **18 km²**.
 - **Popolazione residente**: circa **24.000 abitanti** (dati ISTAT).
 - **Classificazione sismica**: zona **2B**, con un'accelerazione attesa fra 0,15 e 0,20 g.
 - **Rischio idrogeologico**: versanti con classi di pericolosità variabili nel PAI (Piano di Assetto Idrogeologico).
-- **Rischio incendi AIB**: elevato nei mesi di **giugno-settembre**.
+- **Rischio incendi AIB**: elevato d'estate (campagna AIB 2026: **dal 15 giugno al 15 ottobre**).
 - **Lago di Nemi**: quota circa **316 m**, massima profondità circa **33 m**.
 
 Questi numeri non sono curiosità: sono la **base** su cui si costruiscono scenari, piani, interventi.

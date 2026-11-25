@@ -72,7 +72,7 @@ L'aria all'aperto, ventilata, **non** è un problema: il pericolo è confinato.
 
 ## <i class="bi bi-clipboard-check-fill text-primary me-2" aria-hidden="true"></i>Cosa fare PRIMA {#cosa-fare-prima}
 - Conosci il tuo territorio: se vivi o lavori vicino a Cava dei Selci o ad altre aree note, informati presso il Comune e l'ARPA Lazio.
-- **Areare cantine, scantinati e seminterrati** prima di entrarci dopo periodi di chiusura prolungata. Non entrare in spazi sigillati senza aerare prima.
+- **Aerare cantine, scantinati e seminterrati** prima di entrarci dopo periodi di chiusura prolungata. Non entrare in spazi sigillati senza aerare prima.
 - **Non entrare mai in pozzi** senza autorizzazione e senza personale specializzato con ossimetro. In un pozzo il pericolo può essere un gas asfissiante come la CO₂, non solo l'acqua.
 - Mantieni ben ventilate le caldaie, gli scaldabagni a gas e gli ambienti dove si bruciano combustibili: la CO₂ di origine antropica si somma a qualsiasi residuo geologico.
 - Segna nel piano familiare la presenza di scantinati o cantine e tieni il **112** sempre a portata.
@@ -90,8 +90,8 @@ Se entrando in uno spazio confinato senti **mancanza d'aria, capogiro, nausea, m
 ## <i class="bi bi-activity text-primary me-2" aria-hidden="true"></i>Cosa fare DURANTE — sospetto di scossa sismica {#durante-sismico}
 Le scosse del Vulcano Laziale sono in genere di **magnitudo bassa**: nel catalogo INGV, dal 1985 a oggi, le scosse più forti entro 30 km da Genzano hanno magnitudo 3.9 (aprile 1987, ottobre 1989 e aprile 2008). I comportamenti corretti sono quelli del rischio sismico:
 
-- Durante la scossa: **DROP-COVER-HOLD ON** (a terra, sotto a un riparo solido, mantieni la posizione).
-- Non correre fuori durante la scossa: la maggior parte degli infortuni avviene così.
+- Durante la scossa: **abbassati, copriti, tieniti**: a terra, sotto un riparo solido, e resta in quella posizione finché la scossa non finisce.
+- Non correre fuori durante la scossa: uscendo puoi essere colpito da tegole, vetri o cornicioni che cadono.
 - A scossa terminata, valuta la situazione e raggiungi un'area aperta lontana da edifici, alberi, linee elettriche.
 
 Per i comportamenti completi vedi la pagina dedicata: [Rischio Sismico — cosa fare](/rischi-prevenzione/rischio-sismico/).
@@ -105,7 +105,7 @@ Per i comportamenti completi vedi la pagina dedicata: [Rischio Sismico — cosa 
 {{< cosa-non-fare titolo="Cosa NON fare in caso di sospetto rischio vulcanico (CO₂, sismicità)" >}}
 - **Non entrare** in cantine, pozzi, scantinati o spazi confinati non aerati: la CO₂ è invisibile e inodore.
 - **Non tentare il soccorso** entrando in uno spazio confinato dove qualcuno è privo di sensi senza autorespiratore: diventeresti la seconda vittima. Chiama subito il 112.
-- **Non sottovalutare** una scossa di bassa magnitudo: se è davvero stata avvertita, vale la pena seguire la procedura DROP-COVER-HOLD ON.
+- **Non sottovalutare** una scossa di bassa magnitudo: se è davvero stata avvertita, vale la pena seguire la procedura «abbassati, copriti, tieniti».
 - **Non diffondere** allarmismi su un'imminente "ripresa eruttiva del Vulcano Laziale" basandoti su singole notizie social: il riferimento è il monitoraggio INGV, che pubblica bollettini ufficiali.
 - **Non confondere** la CO₂ (anidride carbonica naturale, dal sottosuolo) con il CO (monossido di carbonio antropico, da caldaie e bruciatori): hanno fonti diverse ma entrambi possono essere letali in spazi confinati. In dubbio, esci, ventila, chiama il 112.
 {{< /cosa-non-fare >}}

@@ -45,9 +45,9 @@ Sul nostro sito la barra in cima alla [homepage](/) mostra **il livello attuale*
 | Colore | Significato | Cosa cambia per te |
 |---|---|---|
 | 🟢 **Verde** | Nessuna criticità attesa | Vita ordinaria. Niente di particolare da fare. |
-| 🟡 **Giallo** | Criticità ordinaria | Attenzione ai temporali isolati, sottopassi, alberi pericolanti. Niente panico. |
-| 🟠 **Arancione** | Criticità moderata | Evita uscite non necessarie nella finestra di allerta. Metti in sicurezza balconi, garage, cantine. Controlla famigliari fragili. |
-| 🔴 **Rosso** | Criticità elevata | Resta in luogo sicuro. Segui solo fonti ufficiali. Non muoverti se non in evacuazione disposta dall'autorità. |
+| 🟡 **Giallo** | Criticità ordinaria | Attenzione ai temporali isolati, sottopassi, alberi pericolanti. |
+| 🟠 **Arancione** | Criticità moderata | Evita uscite non necessarie nella finestra di allerta. Metti in sicurezza balconi, garage, cantine. Chiedi come stanno i familiari anziani o con fragilità. |
+| 🔴 **Rosso** | Criticità elevata | Resta in un luogo sicuro e limita gli spostamenti allo stretto necessario. Segui solo le fonti ufficiali e le indicazioni delle autorità, anche se dispongono un'evacuazione. |
 
 Per il dettaglio sul **nostro territorio** — zone più delicate e azioni per ogni colore — vedi [Allerta meteo: cosa significa a Genzano, colore per colore](/allerte-meteo/cosa-significa-a-genzano/).
 

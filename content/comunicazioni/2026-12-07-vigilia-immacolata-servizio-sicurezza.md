@@ -3,6 +3,7 @@ title: "Vigilia dell'Immacolata: servizio e sicurezza serale"
 date: 2026-12-07
 description: "La sera del 7 dicembre, vigilia dell'Immacolata, è tradizionalmente occasione di manifestazioni religiose. Qualche nota."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-07-vigilia-immacolata-servizio-sicurezza.webp"
@@ -86,7 +87,7 @@ In occasione di eventi affollati:
 
 ### Guida
 - **visibilità** ridotta dopo il tramonto (17:00 circa a Genzano);
-- **luci** anabbaglianti obbligatorie dopo tramonto;
+- **luci** anabbaglianti obbligatorie dopo il tramonto;
 - **attenzione** a pedoni scuri;
 - **pazienza** in aree con mercatini e folla.
 
@@ -96,7 +97,7 @@ In occasione di eventi affollati:
 - **mai incustodite**;
 - **lontane** da tendaggi e tessuti;
 - **supporti** stabili e non infiammabili;
-- **rilevatori fumo** attivi;
+- **rilevatori di fumo** attivi;
 - **spegnerle** prima di dormire.
 
 ### Fuochi d'artificio
@@ -139,8 +140,8 @@ In caso di **malore** o **emergenza** in strada o in casa:
 - **chiamare 112**;
 - **comunicare** con calma posizione esatta;
 - **tenere** linea libera dopo chiamata;
-- **non** muovere ferito in dubbi di trauma;
-- **primo soccorso** di base se formazione.
+- **non** muovere un ferito nel dubbio di un trauma;
+- **primo soccorso** di base se si ha formazione.
 
 ## La Protezione Civile e gli eventi
 

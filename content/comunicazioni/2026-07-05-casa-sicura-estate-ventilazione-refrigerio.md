@@ -3,6 +3,7 @@ title: "Casa sicura in estate: ventilazione, refrigerio, buone abitudini"
 date: 2026-07-05T00:01:00+02:00
 description: "In estate la casa è il primo rifugio dal caldo. Come organizzarla per avere temperature più fresche senza sovraccarico energetico o disagi."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-05-casa-sicura-estate-ventilazione-refrigerio.webp"

@@ -4,6 +4,7 @@ date: 2026-10-05T00:02:00+02:00
 lastmod: 2026-11-17
 description: "Non è ancora legge: la proposta n. 281, sulla Regione Lazio parte civile nei processi per aggressioni ai volontari di PC, ha superato la I Commissione."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-05-regione-lazio-parte-civile-aggressioni-volontari-protezione-civile.webp"

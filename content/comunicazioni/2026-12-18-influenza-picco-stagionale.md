@@ -3,6 +3,7 @@ title: "Influenza stagionale: picco di dicembre-gennaio"
 date: 2026-12-18
 description: "L'influenza raggiunge il suo picco tra dicembre e gennaio. Come prevenirla, riconoscerla e gestirla."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-18-influenza-picco-stagionale.webp"

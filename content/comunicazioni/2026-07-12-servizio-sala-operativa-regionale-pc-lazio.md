@@ -3,6 +3,7 @@ title: "La nostra squadra in servizio alla Sala Operativa regionale della Protez
 date: 2026-07-12T00:03:00+02:00
 description: "La nostra squadra, con una volontaria di Albano Laziale, in servizio alla Sala Operativa della Protezione Civile della Regione Lazio tramite FEPIVOL."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-12-servizio-sala-operativa-regionale-pc-lazio.webp"

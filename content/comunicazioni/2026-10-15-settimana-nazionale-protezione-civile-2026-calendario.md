@@ -3,6 +3,7 @@ title: "Settimana nazionale della Protezione Civile 2026: il calendario degli ev
 date: 2026-10-15T00:03:00+02:00
 description: "Fino al 18 ottobre la Settimana nazionale della Protezione Civile: villaggio a Piazza di Siena, talk, fumetto per le scuole ed esercitazione a Cassino."
 badge: "Evento"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-15-settimana-nazionale-protezione-civile-2026-calendario.webp"

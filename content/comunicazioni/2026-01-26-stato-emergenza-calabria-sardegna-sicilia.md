@@ -3,6 +3,7 @@ title: "Maltempo al Sud: stato di emergenza per Calabria, Sardegna e Sicilia"
 date: 2026-01-26
 description: "Stato di emergenza di 12 mesi per il maltempo iniziato il 18 gennaio. Il Consiglio dei ministri stanzia 100 milioni di euro per i primi interventi."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-01-26-stato-emergenza-calabria-sardegna-sicilia.webp"

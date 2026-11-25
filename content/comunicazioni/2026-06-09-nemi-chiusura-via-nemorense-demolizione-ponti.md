@@ -3,6 +3,7 @@ title: "Tra Genzano e Nemi: via Nemorense e via De Sanctis chiuse dal 9 giugno p
 date: 2026-06-09T00:06:00+02:00
 description: "Dal 9 giugno via Nemorense e via De Sanctis sono chiuse nei due sensi per i lavori di preparazione alla demolizione dei vecchi ponti di Nemi."
 badge: "Avviso"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-09-nemi-chiusura-via-nemorense-demolizione-ponti.webp"

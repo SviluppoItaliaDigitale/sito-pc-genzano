@@ -3,6 +3,7 @@ title: "Anziani soli a Natale: come fare attenzione"
 date: 2026-12-17
 description: "Le feste amplificano la solitudine degli anziani. Come riconoscere il disagio e offrire supporto concreto."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-17-anziani-soli-feste-attenzione.webp"

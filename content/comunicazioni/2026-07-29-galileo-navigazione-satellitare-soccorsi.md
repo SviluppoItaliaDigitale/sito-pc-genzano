@@ -3,6 +3,7 @@ title: "Galileo, il navigatore satellitare europeo che aiuta anche i soccorsi"
 date: 2026-07-29T00:04:00+02:00
 description: "La costellazione europea Galileo cresce con due nuovi satelliti. A cosa serve quando c'è un'emergenza: soccorso, localizzazione del 112, operatività."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-29-galileo-navigazione-satellitare-soccorsi.webp"

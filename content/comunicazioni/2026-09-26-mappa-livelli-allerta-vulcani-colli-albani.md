@@ -3,6 +3,7 @@ title: "Vulcani italiani, online la mappa dei livelli di allerta: il caso dei Co
 date: 2026-09-26T00:03:00+02:00
 description: "Il Dipartimento della Protezione Civile riunisce in una mappa i livelli di allerta dei vulcani italiani. Nessuno supera il giallo. Il caso dei Colli Albani."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-26-mappa-livelli-allerta-vulcani-colli-albani.webp"

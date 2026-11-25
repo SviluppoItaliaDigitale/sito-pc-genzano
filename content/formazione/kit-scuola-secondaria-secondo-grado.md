@@ -10,7 +10,7 @@ Questo kit è rivolto ai docenti della **scuola secondaria di secondo grado** ch
 
 I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma e si prestano all'uso nelle ore di scienze della Terra, geografia, educazione civica, diritto e nei percorsi di formazione scuola-lavoro (fino al 2024/25 chiamati PCTO).
 
-> 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-secondo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-secondo-grado.zip) (~397 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
+> 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-secondo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-secondo-grado.zip) (~1,1 MB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
 
 ---
 
@@ -721,6 +721,31 @@ Schede pronte per la stampa specifiche per la scuola secondaria di secondo grado
 - 👉 [**Notizie false in emergenza**](/formazione/schede-stampabili/fake-news-emergenza-secondaria/) — disinformazione e comunicazione del rischio: regola dei 3 controlli, checklist "prima di condividere", riscrittura di un messaggio allarmistico in forma corretta, mini quiz. *(ed. civica digitale, italiano, sociologia della comunicazione)*
 - 👉 [**La siccità e i dati del clima locale**](/formazione/schede-stampabili/siccita-dati-clima-secondaria2/) — analisi guidata della serie di pioggia annua di Genzano (rianalisi ERA5 via Open-Meteo): deficit idrico, differenza fra siccità meteorologica e idrologica, la siccità come rischio che cresce. *(scienze della Terra, geografia, statistica, ed. civica)*
 - 👉 [**Emergenza inclusiva**](/formazione/schede-stampabili/emergenza-inclusiva-secondaria2/) — aiutare persone con disabilità, fragilità o bisogni specifici senza improvvisare: box "Chiedi/Comunica/Prepara/Rete", modello "scheda bisogni essenziali", verifica inclusiva del percorso, mini quiz. *(ed. civica, scienze umane, inclusione, diritto)*
+
+**Dentro le materie, fuori dall'aula e per crescere** — altre schede per la classe e per gli adulti:
+
+- 👉 [**In gita o in Erasmus: chiedere aiuto in inglese**](/formazione/schede-stampabili/inglese-gite-erasmus/) — le frasi in inglese per chiedere aiuto in viaggio, chiamare il 112 e capire un avviso (livello A2-B1).
+- 👉 [**Prova o emergenza in palestra**](/formazione/schede-stampabili/educazione-fisica-palestra/) — per il docente di educazione fisica: palestra, spogliatoi e campo esterno, la scossa durante la lezione, un alunno che si fa male. *(per il docente)*
+- 👉 [**Per il supplente: la sicurezza della classe**](/formazione/schede-stampabili/kit-docente-supplente/) — da compilare e lasciare sulla cattedra: piano di emergenza, aprifila e chiudifila, punto di raccolta, chi chiamare. *(per il supplente)*
+- 👉 [**Il gas che resta in basso: l'anidride carbonica dei Colli Albani**](/formazione/schede-stampabili/co2-cantine-colli-albani/) — il degassamento dei Colli Albani: perché la CO₂ si raccoglie in basso, segnali e comportamenti prudenti. *(scienze, chimica)*
+- 👉 [**Chi lavora sul rischio: professioni e percorsi**](/formazione/schede-stampabili/orientamento-professioni-rischio/) — orientamento alle professioni della protezione civile, collegato alle Linee guida per l'orientamento (D.M. 328/2022).
+- 👉 [**Decidere sotto incertezza: quattro dilemmi da dibattere**](/formazione/schede-stampabili/dibattito-dilemmi-protezione-civile/) — dilemmi di protezione civile con fatti e fonti, da usare con il metodo del dibattito strutturato.
+- 👉 [**Se il clima ti preoccupa: dalla preoccupazione alle azioni**](/formazione/schede-stampabili/eco-ansia-azione/) — dall'eco-ansia alle azioni concrete di preparazione.
+- 👉 [**La chat in tilt: che cosa inoltro in un'emergenza**](/formazione/schede-stampabili/chat-in-tilt/) — che cosa inoltrare in un'emergenza e la responsabilità di chi inoltra.
+- 👉 [**Il telefono e la radio in emergenza**](/formazione/schede-stampabili/radio-112-telefono/) — 112 da telefono bloccato o senza credito, linee sature, radio e radioamatori.
+- 👉 [**Accanto a un compagno spaventato: il primo aiuto tra pari**](/formazione/schede-stampabili/pronto-soccorso-emotivo-pari/) — il primo aiuto tra pari, dal primo soccorso psicologico dell'OMS (non è terapia).
+- 👉 [**Rubrica dei compiti di realtà di protezione civile**](/formazione/schede-stampabili/rubrica-compiti-realta/) — le stesse cinque voci per valutare prodotto e lavoro di gruppo. *(per il docente)*
+- 👉 [**Controlla, chiama, comprimi: il primo soccorso a misura di età**](/formazione/schede-stampabili/primo-soccorso-eta-kids-save-lives/) — il primo soccorso a misura di età secondo le Linee guida IRC/ERC 2025 e «Kids Save Lives»; non sostituisce un corso.
+- 👉 [**Il percorso da casa a scuola: un'indagine civica**](/formazione/schede-stampabili/indagine-percorso-casa-scuola/) — dalla mappa del tragitto, senza dati personali, alla segnalazione agli enti. *(educazione civica)*
+
+**Prove di evacuazione, famiglie e personale** — schede per la classe e per gli adulti della scuola:
+
+- 👉 [**Quando non si esce: restare al riparo dentro la scuola**](/formazione/schede-stampabili/restare-al-chiuso/) — temporale, fumo, nube o ordine delle autorità: che cosa fa la classe, chi decide, perché le famiglie non devono correre a scuola. Con quattro scenari e soluzioni capovolte.
+- 👉 [**Dopo la prova di evacuazione**](/formazione/schede-stampabili/debriefing-prova-evacuazione/) — 10 minuti per capire come è andata: griglia di osservazione per la classe, domande per il docente, modulo di segnalazione per il referente della sicurezza.
+- 👉 [**Se a scuola scatta un'emergenza — foglio per le famiglie**](/formazione/schede-stampabili/patto-corresponsabilita-emergenze/) — da allegare al Patto di corresponsabilità o ai documenti di inizio anno: che cosa fa la scuola, che cosa fanno i genitori, ritiro dei figli e chiusure. *(per le famiglie)*
+- 👉 [**Assemblea dei genitori: 4 schermate sulle emergenze**](/formazione/schede-stampabili/assemblea-genitori-emergenze/) — da proiettare o stampare all'assemblea di inizio anno: piano e prove, cosa succede in orario scolastico, ritiro e chiusure, piano familiare. *(per le famiglie)*
+- 👉 [**Scheda di evacuazione personalizzata**](/formazione/schede-stampabili/evacuazione-personalizzata-pei/) — modello da compilare con la famiglia, accanto al PEI, per un'alunna o un alunno con disabilità: spostamenti e ausili, chi accompagna, come comunicare, percorso e punto di raccolta. *(per il docente di sostegno)*
+- 👉 [**Prova o emergenza: la scheda per il personale**](/formazione/schede-stampabili/scheda-personale-ata/) — per collaboratori scolastici, mensa ed educatori del pre e post-scuola: il proprio compito, il sostituto, chiavi, quadri e punto di raccolta. *(per il personale)*
 
 **Schede curriculari trasversali** (diritto, scienze, economia, etica, inglese, ed. civica):
 

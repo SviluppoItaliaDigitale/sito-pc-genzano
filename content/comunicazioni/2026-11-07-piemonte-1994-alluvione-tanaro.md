@@ -3,6 +3,7 @@ title: "Piemonte, 5-6 novembre 1994: l'alluvione del Tanaro che cambiò le regol
 date: 2026-11-07
 description: "Alba, Asti, Alessandria, Ceva: nel novembre 1994 il Tanaro e il Po uscirono dagli argini. Da quella tragedia nacquero i piani di assetto idrogeologico."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-07-piemonte-1994-alluvione-tanaro.webp"

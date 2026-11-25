@@ -3,6 +3,7 @@ title: "Sannio, 15 ottobre 2015: quando il Calore allagò Benevento"
 date: 2026-10-15T00:02:00+02:00
 description: "Undici anni fa, il 14 e 15 ottobre 2015, il Calore e i suoi affluenti esondarono nel Sannio. Che cosa successe e che cosa vuol dire un'allerta arancione."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-15-alluvione-sannio-2015-benevento-calore.webp"

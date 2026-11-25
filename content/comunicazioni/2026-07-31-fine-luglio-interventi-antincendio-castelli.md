@@ -3,6 +3,7 @@ title: "Dieci giorni di interventi senza sosta: il fronte antincendio di fine lu
 date: 2026-07-31T00:03:00+02:00
 description: "Dal 21 al 30 luglio le squadre del Gruppo hanno svolto 11 interventi, 10 per incendi di vegetazione, tra Castelli Romani e periferia sud di Roma."
 badge: "Aggiornamento"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-31-fine-luglio-interventi-antincendio-castelli.webp"

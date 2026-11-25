@@ -3,6 +3,7 @@ title: "10 settembre 2017: ricordare Livorno per non ripetere gli errori"
 date: 2026-09-20T00:01:00+02:00
 description: "Nove anni fa Livorno fu colpita da un'alluvione lampo che causò 8 vittime. La memoria di quell'evento impegna tutta la PC a lavorare su prevenzione."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-20-alluvione-livorno-2017-memoria.webp"

@@ -3,6 +3,7 @@ title: "Casteldaccia, 3 novembre 2018: l'alluvione del fiume Milicia e del Paler
 date: 2027-11-03T00:02:00+01:00
 description: "Nove anni fa le piogge mandarono in piena i fiumi del Palermitano e dell'Agrigentino: a Casteldaccia la piena del Milicia fece nove vittime, tredici in tutto."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-11-03-casteldaccia-2018-alluvione-milicia.webp"

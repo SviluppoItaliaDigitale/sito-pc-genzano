@@ -13,7 +13,7 @@ Un incendio nel bosco è un fuoco grande tra alberi ed erba. Il fuoco corre velo
 
 ## Perché riguarda Genzano
 
-Genzano di Roma ha molti boschi, nel Parco dei Castelli Romani. Il periodo più pericoloso va da giugno a settembre. In questi mesi fa caldo e piove poco.
+Genzano di Roma ha molti boschi, nel Parco dei Castelli Romani. Il periodo più pericoloso è l'estate. Nel 2026 va dal 15 giugno al 15 ottobre. In questi mesi fa caldo e piove poco.
 
 Guarda il nostro video. Nel video vedi i Castelli Romani in 3D. Vedi anche come nasce e come corre il fuoco nel bosco.
 

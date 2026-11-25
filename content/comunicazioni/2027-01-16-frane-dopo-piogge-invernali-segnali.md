@@ -3,6 +3,7 @@ title: "Dopo le piogge d'inverno: i segnali di una frana da riconoscere intorno 
 date: 2027-01-16
 description: "Crepe nuove nei muri, muri che si inclinano, piccoli smottamenti: che cosa guardare intorno a casa dopo settimane di pioggia e a chi segnalarlo."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-01-16-frane-dopo-piogge-invernali-segnali.webp"

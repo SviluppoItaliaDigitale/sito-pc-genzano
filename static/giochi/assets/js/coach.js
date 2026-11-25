@@ -22,8 +22,8 @@
       regola: 'Tocca SOLO le cose pericolose. Lascia stare le cose sicure.',
       come: [
         'Guarda bene ogni immagine prima di toccare.',
-        'Se è un fuoco, una presa, un coltello: è pericoloso.',
-        'Se è un libro, un peluche, l\'acqua da bere: è sicuro.'
+        'Se è un fuoco, una presa elettrica, un petardo: è pericoloso.',
+        'Se è un libro, un peluche, la frutta: è sicuro.'
       ],
       teoria: [
         { titolo: 'Cosa fare in emergenza', url: '/cosa-fare-adesso/' }
@@ -87,15 +87,14 @@
     'rifugio-tina': {
       fascia: 'infanzia',
       titolo: 'Consigli per il Rifugio di Tina',
-      regola: 'In emergenza Tina cerca un riparo sicuro: aiutala!',
+      regola: 'Quando trema la terra Tina cerca un riparo sicuro: aiutala!',
       come: [
-        'Sotto al tavolo se trema la terra.',
-        'Lontano dalle finestre se piove forte.',
-        'In un posto basso se c\'è vento o tornado.'
+        'In casa: sotto un tavolo robusto o vicino a un muro portante.',
+        'Lontano da finestre, vetri, specchi e mobili pesanti.',
+        'All\'aperto: lontano da case, alberi, lampioni e fili elettrici.'
       ],
       teoria: [
-        { titolo: 'Cosa fare se trema la terra', url: '/rischi-prevenzione/rischio-sismico/' },
-        { titolo: 'Vento forte', url: '/rischi-prevenzione/vento-forte/' }
+        { titolo: 'Cosa fare se trema la terra', url: '/rischi-prevenzione/rischio-sismico-facile/' }
       ]
     },
     'suoni-emergenza': {
@@ -103,7 +102,7 @@
       titolo: 'Consigli per i Suoni dell\'Emergenza',
       regola: 'Ogni emergenza ha il suo suono. Imparalo!',
       come: [
-        'La sirena dell\'ambulanza ha tre toni.',
+        'La sirena di ambulanza e pompieri ha due note, una bassa e l\'altra alta.',
         'Il tuono fa "boom" dopo il fulmine.',
         'L\'allarme della scuola dice di uscire in ordine.',
         'Con IT-alert il telefono fa un suono speciale: chiama subito un adulto.'
@@ -275,7 +274,7 @@
       come: [
         'Scegli un livello (4, 6 o 8 coppie).',
         'Gira una carta: è un pittogramma o una frase di comportamento.',
-        'Cerca la coppia: la "Scala antincendio" si abbina a "Mai ascensore se c\'è allarme".',
+        'Cerca la coppia: il cartello «Uscita di emergenza» si abbina a «Esci di qua se c\'è allarme».',
         'Dopo ogni coppia leggi la spiegazione del segnale.',
         'Memorizza dove sono le carte già viste per fare meno mosse.'
       ],
@@ -396,7 +395,7 @@
     },
     'emergency-responder': {
       fascia: 'ragazzi',
-      titolo: 'Consigli per Emergency Responder',
+      titolo: 'Consigli per Soccorritore in emergenza',
       regola: 'In emergenza pensi prima alle persone in pericolo, poi alla logistica. Le tue scelte hanno conseguenze. Al COC arriva una chiamata random a partita: famiglia inagibile, falso allarme, turista in inglese.',
       come: [
         'Sicurezza personale prima: non puoi aiutare se ti fai male.',
@@ -781,7 +780,32 @@
       speakBtn.classList.add('coach-speak-btn-mini');
       hintEl.appendChild(speakBtn);
     }
+    var rif = seguente(trigger);
+    var prima = misuraTop(rif);
     trigger.parentNode.insertBefore(hintEl, trigger.nextSibling);
+    tieniFermo(rif, prima);
+  }
+
+  // Il suggerimento sta sopra il gioco: inserito o tolto, spostava tutto il gioco
+  // in giù o in su proprio mentre il bambino tocca la LIM, e il tocco successivo
+  // finiva su un'altra carta o su un link (prova del 23/11/2026). Si compensa lo
+  // scorrimento, così ciò che è sotto il dito resta fermo.
+  function seguente(el) {
+    while (el && !el.nextElementSibling) el = el.parentElement;
+    return el ? el.nextElementSibling : null;
+  }
+  function misuraTop(el) {
+    return el && el.getBoundingClientRect ? el.getBoundingClientRect().top : null;
+  }
+  function tieniFermo(el, prima) {
+    if (prima === null || !el || !el.isConnected) return;
+    var delta = el.getBoundingClientRect().top - prima;
+    if (Math.abs(delta) < 1 || prima > window.innerHeight) return;
+    var html = document.documentElement;
+    var prec = html.style.scrollBehavior;
+    html.style.scrollBehavior = 'auto';
+    window.scrollBy(0, delta);
+    html.style.scrollBehavior = prec;
   }
 
   function clearHint() {
@@ -790,7 +814,10 @@
       if (currentSpeakBtn && hintEl.contains(currentSpeakBtn)) {
         stopSpeaking();
       }
+      var rif = seguente(hintEl);
+      var prima = misuraTop(rif);
       hintEl.parentNode.removeChild(hintEl);
+      tieniFermo(rif, prima);
     }
     hintEl = null;
   }

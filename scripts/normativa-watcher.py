@@ -41,7 +41,7 @@ FONTI SECONDARIE (rassegna stampa, di norma settimanale) — "--fonti news"
 - Google News RSS con query tematiche e site:
 - Feed RSS istituzionali (TGR Lazio)
 - Testate locali e agenzie lette dai loro feed (dal 05/11/2026): Castelli
-  Notizie, Il Mamilio, Il Caffè, Controluce, Terzo Binario, RomaToday,
+  Notizie, Il Mamilio, Il Caffè, Controluce, RomaToday,
   Il Messaggero (Roma), ANSA Lazio e Il Giornale dei Castelli Romani (dalla home);
   riviste giuridiche Giurisprudenza Penale e Diritto.it per le sentenze
 - Ricerche di Google News sulle sentenze in materia di protezione civile
@@ -1361,7 +1361,8 @@ TESTATE_LOCALI = [
     {'nome': 'Il Mamilio', 'feed': 'https://www.ilmamilio.it/wp/feed/', 'wp': True},
     {'nome': 'Il Caffè', 'feed': 'https://www.ilcaffe.tv/feed/', 'wp': True},
     {'nome': 'Controluce', 'feed': 'https://www.controluce.it/feed/', 'wp': True},
-    {'nome': 'Terzo Binario', 'feed': 'https://www.terzobinario.it/feed/', 'wp': True},
+    # Terzo Binario tolto il 22/11/2026: dominio non risolvibile dal 16/11
+    # (name server in delegazione difettosa), nessun nuovo indirizzo.
     {'nome': 'RomaToday', 'feed': 'https://www.romatoday.it/rss', 'wp': False},
     {'nome': 'Il Messaggero (Roma)', 'feed': 'https://www.ilmessaggero.it/rss/roma.xml', 'wp': False},
     {'nome': 'ANSA Lazio', 'feed': 'https://www.ansa.it/lazio/notizie/lazio_rss.xml', 'wp': False},

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: A caccia di strumenti prima che arrivino i volontari — Infanzia e primaria</title>
+  <link rel="canonical" href="https://www.protezionecivilegenzano.it/formazione/schede-stampabili/caccia-strumenti-visita-gruppo/">
+  <meta name="description" content="Scheda fotocopiabile per l'infanzia (5 anni) e la primaria (1ª-2ª), da fare prima della visita dei volontari del Gruppo a scuola: si cercano nella scuola i cartelli di sicurezza, si riconoscono su carta casco, guanti, radio e torcia e si preparano le domande per i volontari.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .cs { font-size: 0.95rem; line-height: 1.45; }
+    .cs p { margin: 0.35rem 0; }
+    .cs .scheda-h2 { margin: 0.7rem 0 0.3rem; }
+    .cs-carte { list-style: none; padding: 0; margin: 0.3rem 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0.4rem; }
+    .cs-carta { border: 1.5px solid var(--scheda-bordo); border-radius: 6px; padding: 0.4rem 0.55rem; display: flex; gap: 0.55rem; align-items: flex-start; }
+    .cs-carta img { width: 64px; height: 64px; flex-shrink: 0; object-fit: contain; }
+    .cs-carta strong { color: var(--scheda-blu); display: block; font-size: 1.02rem; }
+    .cs-carta p { margin: 0.1rem 0 0.25rem; }
+    .cs-segni { display: flex; flex-wrap: wrap; gap: 0.3rem 0.9rem; font-weight: 700; color: var(--scheda-blu); font-size: 0.9rem; }
+    .cs-casella { display: inline-block; width: 1.1rem; height: 1.1rem; border: 2px solid var(--scheda-bordo); border-radius: 3px; vertical-align: middle; margin-right: 0.3rem; }
+    .cs-dove { display: inline-block; min-width: 6rem; border-bottom: 1.5px solid var(--scheda-bordo); height: 1.1rem; }
+    .cs-regole { list-style: none; padding: 0; margin: 0.3rem 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0.35rem; }
+    .cs-regole li { display: flex; gap: 0.5rem; align-items: center; }
+    .cs-regole img { width: 44px; height: 44px; flex-shrink: 0; }
+    .cs-domande { list-style: none; padding: 0; margin: 0.3rem 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0.35rem; }
+    .cs-domande li { border: 1.5px solid var(--scheda-bordo); border-radius: 6px; padding: 0.35rem 0.55rem; display: flex; gap: 0.5rem; align-items: center; }
+    .cs-domande .cs-senza-img { width: 40px; flex-shrink: 0; }
+    .cs-domande img { width: 40px; height: 40px; flex-shrink: 0; object-fit: contain; }
+    .cs-box { border: 2px dashed var(--scheda-bordo); border-radius: 8px; min-height: 5.5rem; padding: 0.35rem 0.55rem; color: var(--scheda-grigio); font-size: 0.85rem; }
+    .cs-box-due { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0.4rem; }
+    .cs-prova { border: 1.5px solid var(--scheda-bordo); border-radius: 6px; padding: 0.4rem 0.6rem; }
+    .cs-prova ul { list-style: none; padding: 0; margin: 0.3rem 0 0; display: flex; flex-wrap: wrap; gap: 0.5rem 1.2rem; }
+    .cs-prova li { display: flex; gap: 0.35rem; align-items: center; }
+    .cs-prova img { width: 40px; height: 40px; }
+    .cs-paura { font-style: italic; }
+    .cs .scheda-docente p { margin: 0.25rem 0; }
+    .cs .soluzione-capovolta { margin-top: 2mm; padding: 2.5mm 4mm; font-size: 0.85rem; }
+    .cs-attribuzione { font-size: 0.72rem; color: var(--scheda-grigio); margin-top: 0.4rem; }
+    @media (max-width: 600px) {
+      .cs-carte, .cs-regole, .cs-domande, .cs-box-due { grid-template-columns: minmax(0, 1fr); }
+    }
+    @media print {
+      .cs-carta img { width: 54px; height: 54px; }
+      .cs-carta { padding: 0.3rem 0.5rem; }
+      .cs-regole img { width: 36px; height: 36px; }
+      .cs-domande img, .cs-domande .cs-senza-img { width: 34px; height: 34px; }
+      .cs-carta, .cs-domande li, .cs-prova, .scheda-docente { break-inside: avoid; }
+      .cs-box { min-height: 3.6rem; }
+      .cs-domande li { padding: 0.25rem 0.5rem; }
+      .cs .scheda-docente { margin-top: 0.5rem; padding: 0.55rem 0.7rem; }
+    }
+    /* Stampa su due fogli A4 (controllo fogli di stampa): testo all'88%
+       e spazi più stretti, così la scheda regge anche i caratteri più larghi. */
+    @media print {
+      html { font-size: 88%; }
+      .scheda-page { padding: 1cm 1.4cm 0.6cm; }
+      .scheda-header { margin-bottom: 0.5rem; padding-bottom: 0.4rem; }
+      .scheda-meta { margin-bottom: 0.5rem; padding: 0.35rem 0.7rem; }
+      .cs .scheda-h2 { margin: 0.45rem 0 0.2rem; }
+      .cs .scheda-intro { margin: 0.2rem 0 0.3rem; }
+      .scheda-footer { padding-top: 2mm; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/" aria-label="Torna alle schede">← Torna alle schede</a>
+    <span class="scheda-titolo">A caccia di strumenti</span>
+    <a class="scheda-lim" href="/lim/" title="Si usa col dito sulla lavagna interattiva della classe, anche a schermo intero, e funziona sui browser delle lavagne meno recenti">Pronto per la LIM</a>
+    <button type="button" onclick="window.print()">Stampa o salva come PDF</button>
+  </div>
+
+  <main>
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">A caccia di strumenti: arrivano i volontari</h1>
+        <div class="scheda-sottotitolo">Infanzia (5 anni) · Primaria (1ª e 2ª) · Foglio 1 di 2</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 5-7 anni</span>
+      <span><strong>Durata:</strong> 45 minuti, prima della visita</span>
+      <span><strong>Campi e discipline:</strong> Il sé e l'altro, Educazione civica</span>
+    </div>
+
+    <div class="cs">
+      <p class="scheda-intro">
+        Presto vengono a scuola i <strong>volontari della protezione civile</strong> di Genzano. Prima di conoscerli andiamo a caccia: cerchiamo nella scuola i cartelli che ci aiutano e impariamo i nomi di alcuni strumenti.
+      </p>
+
+      <h2 class="scheda-h2">1. Cerca nella scuola, con l'insegnante</h2>
+      <p>Quando trovi il cartello, segna la casella. Poi disegna o di' dove l'hai visto.</p>
+      <ul class="cs-carte">
+        <li class="cs-carta">
+          <img src="/pittogrammi/iso7010/uscita-emergenza-sinistra.svg" alt="Cartello verde: un omino che corre verso una porta">
+          <div><strong>Uscita di emergenza</strong>
+            <p>Mostra la porta da cui si esce quando suona l'allarme. Si esce in fila, con l'insegnante.</p>
+            <div class="cs-segni"><span><span class="cs-casella"></span>Trovato</span><span>Dove? <span class="cs-dove"></span></span></div>
+          </div>
+        </li>
+        <li class="cs-carta">
+          <img src="/pittogrammi/iso7010/punto-raccolta.svg" alt="Cartello verde: quattro persone in mezzo e quattro frecce che puntano verso di loro">
+          <div><strong>Punto di raccolta</strong>
+            <p>È il posto, fuori dalla scuola, dove la classe si ritrova dopo essere uscita.</p>
+            <div class="cs-segni"><span><span class="cs-casella"></span>Trovato</span><span>Dove? <span class="cs-dove"></span></span></div>
+          </div>
+        </li>
+        <li class="cs-carta">
+          <img src="/pittogrammi/iso7010/estintore.svg" alt="Cartello rosso: un estintore accanto a delle fiamme">
+          <div><strong>Estintore</strong>
+            <p>Dice dove si trova l'estintore. Lo usano gli adulti che hanno imparato. Se vedi fumo o fuoco, chiami subito un adulto.</p>
+            <div class="cs-segni"><span><span class="cs-casella"></span>Trovato</span><span>Dove? <span class="cs-dove"></span></span></div>
+          </div>
+        </li>
+        <li class="cs-carta">
+          <img src="/pittogrammi/iso7010/cassetta-primo-soccorso.svg" alt="Cartello verde con una croce bianca">
+          <div><strong>Primo soccorso</strong>
+            <p>Dice dove si trova la cassetta per curare le piccole ferite. La apre un adulto.</p>
+            <div class="cs-segni"><span><span class="cs-casella"></span>Trovato</span><span>Dove? <span class="cs-dove"></span></span></div>
+          </div>
+        </li>
+      </ul>
+
+      <h2 class="scheda-h2">2. Che cosa può mostrarci un volontario?</h2>
+      <p>Guarda gli strumenti. Pensi che i volontari li porteranno? Dopo la visita segna quelli che hai visto davvero.</p>
+      <ul class="cs-carte">
+        <li class="cs-carta">
+          <img src="/pittogrammi/arasaac/casco.png" alt="Pittogramma: un casco giallo da lavoro">
+          <div><strong>Casco</strong>
+            <p>Protegge la testa.</p>
+            <div class="cs-segni"><span><span class="cs-casella"></span>Secondo me lo portano</span><span><span class="cs-casella"></span>L'ho visto</span></div>
+          </div>
+        </li>
+        <li class="cs-carta">
+          <img src="/pittogrammi/arasaac/guanti.png" alt="Pittogramma: un paio di guanti rossi">
+          <div><strong>Guanti</strong>
+            <p>Proteggono le mani.</p>
+            <div class="cs-segni"><span><span class="cs-casella"></span>Secondo me li portano</span><span><span class="cs-casella"></span>Li ho visti</span></div>
+          </div>
+        </li>
+        <li class="cs-carta">
+          <img src="/pittogrammi/arasaac/radio.png" alt="Pittogramma: una radio portatile grigia con l'antenna">
+          <div><strong>Radio</strong>
+            <p>Serve ai volontari per parlare fra loro anche da lontano.</p>
+            <div class="cs-segni"><span><span class="cs-casella"></span>Secondo me la portano</span><span><span class="cs-casella"></span>L'ho vista</span></div>
+          </div>
+        </li>
+        <li class="cs-carta">
+          <img src="/pittogrammi/arasaac/torcia.png" alt="Pittogramma: una torcia elettrica nera">
+          <div><strong>Torcia</strong>
+            <p>Fa luce quando è buio. Funziona con le pile.</p>
+            <div class="cs-segni"><span><span class="cs-casella"></span>Secondo me la portano</span><span><span class="cs-casella"></span>L'ho vista</span></div>
+          </div>
+        </li>
+      </ul>
+
+      <p class="cs-attribuzione">Pittogrammi: ARASAAC (arasaac.org), Governo d'Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0; questo foglio eredita la stessa licenza. Segnali di sicurezza ISO 7010 da Wikimedia Commons (pubblico dominio).</p>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "A caccia di strumenti" · Infanzia e primaria · rev. 2026</span>
+    </footer>
+
+  </article>
+
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <div class="scheda-titolo-principale" role="heading" aria-level="2">Le nostre domande per i volontari</div>
+        <div class="scheda-sottotitolo">A caccia di strumenti · Foglio 2 di 2</div>
+      </div>
+    </header>
+
+    <div class="cs">
+      <div class="cs-prova">
+        <p><strong>3. Prova tu.</strong> Fai un cerchio intorno alle due cose che proteggono il corpo del volontario. Puoi anche indicarle con il dito.</p>
+        <ul>
+          <li><img src="/pittogrammi/arasaac/radio.png" alt="Pittogramma: una radio">Radio</li>
+          <li><img src="/pittogrammi/arasaac/casco.png" alt="Pittogramma: un casco">Casco</li>
+          <li><img src="/pittogrammi/arasaac/torcia.png" alt="Pittogramma: una torcia">Torcia</li>
+          <li><img src="/pittogrammi/arasaac/guanti.png" alt="Pittogramma: dei guanti">Guanti</li>
+        </ul>
+      </div>
+
+      <h2 class="scheda-h2">4. Scegliamo le domande</h2>
+      <p>L'insegnante legge le domande. Colora la casella di quelle che vuoi fare ai volontari.</p>
+      <ul class="cs-domande">
+        <li><span class="cs-casella"></span><img src="/pittogrammi/arasaac/casco.png" alt="Pittogramma: un casco"><span>Perché portate il casco?</span></li>
+        <li><span class="cs-casella"></span><img src="/pittogrammi/arasaac/radio.png" alt="Pittogramma: una radio"><span>Come si parla con la radio?</span></li>
+        <li><span class="cs-casella"></span><img src="/pittogrammi/arasaac/aiutare.png" alt="Pittogramma: una persona che aiuta un'altra ad alzarsi"><span>Chi aiutate a Genzano?</span></li>
+        <li><span class="cs-casella"></span><img src="/pittogrammi/arasaac/112.png" alt="Pittogramma: un telefono con il numero 112"><span>Chi chiamo se c'è un pericolo?</span></li>
+        <li><span class="cs-casella"></span><img src="/pittogrammi/arasaac/aiuto.png" alt="Pittogramma: due mani che si tendono l'una verso l'altra"><span>Come si diventa volontari?</span></li>
+        <li><span class="cs-casella"></span><span class="cs-senza-img" aria-hidden="true"></span><span>Con quali mezzi andate ad aiutare?</span></li>
+      </ul>
+
+      <div class="cs-box-due">
+        <div class="cs-box">La mia domanda: la disegno o la dico all'insegnante, che la scrive qui.</div>
+        <div class="cs-box">Dopo la visita: disegno la cosa che mi è piaciuta di più.</div>
+      </div>
+
+      <h2 class="scheda-h2">5. Le regole per l'incontro</h2>
+      <ul class="cs-regole">
+        <li><img src="/pittogrammi/arasaac/ascoltare.png" alt="Pittogramma: una mano dietro l'orecchio per ascoltare"><span>Ascolto i volontari e alzo la mano per parlare.</span></li>
+        <li><img src="/pittogrammi/arasaac/stop.png" alt="Pittogramma: il cartello rosso di stop"><span>Tocco uno strumento solo quando il volontario dice che si può.</span></li>
+      </ul>
+      <p class="cs-paura">Se una cosa ti sembra strana o ti fa paura, dillo all'insegnante o ai volontari: puoi sempre chiedere.</p>
+
+      <div class="scheda-docente">
+        <p><strong>Per il docente.</strong> Fate la scheda una o due settimane prima dell'incontro e leggete voi i testi; i bambini rispondono segnando, indicando, disegnando o a voce. La caccia ai cartelli si fa con l'insegnante, nei percorsi che la scuola permette: è l'occasione per ripassare il punto di raccolta del vostro piano di emergenza.</p>
+        <p><strong>Quando concordate l'incontro</strong> chiedete quali strumenti mostreranno: i volontari mostrano dispositivi di protezione, radio o altri materiali se concordato prima, e non sempre ci sono tutti. Mandate loro le domande scelte. Come chiedere l'incontro: <em>Il Gruppo nella tua scuola</em>; i mezzi del Gruppo sono nella pagina <em>Chi siamo</em>. Per la 3ª-5ª c'è <em>Intervista al volontario</em>; per i soli cartelli, <em>I cartelli della sicurezza</em>.</p>
+        <p><strong>Educazione civica</strong> (Linee guida, D.M. 183/2024): infanzia, il bambino è attento alla propria sicurezza; primaria, traguardi n. 3 e n. 6. Il Gruppo comunale non si attiva su chiamata dei cittadini: in emergenza si chiama il 112.</p>
+      </div>
+
+      <div class="soluzione-capovolta">
+        <span class="titolo">Soluzione per il docente (gira il foglio)</span>
+        <strong>3.</strong> Casco e guanti proteggono il corpo. La radio serve a parlare, la torcia a fare luce. Nella parte 2 del foglio 1 non ci sono risposte giuste.
+      </div>
+
+      <p class="cs-attribuzione">Pittogrammi: ARASAAC (arasaac.org), Governo d'Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0; questo foglio eredita la stessa licenza.</p>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "A caccia di strumenti" · Infanzia e primaria · rev. 2026</span>
+    </footer>
+
+  </article>
+  </main>
+
+</body>
+</html>

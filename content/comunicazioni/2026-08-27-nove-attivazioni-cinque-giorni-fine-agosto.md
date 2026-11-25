@@ -3,6 +3,7 @@ title: "Nove attivazioni in cinque giorni: rami pericolanti, sterpaglie e contai
 date: 2026-08-27T00:02:00+02:00
 description: "Dal 22 al 26 agosto il Gruppo ha operato nove volte: piattaforma aerea su alberi e oggetti sospesi, tre verifiche antincendio e la logistica per FEPIVOL."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-27-nove-attivazioni-cinque-giorni-fine-agosto.webp"

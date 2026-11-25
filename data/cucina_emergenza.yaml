@@ -1,0 +1,200 @@
+# Documenti ufficiali della sezione «Cucina in emergenza» (/cucina-emergenza/).
+#
+# Regola della sezione (Alessandro, 24/11/2026): solo link, verificati uno per uno,
+# a file PDF pubblicati sui siti di enti governativi e istituzionali. Nessuna copia
+# dei file sul nostro sito, nessun sito di terzi.
+#
+# Per ogni documento: titolo come sul frontespizio (abbreviato dove è molto lungo),
+# ente che lo pubblica, indirizzo del PDF, pagine e peso misurati sul file scaricato,
+# descrizione tratta dal suo indice. `nota` è l'avvertenza che la pagina mostra in
+# grassetto: età del documento, a chi è rivolto, che cosa non prenderne come istruzione.
+# `verificato` è il giorno da cui ogni link è stato riletto almeno una volta: lo scrive il controllo,
+# che annota le letture in .manuale/cucina-emergenza-letture.json. Non si cambia a mano.
+# Controllo: python3 scripts/check-cucina-emergenza.py (ogni mese, controllo-cucina-emergenza.yml).
+# Shortcode: {{< cucina-documenti gruppo="…" >}}.
+verificato: "2026-11-25"
+
+gruppi:
+  - id: campo
+    titolo: "Cucine da campo e mense di emergenza"
+    documenti:
+      - id: er-aree-emergenza
+        titolo: "Modello per la gestione delle aree e strutture di emergenza"
+        ente: "Regione Emilia-Romagna"
+        url: "https://salute.regione.emilia-romagna.it/normativa-e-documentazione/piani-e-programmi/piano-per-la-gestione-delle-emergenze-di-sanita-pubblica/gestione-strutture-di-emergenza.pdf"
+        pagine: 45
+        kb: 593
+        testo: "Regole sanitarie per le aree di accoglienza: alloggi, cucina e acqua potabile, rifiuti, infestanti, animali d'affezione. Il capitolo 2 è un manuale di autocontrollo per la cucina del campo."
+        nota: "Il documento non ha una data. Per la candeggina dà dosi diverse da un punto all'altro: non usarle come istruzione. Anche l'acqua non si tratta leggendo il documento: decidono il responsabile della cucina e l'ASL."
+      - id: aq-mense-campi-tenda
+        titolo: "Linee guida per le corrette prassi igieniche nelle mense nei campi tenda"
+        ente: "ASL dell'Aquila, Servizi veterinari, sul sito dell'Istituto Zooprofilattico Sperimentale dell'Abruzzo e del Molise"
+        url: "https://www.izs.it/IZS/Engine/RAServeFile.php/f/pubblicazioni_divulgative/opuscolineeguidamensecampitenda.pdf"
+        pagine: 9
+        kb: 3027
+        testo: "Opuscolo per chi lavora nelle mense dei campi: personale, attrezzature, rifiuti, acqua, alimenti, distribuzione dei pasti, disinfezione degli ambienti."
+        nota: "È del 2009: per le dosi dei disinfettanti segui l'etichetta del prodotto e il responsabile della cucina, non l'opuscolo."
+      - id: lazio-linea-guida-852
+        titolo: "Linea guida applicativa del regolamento (CE) n. 852/2004 sull'igiene dei prodotti alimentari"
+        ente: "Regione Lazio, allegato 1 alla deliberazione della Giunta regionale 14 gennaio 2011, n. 3"
+        url: "https://regione.lazio.it/sites/default/files/documentazione/FOR_DGR_3_14_01_2011_Allegato1_linee_guida.pdf"
+        pagine: 8
+        kb: 236
+        testo: "Spiega come si applica nel Lazio il regolamento europeo sull'igiene degli alimenti. Dice che a verificarne l'applicazione sono le ASL, con i servizi di igiene degli alimenti e della nutrizione (SIAN) e i servizi veterinari."
+        nota: "È del 2011: parla di denuncia di inizio attività (DIA) e richiama due regolamenti europei poi abrogati (854/2004 e 882/2004). Per la registrazione e per le regole di oggi chiedi all'ASL."
+      - id: oms-cinque-punti
+        titolo: "Cinque punti chiave per alimenti più sicuri. Manuale"
+        ente: "Organizzazione mondiale della sanità, 2006; edizione italiana dell'ASL TO5 di Chieri, sul sito del Ministero della Salute"
+        url: "https://www.salute.gov.it/new/sites/default/files/imported/C_17_pubblicazioni_2341_allegato.pdf"
+        pagine: 32
+        kb: 636
+        testo: "Le cinque regole di base dell'OMS: pulizia, separazione fra crudo e cotto, cottura, temperatura di conservazione, acqua e materie prime sicure. È un manuale per chi fa formazione."
+      - id: ue-haccp-2022
+        titolo: "Comunicazione della Commissione sull'attuazione dei sistemi di gestione per la sicurezza alimentare (2022/C 355/01)"
+        ente: "Commissione europea, Gazzetta ufficiale dell'Unione europea C 355 del 16 settembre 2022"
+        url: "https://eur-lex.europa.eu/legal-content/IT/TXT/PDF/?uri=CELEX:52022XC0916%2801%29"
+        pagine: 58
+        kb: 1639
+        testo: "Guida all'applicazione delle corrette prassi igieniche e delle procedure basate sui principi dell'HACCP, con le semplificazioni previste per alcune imprese alimentari."
+
+  - id: allergeni
+    titolo: "Allergeni e celiachia"
+    documenti:
+      - id: salute-allergie-2018
+        titolo: "Allergie alimentari e sicurezza del consumatore. Documento di indirizzo e stato dell'arte"
+        ente: "Ministero della Salute, 2018"
+        url: "https://www.salute.gov.it/new/sites/default/files/imported/C_17_pubblicazioni_2788_allegato.pdf"
+        pagine: 150
+        kb: 2829
+        testo: "Aspetti clinici, norme di etichettatura, valutazione e gestione del rischio. Il paragrafo B 1.3 riguarda il consumatore allergico nella ristorazione collettiva."
+      - id: salute-allergie-faq
+        titolo: "Allergie alimentari e sicurezza del consumatore. Domande e risposte più frequenti"
+        ente: "Ministero della Salute, 2018"
+        url: "https://www.salute.gov.it/new/sites/default/files/imported/C_17_pubblicazioni_2788_ulterioriallegati_ulterioreallegato_0_alleg.pdf"
+        pagine: 12
+        kb: 674
+        testo: "Allegato al documento di indirizzo: le risposte alle domande più comuni sulle allergie alimentari."
+      - id: reg-1169-2011
+        titolo: "Regolamento (UE) n. 1169/2011 sulla fornitura di informazioni sugli alimenti ai consumatori"
+        ente: "Unione europea, testo consolidato al 1° aprile 2025 su EUR-Lex"
+        url: "https://eur-lex.europa.eu/legal-content/IT/TXT/PDF/?uri=CELEX:02011R1169-20250401"
+        pagine: 60
+        kb: 667
+        testo: "L'allegato II elenca le sostanze o i prodotti che provocano allergie o intolleranze. L'articolo 44 riguarda gli alimenti non preimballati. Fra le «collettività» il regolamento comprende le mense."
+      - id: reg-828-2014
+        titolo: "Regolamento di esecuzione (UE) n. 828/2014 sull'informazione dei consumatori sull'assenza di glutine o sulla sua presenza in misura ridotta negli alimenti"
+        ente: "Commissione europea, 30 luglio 2014, su EUR-Lex"
+        url: "https://eur-lex.europa.eu/legal-content/IT/TXT/PDF/?uri=CELEX:32014R0828"
+        pagine: 4
+        kb: 329
+        testo: "Stabilisce quando un alimento può riportare le diciture «senza glutine» e «con contenuto di glutine molto basso»."
+
+  - id: pasti
+    titolo: "Pasti per molte persone"
+    documenti:
+      - id: salute-ristorazione-collettiva
+        titolo: "Linee di indirizzo nazionale per la ristorazione ospedaliera, assistenziale e scolastica"
+        ente: "Ministero della Salute"
+        url: "https://www.salute.gov.it/new/sites/default/files/imported/C_17_pubblicazioni_3141_allegato.pdf"
+        pagine: 65
+        kb: 1210
+        testo: "Ruolo e finalità della ristorazione collettiva, organizzazione e gestione del servizio, verifica della qualità, nutrizione, comunicazione."
+        nota: "Sono scritte per le mense di ospedali, residenze e scuole: aiutano a capire come si organizza una mensa, non come si cucina in un campo."
+      - id: crea-linee-guida-2018
+        titolo: "Linee guida per una sana alimentazione. Revisione 2018"
+        ente: "CREA, Centro di ricerca Alimenti e nutrizione"
+        url: "https://www.crea.gov.it/documents/59764/0/LINEE-GUIDA+DEFINITIVO.pdf"
+        pagine: 231
+        kb: 3967
+        testo: "Le raccomandazioni italiane per l'alimentazione equilibrata della popolazione sana. Aiutano a comporre menu vari e bilanciati."
+        nota: "Non parlano di cucina in emergenza: sono una lettura di approfondimento."
+
+  - id: donazioni
+    titolo: "Donazioni e sprechi"
+    documenti:
+      - id: ue-donazioni-2017
+        titolo: "Orientamenti dell'UE sulle donazioni alimentari (2017/C 361/01)"
+        ente: "Commissione europea, Gazzetta ufficiale dell'Unione europea C 361 del 25 ottobre 2017"
+        url: "https://eur-lex.europa.eu/legal-content/IT/TXT/PDF/?uri=CELEX:52017XC1025%2801%29"
+        pagine: 29
+        kb: 1680
+        testo: "Chiarisce ruoli e obblighi di chi dona e di chi ridistribuisce alimenti: rintracciabilità, responsabilità, igiene, informazioni ai consumatori e date di consumo."
+        nota: "Riguarda le regole europee: per le donazioni valgono anche le norme nazionali."
+      - id: salute-spreco-mense-2018
+        titolo: "Linee di indirizzo rivolte agli enti gestori di mense scolastiche, aziendali, ospedaliere, sociali e di comunità, al fine di prevenire e ridurre lo spreco connesso alla somministrazione degli alimenti"
+        ente: "Ministero della Salute, 16 aprile 2018"
+        url: "https://www.salute.gov.it/new/sites/default/files/imported/C_17_pubblicazioni_2748_allegato.pdf"
+        pagine: 18
+        kb: 636
+        testo: "Scritte per chi gestisce una mensa: decaloghi per la ristorazione ospedaliera, scolastica e aziendale, indicatori per misurare lo spreco, glossario e risposte alle domande più frequenti."
+
+  - id: regolamenti
+    titolo: "Regolamenti europei di base"
+    documenti:
+      - id: reg-852-2004
+        titolo: "Regolamento (CE) n. 852/2004 sull'igiene dei prodotti alimentari"
+        ente: "Unione europea, testo consolidato al 24 marzo 2021 su EUR-Lex"
+        url: "https://eur-lex.europa.eu/legal-content/IT/TXT/PDF/?uri=CELEX:02004R0852-20210324"
+        pagine: 25
+        kb: 349
+        testo: "Le regole generali di igiene per chi tratta alimenti. Nell'allegato II, il capitolo III riguarda le strutture mobili o temporanee, come padiglioni e chioschi."
+      - id: reg-178-2002
+        titolo: "Regolamento (CE) n. 178/2002 sui principi e i requisiti generali della legislazione alimentare"
+        ente: "Unione europea, testo consolidato al 1° gennaio 2026 su EUR-Lex"
+        url: "https://eur-lex.europa.eu/legal-content/IT/TXT/PDF/?uri=CELEX:02002R0178-20260101"
+        pagine: 50
+        kb: 607
+        testo: "Fissa i principi di base della sicurezza alimentare. Gli articoli 17 e 18 riguardano gli obblighi di chi tratta alimenti e la rintracciabilità."
+
+  - id: vini
+    titolo: "Vini DOP e IGP"
+    documenti:
+      - id: masaf-vini-dop
+        titolo: "Elenco alfabetico dei vini DOP italiani"
+        ente: "Ministero dell'agricoltura, della sovranità alimentare e delle foreste"
+        url: "https://www.masaf.gov.it/flex/cm/pages/ServeAttachment.php/L/IT/D/1%252Fd%252F5%252FD.fd1629819dea12c20cf4/P/BLOB%3AID%3D4625/E/pdf?mode=download"
+        pagine: 9
+        kb: 479
+        scarica: true
+        testo: "Per ogni vino: menzione tradizionale (DOC o DOCG), numero del fascicolo europeo e regione."
+      - id: masaf-vini-igp
+        titolo: "Elenco alfabetico dei vini IGP italiani"
+        ente: "Ministero dell'agricoltura, della sovranità alimentare e delle foreste"
+        url: "https://www.masaf.gov.it/flex/cm/pages/ServeAttachment.php/L/IT/D/1%252F5%252Ff%252FD.e4c1a674e6ce4cccb8ba/P/BLOB%3AID%3D4625/E/pdf?mode=download"
+        pagine: 3
+        kb: 255
+        scarica: true
+        testo: "Per ogni vino: menzione tradizionale (IGT), numero del fascicolo europeo e regione."
+
+  - id: pat
+    titolo: "Prodotti agroalimentari tradizionali (PAT)"
+    documenti:
+      - id: masaf-pat-decreto-2026
+        titolo: "Aggiornamento dell'Elenco nazionale dei prodotti agroalimentari tradizionali"
+        ente: "Ministero dell'agricoltura, della sovranità alimentare e delle foreste, decreto del 6 febbraio 2026"
+        url: "https://www.masaf.gov.it/flex/cm/pages/ServeAttachment.php/L/IT/D/1%252F1%252F1%252FD.a454da9df77687374318/P/BLOB%3AID%3D24151/E/pdf?mode=download"
+        pagine: 2
+        kb: 235
+        scarica: true
+        testo: "Il decreto che aggiorna l'elenco nazionale, diviso per regioni e province autonome. L'elenco completo è l'allegato I, un foglio di calcolo pubblicato nella stessa pagina del Ministero."
+        pagina:
+          testo: "Pagina del Ministero con il decreto e l'allegato"
+          url: "https://www.masaf.gov.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/24151"
+      - id: arsial-pat-lazio-2026
+        titolo: "Prodotti agroalimentari tradizionali del Lazio, elenco 2026"
+        ente: "ARSIAL, Agenzia regionale per lo sviluppo e l'innovazione dell'agricoltura del Lazio"
+        url: "https://www.arsial.it/wp-content/uploads/2026/06/PAT-Lazio_2026.xlsx.pdf"
+        pagine: 6
+        kb: 83
+        testo: "I 520 prodotti tradizionali del Lazio, divisi per tipologia: è la parte del Lazio dell'elenco nazionale, allegato I al decreto del Ministero del 6 febbraio 2026. Un asterisco accanto al nome segnala, come dice la nota in fondo all'elenco, una deroga alle norme igienico-sanitarie."
+
+  - id: denominazioni
+    titolo: "Le regole europee su DOP, IGP e STG"
+    documenti:
+      - id: reg-2024-1143
+        titolo: "Regolamento (UE) 2024/1143 sulle indicazioni geografiche dei vini, delle bevande spiritose e dei prodotti agricoli e sulle specialità tradizionali garantite"
+        ente: "Unione europea, testo consolidato al 18 marzo 2026 su EUR-Lex"
+        url: "https://eur-lex.europa.eu/legal-content/IT/TXT/PDF/?uri=CELEX:02024R1143-20260318"
+        pagine: 84
+        kb: 851
+        testo: "Definisce denominazione di origine e indicazione geografica dei prodotti agricoli (articolo 46), dice che cosa devono contenere il disciplinare (articolo 49) e il documento unico (articolo 50) e fissa i criteri per le specialità tradizionali garantite (articolo 53)."

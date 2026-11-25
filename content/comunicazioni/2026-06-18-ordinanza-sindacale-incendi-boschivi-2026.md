@@ -3,6 +3,7 @@ title: "Incendi boschivi: l'ordinanza del Sindaco per l'estate 2026. Divieti e o
 date: 2026-06-18T00:02:00+02:00
 description: "Ordinanza Sindacale n. 14 del 17 giugno 2026: stato di grave pericolosità incendi boschivi a Genzano fino al 15 ottobre. Cosa è vietato e cosa devi fare."
 badge: "Avviso"
+canale: "territorio"
 priorita: normale
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-18-ordinanza-sindacale-incendi-boschivi-2026.webp"

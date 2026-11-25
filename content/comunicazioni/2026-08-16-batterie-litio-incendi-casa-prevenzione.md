@@ -3,6 +3,7 @@ title: "Batterie al litio: l'incendio che non si spegne soffocandolo"
 date: 2026-08-16T00:04:00+02:00
 description: "E-bike, monopattini e powerbank in carica: perché le batterie al litio bruciano in modo diverso, come si previene e cosa fare se succede."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-16-batterie-litio-incendi-casa-prevenzione.webp"

@@ -3,6 +3,7 @@ title: "Dove e come costruiamo: il rischio visto dall'urbanista"
 date: 2026-11-24T00:02:00+01:00
 description: "Il rischio nasce anche dalle scelte su dove e come costruire. Mappe di frane e terremoti, consumo di suolo, piani comunali: il caso di Genzano."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-24-dove-costruiamo-urbanistica-e-rischio.webp"

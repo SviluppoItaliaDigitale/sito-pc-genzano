@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Controlla, chiama, comprimi — il primo soccorso a misura di età</title>
+  <link rel="canonical" href="https://www.protezionecivilegenzano.it/formazione/schede-stampabili/primo-soccorso-eta-kids-save-lives/">
+  <meta name="description" content="Scheda fotocopiabile per la 5ª primaria, la secondaria di primo e di secondo grado. Che cosa può fare un ragazzo se una persona crolla e non risponde: controllare, chiamare il 112, cercare il defibrillatore, comprimere il torace come insegna un corso. Secondo le Linee guida IRC 2025 e l'iniziativa «Kids Save Lives». Non sostituisce un corso con istruttori.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .ks { font-size: 0.95rem; line-height: 1.45; }
+    .ks p { margin: 0.35rem 0; }
+    .ks .scheda-h2 { margin: 0.65rem 0 0.3rem; }
+    .ks-passi { list-style: none; padding: 0; margin: 0.3rem 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 0.4rem; }
+    .ks-passi > li { border: 1.5px solid var(--scheda-bordo); border-radius: 6px; padding: 0.4rem 0.55rem; }
+    .ks-passi img { width: 44px; height: 44px; display: block; margin-bottom: 0.2rem; }
+    .ks-passi > li > strong { color: var(--scheda-blu); display: block; font-size: 1.05rem; }
+    .ks-passi ul { margin: 0.15rem 0 0; padding-left: 1rem; }
+    .ks-passi ul li { margin: 0.1rem 0; }
+    .ks-dae { display: flex; gap: 0.6rem; align-items: center; margin-top: 0.4rem; padding: 0.4rem 0.7rem; border-left: 4px solid var(--scheda-verde); background: #e9f5ee; border-radius: 0 6px 6px 0; }
+    .ks-dae img { width: 52px; height: 52px; flex-shrink: 0; }
+    .ks-eta { width: 100%; border-collapse: collapse; margin: 0.3rem 0; font-size: 0.88rem; }
+    .ks-eta th, .ks-eta td { border: 1px solid var(--scheda-bordo); padding: 0.3rem 0.45rem; vertical-align: top; text-align: left; }
+    .ks-eta thead th { background: #f1f5f9; color: var(--scheda-blu); }
+    .ks-eta tbody th { width: 30%; color: var(--scheda-blu); }
+    .ks-tecnica { margin-top: 0.4rem; padding: 0.4rem 0.7rem; border: 1.5px dashed var(--scheda-blu); border-radius: 6px; font-size: 0.9rem; }
+    .ks-tecnica ul { margin: 0.15rem 0; padding-left: 1.1rem; }
+    .ks-avviso { margin-top: 0.45rem; padding: 0.45rem 0.7rem; background: #fdecee; border-left: 4px solid var(--scheda-rosso); border-radius: 0 6px 6px 0; font-size: 0.9rem; }
+    .ks-avviso strong:first-child { color: var(--scheda-rosso); }
+    .ks-ordine { list-style: none; padding: 0; margin: 0.3rem 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0.35rem; }
+    .ks-ordine li { border: 1.5px solid var(--scheda-bordo); border-radius: 6px; padding: 0.35rem 0.55rem; display: flex; gap: 0.5rem; align-items: center; }
+    .ks-casella { display: inline-block; width: 1.6rem; height: 1.6rem; border: 2px solid var(--scheda-bordo); border-radius: 4px; flex-shrink: 0; }
+    .ks-scenario { border: 1.5px solid var(--scheda-bordo); border-radius: 6px; padding: 0.45rem 0.6rem; margin: 0.4rem 0; }
+    .ks-scenario p { margin: 0 0 0.15rem; }
+    .ks-righe { border-bottom: 1.5px solid var(--scheda-bordo); height: 1.4rem; margin-top: 0.15rem; }
+    .ks .scheda-docente p { margin: 0.25rem 0; }
+    .ks .soluzione-capovolta { margin-top: 2mm; padding: 2.5mm 4mm; font-size: 0.85rem; }
+    .ks-attribuzione { font-size: 0.72rem; color: var(--scheda-grigio); margin-top: 0.4rem; }
+    .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+    @media (max-width: 600px) { .ks-passi, .ks-ordine { grid-template-columns: minmax(0, 1fr); } }
+    @media print {
+      .ks-passi img { width: 30px; height: 30px; margin-bottom: 0.1rem; }
+      .ks-dae img { width: 40px; height: 40px; }
+      .ks-eta td, .ks-eta th { padding: 0.15rem 0.4rem; }
+      .ks-tecnica, .ks-avviso, .ks-dae { padding: 0.3rem 0.6rem; margin-top: 0.3rem; }
+      .ks-scenario { margin: 0.25rem 0; padding: 0.3rem 0.55rem; }
+      .ks-righe { height: 1.2rem; }
+      .ks .soluzione-capovolta { padding: 2mm 3mm; }
+      .ks-passi > li, .ks-eta, .ks-tecnica, .ks-avviso, .ks-scenario, .scheda-docente { break-inside: avoid; }
+    }
+    /* Stampa su due fogli A4 (controllo fogli di stampa): scala del testo all'88%
+       e spazi stretti, così la scheda regge anche i caratteri più larghi. */
+    @media print {
+      html { font-size: 88%; }
+      .scheda-page { padding: 0.7cm 1.3cm 0.3cm; }
+      .scheda-header { margin-bottom: 0.5rem; padding-bottom: 0.4rem; }
+      .scheda-meta { margin-bottom: 0.5rem; padding: 0.35rem 0.7rem; }
+      .scheda-intro { margin: 0.2rem 0 0.3rem; }
+      .scheda-h2 { margin: 0.45rem 0 0.2rem; }
+      .scheda-footer { padding-top: 2mm; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/" aria-label="Torna alle schede">← Torna alle schede</a>
+    <span class="scheda-titolo">Controlla, chiama, comprimi</span>
+    <a class="scheda-lim" href="/lim/" title="Si usa col dito sulla lavagna interattiva della classe, anche a schermo intero, e funziona sui browser delle lavagne meno recenti">Pronto per la LIM</a>
+    <button type="button" onclick="window.print()">Stampa o salva come PDF</button>
+  </div>
+
+  <main>
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Controlla, chiama, comprimi</h1>
+        <div class="scheda-sottotitolo">Il primo soccorso a misura di età · Primaria (5ª) · Secondaria di primo e di secondo grado · Foglio 1 di 2</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 10-19 anni</span>
+      <span><strong>Durata:</strong> 50 minuti</span>
+      <span><strong>Discipline:</strong> Scienze, Scienze motorie, Educazione civica</span>
+    </div>
+
+    <div class="ks">
+      <p class="scheda-intro">
+        Se una persona crolla e non risponde, il suo cuore può essersi fermato. Chi è vicino può aiutarla subito, anche un ragazzo. Le regole per tutti stanno in tre parole: <strong>controlla, chiama, comprimi</strong>.
+      </p>
+
+      <ul class="ks-passi">
+        <li><img src="/pittogrammi/arasaac/vedere.png" alt="Pittogramma: una testa che guarda in avanti"><strong>1. Controlla</strong>
+          <ul>
+            <li>È sicuro avvicinarsi? Se c'è traffico, fuoco o un filo elettrico, resta lontano e chiama.</li>
+            <li>Chiama la persona ad alta voce e toccale le spalle. Risponde?</li>
+          </ul>
+        </li>
+        <li><img src="/pittogrammi/arasaac/112.png" alt="Pittogramma: una mano che compone il 112 su un telefono cellulare"><strong>2. Chiama</strong>
+          <ul>
+            <li>Se non risponde, grida per chiamare un adulto e chiama il <strong>112</strong> con il vivavoce.</li>
+            <li>Di' dove sei e che la persona non risponde. Non riattaccare: l'operatore ti dice che cosa fare.</li>
+          </ul>
+        </li>
+        <li><img src="/pittogrammi/arasaac/aiutare.png" alt="Pittogramma: una persona che si china ad aiutare chi è a terra"><strong>3. Comprimi</strong>
+          <ul>
+            <li>Se non respira normalmente, si comincia a premere al centro del petto.</li>
+            <li>Lo fa chi l'ha imparato in un corso; l'operatore del 112 guida anche chi non l'ha mai fatto.</li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="ks-dae">
+        <img src="/pittogrammi/iso7010/defibrillatore-dae.svg" alt="Segnale di sicurezza verde del defibrillatore: un cuore con un fulmine e una croce">
+        <span><strong>Il defibrillatore (DAE) lo può usare chiunque.</strong> Mentre qualcuno preme sul petto, un altro va a prenderlo. Si accende e si seguono le istruzioni che dà a voce. Il cartello verde con il cuore dice dove si trova.</span>
+      </div>
+
+      <h2 class="scheda-h2">Che cosa si impara, età per età</h2>
+      <table class="ks-eta">
+        <caption class="visually-hidden">Che cosa i ragazzi possono imparare del primo soccorso nelle diverse età</caption>
+        <thead><tr><th scope="col">Età</th><th scope="col">Che cosa si impara a fare</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Dai 4 anni</th><td>Riconoscere chi non risponde e chiamare aiuto: i primi anelli della catena del soccorso.</td></tr>
+          <tr><th scope="row">Da 10-12 anni</th><td>Con un istruttore e su un manichino, i ragazzi riescono a premere il petto alla profondità giusta.</td></tr>
+          <tr><th scope="row">Secondaria</th><td>Tutta la sequenza, compreso l'uso del DAE, ripetuta in un corso. L'allenamento si ripete ogni anno, perché si dimentica.</td></tr>
+        </tbody>
+      </table>
+
+      <div class="ks-tecnica">
+        <strong>Che cosa insegna il corso sulle compressioni</strong> (Linee guida IRC 2025, persona adulta):
+        <ul>
+          <li>il palmo di una mano al centro del petto, l'altra mano sopra, braccia dritte;</li>
+          <li>si preme a una profondità di 5-6 cm, da 100 a 120 volte al minuto, e si lascia risalire il petto ogni volta;</li>
+          <li>chi non ha imparato le ventilazioni preme senza fermarsi, finché arrivano i soccorsi o il DAE.</li>
+        </ul>
+      </div>
+
+      <div class="ks-avviso avvertenza">
+        <strong>Questa scheda non sostituisce un corso con istruttori.</strong> Le compressioni si provano solo sul manichino, mai su un compagno: su una persona che sta bene fanno male. Per bambini e lattanti la sequenza è diversa e si impara nel corso.
+      </div>
+
+      <p class="ks-attribuzione">Pittogrammi: ARASAAC (arasaac.org), Governo d'Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Segnale del defibrillatore: ISO 7010, rappresentazione di pubblico dominio da Wikimedia Commons.</p>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Controlla, chiama, comprimi" · Primaria e secondaria · rev. 2026</span>
+    </footer>
+
+  </article>
+
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <div class="scheda-titolo-principale" role="heading" aria-level="2">Prova tu: in che ordine?</div>
+        <div class="scheda-sottotitolo">Controlla, chiama, comprimi · Foglio 2 di 2</div>
+      </div>
+    </header>
+
+    <div class="ks">
+      <p><strong>1.</strong> Metti in ordine le azioni, scrivendo un numero da 1 a 6 nella casella. Puoi anche ritagliarle e ordinarle sul banco.</p>
+      <ul class="ks-ordine">
+        <li><span class="ks-casella" aria-label="Casella per il numero"></span><span>Chiamo il 112 con il vivavoce.</span></li>
+        <li><span class="ks-casella" aria-label="Casella per il numero"></span><span>Guardo se è sicuro avvicinarmi.</span></li>
+        <li><span class="ks-casella" aria-label="Casella per il numero"></span><span>Accendo il DAE e seguo la sua voce.</span></li>
+        <li><span class="ks-casella" aria-label="Casella per il numero"></span><span>Chiamo la persona e le tocco le spalle: non risponde.</span></li>
+        <li><span class="ks-casella" aria-label="Casella per il numero"></span><span>Chiedo a qualcuno di andare a prendere il DAE.</span></li>
+        <li><span class="ks-casella" aria-label="Casella per il numero"></span><span>Non respira normalmente: si preme al centro del petto.</span></li>
+      </ul>
+
+      <div class="ks-scenario">
+        <p><strong>2.</strong> Esempio inventato. Durante una partita al campo sportivo il signor Pasquale, l'allenatore, cade a terra. Lo chiamate e non risponde. Siete in tre: Flavio, Silvia e tu. Chi fa che cosa?</p>
+        <div class="ks-righe" aria-label="Spazio per scrivere che cosa fa Flavio"></div>
+        <div class="ks-righe" aria-label="Spazio per scrivere che cosa fa Silvia"></div>
+        <div class="ks-righe" aria-label="Spazio per scrivere che cosa fai tu"></div>
+      </div>
+
+      <div class="ks-scenario">
+        <p><strong>3.</strong> Che cosa dici all'operatore del 112? Scrivi due cose che deve sapere.</p>
+        <div class="ks-righe" aria-label="Spazio per scrivere la risposta"></div>
+      </div>
+
+      <div class="ks-scenario">
+        <p><strong>4.</strong> Nella tua scuola c'è un defibrillatore? Dove? Chiedilo all'insegnante, poi scrivi o disegna il percorso dalla tua aula.</p>
+        <div class="ks-righe" aria-label="Spazio per scrivere la risposta"></div>
+      </div>
+
+      <div class="scheda-docente">
+        <p><strong>Per il docente.</strong> Le indicazioni vengono da fonti ufficiali. <strong>Sequenza, DAE e compressioni:</strong> Italian Resuscitation Council, Linee guida RCP 2025, capitolo 4 «Basic Life Support adulto», versione italiana delle Linee guida ERC 2025 (tre passaggi, vivavoce, operatore che guida, «chiunque può usare un DAE», 5-6 cm, 100-120 al minuto). <strong>Età:</strong> dichiarazione scientifica ILCOR «KIDS SAVE LIVES: Basic Life Support Education for Schoolchildren» (Circulation e Resuscitation, 2023): sequenza raccomandata a tutti gli alunni, primi anelli della catena dai 4 anni, compressioni efficaci sul manichino fra 10 e 12 anni, almeno due ore di allenamento l'anno. <strong>L'iniziativa:</strong> IRC, Linee guida RCP 2025, capitolo 10 «La formazione alla rianimazione»: «Kids Save Lives» è promossa da European Patient Safety Foundation, ERC, ILCOR e World Federation of Societies of Anaesthesiologists, con il patrocinio dell'Organizzazione mondiale della sanità.</p>
+        <p><strong>Avvertenze.</strong> La scheda non sostituisce un corso con istruttori e manichini: usatela per preparare un corso o per ripassare. La sequenza riguarda una persona adulta; per bambini e lattanti vale il capitolo 9 delle Linee guida (pagina del sito <a href="/formazione/primo-soccorso/rcp-bambini-neonati/">Rianimazione nei bambini e nei neonati</a>). Chiedete al dirigente dove sono i DAE della scuola. Nel Lazio si chiama il 112. Approfondimenti: <a href="/formazione/primo-soccorso/">Primo soccorso</a>, <a href="/formazione/primo-soccorso/defibrillatore-dae/">Defibrillatore (DAE)</a>, <a href="/formazione/percorsi-didattici/#percorso-9">percorso 9</a> (quattro ore per la secondaria di secondo grado). Non si valutano paura o coraggio.</p>
+      </div>
+
+      <div class="soluzione-capovolta">
+        <span class="titolo">Soluzioni per il docente (gira il foglio)</span>
+        <strong>1.</strong> sicuro (1), chiamo e tocco le spalle (2), 112 (3), chiedo il DAE (4), premo sul petto (5), accendo il DAE (6); il 3 e il 4 insieme se si è in più persone.
+        <strong>2.</strong> Uno chiama il 112 e un adulto, uno prende il DAE, chi ha fatto un corso preme sul petto seguendo l'operatore.
+        <strong>3.</strong> Dove siete (indirizzo, nome del campo) e che la persona non risponde e non respira normalmente.
+        <strong>4.</strong> Dipende dalla scuola: vale ciò che indica il dirigente.
+      </div>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Controlla, chiama, comprimi" · Primaria e secondaria · rev. 2026</span>
+    </footer>
+
+  </article>
+  </main>
+
+</body>
+</html>

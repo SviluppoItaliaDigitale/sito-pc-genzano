@@ -3,6 +3,7 @@ title: "Allerta, avviso, emergenza: capire le parole della Protezione Civile"
 date: 2026-09-09T00:01:00+02:00
 description: "Le parole della Protezione Civile non sono sinonimi. Distinguere allerta, avviso, emergenza aiuta a reagire in modo corretto."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-09-differenza-allerta-emergenza-linguaggio.webp"

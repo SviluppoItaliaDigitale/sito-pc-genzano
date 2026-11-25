@@ -3,6 +3,7 @@ title: "Incendio di sterpaglie ad Aprilia: le nostre squadre tra le prime sul po
 date: 2026-06-23T00:02:00+02:00
 description: "Le squadre del Gruppo tra le prime ad Aprilia per un incendio di sterpaglie: spegnimento e bonifica accanto ai Vigili del Fuoco e agli altri volontari."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-23-incendio-sterpaglie-aprilia-guardapasso.webp"

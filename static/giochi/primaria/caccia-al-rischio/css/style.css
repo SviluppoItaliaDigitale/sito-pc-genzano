@@ -30,10 +30,28 @@
 }
 .hotspot {
     position: absolute;
+    /* I punti sono <button>: senza sfondo trasparente il browser li dipinge
+       grigio chiaro e coprono proprio il pericolo da trovare (23/11/2026). */
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    -webkit-appearance: none;
+    appearance: none;
     border: 3px dashed rgba(255, 255, 255, 0.6);
     border-radius: 50%;
     cursor: pointer;
     transition: all 0.3s ease;
+}
+/* Area di tocco allargata di 10 px per lato senza spostare il cerchio:
+   sul telefono alcuni punti misurano 35x22 px. */
+.hotspot::before {
+    content: '';
+    position: absolute;
+    top: -10px; right: -10px; bottom: -10px; left: -10px;
+}
+.hotspot:focus-visible {
+    outline: 3px solid #ffbe2e;
+    outline-offset: 2px;
 }
 .hotspot:hover {
     background-color: rgba(255, 255, 0, 0.3);
@@ -63,8 +81,14 @@
 }
 #risks-list li.found {
     text-decoration: line-through;
-    color: #28a745;
+    color: #1b5e20; /* 7,9:1 su bianco; il verde di prima (#28a745) era 3,1:1 */
     font-weight: 700;
+}
+/* Trovato: non solo il colore, anche il segno di spunta */
+#risks-list li.found::before {
+    content: '\2713\00a0';
+    display: inline-block;
+    text-decoration: none;
 }
 /* Box spiegazione del rischio quando trovato */
 .explain-box {
@@ -91,8 +115,11 @@
     to   { opacity: 1; transform: translateY(0); }
 }
 @media (prefers-reduced-motion: reduce) {
-    .explain-box { animation: none; }
+    .explain-box, .hotspot.found { animation: none; }
+    .hotspot, #risks-list li { transition: none; }
 }
+html.a11y-pause-anim .explain-box,
+html.a11y-pause-anim .hotspot.found { animation: none; }
 
 /* Win screen */
 .win-screen-container {
@@ -118,3 +145,10 @@
 .hide {
     display: none !important;
 }
+
+/* Bootstrap Italia, dopo un tocco, mette su pulsanti e fratelli
+   "border-color: inherit !important" (data-focus-mouse): i cerchi
+   diventavano neri. Qui si rimettono i colori del gioco. */
+.scene-container button.hotspot { border-color: rgba(255, 255, 255, 0.75) !important; }
+.scene-container button.hotspot:hover { border-color: rgba(255, 255, 0, 0.8) !important; }
+.scene-container button.hotspot.found { border-color: #1b7a34 !important; }

@@ -2,7 +2,7 @@
 title: "Note Legali"
 description: "Informazioni legali sul sito web della Protezione Civile di Genzano di Roma."
 layout: "single"
-dataUltimaRevisione: "2026-10-24"
+dataUltimaRevisione: "2026-11-24"
 ---
 
 ## Titolarità del sito
@@ -40,7 +40,7 @@ Alcuni materiali hanno una licenza diversa. Controlla sempre l'indicazione sulla
 | Contenuti del Gruppo: testi, articoli, pagine, foto e grafiche, video, podcast, kit, schede, documenti, presentazioni | **CC BY-NC-SA 4.0** | Riuso **non commerciale**, citando la fonte e ridistribuendo con la **stessa licenza**. |
 | Comunicati stampa della [Sala stampa](/sala-stampa/) e foto del Gruppo che li accompagnano | **CC BY-NC-SA 4.0**, con un permesso in più per le testate | Le testate giornalistiche possono pubblicare i comunicati, in tutto o in parte, citando la fonte, e le foto che li accompagnano per illustrare quella notizia. |
 | Dati in formato aperto: [dataset della pagina Open data](/open-data/), [stato del territorio in JSON](/stato-del-territorio/index.json), [feed delle allerte CAP](/allerta-cap.xml) e [stato dell'allerta in JSON](/allerta-stato/index.json) | **CC BY 4.0** | Riuso libero, **anche commerciale**, citando la fonte. Lo richiede la definizione di dati di tipo aperto del [Codice dell'amministrazione digitale](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art1) (articolo 1, comma 1, lettera l-ter). |
-| Codice dei componenti dell'[Open Kit](/open-kit/) | **EUPL 1.2** | La licenza open source dell'Unione europea, scritta per il software. |
+| Codice dei componenti dell'[Open Kit](/open-kit/) e dei progetti di [Elettronica per l'emergenza](/elettronica-emergenza/) (sketch, script e programmi) | **EUPL 1.2** | La licenza open source dell'Unione europea, scritta per il software. |
 | Materiali di altri, anche adattati (per esempio con la fascia blu): foto, pittogrammi ARASAAC, mappe, documenti di enti | **Licenza del titolare** | Valgono le condizioni indicate accanto al materiale o dalla fonte citata. |
 | Loghi del Gruppo e delle affiliazioni | Nessuna licenza libera | Si usano solo come indicato nell'[Area Download](/area-download/). |
 

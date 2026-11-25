@@ -3,6 +3,7 @@ title: "Grandine: un rischio in crescita anche nel Lazio"
 date: 2026-09-05T00:01:00+02:00
 description: "La grandine di settembre può causare danni a persone, auto, colture. Come riconoscere il pericolo e proteggersi."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-05-grandine-rischio-danni-prevenzione.webp"

@@ -3,6 +3,7 @@ title: "Volontari di presidio al saggio di danza nel Parco Sforza Cesarini"
 date: 2026-06-20T00:02:00+02:00
 description: "Sabato 20 giugno, i nostri volontari hanno garantito presidio di sicurezza e antincendio al saggio di danza nel Parco Sforza Cesarini di Genzano."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-20-servizio-saggio-danza-parco-sforza-cesarini.webp"
@@ -15,6 +16,7 @@ social_punti:
   - "Saggio di danza al Parco Sforza Cesarini, sabato 20 giugno 2026, sera."
   - "Presidio di sicurezza, antincendio e primo soccorso per tutta la serata."
   - "In campo Land Rover Defender 130 e Mercedes Atego, mezzo polivalente."
+  - "In serata una verifica in via delle Vigne Nuove: nessun incendio, rientro al parco."
   - "Per qualsiasi emergenza il numero è uno solo: 112."
 draft: false
 ---
@@ -31,7 +33,7 @@ I volontari hanno allestito una **postazione fissa** ai margini dell'area dello 
          alt="Un fuoristrada verde del Gruppo Comunale con la scritta Protezione Civile, parcheggiato su un prato secco del parco; sullo sfondo il palco illuminato del saggio di danza al tramonto, tra i pini."
          caption="La nostra postazione a ridosso dell'area dello spettacolo, al tramonto, prima dell'inizio del saggio. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 
-Con il caldo dell'estate e la vegetazione secca, un evento serale all'aperto richiede anche **attenzione al rischio incendio**. Siamo nel pieno della campagna antincendio boschivo (giugno-settembre) e Genzano rientra nella [Zona AIB 9 dei Castelli Romani](/rischi-prevenzione/rischio-incendio/): per questo il presidio ha incluso la sorveglianza dell'area e la disponibilità immediata dei mezzi di spegnimento.
+Con il caldo dell'estate e la vegetazione secca, un evento serale all'aperto richiede anche **attenzione al rischio incendio**. Siamo nel pieno della campagna antincendio boschivo (nel 2026 dal 15 giugno al 15 ottobre) e Genzano rientra nella [Zona AIB 9 dei Castelli Romani](/rischi-prevenzione/rischio-incendio/): per questo il presidio ha incluso la sorveglianza dell'area e la disponibilità immediata dei mezzi di spegnimento.
 
 ## I mezzi in campo
 
@@ -42,6 +44,12 @@ Per il servizio sono stati impiegati il **Land Rover Defender 130**, fuoristrada
          caption="La postazione con il gazebo dei volontari, il fuoristrada e il mezzo polivalente, pronti per la serata. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 
 La presenza dei mezzi non è scenografica: garantisce che, in caso di necessità, l'intervento parta in pochi istanti, senza tempi di trasferimento.
+
+## Una verifica durante la serata
+
+Poco dopo le 22 è arrivata la segnalazione di un possibile incendio di sterpaglie in **via delle Vigne Nuove**. Tre volontari sono partiti dal parco con il Mercedes Atego per verificare, con l'indicazione di avvisare la Sala Operativa Unificata Permanente (SOUP) della Regione Lazio.
+
+Sul posto non c'era nessun incendio. La squadra è rientrata al Parco Sforza Cesarini per proseguire il servizio. Controllare una segnalazione che poi non si conferma è parte normale del lavoro: se vedi fumo, chiama sempre il **112**.
 
 ## Cosa fa (e cosa non fa) il volontariato durante un evento
 

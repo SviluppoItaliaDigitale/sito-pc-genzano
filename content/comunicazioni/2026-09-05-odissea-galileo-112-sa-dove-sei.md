@@ -3,6 +3,7 @@ title: "Dieci anni per tornare a Itaca: la parodia dell'ESA e il motivo per cui 
 date: 2026-09-05T00:03:00+02:00
 description: "L'Agenzia Spaziale Europea gioca sull'Odissea per spiegare Galileo. Dietro la battuta c'è il sistema che localizza chi chiama il 112."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-05-odissea-galileo-112-sa-dove-sei.webp"
@@ -77,5 +78,5 @@ Ulisse ci ha messo dieci anni. Con Galileo, dice l'Agenzia Spaziale Europea, ce 
 **Fonti istituzionali:**
 
 - [EUSPA — Il 112 e Galileo](https://www.euspa.europa.eu/newsroom-events/news/112-and-galileo-answering-call-and-saving-lives)
-- [ESA — Galileo](https://www.esa.int/Applications/Satellite_navigation/Galileo)
+- [ESA — Che cos'è Galileo](https://www.esa.int/articles/about-us/directorates/resilience-navigation-and-connectivity/navigation/galileo/what-is-galileo)
 - [European GNSS Service Centre](https://www.gsc-europa.eu/)

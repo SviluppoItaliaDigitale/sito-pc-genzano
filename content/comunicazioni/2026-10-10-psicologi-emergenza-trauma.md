@@ -5,6 +5,7 @@ lastmod: 2026-10-20
 description: "Lo psicologo dell'emergenza nella Protezione Civile italiana: ruolo, criteri del Dipartimento, sostegno alle popolazioni colpite e ai volontari."
 
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-10-psicologi-emergenza-trauma.webp"

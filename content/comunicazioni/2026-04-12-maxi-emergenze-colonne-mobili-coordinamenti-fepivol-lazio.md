@@ -3,6 +3,7 @@ title: "Maxi emergenze e colonne mobili: come si organizza l'intervento fuori da
 date: 2026-04-12
 description: "Cos'è una colonna mobile, come si forma entro 6 ore dall'evento, quali attrezzature porta."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-12-maxi-emergenze-colonne-mobili-coordinamenti-fepivol-lazio.webp"
@@ -83,7 +84,7 @@ Vengono **omessi o ridimensionati**:
 
 - i **campi di accoglienza** (nelle alluvioni gli sfollati vengono di norma alloggiati in strutture esistenti, non in tende)
 
-Nel caso del Gruppo Comunale di Genzano, la nostra dotazione per colonne mobili include tipicamente il **Mercedes Atego** con cisterna, un **pickup AIB**, la **motopompa da 1.600 l/min** o analoghe, e il personale volontario disponibile.
+Per una colonna mobile il Gruppo Comunale di Genzano può mettere a disposizione mezzi come il **Mercedes Atego**, mezzo polivalente con impianto antincendio da 6.000 litri, i **fuoristrada 4x4 con modulo antincendio** e l'**idrovora carrellata** in dotazione dalla Regione Lazio, insieme ai volontari disponibili. L'elenco completo dei mezzi è nella pagina [Chi siamo](/chi-siamo/).
 
 ---
 

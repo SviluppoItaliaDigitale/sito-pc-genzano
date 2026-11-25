@@ -3,6 +3,7 @@ title: "Un incendio verso le case e poi i fuochi della Sagra: la domenica dell'a
 date: 2026-09-06T00:02:00+02:00
 description: "Il 6 settembre l'Atego ha fermato le fiamme a due abitazioni in via Cancelliera e in serata ha presidiato i fuochi della Sagra della Porchetta di Ariccia."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-06-cancelliera-incendio-sagra-porchetta-ariccia-fuochi.webp"

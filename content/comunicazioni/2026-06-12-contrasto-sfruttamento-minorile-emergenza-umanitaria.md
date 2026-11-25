@@ -3,6 +3,7 @@ title: "12 giugno: contrasto al lavoro minorile ed emergenze umanitarie"
 date: 2026-06-12T00:01:00+02:00
 description: "Giornata mondiale contro il lavoro minorile: nei campi profughi internazionali i bambini sono particolarmente a rischio di sfruttamento."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-12-contrasto-sfruttamento-minorile-emergenza-umanitaria.webp"

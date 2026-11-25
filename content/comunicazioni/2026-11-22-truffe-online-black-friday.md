@@ -3,6 +3,7 @@ title: "Black Friday e shopping online: attenzione alle truffe"
 date: 2026-11-22T00:01:00+01:00
 description: "Periodo di sconti e acquisti online: cresce anche il numero di truffe. Come riconoscere siti falsi, phishing e proteggere i dati."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-22-truffe-online-black-friday.webp"

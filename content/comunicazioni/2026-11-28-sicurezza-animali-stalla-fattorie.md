@@ -3,6 +3,7 @@ title: "Animali di stalla e fattorie: sicurezza in emergenza"
 date: 2026-11-28
 description: "Nelle fattorie e stalle del territorio, la sicurezza di animali e persone richiede preparazione specifica. Consigli pratici."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-28-sicurezza-animali-stalla-fattorie.webp"

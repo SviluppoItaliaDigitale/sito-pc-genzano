@@ -3,6 +3,7 @@ title: "5 novembre, Giornata mondiale per la consapevolezza sui maremoti: cosa d
 date: 2026-11-05T00:02:00+01:00
 description: "L'ONU dedica il 5 novembre ai maremoti. Anche l'Italia ha un sistema di allerta tsunami: cosa sapere e cosa fare sulle coste del Lazio."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-05-giornata-mondiale-consapevolezza-maremoti.webp"

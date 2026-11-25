@@ -3,6 +3,7 @@ title: "Haiti, 12 gennaio 2010: la più grande operazione internazionale di cui 
 date: 2027-01-12
 description: "Il terremoto di Haiti 2010 (M 7.0) causò 220.000 morti. L'Italia rispose col più grande dispiegamento del Servizio Nazionale fuori dall'Europa."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-01-12-haiti-2010-cooperazione-internazionale-emergenza.webp"

@@ -3,6 +3,7 @@ title: "Rete di Emergenza Metropolitana di Roma: la rete radio dei Municipi"
 date: 2026-05-02T00:02:00+02:00
 description: "La Rete di Emergenza Metropolitana di ARI Roma collega via radio i Municipi di Roma Capitale."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-02-rete-emergenza-metropolitana-roma-radioamatori.webp"

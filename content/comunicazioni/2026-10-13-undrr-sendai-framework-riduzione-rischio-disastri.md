@@ -3,6 +3,7 @@ title: "13 ottobre, Giornata ONU per la riduzione dei disastri: il Sendai Framew
 date: 2026-10-13T00:01:00+02:00
 description: "Nella Giornata Internazionale ONU per la riduzione del rischio di disastri: il Sendai Framework, i suoi obiettivi e cosa può fare ogni comune e cittadino."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-13-undrr-sendai-framework-riduzione-rischio-disastri.webp"

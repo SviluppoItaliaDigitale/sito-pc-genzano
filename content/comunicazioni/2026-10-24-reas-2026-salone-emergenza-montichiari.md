@@ -3,6 +3,7 @@ title: "REAS 2026: il bilancio del Salone dell'emergenza di Montichiari"
 date: 2026-10-24T00:06:00+02:00
 description: "Sensori nei boschi, droni solari, mezzi per le zone allagate: il bilancio del 25° Salone dell'emergenza e la prossima edizione, dal 7 al 9 ottobre 2027."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-24-reas-2026-salone-emergenza-montichiari.webp"

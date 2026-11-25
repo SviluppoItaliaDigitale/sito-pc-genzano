@@ -3,6 +3,7 @@ title: "NISAR, il radar che vede sotto la vegetazione: cosa cambia per frane e t
 date: 2026-09-24T00:03:00+02:00
 description: "Dal 20 luglio 2026 i dati del satellite NASA-ISRO NISAR sono aperti a tutti. Cosa misura, perché conta per frane e terremoti e cosa ancora non fa."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: normale
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-24-nisar-radar-nasa-isro-suolo.webp"

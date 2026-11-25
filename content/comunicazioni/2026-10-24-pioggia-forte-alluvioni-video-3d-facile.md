@@ -94,7 +94,7 @@ Guarda l'allerta di oggi nella pagina [Allerte meteo](/allerte-meteo/).
 
 - Se l'acqua è ferma, esci dall'auto. Vai a piedi in un posto alto.
 - Se l'acqua corre forte, resta nell'auto. Chiama il **112**.
-- Se l'acqua entra nell'auto, sali sul tetto dell'auto.
+- Se l'auto resta bloccata nell'acqua, chiama il 112.
 
 **Dopo:**
 

@@ -44,10 +44,42 @@
     .map-item.active { background: var(--rag-blu); color: #fff; }
     .map-item.used { opacity: .4; pointer-events: none; }
     .map-item i { font-size: 1rem; }
+    .map-item, .zona-btn { min-height: 44px; }
+    .map-container.attesa { box-shadow: 0 0 0 4px #ffbe2e; cursor: crosshair; }
     .clue-box {
       background: #fffbf0; border-left: 4px solid var(--rag-arancio);
       padding: .6rem 1rem; border-radius: 6px; margin-bottom: 1rem;
     }
+
+    /* ── Revisione grafica: elementi già piazzati leggibili (non sbiaditi),
+       segnati da spunta e bordo tratteggiato; a schermo largo mappa e comandi
+       affiancati, così sulla LIM si vedono insieme senza scorrere. */
+    .map-item.used {
+      opacity: 1; pointer-events: none;
+      background: #eef2f7; color: #3d4b5c; border-style: dashed; border-color: #6b7785;
+    }
+    .map-item.used::after { content: "\f272"; font-family: bootstrap-icons; margin-left: .15rem; color: #3d4b5c; }
+    .map-item.active { box-shadow: 0 0 0 3px #ffbe2e; }
+    .map-marker { width: 38px; height: 38px; border-width: 3px; }
+    .map-marker.correct::after, .map-marker.wrong::after {
+      font-family: bootstrap-icons; position: absolute; right: -8px; top: -8px;
+      width: 20px; height: 20px; border-radius: 50%; background: #fff;
+      font-size: .9rem; line-height: 20px; text-align: center;
+    }
+    .map-marker.correct::after { content: "\f26a"; color: #146c43; }
+    .map-marker.wrong::after { content: "\f622"; color: #b02a37; }
+    .zona-btn { font-weight: 600; }
+    @media (min-width: 992px) {
+      .mr-layout { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 1.4rem; align-items: start; }
+      .mr-col-mappa .map-container { margin-bottom: 0; }
+      .mr-col-controlli .zona-btn { flex: 1 1 calc(50% - .5rem); }
+    }
+
+    /* bordo conservato dopo il tocco (vedi giochi.css, --giochi-bordo) */
+    .map-item { --giochi-bordo: var(--rag-blu); }
+    .map-item.used { --giochi-bordo: #6b7785; }
+    .zona-btn { --giochi-bordo: #0066cc; }
+    .zona-btn[data-zona="nessuna"] { --giochi-bordo: #d9364f; }
   </style>
 </head>
 <body class="rag-body" data-coach-game="mappa-rischio">
@@ -77,10 +109,10 @@
             <p>Sulla mappa vedi quattro zone schematiche di Genzano di Roma: <strong>centro storico</strong>, <strong>area del lago</strong> (Lago di Nemi nel cratere vulcanico), <strong>zona residenziale</strong>, <strong>parco/scuole</strong>.</p>
             <ol class="small">
               <li>Seleziona un elemento dalla lista in basso.</li>
-              <li>Clicca sulla mappa dove va posizionato, oppure usa i pulsanti delle zone (funzionano anche da tastiera).</li>
+              <li>Tocca la mappa dove va posizionato, oppure usa i pulsanti delle zone (funzionano anche da tastiera).</li>
               <li>Alla fine verifichi tutti i piazzamenti insieme.</li>
             </ol>
-            <p class="small">⚠️ <strong>Attenzione</strong>: tra gli 8 elementi possono comparire <strong>distrattori</strong> (concetti che non si applicano a Genzano, es. porto marittimo, centrale nucleare). Se li riconosci, mettili in «Non nel piano»: per loro è la risposta giusta.</p>
+            <p class="small"><i class="bi bi-exclamation-triangle-fill text-warning me-1" aria-hidden="true"></i><strong>Attenzione</strong>: tra gli 8 elementi possono comparire <strong>distrattori</strong> (concetti che non si applicano a Genzano, es. porto marittimo, centrale nucleare). Se li riconosci, mettili in «Non nel piano»: per loro è la risposta giusta.</p>
             <p class="small">Pool di 24 elementi: ogni partita ne pesca 8 random — la mappa è diversa ogni volta.</p>
             <p class="small text-muted"><em>Nota didattica: la mappa è una rappresentazione stilizzata. Per il piano reale consulta il Piano di Emergenza Comunale.</em></p>
             <button id="start" class="btn btn-primary btn-lg"><i class="bi bi-play-fill me-1"></i> Inizia</button>
@@ -91,21 +123,26 @@
               <strong><i class="bi bi-info-circle me-1"></i> Obiettivo</strong>: posiziona ogni elemento sulla mappa o in «Non nel piano» (elementi: <strong id="totale-items">8</strong>). Piazzati: <strong id="piazzati-n">0</strong>.
             </div>
 
+            <div class="mr-layout">
+              <div class="mr-col-mappa">
             <div class="map-container" id="map">
               <svg class="map-svg" viewBox="0 0 400 300" role="img" aria-label="Mappa stilizzata di Genzano di Roma" preserveAspectRatio="none">
                 <rect width="400" height="300" fill="#eef4fc"/>
                 <!-- Centro storico (in alto a sinistra, area blu) -->
                 <rect x="40" y="40" width="120" height="100" fill="#cfdff2" stroke="#003366" stroke-width="2"/>
-                <text x="100" y="95" text-anchor="middle" fill="#003366" font-size="14" font-weight="700">CENTRO STORICO</text>
+                <text x="100" y="84" text-anchor="middle" fill="#003366" font-size="16" font-weight="700">CENTRO</text>
+                <text x="100" y="105" text-anchor="middle" fill="#003366" font-size="16" font-weight="700">STORICO</text>
                 <!-- Lago di Nemi (in basso a destra, blu più scuro) -->
                 <ellipse cx="310" cy="215" rx="70" ry="55" fill="#3b8bc8" stroke="#003366" stroke-width="2"/>
-                <text x="310" y="220" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">LAGO</text>
+                <text x="310" y="220" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">LAGO</text>
                 <!-- Zona residenziale (a destra in alto) -->
                 <rect x="210" y="40" width="150" height="90" fill="#e6f0e6" stroke="#2F5A25" stroke-width="2"/>
-                <text x="285" y="90" text-anchor="middle" fill="#2F5A25" font-size="12" font-weight="700">ZONA RESIDENZIALE</text>
+                <text x="285" y="79" text-anchor="middle" fill="#2F5A25" font-size="15" font-weight="700">ZONA</text>
+                <text x="285" y="98" text-anchor="middle" fill="#2F5A25" font-size="15" font-weight="700">RESIDENZIALE</text>
                 <!-- Area verde (in basso a sinistra, parco) -->
                 <rect x="40" y="170" width="140" height="90" fill="#c8e0c8" stroke="#2F5A25" stroke-width="2"/>
-                <text x="110" y="220" text-anchor="middle" fill="#2F5A25" font-size="12" font-weight="700">PARCO / SCUOLE</text>
+                <text x="110" y="209" text-anchor="middle" fill="#2F5A25" font-size="15" font-weight="700">PARCO</text>
+                <text x="110" y="228" text-anchor="middle" fill="#2F5A25" font-size="15" font-weight="700">SCUOLE</text>
                 <!-- Strade -->
                 <line x1="160" y1="90" x2="210" y2="90" stroke="#666" stroke-width="3"/>
                 <line x1="180" y1="140" x2="180" y2="170" stroke="#666" stroke-width="3"/>
@@ -113,22 +150,26 @@
               </svg>
             </div>
 
-            <p class="small mb-2">Seleziona un elemento e clicca sulla mappa:</p>
+              </div>
+              <div class="mr-col-controlli">
+            <p class="small mb-2">Tocca un elemento, poi tocca la mappa:</p>
             <div id="item-pool" class="item-pool"></div>
 
             <p class="small mb-1 mt-2">Oppure scegli la zona con i pulsanti. Se pensi che l'elemento non riguardi Genzano, usa «Non nel piano»:</p>
             <div class="d-flex gap-2 flex-wrap" role="group" aria-label="Piazza l'elemento selezionato in una zona">
-              <button type="button" class="btn btn-outline-primary btn-sm zona-btn" data-zona="centro">Centro storico</button>
-              <button type="button" class="btn btn-outline-primary btn-sm zona-btn" data-zona="residenziale">Zona residenziale</button>
-              <button type="button" class="btn btn-outline-primary btn-sm zona-btn" data-zona="parco">Parco / Scuole</button>
-              <button type="button" class="btn btn-outline-primary btn-sm zona-btn" data-zona="lago">Lago / versanti</button>
-              <button type="button" class="btn btn-outline-danger btn-sm zona-btn" data-zona="nessuna"><i class="bi bi-slash-circle me-1" aria-hidden="true"></i>Non nel piano</button>
+              <button type="button" class="btn btn-outline-primary zona-btn" data-zona="centro">Centro storico</button>
+              <button type="button" class="btn btn-outline-primary zona-btn" data-zona="residenziale">Zona residenziale</button>
+              <button type="button" class="btn btn-outline-primary zona-btn" data-zona="parco">Parco / Scuole</button>
+              <button type="button" class="btn btn-outline-primary zona-btn" data-zona="lago">Lago / versanti</button>
+              <button type="button" class="btn btn-outline-danger zona-btn" data-zona="nessuna"><i class="bi bi-slash-circle me-1" aria-hidden="true"></i>Non nel piano</button>
             </div>
             <div id="discard-list" class="small mt-2" aria-label="Elementi messi in Non nel piano"></div>
 
             <div class="d-flex gap-2 flex-wrap mt-3">
               <button id="verifica" class="btn btn-primary" disabled><i class="bi bi-check-circle me-1"></i> Verifica tutti</button>
               <button id="reset-map" class="btn btn-outline-secondary"><i class="bi bi-arrow-counterclockwise me-1"></i> Ricomincia</button>
+            </div>
+              </div>
             </div>
             <div id="feedback" class="mt-3"></div>
           </div>
@@ -138,6 +179,7 @@
             <h2>Mappa completata</h2>
             <p class="lead">Piazzamenti corretti: <strong><span id="final-ok">0</span></strong> su <strong><span id="final-tot">0</span></strong>.</p>
             <p id="final-msg" class="text-muted"></p>
+            <div id="final-dettagli" class="text-start mt-3"></div>
             <div class="attestato-inject my-3"></div>
             <div class="d-flex flex-wrap justify-content-center gap-2">
               <button id="restart" class="btn btn-primary"><i class="bi bi-arrow-repeat me-1"></i> Nuova mappa</button>
@@ -150,6 +192,7 @@
     </div>
   </main>
   <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/giochi/assets/js/audio-sintetico.js"></script>
   <script src="/app-shared/site-chrome.js"></script>
   <script src="/giochi/assets/js/progressione.js"></script>
   <script src="/giochi/assets/js/attestato.js"></script>
@@ -174,7 +217,7 @@
       { id: 'area-accoglienza', icon: 'bi-house-heart-fill', label: 'Area accoglienza', zona: 'parco', motivo: 'Le aree di accoglienza vanno in spazi aperti, lontani da edifici vulnerabili. Il parco/area scuole è l\'ideale.' },
       { id: 'punto-raccolta', icon: 'bi-geo-fill', label: 'Punto di raccolta', zona: 'parco', motivo: 'I punti di raccolta sono in aree aperte note, come piazze o spazi verdi pubblici.' },
       { id: 'rischio-frana', icon: 'bi-arrow-down-circle-fill', label: 'Rischio frana', zona: 'lago', motivo: 'Le scarpate verso il cratere del lago sono zone a rischio frana, tipiche dei Castelli Romani.' },
-      { id: 'rischio-esondazione', icon: 'bi-water', label: 'Rischio esondazione', zona: 'lago', motivo: 'L\'area del lago e dei bacini collinari è più esposta a esondazioni in caso di piogge intense.' },
+      { id: 'rischio-esondazione', icon: 'bi-water', label: 'Rischio allagamento', zona: 'lago', motivo: 'Con piogge intense e prolungate la conca del lago e le zone basse lungo i fossi possono allagarsi.' },
       { id: 'magazzino-pc', icon: 'bi-box-seam-fill', label: 'Magazzino PC', zona: 'residenziale', motivo: 'I magazzini operativi si collocano dove strade e viabilità permettono l\'accesso ai mezzi.' },
       { id: 'scuola-sicura', icon: 'bi-mortarboard-fill', label: 'Scuola da tutelare', zona: 'parco', motivo: 'Le scuole sono edifici strategici da proteggere. Nella nostra mappa sono nella zona parco/scuole.' },
       { id: 'centro-storico', icon: 'bi-bank', label: 'Patrimonio storico', zona: 'centro', motivo: 'Il centro storico va identificato come zona da tutelare: edifici antichi spesso più fragili al sisma.' },
@@ -184,22 +227,22 @@
       { id: 'coc', icon: 'bi-gear-fill', label: 'COC (Centro Operativo Comunale)', zona: 'residenziale', motivo: 'Il COC si attiva di solito presso il Comune o sede attigua: deve essere raggiungibile e operativa anche durante l\'evento.' },
       { id: 'cisterna-acqua', icon: 'bi-droplet-fill', label: 'Cisterna acqua potabile', zona: 'parco', motivo: 'In emergenza idrica le cisterne mobili si dispiegano in spazi aperti per la distribuzione ai cittadini.' },
       { id: 'caserma-vvff', icon: 'bi-fire', label: 'Caserma Vigili del Fuoco', zona: 'residenziale', motivo: 'Le caserme operative si collocano vicino a strade primarie per uscite rapide.' },
-      { id: 'rischio-incendio-bosco', icon: 'bi-tree-fill', label: 'Rischio incendio bosco', zona: 'parco', motivo: 'Le aree verdi periurbane sono a rischio AIB nei mesi giugno-settembre nel Lazio.' },
+      { id: 'rischio-incendio-bosco', icon: 'bi-tree-fill', label: 'Rischio incendio bosco', zona: 'parco', motivo: 'Le aree verdi periurbane sono a rischio AIB d\'estate: nel Lazio la campagna 2026 va dal 15 giugno al 15 ottobre.' },
       { id: 'rischio-vento', icon: 'bi-wind', label: 'Rischio caduta alberi (vento)', zona: 'parco', motivo: 'In allerta vento gli alberi alti dei parchi possono cadere su strade e marciapiedi.' },
       { id: 'edificio-storico-fragile', icon: 'bi-building-exclamation', label: 'Edificio storico fragile', zona: 'centro', motivo: 'Nel centro storico molti edifici antichi richiedono interventi di consolidamento anti-sismico.' },
       { id: 'via-fuga-principale', icon: 'bi-signpost-2-fill', label: 'Via di fuga principale', zona: 'centro', motivo: 'Le vie di fuga del centro storico portano verso spazi aperti (piazze, parco).' },
       { id: 'zona-sicura-attesa', icon: 'bi-flag-fill', label: 'Zona di attesa quartiere', zona: 'parco', motivo: 'Per ogni quartiere serve una zona di attesa raggiungibile a piedi in pochi minuti.' },
       { id: 'pma', icon: 'bi-bandaid-fill', label: 'Posto Medico Avanzato (PMA)', zona: 'residenziale', motivo: 'Il PMA è un\'unità sanitaria mobile che si dispiega vicino al sito dell\'emergenza con accesso ambulanze.' },
-      { id: 'pendio-instabile', icon: 'bi-triangle-fill', label: 'Pendio instabile', zona: 'lago', motivo: 'I versanti del cratere e dei colli circostanti hanno punti di instabilità geologica monitorati dal CNR-IRPI.' }
+      { id: 'pendio-instabile', icon: 'bi-triangle-fill', label: 'Pendio instabile', zona: 'lago', motivo: 'I versanti ripidi del cratere, su terreni vulcanici, sono più esposti a frane e smottamenti quando piove a lungo.' }
     ];
 
     /* Distrattori: concetti che NON si applicano al territorio di Genzano.
        Quando piazzati, sono sempre sbagliati (zona: 'nessuna') e il feedback
        spiega perche' non c'entrano. Educa alla pianificazione contestuale. */
     var POOL_DISTRATTORI = [
-      { id: 'centrale-nucleare', icon: 'bi-radioactive', label: 'Centrale nucleare', zona: 'nessuna', motivo: 'In Italia non ci sono centrali nucleari attive dal 1990. Genzano non rientra in nessun piano nucleare: questo elemento non si piazza qui.' },
+      { id: 'centrale-nucleare', icon: 'bi-radioactive', label: 'Centrale nucleare', zona: 'nessuna', motivo: 'In Italia non ci sono centrali nucleari attive dal 1990 e a Genzano non ce ne sono. Il piano nazionale per le emergenze radiologiche e nucleari riguarda incidenti in impianti lontani, anche all\'estero: non c\'è un impianto da mettere sulla mappa.' },
       { id: 'porto-marittimo', icon: 'bi-water', label: 'Porto marittimo', zona: 'nessuna', motivo: 'Genzano è sui Castelli Romani, lontano dal mare. Il rischio mareggiate non si applica: questo elemento non si piazza qui.' },
-      { id: 'stazione-metro', icon: 'bi-train-front-fill', label: 'Stazione metropolitana', zona: 'nessuna', motivo: 'Genzano non ha una linea metropolitana. La rete trasporti è basata su autobus e treni regionali Roma-Velletri: questo elemento non si piazza qui.' },
+      { id: 'stazione-metro', icon: 'bi-train-front-fill', label: 'Stazione metropolitana', zona: 'nessuna', motivo: 'Genzano non ha una linea metropolitana: questo elemento non si piazza qui.' },
       { id: 'fabbrica-seveso', icon: 'bi-building-fill-exclamation', label: 'Stabilimento Seveso (chimico)', zona: 'nessuna', motivo: 'Il rischio chimico-industriale (Direttiva Seveso) riguarda aree con grandi stabilimenti. Genzano non ne ha: questo elemento non si piazza qui.' }
     ];
 
@@ -231,7 +274,18 @@
         feedback = document.getElementById('feedback');
 
     var active = null;
+    // Dopo un cambio di schermata, per 400 ms nessun tocco arriva a pulsanti o
+    // link: il secondo tocco di un doppio tocco cadrebbe su cio' che e' comparso
+    // sotto il dito (la scena nuova, la schermata finale, i link a fondo pagina).
+    var bloccoTocchi = 0;
+    document.addEventListener('click', function (e) {
+      if (Date.now() < bloccoTocchi) { e.preventDefault(); e.stopPropagation(); }
+    }, true);
+    function bloccaTocchi() { bloccoTocchi = Date.now() + 400; }
     var piazzamenti = {};
+    // Doppio tocco (LIM): «Verifica tutti» vale una volta e, nel frattempo,
+    // mappa e pulsanti non accettano altri piazzamenti.
+    var verificato = false;
 
     function start(){
       intro.classList.add('hide'); end.classList.add('hide');
@@ -240,6 +294,10 @@
       ELEMENTI = estraiElementi();
       piazzamenti = {};
       active = null;
+      verificato = false;
+      bloccaTocchi();
+      mapEl.classList.remove('attesa');
+      document.getElementById('reset-map').disabled = false;
       feedback.innerHTML = '';
       totaleItems.textContent = ELEMENTI.length;
       piazzatiN.textContent = 0;
@@ -258,11 +316,15 @@
         b.dataset.id = el.id;
         b.innerHTML = '<i class="bi ' + el.icon + '"></i> ' + el.label;
         if (piazzamenti[el.id]) b.classList.add('used');
+        b.setAttribute('aria-pressed', 'false');
         b.addEventListener('click', function(){
-          if (b.classList.contains('used')) return;
+          if (verificato || b.classList.contains('used')) return;
           pool.querySelectorAll('.map-item').forEach(function(x){ x.classList.remove('active'); });
+          pool.querySelectorAll('.map-item').forEach(function(x){ x.setAttribute('aria-pressed', 'false'); });
           b.classList.add('active');
+          b.setAttribute('aria-pressed', 'true');
           active = el;
+          mapEl.classList.add('attesa');
         });
         pool.appendChild(b);
       });
@@ -270,8 +332,10 @@
 
     /* Punti rappresentativi al centro di ogni zona: usati dai pulsanti-zona
        (percorso alternativo accessibile da tastiera). */
-    var ZONA_PUNTO = { centro: [100, 90], residenziale: [285, 85], parco: [110, 215], lago: [310, 215] };
+    // Sotto la scritta della zona, cosi' il segnaposto non la copre.
+    var ZONA_PUNTO = { centro: [100, 122], residenziale: [285, 115], parco: [110, 245], lago: [310, 245] };
     var discardList = document.getElementById('discard-list');
+    var ultimoId = null;
 
     function piazzaSuMappa(el, x, y){
       var xp = x / 400, yp = y / 300;
@@ -284,6 +348,7 @@
       marker.title = el.label;
       mapEl.appendChild(marker);
       piazzamenti[el.id] = { x: x, y: y, el: el, marker: marker };
+      ultimoId = el.id;
       dopoPiazzamento();
     }
 
@@ -296,6 +361,7 @@
       badge.innerHTML = '<i class="bi ' + el.icon + ' me-1" aria-hidden="true"></i>' + el.label;
       badge.setAttribute('aria-label', 'Rimuovi ' + el.label + ' da Non nel piano');
       badge.addEventListener('click', function(){
+        if (verificato) return;
         delete piazzamenti[el.id];
         badge.remove();
         dopoPiazzamento();
@@ -307,13 +373,14 @@
 
     function dopoPiazzamento(){
       active = null;
+      mapEl.classList.remove('attesa');
       piazzatiN.textContent = Object.keys(piazzamenti).length;
       renderPool();
-      verifica.disabled = Object.keys(piazzamenti).length !== ELEMENTI.length;
+      verifica.disabled = verificato || Object.keys(piazzamenti).length !== ELEMENTI.length;
     }
 
     mapEl.addEventListener('click', function(e){
-      if (!active) return;
+      if (!active || verificato) return;
       var rect = mapEl.getBoundingClientRect();
       var x = ((e.clientX - rect.left) / rect.width) * 400;
       var y = ((e.clientY - rect.top) / rect.height) * 300;
@@ -322,15 +389,24 @@
 
     document.querySelectorAll('.zona-btn').forEach(function(zb){
       zb.addEventListener('click', function(){
-        if (!active) return;
+        if (!active || verificato) return;
         var z = zb.dataset.zona;
         if (z === 'nessuna'){ scarta(active); return; }
         var pt = ZONA_PUNTO[z];
-        piazzaSuMappa(active, pt[0], pt[1]);
+        // piu' elementi nella stessa zona: segnaposti affiancati, non sovrapposti
+        var giaQui = 0;
+        Object.keys(piazzamenti).forEach(function(k){ if (piazzamenti[k].zonaBtn === z) giaQui++; });
+        var dx = [0, -26, 26, -52, 52, -13, 13, -39][giaQui % 8];
+        piazzaSuMappa(active, pt[0] + dx, pt[1] - (giaQui >= 5 ? 18 : 0));
+        if (piazzamenti[ultimoId]) piazzamenti[ultimoId].zonaBtn = z;
       });
     });
 
     verifica.addEventListener('click', function(){
+      if (verificato) return;
+      verificato = true;
+      verifica.disabled = true;
+      document.getElementById('reset-map').disabled = true;
       var ok = 0;
       var details = '<ul class="small mb-0">';
       ELEMENTI.forEach(function(el){
@@ -349,18 +425,24 @@
         }
         var nota = el.motivo;
         if (!corretto && p.scartato) nota = 'Questo elemento serve al piano di Genzano, non andava scartato. ' + el.motivo;
-        details += '<li>' + (corretto ? '✅' : '❌') + ' <strong>' + el.label + '</strong>: ' + nota + '</li>';
+        details += '<li>' + (corretto
+          ? '<i class="bi bi-check-circle-fill text-success me-1" aria-hidden="true"></i><span class="visually-hidden">Giusto: </span>'
+          : '<i class="bi bi-x-circle-fill text-danger me-1" aria-hidden="true"></i><span class="visually-hidden">Sbagliato: </span>') + '<strong>' + el.label + '</strong>: ' + nota + '</li>';
         if (corretto) ok++;
       });
       details += '</ul>';
       feedback.innerHTML = '<div class="alert alert-info">' + details + '</div>';
+      // Un solo suono per tutta la mappa: giusto se almeno metà dei piazzamenti è corretta.
+      if (window.AudioSintetico) { if (ok * 2 >= ELEMENTI.length) window.AudioSintetico.dingPositivo(); else window.AudioSintetico.tonoNeutro(); }
       if (window.GameCoach) {
         if (ok === ELEMENTI.length && window.GameCoach.clearHint) {
           window.GameCoach.clearHint();
         } else if (ok < ELEMENTI.length && window.GameCoach.hint) {
-          window.GameCoach.hint('Castelli Romani: rischio idrogeologico (versanti) e sismico. Costa: mareggiate. Aree industriali: rischio chimico (Seveso). Boschi: incendio (giugno-settembre). Centro storico: sismico amplificato.', '/rischi-prevenzione/');
+          window.GameCoach.hint('Castelli Romani: rischio idrogeologico (versanti) e sismico. Costa: mareggiate. Aree industriali: rischio chimico (Seveso). Boschi: incendio (d\'estate). Centro storico: sismico amplificato.', '/rischi-prevenzione/');
         }
       }
+      // Le spiegazioni restano leggibili anche nella schermata finale.
+      document.getElementById('final-dettagli').innerHTML = '<h3 class="h6">Perché</h3>' + feedback.innerHTML;
       setTimeout(function(){ finish(ok); }, 1000);
     });
 
@@ -369,6 +451,7 @@
     document.getElementById('restart').addEventListener('click', start);
 
     function finish(ok){
+      bloccaTocchi();
       game.classList.add('hide');
       end.classList.remove('hide');
       // Il massimo e' l'intero set: anche i distrattori contano, la loro

@@ -3,6 +3,7 @@ title: "Il Vademecum di Protezione Civile della Prefettura di Isernia: uno strum
 date: 2026-04-30T00:02:00+02:00
 description: "Il Vademecum di Protezione Civile della Prefettura di Isernia (2024) spiega come funziona il Sistema, come si scrivono i piani, qual è il ruolo del CCS."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-30-vademecum-protezione-civile-prefettura-isernia.webp"

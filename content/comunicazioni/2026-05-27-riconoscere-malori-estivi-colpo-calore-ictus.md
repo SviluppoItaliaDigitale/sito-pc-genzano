@@ -3,6 +3,7 @@ title: "Malori estivi: segnali da riconoscere e quando chiamare il 112"
 date: 2026-05-27
 description: "D'estate alcuni malori possono diventare gravi. Riconoscere i segnali di colpo di calore, ictus e infarto e chiamare subito il 112 può salvare vite."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-27-riconoscere-malori-estivi-colpo-calore-ictus.webp"

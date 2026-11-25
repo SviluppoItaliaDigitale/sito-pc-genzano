@@ -247,7 +247,7 @@ Il formato più richiesto dai docenti. Affronta un tema in modo strutturato e la
 
 - **Terremoto + Piano famiglia** (2 ore, primaria IV-V e sec I) — Lezione 1 del [Percorso 3](#percorso-3) (DROP-COVER-HOLD ON) + Lezione 1 del [Percorso 4](#percorso-4) (introduzione al piano familiare). Cosa fare e dove ritrovarsi.
 - **Allerta meteo + IT-alert** (2 ore, sec I) — Ora 1 del [Percorso 2](#percorso-2) (codici colore) + Ora 2 del [Percorso 5](#percorso-5) (IT-alert e Cell Broadcast). Come arrivano le informazioni e come distinguerle dal phishing.
-- **Incendi boschivi (campagna AIB estiva)** (2 ore, primaria-sec, da svolgere fra giugno e settembre) — i Castelli Romani sono **Zona AIB 9** del Lazio. Comportamenti corretti in passeggiata e in casa, ruolo del 112, riferimento al [Bollettino di pericolosità incendi](https://www.regione.lazio.it/protezione-civile/centro-funzionale-regionale/bollettini-rischi-incendi) del **Centro Funzionale Regionale Lazio**.
+- **Incendi boschivi (campagna AIB estiva)** (2 ore, primaria-sec, da svolgere prima o durante la campagna AIB, che nel 2026 va dal 15 giugno al 15 ottobre) — i Castelli Romani sono **Zona AIB 9** del Lazio. Comportamenti corretti in passeggiata e in casa, ruolo del 112, riferimento al [Bollettino di pericolosità incendi](https://www.regione.lazio.it/protezione-civile/centro-funzionale-regionale/bollettini-rischi-incendi) del **Centro Funzionale Regionale Lazio**.
 - **Ondate di calore e salute** (2 ore, primaria-sec, da svolgere fra giugno e agosto) — autoprotezione, anziani fragili, riconoscere un colpo di calore. Riferimenti: [Piano nazionale prevenzione caldo](https://www.salute.gov.it/new/it/tema/ondate-di-calore) del **Ministero della Salute** e [WHO Heat-Health Action Plans](https://www.who.int/news-room/fact-sheets/detail/climate-change-heat-and-health). Adatto come "lezione di servizio" prima della pausa estiva.
 
 ### Se vuoi fare un progetto completo {#tempo-progetto}
@@ -645,7 +645,7 @@ Rubrica fascia, indicatori 1 (autoprotezione), 3 (conoscenza del territorio), 4 
 
 <div class="percorso-meta">
 <span class="meta-badge meta-fascia">Secondaria di I e II grado</span>
-<span class="meta-badge meta-durata">3 ore. Consigliato fra **giugno e settembre**, durante la campagna AIB (anti-incendi boschivi) del Lazio</span>
+<span class="meta-badge meta-durata">3 ore. Consigliato prima o durante la campagna AIB (antincendio boschivo) del Lazio, che nel 2026 va **dal 15 giugno al 15 ottobre**</span>
 <span class="meta-badge meta-disciplina">Scienze · Geografia · Educazione Civica</span>
 <span class="meta-badge meta-nucleo">2 — Sviluppo economico e sostenibilità</span>
 </div>

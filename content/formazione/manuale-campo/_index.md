@@ -11,7 +11,7 @@ Questo manuale è stato redatto per il **Gruppo Comunale Volontari di Genzano di
 - **riferimenti territoriali** al contesto di Genzano di Roma (Prefettura di Roma, Regione Lazio, Area Metropolitana Roma Capitale)
 - **schede tecniche operative** (check-list kit personale, area accoglienza, progettazione, informazioni di scouting) come strumenti pratici per il volontario in missione
 
-Il manuale non sostituisce la **formazione di base regionale** del volontario (art. 37 D.Lgs. 1/2018), né il **Piano Comunale di Protezione Civile** di Genzano di Roma (art. 12 D.Lgs. 1/2018). Serve come **supporto rapido sul campo** e come traccia per esercitazioni e addestramento.
+Il manuale non sostituisce la **formazione di base regionale** del volontario, né il **Piano Comunale di Protezione Civile** di Genzano di Roma (art. 12 D.Lgs. 1/2018). Serve come **supporto rapido sul campo** e come traccia per esercitazioni e addestramento.
 
 ## A chi è rivolto
 
@@ -35,7 +35,7 @@ Il manuale non sostituisce la **formazione di base regionale** del volontario (a
 
 Il manuale si fonda su cinque principi operativi, validi in qualsiasi emergenza:
 
-1. **Niente intervento senza attivazione formale.** Il volontario non agisce di propria iniziativa. Ogni missione parte da una **nota di attivazione** del Sindaco, della Prefettura di Roma, della Regione Lazio o del Dipartimento Nazionale (art. 36 D.Lgs. 1/2018). Solo un'attivazione ufficiale garantisce **assicurazione**, **copertura del posto di lavoro**, **rimborso spese**.
+1. **Niente intervento senza attivazione formale.** Il volontario non agisce di propria iniziativa. Ogni missione parte da un'attivazione delle autorità competenti. Le tutele del volontario (**mantenimento del posto di lavoro**, **trattamento economico**, **rimborso spese**) valgono per il periodo di impiego autorizzato con la comunicazione di attivazione del Dipartimento della Protezione Civile o della Regione (art. 39 D.Lgs. 1/2018).
 2. **Prima la sicurezza del volontario.** Nessun soccorso è così urgente da giustificare un rischio ingiustificato per chi soccorre. I **Dispositivi di Protezione Individuale** non sono opzionali.
 3. **Tracciabilità totale.** Ogni attività va documentata: chi, cosa, dove, quando, con quali mezzi. La **segreteria di campo** è il cuore della tracciabilità.
 4. **Comunicazione chiara e sobria.** In emergenza si usano parole semplici, frasi brevi, radio disciplinata. I rumori e le ambiguità costano tempo.
@@ -68,4 +68,5 @@ Il manuale è un **documento vivo**: ogni esercitazione, ogni missione reale, og
 - [Codice della Protezione Civile — Capo V (Volontariato)](/normativa/testo-unico-protezione-civile/capo-5-volontariato/)
 - [Evoluzione delle procedure di emergenza 1996-2026](/normativa/evoluzione-procedure-emergenza/)
 - [Piano di Emergenza Comunale](/piano-emergenza/)
+- [Cucina in emergenza: i documenti ufficiali](/cucina-emergenza/)
 - [Area Formazione](/formazione/)

@@ -3,6 +3,7 @@ title: "Settimana tra feste: riflessione e preparazione al nuovo anno"
 date: 2026-12-27
 description: "La settimana tra Natale e Capodanno è spesso sospesa. Come usarla bene per riflessione, riordino, prospettive."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-27-settimana-tra-feste-riflessione.webp"
@@ -216,11 +217,7 @@ Siamo nella **settimana tra le feste**. Dal **27 al 31 dicembre**. Giorni tradiz
 Anche tra le feste il **112** risponde a ogni ora e il Gruppo Comunale interviene quando attivato dal Comune.
 
 ### Ordinanze in vista
-- **petardi** e **botti**: limitazioni spesso imposte da Sindaco;
-- **fuochi** consentiti solo in orari specifici;
-- **divieti** in aree boscate e parchi;
-- **sanzioni** per trasgressori;
-- **consultare** sito comunale nei prossimi giorni.
+Molti Comuni limitano o vietano i botti con un'ordinanza del Sindaco. Controlla sul [sito del Comune](https://www.comune.genzanodiroma.roma.it/) se ce n'è una per questo Capodanno e che cosa prevede.
 
 ## Un tempo prezioso
 

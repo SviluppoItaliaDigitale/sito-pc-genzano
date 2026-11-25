@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const zainoFill = document.getElementById('zaino-fill');
 
     const allItems = [
-        { name: 'Acqua', icon: '\uD83D\uDCA7', correct: true, tip: 'Almeno 2 litri a persona!' },
+        { name: 'Acqua', icon: '\uD83D\uDCA7', correct: true, tip: 'Circa 4 litri a persona al giorno, per bere e lavarsi.' },
         { name: 'Torcia', icon: '\uD83D\uDD26', correct: true, tip: 'Per vedere al buio senza fiamme' },
         { name: 'Fischietto', icon: '\uD83D\uDCEF', correct: true, tip: 'Per farsi trovare dai soccorritori' },
         { name: 'Coperta', icon: '\uD83D\uDECF\uFE0F', correct: true, tip: 'Per scaldarsi senza corrente' },
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Scarpe chiuse', icon: '\uD83D\uDC5F', correct: true, tip: 'Per camminare su vetri e macerie' },
         { name: 'Cibo a lunga conservazione', icon: '\uD83E\uDD6B', correct: true, tip: 'Scatolette, crackers, barrette' },
         { name: 'Caricatore portatile', icon: '\uD83D\uDD0B', correct: true, tip: 'Per tenere il telefono carico' },
-        { name: 'Kit primo soccorso', icon: '\u26D1\uFE0F', correct: true, tip: 'Cerotti, garze, disinfettante' },
+        { name: 'Kit primo soccorso', icon: '\uD83E\uDE79', correct: true, tip: 'Cerotti, garze, disinfettante' },
         { name: 'Vestiti di ricambio', icon: '\uD83D\uDC55', correct: true, tip: 'Un cambio completo per ognuno' },
         { name: 'Videogiochi', icon: '\uD83C\uDFAE', correct: false, tip: 'Non servono, occupano spazio prezioso!' },
         { name: 'Gelato', icon: '\uD83C\uDF66', correct: false, tip: 'Si scioglie subito, non si conserva' },
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Chiavi di scorta', icon: '\uD83D\uDD11', correct: true, tip: 'Copia delle chiavi di casa e dell’auto.' },
         { name: 'Occhiali di scorta', icon: '\uD83D\uDC53', correct: true, tip: 'Per chi ne porta abitualmente: un paio di riserva.' },
         { name: 'Foto di famiglia', icon: '\uD83D\uDDBC\uFE0F', correct: true, tip: 'Serve a ritrovare i propri cari in caso di separazione.' },
-        { name: 'Sacchetti di plastica', icon: '\uD83D\uDED2', correct: true, tip: 'Per proteggere documenti dall’acqua e raccogliere rifiuti.' },
+        { name: 'Sacchetti di plastica', icon: '\uD83D\uDECD\uFE0F', correct: true, tip: 'Per proteggere documenti dall’acqua e raccogliere rifiuti.' },
         { name: 'Console videogiochi', icon: '\uD83D\uDD79\uFE0F', correct: false, tip: 'Scarica la batteria e non serve.' },
         { name: 'Libri di scuola', icon: '\uD83D\uDCDA', correct: false, tip: 'Troppo pesanti: la scuola aspetta!' },
         { name: 'Vasetto di fiori', icon: '\uD83C\uDF37', correct: false, tip: 'Fragile e occupa spazio inutilmente.' },
@@ -48,6 +48,10 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     let correctTotal, found, errors;
+    // Doppio tocco: un oggetto già scelto non conta di nuovo e, preso l'ultimo,
+    // la schermata finale (e il salvataggio) parte una volta sola.
+    let finito = false;
+    let partita = 0;
 
     function shuffle(arr) {
         for (let i = arr.length - 1; i > 0; i--) {
@@ -58,6 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function showToast(text, isGood) {
+        // Un messaggio alla volta: con tocchi rapidi si sovrapponevano e non si leggeva nessuno.
+        Array.prototype.forEach.call(document.querySelectorAll('.feedback-toast'), function (v) { v.remove(); });
         const t = document.createElement('div');
         t.className = 'feedback-toast ' + (isGood ? 'good' : 'bad');
         t.textContent = text;
@@ -69,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
         introScreen.classList.add('hide');
         gameScreen.classList.remove('hide');
         winScreen.classList.add('hide');
-        found = 0; errors = 0;
+        found = 0; errors = 0; finito = false; partita++;
         // Modalita': veloce (16 oggetti random, ~10 corretti + ~6 distrattori)
         // o completa (tutti gli oggetti). La modalita' veloce e' utile come
         // partita "rapida" durante una lezione; la completa e' il test
@@ -103,6 +109,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function pickItem(card, item) {
+        if (finito || card.classList.contains('correct') || card.classList.contains('wrong')) return;
+        card.setAttribute('aria-disabled', 'true');
+        if (window.AudioSintetico) {
+            if (item.correct) window.AudioSintetico.dingPositivo(); else window.AudioSintetico.tonoNeutro();
+        }
         if (item.correct) {
             card.classList.add('correct');
             found++;
@@ -110,13 +121,16 @@ document.addEventListener('DOMContentLoaded', () => {
             zainoFill.style.height = Math.round((found / correctTotal) * 100) + '%';
             showToast(item.tip, true);
             if (found === correctTotal) {
+                finito = true;
+                const questa = partita;
                 setTimeout(() => {
+                    if (questa !== partita) return;
                     if (errors === 0) {
                         winMessage.textContent = 'Perfetto! Hai preparato lo zaino senza nessun errore!';
                     } else if (errors <= 3) {
-                        winMessage.textContent = 'Bravo! Zaino pronto con solo ' + errors + ' errore' + (errors > 1 ? 'i' : '') + '.';
+                        winMessage.textContent = 'Bravo! Zaino pronto con solo ' + errors + ' error' + (errors > 1 ? 'i' : 'e') + '.';
                     } else {
-                        winMessage.textContent = 'Zaino pronto! Hai fatto ' + errors + ' errori. Riprova per migliorare!';
+                        winMessage.textContent = 'Hai fatto ' + errors + ' errori. Riprova per migliorare!';
                     }
                     winScreen.classList.remove('hide');
                     var punti = Math.max(0, correctTotal - errors);

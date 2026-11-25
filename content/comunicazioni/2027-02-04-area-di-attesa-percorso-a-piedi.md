@@ -3,6 +3,7 @@ title: "Conosci la tua area di attesa? Fai il percorso a piedi, oggi che non ser
 date: 2027-02-04
 description: "Genzano di Roma ha 10 aree di attesa per la popolazione. Come trovare la più vicina, perché conviene percorrere la strada a piedi prima di un'emergenza e che cosa succede quando arrivi."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-02-04-area-di-attesa-percorso-a-piedi.webp"

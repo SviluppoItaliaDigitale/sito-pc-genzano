@@ -17,7 +17,7 @@ Le smentite valgono in generale. Per le voci che circolano **durante** un evento
 
 {{< pittogramma src="/pittogrammi/arasaac/nascondersi-tavolo.png" alt="Pittogramma: una persona si ripara sotto un tavolo" caption="Il gesto corretto: riparo sotto un tavolo robusto, testa protetta, fino alla fine della scossa" size="medium" >}}
 
-**Perché è sbagliata.** La scossa dura pochi secondi ed è proprio in quei secondi che cadono cornicioni, tegole, vetri e mobili. Chi corre verso le scale o verso la strada attraversa i punti più pericolosi nel momento peggiore. Il Dipartimento della Protezione Civile indica di ripararsi sotto un tavolo robusto o vicino a un muro portante, proteggere la testa e aspettare la fine della scossa; solo dopo si esce, con calma, senza usare l'ascensore.
+**Perché è sbagliata.** La scossa dura pochi secondi ed è proprio in quei secondi che cadono cornicioni, tegole, vetri e mobili. Chi corre verso le scale o verso la strada attraversa i punti più pericolosi nel momento peggiore. Il Dipartimento della Protezione Civile indica di ripararsi nel vano di una porta inserita in un muro portante, vicino a una parete portante o sotto una trave, oppure sotto un letto o un tavolo resistente, proteggere la testa e aspettare la fine della scossa; solo dopo si esce, con calma, senza usare l'ascensore.
 
 **Fonte:** [Rischio sismico: cosa fare prima, durante e dopo](/rischi-prevenzione/rischio-sismico/), basata sulle indicazioni del Dipartimento della Protezione Civile (campagna «Io non rischio»).
 
@@ -94,7 +94,7 @@ Quiescente: un vulcano che non erutta da molto tempo ma può tornare attivo, e c
 
 {{< pittogramma src="/pittogrammi/arasaac/inondazione.png" alt="Pittogramma: inondazione, acqua che copre una strada" caption="Una strada allagata non si attraversa: non si vede quanto è profonda né che cosa nasconde" size="medium" >}}
 
-**Perché è sbagliata.** Sotto l'acqua non vedi buche, tombini scoperchiati e la vera profondità; pochi centimetri bastano a far perdere aderenza alle ruote o a spegnere il motore, e un sottopasso può riempirsi in pochi minuti. Se l'acqua blocca l'auto e si può uscire senza entrare nella corrente, si abbandona e si raggiunge a piedi un punto più alto; in una corrente forte si resta dentro, si chiama il 112 e, se l'acqua entra nell'abitacolo, si sale sul tetto.
+**Perché è sbagliata.** Sotto l'acqua non vedi buche, tombini scoperchiati e la vera profondità; pochi centimetri bastano a far perdere aderenza alle ruote o a spegnere il motore, e un sottopasso può riempirsi in pochi minuti. Se l'acqua blocca l'auto e si può uscire senza entrare nella corrente, si abbandona e si raggiunge a piedi un punto più alto; se la corrente è forte e non si può uscire senza entrare nell'acqua, si chiama il 112 e, se l'acqua entra nell'abitacolo, si sale sul tetto.
 
 **Fonte:** [Rischio idrogeologico, cosa fare durante](/rischi-prevenzione/rischio-idrogeologico/#cosa-fare-durante), in linea con le indicazioni del Dipartimento della Protezione Civile sull'alluvione.
 

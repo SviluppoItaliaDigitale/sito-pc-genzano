@@ -3,6 +3,7 @@ title: "Fondi, ultimo cambio turno alla mensa: Genzano chiude, il testimone pass
 date: 2026-08-17T00:03:00+02:00
 description: "Si chiude il turno di Ferragosto dei volontari di Genzano alla mensa del gemellaggio AIB di Fondi. Subentra il Gruppo Comunale di Ariccia."
 badge: "Aggiornamento"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-17-gemellaggio-aib-fondi-ultimo-cambio-turno.webp"

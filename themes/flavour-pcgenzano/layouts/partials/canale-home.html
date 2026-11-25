@@ -1,0 +1,45 @@
+{{/* ═══════════════════════════════════════════════════
+     STRISCIA DI UN CANALE IN HOMEPAGE — ultime 3 uscite di un canale
+     editoriale (partial canale-articolo.html). Nata il 30/08/2026 per
+     gli approfondimenti, generalizzata il 19/11/2026 per il canale
+     "italia". Parametri (dict): canale, id, titolo, intro, link.
+     Usato in: homepage */}}
+{{- $canaleScelto := .canale -}}
+{{- $idSez := .id -}}
+{{ $filtered := where (where site.RegularPages "Section" "comunicazioni") "Params.versione_facile_di" nil }}
+{{ $byLastmod := sort $filtered ".Lastmod" "desc" }}
+{{ $sorted := sort $byLastmod ".Date" "desc" }}
+{{ $mag := slice }}
+{{ range $sorted }}
+  {{ if and (lt (len $mag) 3) (eq (partial "canale-articolo.html" .) $canaleScelto) }}
+    {{ $mag = $mag | append . }}
+  {{ end }}
+{{ end }}
+{{ if $mag }}
+<section class="notizie-section fade-in-up" aria-labelledby="{{ $idSez }}-heading">
+  <div class="container">
+    <h2 id="{{ $idSez }}-heading" class="section-title">{{ .titolo }}</h2>
+    <p class="text-muted mb-4">{{ .intro }}</p>
+    <div class="row g-4">
+      {{ $ctx := . }}{{ range $mag }}
+      <div class="col-lg-4 mb-2">
+        <a href="{{ .Permalink }}" class="card card-notizia-hero text-decoration-none h-100">
+          <div class="card-notizia-hero-img">
+            {{ with .Params.image }}<img src="{{ . | relURL }}" alt="" aria-hidden="true" {{ partial "dimensioni-immagine.html" . }} loading="lazy">
+            {{ else }}<img src="{{ "images/notizia-default.svg" | relURL }}" alt="" aria-hidden="true" loading="lazy">{{ end }}
+          </div>
+          <div class="card-body">
+            {{ with .Params.badge }}{{ partial "badge.html" . }}{{ end }}
+            <span class="notizia-data ms-2">{{ .Date | time.Format ":date_long" }}</span>
+            <h3 class="h5 mt-2 text-dark">{{ .Title }}</h3>
+          </div>
+        </a>
+      </div>
+      {{ end }}
+    </div>
+    <div class="text-center mt-3">
+      <a href="{{ "comunicazioni/" | relURL }}#canale={{ $canaleScelto }}" class="btn btn-outline-primary">{{ $ctx.link }} <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i></a>
+    </div>
+  </div>
+</section>
+{{ end }}

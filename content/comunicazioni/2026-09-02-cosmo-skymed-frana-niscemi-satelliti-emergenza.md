@@ -3,6 +3,7 @@ title: "Quattrocento immagini in ventiquattro ore: i satelliti italiani dentro u
 date: 2026-09-02T00:02:00+02:00
 description: "Frana di Niscemi, gennaio 2026: come i radar COSMO-SkyMed hanno supportato la Protezione Civile. Cosa fa davvero un satellite quando il terreno si muove."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-02-cosmo-skymed-frana-niscemi-satelliti-emergenza.webp"

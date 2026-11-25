@@ -3,6 +3,7 @@ title: "Freddo intenso e persone senza dimora: che cosa puoi fare"
 date: 2027-01-05
 description: "Una persona che dorme all'aperto nelle notti più fredde rischia la vita. Come capire se è in pericolo, quando chiamare il 112 e come aiutare nei giorni normali."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-01-05-freddo-persone-senza-dimora-cosa-fare.webp"

@@ -3,6 +3,7 @@ title: "Il kit di emergenza domestico: cosa mettere e dove tenerlo"
 date: 2026-04-21
 description: "Una guida pratica per preparare lo zaino di emergenza per la famiglia. Oggetti essenziali, quantità, manutenzione e posto giusto dove conservarlo."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-21-kit-emergenza-domestico-guida-pratica.webp"

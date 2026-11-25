@@ -1,0 +1,8 @@
+// Copia questo file con il nome segreti.h, nella stessa cartella dello sketch,
+// e scrivi i dati della tua rete Wi-Fi.
+// Non pubblicare mai segreti.h: non mandarlo in chat, non metterlo in un
+// repository, non stamparlo. Custodiscilo come una password.
+#pragma once
+
+#define WIFI_SSID      "nome-della-rete"
+#define WIFI_PASSWORD  "password-della-rete"
