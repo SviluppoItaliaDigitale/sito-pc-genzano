@@ -846,6 +846,70 @@ oggetti:
       - "Stringi le fascette senza schiacciare la targhetta e taglia la parte in più."
       - "Con il velcro: passa la striscia nelle due asole, avvolgila intorno al tubo e chiudila."
 
+  # --- Vassoio in tre pezzi avvitati, con targhetta, clip e piedini (25/11/2026, vassoio-nominativo.scad).
+  # Il pezzo con il nominativo è la targhetta; «altri_pezzi» elenca gli altri file; «insieme» con «parte» è il
+  # vassoio montato, fatto solo per le anteprime.
+  - id: "vassoio"
+    nome: "Vassoio porta piatto, bicchiere e posate"
+    articolo: "il vassoio"
+    descrizione: "Vassoio con due manici in cui piatto e bicchiere si infilano in un foro più stretto del loro bordo: restano appesi e non scivolano. Le posate stanno ferme sotto una clip a molla. È rialzato su dodici piedini ed è fatto di tre pezzi che si avvitano, così ogni pezzo entra in una stampante da tavolo. Sopra porta una targhetta con la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma», che si stampa a parte e può avere le scritte di un altro colore."
+    categoria: "campo"
+    breve: "Piatto e bicchiere si infilano nei fori e non scivolano; clip per le posate, piedini, tre pezzi avvitati."
+    sorgente: "vassoio-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-30.99, 10.0, -18.99, 18.0]
+      vista_3d: true
+      quota_scritte: 3.6
+      sagoma_z: -1.6   # contorno letto dentro il piano del vassoio, sotto la targhetta
+      camera: { da: [-0.35, -0.75, 0.6], su: [0, 0, 1] }
+      insieme: { file: "vassoio-montato.stl", parte: "montato" }   # nelle anteprime il vassoio è montato
+      nome: { zona: [-31, -0.5, 31, 6.5], lato: "fronte" }
+    parametri:
+      tipo: "vassoio"
+      parte: "tutto"
+    secondo_pezzo:
+      parte: "sinistra"
+      file: "vassoio-pezzo-sinistro.stl"
+      nome: "il pezzo sinistro, con metà del foro del piatto"
+      peso_g: 159
+    altri_pezzi:
+      - { parte: "centro", file: "vassoio-pezzo-centrale.stl", nome: "il pezzo centrale, con la corsia delle posate", peso_g: 226 }
+      - { parte: "destra", file: "vassoio-pezzo-destro.stl", nome: "il pezzo destro, con il foro del bicchiere", peso_g: 241 }
+      - { parte: "clip", file: "vassoio-clip-posate.stl", nome: "la clip per le posate", peso_g: 3 }
+    misure: "45,6 × 24 cm montato, alto 4,8 cm"
+    lunghezza_mm: 76
+    peso_g: 646
+    scheda:
+      - ["Ingombro", "montato 456 × 240 mm, con il piano a 48 mm dal tavolo; pezzo sinistro 148 × 240 mm, pezzo centrale 182 × 240 mm, pezzo destro 130 × 240 mm, tutti alti 48 mm; targhetta 76 × 50 mm, spessa 3,6 mm (4,6 mm con le scritte)"]
+      - ["Peso", "circa 646 g in tutto: 159 g il pezzo sinistro, 226 g il centrale, 241 g il destro, 17 g la targhetta, 3 g la clip"]
+      - ["Foro del piatto", "200 mm, con il bordo smussato. Tiene un piatto piano usa e getta «da 22 cm» (225 mm in alto, 165 mm alla base) e un piatto fondo «da 22 cm» (220 mm in alto, 145 mm alla base): la base scende nel foro e il bordo si appoggia. Un piatto con il bordo più stretto di 205 mm passa attraverso il foro: misura il tuo prima di stampare"]
+      - ["Foro del bicchiere", "56 mm. Un bicchiere usa e getta da 200 ml (46 mm alla base, 70 mm alla bocca, alto 97 mm) scende di circa 4 cm e si ferma. Un bicchiere con la base più larga di 56 mm non entra nel foro: si appoggia sul piano"]
+      - ["Posate", "corsia libera larga 5 cm e lunga quanto il vassoio; una clip a molla le tiene ferme: sotto il ponte restano 6 mm. Le posate vanno infilate nel loro tovagliolo o nella loro bustina"]
+      - ["Piedini", "dodici, alti 45 mm: quattro per pezzo. Servono perché piatto e bicchiere scendono sotto il piano"]
+      - ["Manici", "un'asola di 92 × 22 mm per le dita su ogni lato corto"]
+      - ["Giunzioni", "due: i pezzi si accostano lungo due pareti alte 23 mm, con una costola che entra in una scanalatura e li tiene allineati; si stringono con cinque viti M4 × 10 a testa svasata e cinque dadi M4. Altre due viti con due dadi fissano la targhetta"]
+      - ["Altezza delle lettere", "nominativo 8 mm; righe piccole 4 mm"]
+      - ["Spazio per nome e cognome", "fascia libera di 62 × 7 mm sotto il nominativo, sulla targhetta"]
+      - ["Scritte di un altro colore", "la targhetta si stampa da sola, con le scritte in alto. Per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di colore all'altezza di 3,6 mm, cioè dopo lo strato 18 con strati da 0,2 mm; oppure stampa la targhetta con un filo di un altro colore rispetto al vassoio"]
+      - ["Posizione di stampa", "cinque file, già orientati, senza supporti: i tre pezzi del vassoio sono capovolti, con il piano sul piatto di stampa, la clip è coricata su un fianco; serve un piatto di stampa di almeno 25 × 20 cm"]
+      - ["Da sapere", "il vassoio porta le stoviglie, non è un oggetto per alimenti: fra gli strati della plastica stampata restano solchi che non si puliscono a fondo, quindi il cibo non va appoggiato sul vassoio. Si lava a mano con acqua tiepida: il PETG comincia a deformarsi a 68 gradi, niente lavastoviglie e niente piatti appena tolti dal fuoco. Il peso che regge è un valore di progetto, non una prova di carico: portalo con due mani"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "7 viti M4 lunghe 10 mm a testa svasata e 7 dadi esagonali M4 (si trovano in ferramenta)"
+      - "una chiave a brugola da 2,5 mm, oppure un cacciavite a croce se le viti hanno la testa a croce"
+    montaggio:
+      - "Stampa i cinque file: la targhetta con il tuo nominativo, i tre pezzi del vassoio e la clip."
+      - "Appoggia i tre pezzi capovolti su un tavolo, con i piedini in alto, e accostali: le costole del pezzo centrale e del pezzo destro entrano nelle scanalature del pezzo accanto."
+      - "Lascia cadere un dado in ognuna delle cinque asole delle pareti più spesse."
+      - "Dall'altra parte infila le cinque viti e stringile a mano, senza forzare: le teste devono restare sotto la superficie."
+      - "Gira il vassoio. Appoggia la targhetta sul pezzo destro, sopra i due fori, tieni un dado nella sede esagonale sotto il piano e stringi le due viti dall'alto."
+      - "Spingi le due gambe della clip in una coppia di fessure della corsia delle posate, finché i denti scattano sotto il piano. Le coppie di fessure sono due: scegli quella più comoda per le tue posate."
+      - "Infila il piatto e il bicchiere nei loro fori e fai scorrere le posate sotto la clip, dal manico."
+
   # --- Oggetti grandi in due pezzi uniti da viti (25/11/2026, famiglia grandi-nominativo.scad): la gruccia.
   # «insieme» nell'anteprima: catalogo e vista 3D mostrano l'oggetto montato; il file da scaricare resta un pezzo solo.
   # ---------- Kit, pile e schede ----------
