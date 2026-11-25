@@ -15,6 +15,10 @@
    che basta a mostrare quanti prodotti restano e il pulsante che porta all'elenco; il tasto di invio della
    tastiera porta all'elenco. Il fuoco si sposta solo con il pulsante o con l'invio, mai da solo.
 
+   Con una regione scelta dal menu, o scritta per intero nella casella, in ogni gruppo vengono prima i
+   prodotti di quella sola regione, poi quelli che ne hanno anche altre, e la riga di ogni prodotto dice
+   «Lazio e altre 7 regioni» al posto dell'elenco di tutte.
+
    La scelta resta nell'indirizzo (?q=…&regione=…&tipo=…), così un elenco filtrato si può condividere.
    Sintassi entro ECMAScript 2018 (scripts/check-sintassi-js.cjs). Prova nel browser, bloccante sulle pull
    request: scripts/prova-filtro-disciplinari.py. */
@@ -57,14 +61,26 @@
   blocchi.forEach(function (blocco) {
     var id = blocco.getAttribute('data-disc-gruppo');
     Array.prototype.forEach.call(blocco.querySelectorAll('.disc-voce'), function (li) {
+      var luogo = li.querySelector('.disc-luogo');
       voci.push({
         li: li,
         gruppo: id,
         inizi: parole(li.getAttribute('data-p')),
         intere: parole(li.getAttribute('data-e')),
-        regioni: (li.getAttribute('data-r') || '').split('|')
+        regioni: (li.getAttribute('data-r') || '').split('|'),
+        luogo: luogo,                           /* la riga con le regioni del prodotto */
+        dove: luogo ? luogo.textContent : '',   /* come la scrive la pagina: tutte le regioni */
+        lista: li.parentNode,
+        posto: voci.length                      /* l'ordine della pagina */
       });
     });
+  });
+
+  /* Le regioni del menu, con le parole del loro nome («emilia», «romagna»): servono a riconoscere una regione
+     scritta per intero nella casella. */
+  var REGIONI = Array.prototype.filter.call(regione.options, function (o) { return o.value; }).map(function (o) {
+    var nome = o.text.replace(/\s*\(\d+\)\s*$/, '');
+    return { valore: o.value, nome: nome, parole: parole(nome).filter(function (p) { return !VUOTE[p]; }) };
   });
 
   function contiene(voce, parola) {
@@ -129,6 +145,52 @@
     } catch (e) { /* in un file locale o in una cornice l'indirizzo non si cambia: il filtro vale lo stesso */ }
   }
 
+  /* La regione «in evidenza»: quella scelta dal menu o, se il menu è vuoto, quella scritta per intero nella
+     casella («lazio», «emilia romagna»). */
+  function regioneInEvidenza(r, cercate) {
+    if (r) return { valore: r, nome: scelta(regione) };
+    var trovata = null;
+    REGIONI.forEach(function (reg) {
+      if (reg.parole.length && reg.parole.every(function (p) { return cercate.indexOf(p) >= 0; }) &&
+          (!trovata || reg.parole.length > trovata.parole.length)) trovata = reg;
+    });
+    return trovata;
+  }
+
+  /* Con una regione in evidenza la riga del prodotto dice quella, e quante altre ne ha: dopo aver scelto il
+     Lazio, le otto regioni scritte sotto «Mortadella Bologna» facevano pensare che il filtro non scegliesse
+     («mi mette tutte le regioni», 25/11/2026). Senza regione in evidenza la riga torna com'è nella pagina. */
+  function scriviLuogo(v, evid) {
+    if (!v.luogo) return;
+    if (!evid || v.regioni.indexOf(evid.valore) < 0) {
+      if (v.cambiato) { v.luogo.textContent = v.dove; v.cambiato = false; }
+      return;
+    }
+    var altre = v.regioni.length - 1;
+    var forte = document.createElement('strong');
+    forte.textContent = evid.nome;
+    v.luogo.textContent = '';
+    v.luogo.appendChild(forte);
+    if (altre) v.luogo.appendChild(document.createTextNode(altre === 1 ? ' e un’altra regione' : ' e altre ' + altre + ' regioni'));
+    v.cambiato = true;
+  }
+
+  /* Con una regione in evidenza, in ogni gruppo vengono prima i prodotti di quella sola regione, poi quelli
+     che ne hanno anche altre, dai meno ai più condivisi. Si spostano le righe, non solo il loro aspetto: chi
+     ascolta la pagina o usa la tastiera le trova nello stesso ordine di chi guarda. */
+  var ordinePerRegione = false;
+  function riordina(perRegione) {
+    if (perRegione === ordinePerRegione) return;
+    ordinePerRegione = perRegione;
+    var liste = [];
+    voci.forEach(function (v) { if (liste.indexOf(v.lista) < 0) liste.push(v.lista); });
+    liste.forEach(function (lista) {
+      voci.filter(function (v) { return v.lista === lista; })
+        .sort(function (a, b) { return (perRegione ? a.regioni.length - b.regioni.length : 0) || a.posto - b.posto; })
+        .forEach(function (v) { lista.appendChild(v.li); });
+    });
+  }
+
   /* Senza risultati, il perché: una parola che non sta in nessun prodotto («vino»), parole che ci sono ma
      mai insieme («prosciutto crudo»), prodotti che ci sono ma non con la regione o il tipo scelti. Così chi
      cerca sa che cosa cambiare. */
@@ -151,14 +213,22 @@
     /* Nella casella ci sono solo articoli, preposizioni o parole generiche («prodotti tipici»): l'elenco
        resta intero, e la pagina lo dice invece di tacere. */
     var generiche = !!scritto && !attivo;
+    var evid = regioneInEvidenza(r, cercate);
     var n = 0;
+    var soli = 0;        /* prodotti in elenco che hanno solo la regione in evidenza */
+    var condivisi = 0;   /* prodotti in elenco che ne hanno anche altre */
     var vivi = {};
     voci.forEach(function (v) {
       var si = (!g || v.gruppo === g) && (!r || v.regioni.indexOf(r) >= 0) &&
         cercate.every(function (p) { return contiene(v, p); });
       v.li.hidden = !si;
-      if (si) { n++; vivi[v.gruppo] = true; }
+      scriviLuogo(v, si ? evid : null);
+      if (si) {
+        n++; vivi[v.gruppo] = true;
+        if (evid && v.regioni.indexOf(evid.valore) >= 0) { if (v.regioni.length === 1) soli++; else condivisi++; }
+      }
     });
+    riordina(!!evid);
     blocchi.forEach(function (blocco) { mostraGruppo(blocco, !!vivi[blocco.getAttribute('data-disc-gruppo')]); });
     if (nessuno) nessuno.hidden = n > 0;
     if (perche) perche.textContent = n ? '' : motivo(cercate, r, g);
@@ -173,6 +243,10 @@
         if (cercate.length) pezzi.push('Parole cercate: ' + scritto + '.');
         if (r) pezzi.push('Regione: ' + scelta(regione) + '.');
         if (g) pezzi.push('Tipo di prodotto: ' + scelta(gruppo) + '.');
+        if (soli && condivisi) {
+          pezzi.push('Per primi i prodotti solo di questa regione (' + soli + '), poi quelli che ne hanno anche altre (' +
+            condivisi + ').');
+        }
       }
       trovati.textContent = pezzi.join(' ');
       trovati.hidden = !((attivo || generiche) && n > 0);

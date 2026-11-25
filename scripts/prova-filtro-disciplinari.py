@@ -42,6 +42,13 @@ LEGGI_VISIBILI = """() => Array.from(document.querySelectorAll('.disc-voce'))
   .map(li => { const n = li.querySelector('.disc-nome'); const a = n.querySelector('a');
                return ((a ? a.firstChild : n.firstChild).textContent || '').trim(); })"""
 
+# Le righe in vista, nell'ordine della pagina: [nome, riga delle regioni, gruppo].
+LEGGI_RIGHE = """() => Array.from(document.querySelectorAll('.disc-voce'))
+  .filter(li => !li.hidden && getComputedStyle(li).display !== 'none')
+  .map(li => { const n = li.querySelector('.disc-nome'); const a = n.querySelector('a'); const l = li.querySelector('.disc-luogo');
+               return [((a ? a.firstChild : n.firstChild).textContent || '').trim(), l ? l.textContent.trim() : '',
+                       li.closest('[data-disc-gruppo]').getAttribute('data-disc-gruppo')]; })"""
+
 # Molte ricerche in un colpo solo: per ogni coppia [parole, prodotto] scrive le parole nella casella, come fa
 # chi digita (valore e evento «input»), e restituisce le coppie in cui il prodotto non è rimasto nell'elenco.
 CERCA_TANTE = """coppie => { const c = document.getElementById('disc-cerca'); const leggi = %s; const perse = [];
@@ -133,8 +140,29 @@ def attendi_fermo(pagina):
 
 
 def nascosto(pagina, selettore):
-    return pagina.evaluate("s => { const e = document.querySelector(s); return !e || e.hidden || getComputedStyle(e).display === 'none'; }",
-                           selettore)
+    """Nascosto davvero, cioè non disegnato: l'attributo «hidden» da solo non basta, se un foglio di stile lo scavalca."""
+    return pagina.evaluate("s => { const e = document.querySelector(s); return !e || getComputedStyle(e).display === 'none'; }", selettore)
+
+
+def righe(pagina):
+    return pagina.evaluate(LEGGI_RIGHE)
+
+
+def luogo_atteso(voce, regione):
+    """Con una regione in evidenza la riga dice quella, e quante altre ne ha il prodotto."""
+    altre = len(voce["regioni"]) - 1
+    return regione + ("" if not altre else " e un’altra regione" if altre == 1 else f" e altre {altre} regioni")
+
+
+def fuori_ordine(elenco, per_nome, posto):
+    """Con una regione in evidenza, in ogni gruppo: prima chi ha meno regioni e, a parità, l'ordine della pagina."""
+    sbagliati, ultimo = [], {}
+    for nome, _, gruppo in elenco:
+        chiave = (len(per_nome[nome]["regioni"]), posto[nome])
+        if gruppo in ultimo and chiave < ultimo[gruppo]:
+            sbagliati.append(nome)
+        ultimo[gruppo] = chiave
+    return sbagliati
 
 
 def conteggio(pagina, atteso):
@@ -165,6 +193,13 @@ def opzioni(pagina, selettore):
 def prove_della_ricerca(p, pagina):
     tutte = {v["nome"] for v in p.voci}
     tot = len(tutte)
+    all_apertura = righe(pagina)
+    per_nome = {v["nome"]: v for v in p.voci}
+    posto = {riga[0]: i for i, riga in enumerate(all_apertura)}
+    p.controlla("i nomi dei prodotti sono tutti diversi", len(per_nome) == len(p.voci) == len(posto), f"{len(per_nome)} nomi, {len(p.voci)} voci")
+    p.controlla("all'apertura ogni riga elenca le regioni del prodotto",
+                all(luogo == ", ".join(per_nome[nome]["regioni"]) for nome, luogo, _ in all_apertura if nome in per_nome),
+                str([f"{n}: «{l}»" for n, l, _ in all_apertura if n in per_nome and l != ", ".join(per_nome[n]["regioni"])][:3]))
     p.uguali("all'apertura si vedono tutti i prodotti", visibili(pagina), tutte)
     p.controlla("il riquadro dei filtri compare", not nascosto(pagina, '[data-disc="filtri"]'))
     p.controlla("all'apertura il conteggio dice quanti prodotti ci sono", conteggio(pagina, f"{tot} prodotti.") == f"{tot} prodotti.")
@@ -347,14 +382,41 @@ def prove_della_ricerca(p, pagina):
     regioni = opzioni(pagina, "#disc-regione")
     p.uguali("il menu delle regioni ha tutte le regioni dei dati", [nome for _, nome, _ in regioni],
              {r for v in p.voci for r in v["regioni"]})
-    sbagliate = []
+    sbagliate, righe_sbagliate, ordini_sbagliati = [], [], []
     for valore, nome, quanti in regioni:
         pagina.select_option("#disc-regione", valore)
-        visti = set(visibili(pagina))
+        elenco = righe(pagina)
+        visti = {riga[0] for riga in elenco}
         if visti != p.regione(nome) or quanti != len(visti):
             sbagliate.append(f"{nome}: {len(visti)} in elenco, {len(p.regione(nome))} nei dati, {quanti} nel menu")
+            continue
+        righe_sbagliate += [f"{nome}, {n}: «{l}»" for n, l, _ in elenco if l != luogo_atteso(per_nome[n], nome)]
+        ordini_sbagliati += [f"{nome}: {n}" for n in fuori_ordine(elenco, per_nome, posto)]
     p.controlla("ogni regione del menu mostra i suoi prodotti e il numero giusto", not sbagliate, "; ".join(sbagliate[:4]))
+    p.controlla("con una regione scelta ogni riga dice quella regione e quante altre ne ha il prodotto, non l'elenco di tutte",
+                not righe_sbagliate, f"{len(righe_sbagliate)} righe: {righe_sbagliate[:3]}")
+    p.controlla("con una regione scelta, in ogni gruppo vengono prima i prodotti di quella sola regione, poi quelli con più regioni",
+                not ordini_sbagliati, f"{len(ordini_sbagliati)} fuori posto: {ordini_sbagliati[:4]}")
     pagina.select_option("#disc-regione", "")
+    p.controlla("tolta la regione, righe e ordine tornano quelli della pagina", righe(pagina) == all_apertura,
+                str([a for a, b in zip(righe(pagina), all_apertura) if a != b][:2]))
+
+    # La regione scritta nella casella vale come quella scelta dal menu.
+    for scritta, nome in (("lazio", "Lazio"), ("emilia romagna", "Emilia-Romagna"), ("prodotti della Valle d'Aosta", "Valle d'Aosta")):
+        scrivi(pagina, scritta)
+        elenco = righe(pagina)
+        p.uguali(f"«{scritta}» scritto nella casella trova i prodotti di quella regione", [riga[0] for riga in elenco], p.regione(nome))
+        p.controlla(f"«{scritta}» scritto nella casella: le righe dicono {nome} e quante altre regioni",
+                    all(l == luogo_atteso(per_nome[n], nome) for n, l, _ in elenco if n in per_nome),
+                    str([f"{n}: «{l}»" for n, l, _ in elenco if n in per_nome and l != luogo_atteso(per_nome[n], nome)][:3]))
+        p.controlla(f"«{scritta}» scritto nella casella: prima i prodotti con meno regioni",
+                    not fuori_ordine(elenco, per_nome, posto), str(fuori_ordine(elenco, per_nome, posto)[:4]))
+    scrivi(pagina, "pecorino")
+    p.controlla("una parola che non è una regione lascia nelle righe tutte le regioni del prodotto",
+                all(l == ", ".join(per_nome[n]["regioni"]) for n, l, _ in righe(pagina)),
+                str([f"{n}: «{l}»" for n, l, _ in righe(pagina) if l != ", ".join(per_nome[n]["regioni"])][:3]))
+    scrivi(pagina, "")
+    p.controlla("svuotata la casella, righe e ordine tornano quelli della pagina", righe(pagina) == all_apertura)
     gruppi = {g["id"]: g for g in p.catalogo["gruppi"]}
     tipi = opzioni(pagina, "#disc-gruppo")
     p.uguali("il menu dei tipi ha tutti i gruppi dei dati", [valore for valore, _, _ in tipi], set(gruppi))
@@ -380,6 +442,10 @@ def prove_della_ricerca(p, pagina):
     trovati = pagina.inner_text('[data-disc="trovati"]')
     p.controlla("la riga dei trovati dice quanti sono e quale regione",
                 f"{len(p.regione('Lazio'))} prodotti trovati." in trovati and "Regione: Lazio." in trovati, trovati)
+    soli = len([n for n in p.regione("Lazio") if per_nome[n]["regioni"] == ["Lazio"]])
+    condivisi = len(p.regione("Lazio")) - soli
+    p.controlla("la riga dei trovati spiega l'ordine: prima i prodotti solo di questa regione, poi gli altri",
+                f"Per primi i prodotti solo di questa regione ({soli}), poi quelli che ne hanno anche altre ({condivisi})." in trovati, trovati)
     p.controlla("il pulsante per andare all'elenco dice quanti sono",
                 pagina.inner_text('[data-disc="vai"]').strip() == f"Vai ai {len(p.regione('Lazio'))} prodotti trovati")
     pagina.select_option("#disc-gruppo", "salumi")

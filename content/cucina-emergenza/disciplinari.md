@@ -20,7 +20,7 @@ Chi cucina per le persone di un territorio colpito da un'emergenza può voler pr
 {{< pulsante url="/cucina-emergenza/disciplinari/#il-catalogo" testo="Vai al catalogo" icona="bi-search" >}}
 
 {{< passi titolo="Come usare il catalogo" >}}
-1. **Scegli la regione in cui lavori.** L'elenco mostra i prodotti DOP e IGP di quella regione e le specialità tradizionali garantite legate alla sua tradizione.
+1. **Scegli la regione in cui lavori.** L'elenco mostra i prodotti DOP e IGP di quella regione e le specialità tradizionali garantite legate alla sua tradizione. Per primi trovi i prodotti solo di quella regione; dopo, quelli che hanno nella zona di produzione anche altre regioni.
 2. **Cerca un prodotto o un luogo.** Scrivi per esempio «lenticchie», «Norcia» o «Amatrice», oppure il tipo di prodotto: formaggi, salumi, olio.
 3. **Apri il disciplinare.** Per un prodotto DOP o IGP trovi le materie prime, la zona, il metodo di lavorazione e le caratteristiche che il prodotto deve avere. Per una specialità tradizionale garantita, come l'Amatriciana tradizionale, i Vincisgrassi alla maceratese o la Pizza Napoletana, trovi gli ingredienti, con le quantità o le proporzioni, e il metodo di preparazione.
 {{< /passi >}}
