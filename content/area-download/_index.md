@@ -190,7 +190,7 @@ Documenti ufficiali per chi cucina in un campo o in una mensa di emergenza. I fi
 | Pagina | Contenuto | Formato |
 |---|---|---|
 | [Cucina in emergenza](/cucina-emergenza/) | Manuali e linee guida di ministeri, regioni, aziende sanitarie e Unione europea su igiene, allergeni, pasti per molte persone e donazioni; elenchi dei vini DOP e IGP e dei prodotti agroalimentari tradizionali | PDF sui siti degli enti |
-| [Disciplinari dei prodotti DOP, IGP e STG](/cucina-emergenza/disciplinari/) | Catalogo dei disciplinari dei prodotti agroalimentari italiani, con ricerca per nome, regione e tipo di prodotto | PDF sul sito del Ministero dell'agricoltura |
+| [Disciplinari dei prodotti DOP, IGP e STG](/cucina-emergenza/disciplinari/) | Catalogo dei disciplinari dei prodotti agroalimentari italiani e delle loro sintesi europee, con ricerca per nome, regione e tipo di prodotto | PDF sul sito del Ministero dell'agricoltura e su EUR-Lex |
 
 ## Campagna "Io Non Rischio"
 

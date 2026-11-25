@@ -21,19 +21,33 @@ di enti governativi e istituzionali. Lo script la fa rispettare in due modi.
         regolamenti collegati nel testo della Gazzetta ufficiale, che nel frattempo non siano stati modificati.
       - Catalogo: ogni disciplinare è ancora fra gli allegati della sua pagina del Ministero; gli allegati
         nuovi e un elenco ufficiale cambiato si segnalano come novità.
+      - Sintesi europee (documento unico o scheda riepilogativa, e le loro rettifiche): il registro europeo
+        eAmbrosia, letto con una richiesta, dice se per un prodotto sono uscite pubblicazioni nuove o se il
+        numero di fascicolo è cambiato (novità: si rilancia scripts/aggiorna-documenti-unici.py); l'archivio
+        dell'Ufficio delle pubblicazioni dell'UE, interrogato quaranta atti alla volta, dice se ogni atto
+        collegato esiste ancora e se ha una rettifica che i dati non conoscono.
       - --file: chiede anche l'inizio di ogni PDF del catalogo, tre alla volta.
       - --browser: ciò che una richiesta semplice non legge si riprova con Chromium (Playwright), se c'è.
         Se Playwright manca o Chromium non parte, il controllo prosegue senza e il rapporto lo dice.
       - Verifiche anti-bot: se un sito risponde con una pagina di verifica o rifiuta la richiesta (403, 429),
         il collegamento non è rotto e non è controllato. Non si aggira: si dichiara nel rapporto, e la data
         di verifica non si aggiorna. Il sito del Ministero della Salute lo fa a tratti (24/11/2026).
+      - Siti che non rispondono: un collegamento che dà tempo scaduto o un errore del server (5xx) dalla
+        macchina del controllo non è rotto e non è controllato (regola guasti, punto 3: non rende rosso il
+        controllo, resta nel rapporto e si riapre con una richiesta vera da un'altra rete). Il 25/11/2026 il
+        sito dell'IZS rispondeva in due secondi da una rete e non rispondeva ai server di GitHub.
       - --aggiorna-data (con --file): se tutto è stato letto e nulla è rotto, scrive la data di oggi in
         «verificato» dei due file di dati. Ogni mese: .github/workflows/controllo-cucina-emergenza.yml.
 
-Uscita: 0 tutto a posto; 1 collegamenti rotti o dati sbagliati; 2 una fonte non si è fatta leggere (regola
-guasti: un controllo che non legge la sua fonte non chiude in verde); 3 solo novità da valutare o
-collegamenti dietro una verifica anti-bot (regola guasti, punto 3: non sono guasti, ma si dichiarano).
-Dati: data/cucina_emergenza.yaml, data/disciplinari.json.
+Uscita: 0 tutto a posto; 1 collegamenti rotti o dati sbagliati (con i dati sbagliati i siti non si interrogano,
+e il rapporto lo dice); 2 una fonte non si è fatta leggere (pagine del Ministero, registro europeo, archivio
+dell'UE, un indirizzo che risponde con altro al posto del PDF, oppure troppi collegamenti rimasti senza
+controllo: più di 5 e più di un quinto di quelli da aprire. Regola guasti: un controllo che non legge la sua
+fonte non chiude in verde); 3 solo novità da valutare, oppure pochi collegamenti non controllati perché il
+sito chiede una verifica anti-bot o non ha risposto in tempo (regola guasti, punto 3: non sono guasti, ma si
+dichiarano, e la data di verifica resta ferma: se dura più di 45 giorni lo dice l'audit del sito con --eta).
+Dati: data/cucina_emergenza.yaml, data/disciplinari.json. Le sintesi europee le scrive nei dati
+scripts/aggiorna-documenti-unici.py, da cui questo script prende le funzioni sul registro e sull'archivio.
 """
 import argparse
 import hashlib
@@ -76,12 +90,15 @@ RE_ALLEGATO = re.compile(r"""<a\s+title='([^']*)'\s+href="([^"]*ServeAttachment[
 # Archivio dell'Ufficio delle pubblicazioni dell'UE: dice se un numero CELEX esiste (303) o no (404).
 ARCHIVIO_UE = "https://publications.europa.eu/resource/celex/{}"
 SPARQL_UE = "https://publications.europa.eu/webapi/rdf/sparql"
+ARCHIVIO = "publications.europa.eu"
+SCRIPT_SINTESI = Path(__file__).resolve().parent / "aggiorna-documenti-unici.py"
 AGENTE = "Mozilla/5.0 (compatible; PCGenzanoLinkChecker/1.0; +https://www.protezionecivilegenzano.it/)"
 TIPI = {"DOP", "IGP", "STG"}
 PAUSA = 0.7            # secondi fra due richieste allo stesso sito
 TEMPO_MASSIMO = 90     # secondi per una risposta: nei periodi lenti il sito del Ministero ne impiega 30-40
 CONTEMPORANEE = 3      # richieste insieme per i PDF del catalogo: di più, il sito del Ministero risponde 502
 SOGLIA_FERMO = 5       # richieste di fila senza risposta utile dopo le quali un sito non si interroga più
+QUOTA_FERMA = 0.2      # parte dei collegamenti da aprire: se ne restano di più senza controllo, il giro non vale
 MASSIMO_BROWSER = 80   # collegamenti che si riprovano con il browser in un giro
 TEMPO_RICHIESTE = 35 * 60  # secondi in tutto per le richieste dirette: oltre, ciò che resta è «non controllato»
 TEMPO_BROWSER = 12 * 60    # secondi in tutto per il ripiego con il browser
@@ -92,11 +109,16 @@ BLOCCO = re.compile(r"captcha|verify you are|are you a robot|just a moment|check
 ANTIBOT = "il sito ha risposto con una pagina di verifica anti-bot"
 RIFIUTO = "il sito ha rifiutato la richiesta automatica"
 PROTETTO = (ANTIBOT, RIFIUTO)  # esiti che non dicono nulla sul collegamento: né rotto né controllato
+ALTRO = "risponde, ma non con un PDF"
+SALTATO = "non controllato: il sito non rispondeva alle richieste precedenti"
+# Il sito non ha risposto: tempo scaduto, errore del server, o collegamento saltato per uno di questi motivi.
+SILENZIO = re.compile(r"timed out|TimeoutError|\bHTTP 5\d\d\b|^non controllato:")
 
 errori = []       # dati sbagliati o collegamenti rotti (uscita 1)
 non_letti = []    # (sito, testo): fonti che non si sono fatte leggere (uscita 2)
 novita = []       # cose nuove sulle fonti, da valutare: non sono guasti (uscita 3)
 protetti = []     # collegamenti dietro una verifica anti-bot: non controllati in questo giro (uscita 3)
+muti = []         # collegamenti a cui il sito non ha risposto in tempo: non controllati in questo giro (uscita 3)
 da_rivedere = []  # (dove, url, nota): PDF che la richiesta semplice non ha letto, da riprovare con il browser
 senza_browser = []  # perché il ripiego con il browser, se chiesto, non è stato possibile
 metodi = Counter()
@@ -152,6 +174,37 @@ def celex_di(url):
 
 def tutti_i_documenti(documenti):
     return [doc for gruppo in documenti.get("gruppi", []) for doc in gruppo.get("documenti", [])]
+
+
+def collegamenti_europei(voce):
+    """Indirizzi di EUR-Lex che il catalogo mostra per un prodotto: la sintesi e le sue rettifiche."""
+    sintesi = voce.get("sintesi")
+    if not isinstance(sintesi, dict):
+        return []
+    return [x["url"] for x in [sintesi] + list(sintesi.get("rettifiche") or []) if isinstance(x, dict) and x.get("url")]
+
+
+def giorno(iso):
+    """«2025-10-20» → «20/10/2025»; vuoto se non è una data."""
+    try:
+        return date.fromisoformat(str(iso)).strftime("%d/%m/%Y")
+    except ValueError:
+        return ""
+
+
+_sintesi = []  # il modulo scripts/aggiorna-documenti-unici.py, caricato una volta sola
+
+
+def documenti_unici():
+    """Funzioni e indirizzi comuni con scripts/aggiorna-documenti-unici.py: nomi dei prodotti, registro europeo,
+    domande all'archivio dell'UE. Lo script si carica solo per i controlli con la rete."""
+    if not _sintesi:
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("aggiorna_documenti_unici", SCRIPT_SINTESI)
+        modulo = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(modulo)
+        _sintesi.append(modulo)
+    return _sintesi[0]
 
 
 # ───────────────────────── controllo dei dati, senza rete ─────────────────────────
@@ -263,9 +316,58 @@ def controlla_dati(documenti, catalogo):
             controlla_url(dove + ", " + str(extra.get("etichetta")), extra.get("url"))
             if not extra.get("etichetta") or not isinstance(extra.get("kb"), int):
                 errori.append(f"{dove}: documento aggiuntivo senza etichetta o peso")
+        controlla_sintesi(dove, voce, usati)
     for noto in catalogo.get("allegati_noti", []):
         if sito(noto.get("url")) != MASAF or not noto.get("motivo"):
             errori.append("disciplinari.json: «allegati_noti» chiede, per ogni voce, l'indirizzo dell'allegato e il motivo")
+
+
+def controlla_sintesi(dove, voce, usati):
+    """Dati europei di un prodotto: fascicolo e impronta del registro, sintesi (documento unico o scheda
+    riepilogativa) e sue rettifiche. Li scrive scripts/aggiorna-documenti-unici.py."""
+    sintesi, impronta = voce.get("sintesi"), voce.get("registro_ue")
+    if voce.get("tipo") == "STG":
+        if sintesi is not None or impronta is not None:
+            errori.append(f"{dove}: una STG non ha sintesi europea né «registro_ue»: non è nel registro delle indicazioni geografiche")
+        return
+    if impronta is not None and not re.fullmatch(r"([0-9a-f]{12})?", str(impronta)):
+        errori.append(f"{dove}: «registro_ue» è l'impronta scritta da scripts/aggiorna-documenti-unici.py (12 cifre esadecimali, o vuota)")
+    if (impronta is not None or sintesi is not None) and not re.fullmatch(r"(PDO|PGI)-IT-\d+", str(voce.get("fascicolo", ""))):
+        errori.append(f"{dove}: «fascicolo» deve essere il numero del registro europeo (PDO-IT-… o PGI-IT-…)")
+    if sintesi is None:
+        return
+    if not isinstance(sintesi, dict) or sintesi.get("tipo") not in ("unico", "scheda"):
+        errori.append(f"{dove}: «sintesi» chiede il tipo «unico» (documento unico) o «scheda» (scheda riepilogativa)")
+        return
+    if impronta in (None, ""):
+        errori.append(f"{dove}: ha una sintesi europea ma non l'impronta «registro_ue»: va riletto con scripts/aggiorna-documenti-unici.py")
+    rettifiche = sintesi.get("rettifiche", [])
+    if not isinstance(rettifiche, list) or not all(isinstance(r, dict) for r in rettifiche):
+        errori.append(f"{dove}: «rettifiche» è un elenco di documenti (url, data, pagine, kb)")
+        rettifiche = []
+    for che, documento in [("sintesi europea", sintesi)] + [("rettifica della sintesi europea", r) for r in rettifiche]:
+        qui = f"{dove}, {che}"
+        url = documento.get("url")
+        controlla_url(qui, url)
+        if sito(url) != EURLEX or not re.fullmatch(r"[0-9A-Z()]+", celex_di(url) or ""):
+            errori.append(f"{qui}: si collega solo il PDF su EUR-Lex, con il suo numero CELEX")
+        if url in usati:
+            errori.append(f"{qui}: indirizzo già usato da un'altra voce")
+        usati.add(url)
+        if not all(isinstance(documento.get(k), int) and documento.get(k) > 0 for k in ("pagine", "kb")):
+            errori.append(f"{qui}: mancano pagine o peso del PDF")
+        try:
+            uscita = date.fromisoformat(str(documento.get("data", "")))
+        except ValueError:
+            errori.append(f"{qui}: «data» deve essere la data della Gazzetta ufficiale, AAAA-MM-GG")
+            continue
+        if uscita > oggi_in_italia():
+            errori.append(f"{qui}: «data» è una data futura")
+        if documento is not sintesi and str(documento["data"]) < str(sintesi.get("data", "")):
+            errori.append(f"{qui}: è più vecchia dell'atto che corregge")
+    altre = sintesi.get("rettifiche_altre", [])
+    if not isinstance(altre, list) or not all(isinstance(a, str) and re.fullmatch(r"[0-9A-Z()]+", a) for a in altre):
+        errori.append(f"{dove}: «rettifiche_altre» è un elenco di numeri CELEX")
 
 
 # ───────────────────────── pagine costruite ─────────────────────────
@@ -300,6 +402,11 @@ def controlla_pagine(cartella, documenti, catalogo):
             nei_dati.add(extra["url"])
             if extra["url"] not in nel_cat:
                 errori.append(f"disciplinare «{voce['nome']}»: manca il collegamento a «{extra['etichetta']}»")
+        for url in collegamenti_europei(voce):
+            nei_dati.add(url)
+            if url not in nel_cat:
+                errori.append(f"disciplinare «{voce['nome']}»: la sintesi europea, o una sua rettifica, non compare "
+                              f"nel catalogo costruito: {url}")
     for url in sorted(nel_hub | nel_cat):
         if not url.startswith("http") or sito(url) == SITO:
             continue
@@ -386,7 +493,7 @@ def leggi_pdf(url):
     if stato in (200, 206) and inizio.startswith(b"%PDF"):
         return "pdf", ""
     if stato in (200, 206):
-        return ("protetto", ANTIBOT) if sembra_verifica(inizio) else ("altro", "risponde, ma non con un PDF")
+        return ("protetto", ANTIBOT) if sembra_verifica(inizio) else ("altro", ALTRO)
     if errore in ("HTTP 403", "HTTP 429"):
         return "protetto", f"{RIFIUTO} ({errore})"
     return "muto", errore or f"HTTP {stato}"
@@ -396,8 +503,7 @@ def controlla_pdf(dove, url):
     host = sito(url)
     if di_fila.get(host, 0) >= SOGLIA_FERMO:
         perche = motivo.get(host, "")
-        da_rivedere.append((dove, url, perche if perche.startswith(PROTETTO) else
-                            "non controllato: il sito non rispondeva alle richieste precedenti"))
+        da_rivedere.append((dove, url, perche if perche.startswith(PROTETTO) else SALTATO))
         return
     esito, nota = leggi_pdf(url)
     segna(host, esito in ("pdf", "assente"), nota)
@@ -409,19 +515,29 @@ def controlla_pdf(dove, url):
         da_rivedere.append((dove, url, nota))
 
 
-def ultima_consolidata(celex):
-    """Numero CELEX dell'ultima versione consolidata dell'atto, chiesto all'archivio dell'UE; None se non risponde."""
-    base, prefisso = "3" + celex.split("-")[0][1:], celex.split("-")[0] + "-"
-    domanda = ("PREFIX cdm: <http://publications.europa.eu/ontology/cdm#> SELECT DISTINCT ?celex WHERE { "
-               f'?base cdm:resource_legal_id_celex "{base}"^^<http://www.w3.org/2001/XMLSchema#string> . '
-               "?cons cdm:act_consolidated_consolidates_resource_legal ?base ; cdm:resource_legal_id_celex ?celex . }")
+def chiedi_all_archivio(domanda):
+    """Righe della risposta dell'archivio dell'UE a una domanda SPARQL; None se l'archivio non risponde."""
     stato, corpo, _ = chiedi(SPARQL_UE + "?" + urllib.parse.urlencode({"query": domanda}),
                              intestazioni={"Accept": "application/sparql-results+json"})
     if stato != 200:
         return None
     try:
-        valori = [r["celex"]["value"] for r in json.loads(corpo)["results"]["bindings"]]
+        righe = json.loads(corpo)["results"]["bindings"]
     except (ValueError, KeyError, TypeError):
+        return None
+    return righe if isinstance(righe, list) else None
+
+
+def ultima_consolidata(celex):
+    """Numero CELEX dell'ultima versione consolidata dell'atto, chiesto all'archivio dell'UE; None se non risponde."""
+    base, prefisso = "3" + celex.split("-")[0][1:], celex.split("-")[0] + "-"
+    righe = chiedi_all_archivio(
+        "PREFIX cdm: <http://publications.europa.eu/ontology/cdm#> SELECT DISTINCT ?celex WHERE { "
+        f'?base cdm:resource_legal_id_celex "{base}"^^<http://www.w3.org/2001/XMLSchema#string> . '
+        "?cons cdm:act_consolidated_consolidates_resource_legal ?base ; cdm:resource_legal_id_celex ?celex . }")
+    try:
+        valori = [r["celex"]["value"] for r in righe]
+    except (KeyError, TypeError):  # anche righe None: l'archivio non ha risposto
         return None
     versioni = sorted(v for v in valori if v.startswith(prefisso))
     return versioni[-1] if versioni else None
@@ -430,16 +546,13 @@ def ultima_consolidata(celex):
 def modifiche(celex):
     """Atti che hanno modificato un atto di base (numeri CELEX, senza le rettifiche), chiesti all'archivio dell'UE;
     None se non risponde. Un atto modificato ha un testo consolidato: è quello che conviene collegare."""
-    domanda = ("PREFIX cdm: <http://publications.europa.eu/ontology/cdm#> SELECT DISTINCT ?celex WHERE { "
-               f'?base cdm:resource_legal_id_celex "{celex}"^^<http://www.w3.org/2001/XMLSchema#string> . '
-               "?mod cdm:resource_legal_amends_resource_legal ?base ; cdm:resource_legal_id_celex ?celex . }")
-    stato, corpo, _ = chiedi(SPARQL_UE + "?" + urllib.parse.urlencode({"query": domanda}),
-                             intestazioni={"Accept": "application/sparql-results+json"})
-    if stato != 200:
-        return None
+    righe = chiedi_all_archivio(
+        "PREFIX cdm: <http://publications.europa.eu/ontology/cdm#> SELECT DISTINCT ?celex WHERE { "
+        f'?base cdm:resource_legal_id_celex "{celex}"^^<http://www.w3.org/2001/XMLSchema#string> . '
+        "?mod cdm:resource_legal_amends_resource_legal ?base ; cdm:resource_legal_id_celex ?celex . }")
     try:
-        valori = [r["celex"]["value"] for r in json.loads(corpo)["results"]["bindings"]]
-    except (ValueError, KeyError, TypeError):
+        valori = [r["celex"]["value"] for r in righe]
+    except (KeyError, TypeError):  # anche righe None: l'archivio non ha risposto
         return None
     return sorted(v for v in valori if "R(" not in v)
 
@@ -454,19 +567,19 @@ def controlla_ue(dove, url):
         errori.append(f"{dove}: il documento CELEX {celex} non esiste nell'archivio dell'Unione europea: {url}")
         return
     if stato not in (200, 303):
-        non_letti.append(("publications.europa.eu", f"{dove}: l'archivio dell'UE non ha risposto per CELEX {celex} ({errore or 'HTTP ' + str(stato)})"))
+        non_letti.append((ARCHIVIO, f"{dove}: l'archivio dell'UE non ha risposto per CELEX {celex} ({errore or 'HTTP ' + str(stato)})"))
         return
     if re.fullmatch(r"0\d{4}[A-Z]{1,2}\d{4}-\d{8}", celex):
         ultima = ultima_consolidata(celex)
         if ultima is None:
-            non_letti.append(("publications.europa.eu", f"{dove}: l'archivio dell'UE non ha detto qual è l'ultima versione consolidata di {celex}"))
+            non_letti.append((ARCHIVIO, f"{dove}: l'archivio dell'UE non ha detto qual è l'ultima versione consolidata di {celex}"))
         elif ultima > celex:
             novita.append(f"{dove}: è uscita una versione consolidata più recente ({ultima}; il sito collega {celex})")
     elif re.fullmatch(r"3\d{4}[RLD]\d{4}", celex):
         # atto collegato nel testo della Gazzetta ufficiale: se nel frattempo è stato modificato, lo si dice
         cambiato_da = modifiche(celex)
         if cambiato_da is None:
-            non_letti.append(("publications.europa.eu", f"{dove}: l'archivio dell'UE non ha detto se {celex} è stato modificato"))
+            non_letti.append((ARCHIVIO, f"{dove}: l'archivio dell'UE non ha detto se {celex} è stato modificato"))
         elif cambiato_da:
             novita.append(f"{dove}: l'atto {celex} è stato modificato da {', '.join(cambiato_da)}: va collegato il testo "
                           f"consolidato più recente al posto di quello della Gazzetta ufficiale")
@@ -477,6 +590,12 @@ def controlla_ue(dove, url):
         metodi["richiesta diretta"] += 1
     elif stato in (200, 202):
         da_rivedere.append((dove, url, "EUR-Lex"))
+    elif errore in ("HTTP 403", "HTTP 429"):
+        protetti.append(f"{dove}: {RIFIUTO} ({errore}): {url}")
+    elif SILENZIO.search(errore or f"HTTP {stato}"):
+        # il documento esiste nell'archivio (controllato qui sopra): è l'indirizzo di EUR-Lex che da questa
+        # macchina non ha risposto. Come per gli altri siti: né rotto né controllato (regola guasti, punto 3)
+        muti.append(f"{dove}: {errore or 'HTTP ' + str(stato)}: {url}")
     else:
         non_letti.append((EURLEX, f"{dove}: {errore or 'HTTP ' + str(stato)}: {url}"))
 
@@ -535,6 +654,131 @@ def controlla_ministero(documenti, catalogo):
                     novita.append(f"allegato nuovo «{titolo}» in {indirizzo}: {url}")
 
 
+def controlla_registro_europeo(ue, voci):
+    """Il registro eAmbrosia, letto con una richiesta sola, dice se per un prodotto sono uscite pubblicazioni che i
+    dati non hanno visto, se il numero di fascicolo è cambiato, se il prodotto non c'è più con quel nome. Sono
+    novità da valutare, non guasti: l'atto collegato resta quello che era."""
+    host = sito(ue.REGISTRO)
+    stato, corpo, errore = chiedi(ue.REGISTRO, intestazioni={"Accept": "application/json", "Accept-Language": "en"})
+    registro = None
+    if stato == 200:
+        try:
+            registro = ue.voci_italiane(json.loads(corpo))
+        except (ValueError, TypeError, AttributeError):
+            registro = None
+    if not registro:
+        perche = errore or (f"HTTP {stato}" if stato != 200 else "risposta non leggibile, o senza prodotti italiani")
+        non_letti.append((host, f"registro europeo eAmbrosia: {perche}: non si sa se per i prodotti del catalogo sono "
+                                f"uscite pubblicazioni nuove"))
+        return
+    per_nome = ue.indice_per_nome(registro)
+    assenti, trovate = [], []
+    for voce in voci:
+        dove = f"disciplinare «{voce['nome']}»"
+        del_registro = ue.abbina(voce, per_nome)
+        if del_registro is None:
+            assenti.append(f"{dove}: nel registro europeo non c'è più un solo prodotto con questo nome (rinominato, "
+                           f"cancellato o doppio): va guardato a mano")
+            continue
+        if "registro_ue" not in voce:
+            trovate.append(f"{dove}: mai cercato nel registro europeo: `python3 scripts/aggiorna-documenti-unici.py`")
+            continue
+        if ue.fascicolo_normale(del_registro.get("fileNumber")) != ue.fascicolo_normale(voce.get("fascicolo")):
+            trovate.append(f"{dove}: per il registro europeo il fascicolo è {del_registro.get('fileNumber')}, nei dati "
+                           f"{voce.get('fascicolo')}")
+        if ue.impronta_del_registro(del_registro) != voce["registro_ue"]:
+            ultima = giorno(ue.ultima_pubblicazione(del_registro))
+            trovate.append(f"{dove}: il registro europeo cita pubblicazioni diverse da quelle viste"
+                           + (f" (la più recente con la data è del {ultima})" if ultima else "")
+                           + ": la sintesi europea può essere cambiata")
+    if len(assenti) * 2 > len(voci):
+        # più della metà dei prodotti introvabile: è l'elenco che è stato letto male o ha cambiato forma
+        non_letti.append((host, f"registro europeo eAmbrosia: {len(assenti)} prodotti su {len(voci)} non si trovano "
+                                f"(elenco letto male o cambiato)"))
+        return
+    novita.extend(assenti + trovate)
+
+
+def controlla_archivio_delle_sintesi(ue, voci):
+    """L'archivio dell'Ufficio delle pubblicazioni dell'UE dice, quaranta atti alla volta, se ogni atto collegato
+    come sintesi o come rettifica esiste ancora e se ha una rettifica che i dati non conoscono. EUR-Lex non si
+    interroga: alle richieste di un programma risponde 202 senza contenuto, per 288 atti come per uno."""
+    attesi, note = {}, {}
+    for voce in voci:
+        sintesi = voce.get("sintesi")
+        if not sintesi:
+            continue
+        atto = celex_di(sintesi["url"])
+        attesi[atto] = (f"disciplinare «{voce['nome']}», sintesi europea", sintesi["url"])
+        conosciute = set(sintesi.get("rettifiche_altre", []))
+        for rettifica in sintesi.get("rettifiche", []):
+            numero = celex_di(rettifica["url"])
+            attesi[numero] = (f"disciplinare «{voce['nome']}», rettifica della sintesi europea", rettifica["url"])
+            conosciute.add(numero)
+        note[atto] = (voce["nome"], conosciute)
+    for gruppo in ue.a_gruppi(attesi):
+        righe = chiedi_all_archivio(ue.domanda_esistenza(gruppo))
+        try:
+            presenti = {r["celex"]["value"] for r in righe}
+        except (KeyError, TypeError):  # anche righe None: l'archivio non ha risposto
+            non_letti.append((ARCHIVIO, f"l'archivio dell'UE non ha detto se esistono ancora {len(gruppo)} atti delle "
+                                        f"sintesi europee (da {gruppo[0]} a {gruppo[-1]})"))
+            continue
+        for numero in gruppo:
+            dove, url = attesi[numero]
+            if numero in presenti:
+                metodi["archivio dell'UE"] += 1
+                continue
+            # la risposta a gruppi può arrivare incompleta: prima di dichiarare rotto un collegamento si chiede
+            # l'atto da solo, all'indirizzo che risponde 303 se esiste e 404 se no
+            stato, _, errore = chiedi(ARCHIVIO_UE.format(urllib.parse.quote(numero, safe="")), quanto=8, segui=False,
+                                      intestazioni={"Accept": "*/*", "Accept-Language": "it"})
+            if stato == 404:
+                errori.append(f"{dove}: il documento CELEX {numero} non esiste nell'archivio dell'Unione europea: {url}")
+            elif stato in (200, 303):
+                metodi["archivio dell'UE"] += 1
+            else:
+                non_letti.append((ARCHIVIO, f"{dove}: l'archivio dell'UE non ha risposto per CELEX {numero} "
+                                            f"({errore or 'HTTP ' + str(stato)})"))
+    for gruppo in ue.a_gruppi(note):
+        righe = chiedi_all_archivio(ue.domanda_rettifiche(gruppo))
+        try:
+            legate = ue.righe_delle_rettifiche(righe)
+        except (KeyError, TypeError):  # anche righe None: l'archivio non ha risposto
+            non_letti.append((ARCHIVIO, f"l'archivio dell'UE non ha detto se {len(gruppo)} atti delle sintesi europee "
+                                        f"hanno rettifiche nuove (da {gruppo[0]} a {gruppo[-1]})"))
+            continue
+        for atto, coppie in sorted(legate.items()):
+            nome, conosciute = note.get(atto, ("", set()))
+            for numero, quando in coppie:
+                if nome and numero not in conosciute:
+                    novita.append(f"disciplinare «{nome}»: l'archivio dell'UE ha una rettifica della sintesi europea che i "
+                                  f"dati non conoscono ({numero}" + (f", del {giorno(quando)}" if giorno(quando) else "") + ")")
+        # la controprova: le rettifiche che i dati conoscono devono tornare nella risposta. Se mancano, la
+        # risposta è incompleta o la domanda non funziona più, e «nessuna rettifica nuova» non vorrebbe dire nulla
+        perse = sorted((atto, numero) for atto in gruppo for numero in note[atto][1]
+                       if numero not in {n for n, _ in legate.get(atto, [])})
+        if perse:
+            non_letti.append((ARCHIVIO, f"l'archivio dell'UE non ha restituito {len(perse)} rettifiche che i dati conoscono "
+                                        f"(la prima: {perse[0][1]}, dell'atto {perse[0][0]}): risposta incompleta, non si sa "
+                                        f"se ci sono rettifiche nuove"))
+
+
+def controlla_europa(catalogo):
+    """Sintesi europee del catalogo: registro eAmbrosia e archivio dell'Ufficio delle pubblicazioni dell'UE."""
+    voci = [v for v in catalogo["voci"] if v.get("tipo") != "STG"]
+    if not any("registro_ue" in v or v.get("sintesi") for v in voci):
+        return
+    try:
+        ue = documenti_unici()
+    except Exception as e:  # file mancante o non caricabile: è un errore del repository, non di una fonte
+        errori.append(f"scripts/{SCRIPT_SINTESI.name} non si carica ({type(e).__name__}: {e}): le sintesi europee "
+                      f"non sono state controllate")
+        return
+    controlla_registro_europeo(ue, voci)
+    controlla_archivio_delle_sintesi(ue, voci)
+
+
 def controlla_rete(documenti, catalogo, anche_file):
     for doc in tutti_i_documenti(documenti):
         dove = f"documento «{doc['id']}»"
@@ -551,8 +795,13 @@ def controlla_rete(documenti, catalogo, anche_file):
             elif errore in ("HTTP 403", "HTTP 429"):
                 protetti.append(f"{dove}, pagina dell'ente: {RIFIUTO} ({errore}): {doc['pagina']['url']}")
             elif stato != 200:
-                non_letti.append((sito(doc["pagina"]["url"]), f"{dove}, pagina dell'ente: {errore or 'HTTP ' + str(stato)}"))
+                nota = errore or "HTTP " + str(stato)
+                if SILENZIO.search(nota):
+                    muti.append(f"{dove}, pagina dell'ente: {nota}: {doc['pagina']['url']}")
+                else:
+                    non_letti.append((sito(doc["pagina"]["url"]), f"{dove}, pagina dell'ente: {nota}"))
     controlla_ministero(documenti, catalogo)
+    controlla_europa(catalogo)  # prima dei file del Ministero, che nei periodi lenti consumano il tempo del giro
     if anche_file:
         controlla_file_del_catalogo(catalogo)
 
@@ -574,25 +823,24 @@ def controlla_file_del_catalogo(catalogo):
             return "saltato", FUORI_TEMPO
         if fermo.is_set():
             ultimo_motivo = perche[-1] if perche else ""
-            return "saltato", (ultimo_motivo if ultimo_motivo.startswith(PROTETTO) else
-                               "non controllato: il sito non rispondeva alle richieste precedenti")
+            return "saltato", ultimo_motivo if ultimo_motivo.startswith(PROTETTO) else SALTATO
         return leggi_pdf(voce[1])
 
-    muti = 0
+    senza_risposta = 0  # file di fila senza risposta utile (non la lista «muti» del rapporto)
     with ThreadPoolExecutor(max_workers=CONTEMPORANEE) as squadra:
         for (dove, url), (esito, nota) in zip(voci, squadra.map(uno, voci)):
             if esito == "pdf":
                 metodi["richiesta diretta"] += 1
-                muti = 0
+                senza_risposta = 0
             elif esito == "assente":
                 errori.append(f"{dove}: {nota}: {url}")
-                muti = 0
+                senza_risposta = 0
             else:
                 da_rivedere.append((dove, url, nota))
                 if esito != "saltato":
-                    muti += 1
+                    senza_risposta += 1
                     perche.append(nota)
-                if muti >= SOGLIA_FERMO:
+                if senza_risposta >= SOGLIA_FERMO:
                     fermo.set()
 
 
@@ -707,16 +955,45 @@ def chiudi_da_rivedere(con_browser):
         elif nota.startswith(PROTETTO) or nota_browser.startswith(PROTETTO):
             # né rotto né controllato: il sito non lascia leggere il file ai programmi, e non lo si aggira
             protetti.append(f"{dove}: {nota_browser if nota_browser.startswith(PROTETTO) else nota}: {url}")
+        elif SILENZIO.search(nota_browser or nota):
+            # né rotto né controllato: da questa macchina il sito non ha risposto (regola guasti, punto 3)
+            muti.append(f"{dove}: {nota_browser or nota}: {url}")
         else:
             non_letti.append((sito(url), f"{dove}: {nota_browser or nota}: {url}"))
 
 
+def collegamenti_da_aprire(documenti, catalogo, anche_file):
+    """Quanti collegamenti il giro apre con una richiesta sua: documenti, pagine degli enti e, con --file, i PDF
+    del catalogo. Le sintesi europee non si contano: di quelle si chiede all'archivio dell'UE."""
+    quanti = 0
+    for doc in tutti_i_documenti(documenti):
+        quanti += 1 + bool(doc.get("pagina") and sito(doc["pagina"]["url"]) != MASAF)
+    if anche_file:
+        quanti += sum((voce["formato"] == "pdf") + len(voce.get("extra", [])) for voce in catalogo["voci"])
+    return quanti
+
+
+def segnala_controllo_mancato(da_aprire):
+    """Qualche collegamento dietro una verifica anti-bot o senza risposta è un collegamento da riaprire, e il
+    giro resta verde (regola guasti, punto 3). Quando sono più di SOGLIA_FERMO e più di QUOTA_FERMA di quelli
+    da aprire, è il controllo che non c'è stato (rete della macchina, un sito fermo, una fonte intera che
+    rifiuta i programmi): vale la regola guasti, punto 1, e il giro non chiude in verde."""
+    fermi = protetti + muti
+    if len(fermi) <= SOGLIA_FERMO or len(fermi) <= QUOTA_FERMA * da_aprire:
+        return
+    per_sito = Counter(sito(voce.rsplit(": ", 1)[-1]) for voce in fermi).most_common()
+    non_letti.append((per_sito[0][0], f"{len(fermi)} collegamenti su {da_aprire} non controllati ("
+                                      + ", ".join(f"{quanti} di {host}" for host, quanti in per_sito)
+                                      + "): sono troppi perché il giro valga come controllo dei collegamenti. "
+                                        "L'elenco è nelle due sezioni dei collegamenti non controllati"))
+
+
 # ───────────────────────── rapporto, data, uscita ─────────────────────────
 
-def elenco_non_letti():
-    """Righe del rapporto per le fonti non lette: se un sito ne ha molte, le prime tre e il conto delle altre."""
+def elenco_per_sito(voci):
+    """Righe del rapporto per un elenco di (sito, testo): se un sito ne ha molte, le prime tre e il conto delle altre."""
     per_sito = {}
-    for host, testo in non_letti:
+    for host, testo in voci:
         per_sito.setdefault(host, []).append(testo)
     righe = []
     for host, testi in per_sito.items():
@@ -727,13 +1004,19 @@ def elenco_non_letti():
     return righe
 
 
-def rapporto(documenti, catalogo, con_rete, anche_file):
+def rapporto(documenti, catalogo, con_rete, anche_file, rete_saltata=False):
     n_doc = len(tutti_i_documenti(documenti))
     n_pdf = sum(1 for v in catalogo["voci"] if v["formato"] == "pdf")
-    fatto = "dati" + (", documenti e pagine del Ministero" if con_rete else "") + (", inizio di ogni PDF del catalogo" if anche_file else "")
+    n_ue = sum(len(collegamenti_europei(v)) for v in catalogo["voci"])
+    fatto = ("dati" + (", documenti, pagine del Ministero, registro europeo e archivio dell'UE" if con_rete else "")
+             + (", inizio di ogni PDF del catalogo" if anche_file else ""))
     righe = ["## Cucina in emergenza: controllo dei collegamenti", "",
-             f"Documenti: {n_doc}. Disciplinari in PDF: {n_pdf}. Data scritta nei dati: {catalogo['verificato']}.",
+             f"Documenti: {n_doc}. Disciplinari in PDF: {n_pdf}. Sintesi europee e rettifiche: {n_ue}. "
+             f"Data scritta nei dati: {catalogo['verificato']}.",
              f"Controllo fatto: {fatto}."]
+    if rete_saltata:
+        righe.append("Le richieste ai siti non sono state fatte: i dati hanno gli errori elencati qui sotto, e vanno "
+                     "corretti prima. Nessun collegamento è stato riaperto in questo giro.")
     if metodi:
         righe.append("PDF letti: " + ", ".join(f"{n} con {m}" for m, n in sorted(metodi.items())) + ".")
     if senza_browser:
@@ -742,7 +1025,7 @@ def rapporto(documenti, catalogo, con_rete, anche_file):
     if errori:
         righe += ["### Collegamenti rotti o dati sbagliati", ""] + [f"- {e}" for e in errori] + [""]
     if non_letti:
-        righe += ["### Fonti che non si sono fatte leggere", ""] + elenco_non_letti() + [""]
+        righe += ["### Fonti che non si sono fatte leggere", ""] + elenco_per_sito(non_letti) + [""]
     if protetti:
         righe += ["### Collegamenti non controllati: il sito chiede una verifica anti-bot", "",
                   "Il sito ha risposto alle richieste automatiche con una pagina di verifica o con un rifiuto. Non è un",
@@ -750,15 +1033,27 @@ def rapporto(documenti, catalogo, con_rete, anche_file):
                   "data di verifica scritta nei dati non cambia. Si può rilanciare il controllo un altro giorno (Actions →",
                   "«Cucina in emergenza: controllo mensile dei collegamenti» → Run workflow) o aprirli con un browser.", ""]
         righe += [f"- {p}" for p in protetti] + [""]
+    if muti:
+        righe += ["### Collegamenti non controllati: il sito non ha risposto in tempo", "",
+                  "Dalla macchina del controllo il sito ha dato tempo scaduto o un errore del server. Non è detto che il",
+                  "collegamento sia rotto: va riaperto con una richiesta vera da un'altra rete, e se non risponde per più",
+                  "settimane si tratta come rotto (regola sui guasti, punto 3). La data di verifica scritta nei dati non",
+                  "cambia. Il controllo si può rilanciare (Actions → «Cucina in emergenza: controllo mensile dei",
+                  "collegamenti» → Run workflow) o eseguire da un'altra macchina, pubblicando poi la data con una PR:",
+                  "`python3 scripts/check-cucina-emergenza.py --rete --file --browser --aggiorna-data`.", ""]
+        righe += elenco_per_sito([(sito(m.rsplit(": ", 1)[-1]), m) for m in muti]) + [""]
     if novita:
         righe += ["### Novità sulle fonti, da valutare", ""] + [f"- {n}" for n in novita] + [""]
     if errori or non_letti or novita:
         righe += ["Come si lavora: l'indirizzo nuovo si prende dalla pagina dell'ente e si verifica con una richiesta",
                   "vera, mai indovinato (regola sui guasti); poi si aggiornano `data/cucina_emergenza.yaml` o",
-                  "`data/disciplinari.json`. Un allegato che non serve al catalogo si aggiunge a `allegati_noti` con il motivo.", ""]
-    elif not protetti:
+                  "`data/disciplinari.json`. Un allegato che non serve al catalogo si aggiunge a `allegati_noti` con il motivo.",
+                  "Per le sintesi europee (pubblicazioni nuove nel registro, rettifiche nuove, fascicolo cambiato):",
+                  "`python3 scripts/aggiorna-documenti-unici.py`, che rilegge i soli prodotti cambiati e riscrive i dati;",
+                  "poi la build e questo controllo con `--public public`.", ""]
+    elif not protetti and not muti:
         righe += ["Nessun problema.", ""]
-    firma = hashlib.sha256("\n".join(sorted(errori + [t for _, t in non_letti] + protetti + novita)).encode("utf-8")).hexdigest()[:16]
+    firma = hashlib.sha256("\n".join(sorted(errori + [t for _, t in non_letti] + protetti + muti + novita)).encode("utf-8")).hexdigest()[:16]
     righe.append(f"<!-- firma-guasti:{firma} -->")
     return "\n".join(righe) + "\n"
 
@@ -801,18 +1096,20 @@ def main():
         controlla_eta(documenti, catalogo, args.eta)
     if args.public:
         controlla_pagine(args.public, documenti, catalogo)
-    if args.rete and not errori:
+    rete_fatta = args.rete and not errori  # con i dati sbagliati non si interrogano i siti: prima si correggono
+    if rete_fatta:
         global scadenza
         scadenza = time.time() + TEMPO_RICHIESTE
         controlla_rete(documenti, catalogo, args.file)
         chiudi_da_rivedere(args.browser)
-        if args.aggiorna_data and not errori and not non_letti and not protetti:
+        segnala_controllo_mancato(collegamenti_da_aprire(documenti, catalogo, args.file))
+        if args.aggiorna_data and not errori and not non_letti and not protetti and not muti:
             catalogo["verificato"] = aggiorna_data()
-    testo = rapporto(documenti, catalogo, args.rete, args.rete and args.file)
+    testo = rapporto(documenti, catalogo, rete_fatta, rete_fatta and args.file, rete_saltata=args.rete and not rete_fatta)
     if args.rapporto:
         Path(args.rapporto).write_text(testo, encoding="utf-8")
     print(testo)
-    return 1 if errori else 2 if non_letti else 3 if novita or protetti else 0
+    return 1 if errori else 2 if non_letti else 3 if novita or protetti or muti else 0
 
 
 if __name__ == "__main__":

@@ -114,11 +114,14 @@ jobs:
         # istituzionali. Senza rete: i dati (siti dell'elenco ENTI dello script,
         # solo PDF, nessun doppione) e le due pagine costruite, che devono
         # contenere proprio quei collegamenti, nessun file Word o Excel e nessun
-        # PDF fuori dai dati. I collegamenti veri li rilegge ogni mese
-        # controllo-cucina-emergenza.yml. Poi le prove del controllo stesso
-        # (prova-check-cucina-emergenza.py): quindici casi sbagliati che deve
-        # respingere e, con un server finto in locale, le risposte dei siti
-        # (PDF vero, 404, pagina di verifica anti-bot, rifiuto, pagina qualsiasi).
+        # PDF fuori dai dati. Vale anche per le sintesi europee del catalogo
+        # (documento unico o scheda riepilogativa, solo PDF di EUR-Lex), che
+        # scripts/aggiorna-documenti-unici.py scrive nei dati. I collegamenti
+        # veri li rilegge ogni mese controllo-cucina-emergenza.yml. Poi le prove
+        # del controllo stesso (prova-check-cucina-emergenza.py): i casi
+        # sbagliati che deve respingere e, con un server finto in locale, le
+        # risposte dei siti (PDF vero, 404, pagina di verifica anti-bot, rifiuto,
+        # pagina qualsiasi), del registro europeo e dell'archivio dell'UE.
         run: |
           python3 -c "import yaml" 2>/dev/null || pip install --quiet pyyaml
           python3 scripts/check-cucina-emergenza.py --public public

@@ -6,26 +6,39 @@
 # all'archivio dell'Ufficio delle pubblicazioni dell'UE se il documento esiste e
 # se è uscita una versione consolidata più recente; ogni disciplinare è ancora
 # fra gli allegati della sua pagina del Ministero dell'agricoltura; di ogni PDF
-# del catalogo legge l'inizio, tre alla volta. Il sito del Ministero risponde
+# del catalogo legge l'inizio, tre alla volta. Per le sintesi europee del
+# catalogo (documento unico o scheda riepilogativa, con le rettifiche) legge con
+# una richiesta il registro europeo eAmbrosia e chiede all'archivio dell'Ufficio
+# delle pubblicazioni dell'UE, quaranta atti alla volta, se ogni atto collegato
+# esiste ancora e se ha una rettifica nuova. Il sito del Ministero risponde
 # 502 quando riceve molte richieste insieme: per questo la pagina del catalogo
 # è fuori da lychee (check-links-sito.yml) e si controlla qui. Lo stesso sito ha
 # periodi in cui impiega 30-40 secondi a risposta: lo script aspetta fino a 90
 # secondi per richiesta e ha un tempo massimo (35 minuti di richieste, 12 di
 # browser); ciò che non fa in tempo a leggere lo dichiara «non controllato»,
-# non lo dà per buono. Un giro normale dura circa 4 minuti.
+# non lo dà per buono. Un giro normale dura da 4 a 7 minuti.
 # Esiti:
 # - tutto letto e nulla di rotto: la data «verificato» dei due file di dati
 #   diventa quella del giorno (commit di sfondo, lo pubblica deploy-coalescer.yml);
 # - collegamento rotto o fonte che non si fa leggere: issue in-place con le
 #   label `automazione` + `fonte-rotta` + `cucina-emergenza` e run rosso
-#   (regola guasti.md, punto 1); la data resta quella dell'ultimo giro riuscito;
+#   (regola guasti.md, punto 1); la data resta quella dell'ultimo giro riuscito.
+#   Vale come fonte non letta anche un giro con troppi collegamenti rimasti
+#   senza controllo: più di 5 e più di un quinto di quelli da aprire;
 # - solo novità (allegato nuovo su una pagina del Ministero, elenco ufficiale
-#   cambiato, testo consolidato più recente) o collegamenti dietro una verifica
+#   cambiato, testo consolidato più recente, pubblicazione o rettifica nuova
+#   nel registro europeo: per queste ultime si rilancia
+#   scripts/aggiorna-documenti-unici.py) o collegamenti dietro una verifica
 #   anti-bot (il sito del Ministero della Salute, a tratti, risponde alle
 #   richieste automatiche con una pagina di verifica: non è un collegamento
 #   rotto e non si aggira, regola guasti.md punto 3): stessa issue senza
 #   `fonte-rotta`, run verde. Con una verifica anti-bot la data resta ferma:
-#   quei collegamenti non sono stati controllati.
+#   quei collegamenti non sono stati controllati. Lo stesso vale per un
+#   collegamento a cui il sito non risponde in tempo o risponde con un errore
+#   del server (5xx) dalla macchina del controllo: non è rotto e non è
+#   controllato (guasti.md punto 3), si riapre da un'altra rete. Finché sono
+#   pochi: oltre la soglia scritta sopra il run diventa rosso. Se la data
+#   resta ferma più di 45 giorni lo dice audit-sito.yml, sezione 51.
 # La issue si chiude da sola al primo giro senza rilievi.
 name: "🍲 Cucina in emergenza: controllo mensile dei collegamenti"
 
@@ -44,7 +57,12 @@ permissions:
 
 jobs:
   controlla:
-    runs-on: ubuntu-latest
+    # ubuntu-24.04 e non ubuntu-latest: il 25/11/2026 ubuntu-latest era già
+    # Ubuntu 26.04, che Playwright 1.56 non supporta («Playwright does not
+    # support chromium on ubuntu26.04-x64»): al primo giro il browser di riserva
+    # non si è installato. È la stessa coppia sistema-browser di
+    # controllo-fogli-stampa.yml e controllo-lim.yml: si aggiornano insieme.
+    runs-on: ubuntu-24.04
     timeout-minutes: 75
     steps:
       - name: "📥 Checkout"
@@ -72,7 +90,9 @@ jobs:
           echo "uscita=$?" >> "$GITHUB_OUTPUT"
 
       - name: "💾 Commit della data di verifica"
-        if: steps.controllo.outputs.uscita == '0' || steps.controllo.outputs.uscita == '3'
+        # Solo da main: lanciato a mano da un ramo di lavoro, il rebase su main
+        # e il push porterebbero su main i commit di quel ramo, senza PR.
+        if: github.ref == 'refs/heads/main' && (steps.controllo.outputs.uscita == '0' || steps.controllo.outputs.uscita == '3')
         timeout-minutes: 5
         shell: bash
         run: |
