@@ -72,6 +72,9 @@ TOR_D = diametro_torcia + 0.6; TOR_T = 3.5; TOR_R = TOR_D / 2 + TOR_T; TOR_Y = -
 TOR_Z = B - 0.5 + TOR_R;                     // centro dell'anello: l'anello tocca la piastra
 TOR_BOCCA = diametro_torcia * 0.92;
 
+// Viti per legno o truciolare a testa svasata piana da 4 mm: testa larga da 7,64 a 8 mm e alta fino a 2,35 mm
+// (manuale tecnico di viteria, capitolo 19, tabella a pagina 19.3, consultato il 25/11/2026). La svasatura dei fori
+// è di 8,8 mm, profonda 2,2 mm: la testa resta a filo. Nei fori da 4,4 mm passa anche una vite M4.
 // Fori per le viti (testa svasata da 4 mm), dove servono: sotto le scritte, perché la testa della vite
 // non copra la bandiera o il nominativo (parte = "controllo_viti" lo verifica)
 VITI = tipo == "appendiabiti" ? [[-33, -11], [33, -11]]

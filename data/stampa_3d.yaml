@@ -172,12 +172,16 @@ oggetti:
       - ["Peso", "circa 71 g"]
       - ["Piastra", "spessa 5 mm, scritte in rilievo di 1 mm"]
       - ["Gancio", "largo 80 mm; braccio spesso 10 mm, punta alta 7 mm; 21 mm liberi fra la piastra e la punta; rinforzo a 45 gradi alla base"]
-      - ["Fori", "2 per viti a testa svasata da 4 mm (foro 4,4 mm, svasatura 8,8 mm), a 66 mm l'uno dall'altro"]
+      - ["Fori", "2 per viti a testa svasata da 4 mm (foro 4,4 mm, svasatura 8,8 mm: la testa di una vite per legno da 4 mm è larga 8 mm e resta a filo), a 66 mm l'uno dall'altro"]
       - ["Posizione di stampa", "in piedi sul lato sinistro, già orientato nel file, senza supporti"]
     materiale: "PETG"
     colore: "blu"
     occorrente:
-      - "due viti a testa svasata da 4 mm e i tasselli adatti alla parete, oppure nastro biadesivo di montaggio per esterni"
+      - "per il muro: due viti per legno o truciolare a testa svasata piana da 4 mm, lunghe 40 mm, e due tasselli per viti da 4 mm; la confezione dei tasselli dice quale punta del trapano usare"
+      - "per il legno o un pannello: due viti dello stesso tipo lunghe 20 mm, senza tasselli"
+      - "per la lamiera (armadietto di metallo, pannello del mezzo): due viti M4 a testa svasata lunghe 16 mm, due rondelle M4 e due dadi M4 autobloccanti; il foro nella lamiera è da 4,5 mm e la rondella va dietro la lamiera, sotto il dado"
+      - "in alternativa alle viti: nastro biadesivo di montaggio per esterni"
+      - "trapano, cacciavite e, per i dadi, una chiave da 7 mm"
     montaggio:
       - "Pulisci e asciuga il punto dell'armadietto dove vuoi metterlo."
       - "Con le viti: appoggia l'appendiabiti con il gancio in basso, segna i due fori, fora, metti i tasselli e avvita senza stringere troppo."
@@ -281,12 +285,15 @@ oggetti:
       - ["Peso", "circa 78 g"]
       - ["Barra", "spessa 4 mm e alta 38 mm, a 8 mm dalla piastra: la clip della radio ci passa dietro e scende libera sotto"]
       - ["Spazio fra i due appoggi", "42 mm vicino alla parete e 68 mm davanti: entrano le clip larghe fino a 4 cm"]
-      - ["Fori", "4 per viti a testa svasata da 4 mm (foro 4,4 mm, svasatura 8,8 mm)"]
+      - ["Fori", "4 per viti a testa svasata da 4 mm (foro 4,4 mm, svasatura 8,8 mm: la testa di una vite per legno da 4 mm è larga 8 mm e resta a filo)"]
       - ["Posizione di stampa", "in piedi sul lato sinistro, già orientato nel file, senza supporti"]
     materiale: "PETG"
     colore: "blu"
     occorrente:
-      - "quattro viti a testa svasata da 4 mm e i tasselli adatti alla parete"
+      - "per il muro: quattro viti per legno o truciolare a testa svasata piana da 4 mm, lunghe 40 mm, e quattro tasselli per viti da 4 mm; la confezione dei tasselli dice quale punta del trapano usare"
+      - "per il legno o un pannello: quattro viti dello stesso tipo lunghe 20 mm, senza tasselli"
+      - "per la lamiera (armadietto di metallo, pannello del mezzo): quattro viti M4 a testa svasata lunghe 16 mm, quattro rondelle M4 e quattro dadi M4 autobloccanti; il foro nella lamiera è da 4,5 mm e la rondella va dietro la lamiera, sotto il dado"
+      - "trapano, cacciavite e, per i dadi, una chiave da 7 mm"
     montaggio:
       - "Appoggia il porta radio al muro con la barra in basso, segna i quattro fori, fora e metti i tasselli."
       - "Avvita senza stringere troppo: la plastica non deve incrinarsi."
@@ -498,13 +505,17 @@ oggetti:
       - ["Peso", "circa 42 g"]
       - ["Barra", "spessa 3,5 mm e alta 24 mm, a 4,5 mm dalla piastra: la clip del microfono ci passa dietro"]
       - ["Spazio fra i due appoggi", "36 mm vicino alla parete e 54 mm davanti: entrano le clip larghe fino a 3,5 cm"]
-      - ["Fori", "2 per viti a testa svasata da 4 mm (foro 4,4 mm, svasatura 8,8 mm), a 50 mm l'uno dall'altro"]
+      - ["Fori", "2 per viti a testa svasata da 4 mm (foro 4,4 mm, svasatura 8,8 mm: la testa di una vite per legno da 4 mm è larga 8 mm e resta a filo), a 50 mm l'uno dall'altro"]
       - ["Scritte", "nominativo alto 7,5 mm, righe piccole 4 mm, in rilievo di 1 mm"]
       - ["Posizione di stampa", "in piedi sul lato sinistro, già orientato nel file, senza supporti"]
     materiale: "PETG"
     colore: "blu"
     occorrente:
-      - "due viti a testa svasata da 4 mm e i tasselli adatti alla parete, oppure nastro biadesivo di montaggio"
+      - "per il muro: due viti per legno o truciolare a testa svasata piana da 4 mm, lunghe 40 mm, e due tasselli per viti da 4 mm; la confezione dei tasselli dice quale punta del trapano usare"
+      - "per il legno o un pannello: due viti dello stesso tipo lunghe 20 mm, senza tasselli"
+      - "per la lamiera (armadietto di metallo, pannello del mezzo): due viti M4 a testa svasata lunghe 16 mm, due rondelle M4 e due dadi M4 autobloccanti; il foro nella lamiera è da 4,5 mm e la rondella va dietro la lamiera, sotto il dado"
+      - "in alternativa alle viti: nastro biadesivo di montaggio"
+      - "trapano, cacciavite e, per i dadi, una chiave da 7 mm"
     montaggio:
       - "Appoggia il supporto con la barra in basso, segna i due fori, fora, metti i tasselli e avvita senza stringere troppo. In alternativa incollalo con due strisce di biadesivo e aspetta un giorno prima di usarlo."
       - "Aggancia il microfono dall'alto, facendo scorrere la sua clip sulla barra: la clip passa dietro la barra."
@@ -877,6 +888,8 @@ oggetti:
       - ["Da sapere", "la clip tocca il sacchetto, non il cibo; con il bordo piegato può toccarne il lato interno, quindi non è un oggetto per alimenti: usala con cibi secchi e puliscila con un panno umido. Non stringe come una pinza e non è una chiusura ermetica: tiene il sacchetto per la piega, non lo sigilla. Non usarla per i surgelati: l'acqua di condensa entra fra gli strati della plastica. Tienila lontana da forno e fornelli: il PETG comincia a deformarsi a 68 gradi. È disegnata per una stampante da tavolo ben regolata: con un servizio di stampa, che può scostarsi di mezzo millimetro, lo scatto può risultare duro o lento"]
     materiale: "PETG"
     colore: "blu"
+    occorrente:
+      - "niente: è un pezzo solo"
     montaggio:
       - "Piega una o due volte il bordo aperto del sacchetto."
       - "Appoggia la piega sul braccio largo, vicino alla cerniera, e abbassa il braccio stretto."
@@ -943,6 +956,7 @@ oggetti:
     materiale: "PETG"
     colore: "blu"
     occorrente:
+      - "circa 700 g di filo PETG per tutti i pezzi"
       - "7 viti M4 lunghe 10 mm a testa svasata e 7 dadi esagonali M4 (si trovano in ferramenta); non servono rondelle: le teste entrano nelle svasature e i dadi nelle loro sedi"
       - "una chiave a brugola da 2,5 mm, oppure un cacciavite a croce se le viti hanno la testa a croce"
     montaggio:
@@ -1009,6 +1023,7 @@ oggetti:
     materiale: "PETG"
     colore: "blu"
     occorrente:
+      - "circa 600 g di filo PETG per tutti i pezzi"
       - "7 viti M4 lunghe 10 mm a testa svasata e 7 dadi esagonali M4 (si trovano in ferramenta); non servono rondelle: le teste entrano nelle svasature e i dadi nelle loro sedi"
       - "una chiave a brugola da 2,5 mm, oppure un cacciavite a croce se le viti hanno la testa a croce"
     montaggio:
@@ -1073,6 +1088,7 @@ oggetti:
     materiale: "PETG"
     colore: "blu"
     occorrente:
+      - "circa 480 g di filo PETG per tutti i pezzi"
       - "8 viti M4 lunghe 10 mm a testa svasata e 8 dadi esagonali M4 (si trovano in ferramenta); non servono rondelle: le teste entrano nelle svasature e i dadi nelle loro sedi"
       - "una chiave a brugola da 2,5 mm, oppure un cacciavite a croce se le viti hanno la testa a croce"
     montaggio:
@@ -1131,6 +1147,7 @@ oggetti:
     materiale: "PETG"
     colore: "blu"
     occorrente:
+      - "circa 380 g di filo PETG per tutti i pezzi"
       - "8 viti M4 lunghe 10 mm a testa svasata e 8 dadi esagonali M4 (si trovano in ferramenta); non servono rondelle: le teste entrano nelle svasature e i dadi nelle loro sedi"
       - "una chiave a brugola da 2,5 mm, oppure un cacciavite a croce se le viti hanno la testa a croce"
     montaggio:
@@ -1181,6 +1198,8 @@ oggetti:
       - ["Precisione", "fra la targhetta e la guida ci sono 0,2 mm per parte: con una stampante da tavolo ben regolata entra a pressione. Se resta lenta basta una goccia di colla; se non entra, passa una lima sui due lati smussati"]
     materiale: "PETG"
     colore: "blu"
+    occorrente:
+      - "niente viti né attrezzi; una goccia di colla solo se la targhetta scorre troppo facilmente nella guida"
     montaggio:
       - "Stampa i due file: la targhetta con il tuo nominativo e il portapenne."
       - "Infila la targhetta nella guida da destra, con le scritte in alto e la bandiera a sinistra, e spingila fino in fondo."
@@ -1225,6 +1244,9 @@ oggetti:
       - ["Precisione", "fra la targhetta e la guida ci sono 0,2 mm per parte: con una stampante da tavolo ben regolata entra a pressione. Se resta lenta basta una goccia di colla; se non entra, passa una lima sui due lati smussati"]
     materiale: "PETG"
     colore: "blu"
+    occorrente:
+      - "niente viti né attrezzi; una goccia di colla solo se la targhetta scorre troppo facilmente nella guida"
+      - "un blocchetto di foglietti adesivi quadrati da 76 mm"
     montaggio:
       - "Stampa i due file: la targhetta con il tuo nominativo e il porta foglietti."
       - "Infila la targhetta nella guida da destra, con le scritte in alto e la bandiera a sinistra, e spingila fino in fondo."
@@ -1405,14 +1427,17 @@ oggetti:
     scheda:
       - ["Ingombro", "90 × 36 mm, spesso 4 mm (3 mm di base e 1 mm di scritte)"]
       - ["Peso", "circa 12 g"]
-      - ["Fori", "2 per viti a testa svasata da 4 mm (foro 4,4 mm, svasatura 8,8 mm), a 78 mm l'uno dall'altro, lontani dalle scritte"]
+      - ["Fori", "2 per viti a testa svasata da 4 mm (foro 4,4 mm, svasatura 8,8 mm: la testa di una vite per legno da 4 mm è larga 8 mm e resta a filo), a 78 mm l'uno dall'altro, lontani dalle scritte"]
       - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4 mm"]
       - ["Spazio per nome e cognome", "fascia libera di 60 × 7 mm sotto il nominativo"]
       - ["Posizione di stampa", "in piano, già orientato nel file, senza supporti"]
     materiale: "PETG"
     colore: "blu"
     occorrente:
-      - "nastro biadesivo di montaggio, oppure due viti a testa svasata da 4 mm adatte all'anta"
+      - "nastro biadesivo di montaggio: è il modo più semplice"
+      - "oppure, per un'anta di lamiera: due viti M4 a testa svasata lunghe 12 mm, due rondelle M4 e due dadi M4 autobloccanti; il foro nella lamiera è da 4,5 mm e la rondella va dietro la lamiera, sotto il dado"
+      - "oppure, per un'anta di legno: due viti per legno a testa svasata piana da 4 mm, lunghe 16 mm"
+      - "per le viti: trapano, cacciavite e, per i dadi, una chiave da 7 mm"
     montaggio:
       - "Pulisci e asciuga il punto dell'anta dove vuoi mettere il cartellino."
       - "Con il biadesivo: incolla due strisce sul retro, lontano dai fori, e premi forte per 30 secondi."
@@ -1458,6 +1483,7 @@ oggetti:
     materiale: "PETG"
     colore: "blu"
     occorrente:
+      - "circa 250 g di filo PETG per tutti i pezzi"
       - "4 viti M4 lunghe 10 mm a testa svasata e 4 dadi esagonali M4 (si trovano in ferramenta); non servono rondelle: le teste entrano nelle svasature e i dadi nelle loro sedi"
       - "una chiave a brugola da 2,5 mm, oppure un cacciavite a croce se le viti hanno la testa a croce"
     montaggio:
@@ -1651,12 +1677,15 @@ oggetti:
       - ["Ingombro", "80 × 101 mm, sporge 43 mm dalla parete"]
       - ["Peso", "circa 108 g"]
       - ["Anello", "largo 80 mm, spesso 3,5 mm, foro da 40,3 mm e bocca da 36,5 mm: per il corpo da 39,67 mm delle Maglite a 2 o 3 pile D (scheda del produttore, maglite.com, consultata il 24/11/2026); con i 38,1 mm della ML300LX la torcia ha 2,2 mm di gioco e si muove un poco"]
-      - ["Fori", "3 per viti a testa svasata da 4 mm (foro 4,4 mm, svasatura 8,8 mm): due nella piastra, uno sotto l'anello"]
+      - ["Fori", "3 per viti a testa svasata da 4 mm (foro 4,4 mm, svasatura 8,8 mm: la testa di una vite per legno da 4 mm è larga 8 mm e resta a filo): due nella piastra, uno sotto l'anello"]
       - ["Posizione di stampa", "in piedi sul lato sinistro, già orientato nel file, senza supporti"]
     materiale: "ASA"
     colore: "blu"
     occorrente:
-      - "tre viti a testa svasata da 4 mm e i tasselli adatti alla parete o al pannello del mezzo"
+      - "per il muro: tre viti per legno o truciolare a testa svasata piana da 4 mm, lunghe 40 mm, e tre tasselli per viti da 4 mm; la confezione dei tasselli dice quale punta del trapano usare"
+      - "per il legno o un pannello: tre viti dello stesso tipo lunghe 20 mm, senza tasselli"
+      - "per la lamiera (armadietto di metallo, pannello del mezzo): tre viti M4 a testa svasata lunghe 16 mm, tre rondelle M4 e tre dadi M4 autobloccanti; il foro nella lamiera è da 4,5 mm e la rondella va dietro la lamiera, sotto il dado"
+      - "trapano, cacciavite e, per i dadi, una chiave da 7 mm"
     montaggio:
       - "Prima di stampare misura il corpo della torcia: il file pronto va bene da 38 a 40 mm. Per un'altra misura scarica il modello e cambia «diametro_torcia»."
       - "Appoggia il supporto con l'anello in basso, segna i tre fori, fora e avvita senza stringere troppo."
