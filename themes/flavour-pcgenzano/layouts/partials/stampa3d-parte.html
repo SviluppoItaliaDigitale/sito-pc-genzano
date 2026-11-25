@@ -98,7 +98,7 @@
   <button type="button" class="btn btn-outline-primary" data-vista="davanti">Davanti</button>
   <button type="button" class="btn btn-outline-primary" data-vista="retro">Retro</button>
 </div>
-<p class="s3d-guardi">Stai guardando {{ $o.articolo }} con il nominativo <strong data-s3d="nominativo">{{ $n.prefisso }} {{ $n.primo }}</strong><span data-s3d="esempio">, come esempio</span><span data-s3d="con-nome" hidden></span>. Nella vista le scritte sono arancioni e la bandiera è colorata per farle vedere bene: il servizio online stampa in un solo colore.</p>
+<p class="s3d-guardi">Stai guardando {{ $o.articolo }} con il nominativo <strong data-s3d="nominativo">{{ $n.prefisso }} {{ $n.primo }}</strong><span data-s3d="esempio">, come esempio</span><span data-s3d="con-nome" hidden></span>. {{ if $o.anteprima.insieme }}{{ $o.articolo | strings.FirstUpper }} è già montat{{ if hasPrefix $o.articolo "la" }}a{{ else }}o{{ end }}: i pezzi da stampare sono due. {{ end }}Nella vista le scritte sono arancioni e la bandiera è colorata per farle vedere bene: il servizio online stampa in un solo colore.</p>
 
 {{- else if eq $parte "campo" -}}
 {{ partial "stampa3d-campo.html" (dict "n" $n "etichetta" "1. Il tuo nominativo" "pulsante" "Mostra") }}

@@ -4,6 +4,8 @@
   (window.pcgzS3dFile e l'evento «s3d:file»), che va caricato prima di questo.
   three.js r160 (copia locale in vendor/three, licenza MIT). La vista parte quando entra nello schermo
   e disegna solo mentre l'oggetto si muove. Le scritte in rilievo si colorano dall'altezza.
+  Negli oggetti in due pezzi che si montano (anteprima.insieme: gruccia, vassoio) mostra anche il secondo
+  pezzo, nella posizione di montaggio: il file da scaricare resta quello del solo pezzo con il nominativo.
 */
 import * as THREE from '../vendor/three/three.module.min.js';
 import { OrbitControls } from '../vendor/three/OrbitControls.js';
@@ -37,6 +39,25 @@ function soloImmagine(testo) {
   vista.comandi.hidden = true;
   vista.carica.hidden = !testo;
   vista.carica.textContent = testo || '';
+}
+
+/* Secondo pezzo degli oggetti che si montano, uguale per ogni nominativo: si scarica una volta sola.
+   «ribalta» = spessore del pezzo quando il suo file è capovolto per la stampa (x diventa -x, z diventa
+   ribalta - z). Se non si carica, la vista mostra il solo pezzo con il nominativo. */
+const INSIEME = (O.anteprima && O.anteprima.insieme) || null;
+let secondoPezzo = null;
+function compagno() {
+  if (!INSIEME) return Promise.resolve(null);
+  if (!secondoPezzo) secondoPezzo = fetch(`${DATI.base}${O.id}/${INSIEME.file}`)
+    .then(r => { if (!r.ok) throw new Error(r.status); return r.arrayBuffer(); })
+    .then(buf => {
+      const p = leggiStl(buf);
+      if (typeof INSIEME.ribalta === 'number')
+        for (let i = 0; i < p.length; i += 3) { p[i] = -p[i]; p[i + 2] = INSIEME.ribalta - p[i + 2]; }
+      return p;
+    })
+    .catch(() => { secondoPezzo = null; return null; });
+  return secondoPezzo;
 }
 
 function leggiStl(buf) {
@@ -98,7 +119,9 @@ function coordinatePiastra(pos, inclina) {
   return pc;
 }
 
-function geometria(pos) {
+/* suo = quanti numeri di «pos» sono del pezzo con il nominativo: dopo viene il secondo pezzo montato, che non
+   ha scritte da colorare. */
+function geometria(pos, suo) {
   const a = O.anteprima || { base: '#1d4f9a', rilievo: '#f07d00' };
   const geo = new THREE.BufferGeometry();
   geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
@@ -107,7 +130,7 @@ function geometria(pos) {
   b.getCenter(c);
   const ril = a.rilievo_mm || 1;
   const pc = coordinatePiastra(pos, a.inclina);
-  const zb = quotaBase(pc);
+  const zb = quotaBase(suo < pc.length ? pc.subarray(0, suo) : pc);
   const tri = TRICOLORE_HEX.map(h => new THREE.Color(h));
   const cb = new THREE.Color(a.base), cr = new THREE.Color(a.rilievo);
   const colori = new Float32Array(pos.length);
@@ -116,11 +139,12 @@ function geometria(pos) {
   const zmin = b.min.z;
   for (let t = 0; t < pos.length; t += 9) {
     const zm = Math.max(pc[t + 2], pc[t + 5], pc[t + 8]);
-    const alto = !a.incise && zm > zb + 0.01 && zm <= zb + ril + 0.02;
+    const mio = t < suo;
+    const alto = mio && !a.incise && zm > zb + 0.01 && zm <= zb + ril + 0.02;
     let cc = alto ? cr : cb;
     // Scritte incise sul retro che sta sul piano (cover): fondo e pareti delle incisioni come le scritte, bandiera
     // a specchio nel file, quindi il verde sta dalla parte delle x più alte
-    if (a.incise && zm > zmin + 0.01 && zm <= zmin + ril + 0.05) {
+    if (mio && a.incise && zm > zmin + 0.01 && zm <= zmin + ril + 0.05) {
       cc = cr;
       if (a.bandiera) {
         const cx = (pc[t] + pc[t + 3] + pc[t + 6]) / 3, cy = (pc[t + 1] + pc[t + 4] + pc[t + 7]) / 3;
@@ -129,7 +153,7 @@ function geometria(pos) {
           cc = tri[2 - Math.max(0, Math.min(2, Math.floor((cx - x0) / (x1 - x0) * 3)))];
       }
     }
-    if (retro && zm > zmin + 0.01 && zm <= zmin + 0.7) {
+    if (mio && retro && zm > zmin + 0.01 && zm <= zmin + 0.7) {
       const cx = (pc[t] + pc[t + 3] + pc[t + 6]) / 3, cy = (pc[t + 1] + pc[t + 4] + pc[t + 7]) / 3;
       if (cx >= retro[0] - 0.5 && cx <= retro[2] + 0.5 && cy >= retro[1] - 0.5 && cy <= retro[3] + 0.5) cc = cr;
     }
@@ -244,10 +268,18 @@ function motore() {
   }
 }
 
-/* Mostra una forma già pronta (posizione di stampa): il file STL scaricato o quello con nome e cognome. */
-function mostra(pos, chi) {
+/* Mostra una forma già pronta (posizione di stampa): il file STL scaricato o quello con nome e cognome.
+   p2 = secondo pezzo già nella posizione di montaggio, se l'oggetto ne ha uno. */
+function mostra(pos, chi, p2) {
+  const suo = pos.length;
+  if (p2) {
+    const tutto = new Float32Array(suo + p2.length);
+    tutto.set(pos);
+    tutto.set(p2, suo);
+    pos = tutto;
+  }
   orienta(pos);
-  const geo = geometria(pos);
+  const geo = geometria(pos, suo);
   if (tre.mesh.geometry) tre.mesh.geometry.dispose();
   tre.mesh.geometry = geo;
   tre.mesh.visible = true;
@@ -273,8 +305,9 @@ async function carica() {
     const r = await fetch(url);
     if (!r.ok) throw new Error(r.status);
     const pos = leggiStl(await r.arrayBuffer());
+    const p2 = await compagno();
     if (mia !== tre.richiesta) return;
-    mostra(pos, url);
+    mostra(pos, url, p2);
   } catch (e) {
     if (mia !== tre.richiesta) return;
     soloImmagine('La vista in 3D non si è caricata: guarda l\'immagine.');
@@ -309,12 +342,14 @@ function avvia() {
 tre.nuovoFile(window.pcgzS3dFile || '');
 document.addEventListener('s3d:file', ev => tre.nuovoFile(ev.detail));
 // Forma con nome e cognome, preparata da stampa3d-nome.js: si mostra senza scaricare nulla
-document.addEventListener('s3d:geometria', ev => {
+document.addEventListener('s3d:geometria', async ev => {
   const pos = ev.detail && ev.detail.pos;
   if (!pos) return;
   if (!tre.avviato) avvia();
-  tre.richiesta++;                       // un caricamento in corso non la sovrascrive
+  const mia = ++tre.richiesta;           // un caricamento in corso non la sovrascrive
   if (tre.rotto || !tre.mesh) return;    // senza vista 3D resta l'immagine: il file si scarica lo stesso
-  mostra(pos, 'nome');
+  const p2 = await compagno();
+  if (mia !== tre.richiesta) return;     // nel frattempo è arrivata un'altra forma
+  mostra(pos, 'nome', p2);
   if (ev.detail.lato === 'retro') posiziona(-1);
 });

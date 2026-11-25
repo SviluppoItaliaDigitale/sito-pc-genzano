@@ -846,6 +846,61 @@ oggetti:
       - "Stringi le fascette senza schiacciare la targhetta e taglia la parte in più."
       - "Con il velcro: passa la striscia nelle due asole, avvolgila intorno al tubo e chiudila."
 
+  # --- Oggetti grandi in due pezzi uniti da viti (25/11/2026, famiglia grandi-nominativo.scad): vassoio e gruccia.
+  # «insieme» nell'anteprima: catalogo e vista 3D mostrano l'oggetto montato; il file da scaricare resta un pezzo solo.
+  - id: "vassoio"
+    nome: "Vassoio per la mensa"
+    articolo: "il vassoio"
+    descrizione: "Vassoio con due manici e gli scomparti per il piatto, le posate e il bicchiere, per portare il pasto dalla distribuzione al tavolo. Sul bordo porta la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». Sono due pezzi, perché intero è lungo 42 cm: la metà del piatto, con il tuo nominativo, e la metà per posate e bicchiere, uguale per tutti. Si uniscono con tre viti. Il vassoio porta le stoviglie e non è una stoviglia: il cibo sta nel piatto, mai sul vassoio."
+    categoria: "campo"
+    breve: "Scomparti per piatto, posate e bicchiere e due manici; due metà da unire con tre viti."
+    sorgente: "grandi-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-211.43, 117.0, -202.43, 123.0]
+      vista_3d: true
+      quota_scritte: 15.0   # le scritte stanno sul bordo, sopra il fondo degli scomparti
+      camera: { da: [-0.2, -0.72, 0.66], su: [0, 0, 1] }   # anteprima vista di fronte e dall'alto
+      insieme: { file: "vassoio-posate-bicchiere.stl" }   # nelle anteprime le due metà sono montate
+      nome: { zona: [-160, 116.5, -98, 123.5], lato: "fronte" }
+    parametri:
+      tipo: "vassoio"
+      parte: "tutto"
+    secondo_pezzo:
+      parte: "modulo"
+      file: "vassoio-posate-bicchiere.stl"
+      nome: "la metà per posate e bicchiere"
+      peso_g: 216
+    misure: "42 × 25 cm montato, alto 2,6 cm"
+    lunghezza_mm: 250
+    peso_g: 491
+    scheda:
+      - ["Ingombro", "montato 424 × 250 mm, alto 26 mm ai manici e 15 mm ai bordi; la metà del piatto misura 250 × 250 mm, la metà per posate e bicchiere 175 × 250 mm"]
+      - ["Peso", "circa 491 g in tutto: 275 g la metà del piatto, 216 g l'altra. È l'oggetto del catalogo che usa più materiale: prima di ordinarlo guarda il prezzo"]
+      - ["Scomparto del piatto", "237 × 217 mm sul fondo; la parete del manico è inclinata e all'altezza del bordo lo spazio arriva a 229 mm. Entrano i piatti piani da 22 cm; quelli da 23 cm solo se il loro bordo è alto almeno 16 mm"]
+      - ["Posate e bicchiere", "corsia per le posate di 52 × 244 mm; scomparto del bicchiere di 84 × 84 mm, per bicchieri e tazze larghi fino a 8 cm; accanto, uno spazio di 84 × 158 mm per pane e tovagliolo"]
+      - ["Manici", "due, larghi 12 cm alla base: la parete di fondo sale inclinata fino a 26 mm. Le dita stanno sotto, il pollice sopra"]
+      - ["Giunzione", "le due pareti a contatto, alte 24 mm, si stringono con tre viti M4 × 10 a testa svasata; le teste restano sotto la superficie dal lato del piatto, i dadi M4 scendono in tre asole aperte in alto"]
+      - ["Altezza delle lettere", "nominativo 6 mm; riga piccola 4 mm"]
+      - ["Spazio per nome e cognome", "fascia libera di 62 × 7 mm sul bordo, fra il nominativo e «Protezione Civile Genzano di Roma»"]
+      - ["Posizione di stampa", "due file, tutti e due in piano, già orientati, senza supporti; la metà del piatto chiede un piatto di stampa di almeno 25 × 25 cm"]
+      - ["Pulizia", "a mano, con acqua tiepida e detersivo. Niente lavastoviglie e niente pentole o teglie calde: il PETG comincia a deformarsi verso i 70 gradi"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "3 viti M4 lunghe 10 mm a testa svasata e 3 dadi esagonali M4 (si trovano in ferramenta)"
+      - "una chiave a brugola da 2,5 mm, oppure un cacciavite a croce se le viti hanno la testa a croce"
+    montaggio:
+      - "Stampa tutti e due i file: la metà del piatto con il tuo nominativo e la metà per posate e bicchiere."
+      - "Lascia cadere i tre dadi nelle asole in cima alla parete alta della metà per posate e bicchiere: scendono fino all'altezza dei fori."
+      - "Accosta le due metà su un tavolo piano, parete contro parete, con i bordi allineati."
+      - "Metti le tre viti dal lato del piatto e stringile a mano, senza forzare: le teste devono restare sotto la superficie."
+      - "Prima di usarlo, lavalo a mano con acqua tiepida e detersivo e asciugalo."
+      - "Porta il vassoio con due mani, dai manici. Il cibo sta nel piatto: appoggia posate e pane su un tovagliolo."
+      - "Ogni tanto svita le viti e lava le due metà separate, anche lungo la giunzione."
+
   # ---------- Kit, pile e schede ----------
 
   - id: "porta-pile-aa"
@@ -1033,6 +1088,55 @@ oggetti:
       - "Pulisci e asciuga il punto dell'anta dove vuoi mettere il cartellino."
       - "Con il biadesivo: incolla due strisce sul retro, lontano dai fori, e premi forte per 30 secondi."
       - "Con le viti: appoggia il cartellino, segna i due fori, fora l'anta e avvita senza stringere troppo."
+
+  - id: "gruccia"
+    nome: "Gruccia per la divisa"
+    articolo: "la gruccia"
+    descrizione: "Gruccia larga 40 cm per appendere la divisa e gli abiti: gancio per il tubo dell'armadio, barra per i pantaloni e due tacche per le spalline. Sulla piastra sotto il gancio porta la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». Sono due pezzi, perché intera è larga 40 cm: il pezzo con il gancio e il tuo nominativo e il braccio destro, uguale per tutti. Si uniscono con quattro viti."
+    categoria: "sede"
+    breve: "Per la divisa e gli abiti, con la barra per i pantaloni; due pezzi da unire con quattro viti."
+    sorgente: "grandi-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-30.99, 27.0, -18.99, 35.0]
+      sagoma_z: 5.3   # contorno letto a metà spessore: più in alto gli spigoli sono smussati
+      insieme: { file: "gruccia-braccio-destro.stl", ribalta: 10.8 }   # nelle anteprime il braccio destro è montato
+      nome: { zona: [-34, 17.5, 34, 24.5], lato: "fronte" }
+    parametri:
+      tipo: "gruccia"
+      parte: "tutto"
+    secondo_pezzo:
+      parte: "braccio"
+      file: "gruccia-braccio-destro.stl"
+      nome: "il braccio destro"
+      peso_g: 82
+    misure: "40 × 19 cm montata, spessa 1,1 cm"
+    lunghezza_mm: 238
+    peso_g: 240
+    scheda:
+      - ["Ingombro", "montata 400 × 188 mm, spessa 10,8 mm (11,8 mm con le scritte); il pezzo con il nominativo misura 238 × 188 mm, il braccio destro 217 × 82 mm"]
+      - ["Peso", "circa 240 g in tutto: 158 g il pezzo con il nominativo, 82 g il braccio destro"]
+      - ["Gancio", "occhio di 40 mm e apertura di 36 mm, per tubi appendiabiti fino a 35 mm; un tubo ovale per armadi misura 30 × 15 mm. Se il tuo tubo è più grosso, misuralo prima di stampare"]
+      - ["Spalle e barra", "bracci alti da 22 a 18 mm, con tutti gli spigoli smussati di 2 mm; una tacca larga 7 mm su ogni braccio per spalline e passanti; barra per i pantaloni alta 14 mm, con piccoli incavi che li tengono fermi"]
+      - ["Giunzioni", "due, a mezzo spessore: una sulle spalle e una a metà della barra, ognuna con due viti M4 × 10 a testa svasata e due dadi M4. Le teste restano sotto la superficie sul davanti, i dadi entrano in sedi esagonali sul retro"]
+      - ["Carico", "giacca e pantaloni della divisa, fino a circa 3 kg. È un valore di calcolo, non una prova di carico: non appenderci zaini, borse o attrezzatura"]
+      - ["Altezza delle lettere", "nominativo 8 mm; righe piccole 4 mm"]
+      - ["Spazio per nome e cognome", "fascia libera di 68 × 7 mm sotto il nominativo"]
+      - ["Posizione di stampa", "due file, tutti e due in piano, già orientati, senza supporti; serve un piatto di stampa di almeno 24 × 19 cm"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "4 viti M4 lunghe 10 mm a testa svasata e 4 dadi esagonali M4 (si trovano in ferramenta)"
+      - "una chiave a brugola da 2,5 mm, oppure un cacciavite a croce se le viti hanno la testa a croce"
+    montaggio:
+      - "Stampa tutti e due i file: il pezzo con il tuo nominativo e il braccio destro."
+      - "Spingi i quattro dadi nelle sedi esagonali sul retro del pezzo con il nominativo: due vicino alla piastra e due sulla barra. Se un dado non entra del tutto, lo tira in sede la vite."
+      - "Appoggia il braccio destro sul davanti: le sue due linguette coprono quelle del pezzo con il nominativo, sulle spalle e sulla barra."
+      - "Metti le quattro viti dal davanti e stringile a mano, senza forzare: le teste devono restare sotto la superficie e le punte non devono uscire dal retro."
+      - "Passa un dito sulle giunzioni e sui bordi: se senti un filo di plastica, toglilo con carta abrasiva fine, così non tira i tessuti."
+      - "Appendi la giacca sulle spalle e i pantaloni sulla barra. Non usarla per zaini, borse o attrezzatura."
 
   # --- Oggetti per l'intervento e il mezzo (24/11/2026): idee da ciò che si stampano da sé i vigili del fuoco
   # (Praga, blog Prusa; Oceanside, MatterHackers) e dai modelli per soccorritori di Printables e MakerWorld.
