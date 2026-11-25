@@ -92,7 +92,7 @@
 
 <p class="disc-riepilogo" id="disc-trovati" tabindex="-1" data-disc="trovati" hidden></p>
 
-<p class="disc-nessuno" tabindex="-1" data-disc="nessuno" hidden>Nessun prodotto corrisponde alla ricerca. Controlla come hai scritto la parola, prova con il nome di un prodotto o di una regione, oppure premi «Mostra tutti i prodotti».</p>
+<p class="disc-nessuno" tabindex="-1" data-disc="nessuno" hidden>Nessun prodotto corrisponde alla ricerca. <span data-disc="perche"></span>Controlla come hai scritto la parola, prova con il nome di un prodotto o di una regione, oppure premi «Mostra tutti i prodotti».</p>
 {{- range $g := $d.gruppi }}
 {{- with where $d.voci "classe" "in" $g.classi }}
 

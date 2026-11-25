@@ -31,6 +31,7 @@
   var azzera = filtri.querySelector('[data-disc="azzera"]');
   var trovati = document.querySelector('[data-disc="trovati"]');
   var nessuno = document.querySelector('[data-disc="nessuno"]');
+  var perche = nessuno ? nessuno.querySelector('[data-disc="perche"]') : null;
   var blocchi = Array.prototype.slice.call(document.querySelectorAll('[data-disc-gruppo]'));
   if (!cerca || !regione || !gruppo || !conteggio || !blocchi.length) return;
 
@@ -128,6 +129,19 @@
     } catch (e) { /* in un file locale o in una cornice l'indirizzo non si cambia: il filtro vale lo stesso */ }
   }
 
+  /* Senza risultati, il perché: una parola che non sta in nessun prodotto («vino»), parole che ci sono ma
+     mai insieme («prosciutto crudo»), prodotti che ci sono ma non con la regione o il tipo scelti. Così chi
+     cerca sa che cosa cambiare. */
+  function motivo(cercate, r, g) {
+    if (!cercate.length) return r && g ? 'Nella regione scelta non ci sono prodotti di questo tipo. ' : '';
+    var ignote = cercate.filter(function (p) { return !voci.some(function (v) { return contiene(v, p); }); });
+    if (ignote.length === 1) return 'Nel catalogo nessun prodotto ha la parola «' + ignote[0] + '»: prova a toglierla. ';
+    if (ignote.length) return 'Nel catalogo nessun prodotto ha queste parole: «' + ignote.join('», «') + '». Prova a toglierle. ';
+    var insieme = voci.some(function (v) { return cercate.every(function (p) { return contiene(v, p); }); });
+    if (insieme) return 'Ci sono prodotti con queste parole, ma non con la regione o il tipo scelti nei menu. ';
+    return 'Le parole scritte ci sono, ma mai nello stesso prodotto: prova con una sola. ';
+  }
+
   function filtra(subito) {
     var scritto = cerca.value.trim().replace(/\s+/g, ' ');
     var cercate = chieste();
@@ -147,6 +161,7 @@
     });
     blocchi.forEach(function (blocco) { mostraGruppo(blocco, !!vivi[blocco.getAttribute('data-disc-gruppo')]); });
     if (nessuno) nessuno.hidden = n > 0;
+    if (perche) perche.textContent = n ? '' : motivo(cercate, r, g);
     if (azzera) azzera.hidden = !(attivo || scritto);
     if (trovati) {
       var pezzi = [];

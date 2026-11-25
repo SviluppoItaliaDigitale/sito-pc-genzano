@@ -310,6 +310,37 @@ def prove_della_ricerca(p, pagina):
                 conteggio(pagina, "Nessun prodotto per questa ricerca.") == "Nessun prodotto per questa ricerca.")
     pagina.press("#disc-cerca", "Enter")
     p.controlla("senza risultati l'invio porta al messaggio", fuoco(pagina) == "nessuno", fuoco(pagina))
+    p.controlla("senza risultati il messaggio dice quale parola non è in nessun prodotto",
+                "nessun prodotto ha la parola «zzzz»" in pagina.inner_text('[data-disc="nessuno"]'), pagina.inner_text('[data-disc="nessuno"]'))
+    p.uguali("«vino birra» non trova nulla", scrivi(pagina, "vino birra"), set())
+    messaggio = pagina.inner_text('[data-disc="nessuno"]')
+    p.controlla("«vino birra»: il messaggio nomina tutte e due le parole", "queste parole: «vino», «birra»" in messaggio, messaggio)
+    for frase in ("prosciutto crudo", "pecorino parma"):
+        p.uguali(f"«{frase}»: due parole che ci sono, ma mai nello stesso prodotto", scrivi(pagina, frase), set())
+        messaggio = pagina.inner_text('[data-disc="nessuno"]')
+        p.controlla(f"«{frase}»: il messaggio dice che le parole non stanno insieme e non dà la colpa a una",
+                    "mai nello stesso prodotto" in messaggio and "nessun prodotto ha" not in messaggio, messaggio)
+    # Una parola che c'è, ma non nella regione scelta; una regione e un tipo che insieme non hanno prodotti.
+    valori = {nome: valore for valore, nome, _ in opzioni(pagina, "#disc-regione")}
+    senza_pecorino = next(r for r in sorted(valori) if not any("pecorino" in norm(n).split() for n in p.regione(r)))
+    pagina.select_option("#disc-regione", valori[senza_pecorino])
+    p.uguali(f"«pecorino» con la regione {senza_pecorino} non trova nulla", scrivi(pagina, "pecorino"), set())
+    messaggio = pagina.inner_text('[data-disc="nessuno"]')
+    p.controlla("il messaggio dice che i prodotti ci sono, ma non con la regione scelta",
+                "ma non con la regione o il tipo scelti" in messaggio, messaggio)
+    scrivi(pagina, "")
+    gruppi_dati = p.catalogo["gruppi"]
+    vuota = next(((r, g) for r in sorted(valori) for g in gruppi_dati if not (p.regione(r) & p.classe(*g["classi"]))), None)
+    p.controlla("i dati hanno una regione senza prodotti di un certo tipo", vuota is not None)
+    if vuota:
+        pagina.select_option("#disc-regione", valori[vuota[0]])
+        pagina.select_option("#disc-gruppo", vuota[1]["id"])
+        p.uguali(f"{vuota[0]} e «{vuota[1]['id']}» insieme non hanno prodotti", visibili(pagina), set())
+        messaggio = pagina.inner_text('[data-disc="nessuno"]')
+        p.controlla("il messaggio dice che nella regione non ci sono prodotti di quel tipo",
+                    "Nella regione scelta non ci sono prodotti di questo tipo." in messaggio, messaggio)
+    pagina.select_option("#disc-regione", "")
+    pagina.select_option("#disc-gruppo", "")
 
     # I due menu, voce per voce: i prodotti giusti e il numero scritto accanto al nome.
     scrivi(pagina, "")
