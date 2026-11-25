@@ -62,7 +62,7 @@ MISURE = [
     ["uovo",        [76, 76, 4, 2.4, 8.0,  4.0, 4.5,  -7.5, -13.5, 7]],
     ["fiore",       [76, 76, 4, 2.4, 8.0,  4.0, 4.5,  -7.5, -13.5, 7]],
     ["coccarda",    [76, 76, 4, 2.4, 8.0,  4.0, 4.5,  -7.5, -13.5, 7]],
-    ["cuore",       [76, 76, 4, 2.4, 8.0,  4.0, 4.5,  -7.5, -13.5, 7]]
+    ["cuore",       [76, 76, 4, 2.4, 8.0,  7.0, 4.5,  -4.5, -10.5, 7]]
 ];
 M = MISURE[search([tipo], MISURE)[0]][1];
 L = M[0]; H = M[1]; R = M[2]; B = M[3];
@@ -71,11 +71,11 @@ FESTA = tipo == "uovo" || tipo == "fiore" || tipo == "coccarda" || tipo == "cuor
 NATALE = tipo == "addobbo" || tipo == "stella" || tipo == "pacco" || tipo == "segnaposto" || FESTA;
 TRE_RIGHE = tipo == "petto" || tipo == "portachiavi" || tipo == "zaino" || NATALE;
 // Oggetti di Natale: quota della riga in alto, distanza della bandiera dal bordo sinistro, foro per il nastro
-Y0 = tipo == "addobbo" || FESTA ? 17 : tipo == "stella" ? 11 : 14.2;
+Y0 = tipo == "cuore" ? 20 : tipo == "addobbo" || FESTA ? 17 : tipo == "stella" ? 11 : 14.2;
 BAND_DA = tipo == "addobbo" || FESTA ? 5 : tipo == "stella" ? 25 : tipo == "pacco" ? 12 : tipo == "portachiavi" ? 3 : 3.5;
 NASTRO_D = 4.5;
 NASTRO = tipo == "addobbo" || tipo == "coccarda" ? [0, L / 2 + 2] : tipo == "stella" ? [0, 45] : tipo == "uovo" ? [0, 43]
-       : tipo == "fiore" ? [0, 42] : tipo == "cuore" ? [0, 26] : [-L / 2 + 6.5, 0];
+       : tipo == "fiore" ? [0, 42] : tipo == "cuore" ? [0, 28.5] : [-L / 2 + 6.5, 0];
 // stella a cinque punte: raggio delle punte e delle rientranze; rientranze larghe, per farci stare le scritte
 ST_R = 56 - R; ST_r = 34 - R;
 
@@ -102,7 +102,7 @@ module forma() {
         for (v = [-1, 1]) scale([v, 1]) polygon([[4, -30], [21, -30], [26, -64], [18, -59], [11, -66]]);
     }
     else if (tipo == "cuore") {       // cuore: due lobi che scendono a una punta arrotondata; foro sotto l'incavo
-        for (v = [-1, 1]) hull() { translate([v * 19, 18]) circle(r = 26, $fn = 120); translate([0, -44]) circle(r = 3); }
+        for (v = [-1, 1]) hull() { translate([v * 19, 18]) circle(r = 26, $fn = 120); translate([0, -50]) circle(r = 3); }
         // l'incavo fra i due lobi: senza, l'inviluppo lo chiuderebbe e il cuore non si riconoscerebbe
     }
     else if (tipo == "stella")

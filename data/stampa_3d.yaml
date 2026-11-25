@@ -315,19 +315,19 @@ oggetti:
       base: "#1d4f9a"
       rilievo: "#f07d00"
       rilievo_mm: 1.0
-      bandiera: [-33.0, 0.0, -21.0, 8.0]
-      nome: {zona: [-25, -3.5, 25, 3.5], lato: "retro"}
+      bandiera: [-33.0, 3.0, -21.0, 11.0]
+      nome: {zona: [-25, 0, 25, 7], lato: "retro"}
     parametri:
       tipo: "cuore"
       parte: "tutto"
       riga0: "GRAZIE"
-    misure: "9 × 9,1 cm, spesso 3,4 mm"
+    misure: "9 × 9,7 cm, spesso 3,4 mm"
     lunghezza_mm: 90
     peso_g: 17
     scheda:
-      - ["Ingombro", "90 × 91 mm, spesso 3,4 mm (2,4 mm di base e 1 mm di scritte)"]
+      - ["Ingombro", "90 × 97 mm, spesso 3,4 mm (2,4 mm di base e 1 mm di scritte)"]
       - ["Peso", "circa 17 g"]
-      - ["Foro", "da 4,5 mm sotto l'incavo, con più di 7 mm di plastica sopra"]
+      - ["Foro", "da 4,5 mm sotto l'incavo, con quasi 5 mm di plastica sopra"]
       - ["Altezza delle lettere", "nominativo 8 mm; righe piccole 4,5 mm"]
       - ["Scritte di un altro colore", "le scritte sono in rilievo di 1 mm: per averle di un altro colore, nel programma di stampa aggiungi un cambio di filo al primo strato delle scritte, cioè dopo lo strato 12 con strati da 0,2 mm (altezza 2,6 mm). Cambiano colore con le scritte anche la cornice, la bandiera e le due stelline, che sono in rilievo alla stessa altezza. Il cambio di filo è facoltativo e si fa anche con una stampante a un colore solo: la stampa si ferma a quello strato, cambi il filo a mano e riparte. Senza cambio il pezzo esce di un colore solo e le scritte si leggono per il rilievo"]
       - ["Posizione di stampa", "in piano, già orientato nel file, senza supporti"]
