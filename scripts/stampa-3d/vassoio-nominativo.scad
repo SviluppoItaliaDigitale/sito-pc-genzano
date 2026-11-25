@@ -18,7 +18,7 @@
 // sinistra180 e centro180 = seconda versione dei due pezzi del piatto, con il foro da 180 mm
 // sinistra3, centro3, destra3 = terza versione, con le sedi sagomate: si stampa diritta, con il fondo sul piatto;
 // montato3 = terza versione montata, solo da guardare
-parte = "tutto"; // [tutto, base, testo, sinistra, centro, destra, sinistra180, centro180, clip, montato, sinistra3, centro3, destra3, montato3, controllo_viti]
+parte = "tutto"; // [tutto, base, testo, sinistra, centro, destra, sinistra180, centro180, clip, montato, sinistra3, centro3, destra3, montato3, sinistra_i, centro_i, destra_i, sinistra180_i, centro180_i, sinistra3_i, centro3_i, destra3_i, farfalle, farfalle3, provino, rivetti_targhetta, rivetti_targhetta3, controllo_viti]
 tipo = "vassoio"; // [vassoio]
 
 /* [Testi] */
@@ -60,7 +60,7 @@ $fn = 64;
 // bottiglia scende di circa 35 mm e si ferma su un cono che in fondo lascia un'apertura di 54 mm. Una bottiglia
 // più larga di 70 mm non entra; una più stretta di 55 mm cadrebbe.
 BOTT = 70; B_PROF = 44; B_CONO = 9; B_FONDO = 54;
-STRETTO = parte == "sinistra180" || parte == "centro180";
+STRETTO = parte == "sinistra180" || parte == "centro180" || parte == "sinistra180_i" || parte == "centro180_i";
 FORO_PIATTO = STRETTO ? 180 : 200; FORO_BICCHIERE = 56;
 PIANO = 3.0;                  // spessore del piano (15 strati da 0,2 mm)
 NERV = 15;                    // fin dove scendono le nervature sotto il piano (12 mm oltre il piano)
@@ -210,8 +210,62 @@ module parete(g, verso, s, y0, y1) {
 module piede(p) {
     translate([p[0], p[1], PIANO - 0.01]) cylinder(d1 = 20, d2 = 13, h = PIEDE - PIANO, $fn = 48);
 }
+/* ---------- Giunzioni senza viti: pezzi «a incastro» con chiavette a farfalla ---------- */
+
+// Chi non vuole viti e dadi stampa i pezzi «a incastro» (parti che finiscono per _i): al posto di fori e sedi dei
+// dadi hanno, a cavallo di ogni giunzione, sedi a coda di rondine alte quanto la parete. In ogni sede si preme una
+// chiavetta a farfalla: collo largo 6 mm, ali larghe 12 mm, lunga 14 mm. Lavora a trazione per tutta l'altezza,
+// quindi tiene sia quando il vassoio si porta dai manici sia quando si prende dal centro. Sulle facce inclinate ha
+// otto cordoncini che sporgono 0,3 mm: nella sede (0,2 mm di gioco) si schiacciano e la tengono ferma. Il gioco e i
+// cordoncini sono ipotesi di progetto: il provino (parte «provino») serve a provarli sulla propria stampante.
+// Un dente a V lungo la giunzione (sporge 1,8 mm, facce a più di 45 gradi, quindi si stampa senza supporti) entra
+// in una gola del pezzo accanto e impedisce ai pezzi di scorrere in altezza uno sull'altro.
+// Le sedi e i pezzi pieni intorno prendono il posto delle viti: i pezzi a incastro non hanno fori per le viti.
+// Alla seconda giunzione restano anche le due costole di allineamento dei pezzi con le viti.
+INC_PARTI = ["sinistra_i", "centro_i", "destra_i", "sinistra180_i", "centro180_i", "sinistra3_i", "centro3_i",
+             "destra3_i", "interferenze", "interferenze3"];
+INC = len([for (q = INC_PARTI) if (q == parte) 1]) > 0;
+K_L = 14; K_COLLO = 6; K_ALA = 12; K_GIOCO = 0.2; K_BORDO = 3;
+KY1 = 110; KY2 = [-85, 0, 85];                 // chiavette della prima e della seconda giunzione
+D_SPORGE = 1.8; D_MEZZA = 2.2;                 // dente a V: sporgenza e mezza altezza
+module chiave2d(e = 0) {
+    offset(delta = e) polygon([[-K_L / 2, -K_ALA / 2], [0, -K_COLLO / 2], [K_L / 2, -K_ALA / 2],
+                               [K_L / 2, K_ALA / 2], [0, K_COLLO / 2], [-K_L / 2, K_ALA / 2]]);
+}
+// La chiavetta come si stampa: in piedi, così gli strati hanno la forma della farfalla e la trazione corre dentro
+// ogni strato. «testa» è lo spessore di una base più larga, che resta fuori dalla sede: fa da battuta e da presa.
+module chiavetta(alta, testa = 0) {
+    translate([0, 0, testa]) {
+        linear_extrude(alta - 3) {
+            chiave2d();
+            for (sx = [-1, 1], sy = [-1, 1], t = [0.3, 0.75])
+                translate([sx * t * K_L / 2, sy * (K_COLLO / 2 + t * (K_ALA - K_COLLO) / 2)]) circle(r = 0.3, $fn = 12);
+        }
+        // invito: negli ultimi 3 mm la chiavetta si restringe a gradini, fino a 0,45 mm per parte
+        for (i = [0:2]) translate([0, 0, alta - 3.01 + i]) linear_extrude(1.01) chiave2d(-0.15 * (i + 1));
+    }
+    // la base ha una linguetta che sporge 3 mm dall'ingrossamento della parete: da lì si fa leva per toglierla
+    if (testa > 0) linear_extrude(testa) { offset(r = 2, $fn = 24) chiave2d(); translate([-13, -4]) square([6, 8]); }
+}
+module sede_chiave(g, y, z0, alta) { translate([g, y, z0]) linear_extrude(alta) chiave2d(K_GIOCO); }
+module rinforzo(g, y, z0, alta) {
+    translate([g - K_L / 2 - K_BORDO, y - K_ALA / 2 - K_BORDO, z0]) cube([K_L + 2 * K_BORDO, K_ALA + 2 * K_BORDO, alta]);
+}
+// dente a V sulla faccia di giunzione, sporge verso sinistra; «e» allarga la gola del pezzo accanto
+module dente(g, tratti, zc, e = 0) {
+    for (t = tratti) translate([g, t[0] - e, zc]) rotate([-90, 0, 0]) linear_extrude(t[1] - t[0] + 2 * e)
+        polygon([[0.01, -D_MEZZA - 1.3 * e], [-D_SPORGE - e, 0], [0.01, D_MEZZA + 1.3 * e]]);
+}
+// tratti del dente: stanno lontani 5,5 mm dal centro di ogni chiavetta, per non entrare nelle sedi
+function tratti1(ys) = [[ys + 1.4, KY1 - 5.5], [KY1 + 5.5, 118.4], [-KY1 + 5.5, -ys - 1.4], [-118.4, -KY1 - 5.5]];
+TRATTI2 = [[-118, -90.5], [-79.5, -5.5], [5.5, 79.5], [90.5, 118]];
+D_Z = 14.5; D_Z3 = 8;                          // quota del dente nei due vassoi
 // Tutto il vassoio pieno, senza i tagli delle giunzioni
 module corpo() {
+    if (INC) {
+        for (v = [-1, 1]) rinforzo(G1, v * KY1, PIANO - 0.01, FLANGIA - PIANO);
+        for (y = KY2) rinforzo(G2, y, PIANO - 0.01, FLANGIA - PIANO);
+    }
     linear_extrude(PIANO) contorno2d();
     translate([0, 0, PIANO - 0.01]) linear_extrude(NERV - PIANO) nervature2d();
     for (p = PIEDI, v = [-1, 1]) piede([p[0], v * p[1]]);
@@ -224,6 +278,11 @@ module scavi() {
     translate([0, 0, -1]) linear_extrude(PIEDE) { fori2d(); manici2d(); }
     // lo smusso si fa foro per foro: un solo inviluppo li unirebbe tutti
     translate([0, 0, -0.01]) linear_extrude(INCISO + 0.01) etichette2d();
+    // pezzi a incastro: sedi delle chiavette, alte quanto la parete e chiuse dal piano
+    if (INC) {
+        for (v = [-1, 1]) sede_chiave(G1, v * KY1, PIANO, FLANGIA);
+        for (y = KY2) sede_chiave(G2, y, PIANO, FLANGIA);
+    }
     // pozzetto della bottiglia: diritto, poi un cono su cui la bottiglia si ferma, poi aperto
     translate([BX, BY, 0]) {
         translate([0, 0, -1]) cylinder(d = BOTT, h = B_PROF - B_CONO + 1, $fn = 120);
@@ -270,8 +329,8 @@ module pezzo_sinistra() {
             for (v = [-1, 1]) parete(G1, -1, FL_A, v > 0 ? Y1A : -FONDO / 2, v > 0 ? FONDO / 2 : -Y1A);
         }
         scavi();
-        viti_teste(G1, VITI_1);
-        costole(G1, COST_1, 0.2);
+        if (INC) dente(G1, tratti1(Y1A), D_Z, 0.2);
+        else { viti_teste(G1, VITI_1); costole(G1, COST_1, 0.2); }
     }
 }
 module pezzo_centro() {
@@ -280,11 +339,12 @@ module pezzo_centro() {
             intersection() { corpo(); translate([G1, -200, -1]) cube([G2 - G1, 400, 100]); }
             for (v = [-1, 1]) parete(G1, 1, FL_B, v > 0 ? Y1A : -FONDO / 2, v > 0 ? FONDO / 2 : -Y1A);
             parete(G2, -1, FL_A, -FONDO / 2, FONDO / 2);
-            intersection() { costole(G1, COST_1); translate([G1 - 5, -200, 0]) cube([5, 400, 100]); }
+            if (INC) dente(G1, tratti1(Y1A), D_Z);
+            else intersection() { costole(G1, COST_1); translate([G1 - 5, -200, 0]) cube([5, 400, 100]); }
         }
         scavi();
-        viti_dadi(G1, VITI_1);
-        viti_teste(G2, VITI_2);
+        if (INC) dente(G2, TRATTI2, D_Z, 0.2);
+        else { viti_dadi(G1, VITI_1); viti_teste(G2, VITI_2); }
         costole(G2, COST_2, 0.2);
     }
 }
@@ -294,9 +354,10 @@ module pezzo_destra() {
             intersection() { corpo(); translate([G2, -200, -1]) cube([LARGO - G2 + 1, 400, 100]); }
             parete(G2, 1, FL_B, -FONDO / 2, FONDO / 2);
             intersection() { costole(G2, COST_2); translate([G2 - 5, -200, 0]) cube([5, 400, 100]); }
+            if (INC) dente(G2, TRATTI2, D_Z);
         }
         scavi();
-        viti_dadi(G2, VITI_2);
+        if (!INC) viti_dadi(G2, VITI_2);
     }
 }
 
@@ -367,6 +428,10 @@ module vasca3() {
         translate([J1 - FL_A, v > 0 ? Y3A : -D3 / 2 + 1, F3 - 0.01]) cube([FL_A + FL_B, D3 / 2 - 1 - Y3A, H3 - F3]);
     }
     translate([J2 - FL_A, -D3 / 2 + 1, F3 - 0.01]) cube([FL_A + FL_B, D3 - 2, H3 - F3]);
+    if (INC) {
+        for (v = [-1, 1]) rinforzo(J1, v * KY1, F3 - 0.01, H3 - F3);
+        for (y = KY2) rinforzo(J2, y, F3 - 0.01, H3 - F3);
+    }
     // ponticelli delle posate
     for (y = CLIP3_Y) translate([POS3_X - 33, y - 9.2, F3 - 0.01]) cube([66, 18.4, PONTE - F3]);
     // appoggi della targhetta: due con il dado, due semplici
@@ -387,8 +452,14 @@ module etichette3() {
 // bordo: è un'ipotesi, il profilo vero non è nella scheda del produttore), 2,5 mm più in basso.
 function sotto_il_piatto(y) = F3 + (y - 82.5) / 1.5 - 2.5;
 module scavi3() {
-    for (v = [0, 1]) mirror([0, v, 0]) translate([J1 - FL_A - 1, 0, 0]) rotate([90, 0, 90]) linear_extrude(FL_A + FL_B + 2)
+    for (v = [0, 1]) mirror([0, v, 0]) translate([J1 - (INC ? 11 : FL_A + 1), 0, 0]) rotate([90, 0, 90]) linear_extrude(INC ? 22 : FL_A + FL_B + 2)
         polygon([[Y3A - 1, sotto_il_piatto(Y3A - 1)], [113, sotto_il_piatto(113)], [113, 30], [Y3A - 1, 30]]);
+    // pezzi a incastro: sedi delle chiavette, aperte in alto, e sotto ognuna un foro da 3,2 mm nel fondo per
+    // spingerla fuori; con la chiavetta al suo posto il foro è chiuso
+    if (INC) for (c = concat([for (v = [-1, 1]) [J1, v * KY1]], [for (y = KY2) [J2, y]])) {
+        sede_chiave(c[0], c[1], F3, H3);
+        translate([c[0] - 3.5, c[1], -1]) cylinder(d = 3.2, h = F3 + 1.5, $fn = 24);
+    }
     translate([0, 0, F3 - INCISO]) linear_extrude(1) etichette3();
     translate([C3[0], C3[1], F3]) cylinder(d1 = BIC_D1, d2 = BIC_D2 + 0.02, h = BIC_H + 0.02, $fn = 120);
     translate([B3[0], B3[1], F3]) cylinder(d = BOTT, h = 50, $fn = 120);
@@ -416,17 +487,19 @@ module sinistra3() {
     difference() {
         intersection() { vasca3(); translate([-50, -200, -1]) cube([J1 + 50, 400, 100]); }
         scavi3();
-        viti_teste(J1, V3_1, V3_Z);
+        if (INC) dente(J1, tratti1(Y3A), D_Z3, 0.2);
+        else viti_teste(J1, V3_1, V3_Z);
     }
 }
 module centro3() {
     difference() {
         union() {
             intersection() { vasca3(); translate([J1, -200, -1]) cube([J2 - J1, 400, 100]); }
+            if (INC) dente(J1, tratti1(Y3A), D_Z3);
         }
         scavi3();
-        viti_dadi(J1, V3_1, V3_Z, H3 + 6);
-        viti_teste(J2, V3_2, V3_Z);
+        if (INC) dente(J2, TRATTI2, D_Z3, 0.2);
+        else { viti_dadi(J1, V3_1, V3_Z, H3 + 6); viti_teste(J2, V3_2, V3_Z); }
         costole3(0.2);
     }
 }
@@ -435,9 +508,10 @@ module destra3() {
         union() {
             intersection() { vasca3(); translate([J2, -200, -1]) cube([W3, 400, 100]); }
             intersection() { costole3(); translate([J2 - 5, -200, 0]) cube([5, 400, 100]); }
+            if (INC) dente(J2, TRATTI2, D_Z3);
         }
         scavi3();
-        viti_dadi(J2, V3_2, V3_Z, H3 + 6);
+        if (!INC) viti_dadi(J2, V3_2, V3_Z, H3 + 6);
     }
 }
 module montato3() {
@@ -445,6 +519,41 @@ module montato3() {
         sinistra3(); centro3(); destra3();
         translate([POS3_X, CLIP3_Y[0] + C_LARGA / 2, PONTE]) rotate([90, 0, 0]) clip();
     }
+}
+
+/* ---------- Ferramenta stampata: rivetti al posto di viti e dadi ---------- */
+
+// Chi non vuole comprare viti e dadi stampa questi rivetti: entrano negli stessi fori da 4,5 mm. La testa svasata
+// si appoggia nella svasatura; il gambo è tagliato in due per il lungo e in punta ha due denti che sporgono 0,4 mm
+// dal foro:
+// passano nel foro stringendosi e si riaprono nella sede del dado. «presa» è la distanza fra la superficie dove
+// sta la testa e la parete su cui appoggerebbe il dado. Si stampano coricati, uniti da una barretta che si spezza:
+// così gli strati corrono lungo il gambo. Non stringono come una vite: tengono uniti i pezzi con un po' di gioco.
+R_GAMBO = 2.05; R_TESTA = 4.3; R_SPESSO = 3.0; R_TAGLIO = 2.0; R_PUNTA = 3.0;
+// Dente: 0,4 mm oltre il foro; nei rivetti corti 0,25 mm, perché le gambe corte si piegano meno senza cedere
+function r_dente(presa) = presa < 6.5 ? 2.5 : 2.65;
+module rivetto_mezzo(presa) {                  // metà profilo: [raggio, distanza dalla testa]
+    lh = presa - 0.4 + 0.15;                   // la testa affonda 0,4 mm nella svasatura; 0,15 mm di gioco
+    polygon([[0, 0], [R_TESTA, 0], [R_GAMBO, R_TESTA - R_GAMBO], [R_GAMBO, lh], [r_dente(presa), lh], [r_dente(presa), lh + 0.8],
+             [1.7, lh + R_PUNTA], [0, lh + R_PUNTA]]);
+}
+module rivetto(presa) {
+    lh = presa - 0.4 + 0.15;
+    translate([0, 0, R_SPESSO / 2]) difference() {
+        intersection() {
+            rotate([0, 90, 0]) rotate_extrude($fn = 64) rivetto_mezzo(presa);
+            translate([-1, -6, -R_SPESSO / 2]) cube([lh + R_PUNTA + 2, 12, R_SPESSO]);
+        }
+        hull() {
+            translate([1.4, 0, -3]) cylinder(d = R_TAGLIO, h = 6, $fn = 24);   // il taglio comincia dentro la testa: gambe più lunghe, più elastiche
+            translate([lh + R_PUNTA + 1, 0, -3]) cylinder(d = R_TAGLIO, h = 6, $fn = 24);
+        }
+    }
+}
+// «quanti» rivetti uguali, uniti da una barretta sul fianco delle teste: si taglia a filo con un tronchesino
+module rivetti(presa, quanti) {
+    for (i = [0 : quanti - 1]) translate([0, i * 11, 0]) rivetto(presa);
+    translate([0.3, 0, 0]) cube([1.0, (quanti - 1) * 11, 0.8]);
 }
 
 /* ---------- Uscite ---------- */
@@ -460,15 +569,49 @@ module montato() {
 
 if (parte == "tutto" || parte == "base") targhetta_base();
 if (parte == "tutto" || parte == "testo") targhetta_testo();
-if (parte == "sinistra" || parte == "sinistra180") per_la_stampa() pezzo_sinistra();
-if (parte == "centro" || parte == "centro180") per_la_stampa() pezzo_centro();
-if (parte == "destra") per_la_stampa() pezzo_destra();
+if (parte == "sinistra" || parte == "sinistra180" || parte == "sinistra_i" || parte == "sinistra180_i") per_la_stampa() pezzo_sinistra();
+if (parte == "centro" || parte == "centro180" || parte == "centro_i" || parte == "centro180_i") per_la_stampa() pezzo_centro();
+if (parte == "destra" || parte == "destra_i") per_la_stampa() pezzo_destra();
 if (parte == "clip") clip();
 if (parte == "montato") montato();
-if (parte == "sinistra3") sinistra3();
-if (parte == "centro3") centro3();
-if (parte == "destra3") destra3();
+if (parte == "sinistra3" || parte == "sinistra3_i") sinistra3();
+if (parte == "centro3" || parte == "centro3_i") centro3();
+if (parte == "destra3" || parte == "destra3_i") destra3();
 if (parte == "montato3") montato3();
+// chiavette delle giunzioni e rivetti della targhetta (7,2 mm sul vassoio con i piedini, 5,6 mm su quello sagomato)
+// Chiavette: cinque con la base per il vassoio con i piedini (si premono da sotto); per quello sagomato due basse,
+// per la giunzione sotto il bordo del piatto, e tre alte, che si premono dall'alto
+K_ALTA = FLANGIA - PIANO - 0.4; K3_BASSA = 11.0; K3_ALTA = H3 - F3 - 0.4;
+// Una barretta bassa le tiene unite in stampa (più stabili sul piatto): si taglia a filo. Sta dal lato che resta fuori.
+if (parte == "farfalle") { for (i = [0:4]) translate([i * 22, 0, 0]) chiavetta(K_ALTA, 3); translate([0, -0.5, 0]) cube([88, 1, 0.6]); }
+if (parte == "farfalle3") { for (i = [0:4]) translate([i * 18, 0, 0]) chiavetta(i < 2 ? K3_BASSA : K3_ALTA); translate([0, -0.5, 0]) cube([72, 1, 0.6]); }
+// Provino: un blocchetto con una sede e una chiavetta alta 9 mm, per provare l'incastro prima di stampare il vassoio
+if (parte == "provino") {
+    difference() { rinforzo(0, 0, 0, 10); sede_chiave(0, 0, 1, 10); }
+    translate([22, 0, 0]) chiavetta(8.8);
+    translate([9, -0.5, 0]) cube([8, 1, 0.6]);
+}
+// Controlli: i pezzi a incastro montati con le chiavette non devono compenetrarsi (queste parti devono uscire vuote)
+if (parte == "interferenze") {
+    intersection() { pezzo_sinistra(); pezzo_centro(); }
+    intersection() { pezzo_centro(); pezzo_destra(); }
+    intersection() {
+        union() { pezzo_sinistra(); pezzo_centro(); pezzo_destra(); }
+        union() { for (v = [-1, 1]) translate([G1, v * KY1, PIANO + 0.2]) linear_extrude(K_ALTA) chiave2d();
+                  for (y = KY2) translate([G2, y, PIANO + 0.2]) linear_extrude(K_ALTA) chiave2d(); }
+    }
+}
+if (parte == "interferenze3") {
+    intersection() { sinistra3(); centro3(); }
+    intersection() { centro3(); destra3(); }
+    intersection() {
+        union() { sinistra3(); centro3(); destra3(); }
+        union() { for (v = [-1, 1]) translate([J1, v * KY1, F3 + 0.05]) linear_extrude(K3_BASSA) chiave2d();
+                  for (y = KY2) translate([J2, y, F3 + 0.05]) linear_extrude(K3_ALTA) chiave2d(); }
+    }
+}
+if (parte == "rivetti_targhetta") rivetti(7.2, 2);
+if (parte == "rivetti_targhetta3") rivetti(5.6, 2);
 // Le due viti della targhetta stanno ai lati delle righe piccole: qui si controlla che resti così (cerchi da 10 mm)
 if (parte == "controllo_viti")
     linear_extrude(1) intersection() { testi2d(); union() for (v = T_VITI) translate(v) circle(d = 10); }

@@ -17,7 +17,7 @@ tipo = "a4"; // [a4, b5]
 // alta e bassa = le due metà della tavoletta, capovolte per la stampa; piastra = piastra di giunzione;
 // molla = fermafogli con il porta penna, coricato per la stampa; montato = portablocco montato, solo da guardare;
 // controllo_viti = solo le parti delle scritte che finirebbero sotto una vite (deve risultare vuoto)
-parte = "tutto"; // [tutto, base, testo, alta, bassa, piastra, molla, montato, controllo_viti]
+parte = "tutto"; // [tutto, base, testo, alta, bassa, piastra, molla, montato, rivetti, controllo_viti]
 
 /* [Testi] */
 riga1 = "ALFA 1";
@@ -219,6 +219,41 @@ module molla() {
     }
 }
 
+/* ---------- Ferramenta stampata: rivetti al posto di viti e dadi ---------- */
+
+// Chi non vuole comprare viti e dadi stampa questi rivetti: entrano negli stessi fori da 4,5 mm. La testa svasata
+// si appoggia nella svasatura; il gambo è tagliato in due per il lungo e in punta ha due denti che sporgono 0,4 mm
+// dal foro:
+// passano nel foro stringendosi e si riaprono nella sede del dado. «presa» è la distanza fra la superficie dove
+// sta la testa e la parete su cui appoggerebbe il dado. Si stampano coricati, uniti da una barretta che si spezza:
+// così gli strati corrono lungo il gambo. Non stringono come una vite: tengono uniti i pezzi con un po' di gioco.
+R_GAMBO = 2.05; R_TESTA = 4.3; R_SPESSO = 3.0; R_TAGLIO = 2.0; R_PUNTA = 3.0;
+// Dente: 0,4 mm oltre il foro; nei rivetti corti 0,25 mm, perché le gambe corte si piegano meno senza cedere
+function r_dente(presa) = presa < 6.5 ? 2.5 : 2.65;
+module rivetto_mezzo(presa) {                  // metà profilo: [raggio, distanza dalla testa]
+    lh = presa - 0.4 + 0.15;                   // la testa affonda 0,4 mm nella svasatura; 0,15 mm di gioco
+    polygon([[0, 0], [R_TESTA, 0], [R_GAMBO, R_TESTA - R_GAMBO], [R_GAMBO, lh], [r_dente(presa), lh], [r_dente(presa), lh + 0.8],
+             [1.7, lh + R_PUNTA], [0, lh + R_PUNTA]]);
+}
+module rivetto(presa) {
+    lh = presa - 0.4 + 0.15;
+    translate([0, 0, R_SPESSO / 2]) difference() {
+        intersection() {
+            rotate([0, 90, 0]) rotate_extrude($fn = 64) rivetto_mezzo(presa);
+            translate([-1, -6, -R_SPESSO / 2]) cube([lh + R_PUNTA + 2, 12, R_SPESSO]);
+        }
+        hull() {
+            translate([1.4, 0, -3]) cylinder(d = R_TAGLIO, h = 6, $fn = 24);   // il taglio comincia dentro la testa: gambe più lunghe, più elastiche
+            translate([lh + R_PUNTA + 1, 0, -3]) cylinder(d = R_TAGLIO, h = 6, $fn = 24);
+        }
+    }
+}
+// «quanti» rivetti uguali, uniti da una barretta sul fianco delle teste: si taglia a filo con un tronchesino
+module rivetti(presa, quanti) {
+    for (i = [0 : quanti - 1]) translate([0, i * 11, 0]) rivetto(presa);
+    translate([0.3, 0, 0]) cube([1.0, (quanti - 1) * 11, 0.8]);
+}
+
 /* ---------- Uscite ---------- */
 
 module per_la_stampa() { mirror([0, 1, 0]) children(); }
@@ -238,6 +273,8 @@ if (parte == "bassa") per_la_stampa() translate([0, -GIUNTO, 0]) meta_bassa();
 if (parte == "piastra") piastra();
 if (parte == "molla") molla();
 if (parte == "montato") montato();
+// sei rivetti con la presa di 7 mm: quattro per la piastra e due per la targhetta (la molla resta con le viti)
+if (parte == "rivetti") rivetti(7.0, 6);
 // Le due viti della targhetta stanno alle estremità, fuori dalle scritte: qui si controlla (cerchi da 10 mm)
 if (parte == "controllo_viti")
     linear_extrude(1) intersection() { testi2d(); union() for (v = [-1, 1]) translate([v * T_VX, 0]) circle(d = 10); }

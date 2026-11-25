@@ -902,9 +902,9 @@ oggetti:
   - id: "vassoio"
     nome: "Vassoio porta piatto, bicchiere e posate"
     articolo: "il vassoio"
-    descrizione: "Vassoio con due manici in cui piatto e bicchiere si infilano in un foro più stretto del loro bordo: restano appesi e non scivolano. La bottiglietta d'acqua da mezzo litro scende in un pozzetto e le posate stanno ferme sotto una clip a molla. Accanto a ogni posto una scritta appena incisa dice che cosa ci va. È rialzato su dodici piedini ed è fatto di tre pezzi che si avvitano, così ogni pezzo entra in una stampante da tavolo. Sopra porta una targhetta con la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma», che si stampa a parte e può avere le scritte di un altro colore."
+    descrizione: "Vassoio con due manici in cui piatto e bicchiere si infilano in un foro più stretto del loro bordo: restano appesi e non scivolano. La bottiglietta d'acqua da mezzo litro scende in un pozzetto e le posate stanno ferme sotto una clip a molla. Accanto a ogni posto una scritta appena incisa dice che cosa ci va. È rialzato su dodici piedini ed è fatto di tre pezzi che si avvitano o, a scelta, si uniscono a incastro senza viti, così ogni pezzo entra in una stampante da tavolo. Sopra porta una targhetta con la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma», che si stampa a parte e può avere le scritte di un altro colore."
     categoria: "campo"
-    breve: "Piatto e bicchiere si infilano nei fori e non scivolano; pozzetto per la bottiglietta, clip per le posate, tre pezzi avvitati."
+    breve: "Piatto e bicchiere si infilano nei fori e non scivolano; pozzetto per la bottiglietta, clip per le posate, tre pezzi avvitati o a incastro."
     sorgente: "vassoio-nominativo.scad"
     anteprima:
       base: "#1d4f9a"
@@ -931,12 +931,20 @@ oggetti:
       - { parte: "clip", file: "vassoio-clip-posate.stl", nome: "la clip per le posate", peso_g: 4 }
       - { parte: "sinistra180", file: "vassoio-pezzo-sinistro-foro-180.stl", nome: "il pezzo sinistro con il foro da 180 mm", peso_g: 175, variante: "Seconda versione, con il foro del piatto da 180 mm: scarica questi due file al posto del pezzo sinistro e del pezzo centrale." }
       - { parte: "centro180", file: "vassoio-pezzo-centrale-foro-180.stl", nome: "il pezzo centrale con il foro da 180 mm", peso_g: 241, variante: "Seconda versione, con il foro del piatto da 180 mm: scarica questi due file al posto del pezzo sinistro e del pezzo centrale." }
+      - { parte: "sinistra_i", file: "vassoio-incastro-pezzo-sinistro.stl", nome: "il pezzo sinistro a incastro", peso_g: 165, variante: "Versione a incastro, senza viti: questi tre pezzi prendono il posto dei tre pezzi con le viti e si uniscono con le cinque chiavette. Non è stata provata in stampa: stampa prima il provino." }
+      - { parte: "centro_i", file: "vassoio-incastro-pezzo-centrale.stl", nome: "il pezzo centrale a incastro", peso_g: 227, variante: "Versione a incastro, senza viti: questi tre pezzi prendono il posto dei tre pezzi con le viti e si uniscono con le cinque chiavette. Non è stata provata in stampa: stampa prima il provino." }
+      - { parte: "destra_i", file: "vassoio-incastro-pezzo-destro.stl", nome: "il pezzo destro a incastro", peso_g: 271, variante: "Versione a incastro, senza viti: questi tre pezzi prendono il posto dei tre pezzi con le viti e si uniscono con le cinque chiavette. Non è stata provata in stampa: stampa prima il provino." }
+      - { parte: "farfalle", file: "vassoio-chiavette.stl", nome: "le cinque chiavette a farfalla", peso_g: 23, variante: "Versione a incastro, senza viti: questi tre pezzi prendono il posto dei tre pezzi con le viti e si uniscono con le cinque chiavette. Non è stata provata in stampa: stampa prima il provino." }
+      - { parte: "provino", file: "vassoio-provino-incastro.stl", nome: "il provino: una sede e una chiavetta corta", peso_g: 4, variante: "Versione a incastro, senza viti: questi tre pezzi prendono il posto dei tre pezzi con le viti e si uniscono con le cinque chiavette. Non è stata provata in stampa: stampa prima il provino." }
+      - { parte: "sinistra180_i", file: "vassoio-incastro-pezzo-sinistro-foro-180.stl", nome: "il pezzo sinistro a incastro con il foro da 180 mm", peso_g: 178, variante: "Versione a incastro con il foro del piatto da 180 mm: questi due file prendono il posto del pezzo sinistro e del pezzo centrale a incastro." }
+      - { parte: "centro180_i", file: "vassoio-incastro-pezzo-centrale-foro-180.stl", nome: "il pezzo centrale a incastro con il foro da 180 mm", peso_g: 243, variante: "Versione a incastro con il foro del piatto da 180 mm: questi due file prendono il posto del pezzo sinistro e del pezzo centrale a incastro." }
+      - { parte: "rivetti_targhetta", file: "vassoio-rivetti-targhetta.stl", nome: "i due rivetti per la targhetta", peso_g: 1, variante: "Rivetti stampati al posto delle viti e dei dadi: entrano negli stessi fori. Tengono fermo il pezzo con un po' di gioco e, una volta scattati, si tolgono solo rompendoli. Non sono stati provati in stampa." }
     misure: "45,6 × 24 cm montato, alto 4,8 cm"
     lunghezza_mm: 76
     peso_g: 682
     scheda:
       - ["Ingombro", "montato 456 × 240 mm, con il piano a 48 mm dal tavolo; pezzo sinistro 148 × 240 mm, pezzo centrale 182 × 240 mm, pezzo destro 130 × 240 mm, tutti alti 48 mm; targhetta 76 × 50 mm, spessa 3,6 mm (4,6 mm con le scritte)"]
-      - ["Peso", "circa 682 g in tutto: 163 g il pezzo sinistro, 226 g il centrale, 272 g il destro, 17 g la targhetta, 4 g la clip; con il foro da 180 mm il pezzo sinistro pesa 175 g e il centrale 241 g"]
+      - ["Peso", "circa 682 g in tutto: 163 g il pezzo sinistro, 226 g il centrale, 272 g il destro, 17 g la targhetta, 4 g la clip; con il foro da 180 mm il pezzo sinistro pesa 175 g e il centrale 241 g. I pezzi a incastro pesano 165, 227 e 271 g (178 e 243 g con il foro da 180 mm) e le cinque chiavette 23 g in tutto"]
       - ["Foro del piatto", "200 mm, con il bordo smussato. Tiene un piatto piano usa e getta «da 22 cm» (225 mm in alto, 165 mm alla base) e un piatto fondo «da 22 cm» (220 mm in alto, 145 mm alla base): la base scende nel foro e il bordo si appoggia. Va bene per piatti rigidi con il bordo da 215 a 228 mm: sotto i 205 mm il piatto passa attraverso il foro, fra 205 e 215 mm appoggia su pochi millimetri, oltre i 228 mm tocca la clip. Per piatti sottili, molli o molto pieni usa la seconda versione, con il foro da 180 mm. Misura il tuo piatto prima di stampare"]
       - ["Seconda versione: foro da 180 mm", "il pezzo sinistro e il pezzo centrale esistono anche con il foro del piatto da 180 mm. Il piatto appoggia più in basso, sulla parete, e sotto il bordo restano 22 mm di vassoio per parte con il piatto piano e 20 mm con il fondo (con il foro da 200 mm sono 12 e 10 mm): il peso non può farlo passare. La base dei due piatti (165 e 145 mm) entra lo stesso. Si scaricano al posto dei due pezzi con il foro da 200 mm; il resto è uguale"]
       - ["Foro del bicchiere", "56 mm. Un bicchiere usa e getta da 200 ml (46 mm alla base, 70 mm alla bocca, alto 97 mm) scende di circa 4 cm e si ferma, a 6 mm dal tavolo. Va bene per bicchieri con la base fra 45 e 56 mm: con la base più stretta il bicchiere scende fino a toccare il tavolo, con la base più larga non entra e si appoggia sul piano"]
@@ -953,12 +961,14 @@ oggetti:
       - ["Posizione di stampa", "cinque file, già orientati, senza supporti: i tre pezzi del vassoio sono capovolti, con il piano sul piatto di stampa, la clip è coricata su un fianco; serve un piatto di stampa di almeno 25 × 20 cm (non entra nelle stampanti da 22 × 22 cm). I pezzi sono lunghi 24 cm: se serve, ruotali nel programma di stampa lungo il lato lungo del piatto, senza capovolgerli"]
       - ["Precisione", "la clip, le sedi dei dadi e le costole di allineamento sono disegnate per una stampante da tavolo ben regolata. Se ordini la stampa a un servizio, che può scostarsi di mezzo millimetro, la clip può non agganciare: in quel caso si lima il dente o si allarga la fessura"]
       - ["Da sapere", "il vassoio porta le stoviglie, non è un oggetto per alimenti: fra gli strati della plastica stampata restano solchi che non si puliscono a fondo. Pane, frutta e cibo stanno sempre nel piatto, mai appoggiati sul vassoio. Si lava a mano con acqua tiepida subito dopo l'uso: il PETG comincia a deformarsi a 68 gradi, quindi niente lavastoviglie e niente piatti o bevande bollenti. È pensato per circa 1,5 kg fra stoviglie e contenuto: è una stima di calcolo, non una prova di carico. Portalo con due mani"]
+      - ["Senza viti di metallo", "il vassoio si può fare tutto di plastica stampata. Per le giunzioni ci sono i pezzi «a incastro»: al posto dei fori hanno cinque sedi a coda di rondine, a cavallo delle giunzioni, alte quanto la parete. In ogni sede si preme da sotto una chiavetta a farfalla (collo di 6 mm, ali di 12 mm); un dente lungo la giunzione entra in una gola del pezzo accanto e tiene i pezzi alla stessa altezza. Per la targhetta ci sono due rivetti, che entrano negli stessi fori delle viti. I pezzi a incastro non hanno i fori per le viti: scegli prima di stampare. Le chiavette sono tenute dall'attrito e lasciano un po' di gioco: sotto carico la giunzione può aprirsi di qualche decimo di millimetro e il vassoio flette più che con le viti. Incastro e rivetti sono calcolati, non provati in stampa né sotto carico: stampa prima il provino, che trovi fra i file, e per un uso di tutti i giorni o per carichi vicini al limite usa le viti"]
     materiale: "PETG"
     colore: "blu"
     occorrente:
       - "circa 700 g di filo PETG per tutti i pezzi"
       - "7 viti M4 lunghe 10 mm a testa svasata e 7 dadi esagonali M4 (si trovano in ferramenta); non servono rondelle: le teste entrano nelle svasature e i dadi nelle loro sedi"
       - "una chiave a brugola da 2,5 mm, oppure un cacciavite a croce se le viti hanno la testa a croce"
+      - "oppure, senza comprare nulla: i tre pezzi a incastro con le cinque chiavette e i due rivetti della targhetta, che trovi fra i file da scaricare (circa 25 g di filo in più)"
     montaggio:
       - "Stampa i cinque file: la targhetta con il tuo nominativo, i tre pezzi del vassoio e la clip."
       - "Appoggia i tre pezzi capovolti su un tavolo, con i piedini in alto, e accostali: le costole del pezzo centrale e del pezzo destro entrano nelle scanalature del pezzo accanto."
@@ -968,14 +978,17 @@ oggetti:
       - "Spingi le due gambe della clip in una coppia di fessure della corsia delle posate, finché i denti scattano sotto il piano. Le coppie di fessure sono due: scegli quella più comoda per le tue posate."
       - "Infila il piatto, il bicchiere e la bottiglietta nei loro posti e fai scorrere le posate sotto la clip, dal manico."
       - "Per togliere la clip, da sotto avvicina le due gambe finché i denti escono dalle fessure."
+      - "Versione a incastro: stampa prima il provino e prova a premere la chiavetta corta nella sua sede. Deve entrare con la forza del pollice e restare ferma: se è troppo dura lima un poco i cordoncini sui fianchi, se balla fermala con una goccia di colla istantanea. Poi stampa i tre pezzi a incastro e le cinque chiavette, che escono in piedi sulla loro base, unite da una barretta da tagliare a filo. Accosta i pezzi capovolti, con il dente di ogni giunzione nella gola del pezzo accanto. Premi una chiavetta in ogni sede, con la parte stretta in avanti, finché la base tocca la parete: deve entrare a pressione. Per toglierla, fai leva con un cacciavite sotto la linguetta della base."
+      - "Rivetti della targhetta, al posto delle due viti: taglia a filo la barretta che li unisce, appoggia la targhetta, infila i due rivetti dall'alto e premi su ogni testa con un oggetto tondo largo circa 8 mm finché i denti scattano sotto il piano."
 
   # --- Terza versione del vassoio: sedi sagomate, senza piedini, stampata diritta (25/11/2026, stesso modello).
+
   - id: "vassoio-sagomato"
     nome: "Vassoio con le sedi sagomate"
     articolo: "il vassoio"
-    descrizione: "Vassoio in cui le stoviglie appoggiano sul fondo, dentro sedi con la loro forma: una conca per il piatto, un bicchierino alto metà bicchiere, un anello per la bottiglietta d'acqua da mezzo litro. Così non scivolano quando lo porti. Le posate stanno su due ponticelli, ferme sotto una clip a molla. Sul fondo una scritta appena incisa dice che cosa va in ogni posto. Non ha piedini: i due lati corti salgono inclinati e fanno da manici. È fatto di tre pezzi che si avvitano, così ogni pezzo entra in una stampante da tavolo. Porta una targhetta con la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma», che si stampa a parte e può avere le scritte di un altro colore."
+    descrizione: "Vassoio in cui le stoviglie appoggiano sul fondo, dentro sedi con la loro forma: una conca per il piatto, un bicchierino alto metà bicchiere, un anello per la bottiglietta d'acqua da mezzo litro. Così non scivolano quando lo porti. Le posate stanno su due ponticelli, ferme sotto una clip a molla. Sul fondo una scritta appena incisa dice che cosa va in ogni posto. Non ha piedini: i due lati corti salgono inclinati e fanno da manici. È fatto di tre pezzi che si avvitano o, a scelta, si uniscono a incastro senza viti, così ogni pezzo entra in una stampante da tavolo. Porta una targhetta con la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma», che si stampa a parte e può avere le scritte di un altro colore."
     categoria: "campo"
-    breve: "Piatto, bicchiere e bottiglietta stanno in sedi con la loro forma; clip per le posate, tre pezzi avvitati."
+    breve: "Piatto, bicchiere e bottiglietta stanno in sedi con la loro forma; clip per le posate, tre pezzi avvitati o a incastro."
     sorgente: "vassoio-nominativo.scad"
     anteprima:
       base: "#1d4f9a"
@@ -1000,12 +1013,18 @@ oggetti:
       - { parte: "centro3", file: "vassoio-sagomato-pezzo-centrale.stl", nome: "il pezzo centrale, con i ponticelli delle posate", peso_g: 217 }
       - { parte: "destra3", file: "vassoio-sagomato-pezzo-destro.stl", nome: "il pezzo destro, con le sedi di bicchiere e bottiglietta", peso_g: 212 }
       - { parte: "clip", file: "vassoio-sagomato-clip-posate.stl", nome: "la clip per le posate", peso_g: 4 }
+      - { parte: "sinistra3_i", file: "vassoio-sagomato-incastro-pezzo-sinistro.stl", nome: "il pezzo sinistro a incastro", peso_g: 142, variante: "Versione a incastro, senza viti: questi tre pezzi prendono il posto dei tre pezzi con le viti e si uniscono con le cinque chiavette. Non è stata provata in stampa: stampa prima il provino." }
+      - { parte: "centro3_i", file: "vassoio-sagomato-incastro-pezzo-centrale.stl", nome: "il pezzo centrale a incastro", peso_g: 218, variante: "Versione a incastro, senza viti: questi tre pezzi prendono il posto dei tre pezzi con le viti e si uniscono con le cinque chiavette. Non è stata provata in stampa: stampa prima il provino." }
+      - { parte: "destra3_i", file: "vassoio-sagomato-incastro-pezzo-destro.stl", nome: "il pezzo destro a incastro", peso_g: 213, variante: "Versione a incastro, senza viti: questi tre pezzi prendono il posto dei tre pezzi con le viti e si uniscono con le cinque chiavette. Non è stata provata in stampa: stampa prima il provino." }
+      - { parte: "farfalle3", file: "vassoio-sagomato-chiavette.stl", nome: "le cinque chiavette a farfalla: due basse e tre alte", peso_g: 11, variante: "Versione a incastro, senza viti: questi tre pezzi prendono il posto dei tre pezzi con le viti e si uniscono con le cinque chiavette. Non è stata provata in stampa: stampa prima il provino." }
+      - { parte: "provino", file: "vassoio-sagomato-provino-incastro.stl", nome: "il provino: una sede e una chiavetta corta", peso_g: 4, variante: "Versione a incastro, senza viti: questi tre pezzi prendono il posto dei tre pezzi con le viti e si uniscono con le cinque chiavette. Non è stata provata in stampa: stampa prima il provino." }
+      - { parte: "rivetti_targhetta3", file: "vassoio-sagomato-rivetti-targhetta.stl", nome: "i due rivetti per la targhetta", peso_g: 1, variante: "Rivetti stampati al posto delle viti e dei dadi: entrano negli stessi fori. Tengono fermo il pezzo con un po' di gioco e, una volta scattati, si tolgono solo rompendoli. Non sono stati provati in stampa." }
     misure: "45,4 × 24 cm montato, alto 4,7 cm"
     lunghezza_mm: 76
     peso_g: 591
     scheda:
       - ["Ingombro", "montato 454 × 240 mm; bordi alti 18 mm, sedi di bicchiere e bottiglietta alte 47 mm dal tavolo; pezzo sinistro 132 × 240 mm, pezzo centrale 181 × 240 mm, pezzo destro 143 × 240 mm; targhetta 76 × 50 mm, spessa 3,6 mm (4,6 mm con le scritte)"]
-      - ["Peso", "circa 591 g in tutto: 141 g il pezzo sinistro, 217 g il centrale, 212 g il destro, 17 g la targhetta, 4 g la clip"]
+      - ["Peso", "circa 591 g in tutto: 141 g il pezzo sinistro, 217 g il centrale, 212 g il destro, 17 g la targhetta, 4 g la clip. I pezzi a incastro pesano 142, 218 e 213 g e le cinque chiavette 11 g in tutto"]
       - ["Sede del piatto", "una conca larga 168 mm sul fondo, chiusa da un anello alto 8 mm che si allarga verso l'alto più della parete del piatto: il piatto tocca il fondo e non può scivolare. Tiene un piatto piano usa e getta «da 22 cm» (225 mm in alto, 165 mm alla base) e un piatto fondo «da 22 cm» (220 mm in alto, 145 mm alla base), che dentro la conca si sposta di un centimetro per parte. Va bene per piatti con la base fino a 166 mm e il bordo fino a 230 mm. Alla prima giunzione le pareti passano sotto il bordo del piatto e sono tagliate per lasciargli 2,5 mm: il conto è fatto su un piatto con la parete diritta fra base e bordo, perché il profilo vero non è nelle schede. Misura il tuo piatto prima di stampare e provalo sul vassoio montato"]
       - ["Sede del bicchiere", "un bicchierino alto 45 mm, largo 49 mm in basso e 61 mm in alto. Un bicchiere usa e getta da 200 ml (46 mm alla base, 70 mm alla bocca, alto 97 mm) appoggia sul fondo ed esce per metà, così si prende bene. Un bicchiere con la base più larga di 49 mm si ferma più in alto e resta tenuto per meno"]
       - ["Sede della bottiglietta", "un anello largo 70 mm e alto 45 mm, per una bottiglietta tonda da mezzo litro (68 mm di diametro, alta 17 cm). Va bene per bottiglie larghe fino a 69 mm; una più stretta ci sta, ma balla. L'anello tiene solo la parte bassa della bottiglia: non la regge se inclini il vassoio"]
@@ -1020,12 +1039,14 @@ oggetti:
       - ["Precisione", "la clip e i canali dei dadi sono disegnati per una stampante da tavolo ben regolata. Se ordini la stampa a un servizio, che può scostarsi di mezzo millimetro, la clip può non agganciare: in quel caso si lima il dente o si allarga la fessura"]
       - ["Differenze dall'altro vassoio", "nel «Vassoio porta piatto, bicchiere e posate» le stoviglie restano appese in fori più stretti del loro bordo e il vassoio sta su dodici piedini; qui appoggiano sul fondo e il vassoio è basso. Questo ha il fondo chiuso: se si rovescia un po' d'acqua resta nel vassoio"]
       - ["Da sapere", "il vassoio porta le stoviglie, non è un oggetto per alimenti: fra gli strati della plastica stampata restano solchi che non si puliscono a fondo. Pane, frutta e cibo stanno sempre nel piatto, mai appoggiati sul vassoio. Si lava a mano con acqua tiepida subito dopo l'uso: il PETG comincia a deformarsi a 68 gradi, quindi niente lavastoviglie e niente piatti o bevande bollenti. Tienilo intorno a 1 kg fra stoviglie e contenuto: il fondo è sottile e non è stato provato sotto carico. Portalo con due mani, una per manico, e tienilo in piano: la bottiglietta è tenuta solo per i primi 4 cm"]
+      - ["Senza viti di metallo", "il vassoio si può fare tutto di plastica stampata. Per le giunzioni ci sono i pezzi «a incastro»: al posto dei fori hanno cinque sedi a coda di rondine, a cavallo delle giunzioni, aperte in alto. In ogni sede si preme dall'alto una chiavetta a farfalla (collo di 6 mm, ali di 12 mm): due basse vicino al piatto, perché lì la parete è tagliata sotto il suo bordo, e tre alte. Un dente lungo la giunzione entra in una gola del pezzo accanto e tiene i pezzi alla stessa altezza. Sotto ogni sede c'è un foro di 3 mm nel fondo, che serve a spingere fuori la chiavetta e che la chiavetta stessa chiude. Per la targhetta ci sono due rivetti, che entrano negli stessi fori delle viti. I pezzi a incastro non hanno i fori per le viti: scegli prima di stampare. Le chiavette sono tenute dall'attrito e lasciano un po' di gioco: sotto carico la giunzione può aprirsi di qualche decimo di millimetro e il vassoio flette più che con le viti. Incastro e rivetti sono calcolati, non provati in stampa né sotto carico: stampa prima il provino, che trovi fra i file, e per un uso di tutti i giorni o per carichi vicini al limite usa le viti"]
     materiale: "PETG"
     colore: "blu"
     occorrente:
       - "circa 600 g di filo PETG per tutti i pezzi"
       - "7 viti M4 lunghe 10 mm a testa svasata e 7 dadi esagonali M4 (si trovano in ferramenta); non servono rondelle: le teste entrano nelle svasature e i dadi nelle loro sedi"
       - "una chiave a brugola da 2,5 mm, oppure un cacciavite a croce se le viti hanno la testa a croce"
+      - "oppure, senza comprare nulla: i tre pezzi a incastro con le cinque chiavette e i due rivetti della targhetta, che trovi fra i file da scaricare (circa 15 g di filo in più)"
     montaggio:
       - "Stampa i cinque file: la targhetta con il tuo nominativo, i tre pezzi del vassoio e la clip."
       - "Appoggia i tre pezzi su un tavolo e accostali: le due costole del pezzo destro entrano nelle scanalature del pezzo centrale."
@@ -1035,11 +1056,14 @@ oggetti:
       - "Spingi le due gambe della clip nelle fessure di uno dei due ponticelli, finché i denti scattano."
       - "Metti il piatto, il bicchiere e la bottiglietta nelle loro sedi e fai scorrere le posate sotto la clip, dal manico."
       - "Per togliere la clip, infila un cacciavite piccolo nelle finestrelle ai due lati del ponticello e spingi i denti verso l'interno, uno alla volta, mentre tiri la clip verso l'alto."
+      - "Versione a incastro: stampa prima il provino e prova a premere la chiavetta corta nella sua sede. Deve entrare con la forza del pollice e restare ferma: se è troppo dura lima un poco i cordoncini sui fianchi, se balla fermala con una goccia di colla istantanea. Poi stampa i tre pezzi a incastro e le cinque chiavette, due basse e tre alte, unite da una barretta da tagliare a filo. Accosta i pezzi sul tavolo, con il dente di ogni giunzione nella gola del pezzo accanto. Premi dall'alto le due chiavette basse nelle sedi ai lati del piatto e le tre alte nelle altre, con la parte stretta in avanti, cioè capovolte rispetto a come escono dalla stampante, fino in fondo: devono entrare a pressione. Poi appoggia un piatto vero e controlla che il bordo non tocchi le due chiavette basse. Per toglierle, gira il vassoio e spingile fuori dal foro che hanno sotto, con una chiave a brugola da 3 mm o un chiodo."
+      - "Rivetti della targhetta, al posto delle due viti: taglia a filo la barretta che li unisce e appoggia la targhetta sui quattro appoggi. Infila i due rivetti dall'alto, con la testa girata per il lato corto della targhetta, e premi su ogni testa con un oggetto tondo largo circa 8 mm finché i denti scattano nel canale del dado."
 
   # --- Oggetti grandi in due pezzi uniti da viti (25/11/2026, famiglia grandi-nominativo.scad): la gruccia.
   # «insieme» nell'anteprima: catalogo e vista 3D mostrano l'oggetto montato; il file da scaricare resta un pezzo solo.
 
   # --- Portablocco in due metà avvitate, con targhetta, molla e porta penna (25/11/2026, portablocco-nominativo.scad)
+
   - id: "portablocco-a4"
     nome: "Portablocco A4"
     articolo: "il portablocco"
@@ -1069,6 +1093,7 @@ oggetti:
       - { parte: "bassa", file: "portablocco-a4-meta-bassa.stl", nome: "la metà bassa della tavoletta", peso_g: 188 }
       - { parte: "piastra", file: "portablocco-a4-piastra.stl", nome: "la piastra di giunzione", peso_g: 48 }
       - { parte: "molla", file: "portablocco-a4-molla.stl", nome: "la molla fermafogli con il porta penna", peso_g: 25 }
+      - { parte: "rivetti", file: "portablocco-a4-rivetti.stl", nome: "i sei rivetti: quattro per la piastra, due per la targhetta", peso_g: 1, variante: "Rivetti stampati al posto delle viti e dei dadi: entrano negli stessi fori. Tengono fermo il pezzo con un po' di gioco e, una volta scattati, si tolgono solo rompendoli. Non sono stati provati in stampa." }
     misure: "22,0 × 34,8 cm montato, spesso 1,2 cm"
     lunghezza_mm: 126
     peso_g: 465
@@ -1085,12 +1110,14 @@ oggetti:
       - ["Posizione di stampa", "cinque file, già orientati, senza supporti: le due metà sono capovolte, con la faccia per scrivere sul piatto di stampa; la molla è coricata su un fianco; serve un piatto di stampa di almeno 25 × 20 cm"]
       - ["Precisione", "la molla, i canali e le sedi dei dadi sono disegnati per una stampante da tavolo ben regolata. Con un servizio di stampa, che può scostarsi di mezzo millimetro, un dado può entrare a fatica: si aiuta con la vite"]
       - ["Da sapere", "la molla è di plastica: se la apri oltre il necessario o la lasci a lungo con un pacco di fogli troppo spesso, perde forza. Non lasciare il portablocco al sole dietro un vetro: il PETG comincia a deformarsi a 68 gradi"]
+      - ["Senza viti di metallo", "la piastra che unisce le due metà e la targhetta si possono fissare con sei rivetti stampati, che trovi fra i file: hanno la testa svasata e due denti in punta, entrano negli stessi fori delle viti e si agganciano dove starebbe il dado. Si stampano coricati, uniti da una barretta da tagliare. Con i rivetti la piastra non si smonta più: per separare le due metà vanno tagliati. La molla invece resta con le sue due viti M4 e i due dadi: preme sui fogli tutto il giorno e un rivetto di plastica, sotto uno sforzo continuo, con il tempo cede. I rivetti sono calcolati, non provati in stampa"]
     materiale: "PETG"
     colore: "blu"
     occorrente:
       - "circa 480 g di filo PETG per tutti i pezzi"
       - "8 viti M4 lunghe 10 mm a testa svasata e 8 dadi esagonali M4 (si trovano in ferramenta); non servono rondelle: le teste entrano nelle svasature e i dadi nelle loro sedi"
       - "una chiave a brugola da 2,5 mm, oppure un cacciavite a croce se le viti hanno la testa a croce"
+      - "oppure, comprando solo le 2 viti e i 2 dadi della molla: i sei rivetti stampati per la piastra e la targhetta, che trovi fra i file da scaricare"
     montaggio:
       - "Stampa i cinque file: la targhetta con il tuo nominativo, le due metà della tavoletta, la piastra e la molla."
       - "Appoggia le due metà sul tavolo con le nervature in alto. Sul bordo della giunzione di ogni metà ci sono due canali: spingi un dado in ognuno, fino in fondo, poi accosta le due metà."
@@ -1098,6 +1125,7 @@ oggetti:
       - "Gira la tavoletta e fai sporgere il bordo alto dal tavolo. Appoggia la molla in alto, con l'incavo della penna verso il bordo, infila due dadi nelle sedi della sua base e stringi le due viti dal retro."
       - "Appoggia la targhetta in alto, sopra la molla, tieni un dado in ognuna delle due sedi sul retro e stringi le due viti dal davanti."
       - "Infila i fogli sotto la lamina fino in fondo e premi la penna nell'incavo."
+      - "Rivetti al posto delle viti, per la piastra e la targhetta (non per la molla): taglia a filo la barretta che li unisce. Infila ogni rivetto nel foro dalla parte della svasatura, con la testa girata per il lato lungo della piastra, e premi con un oggetto tondo largo circa 8 mm finché i due denti scattano. I dadi non servono."
 
   - id: "portablocco-b5"
     nome: "Portablocco B5"
@@ -1128,6 +1156,7 @@ oggetti:
       - { parte: "bassa", file: "portablocco-b5-meta-bassa.stl", nome: "la metà bassa della tavoletta", peso_g: 145 }
       - { parte: "piastra", file: "portablocco-b5-piastra.stl", nome: "la piastra di giunzione", peso_g: 40 }
       - { parte: "molla", file: "portablocco-b5-molla.stl", nome: "la molla fermafogli con il porta penna", peso_g: 25 }
+      - { parte: "rivetti", file: "portablocco-b5-rivetti.stl", nome: "i sei rivetti: quattro per la piastra, due per la targhetta", peso_g: 1, variante: "Rivetti stampati al posto delle viti e dei dadi: entrano negli stessi fori. Tengono fermo il pezzo con un po' di gioco e, una volta scattati, si tolgono solo rompendoli. Non sono stati provati in stampa." }
     misure: "18,6 × 30,1 cm montato, spesso 1,2 cm"
     lunghezza_mm: 126
     peso_g: 367
@@ -1144,12 +1173,14 @@ oggetti:
       - ["Posizione di stampa", "cinque file, già orientati, senza supporti: le due metà sono capovolte, con la faccia per scrivere sul piatto di stampa; la molla è coricata su un fianco; serve un piatto di stampa di almeno 20 × 17 cm"]
       - ["Precisione", "la molla, i canali e le sedi dei dadi sono disegnati per una stampante da tavolo ben regolata. Con un servizio di stampa, che può scostarsi di mezzo millimetro, un dado può entrare a fatica: si aiuta con la vite"]
       - ["Da sapere", "la molla è di plastica: se la apri oltre il necessario o la lasci a lungo con un pacco di fogli troppo spesso, perde forza. Non lasciare il portablocco al sole dietro un vetro: il PETG comincia a deformarsi a 68 gradi"]
+      - ["Senza viti di metallo", "la piastra che unisce le due metà e la targhetta si possono fissare con sei rivetti stampati, che trovi fra i file: hanno la testa svasata e due denti in punta, entrano negli stessi fori delle viti e si agganciano dove starebbe il dado. Si stampano coricati, uniti da una barretta da tagliare. Con i rivetti la piastra non si smonta più: per separare le due metà vanno tagliati. La molla invece resta con le sue due viti M4 e i due dadi: preme sui fogli tutto il giorno e un rivetto di plastica, sotto uno sforzo continuo, con il tempo cede. I rivetti sono calcolati, non provati in stampa"]
     materiale: "PETG"
     colore: "blu"
     occorrente:
       - "circa 380 g di filo PETG per tutti i pezzi"
       - "8 viti M4 lunghe 10 mm a testa svasata e 8 dadi esagonali M4 (si trovano in ferramenta); non servono rondelle: le teste entrano nelle svasature e i dadi nelle loro sedi"
       - "una chiave a brugola da 2,5 mm, oppure un cacciavite a croce se le viti hanno la testa a croce"
+      - "oppure, comprando solo le 2 viti e i 2 dadi della molla: i sei rivetti stampati per la piastra e la targhetta, che trovi fra i file da scaricare"
     montaggio:
       - "Stampa i cinque file: la targhetta con il tuo nominativo, le due metà della tavoletta, la piastra e la molla."
       - "Appoggia le due metà sul tavolo con le nervature in alto. Sul bordo della giunzione di ogni metà ci sono due canali: spingi un dado in ognuno, fino in fondo, poi accosta le due metà."
@@ -1157,8 +1188,10 @@ oggetti:
       - "Gira la tavoletta e fai sporgere il bordo alto dal tavolo. Appoggia la molla in alto, con l'incavo della penna verso il bordo, infila due dadi nelle sedi della sua base e stringi le due viti dal retro."
       - "Appoggia la targhetta in alto, sopra la molla, tieni un dado in ognuna delle due sedi sul retro e stringi le due viti dal davanti."
       - "Infila i fogli sotto la lamina fino in fondo e premi la penna nell'incavo."
+      - "Rivetti al posto delle viti, per la piastra e la targhetta (non per la molla): taglia a filo la barretta che li unisce. Infila ogni rivetto nel foro dalla parte della svasatura, con la testa girata per il lato lungo della piastra, e premi con un oggetto tondo largo circa 8 mm finché i due denti scattano. I dadi non servono."
 
   # --- Oggetti da scrivania con la targhetta che scorre in una guida (25/11/2026, scrivania-nominativo.scad)
+
   - id: "portapenne"
     nome: "Portapenne da scrivania"
     articolo: "il portapenne"
@@ -1466,6 +1499,8 @@ oggetti:
       file: "gruccia-braccio-destro.stl"
       nome: "il braccio destro"
       peso_g: 82
+    altri_pezzi:
+      - { parte: "rivetti", file: "gruccia-rivetti.stl", nome: "i quattro rivetti per le due giunzioni", peso_g: 1, variante: "Rivetti stampati al posto delle viti e dei dadi: entrano negli stessi fori. Tengono fermo il pezzo con un po' di gioco e, una volta scattati, si tolgono solo rompendoli. Non sono stati provati in stampa." }
     misure: "40 × 19 cm montata, spessa 1,1 cm"
     lunghezza_mm: 238
     peso_g: 240
@@ -1480,12 +1515,14 @@ oggetti:
       - ["Spazio per nome e cognome", "fascia libera di 68 × 7 mm sotto il nominativo"]
       - ["Posizione di stampa", "due file, tutti e due in piano, già orientati, senza supporti; serve un piatto di stampa di almeno 25 × 20 cm"]
       - ["Scritte di un altro colore", "le scritte sono l'ultimo millimetro del pezzo con il nominativo. Per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di colore al primo strato delle scritte, cioè dopo lo strato 54 con strati da 0,2 mm (altezza 11,0 mm): la stampante si ferma, cambi il filo e finisce le scritte con il secondo colore"]
+      - ["Senza viti di metallo", "chi non vuole comprare viti e dadi può stampare i quattro rivetti, che trovi fra i file: hanno la testa svasata e due denti in punta, entrano negli stessi fori e si agganciano nella sede del dado. Si stampano coricati, uniti da una barretta da tagliare. Tengono insieme i due pezzi con un po' di gioco e, una volta scattati, si tolgono solo rompendoli: per abiti pesanti o per un uso di tutti i giorni restano meglio le viti. Sono calcolati, non provati in stampa"]
     materiale: "PETG"
     colore: "blu"
     occorrente:
       - "circa 250 g di filo PETG per tutti i pezzi"
       - "4 viti M4 lunghe 10 mm a testa svasata e 4 dadi esagonali M4 (si trovano in ferramenta); non servono rondelle: le teste entrano nelle svasature e i dadi nelle loro sedi"
       - "una chiave a brugola da 2,5 mm, oppure un cacciavite a croce se le viti hanno la testa a croce"
+      - "oppure, senza comprare nulla: i quattro rivetti stampati, che trovi fra i file da scaricare"
     montaggio:
       - "Stampa tutti e due i file: il pezzo con il tuo nominativo e il braccio destro."
       - "Spingi i quattro dadi nelle sedi esagonali sul retro del pezzo con il nominativo: due vicino alla piastra e due sulla barra. Se un dado non entra del tutto, lo tira in sede la vite."
@@ -1493,10 +1530,12 @@ oggetti:
       - "Metti le quattro viti dal davanti e stringile a mano, senza forzare: le teste devono restare sotto la superficie e le punte non devono uscire dal retro."
       - "Passa un dito sulle giunzioni e sui bordi: se senti un filo di plastica, toglilo con carta abrasiva fine, così non tira i tessuti."
       - "Appendi la giacca sulle spalle e i pantaloni sulla barra. Non usarla per zaini, borse o attrezzatura."
+      - "Rivetti al posto delle viti: taglia a filo la barretta che li unisce, infila ogni rivetto dal davanti e premi con un oggetto tondo largo circa 8 mm finché i due denti scattano nella sede del dado. I dadi non servono."
 
   # --- Oggetti per l'intervento e il mezzo (24/11/2026): idee da ciò che si stampano da sé i vigili del fuoco
   # (Praga, blog Prusa; Oceanside, MatterHackers) e dai modelli per soccorritori di Printables e MakerWorld.
   # I disegni sono nostri: nessun file altrui è stato usato.
+
   - id: "cuneo-fermaporta"
     nome: "Cuneo fermaporta"
     articolo: "il cuneo"

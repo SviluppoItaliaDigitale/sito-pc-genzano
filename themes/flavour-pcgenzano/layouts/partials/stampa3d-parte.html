@@ -132,13 +132,19 @@
 {{- /* I pezzi con «variante» sono un'alternativa (per esempio un foro di un'altra misura): non si contano fra quelli da stampare. */ -}}
 {{- $fissi := slice . }}{{ $varianti := slice }}
 {{- range $o.altri_pezzi }}{{ if .variante }}{{ $varianti = $varianti | append . }}{{ else }}{{ $fissi = $fissi | append . }}{{ end }}{{ end }}
+{{- if eq (len $fissi) 1 }}
+<p class="mt-3 mb-2">L'oggetto è in due pezzi: scarica anche {{ .nome }}, uguale per tutti.</p>
+{{- else }}
 <p class="mt-3 mb-2">L'oggetto è in più pezzi: scarica anche questi {{ len $fissi }} file, uguali per tutti.</p>
+{{- end }}
 {{- range $fissi }}
 <p class="mb-2"><a class="btn btn-outline-primary w-100" href="{{ printf "%s%s/%s" $base $o.id .file }}" download><i class="bi bi-download me-1" aria-hidden="true"></i> Scarica {{ .nome }} (STL)</a></p>
 {{- end }}
+{{- /* Più alternative: ogni testo si scrive una volta, sopra i suoi file. */ -}}
 {{- with $varianti }}
-<p class="mt-3 mb-2">{{ (index . 0).variante }}</p>
+{{- $ultimo := "" }}
 {{- range . }}
+{{- if ne .variante $ultimo }}<p class="mt-3 mb-2">{{ .variante }}</p>{{ $ultimo = .variante }}{{ end }}
 <p class="mb-2"><a class="btn btn-outline-secondary w-100" href="{{ printf "%s%s/%s" $base $o.id .file }}" download><i class="bi bi-download me-1" aria-hidden="true"></i> Scarica {{ .nome }} (STL)</a></p>
 {{- end }}
 {{- end }}
