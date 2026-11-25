@@ -20,6 +20,8 @@ servizio:
 
 # Gruppi del catalogo, nell'ordine in cui compaiono
 categorie:
+  - id: "natale"
+    titolo: "Per Natale"
   - id: "giubbetto"
     titolo: "Sul giubbetto e in tasca"
   - id: "radio"
@@ -38,6 +40,157 @@ categorie:
     titolo: "Per il telefono"
 
 oggetti:
+  # --- Serie di Natale (25/11/2026): quattro oggetti piatti di targhetta-nominativo.scad, tipi addobbo, stella, pacco, segnaposto
+  - id: "addobbo-natale"
+    nome: "Addobbo per l'albero"
+    articolo: "l'addobbo"
+    descrizione: "Disco blu da appendere all'albero di Natale, con «Buon Natale» fra due stelline, la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». Ha un occhiello per il nastro. Sul retro, liscio, puoi aggiungere nome e cognome."
+    categoria: "natale"
+    breve: "Disco da appendere all'albero, con «Buon Natale» e il nominativo."
+    sorgente: "targhetta-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-33.0, 0.0, -21.0, 8.0]
+      nome: {zona: [-25, -3.5, 25, 3.5], lato: "retro"}
+    parametri:
+      tipo: "addobbo"
+      parte: "tutto"
+      riga0: "BUON NATALE"
+    misure: "7,6 × 8,5 cm, spesso 3,4 mm"
+    lunghezza_mm: 76
+    peso_g: 15
+    scheda:
+      - ["Ingombro", "disco di 76 mm, alto 85 mm con l'occhiello, spesso 3,4 mm (2,4 mm di base e 1 mm di scritte)"]
+      - ["Peso", "circa 15 g"]
+      - ["Occhiello", "foro da 4,5 mm per un nastro o uno spago"]
+      - ["Altezza delle lettere", "nominativo 8 mm; righe piccole 4,5 mm"]
+      - ["Scritte di un altro colore", "le scritte sono in rilievo di 1 mm: per averle di un altro colore, nel programma di stampa aggiungi un cambio di filo al primo strato delle scritte, cioè dopo lo strato 12 con strati da 0,2 mm (altezza 2,4 mm)"]
+      - ["Posizione di stampa", "in piano, già orientato nel file, senza supporti"]
+      - ["Da sapere", "Si appende lontano da candele, stufe e lampadine che scaldano: il PETG comincia a deformarsi a 68 gradi. Con le luci a LED non c'è problema. Non è un giocattolo: tienilo fuori dalla portata dei bambini piccoli"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "un nastro o uno spago lungo circa 20 cm"
+    montaggio:
+      - "Infila il nastro nell'occhiello e annodalo ad anello."
+      - "Appendilo a un ramo robusto, lontano dalle fonti di calore."
+
+  - id: "stella-natale"
+    nome: "Stella di Natale da appendere"
+    articolo: "la stella"
+    descrizione: "Stella blu a cinque punte, larga quasi 11 cm, da appendere all'albero, alla finestra o alla porta della sede. Porta «Buon Natale» fra due stelline, la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». Le punte sono arrotondate e nella punta in alto c'è il foro per il nastro."
+    categoria: "natale"
+    breve: "Stella a cinque punte da appendere, con «Buon Natale» e il nominativo."
+    sorgente: "targhetta-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-31.0, -3.0, -19.0, 5.0]
+      nome: {zona: [-22, -27, 22, -20], lato: "retro"}
+    parametri:
+      tipo: "stella"
+      parte: "tutto"
+      riga0: "BUON NATALE"
+    misure: "10,7 × 10,2 cm, spessa 3,4 mm"
+    lunghezza_mm: 107
+    peso_g: 19
+    scheda:
+      - ["Ingombro", "107 × 102 mm, spessa 3,4 mm (2,4 mm di base e 1 mm di scritte)"]
+      - ["Peso", "circa 19 g"]
+      - ["Foro", "da 4,5 mm nella punta in alto, per un nastro o uno spago"]
+      - ["Punte", "arrotondate con un raggio di 3 mm"]
+      - ["Altezza delle lettere", "nominativo 8 mm; righe piccole 4,5 mm"]
+      - ["Scritte di un altro colore", "le scritte sono in rilievo di 1 mm: per averle di un altro colore, nel programma di stampa aggiungi un cambio di filo al primo strato delle scritte, cioè dopo lo strato 12 con strati da 0,2 mm (altezza 2,4 mm)"]
+      - ["Posizione di stampa", "in piano, già orientata nel file, senza supporti"]
+      - ["Da sapere", "Si appende lontano da candele, stufe e lampadine che scaldano: il PETG comincia a deformarsi a 68 gradi. Con le luci a LED non c'è problema. Non è un giocattolo: tienila fuori dalla portata dei bambini piccoli"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "un nastro o uno spago lungo circa 20 cm"
+    montaggio:
+      - "Infila il nastro nel foro della punta in alto e annodalo ad anello."
+      - "Appendila all'albero, alla finestra o alla porta, lontano dalle fonti di calore."
+
+  - id: "etichetta-regalo"
+    nome: "Etichetta per i regali"
+    articolo: "l'etichetta"
+    descrizione: "Etichetta blu da legare a un pacco, con «Auguri da», la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». Ha un foro per lo spago e si riusa ogni anno. Sul retro, liscio, puoi aggiungere nome e cognome oppure scrivere a mano il nome di chi riceve il regalo."
+    categoria: "natale"
+    breve: "Si lega al pacco con uno spago e si riusa ogni anno."
+    sorgente: "targhetta-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-31.0, 1.0, -19.0, 9.0]
+      nome: {zona: [-28, -3.5, 28, 3.5], lato: "retro"}
+    parametri:
+      tipo: "pacco"
+      parte: "tutto"
+      riga0: "AUGURI DA"
+    misure: "8,6 × 4 cm, spessa 3,4 mm"
+    lunghezza_mm: 86
+    peso_g: 11
+    scheda:
+      - ["Ingombro", "86 × 40 mm, spessa 3,4 mm (2,4 mm di base e 1 mm di scritte)"]
+      - ["Peso", "circa 11 g"]
+      - ["Foro", "da 4,5 mm sul lato con gli angoli tagliati, per lo spago"]
+      - ["Altezza delle lettere", "nominativo 8 mm; righe piccole 4,5 mm"]
+      - ["Scritte di un altro colore", "le scritte sono in rilievo di 1 mm: per averle di un altro colore, nel programma di stampa aggiungi un cambio di filo al primo strato delle scritte, cioè dopo lo strato 12 con strati da 0,2 mm (altezza 2,4 mm)"]
+      - ["Posizione di stampa", "in piano, già orientata nel file, senza supporti"]
+      - ["Da sapere", "sul retro si scrive bene con un pennarello indelebile; con l'alcol la scritta si toglie e l'etichetta si riusa"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "uno spago o un nastro lungo circa 30 cm"
+      - "un pennarello indelebile, se vuoi scrivere sul retro il nome di chi riceve il regalo"
+    montaggio:
+      - "Infila lo spago nel foro e legalo al nastro del pacco."
+      - "Se vuoi, scrivi sul retro il nome di chi riceve il regalo."
+
+  - id: "segnaposto"
+    nome: "Segnaposto per la tavola"
+    articolo: "il segnaposto"
+    descrizione: "Targa blu con la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma», che sta in piedi su un suo piede, inclinata di 15 gradi. Sotto il nominativo c'è una fascia libera per nome e cognome. Serve per la cena del Gruppo, per le riunioni e per i tavoli della sala operativa."
+    categoria: "natale"
+    breve: "Targa con il suo piede, per la cena del Gruppo e le riunioni."
+    sorgente: "targhetta-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-46.5, 8.5, -33.0, 17.5]
+      nome: {zona: [-36, 0.5, 36, 7.5], lato: "fronte"}
+    parametri:
+      tipo: "segnaposto"
+      parte: "tutto"
+    secondo_pezzo:
+      parte: "piede"
+      file: "segnaposto-piede.stl"
+      nome: "il piede"
+      peso_g: 25
+    misure: "10 × 4,6 cm, spesso 4 mm, più il piede"
+    lunghezza_mm: 100
+    peso_g: 43
+    scheda:
+      - ["Ingombro", "targa 100 × 46 mm, spessa 4 mm (3 mm di base e 1 mm di scritte); piede 70 × 28 mm, alto 14 mm"]
+      - ["Peso", "circa 43 g: 18 g la targa, 25 g il piede"]
+      - ["Spazio per nome e cognome", "fascia libera di 72 × 7 mm sotto il nominativo"]
+      - ["Altezza delle lettere", "nominativo 9 mm; righe piccole 4,5 mm"]
+      - ["Scritte di un altro colore", "le scritte sono in rilievo di 1 mm: per averle di un altro colore, nel programma di stampa aggiungi un cambio di filo al primo strato delle scritte, cioè dopo lo strato 15 con strati da 0,2 mm (altezza 3 mm)"]
+      - ["Posizione di stampa", "due file, in piano, già orientati, senza supporti"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "circa 45 g di filo PETG per i due pezzi"
+    montaggio:
+      - "Stampa i due file: la targa con il tuo nominativo e il piede."
+      - "Infila la targa nella fessura del piede, con le scritte verso chi guarda: resta inclinata all'indietro."
+      - "Se la targa balla nella fessura, fermala con una goccia di colla."
+
   - id: "targhetta-petto"
     nome: "Targhetta da petto"
     articolo: "la targhetta"

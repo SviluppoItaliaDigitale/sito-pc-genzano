@@ -79,7 +79,7 @@ Usare le raccomandazioni del nostro articolo del **22 novembre** su truffe onlin
 
 ### Sicurezza dell'albero
 - **posizione** stabile e lontano da fonti di calore;
-- **basa** pesante (sacchi di sabbia nel supporto);
+- **base** pesante (sacchi di sabbia nel supporto);
 - **luci** certificate CE, controllate prima dell'uso;
 - **cavi** senza rotture o giunzioni improvvisate;
 - **decorazioni** fragili in alto se ci sono bambini/animali;
