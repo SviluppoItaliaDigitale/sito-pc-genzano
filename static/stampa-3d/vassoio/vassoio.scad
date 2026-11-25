@@ -341,6 +341,45 @@ module costole(g, ys, gioco = 0) {
     for (y = ys) translate([g, y, PIANO - 0.01]) cylinder(r = 1.5 + gioco, h = FLANGIA - PIANO + (gioco > 0 ? 1 : 0), $fn = 24);
 }
 COST_1 = [-105, 105]; COST_2 = [-45, 45];
+
+/* ---------- Sede per l'apribottiglie, sotto la corsia delle posate (25/11/2026) ---------- */
+
+// Richiesta di Alessandro: ogni vassoio porta il suo apribottiglie. Un dente fisso nel bordo non reggerebbe (il vassoio
+// è leggero e sta sui piedini, e un dente di sola plastica dura pochi tappi): si porta l'apribottiglie con il manico
+// del catalogo (140 × 53 × 10 mm, con la moneta), appeso sotto la corsia delle posate, l'unico posto libero.
+// Quattro mensole a cuneo (45 gradi, si stampano senza supporti con il pezzo capovolto) lo reggono per i due bordi
+// lunghi, sotto le nervature. Fra le mensole lontane e quelle vicine restano 100 mm liberi: la punta entra di lì,
+// in leggera pendenza, scorre sopra le mensole lontane fino in fondo, poi si alza il manico e si tira indietro fino
+// al fermo. Un dentino di 0,9 mm sulle mensole lontane gli impedisce di tornare avanti da solo.
+// Le pareti lasciano liberi le fessure della clip (y = -20 e 60) e lo spazio per la chiave davanti alle viti della
+// seconda giunzione (y = -85, 0, 85).
+AP_L = 53; AP_S = 10;                          // larghezza e spessore dell'apribottiglie (apribottiglie-nominativo.scad)
+AP_HW = AP_L / 2 + 0.3;                        // mezza larghezza libera fra le pareti
+AP_Z = 27.4;                                   // dove cominciano le mensole: sopra restano 12,4 mm fino alle nervature
+AP_PAR = 2.4; AP_MENS = 2.5;                   // spessore delle pareti, sporgenza delle mensole
+// profili nel piano x-z (z = profondità sotto la faccia): la parete intera e la sola mensola, abbassata di dz
+function ap_x(lato, d) = POS_X + lato * d;
+module ap_parete2d(lato) {
+    polygon([[ap_x(lato, AP_HW + AP_PAR), PIANO - 0.01], [ap_x(lato, AP_HW), PIANO - 0.01], [ap_x(lato, AP_HW), AP_Z],
+             [ap_x(lato, AP_HW - AP_MENS), AP_Z + AP_MENS], [ap_x(lato, AP_HW - AP_MENS), AP_Z + AP_MENS + 1.5],
+             [ap_x(lato, AP_HW + AP_PAR), AP_Z + AP_MENS + 1.5]]);
+}
+module ap_mensola2d(lato, dz) {
+    polygon([[ap_x(lato, AP_HW + 0.5), AP_Z - dz], [ap_x(lato, AP_HW - AP_MENS), AP_Z + AP_MENS - dz],
+             [ap_x(lato, AP_HW - AP_MENS), AP_Z + AP_MENS + 1.5], [ap_x(lato, AP_HW + 0.5), AP_Z + AP_MENS + 1.5]]);
+}
+module ap_lungo_y(y0, y1) { translate([0, y1, 0]) rotate([90, 0, 0]) linear_extrude(y1 - y0) children(); }
+module sede_apribottiglie() {
+    for (l = [-1, 1]) ap_lungo_y(-74, -30) ap_parete2d(l);                       // mensole lontane
+    ap_lungo_y(70, 84) ap_parete2d(-1); ap_lungo_y(70, 78) ap_parete2d(1);       // mensole vicine (a destra più corta: vite a y = 85)
+    // dentino di 0,9 mm sulle mensole lontane, con due rampe a 45 gradi
+    for (l = [-1, 1]) hull() for (q = [[-54.4, 0], [-53.5, 0.9], [-51.9, 0.9], [-51, 0]])
+        ap_lungo_y(q[0], q[0] + 0.01) ap_mensola2d(l, q[1]);
+    // fermo, al centro: l'apribottiglie tirato indietro si ferma qui con il fondo del manico. Sta nella fascia di
+    // 6,5 mm che la linguetta del tre in uno (larga 23,25 mm, su un lato) lascia sempre libera. Nel tre in uno la
+    // linguetta va dal lato del piatto: dall'altro lato, a y = 107, c'è un piedino.
+    translate([POS_X - 2, 84.4, PIANO - 0.01]) cube([4, 2.4, AP_Z + 1.5 - PIANO]);
+}
 Y1A = FORO_PIATTO / 2 + 0.6;                   // le pareti della prima giunzione cominciano oltre il foro del piatto
 
 module pezzo_sinistra() {
@@ -360,6 +399,7 @@ module pezzo_centro() {
             intersection() { corpo(); translate([G1, -200, -1]) cube([G2 - G1, 400, 100]); }
             for (v = [-1, 1]) parete(G1, 1, FL_B, v > 0 ? Y1A : -FONDO / 2, v > 0 ? FONDO / 2 : -Y1A);
             parete(G2, -1, FL_A, -FONDO / 2, FONDO / 2);
+            sede_apribottiglie();
             if (INC) dente(G1, tratti1(Y1A), D_Z);
             else intersection() { costole(G1, COST_1); translate([G1 - 5, -200, 0]) cube([5, 400, 100]); }
         }
@@ -435,9 +475,15 @@ N_ALTO = 10.6;                                 // altezza degli appoggi della ta
 V3_Z = 10;                                     // quota delle viti di giunzione
 Y3A = A_FUORI + 1.3;                           // la prima giunzione passa per il piatto: le pareti stanno fuori dall'anello
 V3_1 = [-109, 109]; V3_2 = [-85, 0, 85];
+// Vassoi sagomati impilabili (25/11/2026, richiesta di Alessandro): quattro colonnine negli angoli, alte 50 mm dal
+// tavolo, più delle sedi del bicchiere e della bottiglietta (47,4 mm). Sotto ogni colonnina, nel fondo, c'è un incavo
+// profondo 1 mm in cui entra la punta della colonnina del vassoio sotto (12 mm; incavo da 13,6 a 12,8 mm).
+// Ogni vassoio alza la pila di 49 mm. Le colonnine stanno a 20 mm dalla sede del bicchiere e a 4 mm dalla targhetta.
+COL3 = [[11, 109], [W3 - 11, 109]]; COL3_H = 50; COL3_D1 = 16; COL3_D2 = 12; COL3_INC = 1.0;
 module xz(t) { rotate([90, 0, 0]) linear_extrude(t) children(); }
 module vasca3() {
     translate([0, -D3 / 2, 0]) cube([W3, D3, F3]);
+    for (p = COL3, v = [-1, 1]) translate([p[0], v * p[1], F3 - 0.01]) cylinder(d1 = COL3_D1, d2 = COL3_D2, h = COL3_H - F3, $fn = 48);
     // bordi lunghi, diritti, e bordi corti inclinati: sotto ci passano le dita
     for (y = [D3 / 2, -D3 / 2 + MURO]) translate([0, y, 0]) xz(MURO) polygon([[0, 0], [W3, 0], [W3 + LAB, H3], [-LAB, H3]]);
     translate([0, D3 / 2, 0]) xz(D3) {
@@ -466,7 +512,7 @@ module vasca3() {
     }
 }
 module etichette3() {
-    etichetta("PIATTO", [30, -100]);
+    etichetta("PIATTO", [35, -100]);
     etichetta("POSATE", [POS3_X, -106]);
     // bicchiere e bottiglietta: sul fondo della loro sede, perché fra due sedi alte la scritta non si vedrebbe
     etichetta("BICCHIERE", C3);
@@ -477,6 +523,7 @@ module etichette3() {
 // bordo: è un'ipotesi, il profilo vero non è nella scheda del produttore), 2,5 mm più in basso.
 function sotto_il_piatto(y) = F3 + (y - 82.5) / 1.5 - 2.5;
 module scavi3() {
+    for (p = COL3, v = [-1, 1]) translate([p[0], v * p[1], -0.01]) cylinder(d1 = COL3_D2 + 1.6, d2 = COL3_D2 + 0.8, h = COL3_INC + 0.01, $fn = 48);
     for (v = [0, 1]) mirror([0, v, 0]) translate([J1 - (INC ? 11 : FL_A + 1), 0, 0]) rotate([90, 0, 90]) linear_extrude(INC ? 22 : FL_A + FL_B + 2)
         polygon([[Y3A - 1, sotto_il_piatto(Y3A - 1)], [113, sotto_il_piatto(113)], [113, 30], [Y3A - 1, 30]]);
     // pezzi a incastro: sedi delle chiavette, aperte in alto, e sotto ognuna un foro da 3,2 mm nel fondo per
