@@ -29,6 +29,12 @@ di enti governativi e istituzionali. Lo script la fa rispettare in due modi.
         regolamenti collegati nel testo della Gazzetta ufficiale, che nel frattempo non siano stati modificati.
       - Catalogo: ogni disciplinare è ancora fra gli allegati della sua pagina del Ministero; gli allegati
         nuovi e un elenco ufficiale cambiato si segnalano come novità.
+      - Disciplinari nuovi, tolti o aggiornati (Alessandro, 25/11/2026: si controlla sempre). Nuovi: un prodotto
+        italiano registrato nel registro europeo che il catalogo non ha, un allegato nuovo nelle pagine del
+        Ministero, l'elenco ufficiale cambiato. Tolti: un file sparito dagli allegati o che risponde 404, un
+        prodotto che nel registro europeo non c'è più o non è più fra i registrati. Aggiornati: un file che
+        allo stesso indirizzo pesa diversamente dal «byte» dei dati (con --file), pubblicazioni nuove nel
+        registro europeo, una rettifica nuova. Il rapporto lo dice in ogni giro, anche quando non c'è nulla.
       - Sintesi europee (documento unico o scheda riepilogativa, e le loro rettifiche): il registro europeo
         eAmbrosia, letto con una richiesta, dice se per un prodotto sono uscite pubblicazioni nuove o se il
         numero di fascicolo è cambiato (novità: si rilancia scripts/aggiorna-documenti-unici.py); l'archivio
@@ -80,6 +86,7 @@ import urllib.request
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime
+from email.utils import parsedate_to_datetime
 from pathlib import Path
 
 RADICE = Path(__file__).resolve().parent.parent
@@ -152,6 +159,11 @@ muti = []         # collegamenti a cui il sito non ha risposto: non controllati 
 da_rivedere = []  # (dove, url, nota): PDF che la richiesta semplice non ha letto, da riprovare con il browser
 senza_browser = []  # perché il ripiego con il browser, se chiesto, non è stato possibile
 letti = set()     # indirizzi letti davvero in questo giro: --aggiorna-data ne annota il giorno
+pesi = {}         # indirizzo → (peso in byte, data del file) che il sito ha dichiarato rispondendo in questo giro
+# Disciplinari nuovi, tolti o aggiornati trovati dal giro (Alessandro, 25/11/2026: «controlla sempre»): le stesse
+# righe stanno anche in «novita» o, per un file sparito, in «errori», che decidono l'uscita.
+disciplinari = {"nuovi": [], "tolti": [], "aggiornati": []}
+confronti = {}    # che cosa il giro ha confrontato per dirlo: registro europeo, pagine del Ministero, peso dei file
 note_letture = []  # che cosa --aggiorna-data ha annotato e dove si ferma la data: va nel rapporto
 metodi = Counter()
 
@@ -278,6 +290,18 @@ def controlla_url(dove, url, deve_essere_pdf=True):
         errori.append(f"{dove}: l'indirizzo non finisce con .pdf")
 
 
+def controlla_peso(dove, dati):
+    """Il peso in byte del file, come lo dichiara il sito del Ministero: serve al controllo con la rete per
+    riconoscere un file aggiornato senza cambiare indirizzo, e deve tornare con i KB che la pagina mostra."""
+    byte, kb = dati.get("byte"), dati.get("kb")
+    if not isinstance(byte, int) or byte <= 0:
+        errori.append(f"{dove}: manca «byte», il peso esatto del file (l'intestazione Content-Length con cui il sito "
+                      f"del Ministero lo serve): senza, un file aggiornato allo stesso indirizzo non si riconosce")
+    elif isinstance(kb, int) and kb != max(1, round(byte / 1024)):
+        errori.append(f"{dove}: «kb» ({kb}) non torna con «byte» ({byte}, cioè {max(1, round(byte / 1024))} KB): quando il "
+                      f"file cambia si riscrivono tutti e due, con le pagine")
+
+
 def controlla_dati(documenti, catalogo):
     if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(documenti.get("verificato", ""))):
         errori.append("cucina_emergenza.yaml: «verificato» deve essere una data AAAA-MM-GG")
@@ -345,6 +369,7 @@ def controlla_dati(documenti, catalogo):
             controlla_url(dove, voce.get("url"))
             if not all(isinstance(voce.get(k), int) and voce.get(k) > 0 for k in ("pagine", "kb")):
                 errori.append(f"{dove}: mancano pagine o peso del PDF")
+            controlla_peso(dove, voce)
             if pagina_di(voce.get("url")) != della_classe:
                 errori.append(f"{dove}: l'allegato non è della pagina del Ministero della sua classe")
         elif formato == "docx":
@@ -363,6 +388,7 @@ def controlla_dati(documenti, catalogo):
             controlla_url(dove + ", " + str(extra.get("etichetta")), extra.get("url"))
             if not extra.get("etichetta") or not isinstance(extra.get("kb"), int):
                 errori.append(f"{dove}: documento aggiuntivo senza etichetta o peso")
+            controlla_peso(dove + ", " + str(extra.get("etichetta")), extra)
         controlla_sintesi(dove, voce, usati)
     for noto in catalogo.get("allegati_noti", []):
         if sito(noto.get("url")) != MASAF or not noto.get("motivo"):
@@ -517,9 +543,10 @@ motivo = {}    # sito → che cosa è successo all'ultima richiesta non utile
 scadenza = float("inf")  # istante oltre il quale non si fanno più richieste dirette (lo fissa main)
 
 
-def chiedi(url, intervallo=None, quanto=None, intestazioni=None, segui=True, tentativi=3):
+def chiedi(url, intervallo=None, quanto=None, intestazioni=None, segui=True, tentativi=3, ricevute=None):
     """Una richiesta GET educata: pausa fra due richieste allo stesso sito, nuovi tentativi con attese
-    crescenti. Restituisce (stato, contenuto, errore); stato 0 se non è arrivata nessuna risposta utile."""
+    crescenti. Restituisce (stato, contenuto, errore); stato 0 se non è arrivata nessuna risposta utile.
+    Se `ricevute` è un dizionario, vi finiscono le intestazioni della risposta, con i nomi in minuscolo."""
     host = sito(url)
     errore = ""
     for n in range(tentativi):
@@ -539,6 +566,9 @@ def chiedi(url, intervallo=None, quanto=None, intestazioni=None, segui=True, ten
             with apri(richiesta, timeout=TEMPO_MASSIMO) as risposta:
                 corpo = risposta.read(quanto) if quanto else risposta.read()
                 ultimo[host] = time.time()
+                if ricevute is not None:
+                    ricevute.clear()
+                    ricevute.update({nome.lower(): valore for nome, valore in risposta.headers.items()})
                 return risposta.status, corpo, ""
         except urllib.error.HTTPError as e:
             ultimo[host] = time.time()
@@ -567,16 +597,42 @@ def sembra_verifica(corpo):
     return bool(BLOCCO.search(re.sub(r"<[^>]+>", " ", testo)))
 
 
+def peso_del_file(stato, campi):
+    """Peso in byte del file intero secondo le intestazioni della risposta: il totale di Content-Range in una
+    risposta parziale (206), Content-Length in una intera (200). None se il sito non lo dice."""
+    if campi.get("content-encoding"):
+        return None  # sarebbe il peso della versione compressa, non del file
+    if stato == 206:
+        m = re.fullmatch(r"bytes\s+[0-9]+-[0-9]+/([0-9]+)", (campi.get("content-range") or "").strip())
+        return int(m.group(1)) if m else None
+    m = re.fullmatch(r"[0-9]+", (campi.get("content-length") or "").strip())
+    return int(m.group(0)) if stato == 200 and m else None
+
+
+def data_del_file(campi):
+    """Giorno «Last-Modified» dichiarato dal sito, AAAA-MM-GG; vuoto se manca o non si legge."""
+    try:
+        return parsedate_to_datetime(campi.get("last-modified") or "").date().isoformat()
+    except (TypeError, ValueError):
+        return ""
+
+
 def leggi_pdf(url):
     """('pdf', '') se all'indirizzo c'è un PDF, ('assente', …) con 404 o 410, ('protetto', …) se il sito risponde
-    con una pagina di verifica anti-bot o rifiuta la richiesta (403, 429), altrimenti che cosa è successo."""
-    stato, inizio, errore = chiedi(url, intervallo="bytes=0-7", quanto=8)
+    con una pagina di verifica anti-bot o rifiuta la richiesta (403, 429), altrimenti che cosa è successo.
+    Di un PDF letto annota in `pesi` il peso e la data che il sito dichiara: servono a riconoscere un file
+    aggiornato senza cambiare indirizzo."""
+    campi = {}
+    stato, inizio, errore = chiedi(url, intervallo="bytes=0-7", quanto=8, ricevute=campi)
     if stato in (200, 206) and not inizio.startswith(b"%PDF"):
         # qualche sito, a una richiesta parziale, risponde con una pagina: si richiede il file intero
-        stato, inizio, errore = chiedi(url, quanto=32768)
+        stato, inizio, errore = chiedi(url, quanto=32768, ricevute=campi)
     if stato in (404, 410):
         return "assente", f"HTTP {stato}"
     if stato in (200, 206) and inizio.startswith(b"%PDF"):
+        peso = peso_del_file(stato, campi)
+        if peso:
+            pesi[url] = (peso, data_del_file(campi))
         return "pdf", ""
     if stato in (200, 206):
         return ("protetto", ANTIBOT) if sembra_verifica(inizio) else ("altro", ALTRO)
@@ -718,6 +774,7 @@ def controlla_ministero(documenti, catalogo):
     attesi.setdefault(pagina_di(elenco["allegato"]), [])
     noti = {n["url"] for n in catalogo.get("allegati_noti", [])}
     del_catalogo = {c["pagina"].rsplit("/", 1)[1] for c in catalogo["classi"]} | {PAGINA_MODIFICHE}
+    confronti["pagine"] = [0, len(attesi)]  # pagine del Ministero lette, pagine da leggere
     for numero in sorted(attesi, key=int):
         trovati = allegati_della_pagina(numero)
         if trovati is None:
@@ -730,22 +787,36 @@ def controlla_ministero(documenti, catalogo):
             non_letti.append((MASAF, f"pagina {indirizzo}: mancano {len(mancanti)} allegati su {len(attesi[numero])} "
                                      f"(pagina letta male o riorganizzata)"))
             continue
+        confronti["pagine"][0] += 1
         for dove, url in mancanti:
             errori.append(f"{dove}: il file non è più fra gli allegati di {indirizzo} (il Ministero può averlo sostituito)")
+            if dove.startswith("disciplinare"):
+                disciplinari["tolti"].append(errori[-1])
         if numero == pagina_di(elenco["allegato"]) and elenco["allegato"] not in trovati:
             novita.append(f"il Ministero ha cambiato l'elenco dei prodotti DOP e IGP ({indirizzo}): va confrontato "
                           f"con il catalogo, che segue quello aggiornato al {elenco['aggiornato']}")
+            disciplinari["nuovi"].append(novita[-1])
         if numero in del_catalogo:
             usati = {url for _, url in attesi[numero]}
             for url, titolo in trovati.items():
                 if url not in usati and url not in noti:
                     novita.append(f"allegato nuovo «{titolo}» in {indirizzo}: {url}")
+                    # nella pagina delle modifiche temporanee è un cambiamento a un disciplinare che c'è già
+                    disciplinari["aggiornati" if numero == PAGINA_MODIFICHE else "nuovi"].append(novita[-1])
+
+
+def registrato(voce_del_registro):
+    """Vero se il registro europeo dà il prodotto per registrato e non tolto. Un prodotto cancellato resta
+    nell'elenco con lo stato «registered» e il segno «removedFlag»: il 24/11/2026 erano così 21 voci (16 vini
+    e 5 alimenti, nessun alimento italiano); lo stesso segno hanno le domande ritirate."""
+    return (voce_del_registro.get("status") or "").lower() == "registered" and not voce_del_registro.get("removedFlag")
 
 
 def controlla_registro_europeo(ue, voci):
     """Il registro eAmbrosia, letto con una richiesta sola, dice se per un prodotto sono uscite pubblicazioni che i
-    dati non hanno visto, se il numero di fascicolo è cambiato, se il prodotto non c'è più con quel nome. Sono
-    novità da valutare, non guasti: l'atto collegato resta quello che era."""
+    dati non hanno visto, se il numero di fascicolo è cambiato, se il prodotto non c'è più con quel nome o non è
+    più fra quelli registrati, e se l'Italia ha un prodotto registrato che il catalogo non ha. Sono novità da
+    valutare, non guasti: l'atto collegato resta quello che era."""
     host = sito(ue.REGISTRO)
     stato, corpo, errore = chiedi(ue.REGISTRO, intestazioni={"Accept": "application/json", "Accept-Language": "en"})
     registro = None
@@ -760,14 +831,21 @@ def controlla_registro_europeo(ue, voci):
                                 f"uscite pubblicazioni nuove"))
         return
     per_nome = ue.indice_per_nome(registro)
-    assenti, trovate = [], []
+    assenti, trovate, tolti, cambiati = [], [], [], []
+    del_catalogo = set()  # voci del registro che portano il nome di un prodotto del catalogo
     for voce in voci:
         dove = f"disciplinare «{voce['nome']}»"
+        for parte in ue.parti_del_nome(voce["nome"]):
+            del_catalogo.update(v.get("giIdentifier") for v in per_nome.get(parte, []))
         del_registro = ue.abbina(voce, per_nome)
         if del_registro is None:
             assenti.append(f"{dove}: nel registro europeo non c'è più un solo prodotto con questo nome (rinominato, "
                            f"cancellato o doppio): va guardato a mano")
             continue
+        if not registrato(del_registro):
+            come = "è segnato come tolto" if del_registro.get("removedFlag") else f"ha lo stato «{del_registro.get('status')}»"
+            tolti.append(f"{dove}: nel registro europeo non è più fra i prodotti registrati ({come}): va guardato a mano, "
+                         f"e se la registrazione è stata cancellata la voce si toglie dal catalogo")
         if "registro_ue" not in voce:
             trovate.append(f"{dove}: mai cercato nel registro europeo: `python3 scripts/aggiorna-documenti-unici.py`")
             continue
@@ -776,15 +854,30 @@ def controlla_registro_europeo(ue, voci):
                            f"{voce.get('fascicolo')}")
         if ue.impronta_del_registro(del_registro) != voce["registro_ue"]:
             ultima = giorno(ue.ultima_pubblicazione(del_registro))
-            trovate.append(f"{dove}: il registro europeo cita pubblicazioni diverse da quelle viste"
-                           + (f" (la più recente con la data è del {ultima})" if ultima else "")
-                           + ": la sintesi europea può essere cambiata")
+            cambiati.append(f"{dove}: il registro europeo cita pubblicazioni diverse da quelle viste"
+                            + (f" (la più recente con la data è del {ultima})" if ultima else "")
+                            + ": la sintesi europea può essere cambiata")
     if len(assenti) * 2 > len(voci):
         # più della metà dei prodotti introvabile: è l'elenco che è stato letto male o ha cambiato forma
         non_letti.append((host, f"registro europeo eAmbrosia: {len(assenti)} prodotti su {len(voci)} non si trovano "
                                 f"(elenco letto male o cambiato)"))
         return
-    novita.extend(assenti + trovate)
+    # prodotti registrati per l'Italia che non portano il nome di nessuna voce del catalogo: disciplinari nuovi
+    nuovi = []
+    for v in registro:
+        if not registrato(v) or v.get("giIdentifier") in del_catalogo:
+            continue
+        nome = " / ".join(n.strip() for n in v.get("protectedNames") or [] if (n or "").strip()) or "senza nome"
+        sigla = {"PDO": "DOP", "PGI": "IGP"}.get(v.get("giType"), v.get("giType") or "tipo non indicato")
+        dal = giorno(v.get("euProtectionDate"))
+        nuovi.append(f"prodotto nuovo nel registro europeo: «{nome}» ({sigla}, fascicolo {v.get('fileNumber')}"
+                     + (f", protezione europea dal {dal}" if dal else "") + "): non è nel catalogo, va aggiunto con il "
+                     "disciplinare che il Ministero pubblica nella pagina della sua classe")
+    confronti["registro"] = sum(1 for v in registro if registrato(v))
+    novita.extend(assenti + tolti + trovate + cambiati + nuovi)
+    disciplinari["tolti"] += assenti + tolti
+    disciplinari["aggiornati"] += cambiati
+    disciplinari["nuovi"] += nuovi
 
 
 def controlla_archivio_delle_sintesi(ue, voci):
@@ -792,6 +885,7 @@ def controlla_archivio_delle_sintesi(ue, voci):
     come sintesi o come rettifica esiste ancora e se ha una rettifica che i dati non conoscono. EUR-Lex non si
     interroga: alle richieste di un programma risponde 202 senza contenuto, per 288 atti come per uno."""
     attesi, note = {}, {}
+    non_letti_prima = len(non_letti)
     for voce in voci:
         sintesi = voce.get("sintesi")
         if not sintesi:
@@ -842,6 +936,7 @@ def controlla_archivio_delle_sintesi(ue, voci):
                 if nome and numero not in conosciute:
                     novita.append(f"disciplinare «{nome}»: l'archivio dell'UE ha una rettifica della sintesi europea che i "
                                   f"dati non conoscono ({numero}" + (f", del {giorno(quando)}" if giorno(quando) else "") + ")")
+                    disciplinari["aggiornati"].append(novita[-1])
         # la controprova: le rettifiche che i dati conoscono devono tornare nella risposta. Se mancano, la
         # risposta è incompleta o la domanda non funziona più, e «nessuna rettifica nuova» non vorrebbe dire nulla
         perse = sorted((note[atto][0], numero, atto) for atto in gruppo for numero in note[atto][1]
@@ -853,6 +948,7 @@ def controlla_archivio_delle_sintesi(ue, voci):
                                         f"se ci sono rettifiche nuove. Se si ripete, e l'archivio ha davvero tolto il "
                                         f"legame, la rettifica si toglie dai dati solo così: "
                                         f"`python3 scripts/aggiorna-documenti-unici.py --nome \"{nome}\"`"))
+    confronti["archivio"] = len(non_letti) == non_letti_prima  # letto tutto: «nessuna rettifica nuova» vale
 
 
 def controlla_europa(catalogo):
@@ -899,15 +995,21 @@ def controlla_rete(documenti, catalogo, anche_file):
         controlla_file_del_catalogo(catalogo)
 
 
-def controlla_file_del_catalogo(catalogo):
-    """Chiede l'inizio di ogni PDF del catalogo, CONTEMPORANEE alla volta. Dopo SOGLIA_FERMO file di fila senza
-    risposta utile si ferma: gli altri restano «non controllati» e il rapporto lo dice."""
+def file_del_catalogo(catalogo):
+    """I PDF del Ministero che il catalogo collega: (dove, indirizzo, peso in byte scritto nei dati)."""
     voci = []
     for voce in catalogo["voci"]:
         if voce["formato"] == "pdf":
-            voci.append((f"disciplinare «{voce['nome']}»", voce["url"]))
+            voci.append((f"disciplinare «{voce['nome']}»", voce["url"], voce.get("byte")))
         for extra in voce.get("extra", []):
-            voci.append((f"disciplinare «{voce['nome']}», {extra['etichetta']}", extra["url"]))
+            voci.append((f"disciplinare «{voce['nome']}», {extra['etichetta']}", extra["url"], extra.get("byte")))
+    return voci
+
+
+def controlla_file_del_catalogo(catalogo):
+    """Chiede l'inizio di ogni PDF del catalogo, CONTEMPORANEE alla volta. Dopo SOGLIA_FERMO file di fila senza
+    risposta utile si ferma: gli altri restano «non controllati» e il rapporto lo dice."""
+    voci = [(dove, url) for dove, url, _ in file_del_catalogo(catalogo)]
     fermo = threading.Event()
     perche = []  # motivo dell'ultima lettura non riuscita: lo scrive solo il ciclo qui sotto
 
@@ -928,6 +1030,7 @@ def controlla_file_del_catalogo(catalogo):
                 senza_risposta = 0
             elif esito == "assente":
                 errori.append(f"{dove}: {nota}: {url}")
+                disciplinari["tolti"].append(errori[-1])
                 senza_risposta = 0
             else:
                 da_rivedere.append((dove, url, nota))
@@ -936,6 +1039,25 @@ def controlla_file_del_catalogo(catalogo):
                     perche.append(nota)
                 if senza_risposta >= SOGLIA_FERMO:
                     fermo.set()
+
+
+def confronta_pesi(catalogo):
+    """Un file aggiornato senza cambiare indirizzo: il sito ne dichiara un peso diverso dal «byte» dei dati. Si
+    chiama dopo il ripiego con il browser, così vale anche per i file che ha letto lui. Un file sostituito con
+    uno dello stesso peso, al byte, non si vede da qui: di una modifica vera al disciplinare parla anche il
+    registro europeo, che cita una pubblicazione in più."""
+    voci = file_del_catalogo(catalogo)
+    confronti["file"] = [0, len(voci)]  # file di cui si è confrontato il peso, file del catalogo
+    for dove, url, atteso in voci:
+        peso, del_giorno = pesi.get(url, (None, ""))
+        if not peso or not isinstance(atteso, int):
+            continue
+        confronti["file"][0] += 1
+        if peso != atteso:
+            novita.append(f"{dove}: il file allo stesso indirizzo è cambiato: nei dati pesa {atteso} byte, ora {peso}"
+                          + (f" (il sito del Ministero lo data al {giorno(del_giorno)})" if giorno(del_giorno) else "")
+                          + f". Va riaperto e riletto, e nei dati si riscrivono pagine, kb e byte: {url}")
+            disciplinari["aggiornati"].append(novita[-1])
 
 
 def riprova_con_browser(voci):
@@ -1012,6 +1134,7 @@ def riprova_con_browser(voci):
                         falliti[sito(url)] += 1
                         continue
                 esiti[url] = ("pdf", "")
+                pesi[url] = (len(risposta.body()), "")  # il browser riceve il file intero
                 falliti[sito(url)] = 0
             except Exception as e:
                 # di un errore di Playwright serve la prima riga: le altre sono il registro delle chiamate
@@ -1047,6 +1170,8 @@ def chiudi_da_rivedere(con_browser):
             letti.add(url)
         elif esito == "assente":
             errori.append(f"{dove}: {nota_browser}: {url}")
+            if dove.startswith("disciplinare"):  # un file del catalogo che non c'è più
+                disciplinari["tolti"].append(errori[-1])
         elif nota == "EUR-Lex":
             # il documento esiste nell'archivio dell'UE e l'indirizzo di EUR-Lex risponde: di più una
             # richiesta automatica non ottiene
@@ -1117,6 +1242,67 @@ def elenco_per_sito(voci):
     return righe
 
 
+def righe_dei_disciplinari(anche_file):
+    """Che cosa il giro ha trovato di nuovo, tolto o aggiornato fra i disciplinari, e con quali confronti: la
+    prima riga c'è in ogni rapporto fatto con la rete, anche quando non è cambiato nulla (Alessandro,
+    25/11/2026: «controlla sempre se ci sono nuovi disciplinari, se vengono tolti o aggiornati»). «Nessuno» si
+    scrive solo se i confronti di quella voce sono stati fatti per intero: altrimenti la riga dice che cosa manca."""
+    def prodotti(voci):
+        """Quanti disciplinari o allegati diversi: dello stesso disciplinare possono parlare più righe (file
+        sparito dagli allegati, 404, registro)."""
+        diversi = set()
+        for voce in voci:
+            nome = re.match(r"disciplinare «[^»]+»", voce)
+            diversi.add(nome.group(0) if nome else voce)
+        return len(diversi)
+
+    def esito(chiave, mancano):
+        voci = disciplinari[chiave]
+        if mancano:
+            return (f"{prodotti(voci)}, con il confronto incompleto" if voci else "confronto incompleto") + f" ({', '.join(mancano)})"
+        return str(prodotti(voci)) if voci else "nessuno"
+
+    lette, tutte = confronti.get("pagine", [0, 0])
+    senza_registro = [] if "registro" in confronti else ["registro europeo non letto"]
+    senza_pagine = ([] if "pagine" in confronti and lette == tutte else
+                    [f"{tutte - lette} pagine del Ministero su {tutte} non lette" if "pagine" in confronti
+                     else "pagine del Ministero non lette"])
+    senza_archivio = [] if confronti.get("archivio") else ["archivio dell'UE non letto per intero"]
+    pesati, file = confronti.get("file", [0, 0])
+    if not anche_file:
+        senza_peso = ["peso dei file non confrontato: giro senza --file"]
+    else:
+        senza_peso = [] if "file" in confronti and pesati == file else [f"peso confrontato per {pesati} file su {file}"]
+    riga = (f"Disciplinari nuovi: {esito('nuovi', senza_registro + senza_pagine)}. "
+            f"Tolti: {esito('tolti', senza_registro + senza_pagine)}. "
+            f"Aggiornati: {esito('aggiornati', senza_registro + senza_archivio + senza_peso)}.")
+    fatti = ([f"{confronti['registro']} prodotti italiani registrati nel registro europeo"] if "registro" in confronti else [])
+    if "pagine" in confronti:
+        fatti.append(f"allegati di {lette} pagine del Ministero su {tutte}")
+    if anche_file and "file" in confronti:
+        fatti.append(f"peso di {pesati} file del Ministero su {file}")
+    righe = [riga + (f" Confrontati: {'; '.join(fatti)}." if fatti else ""), ""]
+    if not any(disciplinari.values()):
+        return righe
+    righe += ["### Disciplinari nuovi, tolti o aggiornati", ""]
+    for titolo, chiave in (
+            ("Nuovi (prodotti registrati che il catalogo non ha, allegati comparsi nelle pagine del Ministero)", "nuovi"),
+            ("Tolti (file spariti, prodotti che nel registro europeo non si trovano più o non sono più registrati)", "tolti"),
+            ("Aggiornati (file cambiati allo stesso indirizzo, modifiche temporanee, pubblicazioni o rettifiche nuove)", "aggiornati")):
+        if disciplinari[chiave]:
+            righe += [f"{titolo}:", ""] + [f"- {voce}" for voce in disciplinari[chiave]] + [""]
+    righe += ["Come si lavorano: un prodotto nuovo si aggiunge a `data/disciplinari.json` con il PDF che il Ministero",
+              "pubblica nella pagina della sua classe (nome, tipo, regioni, classe, url, formato, pagine, kb, byte), poi",
+              "`python3 scripts/aggiorna-documenti-unici.py --nome \"Prodotto\"` cerca la sua sintesi europea; se il",
+              "Ministero non ha ancora pubblicato il disciplinare, la voce entra senza file (`formato` vuoto) e rimanda",
+              "alla pagina della classe. Di un file aggiornato si riapre il PDF e nei dati si riscrivono pagine, kb e byte.",
+              "Un file sostituito compare due volte: fra i tolti il vecchio indirizzo, fra i nuovi l'allegato comparso;",
+              "nei dati cambia l'indirizzo, preso dalla pagina del Ministero. Una voce si toglie dal catalogo solo se la",
+              "registrazione è stata cancellata o se il Ministero non pubblica più il disciplinare. Ogni indirizzo si",
+              "verifica con una richiesta vera, mai indovinato.", ""]
+    return righe
+
+
 def rapporto(documenti, catalogo, con_rete, anche_file, rete_saltata=False):
     n_doc = len(tutti_i_documenti(documenti))
     n_pdf = sum(1 for v in catalogo["voci"] if v["formato"] == "pdf")
@@ -1136,6 +1322,8 @@ def rapporto(documenti, catalogo, con_rete, anche_file, rete_saltata=False):
         righe.append("Ripiego con il browser non disponibile in questo giro: " + "; ".join(senza_browser) + ".")
     righe += note_letture
     righe.append("")
+    if con_rete:
+        righe += righe_dei_disciplinari(anche_file)
     if errori:
         righe += ["### Collegamenti rotti o dati sbagliati", ""] + [f"- {e}" for e in errori] + [""]
     if non_letti:
@@ -1162,8 +1350,10 @@ def rapporto(documenti, catalogo, con_rete, anche_file, rete_saltata=False):
                   "più tempo. Poi una pull request con quel file e, se la data è cambiata, con i due file di dati. Se nel",
                   "rapporto non resta altro da lavorare, la issue si chiude a mano: il giro del mese dopo ne apre una nuova",
                   "solo se serve.", ""]
-    if novita:
-        righe += ["### Novità sulle fonti, da valutare", ""] + [f"- {n}" for n in novita] + [""]
+    gia_dette = {voce for voci in disciplinari.values() for voce in voci}  # stanno nella sezione dei disciplinari
+    altre = [n for n in novita if n not in gia_dette]
+    if altre:
+        righe += ["### Novità sulle fonti, da valutare", ""] + [f"- {n}" for n in altre] + [""]
     if errori or non_letti or novita:
         righe += ["Come si lavora: l'indirizzo nuovo si prende dalla pagina dell'ente e si verifica con una richiesta",
                   "vera, mai indovinato (regola sui guasti); poi si aggiornano `data/cucina_emergenza.yaml` o",
@@ -1328,6 +1518,8 @@ def main():
         inizio = oggi_in_italia().isoformat()  # le letture portano il giorno in cui il giro è cominciato
         controlla_rete(documenti, catalogo, args.file)
         chiudi_da_rivedere(args.browser)
+        if args.file:
+            confronta_pesi(catalogo)
         segnala_controllo_mancato(collegamenti_da_aprire(documenti, catalogo, args.file))
         if args.aggiorna_data and not errori and not non_letti:
             # un collegamento rotto o una fonte non letta: nessuna lettura si annota, la data resta com'è

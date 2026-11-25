@@ -17,6 +17,16 @@
 # secondi per richiesta e ha un tempo massimo (35 minuti di richieste, 12 di
 # browser); ciò che non fa in tempo a leggere lo dichiara «non controllato»,
 # non lo dà per buono. Un giro normale dura da 4 a 7 minuti.
+# Disciplinari nuovi, tolti e aggiornati (Alessandro, 25/11/2026: «controlla
+# sempre»): ogni giro cerca i prodotti italiani registrati nel registro europeo
+# che il catalogo non ha, quelli del catalogo che non sono più registrati, gli
+# allegati nuovi o spariti nelle pagine del Ministero e i file che allo stesso
+# indirizzo pesano diversamente dal «byte» dei dati (aggiornati senza cambiare
+# indirizzo). Il rapporto lo dice in ogni giro, anche quando non c'è nulla, e
+# scrive «nessuno» solo se il confronto è stato fatto per intero. Un file
+# sparito è un collegamento rotto (run rosso); un prodotto cancellato dal
+# registro o un file aggiornato sono novità (run verde) e non fermano la data
+# di verifica, che dice solo quando i collegamenti sono stati riletti.
 # Letture e data: con --aggiorna-data lo script annota in
 # .manuale/cucina-emergenza-letture.json il giorno dell'ultima lettura riuscita
 # di ogni collegamento, da qualunque rete, e porta «verificato» dei due file di
