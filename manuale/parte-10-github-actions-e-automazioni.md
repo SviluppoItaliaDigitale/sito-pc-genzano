@@ -284,6 +284,8 @@ Dopo i tre script, lo step di commit:
 
 ### 10.9-bis — `controllo-cucina-emergenza.yml` — Collegamenti della sezione «Cucina in emergenza»
 
+**Il filtro del catalogo ha la sua prova (25/11/2026).** Il controllo dei collegamenti non dice se la ricerca del catalogo trova ciò che una persona cerca: quel giorno, con tutto verde, «olio» trovava 7 oli su 51, «salumi» nessun prodotto, «roma» l'Emilia-Romagna, e dal telefono dopo la scelta della regione non si vedeva nessuna reazione. `python3 scripts/prova-filtro-disciplinari.py public` usa il filtro con Chromium, su computer, telefono e tavoletta, e confronta l'elenco con `data/disciplinari.json`: ogni prodotto cercato per nome, ogni parola chiave, ogni voce dei due menu, più i casi nati dall'uso («olio di oliva», «prodotti tipici dell'Umbria», le frecce della tastiera sui menu); è bloccante sulle pull request che toccano il catalogo, i suoi dati, il tema o la configurazione (`validate-pr.yml`, job dei fogli di stampa), e con `--dal-vivo` prova la pagina pubblicata dopo un deploy. Le parole di ricerca stanno nei dati (`parole` di classi e voci, `alias_regioni`); come cerca la casella è scritto in testa a `js/disciplinari.js`.
+
 **Trigger:** il 5 di ogni mese alle 05:23 UTC (06:23 italiane d'inverno, 07:23 d'estate), esecuzione manuale.
 
 **Regola della sezione** (Alessandro, 24/11/2026): `/cucina-emergenza/` e `/cucina-emergenza/disciplinari/` collegano solo file PDF pubblicati sui siti di enti governativi e istituzionali, verificati; nessuna copia dei file sul nostro sito. Dal 25/11/2026 il catalogo collega anche, per i prodotti DOP e IGP, la sintesi europea del disciplinare (il documento unico della Gazzetta ufficiale dell'Unione europea, PDF su EUR-Lex), con le eventuali rettifiche.

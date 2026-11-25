@@ -1,7 +1,23 @@
-/* Catalogo dei disciplinari DOP, IGP e STG (/cucina-emergenza/disciplinari/): ricerca per nome,
-   regione e tipo di prodotto. Senza JavaScript il catalogo resta intero, diviso per tipo di prodotto.
+/* Catalogo dei disciplinari DOP, IGP e STG (/cucina-emergenza/disciplinari/): ricerca per parole, regione
+   e tipo di prodotto. Senza JavaScript il catalogo resta intero, diviso per tipo di prodotto.
+
+   Come cerca la casella (dal 25/11/2026). Ogni parola scritta deve trovarsi nel prodotto, in uno di due modi:
+   - all'inizio di una parola di data-p: nome del prodotto, parole chiave del suo tipo («formaggi», «olio»,
+     «legumi»: data/disciplinari.json, campo «parole») e prima parola della regione;
+   - come parola intera di data-e: sigla (DOP, IGP, STG) e nome della regione.
+   Mai un pezzo in mezzo alla parola: prima «roma» trovava tutta l'Emilia-Romagna, «pane» le Valli Trapanesi
+   e «olio» sette oli su cinquantuno. Le parole di almeno sei lettere si cercano senza la vocale finale, così
+   «lenticchie» trova Lenticchia e «Amatrice» l'Amatriciana. Articoli, preposizioni e parole generiche
+   («prodotti», «tipici») non contano: l'elenco VUOTE qui sotto lo legge anche il controllo dei dati
+   (scripts/check-cucina-emergenza.py), perché una parola chiave uguale a una parola vuota non si troverebbe mai.
+
+   Dal telefono il risultato sta sotto il riquadro: dopo una scelta dai menu la pagina scende quel tanto
+   che basta a mostrare quanti prodotti restano e il pulsante che porta all'elenco; il tasto di invio della
+   tastiera porta all'elenco. Il fuoco si sposta solo con il pulsante o con l'invio, mai da solo.
+
    La scelta resta nell'indirizzo (?q=…&regione=…&tipo=…), così un elenco filtrato si può condividere.
-   Sintassi entro ECMAScript 2018 (scripts/check-sintassi-js.cjs). */
+   Sintassi entro ECMAScript 2018 (scripts/check-sintassi-js.cjs). Prova nel browser, bloccante sulle pull
+   request: scripts/prova-filtro-disciplinari.py. */
 (function () {
   'use strict';
   var filtri = document.querySelector('[data-disc="filtri"]');
@@ -10,14 +26,30 @@
   var regione = document.getElementById('disc-regione');
   var gruppo = document.getElementById('disc-gruppo');
   var conteggio = filtri.querySelector('[data-disc="conteggio"]');
+  var azioni = filtri.querySelector('[data-disc="azioni"]');
+  var vai = filtri.querySelector('[data-disc="vai"]');
   var azzera = filtri.querySelector('[data-disc="azzera"]');
+  var trovati = document.querySelector('[data-disc="trovati"]');
   var nessuno = document.querySelector('[data-disc="nessuno"]');
   var blocchi = Array.prototype.slice.call(document.querySelectorAll('[data-disc-gruppo]'));
   if (!cerca || !regione || !gruppo || !conteggio || !blocchi.length) return;
 
+  var VUOTE = {};
+  ('a ad agli ai al all alla alle allo col con d da dai dal dalla dalle de degli dei del dell della delle dello di ' +
+   'e ed gli i il in l la le lo nei nel nella o per su sul sulla un una uno ' +
+   'prodotti prodotto tipici tipico tipica tipiche').split(' ').forEach(function (p) { VUOTE[p] = true; });
+
   function norm(t) {
     return String(t || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
       .replace(/[^a-z0-9]+/g, ' ').trim();
+  }
+  function parole(t) {
+    var n = norm(t);
+    return n ? n.split(' ') : [];
+  }
+  /* «lenticchie» e «lenticchia», «amatrice» e «amatriciana»: sotto le sei lettere no, o «pesce» troverebbe le pesche. */
+  function radice(p) {
+    return p.length >= 6 ? p.replace(/[aeiou]$/, '') : p;
   }
 
   var voci = [];
@@ -27,14 +59,31 @@
       voci.push({
         li: li,
         gruppo: id,
-        testo: norm(li.getAttribute('data-t')),
+        inizi: parole(li.getAttribute('data-p')),
+        intere: parole(li.getAttribute('data-e')),
         regioni: (li.getAttribute('data-r') || '').split('|')
       });
     });
   });
 
+  function contiene(voce, parola) {
+    if (voce.intere.indexOf(parola) >= 0) return true;
+    var r = radice(parola);
+    return voce.inizi.some(function (p) { return p.indexOf(r) === 0; });
+  }
+
+  /* Le parole da cercare, senza quelle vuote: «prodotti tipici» da solo non restringe l'elenco. */
+  function chieste() {
+    return parole(cerca.value).filter(function (p) { return !VUOTE[p]; });
+  }
+
   function haOpzione(select, valore) {
     return Array.prototype.some.call(select.options, function (o) { return o.value === valore; });
+  }
+  /* «Lazio (30)» → «Lazio». */
+  function scelta(select) {
+    var o = select.options[select.selectedIndex];
+    return o ? o.text.replace(/\s*\(\d+\)\s*$/, '') : '';
   }
 
   /* Titolo del gruppo (h2 prima del blocco) e sua voce nell'indice «In questa pagina». */
@@ -56,9 +105,12 @@
      screen reader sente un solo annuncio. Al caricamento («subito») si scrive prima di mostrare i filtri,
      perché la pagina non parli da sola. */
   var attesa = null;
-  function annuncia(n, subito) {
+  function annuncia(n, subito, generiche) {
     var tot = voci.length;
-    var testo = n === tot ? tot + ' prodotti.' : n + (n === 1 ? ' prodotto' : ' prodotti') + ' su ' + tot + '.';
+    var testo = !n ? 'Nessun prodotto per questa ricerca.'
+      : n === tot ? tot + ' prodotti.'
+        : n + (n === 1 ? ' prodotto' : ' prodotti') + ' su ' + tot + '.';
+    if (generiche) testo += ' Le parole scritte non restringono l’elenco.';
     window.clearTimeout(attesa);
     if (subito) { conteggio.textContent = testo; return; }
     attesa = window.setTimeout(function () { conteggio.textContent = testo; }, 250);
@@ -77,22 +129,94 @@
   }
 
   function filtra(subito) {
-    var parole = norm(cerca.value).split(' ').filter(Boolean);
+    var scritto = cerca.value.trim().replace(/\s+/g, ' ');
+    var cercate = chieste();
     var r = regione.value;
     var g = gruppo.value;
+    var attivo = !!(cercate.length || r || g);
+    /* Nella casella ci sono solo articoli, preposizioni o parole generiche («prodotti tipici»): l'elenco
+       resta intero, e la pagina lo dice invece di tacere. */
+    var generiche = !!scritto && !attivo;
     var n = 0;
     var vivi = {};
     voci.forEach(function (v) {
       var si = (!g || v.gruppo === g) && (!r || v.regioni.indexOf(r) >= 0) &&
-        parole.every(function (p) { return v.testo.indexOf(p) >= 0; });
+        cercate.every(function (p) { return contiene(v, p); });
       v.li.hidden = !si;
       if (si) { n++; vivi[v.gruppo] = true; }
     });
     blocchi.forEach(function (blocco) { mostraGruppo(blocco, !!vivi[blocco.getAttribute('data-disc-gruppo')]); });
     if (nessuno) nessuno.hidden = n > 0;
-    if (azzera) azzera.hidden = !(parole.length || r || g);
-    annuncia(n, subito === true);
+    if (azzera) azzera.hidden = !(attivo || scritto);
+    if (trovati) {
+      var pezzi = [];
+      if (generiche) {
+        pezzi.push('Le parole scritte («' + scritto + '») non restringono l’elenco: qui sotto ci sono tutti i ' +
+          'prodotti. Scrivi il nome di un prodotto o di un luogo, oppure un tipo di prodotto.');
+      } else {
+        pezzi.push(n === 1 ? '1 prodotto trovato.' : n + ' prodotti trovati.');
+        if (cercate.length) pezzi.push('Parole cercate: ' + scritto + '.');
+        if (r) pezzi.push('Regione: ' + scelta(regione) + '.');
+        if (g) pezzi.push('Tipo di prodotto: ' + scelta(gruppo) + '.');
+      }
+      trovati.textContent = pezzi.join(' ');
+      trovati.hidden = !((attivo || generiche) && n > 0);
+    }
+    if (vai) {
+      vai.textContent = n === 1 ? 'Vai al prodotto trovato' : 'Vai ai ' + n + ' prodotti trovati';
+      vai.hidden = !(attivo && n > 0);
+    }
+    annuncia(n, subito === true, generiche);
     scriviIndirizzo();
+  }
+
+  /* Dove comincia ciò che copre il fondo dello schermo sopra la riga «riga»: la barra di navigazione del
+     telefono, la striscia dei cookie alla prima visita e i pulsanti flottanti (SOS 112, accessibilità,
+     assistente, lingua, torna su). Conta ciò che sta nella metà bassa dello schermo e nella stessa fascia
+     orizzontale della riga: un pulsante flottante nel margine, a schermo largo, non copre niente. */
+  function fondoVisibile(riga) {
+    var alto = window.innerHeight;
+    var fondo = alto;
+    ['.bottom-nav', '#cookie-banner', '#sos-button', '#a11yToolbarOpen', '#assistente-fab', '#lang-toggle',
+      '#backToTop'].forEach(function (sel) {
+      var el = document.querySelector(sel);
+      if (!el || !el.getClientRects().length || window.getComputedStyle(el).visibility === 'hidden') return;
+      var b = el.getBoundingClientRect();
+      if (b.height > 0 && b.top > alto / 2 && b.top < fondo && b.left < riga.right && b.right > riga.left) fondo = b.top;
+    });
+    return fondo;
+  }
+  /* La pagina scorre come vuole il sito (dolce, se chi legge non ha chiesto meno movimento); di colpo con
+     «Pausa animazioni» del pannello accessibilità o con il movimento ridotto del sistema. */
+  function fermo() {
+    var c = document.documentElement.classList;
+    return c.contains('a11y-pause-anim') || c.contains('a11y-pause-animations') ||
+      !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  }
+  /* I browser che non conoscono le opzioni di scorrimento (Safari fino alla 15.3) non conoscono nemmeno lo
+     scorrimento dolce: lì basta la forma di sempre. */
+  function scorri(quanto, diColpo) {
+    if (!('scrollBehavior' in document.documentElement.style)) { window.scrollBy(0, quanto); return; }
+    try {
+      window.scrollBy({ top: quanto, left: 0, behavior: (diColpo || fermo()) ? 'instant' : 'auto' });
+    } catch (e) { window.scrollBy(0, quanto); }
+  }
+  /* Dopo una scelta dai menu: se il conteggio e i pulsanti sono finiti sotto il fondo dello schermo, la
+     pagina scende quel tanto che basta a mostrarli, senza far uscire dall'alto il menu appena usato.
+     Il fuoco resta sul menu. Di colpo, non in modo dolce: da tastiera il menu cambia a ogni freccia, e una
+     misura presa a metà di uno scorrimento farebbe oscillare la pagina. */
+  function scopriEsito(menu) {
+    var r = (azioni || conteggio).getBoundingClientRect();
+    var fondo = fondoVisibile(r);
+    var spazio = menu.getBoundingClientRect().top - 8;
+    if (r.bottom > fondo - 8 && spazio > 0) scorri(Math.min(r.bottom - fondo + 16, spazio), true);
+  }
+  /* Con il pulsante o con l'invio: l'elenco in cima allo schermo, sotto la testata, e il fuoco sulla riga
+     che dice quanti prodotti ci sono. */
+  function vaiA(el) {
+    if (!el || el.hidden) return;
+    scorri(el.getBoundingClientRect().top - 110);
+    try { el.focus({ preventScroll: true }); } catch (e) { el.focus(); }
   }
 
   if (window.URLSearchParams) {
@@ -103,8 +227,21 @@
   }
 
   cerca.addEventListener('input', function () { filtra(); });
-  regione.addEventListener('change', function () { filtra(); });
-  gruppo.addEventListener('change', function () { filtra(); });
+  cerca.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' || e.isComposing || e.keyCode === 229) return;
+    e.preventDefault();
+    filtra();
+    if (trovati && !trovati.hidden) vaiA(trovati);
+    else if (nessuno && !nessuno.hidden) vaiA(nessuno);
+  });
+  regione.addEventListener('change', function () { filtra(); scopriEsito(regione); });
+  gruppo.addEventListener('change', function () { filtra(); scopriEsito(gruppo); });
+  if (vai) {
+    vai.addEventListener('click', function (e) {
+      e.preventDefault();
+      vaiA(trovati);
+    });
+  }
   if (azzera) {
     azzera.addEventListener('click', function () {
       cerca.value = '';

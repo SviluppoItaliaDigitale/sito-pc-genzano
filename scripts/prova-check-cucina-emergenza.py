@@ -57,6 +57,7 @@ from pathlib import Path
 RADICE = Path(__file__).resolve().parent.parent
 SCRIPT = "check-cucina-emergenza.py"
 SCRIPT_SINTESI = "aggiorna-documenti-unici.py"
+FILTRO = Path("themes") / "flavour-pcgenzano" / "static" / "js" / "disciplinari.js"
 esiti = []
 # Che cosa rispondono il registro europeo e l'archivio dell'UE finti: lo cambia ogni prova.
 FINTO = {"registro": [], "stato_registro": 200, "stato_archivio": 200, "fuori_dal_gruppo": set(), "inesistenti": set(),
@@ -1670,6 +1671,9 @@ def main():
         shutil.copytree(RADICE / "data", base / "data",
                         ignore=lambda cartella, nomi: [n for n in nomi if n not in ("cucina_emergenza.yaml", "disciplinari.json")])
         shutil.copytree(costruite, base / "public" / "cucina-emergenza")
+        # lo script della pagina del catalogo: il controllo ci legge le parole che la ricerca ignora
+        (base / FILTRO).parent.mkdir(parents=True)
+        shutil.copy(RADICE / FILTRO, base / FILTRO)
 
         r = lancia(base, "--eta", "36500")
         esiti.append(r.returncode == 0)
@@ -1736,6 +1740,69 @@ def main():
 
         def aggiuntivo_senza_peso(dati):
             del next(v for v in dati["voci"] if v.get("extra"))["extra"][0]["byte"]
+
+        # le parole di ricerca del catalogo: lo script della pagina le confronta minuscole e senza accenti
+        def parola_con_maiuscola(dati):
+            dati["classi"][0]["parole"] = ["Carne"]
+
+        def parola_con_accento(dati):
+            dati["voci"][0]["parole"] = ["specialità"]
+
+        def parola_ripetuta(dati):
+            dati["voci"][0]["parole"] = ["carne", "carne"]
+
+        def altro_nome_di_regione_ignota(dati):
+            dati["alias_regioni"] = {"Atlantide": ["Isola"]}
+
+        def nota_vuota(dati):
+            dati["gruppi"][0]["nota"] = " "
+
+        def parole_nulle(dati):
+            dati["voci"][0]["parole"] = None
+
+        def parola_che_la_ricerca_ignora(dati):
+            dati["classi"][0]["parole"] = ["carne", "prodotti"]
+
+        def nome_di_due_regioni(dati):
+            dati["alias_regioni"]["Provincia autonoma di Bolzano"] = ["Alto Adige", "Trentino"]
+
+        def altro_nome_uguale_a_una_regione(dati):
+            dati["alias_regioni"]["Provincia autonoma di Trento"] = ["Trentino", "Lazio"]
+
+        def altro_nome_che_ripete_il_suo(dati):
+            dati["alias_regioni"]["Provincia autonoma di Trento"] = ["Trentino", "provincia autonoma di Trento"]
+
+        def altro_nome_senza_lettere(dati):
+            dati["alias_regioni"]["Provincia autonoma di Trento"] = ["Trentino", "—"]
+
+        def senza_elenco_delle_parole_ignorate(caso):
+            testo = (caso / FILTRO).read_text(encoding="utf-8")
+            if "var VUOTE = {};" not in testo:
+                sys.exit("prova non eseguibile: nello script del catalogo non c'è più «var VUOTE = {};»")
+            (caso / FILTRO).write_text(testo.replace("var VUOTE = {};", "var IGNORATE = {};"), encoding="utf-8")
+
+        def senza_script_del_catalogo(caso):
+            (caso / FILTRO).unlink()
+
+        prova(base, "parola di ricerca di una classe con la maiuscola", nel_catalogo(parola_con_maiuscola), "«parole» deve essere un elenco")
+        prova(base, "parola di ricerca di un prodotto con l'accento", nel_catalogo(parola_con_accento), "«parole» deve essere un elenco")
+        prova(base, "parola di ricerca ripetuta", nel_catalogo(parola_ripetuta), "«parole» deve essere un elenco")
+        prova(base, "altro nome per una regione che nessun prodotto ha", nel_catalogo(altro_nome_di_regione_ignota),
+              "non è la regione di nessun prodotto")
+        prova(base, "nota di un gruppo vuota", nel_catalogo(nota_vuota), "«nota» c'è ma è vuota")
+        prova(base, "parole di ricerca scritte come nulle", nel_catalogo(parole_nulle), "«parole» deve essere un elenco")
+        prova(base, "parola di ricerca che la casella ignora", nel_catalogo(parola_che_la_ricerca_ignora),
+              "«parole» contiene «prodotti», che la ricerca del catalogo ignora")
+        prova(base, "lo stesso altro nome per due regioni", nel_catalogo(nome_di_due_regioni),
+              "«Trentino», altro nome di «Provincia autonoma di Bolzano», è già il nome di «Provincia autonoma di Trento»")
+        prova(base, "altro nome uguale al nome di un'altra regione", nel_catalogo(altro_nome_uguale_a_una_regione),
+              "«Lazio», altro nome di «Provincia autonoma di Trento», è già il nome di «Lazio»")
+        prova(base, "altro nome che ripete quello della sua regione", nel_catalogo(altro_nome_che_ripete_il_suo),
+              "ripete il nome di «Provincia autonoma di Trento»")
+        prova(base, "altro nome di una regione senza lettere", nel_catalogo(altro_nome_senza_lettere), "non ha lettere né cifre")
+        prova(base, "script del catalogo senza l'elenco delle parole ignorate", senza_elenco_delle_parole_ignorate,
+              "non trovo l'elenco VUOTE")
+        prova(base, "script del catalogo mancante", senza_script_del_catalogo, "non trovo l'elenco VUOTE")
 
         prova(base, "disciplinare in PDF senza il peso in byte", nel_catalogo(senza_peso), "manca «byte»")
         prova(base, "peso in KB che non torna con il peso in byte", nel_catalogo(peso_che_non_torna), "non torna con «byte»")

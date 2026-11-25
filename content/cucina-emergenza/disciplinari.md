@@ -1,6 +1,6 @@
 ---
 title: "Disciplinari dei prodotti DOP, IGP e STG"
-description: "Disciplinari dei prodotti italiani DOP, IGP e STG: i PDF del Ministero dell'agricoltura e le sintesi dell'Unione europea, con ricerca per regione."
+description: "Disciplinari DOP, IGP e STG per chi cucina in emergenza e vuole rifare bene le specialità del territorio: PDF ufficiali, con ricerca per regione."
 date: 2026-11-24
 dataUltimaRevisione: "2026-11-25"
 image: ""
@@ -12,6 +12,22 @@ Il disciplinare di produzione è il documento ufficiale di un prodotto a denomin
 La pagina fa parte della sezione [Cucina in emergenza](/cucina-emergenza/), che raccoglie i documenti ufficiali per chi cucina in un campo o in una mensa di emergenza.
 
 {{< disciplinari parte="riepilogo" >}}
+
+## A che cosa serve in emergenza
+
+Chi cucina per le persone di un territorio colpito da un'emergenza può voler preparare i prodotti e i piatti di quel territorio come si fanno lì. L'obiettivo è che chi ha dovuto lasciare la propria casa ritrovi a tavola la cucina a cui è abituato. Il catalogo aiuta i cuochi del posto, e quelli che arrivano da fuori, a fare bene le specialità locali.
+
+{{< pulsante url="/cucina-emergenza/disciplinari/#il-catalogo" testo="Vai al catalogo" icona="bi-search" >}}
+
+{{< passi titolo="Come usare il catalogo" >}}
+1. **Scegli la regione in cui lavori.** L'elenco mostra i prodotti DOP e IGP di quella regione e le specialità tradizionali garantite legate alla sua tradizione.
+2. **Cerca un prodotto o un luogo.** Scrivi per esempio «lenticchie», «Norcia» o «Amatrice», oppure il tipo di prodotto: formaggi, salumi, olio.
+3. **Apri il disciplinare.** Per un prodotto DOP o IGP trovi le materie prime, la zona, il metodo di lavorazione e le caratteristiche che il prodotto deve avere. Per una specialità tradizionale garantita, come l'Amatriciana tradizionale, i Vincisgrassi alla maceratese o la Pizza Napoletana, trovi gli ingredienti, con le quantità o le proporzioni, e il metodo di preparazione.
+{{< /passi >}}
+
+{{< callout tipo="avviso" titolo="Prima l'igiene, poi la ricetta" >}}
+Il disciplinare non sostituisce le regole di igiene della cucina: in un campo o in una mensa vengono prima di ogni ricetta. Le trovi nei documenti della pagina [Cucina in emergenza](/cucina-emergenza/). Seguire il disciplinare aiuta a preparare bene un prodotto o un piatto. Non basta per chiamarlo con il nome protetto o con le sigle DOP, IGP e STG, che spettano ai prodotti controllati secondo il regolamento europeo.
+{{< /callout >}}
 
 ## Che cosa vogliono dire le sigle
 
@@ -39,7 +55,7 @@ Il collegamento apre l'atto della Gazzetta ufficiale che contiene la sintesi: ne
 
 ## Il catalogo
 
-Cerca un prodotto per nome, oppure scegli una regione o un tipo di prodotto. Premendo sul nome scarichi il disciplinare in PDF. Per alcuni prodotti c'è anche un decreto di modifica temporanea: lo trovi sotto il nome. La sintesi europea, quando c'è, si apre in una nuova scheda.
+Scegli una regione o un tipo di prodotto, oppure scrivi il nome di un prodotto o di un luogo. Premendo sul nome scarichi il disciplinare in PDF. Per alcuni prodotti c'è anche un decreto di modifica temporanea: lo trovi sotto il nome. La sintesi europea, quando c'è, si apre in una nuova scheda.
 
 {{< disciplinari parte="filtri" >}}
 
@@ -51,7 +67,7 @@ Gli elenchi dei vini DOP e IGP e dei prodotti agroalimentari tradizionali (PAT) 
 
 ## Come è fatto il catalogo
 
-Nomi, sigle e regioni vengono dall'elenco del Ministero; dove l'elenco non riporta la regione, l'abbiamo letta nel disciplinare. I collegamenti vengono dalle pagine in cui il Ministero pubblica i disciplinari, una per tipo di prodotto: le trovi in fondo a ogni gruppo. Abbiamo scaricato ogni file e controllato che fosse il disciplinare di quel prodotto.
+Nomi, sigle e regioni vengono dall'elenco del Ministero; dove l'elenco non riporta la regione, l'abbiamo letta nel disciplinare. Una specialità tradizionale garantita non ha una zona di produzione: per l'Amatriciana tradizionale, i Vincisgrassi alla maceratese e la Pizza Napoletana la regione è quella della tradizione che il disciplinare descrive. I collegamenti vengono dalle pagine in cui il Ministero pubblica i disciplinari, una per tipo di prodotto: le trovi in fondo a ogni gruppo. Abbiamo scaricato ogni file e controllato che fosse il disciplinare di quel prodotto.
 
 Le sintesi europee vengono dal registro europeo delle indicazioni geografiche, eAmbrosia. Per ogni prodotto DOP e IGP abbiamo letto le pubblicazioni della Gazzetta ufficiale che il registro cita per la registrazione e per le modifiche approvate, a partire dalla più recente, e abbiamo collegato la prima che contiene il documento unico o la scheda riepilogativa di quel prodotto. Il collegamento porta al PDF in italiano su EUR-Lex. Di ogni atto abbiamo scaricato il PDF dall'archivio dell'Ufficio delle pubblicazioni dell'Unione europea e controllato che contenesse la sintesi di quel prodotto. Alcuni file della Gazzetta pesano più di 15 MB: il peso è scritto accanto a ogni collegamento.
 
