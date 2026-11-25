@@ -1,10 +1,10 @@
 {
- "stamp": "20261124_1515",
- "name": "Bollettino del 24 novembre 2026 ore 15:15",
+ "stamp": "20261125_1523",
+ "name": "Bollettino del 25 novembre 2026 ore 15:23",
  "_snapshot": {
-  "letto": "2026-11-24T16:11:44Z",
+  "letto": "2026-11-25T19:21:39Z",
   "fonte": "https://github.com/pcm-dpc/DPC-Bollettini-Criticita-Idrogeologica-Idraulica",
-  "timbro_da": "fonte ufficiale e mirror opendatasicilia (concordi)",
+  "timbro_da": "fonte ufficiale",
   "licenza": "CC BY 4.0 — Dipartimento della Protezione Civile",
   "nota": "Il timbro è il bollettino completo più recente fra il repository ufficiale del Dipartimento e il mirror opendatasicilia. Le carte restano quelle ufficiali. Se una fonte è ferma o non risponde, si usa l'altra."
  }
