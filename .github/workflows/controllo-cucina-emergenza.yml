@@ -22,7 +22,9 @@
 #   diventa quella del giorno (commit di sfondo, lo pubblica deploy-coalescer.yml);
 # - collegamento rotto o fonte che non si fa leggere: issue in-place con le
 #   label `automazione` + `fonte-rotta` + `cucina-emergenza` e run rosso
-#   (regola guasti.md, punto 1); la data resta quella dell'ultimo giro riuscito;
+#   (regola guasti.md, punto 1); la data resta quella dell'ultimo giro riuscito.
+#   Vale come fonte non letta anche un giro con troppi collegamenti rimasti
+#   senza controllo: più di 5 e più di un quinto di quelli da aprire;
 # - solo novità (allegato nuovo su una pagina del Ministero, elenco ufficiale
 #   cambiato, testo consolidato più recente, pubblicazione o rettifica nuova
 #   nel registro europeo: per queste ultime si rilancia
@@ -34,7 +36,8 @@
 #   quei collegamenti non sono stati controllati. Lo stesso vale per un
 #   collegamento a cui il sito non risponde in tempo o risponde con un errore
 #   del server (5xx) dalla macchina del controllo: non è rotto e non è
-#   controllato (guasti.md punto 3), si riapre da un'altra rete. Se la data
+#   controllato (guasti.md punto 3), si riapre da un'altra rete. Finché sono
+#   pochi: oltre la soglia scritta sopra il run diventa rosso. Se la data
 #   resta ferma più di 45 giorni lo dice audit-sito.yml, sezione 51.
 # La issue si chiude da sola al primo giro senza rilievi.
 name: "🍲 Cucina in emergenza: controllo mensile dei collegamenti"

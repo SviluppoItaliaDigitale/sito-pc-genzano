@@ -9,22 +9,28 @@ se ne accorge. Quattro gruppi di prove, nessuna richiesta fuori dalla macchina:
   2. risposte dei siti, con un server finto in locale: un PDF vero è letto, un 404 è un collegamento rotto,
      una pagina di verifica anti-bot o un rifiuto (403) non sono né rotti né controllati, e nemmeno un sito
      che dà tempo scaduto o un errore del server (5xx); una pagina qualsiasi al posto del PDF, o un 400, è
-     una fonte non letta;
+     una fonte non letta, e lo sono troppi collegamenti rimasti senza controllo (più di SOGLIA_FERMO e più
+     di un quinto di quelli da aprire);
   3. browser di riserva: se Playwright manca o Chromium non parte, il controllo non si interrompe, classifica
      ciò che ha già letto e scrive il rapporto, che dice perché il ripiego è mancato;
   4. sintesi europee, con un registro e un archivio finti in locale: una pubblicazione nuova, un fascicolo
      cambiato, un prodotto sparito e una rettifica nuova sono novità; un atto che l'archivio non ha più è un
      collegamento rotto, ma solo dopo la conferma della richiesta singola; registro o archivio muti sono
-     fonti non lette. In più, le funzioni di scripts/aggiorna-documenti-unici.py che decidono quale
-     documento è di quale prodotto.
+     fonti non lette, e anche un archivio che non restituisce più le rettifiche già note. In più, le
+     funzioni di scripts/aggiorna-documenti-unici.py che decidono quale documento è di quale prodotto
+     (denominazione intera fra virgolette o numero di fascicolo: «Bra» non è «fibra») e il suo lavoro su un
+     catalogo finto: ciò che non si legge o non si sa interpretare non cambia i dati.
 
 Uso:  python3 scripts/prova-check-cucina-emergenza.py public
 Lavora su copie in una cartella temporanea: i file del repository non si toccano. Uscita 0 se ogni prova
 va come atteso, 1 altrimenti.
 """
+import contextlib
 import http.server
 import importlib.util
+import io
 import json
+import os
 import re
 import shutil
 import subprocess
@@ -113,6 +119,7 @@ RISPOSTE = {"/vero.pdf": (200, "application/pdf", b"%PDF-1.7\n" + b"x" * 4000),
             "/rifiuto.pdf": (403, "text/plain", b"Forbidden"),
             "/manca.pdf": (404, "text/plain", b"Not found"),
             "/negato.pdf": (400, "text/plain", b"Bad request"),
+            "/attesa.pdf": (202, "text/html; charset=UTF-8", b""),  # EUR-Lex alle richieste di un programma
             "/qualsiasi.pdf": (200, "text/html; charset=UTF-8", QUALSIASI)}
 
 
@@ -239,13 +246,36 @@ def prove_dello_script_delle_sintesi(ue):
     """Le funzioni di scripts/aggiorna-documenti-unici.py che decidono quale documento è di quale prodotto."""
     testo = ("C 440/7 Gazzetta ufficiale dell'Unione europea 26.11.2016 Pubblicazione di una domanda di modifica "
              "DOCUMENTO UNICO «TERRE TARENTINE» N. UE: PDO-IT-02120 1. Denominazione Terre Tarentine 2. Stato membro")
-    nomi = ue.parti_del_nome("Terre Tarentine")
-    esito("sintesi: il titolo «DOCUMENTO UNICO» seguito dal nome del prodotto è riconosciuto",
-          ue.che_sintesi_contiene(testo, nomi) == "unico" and ue.che_sintesi_contiene(testo, ue.parti_del_nome("Bra")) == ""
-          and ue.che_sintesi_contiene(testo.replace("DOCUMENTO UNICO", "documento unico"), nomi) == ""
-          and ue.che_sintesi_contiene(testo.replace("DOCUMENTO UNICO", "SCHEDA RIEPILOGATIVA"), nomi) == "scheda")
-    esito("sintesi: «A / B», «A o B» e gli apostrofi tipografici danno lo stesso nome",
-          ue.compatto("Terra d’Otranto") == ue.compatto("TERRA D'OTRANTO")
+    forme = ue.denominazioni(["Terre Tarentine"])
+    esito("sintesi: il titolo «DOCUMENTO UNICO» seguito dalla denominazione fra virgolette è riconosciuto",
+          ue.che_sintesi_contiene(testo, forme) == ("unico", "")
+          and ue.che_sintesi_contiene(testo.replace("DOCUMENTO UNICO", "documento unico"), forme) == ("", "")
+          and ue.che_sintesi_contiene(testo.replace("DOCUMENTO UNICO", "SCHEDA RIEPILOGATIVA"), forme) == ("scheda", ""))
+    bra = ue.denominazioni(["Bra"])
+    fibra = "DOCUMENTO UNICO «Fibra di lino delle Fiandre» N. UE: PGI-BE-0001 1. Denominazione «Fibra di lino delle Fiandre»"
+    esito("sintesi: un nome corto non si riconosce dentro un'altra parola («Bra» non è «fibra»)",
+          ue.che_sintesi_contiene(testo, bra) == ("", "") and ue.che_sintesi_contiene(fibra, bra) == ("", "")
+          and ue.che_sintesi_contiene("DOCUMENTO UNICO «Bra» N. UE: PDO-IT-0002-AM03 1. Denominazione «Bra»", bra) == ("unico", "")
+          and ue.che_sintesi_contiene("DOCUMENTO UNICO «BRA DOP» 1. Denominazione", bra) == ("unico", ""))
+    prosciutto = "DOCUMENTO UNICO «Prosciutto Toscano» N. UE: PDO-IT-1337 1. Denominazione «Prosciutto Toscano»"
+    esito("sintesi: la sintesi di un altro prodotto che ne contiene il nome non si collega: è un dubbio da guardare",
+          ue.che_sintesi_contiene(prosciutto, ue.denominazioni(["Toscano"])) == ("", "unico")
+          and ue.che_sintesi_contiene(prosciutto, ue.denominazioni(["Prosciutto Toscano"])) == ("unico", ""))
+    montasio = {"montasio"}
+    esito("sintesi: il numero di fascicolo sotto il titolo vale come la denominazione, nei due formati della Gazzetta",
+          ue.che_sintesi_contiene("DOCUMENTO UNICO «NOME SCRITTO IN ALTRO MODO» N. UE: PDO-IT-0012-AM01", montasio, "PDO-IT-0012") == ("unico", "")
+          and ue.che_sintesi_contiene("SCHEDA RIEPILOGATIVA «ALTRO» N. CE: IT-PDO-0117-0012", montasio, "PDO-IT-0012") == ("scheda", "")
+          and ue.che_sintesi_contiene("DOCUMENTO UNICO «ALTRO» N. UE: PDO-IT-02251", montasio, "PDO-IT-0012") == ("", "")
+          and ue.che_sintesi_contiene("DOCUMENTO UNICO «ALTRO» N. UE: PGI-IT-0012", montasio, "PDO-IT-0012") == ("", "")
+          and ue.che_sintesi_contiene("DOCUMENTO UNICO «Montasio» N. UE: PDO-IT-02251 – 20.12.2016", montasio, "PDO-IT-0012") == ("unico", "")
+          and ue.ha_il_fascicolo("N. UE: DOP-IT-00012", "PDO-IT-0012") and not ue.ha_il_fascicolo("PDO-IT-0012", ""))
+    stelvio = ue.denominazioni(["Stelvio o Stilfser"])
+    esito("sintesi: «A / B», «A o B», «S.» per «San» e gli apostrofi tipografici danno le stesse denominazioni",
+          ue.parole("TERRA D’OTRANTO") == ue.parole("Terra d'Otranto") == "terra d otranto"
+          and stelvio == {"stelvio o stilfser", "stelvio", "stilfser"}
+          and "pomodoro san marzano dell agro sarnese nocerino" in ue.denominazioni(["Pomodoro S. Marzano dell'Agro Sarnese-Nocerino"])
+          and ue.che_sintesi_contiene("DOCUMENTO UNICO «Stelvio»/«Stilfser» N. UE", stelvio) == ("unico", "")
+          and ue.che_sintesi_contiene("DOCUMENTO UNICO «Stilfser / Stelvio» N. UE", stelvio) == ("unico", "")
           and ue.compatto("Südtiroler Apfel") in ue.parti_del_nome("Mela Alto Adige o Südtiroler Apfel")
           and ue.compatto("Vermouth di Torino") in ue.parti_del_nome("Vermut di Torino / Vermouth di Torino"))
     uno = {"giIdentifier": "EUGI1", "fileNumber": "PDO-IT-0001", "protectedNames": ["Formaggio Alfa"], "status": "registered"}
@@ -268,6 +298,10 @@ def prove_dello_script_delle_sintesi(ue):
           and ue.celex_di("http://data.europa.eu/eli/reg_impl/2021/1174/oj") == ("32021R1174", None)
           and ue.celex_di("http://data.europa.eu/eli/C/2025/3944/oj") == (None, "http://publications.europa.eu/resource/oj/C_202503944")
           and ue.celex_di("http://data.europa.eu/eli/C/2025/3944/corrigendum/2025-10-20/oj") == (None, None))
+    esito("sintesi: un numero CELEX di vecchio tipo («C1998/405/05») si legge; uno con altri segni si scarta",
+          ue.celex_di("https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3AC1998%2F405%2F05") == ("C1998/405/05", None)
+          and ue.celex_di("https://eur-lex.europa.eu/?uri=CELEX%3A52016XC1126%2801%29%22%20%7D%20UNION") == (None, None)
+          and ue.a_gruppi(["52020XC0101(01)", "52020XC0101(01)", 'x" } UNION {', "C1998/405/05", None]) == [["52020XC0101(01)"]])
     atto = "26.11.2016 IT Gazzetta ufficiale dell'Unione europea C 440/7 DOCUMENTO UNICO «TERRE TARENTINE»"
     vecchia = ("Rettifica alla pubblicazione di una domanda di modifica (Gazzetta ufficiale dell'Unione europea C 440 del "
                "26 novembre 2016) Pagina 7, paragrafo 3.2. del documento unico: anziché: «≤ 70 %» leggasi: «≥ 70 %».")
@@ -275,29 +309,282 @@ def prove_dello_script_delle_sintesi(ue):
              "(Gazzetta ufficiale dell'Unione europea C, C/2025/3944, 16 luglio 2025) Pagina 6, documento unico")
     altrui = ("Rettifica della comunicazione della Commissione nell'ambito dell'applicazione della direttiva 2006/42/CE "
               "relativa alle macchine (Gazzetta ufficiale dell'Unione europea C 136 del 26 maggio 2010) A pagina 32")
-    esito("sintesi: una rettifica si collega solo se cita il prodotto, il numero dell'atto o il suo fascicolo",
-          ue.rettifica_cita_l_atto(vecchia, "52016XC1126(01)", atto, nomi)
-          and ue.rettifica_cita_l_atto(nuova, "52025XC03944", "testo dell'atto", ue.parti_del_nome("Ciauscolo"))
-          and ue.rettifica_cita_l_atto("Rettifica … «Ciauscolo» N. UE: PGI-IT-0557", "52010XC0101(01)", "", ue.parti_del_nome("Ciauscolo"))
-          and not ue.rettifica_cita_l_atto(altrui, "52010XC0526(04)", "C 135/40 DOCUMENTO UNICO «ARANCIA DI RIBERA»", ue.parti_del_nome("Arancia di Ribera"))
-          and not ue.rettifica_cita_l_atto(nuova, "52025XC03945", "testo dell'atto", ue.parti_del_nome("Bra")))
+    ciauscolo, ribera = ue.denominazioni(["Ciauscolo"]), ue.denominazioni(["Arancia di Ribera"])
+    esito("sintesi: una rettifica si collega se cita il prodotto, il numero dell'atto o il suo fascicolo della Gazzetta con l'anno",
+          ue.rettifica_cita_l_atto(vecchia, "52016XC1126(01)", atto, forme, "2016-11-26")
+          and ue.rettifica_cita_l_atto(nuova, "52025XC03944", "testo dell'atto", ciauscolo)
+          and ue.rettifica_cita_l_atto("Rettifica … «Ciauscolo» N. UE: PGI-IT-0557", "52010XC0101(01)", "", ciauscolo))
+    esito("sintesi: una rettifica di un altro atto, o dello stesso fascicolo in un altro anno, non si collega",
+          not ue.rettifica_cita_l_atto(altrui, "52010XC0526(04)", "C 135/40 DOCUMENTO UNICO «ARANCIA DI RIBERA»", ribera, "2010-05-26")
+          and not ue.rettifica_cita_l_atto(nuova, "52025XC03945", "testo dell'atto", bra)
+          and not ue.rettifica_cita_l_atto(vecchia, "52016XC1126(01)", atto, forme, "2017-11-26")
+          and not ue.rettifica_cita_l_atto(vecchia, "52016XC1126(01)", atto, forme)
+          and not ue.rettifica_cita_l_atto("Comunicazione sul prodotto «Ciauscolo»", "52010XC0101(01)", "", ciauscolo))
     righe = [{"atto": {"value": "A"}, "rettifica": {"value": "AR(02)"}, "data": {"value": "2021-05-01"}},
+             {"atto": {"value": "A"}, "rettifica": {"value": "AR(01)"}, "data": {"value": "2020-03-09"}},
              {"atto": {"value": "A"}, "rettifica": {"value": "AR(01)"}, "data": {"value": "2020-03-01"}},
-             {"atto": {"value": "A"}, "rettifica": {"value": "AR(01)"}, "data": {"value": "2020-03-01"}},
+             {"atto": {"value": "A"}, "rettifica": {"value": "AR(01)"}},
              {"atto": {"value": "B"}, "rettifica": {"value": "BR(01)"}}]
-    esito("sintesi: le rettifiche dell'archivio si raccolgono per atto, in ordine di data e senza doppioni",
-          ue.righe_delle_rettifiche(righe) == {"A": [("AR(01)", "2020-03-01"), ("AR(02)", "2021-05-01")], "B": [("BR(01)", "")]}
-          and ue.a_gruppi(["52020XC0101(01)", "52020XC0101(01)", 'x" } UNION {', None]) == [["52020XC0101(01)"]])
+    esito("sintesi: le rettifiche dell'archivio si raccolgono per atto, una riga per rettifica con la data più vecchia",
+          ue.righe_delle_rettifiche(righe) == {"A": [("AR(01)", "2020-03-01"), ("AR(02)", "2021-05-01")], "B": [("BR(01)", "")]})
     vero = (RADICE / "data" / "disciplinari.json").read_text(encoding="utf-8")
     esito("sintesi: il file dei dati è scritto nel formato dello script (un elemento per riga)",
           ue.testo_del_catalogo(json.loads(vero)) == vero,
           "dopo una modifica a mano: python3 scripts/aggiorna-documenti-unici.py --riscrivi")
 
 
+def prove_del_lavoro_sulle_sintesi(ue):
+    """cerca_sintesi, le rettifiche e main di scripts/aggiorna-documenti-unici.py, con un deposito già pieno e
+    un archivio finto: ciò che non si legge o non si sa interpretare non deve cambiare i dati. Nessuna
+    richiesta parte davvero: interroga e chiedi dello script sono sostituiti per la durata delle prove."""
+    veri = (ue.interroga, ue.chiedi, ue.FILE_CATALOGO, ue.RADICE, ue.shutil, sys.argv)
+    domande, tentate = [], []
+    eurlex = "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A"
+
+    def archivio(risposta):
+        def interroga(domanda):
+            domande.append(domanda)
+            return risposta(domanda) if callable(risposta) else risposta
+        ue.interroga = interroga
+
+    def nessuna_richiesta(*argomenti, **parole):
+        tentate.append(argomenti[:1])  # nessuna di queste prove deve arrivare a chiedere qualcosa a un sito
+        return 0, b""
+
+    def pulisci():
+        ue.non_letti.clear()
+        del domande[:]
+
+    try:
+        with tempfile.TemporaryDirectory() as cartella:
+            ue.chiedi = nessuna_richiesta
+            deposito = ue.Deposito(Path(cartella) / "deposito")
+
+            def atto(celex, testo, pagine=3, kb=100):
+                nome = re.sub(r"[^0-9A-Za-z]", "_", celex)
+                deposito.scrivi({"pagine": pagine, "kb": kb}, "atti", f"{nome}.json")
+                (deposito.base / "atti" / f"{nome}.txt").write_text(testo, encoding="utf-8")
+
+            def manca(celex, ore_fa=0):
+                percorso = deposito.base / "atti" / (re.sub(r"[^0-9A-Za-z]", "_", celex) + ".json")
+                percorso.write_text(json.dumps({"manca": "l'archivio non ha l'atto in italiano"}), encoding="utf-8")
+                if ore_fa:
+                    quando = time.time() - ore_fa * 3600
+                    os.utime(percorso, (quando, quando))
+
+            def citata(quando, celex=None, uri=None, testo="Official Journal C 1"):
+                return {"date": quando, "text": testo, "uri": uri or eurlex + urllib.parse.quote(celex, safe="")}
+
+            def cerca(nome, *pubblicazioni, fascicolo="PDO-IT-0001"):
+                pulisci()
+                return ue.cerca_sintesi(deposito, {"nome": nome}, {"fileNumber": fascicolo, "protectedNames": [nome]},
+                                        {"registration": {"officialPublication": list(pubblicazioni)}})
+
+            unico = "pagina 3 DOCUMENTO UNICO «Formaggio Alfa» N. UE: PDO-IT-0001-AM01 1. Denominazione «Formaggio Alfa»" + " testo" * 60
+            scheda = "pagina 3 SCHEDA RIEPILOGATIVA «Formaggio Alfa» N. CE: IT-PDO-0117-0001 1. Denominazione" + " testo" * 60
+            senza_titolo = "Regolamento di esecuzione della Commissione recante iscrizione di una denominazione" + " testo" * 60
+            atto("52022XC0303(01)", unico, pagine=7, kb=640)
+            atto("52008XC0505(02)", scheda)
+            atto("32023R0001", senza_titolo)
+            archivio(None)  # se una di queste ricerche interrogasse l'archivio, non avrebbe risposta
+            sintesi, letto, dubbi = cerca("Formaggio Alfa", citata("05-05-2008", "52008XC0505(02)"),
+                                          citata("09-01-2023", "32023R0001"), citata("03-03-2022", "52022XC0303(01)"))
+            esito("sintesi, ricerca: vale il documento unico più recente, non la scheda più vecchia né l'atto senza titolo",
+                  letto and not dubbi and not domande and sintesi == {
+                      "tipo": "unico", "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/PDF/?uri=CELEX:52022XC0303%2801%29",
+                      "data": "2022-03-03", "pagine": 7, "kb": 640}, f"{sintesi} {letto} {dubbi}")
+            sintesi, letto, dubbi = cerca("Formaggio Alfa", citata("05-05-2008", "52008XC0505(02)"), citata("09-01-2023", "32023R0001"))
+            esito("sintesi, ricerca: senza un documento unico vale la scheda riepilogativa",
+                  letto and not dubbi and (sintesi or {}).get("tipo") == "scheda" and sintesi["data"] == "2008-05-05", f"{sintesi}")
+            sintesi, letto, dubbi = cerca("Formaggio Alfa", citata("09-01-2023", "32023R0001"))
+            esito("sintesi, ricerca: nessuna pubblicazione con il titolo, nessuna sintesi e nessun dubbio",
+                  sintesi is None and letto and not dubbi)
+            sintesi, letto, dubbi = cerca("Formaggio Alfa", citata("03-03-2022", "52022XC0303(01)"),
+                                          citata("20-10-2025", uri="http://data.europa.eu/eli/C/2025/3944/corrigendum/2025-10-20/oj"))
+            esito("sintesi, ricerca: una rettifica citata dal registro si salta, non ferma la ricerca",
+                  letto and not dubbi and (sintesi or {}).get("data") == "2022-03-03" and not domande)
+
+            nuova = citata("16-07-2025", uri="http://data.europa.eu/eli/C/2025/3944/oj", testo="Official Journal C, C/2025/3944")
+            sintesi, letto, dubbi = cerca("Formaggio Alfa", citata("03-03-2022", "52022XC0303(01)"), nuova)
+            esito("sintesi, ricerca: se l'archivio non risponde sulla pubblicazione più recente, il prodotto non si decide",
+                  sintesi is None and not letto and not dubbi and len(ue.non_letti) == 1 and len(domande) == 1,
+                  f"{sintesi} {letto} {dubbi} {ue.non_letti}")
+            archivio([])
+            sintesi, letto, dubbi = cerca("Formaggio Alfa", citata("03-03-2022", "52022XC0303(01)"), nuova)
+            esito("sintesi, ricerca: una pubblicazione che l'archivio non conosce è da guardare a mano, non si salta",
+                  sintesi is None and letto and len(dubbi) == 1 and "non sa interpretare" in dubbi[0] and not ue.non_letti, f"{dubbi}")
+            atto("52025XC03944", unico.replace("AM01", "AM02"), pagine=5, kb=300)
+            archivio(lambda domanda: [{"celex": {"value": "52025XC03944"}}] if "sameAs" in domanda else [])
+            sintesi, letto, dubbi = cerca("Formaggio Alfa", citata("03-03-2022", "52022XC0303(01)"), nuova)
+            esito("sintesi, ricerca: la pubblicazione citata con l'indirizzo ELI si trova chiedendo il numero CELEX all'archivio",
+                  letto and not dubbi and (sintesi or {}).get("url", "").endswith("CELEX:52025XC03944") and sintesi["data"] == "2025-07-16",
+                  f"{sintesi} {dubbi}")
+            archivio(None)
+            sintesi, letto, dubbi = cerca("Formaggio Alfa", citata("03-03-2022", "52022XC0303(01)"), nuova)
+            esito("sintesi, ricerca: il numero già chiesto all'archivio si ricorda e non si richiede",
+                  letto and not dubbi and (sintesi or {}).get("data") == "2025-07-16" and not domande, f"{sintesi} {domande}")
+
+            sintesi, letto, dubbi = cerca("Formaggio Alfa", citata("03-03-2022", "52022XC0303(01)"), citata(None, "32023R0001"))
+            esito("sintesi, ricerca: una pubblicazione senza data è da guardare a mano (non si sa qual è la più recente)",
+                  sintesi is None and letto and len(dubbi) == 1 and "senza data" in dubbi[0], f"{dubbi}")
+            sintesi, letto, dubbi = cerca("Formaggio Alfa", citata("03-03-2022", "52022XC0303(01)"),
+                                          citata("01-02-2024", uri="https://www.esempio.it/gazzetta/1", testo="Official Journal L 1"))
+            esito("sintesi, ricerca: un indirizzo che lo script non sa leggere è da guardare a mano",
+                  sintesi is None and letto and len(dubbi) == 1 and "non sa interpretare" in dubbi[0], f"{dubbi}")
+            atto("52021XC0707(03)", "DOCUMENTO UNICO «Prosciutto Toscano» N. UE: PDO-IT-1337 1. Denominazione «Prosciutto Toscano»" + " testo" * 60)
+            sintesi, letto, dubbi = cerca("Toscano", citata("07-07-2021", "52021XC0707(03)"), fascicolo="PDO-IT-0200")
+            esito("sintesi, ricerca: la sintesi di un altro prodotto, citata per questo, è da guardare a mano e non si collega",
+                  sintesi is None and letto and len(dubbi) == 1 and "non come denominazione" in dubbi[0], f"{sintesi} {dubbi}")
+            atto("C1998/405/05", scheda)
+            sintesi, letto, dubbi = cerca("Formaggio Alfa", citata("24-12-1998", uri=eurlex + "C1998%2F405%2F05"))
+            esito("sintesi, ricerca: una sintesi in un atto con il numero CELEX di vecchio tipo è da guardare a mano",
+                  sintesi is None and letto and len(dubbi) == 1 and "vecchio tipo" in dubbi[0], f"{sintesi} {dubbi}")
+
+            del_giorno = citata("26-09-2014", uri="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:C:2014:336:FULL",
+                                testo="Official Journal C 336, 26.09.2014")
+            atto("52014XC0926(01)", senza_titolo)
+            atto("52014XC0926(02)", unico.replace("Formaggio Alfa", "Salame Beta").replace("PDO-IT-0001", "PGI-IT-0002"))
+            atto("52014XC0926(03)", unico)
+            sintesi, letto, dubbi = cerca("Formaggio Alfa", del_giorno)
+            esito("sintesi, ricerca: se il registro cita solo il fascicolo della Gazzetta, si provano gli avvisi di quel giorno",
+                  letto and not dubbi and (sintesi or {}).get("url", "").endswith("CELEX:52014XC0926%2803%29") and not domande,
+                  f"{sintesi} {dubbi} {domande}")
+            for n in (3, 4, 5):
+                manca(f"52014XC0926({n:02d})")
+            sintesi, letto, dubbi = cerca("Formaggio Alfa", del_giorno)
+            esito("sintesi, ricerca: dopo tre avvisi di fila senza testo italiano la ricerca del giorno si ferma",
+                  sintesi is None and letto and not dubbi and not domande and not ue.non_letti, f"{sintesi} {domande}")
+
+            # atti: il file si scarica solo dall'archivio, un numero strano non entra in una domanda, un «manca» scade
+            pulisci()
+            archivio([{"tipo": {"value": "pdfa1a"}, "item": {"value": "http://altrove.esempio.it/atto.pdf"}}])
+            fuori = ue.atto_in_italiano(deposito, "52030XC0101(01)")
+            esito("sintesi, atti: un file fuori dal sito dell'archivio non si scarica, ed è una fonte non letta",
+                  fuori is None and not tentate and any("fuori dal suo sito" in riga for riga in ue.non_letti),
+                  f"{fuori} {tentate} {ue.non_letti}")
+            pulisci()
+            esito("sintesi, atti: un numero CELEX con altri segni non entra in una domanda all'archivio",
+                  ue.atto_in_italiano(deposito, '52030XC0101(01)" } UNION {') == {"manca": "numero CELEX non valido"} and not domande)
+            manca("52031XC0101(01)")
+            manca("52031XC0101(02)", ore_fa=ue.ORE_REGISTRO + 1)
+            archivio([])
+            pulisci()
+            fresco, scaduto = ue.atto_in_italiano(deposito, "52031XC0101(01)"), ue.atto_in_italiano(deposito, "52031XC0101(02)")
+            esito("sintesi, atti: un atto che l'archivio non aveva in italiano si richiede dopo 12 ore, non prima",
+                  "manca" in fresco and "manca" in scaduto and len(domande) == 1 and "52031XC0101(02)" in domande[0], f"{domande}")
+
+            # rettifiche: si collega quella che cita l'atto; una recente senza testo italiano non si archivia
+            atto("52016XC1126(01)", "26.11.2016 IT Gazzetta ufficiale dell'Unione europea C 440/7 DOCUMENTO UNICO «TERRE TARENTINE»" + " testo" * 60)
+            atto("52016XC1126(01)R(01)", "Rettifica alla pubblicazione di una domanda di modifica (Gazzetta ufficiale dell'Unione "
+                 "europea C 440 del 26 novembre 2016) Pagina 7: anziché: «≤ 70 %» leggasi: «≥ 70 %»." + " testo" * 60, pagine=1, kb=390)
+            manca("52016XC1126(01)R(02)")
+            manca("52016XC1126(01)R(03)")
+            terre = {"nome": "Terre Tarentine", "sintesi": {"tipo": "unico", "data": "2016-11-26", "pagine": 6, "kb": 400,
+                                                             "url": ue.EURLEX_PDF.format("52016XC1126%2801%29")}}
+            oggi = date.today().isoformat()
+            pulisci()
+            avvisi = ue.aggiorna_rettifiche(deposito, terre, [("52016XC1126(01)R(01)", "2017-02-02"), ("52016XC1126(01)R(02)", "2017-03-03"),
+                                                              ("52016XC1126(01)R(03)", oggi)], ue.denominazioni(["Terre Tarentine"]))
+            esito("sintesi, rettifiche: collegata quella che cita l'atto, annotata la vecchia senza testo italiano, in attesa la recente",
+                  terre["sintesi"].get("rettifiche") == [{"url": ue.EURLEX_PDF.format("52016XC1126%2801%29R%2801%29"), "data": "2017-02-02",
+                                                          "pagine": 1, "kb": 390}]
+                  and terre["sintesi"].get("rettifiche_altre") == ["52016XC1126(01)R(02)"]
+                  and len(avvisi or []) == 1 and "52016XC1126(01)R(03)" in avvisi[0] and not domande, f"{terre['sintesi']} {avvisi}")
+            come_era = json.dumps(terre, sort_keys=True)
+            avvisi = ue.aggiorna_rettifiche(deposito, terre, [], ue.denominazioni(["Terre Tarentine"]), sempre=True)
+            rimaste = json.dumps(terre, sort_keys=True) == come_era
+            tolte = ue.aggiorna_rettifiche(deposito, terre, [], ue.denominazioni(["Terre Tarentine"]), sempre=True, anche_meno=True)
+            esito("sintesi, rettifiche: se l'archivio non restituisce più una rettifica nota, resta com'era; si toglie solo con --nome",
+                  rimaste and len(avvisi or []) == 1 and "non restituisce più" in avvisi[0] and "52016XC1126(01)R(01)" in avvisi[0]
+                  and tolte == [] and "rettifiche" not in terre["sintesi"] and "rettifiche_altre" not in terre["sintesi"],
+                  f"{rimaste} {avvisi} {tolte} {terre['sintesi']}")
+
+            # main: un catalogo finto, con registro e schede già nel deposito
+            ue.RADICE = Path(cartella)
+            ue.FILE_CATALOGO = Path(cartella) / "disciplinari.json"
+            ue.shutil = types.SimpleNamespace(which=lambda programma: "/usr/bin/" + programma)
+            alfa = {"giIdentifier": "EUGI0001", "fileNumber": "PDO-IT-0001", "protectedNames": ["Formaggio Alfa"], "status": "registered",
+                    "countries": ["IT"], "productType": "FOOD",
+                    "publications": [{"text": "Official Journal C 61, 3.3.2022", "uri": eurlex + "52022XC0303%2801%29"}]}
+            scheda_alfa = {"registration": {"officialPublication": [citata("03-03-2022", "52022XC0303(01)")]}}
+            catalogo = {"verificato": "2026-11-24", "voci": [{"nome": "Formaggio Alfa", "tipo": "DOP"}, {"nome": "Pizza Finta", "tipo": "STG"}]}
+            ue.FILE_CATALOGO.write_text(ue.testo_del_catalogo(catalogo), encoding="utf-8")
+
+            def lancia_main(*argomenti, registro=None, scheda_del_prodotto=None):
+                pulisci()
+                if registro is not None:
+                    deposito.scrivi(registro, "elenco.json")
+                if scheda_del_prodotto is not None:
+                    deposito.scrivi(scheda_del_prodotto, "schede", "EUGI0001.json")
+                sys.argv = [SCRIPT_SINTESI, "--cartella", str(deposito.base), *argomenti]
+                uscita_testo = io.StringIO()
+                with contextlib.redirect_stdout(uscita_testo), contextlib.redirect_stderr(uscita_testo):
+                    try:
+                        codice = ue.main()
+                    except SystemExit as e:
+                        codice = e.code
+                return codice, uscita_testo.getvalue(), ue.FILE_CATALOGO.read_text(encoding="utf-8")
+
+            archivio([])
+            codice, detto, scritto = lancia_main(registro=[alfa], scheda_del_prodotto=scheda_alfa)
+            voce = json.loads(scritto)["voci"][0]
+            esito("sintesi, lavoro: un prodotto mai letto prende fascicolo, sintesi e impronta del registro (uscita 0)",
+                  codice == 0 and voce.get("fascicolo") == "PDO-IT-0001" and voce.get("sintesi", {}).get("data") == "2022-03-03"
+                  and voce.get("registro_ue") == ue.impronta_del_registro(alfa) and "sintesi" not in json.loads(scritto)["voci"][1],
+                  f"uscita {codice}: {detto[-300:]}")
+            prima = scritto
+            cresciuto = dict(alfa, publications=alfa["publications"] + [{"text": "Official Journal C, C/2026/100",
+                                                                           "uri": "http://data.europa.eu/eli/C/2026/100/oj"}])
+            scheda_cresciuta = {"registration": scheda_alfa["registration"], "amendment": [
+                {"type": "STANDARD_AMENDMENT", "status": "APPROVED",
+                 "officialPublication": [citata("05-01-2026", uri="http://data.europa.eu/eli/C/2026/100/oj", testo="Official Journal C, C/2026/100")]}]}
+            archivio(None)
+            codice, detto, scritto = lancia_main(registro=[cresciuto], scheda_del_prodotto=scheda_cresciuta)
+            esito("sintesi, lavoro: pubblicazione nuova e archivio muto, il file dei dati resta identico e l'uscita è 1",
+                  codice == 1 and scritto == prima and "non si sono fatte leggere" in detto, f"uscita {codice}: {detto[-300:]}")
+            archivio([])
+            codice, detto, scritto = lancia_main()
+            esito("sintesi, lavoro: pubblicazione che non si sa interpretare, il file resta identico, impronta compresa (uscita 3)",
+                  codice == 3 and scritto == prima and "Da guardare" in detto and "resta com'era" in detto, f"uscita {codice}: {detto[-300:]}")
+            atto("52026XC00100", unico.replace("AM01", "AM03"), pagine=4, kb=250)
+            archivio(lambda domanda: [{"celex": {"value": "52026XC00100"}}] if "sameAs" in domanda else [])
+            codice, detto, scritto = lancia_main()
+            voce = json.loads(scritto)["voci"][0]
+            esito("sintesi, lavoro: quando l'archivio risponde, la sintesi passa alla pubblicazione nuova e l'impronta si aggiorna",
+                  codice == 0 and voce["sintesi"]["data"] == "2026-01-05" and voce["sintesi"]["url"].endswith("CELEX:52026XC00100")
+                  and voce["registro_ue"] == ue.impronta_del_registro(cresciuto) and not list(ue.FILE_CATALOGO.parent.glob("*.tmp")),
+                  f"uscita {codice}: {detto[-300:]}")
+            terza = "http://data.europa.eu/eli/C/2026/200/oj"
+            rinumerato = dict(cresciuto, fileNumber="PDO-IT-0099",
+                              publications=cresciuto["publications"] + [{"text": "Official Journal C, C/2026/200", "uri": terza}])
+            scheda_rinumerata = {"registration": scheda_alfa["registration"], "amendment": scheda_cresciuta["amendment"] + [
+                {"type": "STANDARD_AMENDMENT", "status": "APPROVED",
+                 "officialPublication": [citata("09-02-2026", uri=terza, testo="Official Journal C, C/2026/200")]}]}
+            archivio(None)
+            codice, detto, scritto = lancia_main(registro=[rinumerato], scheda_del_prodotto=scheda_rinumerata)
+            dopo = json.loads(scritto)["voci"][0]
+            esito("sintesi, lavoro: se il registro cambia il fascicolo e la pubblicazione nuova non si legge, cambia solo il fascicolo, e si conta",
+                  codice == 1 and dopo["fascicolo"] == "PDO-IT-0099" and dopo["sintesi"] == voce["sintesi"]
+                  and dopo["registro_ue"] == voce["registro_ue"] and "Voci cambiate: 1." in detto, f"uscita {codice}: {detto[-300:]}")
+            prima = scritto
+            codice, detto, scritto = lancia_main("--nome", "Formaggio Che Non Esiste")
+            esito("sintesi, lavoro: un nome che il catalogo non ha ferma lo script, senza toccare il file",
+                  codice == 2 and scritto == prima and "non c'è un prodotto con questo nome" in detto, f"uscita {codice}: {detto[-200:]}")
+            archivio([])
+            codice, detto, scritto = lancia_main(registro=[dict(cresciuto, protectedNames=["Formaggio Con Un Altro Nome"])])
+            esito("sintesi, lavoro: un prodotto che il registro non ha più con quel nome resta com'era ed è da guardare (uscita 3)",
+                  codice == 3 and scritto == prima and "Senza una voce con lo stesso nome" in detto, f"uscita {codice}: {detto[-300:]}")
+            esito("sintesi: nessuna di queste prove ha chiesto qualcosa a un sito", not tentate, f"{tentate}")
+    finally:
+        ue.interroga, ue.chiedi, ue.FILE_CATALOGO, ue.RADICE, ue.shutil, sys.argv = veri
+        ue.non_letti.clear()
+
+
 def prove_delle_sintesi(controllo, base):
     """Registro europeo e archivio dell'UE finti: che cosa è novità, che cosa è rotto, che cosa è fonte non letta."""
     ue = controllo.documenti_unici()
     prove_dello_script_delle_sintesi(ue)
+    prove_del_lavoro_sulle_sintesi(ue)
     veri = (ue.REGISTRO, controllo.SPARQL_UE, controllo.ARCHIVIO_UE)
     ue.REGISTRO, controllo.SPARQL_UE, controllo.ARCHIVIO_UE = base + "/registro", base + "/archivio", base + "/celex/{}"
     pdf = "https://eur-lex.europa.eu/legal-content/IT/TXT/PDF/?uri=CELEX:{}"
@@ -363,6 +650,28 @@ def prove_delle_sintesi(controllo, base):
              rettifiche=dict(note, **{"52020XC0101(01)": [("52020XC0101(01)R(01)", "2025-05-05")]}))
         giro("sintesi: archivio muto, due fonti non lette (esistenza e rettifiche) e nessun collegamento rotto", (0, 2, 0, 0, "non ha detto se esistono", "rettifiche nuove"),
              stato_archivio=503)
+        giro("sintesi: se l'archivio non restituisce più le rettifiche che i dati conoscono, la risposta non vale (fonte non letta)",
+             (0, 1, 0, 3, "non ha restituito 2 rettifiche", "52021XC0202(02)R(01)"), rettifiche={})
+
+        # documenti su EUR-Lex: l'esistenza la dice l'archivio dell'UE, poi si chiede l'indirizzo del PDF
+        def eurlex(nome, percorso, atteso):
+            FINTO.update({"stato_archivio": 200, "inesistenti": set()})
+            for elenco in (controllo.errori, controllo.non_letti, controllo.novita, controllo.protetti, controllo.da_rivedere, controllo.muti):
+                elenco.clear()
+            controllo.metodi.clear()
+            controllo.di_fila.clear()
+            controllo.controlla_ue("documento «prova»", f"{base}{percorso}?uri=CELEX:52020XC0101%2801%29")
+            controllo.chiudi_da_rivedere(False)
+            visto = (len(controllo.errori), len(controllo.non_letti), len(controllo.protetti), len(controllo.muti),
+                     controllo.metodi["richiesta diretta"], controllo.metodi["archivio dell'UE"])
+            esito(nome, visto == atteso, f"rotti, non letti, protetti, muti, letti, confermati dall'archivio: {visto}; atteso {atteso}")
+
+        eurlex("EUR-Lex: il PDF risponde, letto con la richiesta diretta", "/vero.pdf", (0, 0, 0, 0, 1, 0))
+        eurlex("EUR-Lex: risposta 202 senza contenuto, vale l'esistenza nell'archivio dell'UE", "/attesa.pdf", (0, 0, 0, 0, 0, 1))
+        eurlex("EUR-Lex: errore del server sull'indirizzo del PDF, «non controllato» e non fonte non letta", "/guasto.pdf", (0, 0, 0, 1, 0, 0))
+        eurlex("EUR-Lex: rifiuto (403) sull'indirizzo del PDF, «non controllato» e non fonte non letta", "/rifiuto.pdf", (0, 0, 1, 0, 0, 0))
+        eurlex("EUR-Lex: un 400 sull'indirizzo del PDF resta una fonte non letta", "/negato.pdf", (0, 1, 0, 0, 0, 0))
+        eurlex("EUR-Lex: un 404 sull'indirizzo del PDF è un collegamento rotto", "/manca.pdf", (1, 0, 0, 0, 0, 0))
         vuoto = {"voci": [{"nome": "Formaggio Alfa", "tipo": "DOP"}, {"nome": "Pizza Finta", "tipo": "STG"}]}
         for elenco in (controllo.errori, controllo.non_letti, controllo.novita):
             elenco.clear()
@@ -478,6 +787,31 @@ def prove_delle_risposte():
         esito("un sito tutto muto: anche i file saltati restano «non controllati», non fonti non lette",
               len(controllo.muti) == controllo.SOGLIA_FERMO + 2 and not controllo.non_letti and not controllo.errori,
               f"muti {len(controllo.muti)}, non letti {len(controllo.non_letti)}")
+        controllo.segnala_controllo_mancato(400)
+        pochi_su_molti = not controllo.non_letti
+        controllo.segnala_controllo_mancato(20)
+        esito("troppi collegamenti senza controllo (più di SOGLIA_FERMO e più di un quinto): il giro non vale, è una fonte non letta",
+              pochi_su_molti and len(controllo.non_letti) == 1
+              and f"{controllo.SOGLIA_FERMO + 2} collegamenti su 20 non controllati" in controllo.non_letti[0][1]
+              and controllo.non_letti[0][0].startswith("127.0.0.1"), f"{pochi_su_molti} {controllo.non_letti}")
+        pulisci()
+        controllo.protetti.extend(f"documento «{n}»: {controllo.ANTIBOT}: https://www.esempio.it/{n}.pdf"
+                                  for n in range(controllo.SOGLIA_FERMO))
+        controllo.segnala_controllo_mancato(controllo.SOGLIA_FERMO)
+        esito("pochi collegamenti dietro una verifica anti-bot (fino a SOGLIA_FERMO) non fermano il giro, anche se sono tutti",
+              not controllo.non_letti, controllo.non_letti)
+        tre = {"gruppi": [{"documenti": [{"id": "a", "url": "https://www.esempio.it/a.pdf", "pagina": {"url": "https://www.esempio.it/a"}},
+                                         {"id": "b", "url": "https://www.esempio.it/b.pdf",
+                                          "pagina": {"url": "https://" + controllo.MASAF + "/pagina"}},
+                                         {"id": "c", "url": "https://www.esempio.it/c.pdf"}]}]}
+        esito("i collegamenti da aprire: documenti, pagine degli enti (non quelle del Ministero) e, con --file, i PDF del catalogo",
+              controllo.collegamenti_da_aprire(tre, misto, False) == 4 and controllo.collegamenti_da_aprire(tre, misto, True) == 8,
+              f"{controllo.collegamenti_da_aprire(tre, misto, False)} e {controllo.collegamenti_da_aprire(tre, misto, True)}")
+        pulisci()
+        senza_rete = controllo.rapporto(documenti, catalogo, False, False, rete_saltata=True)
+        esito("il rapporto dice quando i siti non sono stati interrogati per colpa dei dati",
+              "Le richieste ai siti non sono state fatte" in senza_rete and "Controllo fatto: dati." in senza_rete
+              and "Le richieste ai siti non sono state fatte" not in controllo.rapporto(documenti, catalogo, True, False))
         pulisci()
         controllo.controlla_file_del_catalogo({"voci": [{"nome": f"Prodotto {n}", "formato": "pdf", "url": f"{base}/guasto.pdf?n={n}"}
                                                        for n in range(12)]})
@@ -553,6 +887,8 @@ def main():
         prova(base, "documento su un sito non istituzionale",
               nei_documenti(uno, uno.replace("www.salute.gov.it", "www.esempio-privato.it")), "non è fra gli enti ammessi")
         prova(base, "indirizzo http", nei_documenti(uno, uno.replace("https://", "http://")), "indirizzo non https")
+        prova(base, "con i dati sbagliati i siti non si interrogano, e il rapporto lo dice (--rete)",
+              nei_documenti(uno, uno.replace("https://", "http://")), "Le richieste ai siti non sono state fatte", "--rete")
         prova(base, "documento Word al posto del PDF", nei_documenti(uno, uno[:-4] + ".docx"), "non finisce con .pdf")
         prova(base, "parentesi nell'indirizzo", nei_documenti(uno, uno[:-4] + "(1).pdf"), "parentesi nell'indirizzo")
         prova(base, "disciplinare in PDF con un allegato Word", nel_catalogo(word_al_posto_del_pdf),

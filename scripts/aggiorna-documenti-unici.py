@@ -12,8 +12,11 @@ Per ogni prodotto DOP e IGP di data/disciplinari.json questo script:
   2. legge dalla scheda del registro le pubblicazioni in Gazzetta della registrazione e delle modifiche
      approvate (non le temporanee);
   3. dalla più recente, chiede all'archivio dell'Ufficio delle pubblicazioni dell'UE il PDF in italiano e ne
-     legge il testo: vale la prima che contiene «DOCUMENTO UNICO» seguito dal nome del prodotto; se nessuna
-     lo contiene, la prima con «SCHEDA RIEPILOGATIVA» seguita dal nome;
+     legge il testo: vale la prima che contiene «DOCUMENTO UNICO» seguito, entro poche righe, dalla
+     denominazione del prodotto fra virgolette (intera, parola per parola: «Bra» non è «fibra») o dal suo
+     numero di fascicolo; se nessuna lo contiene, la prima con «SCHEDA RIEPILOGATIVA» riconosciuta allo
+     stesso modo. Se una pubblicazione citata non si lascia interpretare, o ha il titolo e il nome ma non in
+     quella forma, il prodotto resta com'era e lo script lo scrive fra le cose da guardare a mano;
   4. scrive nella voce `sintesi` (tipo, indirizzo del PDF su EUR-Lex, data della Gazzetta, pagine, peso),
      `registro_ue` (impronta delle pubblicazioni in Gazzetta che l'elenco del registro cita per il prodotto:
      quando ne esce una nuova l'impronta cambia, e il controllo mensile se ne accorge; non si usa la data
@@ -42,12 +45,17 @@ programmi e non restano sul disco. EUR-Lex non si interroga: alle richieste di u
 senza contenuto. L'indirizzo che si pubblica si costruisce dal numero CELEX, e il documento si verifica
 nell'archivio dell'Ufficio delle pubblicazioni, che di EUR-Lex è la fonte.
 
-Dopo: python3 scripts/check-cucina-emergenza.py --public public (dopo la build) e, con la rete,
-python3 scripts/check-cucina-emergenza.py --rete. Uscita 0; 1 se una fonte non si è fatta leggere.
+Un errore di lettura non cambia i dati: il prodotto per cui una fonte non ha risposto resta com'era, e il
+file si scrive solo alla fine, tutto insieme. Dopo: python3 scripts/check-cucina-emergenza.py --public public
+(dopo la build) e, con la rete, python3 scripts/check-cucina-emergenza.py --rete.
+Uscita 0; 1 se una fonte non si è fatta leggere; 3 se resta qualcosa da guardare a mano (una pubblicazione
+che lo script non sa interpretare, una rettifica nota che l'archivio non restituisce più, un prodotto che
+nel registro non ha più una voce sola con quel nome).
 """
 import argparse
 import hashlib
 import json
+import os
 import re
 import shutil
 import subprocess
@@ -58,6 +66,7 @@ import unicodedata
 import urllib.error
 import urllib.parse
 import urllib.request
+from datetime import date, timedelta
 from pathlib import Path
 
 RADICE = Path(__file__).resolve().parent.parent
@@ -70,9 +79,24 @@ EURLEX_PDF = "https://eur-lex.europa.eu/legal-content/IT/TXT/PDF/?uri=CELEX:{}"
 PAUSA = 0.5           # secondi fra due richieste
 TEMPO_MASSIMO = 120   # secondi per una risposta
 TITOLI = ((r"DOCUMENTO\s+UNICO", "unico"), (r"SCHEDA\s+RIEPILOGATIVA", "scheda"))
-FINESTRA = 1200       # caratteri dopo il titolo in cui deve comparire il nome del prodotto
+FINESTRA = 500        # caratteri dopo il titolo in cui devono comparire la denominazione o il numero del prodotto
 ORE_REGISTRO = 12     # ore oltre le quali l'elenco e le schede del registro tenuti in --cartella si richiedono
 A_GRUPPI_DI = 40      # atti per ogni domanda all'archivio dell'UE (l'indirizzo della richiesta resta corto)
+AVVISI_AL_GIORNO = 40     # numeri d'ordine che si provano per gli avvisi della serie C usciti in un giorno
+MASSIMO_PDF = 60 * 1024 * 1024  # byte: oltre non è un atto della Gazzetta (il più pesante visto è di circa 17 MB)
+ARCHIVIO_FILE = "https://publications.europa.eu/"  # i PDF si scaricano solo dall'archivio
+GIORNI_RETTIFICA_RECENTE = 60   # una rettifica più giovane, senza testo italiano, non si archivia: si riprova
+# Denominazione fra virgolette e numero di riferimento stampati sotto il titolo della sintesi: «PDO-IT-0002-AM03»
+# (dal 2012 circa) o «IT-PDO-0117-0002» (prima: il primo numero è il tipo di domanda, il secondo il fascicolo).
+VIRGOLETTE = re.compile(r"[«“\"]\s*([^»”\"]{2,120}?)\s*[»”\"]")
+RIFERIMENTO = re.compile(r"\b(PDO|PGI|DOP|IGP)[-/ ]IT[-/ ](\d{4,5})\b|\bIT[-/ ](PDO|PGI|DOP|IGP)[-/ ]\d{4}[-/ ](\d{4,5})\b")
+SIGLE = {"DOP": "PDO", "IGP": "PGI"}
+# Un numero CELEX entra fra virgolette in una domanda all'archivio: cifre, maiuscole, parentesi e, per gli atti
+# della serie C fino al 1999 («C1998/405/05»), la barra. Nient'altro.
+CELEX_VALIDO = re.compile(r"[0-9A-Z()/]+")
+# Il sito collega solo atti con il numero CELEX nella forma corrente («52016XC1126(01)»): è quella che il
+# controllo dei dati accetta e per cui l'indirizzo del PDF su EUR-Lex è stato verificato.
+CELEX_COLLEGABILE = re.compile(r"[0-9A-Z()]+")
 CDM = "PREFIX cdm: <http://publications.europa.eu/ontology/cdm#> "
 STRINGA = "^^<http://www.w3.org/2001/XMLSchema#string>"
 
@@ -92,6 +116,40 @@ def parti_del_nome(nome):
     pezzi = [nome] + re.split(r"\s*/\s*|\s+o\s+|,\s*", nome)
     pezzi += [p.replace("S. ", "San ") for p in pezzi]
     return {compatto(p) for p in pezzi if len(compatto(p)) >= 3}
+
+
+def parole(testo):
+    """Minuscole, senza accenti, una parola dopo l'altra: «TERRA D’OTRANTO» e «Terra d'Otranto» → «terra d otranto»."""
+    piano = (testo or "").replace("’", "'").replace("‘", "'").replace("ʼ", "'")
+    ascii_ = unicodedata.normalize("NFKD", piano).encode("ascii", "ignore").decode().lower()
+    return " ".join(re.sub(r"[^a-z0-9]+", " ", ascii_).split())
+
+
+def denominazioni(nomi):
+    """Le denominazioni intere con cui la Gazzetta può scrivere il prodotto: ogni nome e le sue alternative
+    («A / B», «A o B»), parola per parola. A differenza di parti_del_nome, qui un pezzo di nome non basta:
+    «Bra» non deve valere per «fibra» né «Toscano» per «Prosciutto Toscano»."""
+    forme = set()
+    for nome in nomi:
+        for pezzo in [nome or ""] + re.split(r"\s*/\s*|\s+o\s+", nome or ""):
+            for variante in (pezzo, pezzo.replace("S. ", "San ")):
+                if parole(variante):
+                    forme.add(parole(variante))
+    return forme
+
+
+def ha_il_fascicolo(testo, fascicolo):
+    """Vero se fra i numeri di riferimento scritti nel testo c'è il fascicolo del prodotto. Non vale il
+    contrario: un atto di modifica può portare il numero della domanda di modifica al posto del fascicolo."""
+    m = re.fullmatch(r"(PDO|PGI)-IT-0*(\d+)", fascicolo or "")
+    if not m:
+        return False
+    cercato = (m.group(1), int(m.group(2)))
+    for trovato in RIFERIMENTO.finditer(testo):
+        sigla, numero = (trovato.group(1), trovato.group(2)) if trovato.group(1) else (trovato.group(3), trovato.group(4))
+        if (SIGLE.get(sigla, sigla), int(numero)) == cercato:
+            return True
+    return False
 
 
 def fascicolo_normale(numero):
@@ -134,15 +192,17 @@ def impronta_del_registro(voce_del_registro):
 
 # ───────────────────────── richieste ─────────────────────────
 
-def chiedi(url, intestazioni=None, tentativi=3):
-    """(stato, contenuto). Stato 0 se non arriva una risposta utile."""
+def chiedi(url, intestazioni=None, tentativi=3, massimo=None):
+    """(stato, contenuto). Stato 0 se non arriva una risposta utile, o se pesa più di `massimo` byte."""
     ultimo = (0, b"")
     for n in range(tentativi):
         try:
             richiesta = urllib.request.Request(url, headers={"User-Agent": AGENTE, **(intestazioni or {})})
             with urllib.request.urlopen(richiesta, timeout=TEMPO_MASSIMO) as risposta:
-                corpo = risposta.read()
+                corpo = risposta.read() if massimo is None else risposta.read(massimo + 1)
             time.sleep(PAUSA)
+            if massimo is not None and len(corpo) > massimo:
+                return 0, b""
             return risposta.status, corpo
         except urllib.error.HTTPError as e:
             ultimo = (e.code, b"")
@@ -215,6 +275,8 @@ def elenco_del_registro(deposito, riusa):
 
 
 def scheda_del_registro(deposito, identificativo, riusa):
+    if not re.fullmatch(r"[A-Za-z0-9_-]+", identificativo or ""):
+        return None  # l'identificativo finisce in un nome di file e in un indirizzo: solo lettere e cifre
     dati = deposito.leggi("schede", f"{identificativo}.json", ore=ORE_REGISTRO) if riusa else None
     if dati is None:
         stato, corpo = chiedi(SCHEDA.format(identificativo), {"Accept": "application/json"})
@@ -234,7 +296,8 @@ def celex_di(indirizzo):
         return None, None
     m = re.search(r"CELEX(?:%3A|:)([0-9A-Z%()]+)", indirizzo)
     if m:
-        return urllib.parse.unquote(m.group(1)), None
+        numero = urllib.parse.unquote(m.group(1))
+        return (numero, None) if CELEX_VALIDO.fullmatch(numero) else (None, None)
     m = re.search(r"/eli/C/(\d{4})/(\d+)/oj", indirizzo)
     if m:
         return None, f"http://publications.europa.eu/resource/oj/C_{m.group(1)}{int(m.group(2)):05d}"
@@ -251,6 +314,7 @@ def celex_di(indirizzo):
 
 
 def celex_della_risorsa(deposito, risorsa):
+    """Numero CELEX di una risorsa dell'archivio; "" se l'archivio non lo conosce; None se non ha risposto."""
     chiave = "risorsa-" + hashlib.sha256(risorsa.encode()).hexdigest()[:24] + ".json"
     nota = deposito.leggi("atti", chiave)
     if nota:
@@ -262,17 +326,27 @@ def celex_della_risorsa(deposito, risorsa):
     if righe is None:
         non_letti.append(f"l'archivio dell'UE non ha detto il numero CELEX di {risorsa}")
         return None
-    if not righe:
+    try:
+        numero = righe[0]["celex"]["value"] if righe else ""
+    except (KeyError, TypeError):
+        non_letti.append(f"l'archivio dell'UE ha risposto in una forma inattesa per {risorsa}")
         return None
-    deposito.scrivi({"celex": righe[0]["celex"]["value"]}, "atti", chiave)
-    return righe[0]["celex"]["value"]
+    if not CELEX_VALIDO.fullmatch(numero):
+        return ""
+    deposito.scrivi({"celex": numero}, "atti", chiave)
+    return numero
 
 
 def atto_in_italiano(deposito, celex):
     """Dati e testo del PDF italiano di un atto: {"pagine", "kb", "testo"} oppure {"manca": motivo}; None se
     l'archivio non si è fatto leggere."""
+    if not CELEX_VALIDO.fullmatch(celex or ""):
+        return {"manca": "numero CELEX non valido"}
     nome = re.sub(r"[^0-9A-Za-z]", "_", celex)
     noto = deposito.leggi("atti", f"{nome}.json")
+    if noto is not None and "manca" in noto and not noto["manca"].startswith("PDF senza testo"):
+        # un atto che l'archivio non aveva in italiano può arrivare dopo: quel «manca» vale 12 ore
+        noto = deposito.leggi("atti", f"{nome}.json", ore=ORE_REGISTRO)
     if noto is not None:
         if "manca" not in noto:
             noto["testo"] = (deposito.base / "atti" / f"{nome}.txt").read_text(encoding="utf-8")
@@ -286,21 +360,36 @@ def atto_in_italiano(deposito, celex):
     if righe is None:
         non_letti.append(f"l'archivio dell'UE non ha risposto per l'atto {celex}")
         return None
-    file_pdf = sorted(r["item"]["value"] for r in righe if r["tipo"]["value"].startswith("pdf") and "item" in r)
+    try:
+        file_pdf = sorted(r["item"]["value"] for r in righe if r["tipo"]["value"].startswith("pdf") and "item" in r)
+    except (KeyError, TypeError):
+        non_letti.append(f"l'archivio dell'UE ha risposto in una forma inattesa per l'atto {celex}")
+        return None
     if len(file_pdf) != 1:
         dati = {"manca": "l'archivio non ha l'atto in italiano" if not righe else f"{len(file_pdf)} file PDF in italiano"}
         deposito.scrivi(dati, "atti", f"{nome}.json")
         return dati
-    stato, corpo = chiedi(file_pdf[0].replace("http://", "https://"), {"Accept": "*/*"})
+    indirizzo = file_pdf[0].replace("http://", "https://", 1)
+    if not indirizzo.startswith(ARCHIVIO_FILE):
+        non_letti.append(f"per l'atto {celex} l'archivio dell'UE indica un file fuori dal suo sito: non scaricato")
+        return None
+    stato, corpo = chiedi(indirizzo, {"Accept": "*/*"}, massimo=MASSIMO_PDF)
     if stato != 200 or not corpo.startswith(b"%PDF-"):
-        non_letti.append(f"PDF dell'atto {celex} non scaricato dall'archivio dell'UE (HTTP {stato})")
+        non_letti.append(f"PDF dell'atto {celex} non scaricato dall'archivio dell'UE (HTTP {stato}, o file troppo pesante)")
         return None
     with tempfile.TemporaryDirectory() as temporanea:
         percorso = Path(temporanea) / "atto.pdf"
         percorso.write_bytes(corpo)
-        info = subprocess.run(["pdfinfo", str(percorso)], capture_output=True, timeout=120).stdout.decode("utf-8", "replace")
-        testo = subprocess.run(["pdftotext", "-q", "-enc", "UTF-8", str(percorso), "-"], capture_output=True,
-                               timeout=300).stdout.decode("utf-8", "replace")
+        try:
+            dati_pdf = subprocess.run(["pdfinfo", str(percorso)], capture_output=True, timeout=120)
+            letto = subprocess.run(["pdftotext", "-q", "-enc", "UTF-8", str(percorso), "-"], capture_output=True, timeout=300)
+        except subprocess.TimeoutExpired:
+            non_letti.append(f"il PDF dell'atto {celex} non si è lasciato leggere in tempo")
+            return None
+    if dati_pdf.returncode != 0 or letto.returncode != 0:
+        non_letti.append(f"il PDF dell'atto {celex} non si è lasciato leggere (pdfinfo {dati_pdf.returncode}, pdftotext {letto.returncode})")
+        return None
+    info, testo = dati_pdf.stdout.decode("utf-8", "replace"), letto.stdout.decode("utf-8", "replace")
     pagine = re.search(r"^Pages:\s+(\d+)", info, re.M)
     if not pagine or len(testo.strip()) < 200:
         dati = {"manca": "PDF senza testo leggibile"}
@@ -312,15 +401,29 @@ def atto_in_italiano(deposito, celex):
     return dict(dati, testo=testo)
 
 
-def che_sintesi_contiene(testo, nomi):
-    """«unico» o «scheda» se il testo ha quel titolo seguito, entro FINESTRA caratteri, dal nome del prodotto."""
+def che_sintesi_contiene(testo, forme, fascicolo=""):
+    """(tipo, dubbio). tipo è «unico» o «scheda» se il testo ha quel titolo e, nei FINESTRA caratteri che
+    seguono, la prima denominazione fra virgolette è una di `forme` (intera, parola per parola) oppure il
+    numero di riferimento è il fascicolo del prodotto. dubbio è il tipo quando il titolo c'è e una
+    denominazione compare lì vicino, ma non in quella forma: allora non si decide da soli."""
     piano = " ".join(testo.split())
+    dubbio = ""
     for titolo, tipo in TITOLI:
         for trovato in re.finditer(titolo, piano):
-            vicino = compatto(piano[trovato.start():trovato.start() + FINESTRA])
-            if any(nome in vicino for nome in nomi):
-                return tipo
-    return ""
+            finestra = piano[trovato.end():trovato.end() + FINESTRA]
+            citate = VIRGOLETTE.findall(finestra)
+            if citate:
+                prima = parole(citate[0])
+                senza_sigla = re.sub(r" (dop|igp|pdo|pgi)$", "", prima)
+                pezzi = [parole(pezzo) for pezzo in re.split(r"\s*/\s*", citate[0]) if parole(pezzo)]
+                if prima in forme or senza_sigla in forme or (pezzi and all(pezzo in forme for pezzo in pezzi)):
+                    return tipo, ""
+            if ha_il_fascicolo(finestra, fascicolo):
+                return tipo, ""
+            vicino = f" {parole(finestra)} "
+            if not dubbio and any(f" {forma} " in vicino for forma in forme if len(forma) >= 4):
+                dubbio = tipo
+    return "", dubbio
 
 
 # ───────────────────────── domande a gruppi all'archivio dell'UE ─────────────────────────
@@ -333,7 +436,7 @@ def celex_dell_indirizzo(url):
 
 def a_gruppi(numeri):
     """I numeri CELEX in gruppi da A_GRUPPI_DI, senza doppioni; solo cifre, maiuscole e parentesi."""
-    buoni = sorted({n for n in numeri if n and re.fullmatch(r"[0-9A-Z()]+", n)})
+    buoni = sorted({n for n in numeri if n and CELEX_COLLEGABILE.fullmatch(n)})
     return [buoni[i:i + A_GRUPPI_DI] for i in range(0, len(buoni), A_GRUPPI_DI)]
 
 
@@ -355,8 +458,13 @@ def righe_delle_rettifiche(righe):
     """{atto: [(numero CELEX della rettifica, data AAAA-MM-GG o vuota)]} dalle risposte a domanda_rettifiche."""
     trovate = {}
     for r in righe:
-        trovate.setdefault(r["atto"]["value"], set()).add((r["rettifica"]["value"], (r.get("data") or {}).get("value", "")[:10]))
-    return {atto: sorted(coppie, key=lambda c: (c[1], c[0])) for atto, coppie in trovate.items()}
+        date = trovate.setdefault(r["atto"]["value"], {}).setdefault(r["rettifica"]["value"], set())
+        data = (r.get("data") or {}).get("value", "")[:10]
+        if data:
+            date.add(data)  # l'archivio può dare più date per la stessa rettifica: vale la prima
+    return {atto: sorted(((numero, min(date) if date else "") for numero, date in per_numero.items()),
+                         key=lambda coppia: (coppia[1], coppia[0]))
+            for atto, per_numero in trovate.items()}
 
 
 def rettifiche_nell_archivio(atti):
@@ -370,32 +478,47 @@ def rettifiche_nell_archivio(atti):
     return righe_delle_rettifiche(righe)
 
 
-def rettifica_cita_l_atto(testo_rettifica, celex, testo_atto, nomi):
-    """Seconda verifica, oltre alla relazione dell'archivio: la rettifica nomina il prodotto, oppure il numero
-    dell'atto («C/2025/3944», Gazzetta dal 1º ottobre 2023), oppure il fascicolo della Gazzetta in cui l'atto è
-    uscito («C 440 del 26 novembre 2016»), che si ricava dai numeri di pagina stampati nell'atto («C 440/7»)."""
+def rettifica_cita_l_atto(testo_rettifica, celex, testo_atto, forme, data_atto=""):
+    """Seconda verifica, oltre alla relazione dell'archivio: la rettifica nomina il prodotto (la denominazione
+    intera), oppure il numero dell'atto («C/2025/3944», Gazzetta dal 1º ottobre 2023), oppure il fascicolo della
+    Gazzetta in cui l'atto è uscito insieme al suo anno («C 440 del 26 novembre 2016»): il fascicolo si ricava
+    dai numeri di pagina stampati nell'atto («C 440/7»), l'anno dalla data dell'atto, perché la numerazione
+    dei fascicoli riparte ogni anno."""
     piano = " ".join(testo_rettifica.split())
     if "ettifica" not in piano:
         return False
-    stretto = compatto(piano)
-    if any(nome in stretto for nome in nomi if len(nome) >= 6):
+    disteso = f" {parole(piano)} "
+    if any(f" {forma} " in disteso for forma in forme if len(forma) >= 4):
         return True
     nuovo = re.fullmatch(r"5(\d{4})XC0*(\d+)", celex)
     if nuovo and re.search(rf"C/{nuovo.group(1)}/{int(nuovo.group(2))}(?!\d)", piano):
         return True
+    anno = (data_atto or "")[:4]
+    if not re.fullmatch(r"\d{4}", anno):
+        return False
     fascicoli = set(re.findall(r"\b([CL] \d{1,3})/\d+\b", testo_atto))
-    return any(re.search(rf"\b{re.escape(f)} del\b", piano) for f in fascicoli)
+    return any(re.search(rf"\b{re.escape(f)} del\b[^()]{{0,40}}\b{anno}\b", piano) for f in fascicoli)
 
 
-def aggiorna_rettifiche(deposito, voce, trovate, nomi, sempre=False):
+def aggiorna_rettifiche(deposito, voce, trovate, forme, sempre=False, anche_meno=False):
     """Scrive in voce["sintesi"] le rettifiche dell'atto: quelle con il testo in italiano che citano l'atto in
-    «rettifiche», le altre in «rettifiche_altre». Restituisce gli avvisi per chi lancia lo script; None se una
-    fonte non si è fatta leggere, e allora la voce resta com'era."""
+    «rettifiche», le altre in «rettifiche_altre». Una rettifica recente che non ha ancora il testo in italiano
+    non si annota: resta una novità per il controllo mensile, finché il testo arriva. Se nella risposta
+    dell'archivio manca una rettifica che i dati conoscono, la voce resta com'era: l'archivio può aver risposto
+    a metà, e una rettifica pubblicata non si toglie per questo (con `anche_meno`, cioè quando chi lancia lo
+    script ha chiesto proprio quel prodotto, vale la risposta dell'archivio). Restituisce gli avvisi per chi
+    lancia lo script; None se una fonte non si è fatta leggere, e anche allora la voce resta com'era."""
     sintesi = voce["sintesi"]
+    recente = (date.today() - timedelta(days=GIORNI_RETTIFICA_RECENTE)).isoformat()
     celex = celex_dell_indirizzo(sintesi["url"])
     gia = {celex_dell_indirizzo(r["url"]) for r in sintesi.get("rettifiche", [])} | set(sintesi.get("rettifiche_altre", []))
     if not sempre and {numero for numero, _ in trovate} == gia:
         return []
+    sparite = sorted(gia - {numero for numero, _ in trovate})
+    if sparite and not anche_meno:
+        return [f"«{voce['nome']}»: l'archivio dell'UE non restituisce più {', '.join(sparite)}, che i dati conoscono come "
+                f"rettifiche dell'atto {celex}: le rettifiche restano com'erano. Se l'archivio ha davvero tolto il "
+                f"legame: --nome \"{voce['nome']}\""]
     avvisi, mostrate, altre = [], [], []
     atto = atto_in_italiano(deposito, celex) if trovate else {}
     if atto is None:
@@ -405,9 +528,13 @@ def aggiorna_rettifiche(deposito, voce, trovate, nomi, sempre=False):
         if rettifica is None:
             return None
         if "manca" in rettifica:
-            altre.append(numero)  # non c'è in italiano: corregge altre versioni linguistiche
+            if not data or data >= recente:
+                avvisi.append(f"«{voce['nome']}»: la rettifica {numero} non ha ancora il testo in italiano "
+                              f"({rettifica['manca']}): non annotata, si riprova al prossimo giro")
+            else:
+                altre.append(numero)  # non c'è in italiano: corregge altre versioni linguistiche
         elif (not re.fullmatch(r"\d{4}-\d{2}-\d{2}", data) or "manca" in atto
-              or not rettifica_cita_l_atto(rettifica["testo"], celex, atto["testo"], nomi)):
+              or not rettifica_cita_l_atto(rettifica["testo"], celex, atto["testo"], forme, sintesi.get("data", ""))):
             altre.append(numero)
             avvisi.append(f"«{voce['nome']}»: la rettifica {numero} non è stata collegata (senza data, o non cita "
                           f"l'atto {celex}): da guardare a mano")
@@ -446,45 +573,70 @@ def pubblicazioni(scheda):
         elenco += [(data_del_registro(p.get("date")), p.get("uri"), (p.get("text") or "").strip())
                    for p in modifica.get("officialPublication") or []]
     elenco = [p for p in elenco if p[1] and "orrigendum" not in p[2]]
-    return sorted(elenco, reverse=True)
+    # una pubblicazione senza data va in testa: finché non si sa di quando è, non si può dire qual è l'ultima
+    return sorted(elenco, key=lambda p: (p[0] or "9999-99-99", p[1], p[2]), reverse=True)
 
 
 def cerca_sintesi(deposito, voce, del_registro, scheda):
-    """La sintesi più recente del prodotto: (dati, tutto_letto). Senza sintesi i dati sono None."""
-    nomi = set(parti_del_nome(voce["nome"]))
-    for nome in del_registro.get("protectedNames") or []:
-        nomi |= parti_del_nome(nome)
-    riserva, tutto_letto = None, True
+    """La sintesi più recente del prodotto: (dati, tutto_letto, da_guardare). Senza sintesi i dati sono None.
+    tutto_letto è falso se una fonte non ha risposto; da_guardare elenca ciò che lo script non sa decidere
+    da solo (pubblicazione senza data o non interpretabile, sintesi che nomina il prodotto in un'altra forma).
+    In tutti e due i casi chi chiama lascia il prodotto com'era."""
+    forme = denominazioni([voce["nome"]] + list(del_registro.get("protectedNames") or []))
+    fascicolo = del_registro.get("fileNumber") or voce.get("fascicolo") or ""
+    riserva = None
     for data, indirizzo, testo_rif in pubblicazioni(scheda):
+        if "corrigendum" in indirizzo:
+            continue  # le rettifiche si trattano a parte, con la relazione «corregge» dell'archivio
+        citata = f"{testo_rif or 'senza testo'}, {indirizzo}"
+        if not data:
+            return None, True, [f"«{voce['nome']}»: il registro cita una pubblicazione senza data ({citata}): non si "
+                                f"può dire qual è la più recente"]
         celex, risorsa = celex_di(indirizzo)
-        candidati = [celex] if celex else []
+        candidati, a_numeri = ([celex] if celex else []), False
         if risorsa:
             trovato = celex_della_risorsa(deposito, risorsa)
+            if trovato is None:
+                return None, False, []
             candidati = [trovato] if trovato else []
-        elif not celex and data and data < "2023-10-01" and re.search(r"Official Journal C\b", testo_rif):
+        elif not celex and data < "2023-10-01" and re.search(r"Official Journal C\b", testo_rif):
             # il registro cita solo il fascicolo della Gazzetta: fino al 30/9/2023 gli avvisi della serie C
-            # hanno CELEX 5AAAAXCMMGG(NN), e si provano quelli di quel giorno
+            # hanno CELEX 5AAAAXCMMGG(NN), e si provano quelli di quel giorno, uno dopo l'altro
             aaaa, mm, gg = data.split("-")
-            candidati = [f"5{aaaa}XC{mm}{gg}({n:02d})" for n in range(1, 16)]
+            candidati, a_numeri = [f"5{aaaa}XC{mm}{gg}({n:02d})" for n in range(1, AVVISI_AL_GIORNO + 1)], True
+        if not candidati:
+            return None, True, [f"«{voce['nome']}»: pubblicazione che lo script non sa interpretare ({citata})"]
+        vuoti = 0
         for numero in candidati:
             atto = atto_in_italiano(deposito, numero)
             if atto is None:
-                tutto_letto = False
-                break
+                return None, False, []
             if "manca" in atto:
-                if len(candidati) > 1 and numero.endswith(tuple(f"({n:02d})" for n in range(4, 16))):
-                    break  # finiti gli avvisi di quel giorno
+                vuoti += 1
+                if a_numeri and vuoti >= 3:
+                    break  # tre numeri di fila senza un atto in italiano: gli avvisi di quel giorno sono finiti
                 continue
-            tipo = che_sintesi_contiene(atto["testo"], nomi)
+            vuoti = 0
+            tipo, dubbio = che_sintesi_contiene(atto["testo"], forme, fascicolo)
             if not tipo:
+                if dubbio and not a_numeri:
+                    # l'atto è citato dal registro per questo prodotto e ha il titolo, ma la denominazione non è
+                    # scritta come ci si aspetta: collegarlo o saltarlo sarebbero tutti e due una scelta al buio
+                    return None, True, [f"«{voce['nome']}»: l'atto {numero} ha "
+                                        f"{'un documento unico' if dubbio == 'unico' else 'una scheda riepilogativa'} "
+                                        f"che nomina il prodotto, ma non come denominazione sotto il titolo"]
                 continue
+            if not CELEX_COLLEGABILE.fullmatch(numero):
+                return None, True, [f"«{voce['nome']}»: l'atto {numero} contiene "
+                                    f"{'un documento unico' if tipo == 'unico' else 'una scheda riepilogativa'}, ma ha un "
+                                    f"numero CELEX di vecchio tipo: il collegamento al PDF va cercato a mano"]
             sintesi = {"tipo": tipo, "url": EURLEX_PDF.format(numero.replace("(", "%28").replace(")", "%29")),
                        "data": data, "pagine": atto["pagine"], "kb": atto["kb"]}
             if tipo == "unico":
-                return sintesi, tutto_letto
+                return sintesi, True, []
             riserva = riserva or sintesi
             break
-    return riserva, tutto_letto
+    return riserva, True, []
 
 
 # ───────────────────────── il file dei dati ─────────────────────────
@@ -502,6 +654,14 @@ def testo_del_catalogo(dati):
         else:
             righe.append(f'  "{chiave}": {json.dumps(valore, ensure_ascii=False)}{virgola}')
     return "\n".join(righe + ["}"]) + "\n"
+
+
+def scrivi_catalogo(testo):
+    """Scrive il file dei dati tutto insieme: prima su un file accanto, poi al suo posto. Un'interruzione a
+    metà lascia il file com'era."""
+    provvisorio = FILE_CATALOGO.with_name(FILE_CATALOGO.name + ".tmp")
+    provvisorio.write_text(testo, encoding="utf-8")
+    os.replace(provvisorio, FILE_CATALOGO)
 
 
 def riordina(voce):
@@ -531,9 +691,13 @@ def main():
         catalogo["voci"] = [riordina(v) for v in catalogo["voci"]]
         nuovo = testo_del_catalogo(catalogo)
         if nuovo != originale:
-            FILE_CATALOGO.write_text(nuovo, encoding="utf-8")
+            scrivi_catalogo(nuovo)
         print("File dei dati riscritto nel suo formato." if nuovo != originale else "Il file dei dati era già nel suo formato.")
         return 0
+    sconosciuti = sorted(set(args.nome) - {v["nome"] for v in catalogo["voci"]})
+    if sconosciuti:
+        ap.error("nel catalogo non c'è un prodotto con questo nome (va scritto come in data/disciplinari.json): "
+                 + "; ".join(sconosciuti))
     for programma in ("pdftotext", "pdfinfo"):
         if not shutil.which(programma):
             sys.exit(f"Manca {programma}: sudo apt-get update && sudo apt-get install -y poppler-utils")
@@ -560,19 +724,24 @@ def main():
             scheda = scheda_del_registro(deposito, del_registro["giIdentifier"], riusa=bool(args.cartella))
             if scheda is None:
                 non_letti.append(f"scheda del registro non letta per «{voce['nome']}»")
-                continue
-            sintesi, tutto_letto = cerca_sintesi(deposito, voce, del_registro, scheda)
-            letti += 1
-            if not tutto_letto:
-                continue  # una pubblicazione non si è fatta leggere: la voce resta com'era
-            if sintesi:
-                vecchia = voce.get("sintesi") or {}
-                if vecchia.get("url") == sintesi["url"]:  # stesso atto: le rettifiche già note restano
-                    sintesi.update({k: vecchia[k] for k in ("rettifiche", "rettifiche_altre") if k in vecchia})
-                voce["sintesi"] = sintesi
+                sintesi, tutto_letto, da_guardare = None, False, []
             else:
-                voce.pop("sintesi", None)
-            voce["registro_ue"] = impronta
+                sintesi, tutto_letto, da_guardare = cerca_sintesi(deposito, voce, del_registro, scheda)
+                letti += 1
+            if not tutto_letto:
+                pass  # una fonte non si è fatta leggere: sintesi e impronta restano com'erano
+            elif da_guardare:
+                # sintesi e impronta restano com'erano: così il controllo mensile continua a segnalare il prodotto
+                avvisi += [riga + ": il prodotto resta com'era, da guardare a mano" for riga in da_guardare]
+            else:
+                if sintesi:
+                    vecchia = voce.get("sintesi") or {}
+                    if vecchia.get("url") == sintesi["url"]:  # stesso atto: le rettifiche già note restano
+                        sintesi.update({k: vecchia[k] for k in ("rettifiche", "rettifiche_altre") if k in vecchia})
+                    voce["sintesi"] = sintesi
+                else:
+                    voce.pop("sintesi", None)
+                voce["registro_ue"] = impronta
         if json.dumps(voce, ensure_ascii=False, sort_keys=True) != prima:
             cambiate.append(voce["nome"])
         if letti and letti % 25 == 0:
@@ -585,11 +754,9 @@ def main():
         non_letti.append("l'archivio dell'UE non ha detto quali atti hanno una rettifica: le rettifiche restano com'erano")
     for voce in scelte if note is not None else []:
         prima = json.dumps(voce, ensure_ascii=False, sort_keys=True)
-        nomi = set(parti_del_nome(voce["nome"]))
-        for nome in (abbina(voce, per_nome) or {}).get("protectedNames") or []:
-            nomi |= parti_del_nome(nome)
-        esito = aggiorna_rettifiche(deposito, voce, note.get(celex_dell_indirizzo(voce["sintesi"]["url"]), []), nomi,
-                                    sempre=args.tutti or bool(args.nome))
+        forme = denominazioni([voce["nome"]] + list((abbina(voce, per_nome) or {}).get("protectedNames") or []))
+        esito = aggiorna_rettifiche(deposito, voce, note.get(celex_dell_indirizzo(voce["sintesi"]["url"]), []), forme,
+                                    sempre=args.tutti or bool(args.nome), anche_meno=bool(args.nome))
         if esito is None:
             non_letti.append(f"rettifiche di «{voce['nome']}» non lette")
             continue
@@ -617,11 +784,11 @@ def main():
     if args.prova:
         print("Prova: il file non è stato scritto." if nuovo != originale else "Prova: nessun cambiamento.")
     elif nuovo != originale:
-        FILE_CATALOGO.write_text(nuovo, encoding="utf-8")
+        scrivi_catalogo(nuovo)
         print(f"Scritto {FILE_CATALOGO.relative_to(RADICE)}.")
     else:
         print("Nessun cambiamento.")
-    return 1 if non_letti else 0
+    return 1 if non_letti else 3 if avvisi or senza_voce else 0
 
 
 if __name__ == "__main__":

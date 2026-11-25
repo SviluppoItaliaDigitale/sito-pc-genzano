@@ -41,7 +41,7 @@
 {{- end }}
 
 {{- else if eq $parte "sintesi" -}}
-<p class="disc-riepilogo">Le sintesi europee collegate sono {{ $sintesi }}: {{ $unici }} {{ if eq $unici 1 }}documento unico{{ else }}documenti unici{{ end }} e {{ $schede }} {{ if eq $schede 1 }}scheda riepilogativa{{ else }}schede riepilogative{{ end }}{{ if $rettifiche }}, con {{ $rettifiche }} {{ if eq $rettifiche 1 }}rettifica{{ else }}rettifiche{{ end }}{{ end }}. Per {{ sub $indicazioni $sintesi }} prodotti DOP e IGP il registro europeo non cita nessuna pubblicazione che ne contenga una.</p>
+<p class="disc-riepilogo">Le sintesi europee collegate sono {{ $sintesi }}: {{ $unici }} {{ if eq $unici 1 }}documento unico{{ else }}documenti unici{{ end }} e {{ $schede }} {{ if eq $schede 1 }}scheda riepilogativa{{ else }}schede riepilogative{{ end }}{{ if $rettifiche }}, con {{ $rettifiche }} {{ if eq $rettifiche 1 }}rettifica{{ else }}rettifiche{{ end }}{{ end }}.{{ with sub $indicazioni $sintesi }} Per {{ . }} {{ if eq . 1 }}prodotto{{ else }}prodotti{{ end }} DOP e IGP, nelle pubblicazioni che il registro europeo cita, non abbiamo trovato una sintesi da collegare.{{ end }}</p>
 
 {{- else if eq $parte "filtri" -}}
 {{- $conta := dict -}}

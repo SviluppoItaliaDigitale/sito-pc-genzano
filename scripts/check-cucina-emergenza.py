@@ -39,12 +39,13 @@ di enti governativi e istituzionali. Lo script la fa rispettare in due modi.
       - --aggiorna-data (con --file): se tutto è stato letto e nulla è rotto, scrive la data di oggi in
         «verificato» dei due file di dati. Ogni mese: .github/workflows/controllo-cucina-emergenza.yml.
 
-Uscita: 0 tutto a posto; 1 collegamenti rotti o dati sbagliati; 2 una fonte non si è fatta leggere (pagine del
-Ministero, registro europeo, archivio dell'UE, un indirizzo che risponde con altro al posto del PDF: regola
-guasti, un controllo che non legge la sua fonte non chiude in verde); 3 solo novità da valutare, oppure
-collegamenti non controllati perché il sito chiede una verifica anti-bot o non ha risposto in tempo (regola
-guasti, punto 3: non sono guasti, ma si dichiarano, e la data di verifica resta ferma: se dura più di 45
-giorni lo dice l'audit del sito con --eta).
+Uscita: 0 tutto a posto; 1 collegamenti rotti o dati sbagliati (con i dati sbagliati i siti non si interrogano,
+e il rapporto lo dice); 2 una fonte non si è fatta leggere (pagine del Ministero, registro europeo, archivio
+dell'UE, un indirizzo che risponde con altro al posto del PDF, oppure troppi collegamenti rimasti senza
+controllo: più di 5 e più di un quinto di quelli da aprire. Regola guasti: un controllo che non legge la sua
+fonte non chiude in verde); 3 solo novità da valutare, oppure pochi collegamenti non controllati perché il
+sito chiede una verifica anti-bot o non ha risposto in tempo (regola guasti, punto 3: non sono guasti, ma si
+dichiarano, e la data di verifica resta ferma: se dura più di 45 giorni lo dice l'audit del sito con --eta).
 Dati: data/cucina_emergenza.yaml, data/disciplinari.json. Le sintesi europee le scrive nei dati
 scripts/aggiorna-documenti-unici.py, da cui questo script prende le funzioni sul registro e sull'archivio.
 """
@@ -97,6 +98,7 @@ PAUSA = 0.7            # secondi fra due richieste allo stesso sito
 TEMPO_MASSIMO = 90     # secondi per una risposta: nei periodi lenti il sito del Ministero ne impiega 30-40
 CONTEMPORANEE = 3      # richieste insieme per i PDF del catalogo: di più, il sito del Ministero risponde 502
 SOGLIA_FERMO = 5       # richieste di fila senza risposta utile dopo le quali un sito non si interroga più
+QUOTA_FERMA = 0.2      # parte dei collegamenti da aprire: se ne restano di più senza controllo, il giro non vale
 MASSIMO_BROWSER = 80   # collegamenti che si riprovano con il browser in un giro
 TEMPO_RICHIESTE = 35 * 60  # secondi in tutto per le richieste dirette: oltre, ciò che resta è «non controllato»
 TEMPO_BROWSER = 12 * 60    # secondi in tutto per il ripiego con il browser
@@ -588,6 +590,12 @@ def controlla_ue(dove, url):
         metodi["richiesta diretta"] += 1
     elif stato in (200, 202):
         da_rivedere.append((dove, url, "EUR-Lex"))
+    elif errore in ("HTTP 403", "HTTP 429"):
+        protetti.append(f"{dove}: {RIFIUTO} ({errore}): {url}")
+    elif SILENZIO.search(errore or f"HTTP {stato}"):
+        # il documento esiste nell'archivio (controllato qui sopra): è l'indirizzo di EUR-Lex che da questa
+        # macchina non ha risposto. Come per gli altri siti: né rotto né controllato (regola guasti, punto 3)
+        muti.append(f"{dove}: {errore or 'HTTP ' + str(stato)}: {url}")
     else:
         non_letti.append((EURLEX, f"{dove}: {errore or 'HTTP ' + str(stato)}: {url}"))
 
@@ -746,6 +754,14 @@ def controlla_archivio_delle_sintesi(ue, voci):
                 if nome and numero not in conosciute:
                     novita.append(f"disciplinare «{nome}»: l'archivio dell'UE ha una rettifica della sintesi europea che i "
                                   f"dati non conoscono ({numero}" + (f", del {giorno(quando)}" if giorno(quando) else "") + ")")
+        # la controprova: le rettifiche che i dati conoscono devono tornare nella risposta. Se mancano, la
+        # risposta è incompleta o la domanda non funziona più, e «nessuna rettifica nuova» non vorrebbe dire nulla
+        perse = sorted((atto, numero) for atto in gruppo for numero in note[atto][1]
+                       if numero not in {n for n, _ in legate.get(atto, [])})
+        if perse:
+            non_letti.append((ARCHIVIO, f"l'archivio dell'UE non ha restituito {len(perse)} rettifiche che i dati conoscono "
+                                        f"(la prima: {perse[0][1]}, dell'atto {perse[0][0]}): risposta incompleta, non si sa "
+                                        f"se ci sono rettifiche nuove"))
 
 
 def controlla_europa(catalogo):
@@ -946,6 +962,32 @@ def chiudi_da_rivedere(con_browser):
             non_letti.append((sito(url), f"{dove}: {nota_browser or nota}: {url}"))
 
 
+def collegamenti_da_aprire(documenti, catalogo, anche_file):
+    """Quanti collegamenti il giro apre con una richiesta sua: documenti, pagine degli enti e, con --file, i PDF
+    del catalogo. Le sintesi europee non si contano: di quelle si chiede all'archivio dell'UE."""
+    quanti = 0
+    for doc in tutti_i_documenti(documenti):
+        quanti += 1 + bool(doc.get("pagina") and sito(doc["pagina"]["url"]) != MASAF)
+    if anche_file:
+        quanti += sum((voce["formato"] == "pdf") + len(voce.get("extra", [])) for voce in catalogo["voci"])
+    return quanti
+
+
+def segnala_controllo_mancato(da_aprire):
+    """Qualche collegamento dietro una verifica anti-bot o senza risposta è un collegamento da riaprire, e il
+    giro resta verde (regola guasti, punto 3). Quando sono più di SOGLIA_FERMO e più di QUOTA_FERMA di quelli
+    da aprire, è il controllo che non c'è stato (rete della macchina, un sito fermo, una fonte intera che
+    rifiuta i programmi): vale la regola guasti, punto 1, e il giro non chiude in verde."""
+    fermi = protetti + muti
+    if len(fermi) <= SOGLIA_FERMO or len(fermi) <= QUOTA_FERMA * da_aprire:
+        return
+    per_sito = Counter(sito(voce.rsplit(": ", 1)[-1]) for voce in fermi).most_common()
+    non_letti.append((per_sito[0][0], f"{len(fermi)} collegamenti su {da_aprire} non controllati ("
+                                      + ", ".join(f"{quanti} di {host}" for host, quanti in per_sito)
+                                      + "): sono troppi perché il giro valga come controllo dei collegamenti. "
+                                        "L'elenco è nelle due sezioni dei collegamenti non controllati"))
+
+
 # ───────────────────────── rapporto, data, uscita ─────────────────────────
 
 def elenco_per_sito(voci):
@@ -962,7 +1004,7 @@ def elenco_per_sito(voci):
     return righe
 
 
-def rapporto(documenti, catalogo, con_rete, anche_file):
+def rapporto(documenti, catalogo, con_rete, anche_file, rete_saltata=False):
     n_doc = len(tutti_i_documenti(documenti))
     n_pdf = sum(1 for v in catalogo["voci"] if v["formato"] == "pdf")
     n_ue = sum(len(collegamenti_europei(v)) for v in catalogo["voci"])
@@ -972,6 +1014,9 @@ def rapporto(documenti, catalogo, con_rete, anche_file):
              f"Documenti: {n_doc}. Disciplinari in PDF: {n_pdf}. Sintesi europee e rettifiche: {n_ue}. "
              f"Data scritta nei dati: {catalogo['verificato']}.",
              f"Controllo fatto: {fatto}."]
+    if rete_saltata:
+        righe.append("Le richieste ai siti non sono state fatte: i dati hanno gli errori elencati qui sotto, e vanno "
+                     "corretti prima. Nessun collegamento è stato riaperto in questo giro.")
     if metodi:
         righe.append("PDF letti: " + ", ".join(f"{n} con {m}" for m, n in sorted(metodi.items())) + ".")
     if senza_browser:
@@ -1051,14 +1096,16 @@ def main():
         controlla_eta(documenti, catalogo, args.eta)
     if args.public:
         controlla_pagine(args.public, documenti, catalogo)
-    if args.rete and not errori:
+    rete_fatta = args.rete and not errori  # con i dati sbagliati non si interrogano i siti: prima si correggono
+    if rete_fatta:
         global scadenza
         scadenza = time.time() + TEMPO_RICHIESTE
         controlla_rete(documenti, catalogo, args.file)
         chiudi_da_rivedere(args.browser)
+        segnala_controllo_mancato(collegamenti_da_aprire(documenti, catalogo, args.file))
         if args.aggiorna_data and not errori and not non_letti and not protetti and not muti:
             catalogo["verificato"] = aggiorna_data()
-    testo = rapporto(documenti, catalogo, args.rete, args.rete and args.file)
+    testo = rapporto(documenti, catalogo, rete_fatta, rete_fatta and args.file, rete_saltata=args.rete and not rete_fatta)
     if args.rapporto:
         Path(args.rapporto).write_text(testo, encoding="utf-8")
     print(testo)
