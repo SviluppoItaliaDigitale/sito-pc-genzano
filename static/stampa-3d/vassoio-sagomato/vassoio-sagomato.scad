@@ -106,7 +106,9 @@ VITE_Z = 14.5;                                 // quota delle viti di giunzione 
 VITI_1 = [-110, 110]; VITI_2 = [-85, 0, 85];   // viti della prima e della seconda giunzione
 // Piedini: quattro per pezzo, così ogni pezzo sta in piedi anche da solo
 // Davanti a ogni testa di vite restano almeno 25 mm liberi per la chiave: per questo il secondo piedino sta a x = 105
-PIEDI = [[22, 98], [105, 109], [168, 109], [312, 107], [340, 110], [434, 98]];
+// Il quinto piedino sta a x = 335 e non più a 340: così, nella pila, il piedino del vassoio sopra passa a 2 mm dall'angolo
+// della targhetta del vassoio sotto (che comincia a x = 343) e la targhetta può restare montata.
+PIEDI = [[22, 98], [105, 109], [168, 109], [312, 107], [335, 110], [434, 98]];
 
 /* ---------- Targhetta ---------- */
 
@@ -207,7 +209,7 @@ module nervature2d() {
 INCISO = 0.4;
 module etichetta(t, p) { translate(p) text(t, size = 5, font = font2, halign = "center", valign = "center"); }
 module etichette2d() {
-    etichetta("PIATTO", [95, -104]);
+    etichetta("PIATTO", [91, -104]);
     etichetta("POSATE", [POS_X, -106]);
     etichetta("BICCHIERE", [CX, 38.5]);
     etichetta("BOTTIGLIA", [BX, -51.5]);
@@ -220,13 +222,13 @@ module piede(p) {
     translate([p[0], p[1], PIANO - 0.01]) cylinder(d1 = 20, d2 = 13, h = PIEDE - PIANO, $fn = 48);
 }
 // Vassoi impilabili (25/11/2026, richiesta di Alessandro): sopra ogni piedino, sulla faccia dove si appoggiano le
-// stoviglie, c'è un incavo tondo profondo 1,2 mm, largo 14,6 mm in alto e 13,4 mm in fondo. I piedini del vassoio
+// stoviglie, c'è un incavo tondo profondo 1,2 mm, largo 15 mm in alto e 13,8 mm in fondo (0,8 mm più del piedino: una stampa a filo stringe i fori). I piedini del vassoio
 // messo sopra finiscono con un piano di 13 mm e ci entrano: i vassoi vuoti non scivolano uno sull'altro. L'incavo è
 // scavato nel pieno del piedino, che lì è largo 20 mm, quindi non lascia pareti sottili. Ogni vassoio alza la pila
 // di 46,8 mm; sotto il vassoio di sopra restano 45 mm, più dei 9 mm della clip e dei 4,6 mm della targhetta.
 INCAVO_P = 1.2;
 module incavo_piede(p) {
-    translate([p[0], p[1], -0.01]) cylinder(d1 = 14.6, d2 = 13.4, h = INCAVO_P + 0.01, $fn = 48);
+    translate([p[0], p[1], -0.01]) cylinder(d1 = 15.0, d2 = 13.8, h = INCAVO_P + 0.01, $fn = 48);
 }
 /* ---------- Giunzioni senza viti: pezzi «a incastro» con chiavette a farfalla ---------- */
 
@@ -440,7 +442,7 @@ module prolunga_b() {
         viti_dadi(0, VITI_2);
         viti_teste(PRO, VITI_1);
         costole(PRO, COST_1, 0.2);
-        translate([0, 0, -0.01]) linear_extrude(INCISO + 0.01) etichetta("PIATTO", [PRO - 53, -104]);
+        translate([0, 0, -0.01]) linear_extrude(INCISO + 0.01) etichetta("PIATTO", [PRO - 57, -104]);
     }
 }
 /* ---------- Clip per le posate ---------- */
