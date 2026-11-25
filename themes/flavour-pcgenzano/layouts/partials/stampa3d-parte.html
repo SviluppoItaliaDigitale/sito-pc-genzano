@@ -21,6 +21,8 @@
 {{- $esempio := printf "%s-%03d" $pref $n.primo -}}
 {{- /* Sulla copia di anteprima di GitHub Pages i file STL e SCAD non ci sono (scripts/alleggerisci-copia-pages.py): si prendono dal sito su Aruba. */ -}}
 {{- $base := "stampa-3d/" | relURL -}}
+{{- /* pezzi uguali per tutti da stampare oltre a quello con il nominativo: le varianti non si contano */ -}}
+{{- $comuni := 0 }}{{ if $o.secondo_pezzo }}{{ $comuni = 1 }}{{ end }}{{ range $o.altri_pezzi }}{{ if not .variante }}{{ $comuni = add $comuni 1 }}{{ end }}{{ end -}}
 {{- if in site.BaseURL "github.io" }}{{ $base = printf "%sstampa-3d/" site.Params.productionBaseURL }}{{ end -}}
 {{- $cat := dict -}}{{- range $d.categorie }}{{ $cat = merge $cat (dict .id .titolo) }}{{ end -}}
 
@@ -98,7 +100,7 @@
   <button type="button" class="btn btn-outline-primary" data-vista="davanti">Davanti</button>
   <button type="button" class="btn btn-outline-primary" data-vista="retro">Retro</button>
 </div>
-<p class="s3d-guardi">Stai guardando {{ $o.articolo }} con il nominativo <strong data-s3d="nominativo">{{ $n.prefisso }} {{ $n.primo }}</strong><span data-s3d="esempio">, come esempio</span><span data-s3d="con-nome" hidden></span>. {{ if $o.anteprima.insieme }}Nella vista i due pezzi sono già montati: da stampare sono due file. {{ end }}Nella vista le scritte sono arancioni e la bandiera è colorata per farle vedere bene: il servizio online stampa in un solo colore.</p>
+<p class="s3d-guardi">Stai guardando {{ $o.articolo }} con il nominativo <strong data-s3d="nominativo">{{ $n.prefisso }} {{ $n.primo }}</strong><span data-s3d="esempio">, come esempio</span><span data-s3d="con-nome" hidden></span>. {{ if $o.anteprima.insieme }}Nella vista {{ if $o.altri_pezzi }}i pezzi sono già montati: da stampare sono {{ add 1 $comuni }} file{{ else }}i due pezzi sono già montati: da stampare sono due file{{ end }}. {{ end }}Nella vista le scritte sono arancioni e la bandiera è colorata per farle vedere bene: il servizio online stampa in un solo colore.</p>
 
 {{- else if eq $parte "campo" -}}
 {{ partial "stampa3d-campo.html" (dict "n" $n "etichetta" "1. Il tuo nominativo" "pulsante" "Mostra") }}
@@ -126,8 +128,24 @@
 <p class="mb-2"><a class="btn btn-primary btn-lg w-100" data-s3d="scarica" href="#" download><i class="bi bi-download me-1" aria-hidden="true"></i> Scarica il file STL</a></p>
 <p class="small mb-0">File <span data-s3d="file"></span>. Si salva nella cartella «Download» e ti serve per ordinare la stampa.</p>
 {{- with $o.secondo_pezzo }}
+{{- if $o.altri_pezzi }}
+{{- /* I pezzi con «variante» sono un'alternativa (per esempio un foro di un'altra misura): non si contano fra quelli da stampare. */ -}}
+{{- $fissi := slice . }}{{ $varianti := slice }}
+{{- range $o.altri_pezzi }}{{ if .variante }}{{ $varianti = $varianti | append . }}{{ else }}{{ $fissi = $fissi | append . }}{{ end }}{{ end }}
+<p class="mt-3 mb-2">L'oggetto è in più pezzi: scarica anche questi {{ len $fissi }} file, uguali per tutti.</p>
+{{- range $fissi }}
+<p class="mb-2"><a class="btn btn-outline-primary w-100" href="{{ printf "%s%s/%s" $base $o.id .file }}" download><i class="bi bi-download me-1" aria-hidden="true"></i> Scarica {{ .nome }} (STL)</a></p>
+{{- end }}
+{{- with $varianti }}
+<p class="mt-3 mb-2">{{ (index . 0).variante }}</p>
+{{- range . }}
+<p class="mb-2"><a class="btn btn-outline-secondary w-100" href="{{ printf "%s%s/%s" $base $o.id .file }}" download><i class="bi bi-download me-1" aria-hidden="true"></i> Scarica {{ .nome }} (STL)</a></p>
+{{- end }}
+{{- end }}
+{{- else }}
 <p class="mt-3 mb-2">L'oggetto è in due pezzi: scarica anche {{ .nome }}, uguale per tutti.</p>
 <p class="mb-0"><a class="btn btn-outline-primary btn-lg w-100" href="{{ printf "%s%s/%s" $base $o.id .file }}" download><i class="bi bi-download me-1" aria-hidden="true"></i> Scarica {{ .nome }} (STL)</a></p>
+{{- end }}
 {{- end }}
 </div>
 <p data-s3d="scarica-vuoto" class="mb-0">Scrivi il numero del tuo nominativo e premi «Mostra»: comparirà il pulsante per scaricare il tuo file.</p>
@@ -152,7 +170,7 @@
 <p><a class="btn btn-outline-primary btn-lg" href="{{ $d.servizio.indirizzo }}" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right me-1" aria-hidden="true"></i> Apri {{ $d.servizio.nome }}<span class="visually-hidden"> (si apre in una nuova scheda)</span></a></p>
 <ol class="s3d-elenco">
   <li>{{ $d.servizio.nome }} si apre in una nuova scheda. Il sito è in inglese: se vuoi, usa la funzione «Traduci» del browser.</li>
-  <li>Carica {{ if $o.secondo_pezzo }}i due file che hai scaricato, quello con il tuo nominativo e {{ $o.secondo_pezzo.nome }}{{ else }}il file che hai scaricato{{ end }}: trascinal{{ if $o.secondo_pezzo }}i{{ else }}o{{ end }} nel riquadro di caricamento oppure premi il pulsante per sceglierl{{ if $o.secondo_pezzo }}i{{ else }}o{{ end }} e cercal{{ if $o.secondo_pezzo }}i{{ else }}o{{ end }} nella cartella «Download».</li>
+  <li>Carica {{ if $o.altri_pezzi }}tutti i file che hai scaricato, quello con il tuo nominativo e gli altri {{ $comuni }}{{ else if $o.secondo_pezzo }}i due file che hai scaricato, quello con il tuo nominativo e {{ $o.secondo_pezzo.nome }}{{ else }}il file che hai scaricato{{ end }}: trascinal{{ if $o.secondo_pezzo }}i{{ else }}o{{ end }} nel riquadro di caricamento oppure premi il pulsante per sceglierl{{ if $o.secondo_pezzo }}i{{ else }}o{{ end }} e cercal{{ if $o.secondo_pezzo }}i{{ else }}o{{ end }} nella cartella «Download».</li>
   <li>Se il sito chiede l'unità di misura, scegli <strong>millimetri (mm)</strong>. Controlla che fra le misure indicate ci sia <strong>{{ $o.lunghezza_mm }} mm</strong>, la più grande: se non c'è, l'unità è sbagliata. Il file è già girato nella posizione giusta per la stampa: non serve cambiarla.</li>
   <li>Come materiale scegli <strong>{{ $o.materiale }}</strong>, più resistente della plastica normale, e come colore <strong>{{ $o.colore }}</strong>. Se il sito chiede il riempimento («infill»), scegli il 100%: l'oggetto diventa pieno e robusto. Lascia 1 come quantità.</li>
   <li>Scegli l'offerta che preferisci per prezzo e tempi di consegna, scrivi il tuo indirizzo e paga. I metodi di pagamento dipendono dal paese e di solito comprendono carta e PayPal.</li>
@@ -173,7 +191,7 @@
 {{- else if eq $parte "file" -}}
 {{- $scad := printf "static/stampa-3d/%s/%s.scad" $o.id $o.id -}}
 {{- $kb := 0 }}{{ with os.Stat $scad }}{{ $kb = math.Ceil (div (float .Size) 1024) }}{{ else }}{{ errorf "stampa3d: manca %s, lancia scripts/genera-stampa-3d.py" $scad }}{{ end -}}
-<p>Per stampare l'oggetto basta il file STL del tuo nominativo, che scarichi nel riquadro «Personalizza e scarica»{{ with $o.secondo_pezzo }}, insieme a <a href="{{ printf "%s%s/%s" $base $o.id .file }}" download>{{ .nome }}</a>, uguale per tutti{{ end }}. Qui sotto ci sono gli altri file, per chi li cerca.</p>
+<p>Per stampare l'oggetto basta il file STL del tuo nominativo, che scarichi nel riquadro «Personalizza e scarica»{{ with $o.secondo_pezzo }}{{ if $o.altri_pezzi }}, insieme agli altri pezzi, uguali per tutti{{ range (slice . | append $o.altri_pezzi) }}{{ if not .variante }}; <a href="{{ printf "%s%s/%s" $base $o.id .file }}" download>{{ .nome }}</a>{{ end }}{{ end }}{{ else }}, insieme a <a href="{{ printf "%s%s/%s" $base $o.id .file }}" download>{{ .nome }}</a>, uguale per tutti{{ end }}{{ end }}. Qui sotto ci sono gli altri file, per chi li cerca.</p>
 <details class="s3d-tutti">
   <summary>File STL per ogni nominativo, da {{ $n.prefisso }} {{ $n.primo }} a {{ $n.prefisso }} {{ $n.ultimo }}</summary>
   <ul class="s3d-griglia">

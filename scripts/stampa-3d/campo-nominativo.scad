@@ -100,6 +100,9 @@ OCCHIELLO_X = -L / 2 - OCCHIELLO[0] / 2 + 4;
 // Brandina: due asole da 4,5 × 22 mm, per fascette fino a 4 mm di spessore o velcro largo fino a 2 cm
 ASOLA = [4.5, 22]; ASOLA_X = L / 2 - 6.5;
 
+// Viti per legno o truciolare a testa svasata piana da 4 mm: testa larga da 7,64 a 8 mm e alta fino a 2,35 mm
+// (manuale tecnico di viteria, capitolo 19, tabella a pagina 19.3, consultato il 25/11/2026). La svasatura dei fori
+// è di 8,8 mm, profonda 2,2 mm: la testa resta a filo. Nei fori da 4,4 mm passa anche una vite M4.
 // Fori per le viti (testa svasata da 4 mm) lontani dalle scritte (parte = "controllo_viti" lo verifica)
 VITI = tipo == "armadietto" ? [[-39, 0], [39, 0]] : [];
 

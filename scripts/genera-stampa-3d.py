@@ -14,6 +14,8 @@ pezzo) e l'anteprima <prefisso>-NNN.webp disegnata dal file stesso, più retro.w
 posteriore. Salta gli STL già presenti, salvo --tutti; il modello .scad si riscrive sempre.
 Un oggetto in due pezzi (per esempio scatola e coperchio) ha «secondo_pezzo» nel catalogo: il pezzo con
 le scritte cambia con il nominativo, il secondo è uguale per tutti e si crea una volta sola, con gli stessi controlli.
+Un oggetto in più di due pezzi (vassoio) elenca gli altri in «altri_pezzi»; per le anteprime «insieme» può
+indicare, con «parte», un file a parte con l'oggetto montato, che non si scarica.
 Se i due pezzi si montano insieme (gruccia), «insieme» nell'anteprima aggiunge il secondo pezzo alle
 anteprime, nella posizione di montaggio: nei file da stampare ogni pezzo resta da solo.
 Nei modelli con viti controlla che la testa delle viti non copra mai bandiera e scritte.
@@ -440,14 +442,17 @@ def controlla_pezzo(m):
     return errori
 
 
-def secondo_pezzo(sorgente, parametri, destinazione):
-    """Pezzo uguale per tutti i nominativi (scatola, tappo): si crea, si controlla come gli altri e si salva."""
+def secondo_pezzo(sorgente, parametri, destinazione, solo_vista=False):
+    """Pezzo uguale per tutti i nominativi (scatola, tappo): si crea, si controlla come gli altri e si salva.
+    «solo_vista»: è l'oggetto montato, che serve alle anteprime e non si stampa: non passa il controllo dei pezzi."""
     import trimesh
     with tempfile.TemporaryDirectory() as d:
         tmp = Path(d) / "pezzo.stl"
         scad(sorgente, parametri, tmp)
         m = trimesh.load(tmp)
-    errori = controlla_pezzo(m)
+    errori = [] if solo_vista else controlla_pezzo(m)
+    if solo_vista and not len(m.faces):
+        errori = ["l'oggetto montato è vuoto"]
     if not errori:
         destinazione.parent.mkdir(parents=True, exist_ok=True)
         m.export(destinazione)
@@ -521,21 +526,27 @@ def main():
                 lavori.append((sorgente, ogg.get("parametri", {}), f'{nom["prefisso"]} {n}', dest,
                                ogg.get("anteprima"), retro, base_stl))
         sp = ogg.get("secondo_pezzo")
+        altri = ogg.get("altri_pezzi") or []
+        if altri and not sp:
+            errori.append(f"{ogg['id']}: «altri_pezzi» si usa insieme a «secondo_pezzo» (il primo dei pezzi uguali per tutti)")
         ins = (ogg.get("anteprima") or {}).get("insieme")
-        if ins and (not sp or ins.get("file") != sp["file"]):
-            errori.append(f"{ogg['id']}: «insieme» deve indicare il file di «secondo_pezzo»")
-        if sp:
-            dest2 = USCITA / ogg["id"] / sp["file"]
+        # «insieme» indica il secondo pezzo oppure, con «parte», un file fatto apposta per le anteprime
+        # (l'oggetto montato quando i pezzi sono più di due): quello non si scarica e non si stampa.
+        if ins and not ins.get("parte") and (not sp or ins.get("file") != sp["file"]):
+            errori.append(f"{ogg['id']}: «insieme» deve indicare il file di «secondo_pezzo», oppure avere «parte»")
+        pezzi = [(p, False) for p in ([sp] if sp else []) + altri] + ([(ins, True)] if ins and ins.get("parte") else [])
+        for pezzo, solo_vista in pezzi:
+            dest2 = USCITA / ogg["id"] / pezzo["file"]
             if a.check:
                 if not dest2.exists():
                     errori.append(f"manca {dest2.relative_to(RADICE)}")
             elif a.tutti or not dest2.exists():
-                secondi.append((sorgente, {**ogg.get("parametri", {}), "parte": sp["parte"]}, dest2))
+                secondi.append((sorgente, {**ogg.get("parametri", {}), "parte": pezzo["parte"]}, dest2, solo_vista))
         if not a.check:
             errori += controlla_caratteri(sorgente)
     # prima i secondi pezzi: le anteprime degli oggetti montati («insieme») li leggono
-    for sorgente, parametri, dest2 in secondi:
-        errori += [f"{dest2.name}: {e}" for e in secondo_pezzo(sorgente, parametri, dest2)]
+    for sorgente, parametri, dest2, solo_vista in secondi:
+        errori += [f"{dest2.name}: {e}" for e in secondo_pezzo(sorgente, parametri, dest2, solo_vista)]
     if errori:
         print("ERRORI:\n- " + "\n- ".join(errori))
         sys.exit(1)

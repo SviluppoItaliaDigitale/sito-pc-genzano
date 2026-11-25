@@ -172,12 +172,16 @@ oggetti:
       - ["Peso", "circa 71 g"]
       - ["Piastra", "spessa 5 mm, scritte in rilievo di 1 mm"]
       - ["Gancio", "largo 80 mm; braccio spesso 10 mm, punta alta 7 mm; 21 mm liberi fra la piastra e la punta; rinforzo a 45 gradi alla base"]
-      - ["Fori", "2 per viti a testa svasata da 4 mm (foro 4,4 mm, svasatura 8,8 mm), a 66 mm l'uno dall'altro"]
+      - ["Fori", "2 per viti a testa svasata da 4 mm (foro 4,4 mm, svasatura 8,8 mm: la testa di una vite per legno da 4 mm è larga 8 mm e resta a filo), a 66 mm l'uno dall'altro"]
       - ["Posizione di stampa", "in piedi sul lato sinistro, già orientato nel file, senza supporti"]
     materiale: "PETG"
     colore: "blu"
     occorrente:
-      - "due viti a testa svasata da 4 mm e i tasselli adatti alla parete, oppure nastro biadesivo di montaggio per esterni"
+      - "per il muro: due viti per legno o truciolare a testa svasata piana da 4 mm, lunghe 40 mm, e due tasselli per viti da 4 mm; la confezione dei tasselli dice quale punta del trapano usare"
+      - "per il legno o un pannello: due viti dello stesso tipo lunghe 20 mm, senza tasselli"
+      - "per la lamiera (armadietto di metallo, pannello del mezzo): due viti M4 a testa svasata lunghe 16 mm, due rondelle M4 e due dadi M4 autobloccanti; il foro nella lamiera è da 4,5 mm e la rondella va dietro la lamiera, sotto il dado"
+      - "in alternativa alle viti: nastro biadesivo di montaggio per esterni"
+      - "trapano, cacciavite e, per i dadi, una chiave da 7 mm"
     montaggio:
       - "Pulisci e asciuga il punto dell'armadietto dove vuoi metterlo."
       - "Con le viti: appoggia l'appendiabiti con il gancio in basso, segna i due fori, fora, metti i tasselli e avvita senza stringere troppo."
@@ -281,12 +285,15 @@ oggetti:
       - ["Peso", "circa 78 g"]
       - ["Barra", "spessa 4 mm e alta 38 mm, a 8 mm dalla piastra: la clip della radio ci passa dietro e scende libera sotto"]
       - ["Spazio fra i due appoggi", "42 mm vicino alla parete e 68 mm davanti: entrano le clip larghe fino a 4 cm"]
-      - ["Fori", "4 per viti a testa svasata da 4 mm (foro 4,4 mm, svasatura 8,8 mm)"]
+      - ["Fori", "4 per viti a testa svasata da 4 mm (foro 4,4 mm, svasatura 8,8 mm: la testa di una vite per legno da 4 mm è larga 8 mm e resta a filo)"]
       - ["Posizione di stampa", "in piedi sul lato sinistro, già orientato nel file, senza supporti"]
     materiale: "PETG"
     colore: "blu"
     occorrente:
-      - "quattro viti a testa svasata da 4 mm e i tasselli adatti alla parete"
+      - "per il muro: quattro viti per legno o truciolare a testa svasata piana da 4 mm, lunghe 40 mm, e quattro tasselli per viti da 4 mm; la confezione dei tasselli dice quale punta del trapano usare"
+      - "per il legno o un pannello: quattro viti dello stesso tipo lunghe 20 mm, senza tasselli"
+      - "per la lamiera (armadietto di metallo, pannello del mezzo): quattro viti M4 a testa svasata lunghe 16 mm, quattro rondelle M4 e quattro dadi M4 autobloccanti; il foro nella lamiera è da 4,5 mm e la rondella va dietro la lamiera, sotto il dado"
+      - "trapano, cacciavite e, per i dadi, una chiave da 7 mm"
     montaggio:
       - "Appoggia il porta radio al muro con la barra in basso, segna i quattro fori, fora e metti i tasselli."
       - "Avvita senza stringere troppo: la plastica non deve incrinarsi."
@@ -498,13 +505,17 @@ oggetti:
       - ["Peso", "circa 42 g"]
       - ["Barra", "spessa 3,5 mm e alta 24 mm, a 4,5 mm dalla piastra: la clip del microfono ci passa dietro"]
       - ["Spazio fra i due appoggi", "36 mm vicino alla parete e 54 mm davanti: entrano le clip larghe fino a 3,5 cm"]
-      - ["Fori", "2 per viti a testa svasata da 4 mm (foro 4,4 mm, svasatura 8,8 mm), a 50 mm l'uno dall'altro"]
+      - ["Fori", "2 per viti a testa svasata da 4 mm (foro 4,4 mm, svasatura 8,8 mm: la testa di una vite per legno da 4 mm è larga 8 mm e resta a filo), a 50 mm l'uno dall'altro"]
       - ["Scritte", "nominativo alto 7,5 mm, righe piccole 4 mm, in rilievo di 1 mm"]
       - ["Posizione di stampa", "in piedi sul lato sinistro, già orientato nel file, senza supporti"]
     materiale: "PETG"
     colore: "blu"
     occorrente:
-      - "due viti a testa svasata da 4 mm e i tasselli adatti alla parete, oppure nastro biadesivo di montaggio"
+      - "per il muro: due viti per legno o truciolare a testa svasata piana da 4 mm, lunghe 40 mm, e due tasselli per viti da 4 mm; la confezione dei tasselli dice quale punta del trapano usare"
+      - "per il legno o un pannello: due viti dello stesso tipo lunghe 20 mm, senza tasselli"
+      - "per la lamiera (armadietto di metallo, pannello del mezzo): due viti M4 a testa svasata lunghe 16 mm, due rondelle M4 e due dadi M4 autobloccanti; il foro nella lamiera è da 4,5 mm e la rondella va dietro la lamiera, sotto il dado"
+      - "in alternativa alle viti: nastro biadesivo di montaggio"
+      - "trapano, cacciavite e, per i dadi, una chiave da 7 mm"
     montaggio:
       - "Appoggia il supporto con la barra in basso, segna i due fori, fora, metti i tasselli e avvita senza stringere troppo. In alternativa incollalo con due strisce di biadesivo e aspetta un giorno prima di usarlo."
       - "Aggancia il microfono dall'alto, facendo scorrere la sua clip sulla barra: la clip passa dietro la barra."
@@ -846,8 +857,401 @@ oggetti:
       - "Stringi le fascette senza schiacciare la targhetta e taglia la parte in più."
       - "Con il velcro: passa la striscia nelle due asole, avvolgila intorno al tubo e chiudila."
 
+  - id: "clip-sacchetti"
+    nome: "Clip chiudi-sacchetti"
+    articolo: "la clip"
+    descrizione: "Clip per richiudere i sacchetti aperti di pasta, biscotti o caffè: pieghi il bordo del sacchetto, lo metti fra i due bracci e chiudi finché senti lo scatto. I bracci sono uniti da una cerniera flessibile e si stampano in un pezzo solo. Il braccio largo porta la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma»."
+    categoria: "campo"
+    breve: "Richiude i sacchetti aperti con uno scatto; un pezzo solo, senza viti."
+    sorgente: "clip-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-54.5, -4.0, -44.75, 2.5]
+      quota_scritte: 10.0
+    parametri:
+      tipo: "sacchetti"
+      parte: "tutto"
+    misure: "13,7 × 5,2 cm aperta, spessa 1 cm"
+    lunghezza_mm: 137
+    peso_g: 31
+    scheda:
+      - ["Ingombro", "aperta, come si stampa, 137 × 52 mm; chiusa circa 137 × 24 mm; spessa 10 mm (11 mm con le scritte)"]
+      - ["Peso", "circa 31 g"]
+      - ["Sacchetti", "chiude sacchetti larghi fino a 12 cm; per quelli più larghi piega il bordo su se stesso prima di chiudere. Fra i bracci chiusi restano 0,6 mm, lo spazio per le due pareti del sacchetto"]
+      - ["Chiusura", "una linguetta a scatto in fondo al braccio stretto aggancia lo spigolo del braccio largo con un dente di 1,4 mm; per riaprire si tira in fuori la piccola presa in fondo alla linguetta. Un rilievo lungo il braccio stretto entra in un incavo dell'altro e fa fare una piega al sacchetto"]
+      - ["Cerniera", "un arco di plastica spesso 1,2 mm: si piega di pochi gradi a ogni chiusura. Con il tempo può cedere: non forzarla oltre l'apertura con cui è stampata"]
+      - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4 mm"]
+      - ["Scritte di un altro colore", "le scritte sono l'ultimo millimetro: per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di colore al primo strato delle scritte, cioè dopo lo strato 50 con strati da 0,2 mm (altezza 10,2 mm)"]
+      - ["Posizione di stampa", "in piano, aperta, già orientata nel file, senza supporti"]
+      - ["Da sapere", "la clip tocca il sacchetto, non il cibo; con il bordo piegato può toccarne il lato interno, quindi non è un oggetto per alimenti: usala con cibi secchi e puliscila con un panno umido. Non stringe come una pinza e non è una chiusura ermetica: tiene il sacchetto per la piega, non lo sigilla. Non usarla per i surgelati: l'acqua di condensa entra fra gli strati della plastica. Tienila lontana da forno e fornelli: il PETG comincia a deformarsi a 68 gradi. È disegnata per una stampante da tavolo ben regolata: con un servizio di stampa, che può scostarsi di mezzo millimetro, lo scatto può risultare duro o lento"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "niente: è un pezzo solo"
+    montaggio:
+      - "Piega una o due volte il bordo aperto del sacchetto."
+      - "Appoggia la piega sul braccio largo, vicino alla cerniera, e abbassa il braccio stretto."
+      - "Premi in fondo finché la linguetta scatta sotto il braccio largo."
+      - "Per riaprire, tira in fuori la presa in fondo alla linguetta e alza il braccio."
+
+  # --- Vassoio in tre pezzi avvitati, con targhetta, clip e piedini (25/11/2026, vassoio-nominativo.scad).
+  # Il pezzo con il nominativo è la targhetta; «altri_pezzi» elenca gli altri file; «insieme» con «parte» è il
+  # vassoio montato, fatto solo per le anteprime.
+  - id: "vassoio"
+    nome: "Vassoio porta piatto, bicchiere e posate"
+    articolo: "il vassoio"
+    descrizione: "Vassoio con due manici in cui piatto e bicchiere si infilano in un foro più stretto del loro bordo: restano appesi e non scivolano. La bottiglietta d'acqua da mezzo litro scende in un pozzetto e le posate stanno ferme sotto una clip a molla. Accanto a ogni posto una scritta appena incisa dice che cosa ci va. È rialzato su dodici piedini ed è fatto di tre pezzi che si avvitano, così ogni pezzo entra in una stampante da tavolo. Sopra porta una targhetta con la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma», che si stampa a parte e può avere le scritte di un altro colore."
+    categoria: "campo"
+    breve: "Piatto e bicchiere si infilano nei fori e non scivolano; pozzetto per la bottiglietta, clip per le posate, tre pezzi avvitati."
+    sorgente: "vassoio-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-30.99, 10.0, -18.99, 18.0]
+      vista_3d: true
+      quota_scritte: 3.6
+      sagoma_z: -1.6   # contorno letto dentro il piano del vassoio, sotto la targhetta
+      camera: { da: [-0.35, -0.75, 0.6], su: [0, 0, 1] }
+      insieme: { file: "vassoio-montato.stl", parte: "montato" }   # nelle anteprime il vassoio è montato
+      nome: { zona: [-31, -0.5, 31, 6.5], lato: "fronte" }
+    parametri:
+      tipo: "vassoio"
+      parte: "tutto"
+    secondo_pezzo:
+      parte: "sinistra"
+      file: "vassoio-pezzo-sinistro.stl"
+      nome: "il pezzo sinistro, con metà del foro del piatto"
+      peso_g: 163
+    altri_pezzi:
+      - { parte: "centro", file: "vassoio-pezzo-centrale.stl", nome: "il pezzo centrale, con la corsia delle posate", peso_g: 226 }
+      - { parte: "destra", file: "vassoio-pezzo-destro.stl", nome: "il pezzo destro, con il foro del bicchiere e il pozzetto della bottiglietta", peso_g: 272 }
+      - { parte: "clip", file: "vassoio-clip-posate.stl", nome: "la clip per le posate", peso_g: 4 }
+      - { parte: "sinistra180", file: "vassoio-pezzo-sinistro-foro-180.stl", nome: "il pezzo sinistro con il foro da 180 mm", peso_g: 175, variante: "Seconda versione, con il foro del piatto da 180 mm: scarica questi due file al posto del pezzo sinistro e del pezzo centrale." }
+      - { parte: "centro180", file: "vassoio-pezzo-centrale-foro-180.stl", nome: "il pezzo centrale con il foro da 180 mm", peso_g: 241, variante: "Seconda versione, con il foro del piatto da 180 mm: scarica questi due file al posto del pezzo sinistro e del pezzo centrale." }
+    misure: "45,6 × 24 cm montato, alto 4,8 cm"
+    lunghezza_mm: 76
+    peso_g: 682
+    scheda:
+      - ["Ingombro", "montato 456 × 240 mm, con il piano a 48 mm dal tavolo; pezzo sinistro 148 × 240 mm, pezzo centrale 182 × 240 mm, pezzo destro 130 × 240 mm, tutti alti 48 mm; targhetta 76 × 50 mm, spessa 3,6 mm (4,6 mm con le scritte)"]
+      - ["Peso", "circa 682 g in tutto: 163 g il pezzo sinistro, 226 g il centrale, 272 g il destro, 17 g la targhetta, 4 g la clip; con il foro da 180 mm il pezzo sinistro pesa 175 g e il centrale 241 g"]
+      - ["Foro del piatto", "200 mm, con il bordo smussato. Tiene un piatto piano usa e getta «da 22 cm» (225 mm in alto, 165 mm alla base) e un piatto fondo «da 22 cm» (220 mm in alto, 145 mm alla base): la base scende nel foro e il bordo si appoggia. Va bene per piatti rigidi con il bordo da 215 a 228 mm: sotto i 205 mm il piatto passa attraverso il foro, fra 205 e 215 mm appoggia su pochi millimetri, oltre i 228 mm tocca la clip. Per piatti sottili, molli o molto pieni usa la seconda versione, con il foro da 180 mm. Misura il tuo piatto prima di stampare"]
+      - ["Seconda versione: foro da 180 mm", "il pezzo sinistro e il pezzo centrale esistono anche con il foro del piatto da 180 mm. Il piatto appoggia più in basso, sulla parete, e sotto il bordo restano 22 mm di vassoio per parte con il piatto piano e 20 mm con il fondo (con il foro da 200 mm sono 12 e 10 mm): il peso non può farlo passare. La base dei due piatti (165 e 145 mm) entra lo stesso. Si scaricano al posto dei due pezzi con il foro da 200 mm; il resto è uguale"]
+      - ["Foro del bicchiere", "56 mm. Un bicchiere usa e getta da 200 ml (46 mm alla base, 70 mm alla bocca, alto 97 mm) scende di circa 4 cm e si ferma, a 6 mm dal tavolo. Va bene per bicchieri con la base fra 45 e 56 mm: con la base più stretta il bicchiere scende fino a toccare il tavolo, con la base più larga non entra e si appoggia sul piano"]
+      - ["Bottiglietta d'acqua", "un pozzetto largo 70 mm e profondo 44 mm, fra il bicchiere e la targhetta. Una bottiglietta tonda da mezzo litro (68 mm di diametro, alta 17 cm) scende di circa 35 mm e si ferma su un cono, a qualche millimetro dal tavolo. Va bene per bottiglie larghe da 56 a 69 mm: una più larga non entra, una più stretta di 55 mm passerebbe dal fondo, che è aperto. Il pozzetto tiene solo la parte bassa della bottiglia: non la regge se inclini il vassoio"]
+      - ["Scritte dei posti", "«Piatto», «Posate», «Bicchiere» e «Bottiglia», alte 5 mm e incise di 0,4 mm sul piano, accanto a ogni posto: si vedono appena, e vengono meglio su un piatto di stampa liscio. Abbiamo scelto le parole e non i disegni perché per piatto e bicchiere non c'è un simbolo che tutti leggono allo stesso modo, e a questa misura un disegno inciso si confonde"]
+      - ["Terza versione", "nel catalogo c'è anche il «Vassoio con le sedi sagomate»: le stoviglie appoggiano sul fondo, dentro sedi con la loro forma, e il vassoio non ha piedini"]
+      - ["Posate", "corsia libera larga 5 cm e lunga quanto il vassoio; una clip a molla le tiene appoggiate al piano: sotto il ponte restano 6 mm e la molla, da libera, scende a circa 1 mm. Le posate si infilano sempre nel loro tovagliolo o nella loro bustina, mai libere: la parte che va in bocca non deve toccare la plastica stampata"]
+      - ["Piedini", "dodici, alti 45 mm: quattro per pezzo. Servono perché piatto e bicchiere scendono sotto il piano"]
+      - ["Manici", "un'asola di 92 × 22 mm per le dita su ogni lato corto"]
+      - ["Giunzioni", "due: i pezzi si accostano lungo due pareti alte 23 mm, con una costola che entra in una scanalatura e li tiene allineati; si stringono con cinque viti M4 × 10 a testa svasata e cinque dadi M4. Altre due viti con due dadi fissano la targhetta"]
+      - ["Altezza delle lettere", "nominativo 8 mm; righe piccole 4 mm"]
+      - ["Spazio per nome e cognome", "fascia libera di 62 × 7 mm sotto il nominativo, sulla targhetta"]
+      - ["Scritte di un altro colore", "la targhetta si stampa da sola, con le scritte in alto. Per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di colore al primo strato delle scritte, cioè dopo lo strato 18 con strati da 0,2 mm (altezza 3,8 mm); oppure stampa la targhetta con un filo di un altro colore rispetto al vassoio"]
+      - ["Posizione di stampa", "cinque file, già orientati, senza supporti: i tre pezzi del vassoio sono capovolti, con il piano sul piatto di stampa, la clip è coricata su un fianco; serve un piatto di stampa di almeno 25 × 20 cm (non entra nelle stampanti da 22 × 22 cm). I pezzi sono lunghi 24 cm: se serve, ruotali nel programma di stampa lungo il lato lungo del piatto, senza capovolgerli"]
+      - ["Precisione", "la clip, le sedi dei dadi e le costole di allineamento sono disegnate per una stampante da tavolo ben regolata. Se ordini la stampa a un servizio, che può scostarsi di mezzo millimetro, la clip può non agganciare: in quel caso si lima il dente o si allarga la fessura"]
+      - ["Da sapere", "il vassoio porta le stoviglie, non è un oggetto per alimenti: fra gli strati della plastica stampata restano solchi che non si puliscono a fondo. Pane, frutta e cibo stanno sempre nel piatto, mai appoggiati sul vassoio. Si lava a mano con acqua tiepida subito dopo l'uso: il PETG comincia a deformarsi a 68 gradi, quindi niente lavastoviglie e niente piatti o bevande bollenti. È pensato per circa 1,5 kg fra stoviglie e contenuto: è una stima di calcolo, non una prova di carico. Portalo con due mani"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "circa 700 g di filo PETG per tutti i pezzi"
+      - "7 viti M4 lunghe 10 mm a testa svasata e 7 dadi esagonali M4 (si trovano in ferramenta); non servono rondelle: le teste entrano nelle svasature e i dadi nelle loro sedi"
+      - "una chiave a brugola da 2,5 mm, oppure un cacciavite a croce se le viti hanno la testa a croce"
+    montaggio:
+      - "Stampa i cinque file: la targhetta con il tuo nominativo, i tre pezzi del vassoio e la clip."
+      - "Appoggia i tre pezzi capovolti su un tavolo, con i piedini in alto, e accostali: le costole del pezzo centrale e del pezzo destro entrano nelle scanalature del pezzo accanto."
+      - "Lascia cadere un dado in ognuna delle cinque asole delle pareti più spesse."
+      - "Dall'altra parte infila le cinque viti e stringile a mano fino a fermarti, senza forzare, con la chiave corta e circa mezzo giro dopo che la testa tocca: le teste devono restare sotto la superficie. Dopo qualche giorno ricontrolla che siano ancora strette."
+      - "Gira il vassoio. Appoggia la targhetta sul pezzo destro, sopra i due fori, tieni un dado nella sede esagonale sotto il piano e stringi le due viti dall'alto."
+      - "Spingi le due gambe della clip in una coppia di fessure della corsia delle posate, finché i denti scattano sotto il piano. Le coppie di fessure sono due: scegli quella più comoda per le tue posate."
+      - "Infila il piatto, il bicchiere e la bottiglietta nei loro posti e fai scorrere le posate sotto la clip, dal manico."
+      - "Per togliere la clip, da sotto avvicina le due gambe finché i denti escono dalle fessure."
+
+  # --- Terza versione del vassoio: sedi sagomate, senza piedini, stampata diritta (25/11/2026, stesso modello).
+  - id: "vassoio-sagomato"
+    nome: "Vassoio con le sedi sagomate"
+    articolo: "il vassoio"
+    descrizione: "Vassoio in cui le stoviglie appoggiano sul fondo, dentro sedi con la loro forma: una conca per il piatto, un bicchierino alto metà bicchiere, un anello per la bottiglietta d'acqua da mezzo litro. Così non scivolano quando lo porti. Le posate stanno su due ponticelli, ferme sotto una clip a molla. Sul fondo una scritta appena incisa dice che cosa va in ogni posto. Non ha piedini: i due lati corti salgono inclinati e fanno da manici. È fatto di tre pezzi che si avvitano, così ogni pezzo entra in una stampante da tavolo. Porta una targhetta con la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma», che si stampa a parte e può avere le scritte di un altro colore."
+    categoria: "campo"
+    breve: "Piatto, bicchiere e bottiglietta stanno in sedi con la loro forma; clip per le posate, tre pezzi avvitati."
+    sorgente: "vassoio-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-30.99, 10.0, -18.99, 18.0]
+      vista_3d: true
+      quota_scritte: 3.6
+      sagoma_z: -9.4   # contorno letto dentro il fondo del vassoio, sotto la targhetta
+      camera: { da: [-0.35, -0.75, 0.6], su: [0, 0, 1] }
+      insieme: { file: "vassoio-sagomato-montato.stl", parte: "montato3" }   # nelle anteprime il vassoio è montato
+      nome: { zona: [-31, -0.5, 31, 6.5], lato: "fronte" }
+    parametri:
+      tipo: "vassoio"
+      parte: "tutto"
+    secondo_pezzo:
+      parte: "sinistra3"
+      file: "vassoio-sagomato-pezzo-sinistro.stl"
+      nome: "il pezzo sinistro, con metà della conca del piatto"
+      peso_g: 141
+    altri_pezzi:
+      - { parte: "centro3", file: "vassoio-sagomato-pezzo-centrale.stl", nome: "il pezzo centrale, con i ponticelli delle posate", peso_g: 217 }
+      - { parte: "destra3", file: "vassoio-sagomato-pezzo-destro.stl", nome: "il pezzo destro, con le sedi di bicchiere e bottiglietta", peso_g: 212 }
+      - { parte: "clip", file: "vassoio-sagomato-clip-posate.stl", nome: "la clip per le posate", peso_g: 4 }
+    misure: "45,4 × 24 cm montato, alto 4,7 cm"
+    lunghezza_mm: 76
+    peso_g: 591
+    scheda:
+      - ["Ingombro", "montato 454 × 240 mm; bordi alti 18 mm, sedi di bicchiere e bottiglietta alte 47 mm dal tavolo; pezzo sinistro 132 × 240 mm, pezzo centrale 181 × 240 mm, pezzo destro 143 × 240 mm; targhetta 76 × 50 mm, spessa 3,6 mm (4,6 mm con le scritte)"]
+      - ["Peso", "circa 591 g in tutto: 141 g il pezzo sinistro, 217 g il centrale, 212 g il destro, 17 g la targhetta, 4 g la clip"]
+      - ["Sede del piatto", "una conca larga 168 mm sul fondo, chiusa da un anello alto 8 mm che si allarga verso l'alto più della parete del piatto: il piatto tocca il fondo e non può scivolare. Tiene un piatto piano usa e getta «da 22 cm» (225 mm in alto, 165 mm alla base) e un piatto fondo «da 22 cm» (220 mm in alto, 145 mm alla base), che dentro la conca si sposta di un centimetro per parte. Va bene per piatti con la base fino a 166 mm e il bordo fino a 230 mm. Alla prima giunzione le pareti passano sotto il bordo del piatto e sono tagliate per lasciargli 2,5 mm: il conto è fatto su un piatto con la parete diritta fra base e bordo, perché il profilo vero non è nelle schede. Misura il tuo piatto prima di stampare e provalo sul vassoio montato"]
+      - ["Sede del bicchiere", "un bicchierino alto 45 mm, largo 49 mm in basso e 61 mm in alto. Un bicchiere usa e getta da 200 ml (46 mm alla base, 70 mm alla bocca, alto 97 mm) appoggia sul fondo ed esce per metà, così si prende bene. Un bicchiere con la base più larga di 49 mm si ferma più in alto e resta tenuto per meno"]
+      - ["Sede della bottiglietta", "un anello largo 70 mm e alto 45 mm, per una bottiglietta tonda da mezzo litro (68 mm di diametro, alta 17 cm). Va bene per bottiglie larghe fino a 69 mm; una più stretta ci sta, ma balla. L'anello tiene solo la parte bassa della bottiglia: non la regge se inclini il vassoio"]
+      - ["Posate", "appoggiano su due ponticelli alti 9 mm, a 8 cm l'uno dall'altro, così i manici restano sollevati e si prendono bene. La clip a molla si aggancia a uno dei due ponticelli: sotto il ponte restano 6 mm e la molla, da libera, scende a circa 1 mm. Le posate si infilano sempre nel loro tovagliolo o nella loro bustina, mai libere: la parte che va in bocca non deve toccare la plastica stampata"]
+      - ["Scritte dei posti", "«Piatto» e «Posate» sul fondo, davanti al loro posto; «Bicchiere» e «Bottiglia» sul fondo della loro sede, perché fra due sedi alte non si vedrebbero. Sono alte 5 mm e incise di 0,4 mm: si vedono appena. Abbiamo scelto le parole e non i disegni perché per piatto e bicchiere non c'è un simbolo che tutti leggono allo stesso modo, e a questa misura un disegno inciso si confonde"]
+      - ["Manici", "i due lati corti salgono inclinati verso l'esterno per 17 mm: sotto il bordo entra la punta delle dita, quanto basta per sollevare il vassoio dal tavolo e poi prenderlo meglio"]
+      - ["Giunzioni", "due: i pezzi si accostano lungo pareti alte 16 mm e si stringono con cinque viti M4 × 10 a testa svasata e cinque dadi M4, che si lasciano cadere dall'alto in un'asola. La prima giunzione passa per il centro del piatto: lì le pareti stanno fuori dall'anello, due tratti da 2 cm con una vite ciascuno. Altre due viti con due dadi fissano la targhetta: i dadi entrano di lato nei due appoggi"]
+      - ["Altezza delle lettere", "nominativo 8 mm; righe piccole 4 mm"]
+      - ["Spazio per nome e cognome", "fascia libera di 62 × 7 mm sotto il nominativo, sulla targhetta"]
+      - ["Scritte di un altro colore", "la targhetta si stampa da sola, con le scritte in alto. Per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di colore al primo strato delle scritte, cioè dopo lo strato 18 con strati da 0,2 mm (altezza 3,8 mm); oppure stampa la targhetta con un filo di un altro colore rispetto al vassoio"]
+      - ["Posizione di stampa", "cinque file, già orientati, senza supporti: i tre pezzi del vassoio sono diritti, con il fondo sul piatto di stampa, la clip è coricata su un fianco; serve un piatto di stampa di almeno 25 × 20 cm (non entra nelle stampanti da 22 × 22 cm). I pezzi sono lunghi 24 cm: se serve, ruotali nel programma di stampa lungo il lato lungo del piatto, senza capovolgerli. Con pezzi così larghi e sottili conviene un bordo di adesione di qualche millimetro"]
+      - ["Precisione", "la clip e i canali dei dadi sono disegnati per una stampante da tavolo ben regolata. Se ordini la stampa a un servizio, che può scostarsi di mezzo millimetro, la clip può non agganciare: in quel caso si lima il dente o si allarga la fessura"]
+      - ["Differenze dall'altro vassoio", "nel «Vassoio porta piatto, bicchiere e posate» le stoviglie restano appese in fori più stretti del loro bordo e il vassoio sta su dodici piedini; qui appoggiano sul fondo e il vassoio è basso. Questo ha il fondo chiuso: se si rovescia un po' d'acqua resta nel vassoio"]
+      - ["Da sapere", "il vassoio porta le stoviglie, non è un oggetto per alimenti: fra gli strati della plastica stampata restano solchi che non si puliscono a fondo. Pane, frutta e cibo stanno sempre nel piatto, mai appoggiati sul vassoio. Si lava a mano con acqua tiepida subito dopo l'uso: il PETG comincia a deformarsi a 68 gradi, quindi niente lavastoviglie e niente piatti o bevande bollenti. Tienilo intorno a 1 kg fra stoviglie e contenuto: il fondo è sottile e non è stato provato sotto carico. Portalo con due mani, una per manico, e tienilo in piano: la bottiglietta è tenuta solo per i primi 4 cm"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "circa 600 g di filo PETG per tutti i pezzi"
+      - "7 viti M4 lunghe 10 mm a testa svasata e 7 dadi esagonali M4 (si trovano in ferramenta); non servono rondelle: le teste entrano nelle svasature e i dadi nelle loro sedi"
+      - "una chiave a brugola da 2,5 mm, oppure un cacciavite a croce se le viti hanno la testa a croce"
+    montaggio:
+      - "Stampa i cinque file: la targhetta con il tuo nominativo, i tre pezzi del vassoio e la clip."
+      - "Appoggia i tre pezzi su un tavolo e accostali: le due costole del pezzo destro entrano nelle scanalature del pezzo centrale."
+      - "Lascia cadere un dado in ognuna delle cinque asole aperte in alto, nelle pareti più spesse."
+      - "Dall'altra parte infila le cinque viti e stringile a mano fino a fermarti, senza forzare, con la chiave corta e circa mezzo giro dopo che la testa tocca: le teste devono restare sotto la superficie. Dopo qualche giorno ricontrolla che siano ancora strette."
+      - "Spingi un dado di lato in ognuno dei due appoggi rettangolari della targhetta, fino in fondo. Appoggia la targhetta sui quattro appoggi e stringi le due viti dall'alto."
+      - "Spingi le due gambe della clip nelle fessure di uno dei due ponticelli, finché i denti scattano."
+      - "Metti il piatto, il bicchiere e la bottiglietta nelle loro sedi e fai scorrere le posate sotto la clip, dal manico."
+      - "Per togliere la clip, infila un cacciavite piccolo nelle finestrelle ai due lati del ponticello e spingi i denti verso l'interno, uno alla volta, mentre tiri la clip verso l'alto."
+
   # --- Oggetti grandi in due pezzi uniti da viti (25/11/2026, famiglia grandi-nominativo.scad): la gruccia.
   # «insieme» nell'anteprima: catalogo e vista 3D mostrano l'oggetto montato; il file da scaricare resta un pezzo solo.
+
+  # --- Portablocco in due metà avvitate, con targhetta, molla e porta penna (25/11/2026, portablocco-nominativo.scad)
+  - id: "portablocco-a4"
+    nome: "Portablocco A4"
+    articolo: "il portablocco"
+    descrizione: "Tavoletta rigida per scrivere in piedi su fogli A4 (210 × 297 mm): una molla in alto ferma i fogli e dietro la molla c'è un incavo a scatto per la penna. È in due metà unite sul retro da una piastra con quattro viti, perché intera non entra in una stampante da tavolo. In alto porta una targhetta con la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma», che si stampa a parte e può avere le scritte di un altro colore."
+    categoria: "sede"
+    breve: "Tavoletta per fogli A4 con molla fermafogli e porta penna; due metà avvitate."
+    sorgente: "portablocco-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-49.3, -3.25, -39.55, 3.25]
+      vista_3d: true
+      quota_scritte: 3.6
+      sagoma_z: -1.2   # contorno letto dentro la faccia della tavoletta, sotto la targhetta
+      camera: { da: [0.25, -0.55, 0.8], su: [0, 1, 0] }
+      insieme: { file: "portablocco-a4-montato.stl", parte: "montato" }   # nelle anteprime è montato
+    parametri:
+      tipo: "a4"
+      parte: "tutto"
+    secondo_pezzo:
+      parte: "alta"
+      file: "portablocco-a4-meta-alta.stl"
+      nome: "la metà alta della tavoletta"
+      peso_g: 195
+    altri_pezzi:
+      - { parte: "bassa", file: "portablocco-a4-meta-bassa.stl", nome: "la metà bassa della tavoletta", peso_g: 188 }
+      - { parte: "piastra", file: "portablocco-a4-piastra.stl", nome: "la piastra di giunzione", peso_g: 48 }
+      - { parte: "molla", file: "portablocco-a4-molla.stl", nome: "la molla fermafogli con il porta penna", peso_g: 25 }
+    misure: "22,0 × 34,8 cm montato, spesso 1,2 cm"
+    lunghezza_mm: 126
+    peso_g: 465
+    scheda:
+      - ["Ingombro", "montato 220 × 348 mm, spesso 12,4 mm; ogni metà della tavoletta misura 220 × 174 mm; piastra di giunzione 208 × 40 mm, spessa 4,6 mm; molla 70 × 63 mm, alta 17 mm; targhetta 126 × 15 mm, spessa 3,6 mm (4,6 mm con le scritte)"]
+      - ["Peso", "circa 465 g in tutto: 195 g la metà alta, 188 g la metà bassa, 48 g la piastra, 25 g la molla, 9 g la targhetta"]
+      - ["Fogli", "A4, 210 × 297 mm, con 5 mm di margine per lato. Il bordo alto del foglio si ferma contro la base della molla"]
+      - ["Molla fermafogli", "una lamina larga 70 mm e spessa 2,4 mm, che da libera scende 1 mm sotto la faccia della tavoletta: montata, preme già. Preme sulla parte alta del foglio, al centro. È pensata per circa 20 fogli da 80 grammi (2 mm); è una stima di calcolo, non una prova"]
+      - ["Porta penna", "un incavo a C dietro la molla, lungo 70 mm, con l'apertura di 8,4 mm e l'interno di 10,2 mm: la penna entra a scatto. È per penne con il fusto da 8,5 a 9,5 mm: misura la tua. Infilala partendo da un'estremità, non tutta insieme"]
+      - ["Faccia per scrivere", "spessa 2,4 mm e liscia, perché nasce sul piatto di stampa; sul retro ha nervature alte 10 mm che la tengono rigida e la fanno appoggiare in piano sul tavolo"]
+      - ["Giunzione", "le due metà si accostano a metà altezza e una piastra sul retro, spessa 4,6 mm, le tiene unite con quattro viti M4 × 10 a testa svasata e quattro dadi M4. Ogni dado scorre in un canale che parte dalla giunzione e resta sotto la plastica: così la vite stringe la piastra contro la tavoletta. Le punte delle viti si fermano a 2 mm dalla faccia per scrivere. Altre due viti con due dadi fissano la molla e altre due la targhetta"]
+      - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4 mm"]
+      - ["Scritte di un altro colore", "la targhetta si stampa da sola, con le scritte in alto. Per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di colore al primo strato delle scritte, cioè dopo lo strato 18 con strati da 0,2 mm (altezza 3,8 mm); oppure stampa la targhetta con un filo di un altro colore"]
+      - ["Posizione di stampa", "cinque file, già orientati, senza supporti: le due metà sono capovolte, con la faccia per scrivere sul piatto di stampa; la molla è coricata su un fianco; serve un piatto di stampa di almeno 25 × 20 cm"]
+      - ["Precisione", "la molla, i canali e le sedi dei dadi sono disegnati per una stampante da tavolo ben regolata. Con un servizio di stampa, che può scostarsi di mezzo millimetro, un dado può entrare a fatica: si aiuta con la vite"]
+      - ["Da sapere", "la molla è di plastica: se la apri oltre il necessario o la lasci a lungo con un pacco di fogli troppo spesso, perde forza. Non lasciare il portablocco al sole dietro un vetro: il PETG comincia a deformarsi a 68 gradi"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "circa 480 g di filo PETG per tutti i pezzi"
+      - "8 viti M4 lunghe 10 mm a testa svasata e 8 dadi esagonali M4 (si trovano in ferramenta); non servono rondelle: le teste entrano nelle svasature e i dadi nelle loro sedi"
+      - "una chiave a brugola da 2,5 mm, oppure un cacciavite a croce se le viti hanno la testa a croce"
+    montaggio:
+      - "Stampa i cinque file: la targhetta con il tuo nominativo, le due metà della tavoletta, la piastra e la molla."
+      - "Appoggia le due metà sul tavolo con le nervature in alto. Sul bordo della giunzione di ogni metà ci sono due canali: spingi un dado in ognuno, fino in fondo, poi accosta le due metà."
+      - "Appoggia la piastra sulle due fasce lisce, con le svasature in alto, e stringi le quattro viti fino a fermarti, senza forzare: con la chiave corta, circa mezzo giro dopo che la testa tocca. Dopo qualche giorno ricontrolla che siano ancora strette."
+      - "Gira la tavoletta e fai sporgere il bordo alto dal tavolo. Appoggia la molla in alto, con l'incavo della penna verso il bordo, infila due dadi nelle sedi della sua base e stringi le due viti dal retro."
+      - "Appoggia la targhetta in alto, sopra la molla, tieni un dado in ognuna delle due sedi sul retro e stringi le due viti dal davanti."
+      - "Infila i fogli sotto la lamina fino in fondo e premi la penna nell'incavo."
+
+  - id: "portablocco-b5"
+    nome: "Portablocco B5"
+    articolo: "il portablocco"
+    descrizione: "Tavoletta rigida per scrivere in piedi su fogli B5 (176 × 250 mm): una molla in alto ferma i fogli e dietro la molla c'è un incavo a scatto per la penna. È in due metà unite sul retro da una piastra con quattro viti, perché intera non entra in una stampante da tavolo. In alto porta una targhetta con la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma», che si stampa a parte e può avere le scritte di un altro colore."
+    categoria: "sede"
+    breve: "Tavoletta per fogli B5 con molla fermafogli e porta penna; due metà avvitate."
+    sorgente: "portablocco-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-49.3, -3.25, -39.55, 3.25]
+      vista_3d: true
+      quota_scritte: 3.6
+      sagoma_z: -1.2   # contorno letto dentro la faccia della tavoletta, sotto la targhetta
+      camera: { da: [0.25, -0.55, 0.8], su: [0, 1, 0] }
+      insieme: { file: "portablocco-b5-montato.stl", parte: "montato" }   # nelle anteprime è montato
+    parametri:
+      tipo: "b5"
+      parte: "tutto"
+    secondo_pezzo:
+      parte: "alta"
+      file: "portablocco-b5-meta-alta.stl"
+      nome: "la metà alta della tavoletta"
+      peso_g: 148
+    altri_pezzi:
+      - { parte: "bassa", file: "portablocco-b5-meta-bassa.stl", nome: "la metà bassa della tavoletta", peso_g: 145 }
+      - { parte: "piastra", file: "portablocco-b5-piastra.stl", nome: "la piastra di giunzione", peso_g: 40 }
+      - { parte: "molla", file: "portablocco-b5-molla.stl", nome: "la molla fermafogli con il porta penna", peso_g: 25 }
+    misure: "18,6 × 30,1 cm montato, spesso 1,2 cm"
+    lunghezza_mm: 126
+    peso_g: 367
+    scheda:
+      - ["Ingombro", "montato 186 × 301 mm, spesso 12,4 mm; ogni metà della tavoletta misura 186 × 151 mm; piastra di giunzione 174 × 40 mm, spessa 4,6 mm; molla 70 × 63 mm, alta 17 mm; targhetta 126 × 15 mm, spessa 3,6 mm (4,6 mm con le scritte)"]
+      - ["Peso", "circa 367 g in tutto: 148 g la metà alta, 145 g la metà bassa, 40 g la piastra, 25 g la molla, 9 g la targhetta"]
+      - ["Fogli", "B5, 176 × 250 mm, con 5 mm di margine per lato. Il bordo alto del foglio si ferma contro la base della molla"]
+      - ["Molla fermafogli", "una lamina larga 70 mm e spessa 2,4 mm, che da libera scende 1 mm sotto la faccia della tavoletta: montata, preme già. Preme sulla parte alta del foglio, al centro. È pensata per circa 20 fogli da 80 grammi (2 mm); è una stima di calcolo, non una prova"]
+      - ["Porta penna", "un incavo a C dietro la molla, lungo 70 mm, con l'apertura di 8,4 mm e l'interno di 10,2 mm: la penna entra a scatto. È per penne con il fusto da 8,5 a 9,5 mm: misura la tua. Infilala partendo da un'estremità, non tutta insieme"]
+      - ["Faccia per scrivere", "spessa 2,4 mm e liscia, perché nasce sul piatto di stampa; sul retro ha nervature alte 10 mm che la tengono rigida e la fanno appoggiare in piano sul tavolo"]
+      - ["Giunzione", "le due metà si accostano a metà altezza e una piastra sul retro, spessa 4,6 mm, le tiene unite con quattro viti M4 × 10 a testa svasata e quattro dadi M4. Ogni dado scorre in un canale che parte dalla giunzione e resta sotto la plastica: così la vite stringe la piastra contro la tavoletta. Le punte delle viti si fermano a 2 mm dalla faccia per scrivere. Altre due viti con due dadi fissano la molla e altre due la targhetta"]
+      - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4 mm"]
+      - ["Scritte di un altro colore", "la targhetta si stampa da sola, con le scritte in alto. Per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di colore al primo strato delle scritte, cioè dopo lo strato 18 con strati da 0,2 mm (altezza 3,8 mm); oppure stampa la targhetta con un filo di un altro colore"]
+      - ["Posizione di stampa", "cinque file, già orientati, senza supporti: le due metà sono capovolte, con la faccia per scrivere sul piatto di stampa; la molla è coricata su un fianco; serve un piatto di stampa di almeno 20 × 17 cm"]
+      - ["Precisione", "la molla, i canali e le sedi dei dadi sono disegnati per una stampante da tavolo ben regolata. Con un servizio di stampa, che può scostarsi di mezzo millimetro, un dado può entrare a fatica: si aiuta con la vite"]
+      - ["Da sapere", "la molla è di plastica: se la apri oltre il necessario o la lasci a lungo con un pacco di fogli troppo spesso, perde forza. Non lasciare il portablocco al sole dietro un vetro: il PETG comincia a deformarsi a 68 gradi"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "circa 380 g di filo PETG per tutti i pezzi"
+      - "8 viti M4 lunghe 10 mm a testa svasata e 8 dadi esagonali M4 (si trovano in ferramenta); non servono rondelle: le teste entrano nelle svasature e i dadi nelle loro sedi"
+      - "una chiave a brugola da 2,5 mm, oppure un cacciavite a croce se le viti hanno la testa a croce"
+    montaggio:
+      - "Stampa i cinque file: la targhetta con il tuo nominativo, le due metà della tavoletta, la piastra e la molla."
+      - "Appoggia le due metà sul tavolo con le nervature in alto. Sul bordo della giunzione di ogni metà ci sono due canali: spingi un dado in ognuno, fino in fondo, poi accosta le due metà."
+      - "Appoggia la piastra sulle due fasce lisce, con le svasature in alto, e stringi le quattro viti fino a fermarti, senza forzare: con la chiave corta, circa mezzo giro dopo che la testa tocca. Dopo qualche giorno ricontrolla che siano ancora strette."
+      - "Gira la tavoletta e fai sporgere il bordo alto dal tavolo. Appoggia la molla in alto, con l'incavo della penna verso il bordo, infila due dadi nelle sedi della sua base e stringi le due viti dal retro."
+      - "Appoggia la targhetta in alto, sopra la molla, tieni un dado in ognuna delle due sedi sul retro e stringi le due viti dal davanti."
+      - "Infila i fogli sotto la lamina fino in fondo e premi la penna nell'incavo."
+
+  # --- Oggetti da scrivania con la targhetta che scorre in una guida (25/11/2026, scrivania-nominativo.scad)
+  - id: "portapenne"
+    nome: "Portapenne da scrivania"
+    articolo: "il portapenne"
+    descrizione: "Portapenne per la scrivania della segreteria, con due scomparti: uno largo per penne e matite, uno stretto per forbici, pennarelli e righello. Davanti ha una targhetta con la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma», che scorre in una guida: si stampa a parte e può avere le scritte di un altro colore."
+    categoria: "sede"
+    breve: "Due scomparti per penne, forbici e pennarelli; targhetta che scorre in una guida, senza viti."
+    sorgente: "scrivania-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-48.0, -3.25, -38.25, 3.25]
+      vista_3d: true
+      quota_scritte: 2.4
+      sagoma_z: -3.0   # contorno letto dentro il gradino, sotto la targhetta
+      camera: { da: [0.3, -0.8, 0.55], su: [0, 0, 1] }
+      insieme: { file: "portapenne-montato.stl", parte: "montato" }   # nelle anteprime la targhetta è infilata
+    parametri:
+      tipo: "penne"
+      parte: "tutto"
+    secondo_pezzo:
+      parte: "corpo"
+      file: "portapenne-corpo.stl"
+      nome: "il portapenne"
+      peso_g: 143
+    misure: "11 × 9,5 cm, alto 9,2 cm"
+    lunghezza_mm: 102
+    peso_g: 149
+    scheda:
+      - ["Ingombro", "110 × 95 mm, alto 92 mm: il contenitore è profondo 70 mm, davanti c'è un gradino di 25 mm con la targhetta"]
+      - ["Peso", "circa 149 g: 143 g il portapenne, 6 g la targhetta"]
+      - ["Scomparti", "due, profondi 90 mm: quello di sinistra è largo 69 mm, quello di destra 35 mm; pareti da 2 mm"]
+      - ["Targhetta", "102 × 19 mm, spessa 2,4 mm (3,4 mm con le scritte), con i due lati lunghi smussati a 45 gradi: scorre in una guida a coda di rondine davanti all'oggetto, senza viti né colla. Entra da destra e si ferma a sinistra"]
+      - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4 mm"]
+      - ["Scritte di un altro colore", "la targhetta si stampa da sola, con le scritte in alto. Per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di colore al primo strato delle scritte, cioè dopo lo strato 12 con strati da 0,2 mm (altezza 2,6 mm); oppure stampala con un filo di un altro colore"]
+      - ["Posizione di stampa", "due file, già orientati, senza supporti: il portapenne in piedi, la targhetta in piano con le scritte in alto"]
+      - ["Precisione", "fra la targhetta e la guida ci sono 0,2 mm per parte: con una stampante da tavolo ben regolata entra a pressione. Se resta lenta basta una goccia di colla; se non entra, passa una lima sui due lati smussati"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "niente viti né attrezzi; una goccia di colla solo se la targhetta scorre troppo facilmente nella guida"
+    montaggio:
+      - "Stampa i due file: la targhetta con il tuo nominativo e il portapenne."
+      - "Infila la targhetta nella guida da destra, con le scritte in alto e la bandiera a sinistra, e spingila fino in fondo."
+
+  - id: "porta-foglietti"
+    nome: "Porta foglietti da scrivania"
+    articolo: "il porta foglietti"
+    descrizione: "Vaschetta per i foglietti adesivi quadrati da 76 mm, con accanto un vano per graffette e puntine. Due inviti nelle pareti lasciano prendere il blocchetto con le dita. Davanti ha una targhetta con la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma», che scorre in una guida: si stampa a parte e può avere le scritte di un altro colore."
+    categoria: "sede"
+    breve: "Per i foglietti adesivi da 76 mm, con un vano per le graffette; targhetta che scorre in una guida."
+    sorgente: "scrivania-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-48.0, -3.25, -38.25, 3.25]
+      vista_3d: true
+      quota_scritte: 2.4
+      sagoma_z: -3.0   # contorno letto dentro il gradino, sotto la targhetta
+      camera: { da: [0.3, -0.8, 0.55], su: [0, 0, 1] }
+      insieme: { file: "porta-foglietti-montato.stl", parte: "montato" }   # nelle anteprime la targhetta è infilata
+    parametri:
+      tipo: "foglietti"
+      parte: "tutto"
+    secondo_pezzo:
+      parte: "corpo"
+      file: "porta-foglietti-corpo.stl"
+      nome: "il porta foglietti"
+      peso_g: 85
+    misure: "11,6 × 10,9 cm, alto 2,4 cm"
+    lunghezza_mm: 102
+    peso_g: 91
+    scheda:
+      - ["Ingombro", "116 × 109 mm, alto 24 mm: la vaschetta è profonda 84 mm, davanti c'è un gradino di 25 mm con la targhetta"]
+      - ["Peso", "circa 91 g: 85 g il porta foglietti, 6 g la targhetta"]
+      - ["Sede dei foglietti", "79 × 79 mm, profonda 21 mm: ci stanno due blocchetti di foglietti quadrati da 76 mm, uno sopra l'altro. I foglietti di altre misure non ci stanno o ballano: misura i tuoi"]
+      - ["Vano delle graffette", "30 × 79 mm, profondo 21 mm, con gli angoli arrotondati per prendere bene le graffette"]
+      - ["Targhetta", "102 × 19 mm, spessa 2,4 mm (3,4 mm con le scritte), con i due lati lunghi smussati a 45 gradi: scorre in una guida a coda di rondine davanti all'oggetto, senza viti né colla. Entra da destra e si ferma a sinistra"]
+      - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4 mm"]
+      - ["Scritte di un altro colore", "la targhetta si stampa da sola, con le scritte in alto. Per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di colore al primo strato delle scritte, cioè dopo lo strato 12 con strati da 0,2 mm (altezza 2,6 mm); oppure stampala con un filo di un altro colore"]
+      - ["Posizione di stampa", "due file, già orientati, senza supporti: tutti e due in piano, la targhetta con le scritte in alto"]
+      - ["Precisione", "fra la targhetta e la guida ci sono 0,2 mm per parte: con una stampante da tavolo ben regolata entra a pressione. Se resta lenta basta una goccia di colla; se non entra, passa una lima sui due lati smussati"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "niente viti né attrezzi; una goccia di colla solo se la targhetta scorre troppo facilmente nella guida"
+      - "un blocchetto di foglietti adesivi quadrati da 76 mm"
+    montaggio:
+      - "Stampa i due file: la targhetta con il tuo nominativo e il porta foglietti."
+      - "Infila la targhetta nella guida da destra, con le scritte in alto e la bandiera a sinistra, e spingila fino in fondo."
+      - "Appoggia il blocchetto dei foglietti nella sede quadrata."
+
   # ---------- Kit, pile e schede ----------
 
   - id: "porta-pile-aa"
@@ -1023,14 +1427,17 @@ oggetti:
     scheda:
       - ["Ingombro", "90 × 36 mm, spesso 4 mm (3 mm di base e 1 mm di scritte)"]
       - ["Peso", "circa 12 g"]
-      - ["Fori", "2 per viti a testa svasata da 4 mm (foro 4,4 mm, svasatura 8,8 mm), a 78 mm l'uno dall'altro, lontani dalle scritte"]
+      - ["Fori", "2 per viti a testa svasata da 4 mm (foro 4,4 mm, svasatura 8,8 mm: la testa di una vite per legno da 4 mm è larga 8 mm e resta a filo), a 78 mm l'uno dall'altro, lontani dalle scritte"]
       - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4 mm"]
       - ["Spazio per nome e cognome", "fascia libera di 60 × 7 mm sotto il nominativo"]
       - ["Posizione di stampa", "in piano, già orientato nel file, senza supporti"]
     materiale: "PETG"
     colore: "blu"
     occorrente:
-      - "nastro biadesivo di montaggio, oppure due viti a testa svasata da 4 mm adatte all'anta"
+      - "nastro biadesivo di montaggio: è il modo più semplice"
+      - "oppure, per un'anta di lamiera: due viti M4 a testa svasata lunghe 12 mm, due rondelle M4 e due dadi M4 autobloccanti; il foro nella lamiera è da 4,5 mm e la rondella va dietro la lamiera, sotto il dado"
+      - "oppure, per un'anta di legno: due viti per legno a testa svasata piana da 4 mm, lunghe 16 mm"
+      - "per le viti: trapano, cacciavite e, per i dadi, una chiave da 7 mm"
     montaggio:
       - "Pulisci e asciuga il punto dell'anta dove vuoi mettere il cartellino."
       - "Con il biadesivo: incolla due strisce sul retro, lontano dai fori, e premi forte per 30 secondi."
@@ -1072,11 +1479,12 @@ oggetti:
       - ["Altezza delle lettere", "nominativo 8 mm; righe piccole 4 mm"]
       - ["Spazio per nome e cognome", "fascia libera di 68 × 7 mm sotto il nominativo"]
       - ["Posizione di stampa", "due file, tutti e due in piano, già orientati, senza supporti; serve un piatto di stampa di almeno 25 × 20 cm"]
-      - ["Scritte di un altro colore", "le scritte sono l'ultimo millimetro del pezzo con il nominativo. Per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di colore all'altezza di 10,8 mm, cioè dopo lo strato 54 con strati da 0,2 mm: la stampante si ferma, cambi il filo e finisce le scritte con il secondo colore"]
+      - ["Scritte di un altro colore", "le scritte sono l'ultimo millimetro del pezzo con il nominativo. Per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di colore al primo strato delle scritte, cioè dopo lo strato 54 con strati da 0,2 mm (altezza 11,0 mm): la stampante si ferma, cambi il filo e finisce le scritte con il secondo colore"]
     materiale: "PETG"
     colore: "blu"
     occorrente:
-      - "4 viti M4 lunghe 10 mm a testa svasata e 4 dadi esagonali M4 (si trovano in ferramenta)"
+      - "circa 250 g di filo PETG per tutti i pezzi"
+      - "4 viti M4 lunghe 10 mm a testa svasata e 4 dadi esagonali M4 (si trovano in ferramenta); non servono rondelle: le teste entrano nelle svasature e i dadi nelle loro sedi"
       - "una chiave a brugola da 2,5 mm, oppure un cacciavite a croce se le viti hanno la testa a croce"
     montaggio:
       - "Stampa tutti e due i file: il pezzo con il tuo nominativo e il braccio destro."
@@ -1269,12 +1677,15 @@ oggetti:
       - ["Ingombro", "80 × 101 mm, sporge 43 mm dalla parete"]
       - ["Peso", "circa 108 g"]
       - ["Anello", "largo 80 mm, spesso 3,5 mm, foro da 40,3 mm e bocca da 36,5 mm: per il corpo da 39,67 mm delle Maglite a 2 o 3 pile D (scheda del produttore, maglite.com, consultata il 24/11/2026); con i 38,1 mm della ML300LX la torcia ha 2,2 mm di gioco e si muove un poco"]
-      - ["Fori", "3 per viti a testa svasata da 4 mm (foro 4,4 mm, svasatura 8,8 mm): due nella piastra, uno sotto l'anello"]
+      - ["Fori", "3 per viti a testa svasata da 4 mm (foro 4,4 mm, svasatura 8,8 mm: la testa di una vite per legno da 4 mm è larga 8 mm e resta a filo): due nella piastra, uno sotto l'anello"]
       - ["Posizione di stampa", "in piedi sul lato sinistro, già orientato nel file, senza supporti"]
     materiale: "ASA"
     colore: "blu"
     occorrente:
-      - "tre viti a testa svasata da 4 mm e i tasselli adatti alla parete o al pannello del mezzo"
+      - "per il muro: tre viti per legno o truciolare a testa svasata piana da 4 mm, lunghe 40 mm, e tre tasselli per viti da 4 mm; la confezione dei tasselli dice quale punta del trapano usare"
+      - "per il legno o un pannello: tre viti dello stesso tipo lunghe 20 mm, senza tasselli"
+      - "per la lamiera (armadietto di metallo, pannello del mezzo): tre viti M4 a testa svasata lunghe 16 mm, tre rondelle M4 e tre dadi M4 autobloccanti; il foro nella lamiera è da 4,5 mm e la rondella va dietro la lamiera, sotto il dado"
+      - "trapano, cacciavite e, per i dadi, una chiave da 7 mm"
     montaggio:
       - "Prima di stampare misura il corpo della torcia: il file pronto va bene da 38 a 40 mm. Per un'altra misura scarica il modello e cambia «diametro_torcia»."
       - "Appoggia il supporto con l'anello in basso, segna i tre fori, fora e avvita senza stringere troppo."
