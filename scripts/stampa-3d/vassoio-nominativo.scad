@@ -18,7 +18,7 @@
 // sinistra180 e centro180 = seconda versione dei due pezzi del piatto, con il foro da 180 mm
 // sinistra3, centro3, destra3 = terza versione, con le sedi sagomate: si stampa diritta, con il fondo sul piatto;
 // montato3 = terza versione montata, solo da guardare
-parte = "tutto"; // [tutto, base, testo, sinistra, centro, destra, sinistra180, centro180, prolunga_a, prolunga_b, piatto_destro, clip, montato, sinistra3, centro3, destra3, montato3, sinistra_i, centro_i, destra_i, sinistra180_i, centro180_i, sinistra3_i, centro3_i, destra3_i, farfalle, farfalle3, provino, rivetti_targhetta, rivetti_targhetta3, controllo_viti]
+parte = "tutto"; // [tutto, base, testo, sinistra, centro, destra, sinistra180, centro180, sinistra160, centro160, sinistra160_i, centro160_i, prolunga_a, prolunga_b, clip, montato, sinistra3, centro3, destra3, montato3, sinistra_i, centro_i, destra_i, sinistra180_i, centro180_i, sinistra3_i, centro3_i, destra3_i, farfalle, farfalle3, provino, rivetti_targhetta, rivetti_targhetta3, controllo_viti]
 tipo = "vassoio"; // [vassoio]
 
 /* [Testi] */
@@ -62,8 +62,12 @@ $fn = 64;
 // bottiglia scende di circa 35 mm e si ferma su un cono che in fondo lascia un'apertura di 54 mm. Una bottiglia
 // più larga di 70 mm non entra; una più stretta di 55 mm cadrebbe.
 BOTT = 70; B_PROF = 44; B_CONO = 9; B_FONDO = 54;
-STRETTO = parte == "montato" || parte == "prolunga_a" || parte == "prolunga_b" || parte == "piatto_destro" || parte == "sinistra180" || parte == "centro180" || parte == "sinistra180_i" || parte == "centro180_i";
-FORO_PIATTO = STRETTO ? 180 : 200; FORO_BICCHIERE = 56;
+STRETTO = parte == "montato" || parte == "prolunga_a" || parte == "prolunga_b" || parte == "sinistra180" || parte == "centro180" || parte == "sinistra180_i" || parte == "centro180_i";
+// Vassoio per i piatti fondi (25/11/2026, richiesta di Alessandro): foro da 160 mm. Il piatto fondo «da 22 cm» (220 mm
+// in alto, 145 mm alla base, alto 27 mm) ci entra con la base e sotto il bordo restano 30 mm di vassoio per parte;
+// il piatto piano (base di 165 mm) non ci entra: per quello c'è il foro da 180 mm.
+FONDI = parte == "sinistra160" || parte == "centro160" || parte == "sinistra160_i" || parte == "centro160_i";
+FORO_PIATTO = FONDI ? 160 : STRETTO ? 180 : 200; FORO_BICCHIERE = 56;
 PIANO = 3.0;                  // spessore del piano (15 strati da 0,2 mm)
 NERV = 15;                    // fin dove scendono le nervature sotto il piano (12 mm oltre il piano)
 FLANGIA = 26;                 // fin dove scendono le pareti di giunzione (23 mm oltre il piano)
@@ -224,7 +228,7 @@ module piede(p) {
 // in una gola del pezzo accanto e impedisce ai pezzi di scorrere in altezza uno sull'altro.
 // Le sedi e i pezzi pieni intorno prendono il posto delle viti: i pezzi a incastro non hanno fori per le viti.
 // Alla seconda giunzione restano anche le due costole di allineamento dei pezzi con le viti.
-INC_PARTI = ["sinistra_i", "centro_i", "destra_i", "sinistra180_i", "centro180_i", "sinistra3_i", "centro3_i",
+INC_PARTI = ["sinistra_i", "centro_i", "destra_i", "sinistra180_i", "centro180_i", "sinistra160_i", "centro160_i", "sinistra3_i", "centro3_i",
              "destra3_i", "interferenze", "interferenze3"];
 INC = len([for (q = INC_PARTI) if (q == parte) 1]) > 0;
 K_L = 14; K_COLLO = 6; K_ALA = 12; K_GIOCO = 0.2; K_BORDO = 3;
@@ -363,17 +367,17 @@ module pezzo_destra() {
     }
 }
 
-/* ---------- Secondo piatto: prolunga del vassoio e vassoio piccolo (25/11/2026) ---------- */
+/* ---------- Secondo piatto: prolunga del vassoio (25/11/2026) ---------- */
 
 // Un foro da 180 mm con le sue pareti di giunzione non sta in un pezzo largo meno di 20 cm, il massimo per una
-// stampante da tavolo: per questo ogni foro del piatto è diviso fra due pezzi. Per un secondo piatto ci sono due strade.
-// 1) Prolunga: due pezzi larghi 120 mm, A e B, fra il pezzo sinistro e il pezzo centrale. A chiude il primo foro
+// stampante da tavolo: per questo ogni foro del piatto è diviso fra due pezzi, e per un secondo piatto ne servono due.
+// Prolunga: due pezzi larghi 120 mm, A e B, fra il pezzo sinistro e il pezzo centrale. A chiude il primo foro
 //    (prende il posto del lato sinistro del pezzo centrale), B apre il secondo (ha il lato destro del pezzo
 //    sinistro); fra A e B c'è una giunzione uguale alla seconda del vassoio. I due piatti stanno a 240 mm da centro
 //    a centro: fra i bordi di due piatti da 225 mm restano 15 mm. Il vassoio diventa lungo 696 mm.
-// 2) Vassoio piccolo: il pezzo sinistro con, al posto del pezzo centrale, un pezzo destro specchiato con il suo
-//    manico. Porta un piatto solo ed è lungo 296 mm.
-// Tutti e tre i pezzi hanno il foro da 180 mm e si uniscono con le viti M4 × 10 del resto del vassoio.
+// I due pezzi hanno il foro da 180 mm e si uniscono con le viti M4 × 10 del resto del vassoio. (Il vassoio piccolo
+// per un piatto solo, provato lo stesso giorno, è stato tolto: ogni vassoio porta sempre anche posate, bicchiere e
+// bottiglia.)
 PRO = 120;                                     // larghezza di ogni pezzo della prolunga
 module lastra_pro(piedi) {
     translate([0, -FONDO / 2, 0]) cube([PRO, FONDO, PIANO]);
@@ -423,25 +427,6 @@ module prolunga_b() {
         translate([0, 0, -0.01]) linear_extrude(INCISO + 0.01) etichetta("PIATTO", [PRO - 53, -104]);
     }
 }
-// Pezzo destro del vassoio piccolo: il pezzo sinistro specchiato, con il lato dei dadi al posto di quello delle teste
-module piatto_destro() {
-    difference() {
-        union() {
-            translate([2 * G1, 0, 0]) mirror([1, 0, 0]) intersection() { corpo(); translate([-1, -200, -1]) cube([G1 + 1, 400, 100]); }
-            for (v = [-1, 1]) parete(G1, 1, FL_B, v > 0 ? Y1A : -FONDO / 2, v > 0 ? FONDO / 2 : -Y1A);
-            intersection() { costole(G1, COST_1); translate([G1 - 5, -200, 0]) cube([5, 400, 100]); }
-        }
-        foro_pro(G1);
-        // asola del manico, specchiata, con il suo smusso
-        translate([2 * G1, 0, 0]) mirror([1, 0, 0]) {
-            translate([0, 0, -1]) linear_extrude(PIEDE) foro2d(2, 0);
-            hull() { translate([0, 0, -0.01]) linear_extrude(0.01) foro2d(2, SM); translate([0, 0, SM]) linear_extrude(0.01) foro2d(2, -0.02); }
-        }
-        viti_dadi(G1, VITI_1);
-        translate([0, 0, -0.01]) linear_extrude(INCISO + 0.01) etichetta("PIATTO", [2 * G1 - 95, -104]);
-    }
-}
-
 /* ---------- Clip per le posate ---------- */
 
 // Un ponte sopra le posate, con due gambe che entrano nelle fessure del piano e si agganciano sotto con un dente.
@@ -650,12 +635,11 @@ module montato() {
 
 if (parte == "tutto" || parte == "base") targhetta_base();
 if (parte == "tutto" || parte == "testo") targhetta_testo();
-if (parte == "sinistra" || parte == "sinistra180" || parte == "sinistra_i" || parte == "sinistra180_i") per_la_stampa() pezzo_sinistra();
-if (parte == "centro" || parte == "centro180" || parte == "centro_i" || parte == "centro180_i") per_la_stampa() pezzo_centro();
+if (parte == "sinistra" || parte == "sinistra180" || parte == "sinistra_i" || parte == "sinistra180_i" || parte == "sinistra160" || parte == "sinistra160_i") per_la_stampa() pezzo_sinistra();
+if (parte == "centro" || parte == "centro180" || parte == "centro_i" || parte == "centro180_i" || parte == "centro160" || parte == "centro160_i") per_la_stampa() pezzo_centro();
 if (parte == "destra" || parte == "destra_i") per_la_stampa() pezzo_destra();
 if (parte == "prolunga_a") per_la_stampa() prolunga_a();
 if (parte == "prolunga_b") per_la_stampa() prolunga_b();
-if (parte == "piatto_destro") per_la_stampa() translate([-G1, 0, 0]) piatto_destro();
 if (parte == "clip") clip();
 if (parte == "montato") montato();
 if (parte == "sinistra3" || parte == "sinistra3_i") sinistra3();
