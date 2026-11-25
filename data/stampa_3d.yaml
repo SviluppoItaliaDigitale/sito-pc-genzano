@@ -22,6 +22,8 @@ servizio:
 categorie:
   - id: "natale"
     titolo: "Per Natale"
+  - id: "feste"
+    titolo: "Per le feste dell'anno"
   - id: "giubbetto"
     titolo: "Sul giubbetto e in tasca"
   - id: "radio"
@@ -191,6 +193,152 @@ oggetti:
       - "Stampa i due file: la targa con il tuo nominativo e il piede."
       - "Infila la targa nella fessura del piede, con le scritte verso chi guarda: resta inclinata all'indietro."
       - "Se la targa balla nella fessura, fermala con una goccia di colla."
+
+  # --- Feste dell'anno (25/11/2026): quattro oggetti piatti di targhetta-nominativo.scad, tipi uovo, fiore, coccarda, cuore
+
+  - id: "uovo-pasqua"
+    nome: "Uovo di Pasqua da appendere"
+    articolo: "l'uovo"
+    descrizione: "Uovo blu da appendere a un ramo, alla finestra o alla porta della sede, con «Buona Pasqua» fra due stelline, la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». In alto ha il foro per il nastro. Sul retro, liscio, puoi aggiungere nome e cognome."
+    categoria: "feste"
+    breve: "Uovo da appendere, con «Buona Pasqua» e il nominativo."
+    sorgente: "targhetta-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-33.0, 0.0, -21.0, 8.0]
+      nome: {zona: [-25, -3.5, 25, 3.5], lato: "retro"}
+    parametri:
+      tipo: "uovo"
+      parte: "tutto"
+      riga0: "BUONA PASQUA"
+    misure: "7,8 × 9,3 cm, spesso 3,4 mm"
+    lunghezza_mm: 78
+    peso_g: 18
+    scheda:
+      - ["Ingombro", "78 × 93 mm, spesso 3,4 mm (2,4 mm di base e 1 mm di scritte)"]
+      - ["Peso", "circa 18 g"]
+      - ["Foro", "da 4,5 mm per un nastro o uno spago, con 4,7 mm di plastica sopra"]
+      - ["Altezza delle lettere", "nominativo 8 mm; righe piccole 4,5 mm"]
+      - ["Scritte di un altro colore", "le scritte sono in rilievo di 1 mm: per averle di un altro colore, nel programma di stampa aggiungi un cambio di filo al primo strato delle scritte, cioè dopo lo strato 12 con strati da 0,2 mm (altezza 2,6 mm). Cambiano colore con le scritte anche la cornice, la bandiera e le due stelline, che sono in rilievo alla stessa altezza. Il cambio di filo è facoltativo e si fa anche con una stampante a un colore solo: la stampa si ferma a quello strato, cambi il filo a mano e riparte. Senza cambio il pezzo esce di un colore solo e le scritte si leggono per il rilievo"]
+      - ["Posizione di stampa", "in piano, già orientato nel file, senza supporti"]
+      - ["Da sapere", "È un addobbo: non si usa come contenitore né a contatto con il cibo o con le uova di cioccolato. Si tiene lontano da candele, stufe e lampadine che scaldano: il PETG comincia a deformarsi a 68 gradi. Non è un giocattolo: va tenuto fuori dalla portata dei bambini piccoli"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "un nastro o uno spago lungo circa 20 cm"
+    montaggio:
+      - "Infila il nastro nel foro e annodalo ad anello."
+      - "Appendilo a un ramo robusto o a un gancio."
+
+  - id: "fiore-infiorata"
+    nome: "Fiore dell'Infiorata"
+    articolo: "il fiore"
+    descrizione: "Fiore blu a dieci petali da appendere, pensato per l'Infiorata di Genzano e per la primavera: «Infiorata» fra due stelline, la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». Il foro per il nastro è nel petalo in alto. Sul retro, liscio, puoi aggiungere nome e cognome."
+    categoria: "feste"
+    breve: "Fiore a dieci petali da appendere, con «Infiorata» e il nominativo."
+    sorgente: "targhetta-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-33.0, 0.0, -21.0, 8.0]
+      nome: {zona: [-25, -3.5, 25, 3.5], lato: "retro"}
+    parametri:
+      tipo: "fiore"
+      parte: "tutto"
+      riga0: "INFIORATA"
+    misure: "9,5 × 9,8 cm, spesso 3,4 mm"
+    lunghezza_mm: 95
+    peso_g: 22
+    scheda:
+      - ["Ingombro", "94 × 98 mm, spesso 3,4 mm (2,4 mm di base e 1 mm di scritte)"]
+      - ["Peso", "circa 22 g"]
+      - ["Foro", "da 4,5 mm nel petalo in alto, con 4,7 mm di plastica sopra"]
+      - ["Altezza delle lettere", "nominativo 8 mm; righe piccole 4,5 mm"]
+      - ["Scritte di un altro colore", "le scritte sono in rilievo di 1 mm: per averle di un altro colore, nel programma di stampa aggiungi un cambio di filo al primo strato delle scritte, cioè dopo lo strato 12 con strati da 0,2 mm (altezza 2,6 mm). Cambiano colore con le scritte anche la cornice, la bandiera e le due stelline, che sono in rilievo alla stessa altezza. Il cambio di filo è facoltativo e si fa anche con una stampante a un colore solo: la stampa si ferma a quello strato, cambi il filo a mano e riparte. Senza cambio il pezzo esce di un colore solo e le scritte si leggono per il rilievo"]
+      - ["Posizione di stampa", "in piano, già orientato nel file, senza supporti"]
+      - ["Da sapere", "È un addobbo da tenere in sede, a casa o sullo zaino: non si appoggia sui quadri di fiori dell'Infiorata. Si tiene lontano da candele, stufe e lampadine che scaldano: il PETG comincia a deformarsi a 68 gradi. Non è un giocattolo: va tenuto fuori dalla portata dei bambini piccoli"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "un nastro o uno spago lungo circa 20 cm"
+    montaggio:
+      - "Infila il nastro nel foro e annodalo ad anello."
+      - "Appendilo a un gancio, a un ramo o allo zaino."
+
+  - id: "coccarda-2-giugno"
+    nome: "Coccarda del 2 giugno"
+    articolo: "la coccarda"
+    descrizione: "Coccarda blu con il bordo pieghettato e due nastri, da appendere per la Festa della Repubblica e per le altre feste nazionali: «2 giugno» fra due stelline, la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». In alto ha l'occhiello per il nastro. Sul retro, liscio, puoi aggiungere nome e cognome."
+    categoria: "feste"
+    breve: "Coccarda da appendere, con «2 giugno» e il nominativo."
+    sorgente: "targhetta-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-33.0, 0.0, -21.0, 8.0]
+      nome: {zona: [-25, -3.5, 25, 3.5], lato: "retro"}
+    parametri:
+      tipo: "coccarda"
+      parte: "tutto"
+      riga0: "2 GIUGNO"
+    misure: "8,4 × 11,3 cm, spesso 3,4 mm"
+    lunghezza_mm: 84
+    peso_g: 20
+    scheda:
+      - ["Ingombro", "84 × 113 mm, spesso 3,4 mm (2,4 mm di base e 1 mm di scritte)"]
+      - ["Peso", "circa 20 g"]
+      - ["Foro", "occhiello in alto con foro da 4,5 mm per un nastro o uno spago"]
+      - ["Altezza delle lettere", "nominativo 8 mm; righe piccole 4,5 mm"]
+      - ["Scritte di un altro colore", "le scritte sono in rilievo di 1 mm: per averle di un altro colore, nel programma di stampa aggiungi un cambio di filo al primo strato delle scritte, cioè dopo lo strato 12 con strati da 0,2 mm (altezza 2,6 mm). Cambiano colore con le scritte anche la cornice, la bandiera e le due stelline, che sono in rilievo alla stessa altezza. Il cambio di filo è facoltativo e si fa anche con una stampante a un colore solo: la stampa si ferma a quello strato, cambi il filo a mano e riparte. Senza cambio il pezzo esce di un colore solo e le scritte si leggono per il rilievo"]
+      - ["Posizione di stampa", "in piano, già orientato nel file, senza supporti"]
+      - ["Da sapere", "È un addobbo: non si appunta alla divisa, dove vanno solo i segni previsti dal regolamento. Si tiene lontano da candele, stufe e lampadine che scaldano: il PETG comincia a deformarsi a 68 gradi. Non è un giocattolo: va tenuto fuori dalla portata dei bambini piccoli"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "un nastro o uno spago lungo circa 20 cm"
+    montaggio:
+      - "Infila il nastro nel foro e annodalo ad anello."
+      - "Appendila a un gancio o a una bacheca."
+
+  - id: "cuore-grazie"
+    nome: "Cuore «Grazie»"
+    articolo: "il cuore"
+    descrizione: "Cuore blu da appendere o da regalare a chi ha dato una mano: «Grazie» fra due stelline, la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». Va bene per la Giornata internazionale del volontariato del 5 dicembre e ogni volta che c'è qualcuno da ringraziare. Il foro per il nastro è sotto l'incavo. Sul retro, liscio, puoi aggiungere nome e cognome."
+    categoria: "feste"
+    breve: "Cuore da appendere o regalare, con «Grazie» e il nominativo."
+    sorgente: "targhetta-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-33.0, 0.0, -21.0, 8.0]
+      nome: {zona: [-25, -3.5, 25, 3.5], lato: "retro"}
+    parametri:
+      tipo: "cuore"
+      parte: "tutto"
+      riga0: "GRAZIE"
+    misure: "9 × 9,1 cm, spesso 3,4 mm"
+    lunghezza_mm: 90
+    peso_g: 17
+    scheda:
+      - ["Ingombro", "90 × 91 mm, spesso 3,4 mm (2,4 mm di base e 1 mm di scritte)"]
+      - ["Peso", "circa 17 g"]
+      - ["Foro", "da 4,5 mm sotto l'incavo, con più di 7 mm di plastica sopra"]
+      - ["Altezza delle lettere", "nominativo 8 mm; righe piccole 4,5 mm"]
+      - ["Scritte di un altro colore", "le scritte sono in rilievo di 1 mm: per averle di un altro colore, nel programma di stampa aggiungi un cambio di filo al primo strato delle scritte, cioè dopo lo strato 12 con strati da 0,2 mm (altezza 2,6 mm). Cambiano colore con le scritte anche la cornice, la bandiera e le due stelline, che sono in rilievo alla stessa altezza. Il cambio di filo è facoltativo e si fa anche con una stampante a un colore solo: la stampa si ferma a quello strato, cambi il filo a mano e riparte. Senza cambio il pezzo esce di un colore solo e le scritte si leggono per il rilievo"]
+      - ["Posizione di stampa", "in piano, già orientato nel file, senza supporti"]
+      - ["Da sapere", "È un addobbo, non un portachiavi: la punta in basso è arrotondata ma sottile. Si tiene lontano da candele, stufe e lampadine che scaldano: il PETG comincia a deformarsi a 68 gradi. Non è un giocattolo: va tenuto fuori dalla portata dei bambini piccoli"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "un nastro o uno spago lungo circa 20 cm"
+    montaggio:
+      - "Infila il nastro nel foro e annodalo ad anello."
+      - "Appendilo a un gancio o legalo a un pacchetto."
 
   - id: "targhetta-petto"
     nome: "Targhetta da petto"
