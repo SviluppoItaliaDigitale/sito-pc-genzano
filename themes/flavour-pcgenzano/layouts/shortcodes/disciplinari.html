@@ -13,6 +13,11 @@
   dati scripts/aggiorna-documenti-unici.py.
   I collegamenti li ricontrolla scripts/check-cucina-emergenza.py. Script: js/disciplinari.js (entro
   ECMAScript 2018). CSS: sezione «CUCINA IN EMERGENZA v1.0» (le righe nuove usano le classi che c'erano).
+  Ricerca (25/11/2026): ogni voce porta data-p, le parole che si cercano dall'inizio (nome, parole chiave
+  della classe e del prodotto dal campo `parole` dei dati, prima parola di ogni regione), e data-e, le parole
+  che si cercano intere (sigla, regioni e loro altri nomi da `alias_regioni`); data-r resta per il menu
+  delle regioni. Le STG hanno la regione della tradizione descritta nel disciplinare, e il gruppo lo dice
+  con la sua `nota`. La prova nel browser è scripts/prova-filtro-disciplinari.py, bloccante sulle PR.
   Nel ramo «catalogo» non devono restare righe vuote dentro i blocchi HTML: il Markdown li spezzerebbe.
 */ -}}
 {{- $d := site.Data.disciplinari -}}
@@ -50,8 +55,8 @@
   <p class="disc-filtri-titolo" id="disc-filtri-titolo">Cerca nel catalogo</p>
   <div class="disc-campi" role="group" aria-labelledby="disc-filtri-titolo">
     <div class="disc-campo disc-campo-cerca">
-      <label for="disc-cerca">Nome del prodotto</label>
-      <input type="search" id="disc-cerca" autocomplete="off" placeholder="per esempio pecorino, carciofo, olio">
+      <label for="disc-cerca">Nome, tipo di prodotto o luogo</label>
+      <input type="search" id="disc-cerca" autocomplete="off" enterkeyhint="search" aria-describedby="disc-aiuto">
     </div>
     <div class="disc-campo">
       <label for="disc-regione">Regione</label>
@@ -71,20 +76,32 @@
         {{- end }}
       </select>
     </div>
+  </div>
+  <p class="small mt-2 mb-0" id="disc-aiuto">Puoi scrivere il nome di un prodotto o di un luogo, per esempio «pecorino» o «Norcia», oppure un tipo di prodotto: formaggi, salumi, olio, legumi, dolci. L’elenco sotto il riquadro cambia mentre scrivi o scegli.</p>
+  <p class="disc-conteggio" role="status" data-disc="conteggio"></p>
+  <div class="d-flex flex-column flex-sm-row flex-wrap gap-2 mt-2" data-disc="azioni">
+    <a class="btn btn-primary" href="#disc-trovati" data-disc="vai" hidden>Vai ai prodotti trovati</a>
     <button type="button" class="btn btn-outline-primary disc-azzera" data-disc="azzera" hidden>Mostra tutti i prodotti</button>
   </div>
-  <p class="disc-conteggio" role="status" data-disc="conteggio"></p>
 </div>
 {{- $vj := readFile "themes/flavour-pcgenzano/static/js/disciplinari.js" | hash.FNV32a }}
 <script src="{{ "js/disciplinari.js" | relURL }}?v={{ $vj }}" defer></script>
 
 {{- else if eq $parte "catalogo" -}}
+{{- $alias := $d.alias_regioni | default dict }}
+
+<p class="disc-riepilogo" id="disc-trovati" tabindex="-1" data-disc="trovati" hidden></p>
+
+<p class="disc-nessuno" tabindex="-1" data-disc="nessuno" hidden>Nessun prodotto corrisponde alla ricerca. <span data-disc="perche"></span>Controlla come hai scritto la parola, prova con il nome di un prodotto o di una regione, oppure premi «Mostra tutti i prodotti».</p>
 {{- range $g := $d.gruppi }}
 {{- with where $d.voci "classe" "in" $g.classi }}
 
 ## {{ $g.titolo }} {#disc-{{ $g.id }}}
 
 <div class="disc-gruppo" data-disc-gruppo="{{ $g.id }}">
+{{- with $g.nota }}
+<p class="disc-nota">{{ . }}</p>
+{{- end }}
 <ul class="disc-elenco no-gloss">
 {{- range . }}
 {{- $slug := slice -}}
@@ -93,7 +110,19 @@
 {{- if ge (int .kb) 1024 }}{{ $peso = replace (printf "%.1f\u00a0MB" (div (float .kb) 1024.0)) "." "," }}{{ end -}}
 {{- $pag := index $pagine .classe -}}
 {{- if not $pag }}{{ errorf "disciplinari: classe %q sconosciuta per «%s» in data/disciplinari.json" .classe .nome }}{{ end }}
-<li class="disc-voce" data-r="{{ delimit $slug "|" }}" data-t="{{ lower (printf "%s %s %s" .nome .tipo (delimit .regioni " ")) }}">
+{{- $inizi := slice .nome -}}
+{{- with $pag.parole }}{{ $inizi = $inizi | append . }}{{ end -}}
+{{- with .parole }}{{ $inizi = $inizi | append . }}{{ end -}}
+{{- $intere := slice .tipo -}}
+{{- range .regioni -}}
+  {{- $intere = $intere | append . -}}
+  {{- $inizi = $inizi | append (replaceRE `[^\p{L}].*$` "" (replaceRE `^Provincia autonoma di ` "" .)) -}}
+  {{- range (index $alias . | default (slice)) -}}
+    {{- $intere = $intere | append . -}}
+    {{- $inizi = $inizi | append (replaceRE `[^\p{L}].*$` "" .) -}}
+  {{- end -}}
+{{- end }}
+<li class="disc-voce" data-r="{{ delimit $slug "|" }}" data-p="{{ lower (delimit $inizi " ") }}" data-e="{{ lower (delimit $intere " ") }}">
 <span class="disc-nome">{{ if eq .formato "pdf" }}<a href="{{ .url }}">{{ .nome }}<span class="visually-hidden">, disciplinare in PDF (si scarica)</span></a>{{ else }}{{ .nome }}{{ end }}</span> <span class="disc-tipo">{{ .tipo }}</span>
 {{- with .regioni }}
 <span class="disc-luogo">{{ delimit . ", " }}</span>
@@ -128,7 +157,6 @@
 {{- end }}
 {{- end }}
 
-<p class="disc-nessuno" data-disc="nessuno" hidden>Nessun prodotto corrisponde alla ricerca. Prova con un'altra parola o premi «Mostra tutti i prodotti».</p>
 
 {{- else -}}
 {{ errorf "disciplinari: parte %q sconosciuta (riepilogo, filtri, catalogo, sintesi): %s" $parte .Position }}

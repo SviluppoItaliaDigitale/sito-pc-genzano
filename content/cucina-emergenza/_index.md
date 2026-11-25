@@ -52,7 +52,9 @@ Sono i due regolamenti di base: le regole di igiene per chi tratta alimenti e i 
 
 ## Prodotti tipici: disciplinari ed elenchi
 
-In una cucina da campo possono arrivare prodotti del territorio, comprati o donati. Il disciplinare è il documento ufficiale che descrive un prodotto DOP, IGP o STG: la zona, le materie prime, il metodo con cui si ottiene. Per molti prodotti DOP e IGP il catalogo collega anche la sintesi europea del disciplinare, il documento unico della Gazzetta ufficiale dell'Unione europea.
+In una cucina da campo possono arrivare prodotti del territorio, comprati o donati. E chi cucina per le persone di un territorio colpito può voler preparare le specialità del posto come si fanno lì: l'obiettivo è che chi ha dovuto lasciare la propria casa ritrovi a tavola la cucina a cui è abituato.
+
+Il disciplinare è il documento ufficiale che descrive un prodotto DOP, IGP o STG: la zona, le materie prime, il metodo con cui si ottiene. Per le specialità tradizionali garantite, come l'Amatriciana tradizionale, riporta ingredienti e preparazione. Nel catalogo scegli la regione in cui lavori e trovi i suoi prodotti. Per molti prodotti DOP e IGP il catalogo collega anche la sintesi europea del disciplinare, il documento unico della Gazzetta ufficiale dell'Unione europea.
 
 {{< pulsante url="/cucina-emergenza/disciplinari/" testo="Apri il catalogo dei disciplinari" icona="bi-journal-text" >}}
 {{< pulsante url="/cucina-emergenza/disciplinari/?regione=lazio" testo="Solo i prodotti del Lazio" icona="bi-geo-alt" stile="outline" >}}

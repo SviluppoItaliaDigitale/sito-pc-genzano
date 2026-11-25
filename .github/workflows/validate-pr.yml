@@ -365,6 +365,23 @@ jobs:
         # un file condiviso. Giro completo ogni lunedì in controllo-lim.yml.
         run: python3 scripts/check-lim.py --da-git "origin/${{ github.base_ref }}"
 
+      - name: "🔎 Catalogo dei disciplinari: il filtro trova ciò che si cerca"
+        # 25/11/2026, segnalazione di Alessandro («Non funziona il filtro!»): con
+        # build e controlli verdi, «olio» trovava sette oli su cinquantuno,
+        # «formaggi» due formaggi, «salumi» e «pesce» nessun prodotto, «roma»
+        # tutta l'Emilia-Romagna, e dal telefono dopo la scelta della regione
+        # non si vedeva nessuna reazione. La prova usa il filtro con Chromium
+        # (computer, telefono e tavoletta) e confronta l'elenco con
+        # data/disciplinari.json: ogni prodotto per nome, ogni parola chiave,
+        # ogni voce dei menu. Gira solo se la PR tocca il catalogo, i suoi dati,
+        # il tema o la configurazione: un articolo non la fa partire.
+        run: |
+          if git diff --name-only "origin/${{ github.base_ref }}...HEAD" | grep -qE '^(themes/|layouts/|assets/|static/vendor/|hugo\.toml$|data/disciplinari\.json$|content/cucina-emergenza/|scripts/prova-filtro-disciplinari\.py$|\.github/workflows/validate-pr\.yml$)'; then
+            python3 scripts/prova-filtro-disciplinari.py public
+          else
+            echo "La PR non tocca il catalogo dei disciplinari né il tema: prova saltata."
+          fi
+
       - name: "📖 Libro che si esplora: il tocco prende l'oggetto giusto"
         # 08/11/2026: il tocco colpiva i contorni di tutta la scena e in 11
         # capitoli su 15 prendeva l'oggetto più vicino alla telecamera (nello

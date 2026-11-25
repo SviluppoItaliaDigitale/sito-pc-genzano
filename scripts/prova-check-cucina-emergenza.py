@@ -57,6 +57,7 @@ from pathlib import Path
 RADICE = Path(__file__).resolve().parent.parent
 SCRIPT = "check-cucina-emergenza.py"
 SCRIPT_SINTESI = "aggiorna-documenti-unici.py"
+FILTRO = Path("themes") / "flavour-pcgenzano" / "static" / "js" / "disciplinari.js"
 esiti = []
 # Che cosa rispondono il registro europeo e l'archivio dell'UE finti: lo cambia ogni prova.
 FINTO = {"registro": [], "stato_registro": 200, "stato_archivio": 200, "fuori_dal_gruppo": set(), "inesistenti": set(),
@@ -1263,6 +1264,8 @@ def prove_dei_disciplinari(controllo, base):
         esito(nome, visto == atteso and all(pezzo in testo for pezzo in pezzi), f"{visto}, atteso {atteso}; {testo[:300]}")
 
     ministero("Ministero: pagine uguali ai dati, nessun rilievo e quattro pagine lette su quattro", intatte, (0, 0, (0, 0, 0), [4, 4]))
+    esito("Ministero: letta la pagina delle modifiche temporanee, il giro lo annota", controllo.confronti.get("modifiche") is True,
+          str(controllo.confronti))
     ministero("Ministero: un allegato nuovo nella pagina di una classe è una novità, fra i disciplinari nuovi",
               dict(intatte, **{"100": dict(intatte["100"], **{allegato(100, "gamma"): "Formaggio Gamma"})}),
               (0, 1, (1, 0, 0), [4, 4]), "allegato nuovo «Formaggio Gamma»")
@@ -1281,11 +1284,13 @@ def prove_dei_disciplinari(controllo, base):
               dict(intatte, **{"200": {allegato(200, "elenco-nuovo"): "Elenco"}}), (0, 1, (1, 0, 0), [4, 4]), "ha cambiato l'elenco")
     ministero("Ministero: una pagina che non si legge non conta fra quelle confrontate",
               {k: v for k, v in intatte.items() if k != "8079"}, (0, 0, (0, 0, 0), [3, 4]))
+    esito("Ministero: non letta la pagina delle modifiche temporanee, il giro lo annota", controllo.confronti.get("modifiche") is False,
+          str(controllo.confronti))
 
     # il rapporto: la riga dei disciplinari c'è sempre con la rete, la sezione solo se c'è qualcosa
     documenti_veri, catalogo_vero = controllo.carica()
     pulisci()
-    interi = {"registro": 335, "archivio": True, "pagine": [26, 26], "file": [336, 336]}
+    interi = {"registro": 335, "archivio": True, "pagine": [26, 26], "modifiche": True, "file": [336, 336]}
 
     def riga(anche_file=True, **cambiati):
         """La riga dei disciplinari del rapporto, con i confronti del giro cambiati come dice la prova."""
@@ -1306,6 +1311,12 @@ def prove_dei_disciplinari(controllo, base):
     esito("rapporto: con due pagine del Ministero non lette, nuovi e tolti non dicono «nessuno»; gli aggiornati sì",
           quale.startswith("Disciplinari nuovi: confronto incompleto (2 pagine del Ministero su 26 non lette). Tolti: confronto incompleto (")
           and "Aggiornati: nessuno." in quale, quale)
+    quale, _ = riga(pagine=[25, 26], modifiche=False)
+    esito("rapporto: se la pagina non letta è quella delle modifiche temporanee, nemmeno gli aggiornati dicono «nessuno»",
+          "Aggiornati: confronto incompleto (pagina delle modifiche temporanee del Ministero non letta)." in quale
+          and quale.startswith("Disciplinari nuovi: confronto incompleto (1 pagina del Ministero su 26 non letta)."), quale)
+    quale, _ = riga(pagine=None, modifiche=None)
+    esito("rapporto: senza le pagine del Ministero nessuna delle tre voci dice «nessuno»", "nessuno" not in quale, quale)
     quale, _ = riga(archivio=False)
     esito("rapporto: con l'archivio dell'UE non letto per intero, gli aggiornati non dicono «nessuno»",
           "Disciplinari nuovi: nessuno. Tolti: nessuno. Aggiornati: confronto incompleto (archivio dell'UE non letto per intero)." in quale, quale)
@@ -1670,6 +1681,9 @@ def main():
         shutil.copytree(RADICE / "data", base / "data",
                         ignore=lambda cartella, nomi: [n for n in nomi if n not in ("cucina_emergenza.yaml", "disciplinari.json")])
         shutil.copytree(costruite, base / "public" / "cucina-emergenza")
+        # lo script della pagina del catalogo: il controllo ci legge le parole che la ricerca ignora
+        (base / FILTRO).parent.mkdir(parents=True)
+        shutil.copy(RADICE / FILTRO, base / FILTRO)
 
         r = lancia(base, "--eta", "36500")
         esiti.append(r.returncode == 0)
@@ -1736,6 +1750,69 @@ def main():
 
         def aggiuntivo_senza_peso(dati):
             del next(v for v in dati["voci"] if v.get("extra"))["extra"][0]["byte"]
+
+        # le parole di ricerca del catalogo: lo script della pagina le confronta minuscole e senza accenti
+        def parola_con_maiuscola(dati):
+            dati["classi"][0]["parole"] = ["Carne"]
+
+        def parola_con_accento(dati):
+            dati["voci"][0]["parole"] = ["specialità"]
+
+        def parola_ripetuta(dati):
+            dati["voci"][0]["parole"] = ["carne", "carne"]
+
+        def altro_nome_di_regione_ignota(dati):
+            dati["alias_regioni"] = {"Atlantide": ["Isola"]}
+
+        def nota_vuota(dati):
+            dati["gruppi"][0]["nota"] = " "
+
+        def parole_nulle(dati):
+            dati["voci"][0]["parole"] = None
+
+        def parola_che_la_ricerca_ignora(dati):
+            dati["classi"][0]["parole"] = ["carne", "prodotti"]
+
+        def nome_di_due_regioni(dati):
+            dati["alias_regioni"]["Provincia autonoma di Bolzano"] = ["Alto Adige", "Trentino"]
+
+        def altro_nome_uguale_a_una_regione(dati):
+            dati["alias_regioni"]["Provincia autonoma di Trento"] = ["Trentino", "Lazio"]
+
+        def altro_nome_che_ripete_il_suo(dati):
+            dati["alias_regioni"]["Provincia autonoma di Trento"] = ["Trentino", "provincia autonoma di Trento"]
+
+        def altro_nome_senza_lettere(dati):
+            dati["alias_regioni"]["Provincia autonoma di Trento"] = ["Trentino", "—"]
+
+        def senza_elenco_delle_parole_ignorate(caso):
+            testo = (caso / FILTRO).read_text(encoding="utf-8")
+            if "var VUOTE = {};" not in testo:
+                sys.exit("prova non eseguibile: nello script del catalogo non c'è più «var VUOTE = {};»")
+            (caso / FILTRO).write_text(testo.replace("var VUOTE = {};", "var IGNORATE = {};"), encoding="utf-8")
+
+        def senza_script_del_catalogo(caso):
+            (caso / FILTRO).unlink()
+
+        prova(base, "parola di ricerca di una classe con la maiuscola", nel_catalogo(parola_con_maiuscola), "«parole» deve essere un elenco")
+        prova(base, "parola di ricerca di un prodotto con l'accento", nel_catalogo(parola_con_accento), "«parole» deve essere un elenco")
+        prova(base, "parola di ricerca ripetuta", nel_catalogo(parola_ripetuta), "«parole» deve essere un elenco")
+        prova(base, "altro nome per una regione che nessun prodotto ha", nel_catalogo(altro_nome_di_regione_ignota),
+              "non è la regione di nessun prodotto")
+        prova(base, "nota di un gruppo vuota", nel_catalogo(nota_vuota), "«nota» c'è ma è vuota")
+        prova(base, "parole di ricerca scritte come nulle", nel_catalogo(parole_nulle), "«parole» deve essere un elenco")
+        prova(base, "parola di ricerca che la casella ignora", nel_catalogo(parola_che_la_ricerca_ignora),
+              "«parole» contiene «prodotti», che la ricerca del catalogo ignora")
+        prova(base, "lo stesso altro nome per due regioni", nel_catalogo(nome_di_due_regioni),
+              "«Trentino», altro nome di «Provincia autonoma di Bolzano», è già il nome di «Provincia autonoma di Trento»")
+        prova(base, "altro nome uguale al nome di un'altra regione", nel_catalogo(altro_nome_uguale_a_una_regione),
+              "«Lazio», altro nome di «Provincia autonoma di Trento», è già il nome di «Lazio»")
+        prova(base, "altro nome che ripete quello della sua regione", nel_catalogo(altro_nome_che_ripete_il_suo),
+              "ripete il nome di «Provincia autonoma di Trento»")
+        prova(base, "altro nome di una regione senza lettere", nel_catalogo(altro_nome_senza_lettere), "non ha lettere né cifre")
+        prova(base, "script del catalogo senza l'elenco delle parole ignorate", senza_elenco_delle_parole_ignorate,
+              "non trovo l'elenco VUOTE")
+        prova(base, "script del catalogo mancante", senza_script_del_catalogo, "non trovo l'elenco VUOTE")
 
         prova(base, "disciplinare in PDF senza il peso in byte", nel_catalogo(senza_peso), "manca «byte»")
         prova(base, "peso in KB che non torna con il peso in byte", nel_catalogo(peso_che_non_torna), "non torna con «byte»")

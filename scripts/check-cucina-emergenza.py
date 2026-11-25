@@ -13,6 +13,9 @@ di enti governativi e istituzionali. Lo script la fa rispettare in due modi.
       si porta avanti a mano). Con --eta è un errore anche una data «verificato» più vecchia di GIORNI
       giorni, e il messaggio nomina i collegamenti che la tengono ferma: lo usa l'audit del sito
       (audit-sito.yml, sezione 51), perché un giro mensile saltato non lascia nessun run rosso.
+      Controlla anche le parole con cui la casella del catalogo trova i prodotti («parole» di classi e voci,
+      «alias_regioni»): minuscole e senza accenti, nessuna fra quelle che la ricerca ignora (l'elenco VUOTE
+      si legge da themes/flavour-pcgenzano/static/js/disciplinari.js), nessun nome che valga per due regioni.
 
   python3 scripts/check-cucina-emergenza.py --unisci-letture FILE
       Senza rete: somma alle letture annotate quelle di FILE (per ogni collegamento vale il giorno più
@@ -80,6 +83,7 @@ import re
 import sys
 import threading
 import time
+import unicodedata
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -92,6 +96,7 @@ from pathlib import Path
 RADICE = Path(__file__).resolve().parent.parent
 FILE_DOCUMENTI = RADICE / "data" / "cucina_emergenza.yaml"
 FILE_CATALOGO = RADICE / "data" / "disciplinari.json"
+FILE_FILTRO = RADICE / "themes" / "flavour-pcgenzano" / "static" / "js" / "disciplinari.js"
 # Giorno dell'ultima lettura riuscita di ogni collegamento, da qualunque rete: lo scrive --aggiorna-data.
 FILE_LETTURE = RADICE / ".manuale" / "cucina-emergenza-letture.json"
 
@@ -302,6 +307,46 @@ def controlla_peso(dove, dati):
                       f"file cambia si riscrivono tutti e due, con le pagine")
 
 
+def senza_accenti(testo):
+    """Come lo script della pagina prepara le parole prima di confrontarle: minuscole, senza accenti, e ogni
+    altro segno diventa uno spazio."""
+    piano = "".join(c for c in unicodedata.normalize("NFD", str(testo).lower()) if not unicodedata.combining(c))
+    return re.sub(r"[^a-z0-9]+", " ", piano).strip()
+
+
+def parole_vuote():
+    """Le parole che la casella del catalogo ignora (articoli, preposizioni, «prodotti», «tipici»). L'elenco
+    è uno solo e sta nello script della pagina: si legge da lì. Se non si trova, il controllo lo dice: una
+    parola chiave uguale a una parola vuota non si troverebbe mai, e nessuno se ne accorgerebbe."""
+    try:
+        testo = FILE_FILTRO.read_text(encoding="utf-8")
+    except OSError:
+        testo = ""
+    blocco = re.search(r"var VUOTE = \{\};\s*\((.*?)\)\.split\(' '\)", testo, re.S)
+    vuote = set(" ".join(re.findall(r"'([^']*)'", blocco.group(1))).split()) if blocco else set()
+    if not vuote:
+        errori.append(f"{FILE_FILTRO.relative_to(RADICE)}: non trovo l'elenco VUOTE delle parole che la ricerca del "
+                      f"catalogo ignora: senza, le parole chiave dei dati non si possono controllare")
+    return vuote
+
+
+def controlla_parole(dove, dati, vuote):
+    """Le parole con cui la casella del catalogo trova una classe o un prodotto («formaggi», «legumi»): lo
+    script della pagina le confronta minuscole e senza accenti, quindi una parola scritta in altro modo non
+    si troverebbe mai, senza nessun errore. Lo stesso vale per una parola che la ricerca ignora."""
+    if "parole" not in dati:
+        return
+    parole = dati["parole"]
+    if (not isinstance(parole, list) or not parole or len(set(parole)) != len(parole)
+            or not all(isinstance(p, str) and re.fullmatch(r"[a-z0-9]+", p) for p in parole)):
+        errori.append(f"{dove}: «parole» deve essere un elenco di parole minuscole, senza accenti né spazi, senza doppioni")
+        return
+    ignorate = sorted(set(parole) & vuote)
+    if ignorate:
+        errori.append(f"{dove}: «parole» contiene {', '.join('«' + p + '»' for p in ignorate)}, che la ricerca del "
+                      f"catalogo ignora (elenco VUOTE di {FILE_FILTRO.name}): chi la scrive non troverebbe nulla")
+
+
 def controlla_dati(documenti, catalogo):
     if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(documenti.get("verificato", ""))):
         errori.append("cucina_emergenza.yaml: «verificato» deve essere una data AAAA-MM-GG")
@@ -348,8 +393,36 @@ def controlla_dati(documenti, catalogo):
     in_gruppo = [c for g in catalogo.get("gruppi", []) for c in g.get("classi", [])]
     if sorted(in_gruppo) != sorted(classi):
         errori.append("disciplinari.json: ogni classe deve stare in un gruppo, una volta sola")
+    vuote = parole_vuote()
     for c in classi.values():
         controlla_url(f"classe «{c['id']}»", c.get("pagina"), deve_essere_pdf=False)
+        controlla_parole(f"classe «{c['id']}»", c, vuote)
+    for g in catalogo.get("gruppi", []):
+        if "nota" in g and not (isinstance(g["nota"], str) and g["nota"].strip()):
+            errori.append(f"gruppo «{g.get('id')}»: «nota» c'è ma è vuota")
+    regioni_usate = {r for v in catalogo.get("voci", []) for r in (v.get("regioni") or [])}
+    alias = catalogo.get("alias_regioni", {})
+    if not isinstance(alias, dict):
+        errori.append("disciplinari.json: «alias_regioni» deve associare a una regione i suoi altri nomi")
+        alias = {}
+    di_chi = {senza_accenti(r): r for r in regioni_usate}  # ogni nome, come lo confronta la ricerca → la sua regione
+    for regione, nomi_altri in alias.items():
+        if regione not in regioni_usate:
+            errori.append(f"alias_regioni: «{regione}» non è la regione di nessun prodotto")
+        if not isinstance(nomi_altri, list) or not nomi_altri or not all(isinstance(n, str) and n.strip() for n in nomi_altri):
+            errori.append(f"alias_regioni: «{regione}» chiede un elenco di nomi, non vuoto")
+            continue
+        for nome in nomi_altri:
+            chiave = senza_accenti(nome)
+            if not chiave:
+                errori.append(f"alias_regioni: «{nome}», altro nome di «{regione}», non ha lettere né cifre")
+            elif di_chi.get(chiave) == regione:
+                errori.append(f"alias_regioni: «{nome}» ripete il nome di «{regione}» o un altro suo nome")
+            elif chiave in di_chi:
+                errori.append(f"alias_regioni: «{nome}», altro nome di «{regione}», è già il nome di «{di_chi[chiave]}»: "
+                              f"chi lo cerca troverebbe i prodotti di due regioni")
+            else:
+                di_chi[chiave] = regione
     nomi, usati = set(), set()
     for voce in catalogo.get("voci", []):
         dove = f"disciplinare «{voce.get('nome')}»"
@@ -361,6 +434,7 @@ def controlla_dati(documenti, catalogo):
         if voce.get("classe") not in classi:
             errori.append(f"{dove}: classe «{voce.get('classe')}» sconosciuta")
             continue
+        controlla_parole(dove, voce, vuote)
         if not isinstance(voce.get("regioni"), list) or (voce.get("tipo") != "STG" and not voce.get("regioni")):
             errori.append(f"{dove}: manca la regione")
         formato = voce.get("formato")
@@ -775,6 +849,7 @@ def controlla_ministero(documenti, catalogo):
     noti = {n["url"] for n in catalogo.get("allegati_noti", [])}
     del_catalogo = {c["pagina"].rsplit("/", 1)[1] for c in catalogo["classi"]} | {PAGINA_MODIFICHE}
     confronti["pagine"] = [0, len(attesi)]  # pagine del Ministero lette, pagine da leggere
+    confronti["modifiche"] = False          # letta la pagina delle modifiche temporanee: lì un allegato nuovo è un aggiornamento
     for numero in sorted(attesi, key=int):
         trovati = allegati_della_pagina(numero)
         if trovati is None:
@@ -788,6 +863,8 @@ def controlla_ministero(documenti, catalogo):
                                      f"(pagina letta male o riorganizzata)"))
             continue
         confronti["pagine"][0] += 1
+        if numero == PAGINA_MODIFICHE:
+            confronti["modifiche"] = True
         for dove, url in mancanti:
             errori.append(f"{dove}: il file non è più fra gli allegati di {indirizzo} (il Ministero può averlo sostituito)")
             if dove.startswith("disciplinare"):
@@ -1265,8 +1342,12 @@ def righe_dei_disciplinari(anche_file):
     lette, tutte = confronti.get("pagine", [0, 0])
     senza_registro = [] if "registro" in confronti else ["registro europeo non letto"]
     senza_pagine = ([] if "pagine" in confronti and lette == tutte else
-                    [f"{tutte - lette} pagine del Ministero su {tutte} non lette" if "pagine" in confronti
+                    [("1 pagina del Ministero su {} non letta".format(tutte) if tutte - lette == 1
+                      else f"{tutte - lette} pagine del Ministero su {tutte} non lette") if "pagine" in confronti
                      else "pagine del Ministero non lette"])
+    # gli allegati nuovi della pagina delle modifiche temporanee vanno fra gli aggiornati: se quella pagina non
+    # è stata letta, «aggiornati: nessuno» non si può dire (rilievo della revisione sulla PR #2049)
+    senza_modifiche = [] if confronti.get("modifiche") else ["pagina delle modifiche temporanee del Ministero non letta"]
     senza_archivio = [] if confronti.get("archivio") else ["archivio dell'UE non letto per intero"]
     pesati, file = confronti.get("file", [0, 0])
     if not anche_file:
@@ -1275,7 +1356,7 @@ def righe_dei_disciplinari(anche_file):
         senza_peso = [] if "file" in confronti and pesati == file else [f"peso confrontato per {pesati} file su {file}"]
     riga = (f"Disciplinari nuovi: {esito('nuovi', senza_registro + senza_pagine)}. "
             f"Tolti: {esito('tolti', senza_registro + senza_pagine)}. "
-            f"Aggiornati: {esito('aggiornati', senza_registro + senza_archivio + senza_peso)}.")
+            f"Aggiornati: {esito('aggiornati', senza_registro + senza_modifiche + senza_archivio + senza_peso)}.")
     fatti = ([f"{confronti['registro']} prodotti italiani registrati nel registro europeo"] if "registro" in confronti else [])
     if "pagine" in confronti:
         fatti.append(f"allegati di {lette} pagine del Ministero su {tutte}")
