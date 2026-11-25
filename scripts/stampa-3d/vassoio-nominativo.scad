@@ -105,7 +105,8 @@ VITI_1 = [-110, 110]; VITI_2 = [-85, 0, 85];   // viti della prima e della secon
 // Davanti a ogni testa di vite restano almeno 25 mm liberi per la chiave: per questo il secondo piedino sta a x = 105
 // Il quinto piedino sta a x = 335 e non più a 340: così, nella pila, il piedino del vassoio sopra passa a 2 mm dall'angolo
 // della targhetta del vassoio sotto (che comincia a x = 343) e la targhetta può restare montata.
-PIEDI = [[22, 98], [105, 109], [168, 109], [312, 107], [335, 110], [434, 98]];
+// Il quarto piedino sta a x = 250 e non più a 312: lì chiudeva il corridoio dell'apribottiglia davanti alla sua tasca.
+PIEDI = [[22, 98], [105, 109], [168, 109], [250, 107], [335, 110], [434, 98]];
 
 /* ---------- Targhetta ---------- */
 
@@ -337,23 +338,23 @@ module viti_dadi(g, viti, vz = VITE_Z, fine = FLANGIA + 6) {   // nel pezzo a de
 module costole(g, ys, gioco = 0) {
     for (y = ys) translate([g, y, PIANO - 0.01]) cylinder(r = 1.5 + gioco, h = FLANGIA - PIANO + (gioco > 0 ? 1 : 0), $fn = 24);
 }
-/* ---------- Tasca per l'apribottiglie, sotto la corsia delle posate (25/11/2026) ---------- */
+/* ---------- Tasca per l'apribottiglia, sotto la corsia delle posate (25/11/2026) ---------- */
 
-// Richiesta di Alessandro: ogni vassoio porta il suo apribottiglie. Un dente fisso nel bordo non reggerebbe (il vassoio
-// è leggero e sta sui piedini, e un dente di sola plastica dura pochi tappi): si porta l'apribottiglie con il manico
+// Richiesta di Alessandro: ogni vassoio porta il suo apribottiglia. Un dente fisso nel bordo non reggerebbe (il vassoio
+// è leggero e sta sui piedini, e un dente di sola plastica dura pochi tappi): si porta l'apribottiglia con il manico
 // del catalogo (140 × 53 × 10 mm, con la moneta), sotto la corsia delle posate, l'unico posto libero.
 // È una tasca: due pareti lunghe 44 mm con una mensola a cuneo in basso (45 gradi) e una battuta in alto, e un
-// fermo in fondo. La punta dell'apribottiglie entra per 44 mm, in orizzontale, dalla parte libera verso il centro del
-// vassoio; il manico resta fuori, a sbalzo. Fra battuta e mensola restano 10,7 mm per un pezzo spesso 10: il manico
+// fermo in fondo. La punta dell'apribottiglia entra per 44 mm, in orizzontale, dalla parte libera verso il centro del
+// vassoio; il manico resta fuori, a sbalzo. Fra battuta e mensola restano 11,2 mm per un pezzo spesso 10: il manico
 // scende di un paio di millimetri e l'attrito tiene fermo il pezzo. Le battute toccano solo i bordi lunghi, larghi
 // 2,2 mm: le scritte in rilievo passano in mezzo.
 // Una prima versione, con altre due mensole dal lato del manico, non si riusciva a infilare (revisione del 25/11/2026).
 // Le pareti lasciano liberi le fessure della clip (y = -20 e 60) e lo spazio per la chiave davanti alle viti della
 // seconda giunzione (y = -85, 0, 85).
-AP_L = 53; AP_S = 10;                          // larghezza e spessore dell'apribottiglie (apribottiglie-nominativo.scad)
+AP_L = 53; AP_S = 10;                          // larghezza e spessore dell'apribottiglia (apribottiglia-nominativo.scad)
 AP_HW = AP_L / 2 + 0.3;                        // mezza larghezza libera fra le pareti
 AP_Z = 27.4;                                   // dove cominciano le mensole
-AP_SU = 17.0;                                  // battuta in alto: 2 mm sotto le nervature
+AP_SU = 16.5;                                  // battuta in alto: 1,5 mm sotto le nervature
 AP_PAR = 2.4; AP_MENS = 2.5;                   // spessore delle pareti, sporgenza di mensole e battute
 AP_Y0 = -74; AP_Y1 = -30;                      // la tasca: dal fermo all'imbocco
 function ap_x(lato, d) = POS_X + lato * d;
@@ -364,7 +365,7 @@ module ap_parete2d(lato) {                     // profilo nel piano x-z (z = pro
              [ap_x(lato, AP_HW + AP_PAR), AP_Z + AP_MENS + 1.5]]);
 }
 module ap_lungo_y(y0, y1) { translate([0, y1, 0]) rotate([90, 0, 0]) linear_extrude(y1 - y0) children(); }
-module sede_apribottiglie() {
+module sede_apribottiglia() {
     for (l = [-1, 1]) ap_lungo_y(AP_Y0, AP_Y1) ap_parete2d(l);
     // fermo in fondo, fra le due pareti, attaccato alla nervatura di y = -75
     translate([POS_X - AP_HW - 0.01, AP_Y0 - 2.4, PIANO - 0.01]) cube([2 * AP_HW + 0.02, 2.4, AP_Z + AP_MENS + 1.5 - PIANO]);
@@ -389,7 +390,7 @@ module pezzo_centro() {
             intersection() { corpo(); translate([G1, -200, -1]) cube([G2 - G1, 400, 100]); }
             for (v = [-1, 1]) parete(G1, 1, FL_B, v > 0 ? Y1A : -FONDO / 2, v > 0 ? FONDO / 2 : -Y1A);
             parete(G2, -1, FL_A, -FONDO / 2, FONDO / 2);
-            sede_apribottiglie();
+            sede_apribottiglia();
             if (INC) dente(G1, tratti1(Y1A), D_Z);
             else intersection() { costole(G1, COST_1); translate([G1 - 5, -200, 0]) cube([5, 400, 100]); }
         }

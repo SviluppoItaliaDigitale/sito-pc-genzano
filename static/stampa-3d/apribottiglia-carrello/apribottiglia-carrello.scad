@@ -1,4 +1,7 @@
-// Apribottiglie per tappi a corona con il nominativo dei volontari della Protezione Civile di Genzano di Roma.
+// Apribottiglia con chiave per il carrello con il nominativo. Modello per OpenSCAD (https://openscad.org/), gratuito.
+// Scrivi il tuo nominativo in riga1, premi F6 per l'anteprima e F7 per salvare il file STL.
+// Lo stesso modello fa anche altri oggetti: si sceglie con il parametro «tipo».
+// Apribottiglia per tappi a corona con il nominativo dei volontari della Protezione Civile di Genzano di Roma.
 // Il dente che solleva il tappo è il bordo di una moneta da 5 centesimi infilata in una tasca: la plastica
 // stampata da sola si consumerebbe dopo pochi tappi. Si cambiano solo i parametri qui sotto.
 // Licenza: CC BY-NC-SA 4.0 — Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma.
@@ -8,7 +11,7 @@
 //   ecb.europa.eu, letta il 25/11/2026);
 // - tappo a corona da 26 mm: diametro esterno 32,1 mm (± 0,2), altezza 6,0 mm (± 0,15), norma DIN EN 17177 come
 //   riportata dalla voce «Kronkorken» di de.wikipedia.org, letta il 25/11/2026 (la norma è a pagamento).
-// Come lavora, come gli apribottiglie comuni: la punta dell'attrezzo appoggia sopra il tappo, la moneta, che sta
+// Come lavora, come gli apribottiglia comuni: la punta dell'attrezzo appoggia sopra il tappo, la moneta, che sta
 // fra l'appoggio e il manico a 22 mm dall'appoggio, entra sotto il bordo del tappo, e alzando il manico il tappo si
 // piega e salta. (Nel primo disegno, del 25/11/2026, l'appoggio stava fra il dente e il manico: alzando il manico
 // il dente sarebbe sceso. L'ha trovato la revisione prima della pubblicazione.)
@@ -19,7 +22,7 @@
 // lunghezza del manico, che è il verso in cui lavora quando si fa leva.
 
 /* [Pezzi] */
-tipo = "apribottiglie"; // [apribottiglie, tre_in_uno]
+tipo = "tre_in_uno"; // [apribottiglia, tre_in_uno]
 // tutto = pezzo unico; base e testo = pezzi separati
 parte = "tutto"; // [tutto, base, testo]
 
@@ -45,13 +48,13 @@ DENTE_X = APPOGGIO_X + 22;             // punta della moneta
 PARETE_X = DENTE_X + SPORGE;           // dove finisce l'apertura e comincia la parete del manico
 CX = PARETE_X - APERTURA_R;            // centro dell'apertura
 MX = DENTE_X + MONETA_D / 2;           // centro della moneta
-// occhiello per un cordino: in basso nell'apribottiglie; nel tre in uno in alto, perché in basso lo chiuderebbe la linguetta
+// occhiello per un cordino: in basso nell'apribottiglia; nel tre in uno in alto, perché in basso lo chiuderebbe la linguetta
 CORDINO = tipo == "tre_in_uno" ? [132, 45] : [132, 8]; CORDINO_D = 5;
 EURO_D = 23.25; LINGUA_S = 2.2; LINGUA_L = 28;   // linguetta per il carrello: un decimo più sottile della moneta
 // Misure: [lunghezza, larghezza, smusso, spessore, carattere riga1, y riga1, carattere righe piccole, y riga2, y riga3,
 //          x del centro del nominativo]. Con Liberation Sans Narrow Bold a 4,5 mm il tratto più sottile è di 0,70 mm.
 MISURE = [
-    ["apribottiglie", [140, 53, 6, 10, 8.0, 33, 4.5, 21, 14.5, 106]],
+    ["apribottiglia", [140, 53, 6, 10, 8.0, 33, 4.5, 21, 14.5, 106]],
     ["tre_in_uno",    [168, 53, 6, 10, 8.0, 33, 4.5, 21, 14.5, 106]]
 ];
 M = MISURE[search([tipo], MISURE)[0]][1];
