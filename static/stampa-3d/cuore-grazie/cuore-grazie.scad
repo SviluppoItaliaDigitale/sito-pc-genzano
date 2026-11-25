@@ -105,7 +105,7 @@ module forma() {
     else if (tipo == "coccarda") {    // coccarda: bordo pieghettato, due nastri in basso, occhiello in alto
         polygon([for (i = [0:63]) let (a = i * 360 / 64, q = i % 2 == 0 ? 42 : 39.5) [q * cos(a), q * sin(a)]]);
         hull() { translate(NASTRO) circle(d = 14); translate([0, L / 2 - 8]) circle(d = 14); }
-        for (v = [-1, 1]) scale([v, 1]) polygon([[4, -30], [21, -30], [26, -64], [18, -59], [11, -66]]);
+        for (v = [-1, 1]) scale([v, 1]) offset(r = 0.8) offset(delta = -0.8) polygon([[4, -30], [21, -30], [26, -64], [18, -59], [11, -66]]);   // punte arrotondate
     }
     else if (tipo == "cuore") {       // cuore: due lobi che scendono a una punta arrotondata; foro sotto l'incavo
         for (v = [-1, 1]) hull() { translate([v * 19, 18]) circle(r = 26, $fn = 120); translate([0, -50]) circle(r = 3); }

@@ -8,14 +8,18 @@
 //   ecb.europa.eu, letta il 25/11/2026);
 // - tappo a corona da 26 mm: diametro esterno 32,1 mm (± 0,2), altezza 6,0 mm (± 0,15), norma DIN EN 17177 come
 //   riportata dalla voce «Kronkorken» di de.wikipedia.org, letta il 25/11/2026 (la norma è a pagamento).
-// Come lavora: la moneta entra sotto il bordo del tappo, il lato opposto dell'apertura appoggia sopra il tappo,
-// a 22 mm dal dente, e alzando il manico il tappo si piega e salta.
+// Come lavora, come gli apribottiglie comuni: la punta dell'attrezzo appoggia sopra il tappo, la moneta, che sta
+// fra l'appoggio e il manico a 22 mm dall'appoggio, entra sotto il bordo del tappo, e alzando il manico il tappo si
+// piega e salta. (Nel primo disegno, del 25/11/2026, l'appoggio stava fra il dente e il manico: alzando il manico
+// il dente sarebbe sceso. L'ha trovato la revisione prima della pubblicazione.)
+// tre_in_uno: lo stesso attrezzo con, in fondo al manico, una linguetta a forma di moneta da 1 euro (23,25 mm di
+// diametro, spessa 2,33 mm: stessa fonte) per sbloccare il carrello della spesa.
 // Si stampa di taglio, in piedi su un lato lungo: così la tasca della moneta è una fessura verticale e
 // l'apertura finisce in alto con un tetto a 45 gradi, e non servono supporti. Gli strati corrono per tutta la
 // lunghezza del manico, che è il verso in cui lavora quando si fa leva.
 
 /* [Pezzi] */
-tipo = "apribottiglie"; // [apribottiglie]
+tipo = "apribottiglie"; // [apribottiglie, tre_in_uno]
 // tutto = pezzo unico; base e testo = pezzi separati
 parte = "tutto"; // [tutto, base, testo]
 
@@ -31,24 +35,26 @@ rilievo = 1.0;
 
 $fn = 96;
 
-LUNGO = 132; LARGO = 53; SPESSO = 8; SMUSSO = 6;
+LUNGO = 140; LARGO = 53; SPESSO = 10; SMUSSO = 6;   // spesso 10 mm: ai lati della tasca restano due pareti da 4 mm
 MONETA_D = 21.25; MONETA_S = 1.67;
 GIOCO_D = 0.4; GIOCO_S = 0.3;          // la tasca è 0,4 mm più larga e 0,3 mm più spessa della moneta
 SPORGE = 3;                            // quanto la moneta esce dalla parete, dentro l'apertura
 APERTURA_R = 18; CZ = 25;              // apertura tonda: il tappo da 32,1 mm ci passa di sbieco
-PARETE_X = 24;                         // dove finisce la parete della punta e comincia l'apertura
-DENTE_X = PARETE_X + SPORGE;           // punta della moneta
-APPOGGIO_X = DENTE_X + 22;             // lato dell'apertura che appoggia sopra il tappo
-CX = PARETE_X + APERTURA_R;            // centro dell'apertura
-MX = DENTE_X - MONETA_D / 2;           // centro della moneta
-CORDINO = [124, 8]; CORDINO_D = 5;     // occhiello per un cordino
+APPOGGIO_X = 20;                       // lato dell'apertura verso la punta: appoggia sopra il tappo
+DENTE_X = APPOGGIO_X + 22;             // punta della moneta
+PARETE_X = DENTE_X + SPORGE;           // dove finisce l'apertura e comincia la parete del manico
+CX = PARETE_X - APERTURA_R;            // centro dell'apertura
+MX = DENTE_X + MONETA_D / 2;           // centro della moneta
+CORDINO = [132, 8]; CORDINO_D = 5;     // occhiello per un cordino
+EURO_D = 23.25; LINGUA_S = 2.2; LINGUA_L = 28;   // linguetta per il carrello: un decimo più sottile della moneta
 // Misure: [lunghezza, larghezza, smusso, spessore, carattere riga1, y riga1, carattere righe piccole, y riga2, y riga3,
 //          x del centro del nominativo]. Con Liberation Sans Narrow Bold a 4,5 mm il tratto più sottile è di 0,70 mm.
 MISURE = [
-    ["apribottiglie", [132, 53, 6, 8, 8.0, 33, 4.5, 21, 14.5, 99]]
+    ["apribottiglie", [140, 53, 6, 10, 8.0, 33, 4.5, 21, 14.5, 106]],
+    ["tre_in_uno",    [168, 53, 6, 10, 8.0, 33, 4.5, 21, 14.5, 106]]
 ];
 M = MISURE[search([tipo], MISURE)[0]][1];
-S1 = M[4]; Y1 = M[5]; S2 = M[6]; Y2 = M[7]; Y3 = M[8]; TX = M[9]; BAND = [60, 29];
+S1 = M[4]; Y1 = M[5]; S2 = M[6]; Y2 = M[7]; Y3 = M[8]; TX = M[9]; BAND = [69, 29]; XR = 100;   // XR = centro delle righe piccole
 
 // profilo visto di fronte (x = lunghezza, y = larghezza): quattro angoli smussati a 45 gradi
 module profilo() {
@@ -57,15 +63,17 @@ module profilo() {
 }
 
 // apertura: un cerchio tagliato dal lato di appoggio, con un tetto a 45 gradi che finisce in un tratto piano
-// di 6 mm (un ponte che si stampa senza supporti)
+// di 4 mm (un ponte che si stampa senza supporti)
 module apertura() {
     q = APERTURA_R / sqrt(2);
+    // i due spigoli dove il lato di appoggio taglia il cerchio sono raccordati (3 mm): lì passano gli sforzi
+    offset(r = 3) offset(delta = -3) intersection() {
+        translate([CX, CZ]) circle(r = APERTURA_R);
+        translate([APPOGGIO_X, -1]) square([LUNGO, LARGO + 2]);
+    }
     intersection() {
-        union() {
-            translate([CX, CZ]) circle(r = APERTURA_R);
-            polygon([[CX - q, CZ + q], [CX + q, CZ + q], [CX + 3, CZ + 2 * q - 3], [CX - 3, CZ + 2 * q - 3]]);
-        }
-        translate([0, -1]) square([APPOGGIO_X, LARGO + 2]);
+        polygon([[CX - q, CZ + q], [CX + q, CZ + q], [CX + 2, CZ + 2 * q - 2], [CX - 2, CZ + 2 * q - 2]]);
+        translate([APPOGGIO_X, -1]) square([LUNGO, LARGO + 2]);
     }
 }
 
@@ -77,7 +85,7 @@ module tasca() {
     d = MONETA_D + GIOCO_D;
     translate([0, 0, -(MONETA_S + GIOCO_S) / 2]) linear_extrude(MONETA_S + GIOCO_S) {
         translate([MX, CZ]) goccia(d);      // a goccia: in stampa il lato alto della tasca è un tetto, non un arco
-        translate([MX, CZ - d / 2]) square([PARETE_X + 0.5 - MX, d]);
+        translate([PARETE_X - 0.5, CZ - d / 2]) square([MX - PARETE_X + 0.5, d]);
     }
 }
 
@@ -88,8 +96,8 @@ module tricolore() {
 module scritte2d() {
     if (bandiera) tricolore();
     translate([TX, Y1]) text(riga1, size = S1, font = font, halign = "center", valign = "center");
-    translate([92, Y2]) text(riga2, size = S2, font = font2, halign = "center", valign = "center");
-    translate([92, Y3]) text(riga3, size = S2, font = font2, halign = "center", valign = "center");
+    translate([XR, Y2]) text(riga2, size = S2, font = font2, halign = "center", valign = "center");
+    translate([XR, Y3]) text(riga3, size = S2, font = font2, halign = "center", valign = "center");
 }
 
 // Il pezzo esce già in piedi: x = lunghezza, z = larghezza, y = spessore; le scritte sono sulla faccia y = -4.
@@ -103,6 +111,13 @@ module base() {
             translate(CORDINO) goccia(CORDINO_D);
         }
         tasca();
+        // il bordo che appoggia sul tappo è smussato di 1 mm sulle due facce: non ammacca il tappo e non si scheggia
+        for (v = [-1, 1]) translate([APPOGGIO_X, CZ, v * SPESSO / 2]) rotate([0, 45, 0]) cube([1.42, 26, 1.42], center = true);
+    }
+    // linguetta per il carrello, a metà spessore, con il lato basso sul piano di stampa
+    if (tipo == "tre_in_uno") in_piedi() linear_extrude(LINGUA_S, center = true) hull() {
+        translate([LUNGO - 8, 0]) square([8, EURO_D]);
+        translate([LUNGO + LINGUA_L - EURO_D / 2, EURO_D / 2]) circle(d = EURO_D, $fn = 120);
     }
 }
 
