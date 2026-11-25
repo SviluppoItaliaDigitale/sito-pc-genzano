@@ -87,7 +87,9 @@ jobs:
           echo "uscita=$?" >> "$GITHUB_OUTPUT"
 
       - name: "💾 Commit della data di verifica"
-        if: steps.controllo.outputs.uscita == '0' || steps.controllo.outputs.uscita == '3'
+        # Solo da main: lanciato a mano da un ramo di lavoro, il rebase su main
+        # e il push porterebbero su main i commit di quel ramo, senza PR.
+        if: github.ref == 'refs/heads/main' && (steps.controllo.outputs.uscita == '0' || steps.controllo.outputs.uscita == '3')
         timeout-minutes: 5
         shell: bash
         run: |
