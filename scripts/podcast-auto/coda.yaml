@@ -16,14 +16,35 @@ puntate:
   - content/dossier/neve-e-gelo.md
   - content/conoscere/catalogo-dei-rischi/rischio-neve-gelo.md
   parole: []
-  stato: da-fare
-  istruzioni_extra: 'ATTENZIONE, regole aggiuntive: riporta solo quello che dicono
-    le pagine, con numeri e tempi scritti esattamente come lì. Non aprire con scene
-    immaginate, non dire come reagisce la gente, non spiegare il motivo dei consigli
-    se la pagina non lo spiega. Non usare "fondamentale", "importantissimo", "salvavita",
-    "assolutamente", né "sempre" o "mai" se non sono nella frase della pagina. Non
-    dire la parola "fonti" e non dire "le pagine dicono". In emergenza si chiama il
-    112.'
+  stato: programmata
+  istruzioni_extra: 'ATTENZIONE, regole aggiuntive. Queste istruzioni non si leggono
+    e non si ripetono a voce: non dire a chi è dedicata la puntata e non dire come
+    si pronuncia un numero. Per il 26 febbraio 2018 di'' solo che la neve imbiancò
+    i Colli Albani e che in alcune zone gli accumuli superarono i 20 centimetri: non
+    dire che caddero oltre 20 centimetri su tutti i Colli Albani. Elenca gli effetti
+    di neve e ghiaccio uno dopo l''altro, senza dire che uno porta all''altro. Dopo
+    un dato o un numero non aggiungere commenti e non usare aggettivi che la pagina
+    non usa. Sul Gruppo comunale di'' solo che in emergenza si chiama il 112, senza
+    la parola mai e senza la parola sempre. Non dire la parola fonti, tranne che per
+    la fonte di calore alternativa da tenere in casa. Riporta numeri e tempi come
+    sono scritti nelle pagine.'
+  tentativi: 2
+  nota: '25/11/2026, primo tentativo (2 fonti, Breve, audio 2:59) non superato: «Mai
+    chiamare direttamente» (assoluto aggiunto); «il Burian ha portato oltre 20 centimetri
+    di neve sui Colli Albani» (la pagina dice che in alcune zone gli accumuli superarono
+    i 20 centimetri); commenti aggiunti («notevole quantità», «molto insidioso», «numeri
+    che fanno riflettere»); «questo porta di conseguenza all''isolamento di case e
+    frazioni» (nesso che la pagina non fa); istruzioni lette a voce («un tema dedicato
+    ai cittadini di Genzano...», «pronunciato esattamente uno, uno, due»). Comportamenti
+    e avvisi combaciavano con le pagine. Al prossimo errore la puntata va in scartata.
+    Secondo tentativo (stesse 2 fonti, Breve, istruzioni rafforzate; audio 2:13) superato
+    dopo un taglio: tolto dall''audio il passaggio sulla tempesta di ghiaccio del
+    Quebec del 1998 (da 65,60 a 86,15 s dell''originale, nelle pause), dove le voci
+    dicevano «3,5 milioni di persone al buio» senza il «circa» della pagina; ricontrollato
+    con una nuova trascrizione, ogni frase confrontata con le due pagine. Durata finale
+    1:53.'
+  file: content/podcast/2026-12-22-neve-gelo.md
+  data: '2026-12-22'
 - id: rischio-sismico
   titolo: 'Il terremoto: cosa fare prima, durante e dopo'
   fonti:

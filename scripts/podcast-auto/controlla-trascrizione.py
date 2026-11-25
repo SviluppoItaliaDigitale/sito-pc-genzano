@@ -60,6 +60,10 @@ def main() -> int:
             # «Segui solo fonti ufficiali» è un consiglio delle pagine, non il processo.
             if "font" in pat and testo[m.end():m.end() + 10].startswith(" ufficial"):
                 continue
+            # «Una fonte di calore alternativa» è un consiglio delle pagine su neve e
+            # gelo, ammesso solo se la frase sta anche nelle pagine (25/11/2026).
+            if "font" in pat and testo[m.end():m.end() + 10].startswith(" di calore") and "di calore" in fonte:
+                continue
             if "manual" in pat and testo[max(0, m.start() - 12):m.start()].endswith("apriscatole "):
                 continue
             problemi.append(f"parola vietata «{m.group(0)}»: …{contesto(m)}…")
