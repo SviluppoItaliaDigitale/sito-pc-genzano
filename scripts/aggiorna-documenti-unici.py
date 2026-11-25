@@ -733,7 +733,7 @@ def scrivi_catalogo(testo):
 
 def riordina(voce):
     """Campi sempre nello stesso ordine: prima quelli del Ministero, poi quelli europei."""
-    ordine = ("nome", "tipo", "regioni", "classe", "url", "formato", "pagine", "kb", "peso_dichiarato", "extra",
+    ordine = ("nome", "tipo", "regioni", "classe", "url", "formato", "pagine", "kb", "byte", "peso_dichiarato", "extra",
               "fascicolo", "sintesi", "registro_ue")
     return {k: voce[k] for k in ordine if k in voce} | {k: v for k, v in voce.items() if k not in ordine}
 

@@ -2,7 +2,7 @@
 """Prove di check-cucina-emergenza.py, il controllo della sezione /cucina-emergenza/.
 
 Il controllo è bloccante sulle PR e ogni mese rilegge i collegamenti: se smette di vedere un errore, nessuno
-se ne accorge. Cinque gruppi di prove, nessuna richiesta fuori dalla macchina:
+se ne accorge. Sei gruppi di prove, nessuna richiesta fuori dalla macchina:
   1. senza rete: i casi sbagliati (sito non istituzionale, file Word, PDF fuori dai dati, collegamento
      mancante, verifica troppo vecchia, sintesi europea su un altro sito o senza il suo collegamento…) che
      deve respingere con il messaggio giusto, e la copia intatta che deve passare;
@@ -26,6 +26,10 @@ se ne accorge. Cinque gruppi di prove, nessuna richiesta fuori dalla macchina:
      da qualunque rete, e la data di verifica dei dati è il più vecchio di quei giorni. Non avanza se un
      collegamento non è mai stato letto, non torna indietro, e con un collegamento rotto o una fonte non
      letta non si annota nulla.
+
+  6. disciplinari nuovi, tolti e aggiornati: un prodotto italiano registrato che il catalogo non ha, un
+     allegato nuovo nelle pagine del Ministero, un prodotto tolto dal registro, un file sparito, un file che
+     allo stesso indirizzo pesa diversamente dai dati; il rapporto lo dice in ogni giro fatto con la rete.
 
 Uso:  python3 scripts/prova-check-cucina-emergenza.py public
 Lavora su copie in una cartella temporanea: i file del repository non si toccano. Uscita 0 se ogni prova
@@ -141,6 +145,19 @@ class SitoFinto(http.server.BaseHTTPRequestHandler):
             with contextlib.suppress(OSError):
                 self.connection.shutdown(socket.SHUT_RDWR)
             return
+        if percorso == "/parziale.pdf" and self.headers.get("Range") == "bytes=0-7":
+            # come il sito del Ministero: alla richiesta parziale risponde 206 e dichiara il peso del file intero
+            corpo = RISPOSTE["/vero.pdf"][2]
+            self.send_response(206)
+            self.send_header("Content-Type", "application/pdf")
+            self.send_header("Content-Range", f"bytes 0-7/{len(corpo)}")
+            self.send_header("Content-Length", "8")
+            self.send_header("Last-Modified", "Wed, 12 Dec 2012 07:52:23 GMT")
+            self.end_headers()
+            self.wfile.write(corpo[:8])
+            return
+        if percorso == "/pagina-poi-pdf.pdf":  # alla richiesta parziale una pagina, a quella intera il PDF
+            percorso = "/qualsiasi.pdf" if self.headers.get("Range") else "/vero.pdf"
         if percorso == "/registro":  # elenco del registro europeo eAmbrosia
             stato, tipo, corpo = FINTO["stato_registro"], "application/json", json.dumps(FINTO["registro"]).encode("utf-8")
         elif percorso == "/archivio":  # domande SPARQL all'archivio dell'UE, a gruppi di numeri CELEX
@@ -264,13 +281,13 @@ def prove_delle_letture(controllo):
     a, b, c, pagina = ("https://www.esempio.it/a.pdf", "https://www.esempio.it/b.pdf",
                        "https://www.esempio.it/catalogo/c.pdf", "https://www.esempio.it/pagina-a")
     documenti = {"gruppi": [{"documenti": [{"id": "a", "url": a, "pagina": {"url": pagina}}, {"id": "b", "url": b}]}]}
-    catalogo = {"voci": [{"nome": "Prodotto", "formato": "pdf", "url": c},
+    catalogo = {"voci": [{"nome": "Prodotto", "formato": "pdf", "url": c, "byte": 1000},
                          {"nome": "Solo Word", "formato": "docx", "url": "https://www.esempio.it/catalogo/d.docx"}]}
     tutti = {a, b, c, pagina}
     veri = (controllo.RADICE, controllo.FILE_DOCUMENTI, controllo.FILE_CATALOGO, controllo.FILE_LETTURE,
             controllo.carica, controllo.controlla_dati, controllo.controlla_rete, sys.argv)
     elenchi = (controllo.errori, controllo.non_letti, controllo.novita, controllo.protetti, controllo.muti,
-               controllo.da_rivedere, controllo.senza_browser, controllo.note_letture)
+               controllo.da_rivedere, controllo.senza_browser, controllo.note_letture, *controllo.disciplinari.values())
     with tempfile.TemporaryDirectory() as temporanea:
         radice = Path(temporanea)
         controllo.RADICE = radice
@@ -289,8 +306,8 @@ def prove_delle_letture(controllo):
                 controllo.FILE_LETTURE.write_text(letture if isinstance(letture, str) else json.dumps(letture), encoding="utf-8")
             for elenco in elenchi:
                 elenco.clear()
-            controllo.metodi.clear()
-            controllo.letti.clear()
+            for insieme in (controllo.metodi, controllo.letti, controllo.pesi, controllo.confronti):
+                insieme.clear()
             controllo.letti.update(letti_oggi)
 
         def scritta():
@@ -303,10 +320,13 @@ def prove_delle_letture(controllo):
             except FileNotFoundError:
                 return None
 
-        def giro(rotti=(), fonti=(), fermi=(), letti_oggi=(), argomenti=("--rete", "--aggiorna-data")):
-            """Un giro intero di main(), di norma con --rete --aggiorna-data e senza --file: le richieste sono finte."""
+        def giro(rotti=(), fonti=(), fermi=(), letti_oggi=(), argomenti=("--rete", "--aggiorna-data"), pesa=None):
+            """Un giro intero di main(), di norma con --rete --aggiorna-data e senza --file: le richieste sono finte.
+            `pesa`: quanti byte il sito dichiara oggi per il PDF del catalogo."""
             def rete_finta(*argomenti):
                 controllo.letti.update(letti_oggi)
+                if pesa:
+                    controllo.pesi[c] = (pesa, "2026-11-20")
                 controllo.errori.extend(rotti)
                 controllo.non_letti.extend(fonti)
                 controllo.muti.extend(fermi)
@@ -469,6 +489,24 @@ def prove_delle_letture(controllo):
                   codice == 1 and annotate() == {a: mese_fa, b: ieri, c: ieri, pagina: ieri} and "non si porta avanti a mano" in testo,
                   f"uscita {codice}, {annotate()}")
 
+            # il giro intero confronta il peso dei file solo con --file, dopo aver letto tutto
+            prepara(ieri, dict.fromkeys(tutti, ieri))
+            codice, testo = giro(letti_oggi=tutti, argomenti=("--rete", "--file", "--aggiorna-data"), pesa=1234)
+            esito("giro con --file: un PDF del catalogo che oggi pesa diversamente dai dati è una novità (uscita 3), e le letture si annotano",
+                  codice == 3 and "«Prodotto»: il file allo stesso indirizzo è cambiato: nei dati pesa 1000 byte, ora 1234 "
+                  "(il sito del Ministero lo data al 20/11/2026)" in testo and "### Disciplinari nuovi, tolti o aggiornati" in testo
+                  and scritta() == (oggi, oggi), f"uscita {codice}, {scritta()}, {testo[:600]}")
+            prepara(ieri, dict.fromkeys(tutti, ieri))
+            codice, testo = giro(letti_oggi=tutti, argomenti=("--rete", "--file", "--aggiorna-data"), pesa=1000)
+            esito("giro con --file: con lo stesso peso dei dati nessuna novità (uscita 0)",
+                  codice == 0 and "il file allo stesso indirizzo è cambiato" not in testo and "peso di 1 file del Ministero su 1" in testo,
+                  f"uscita {codice}, {testo[:600]}")
+            prepara(ieri, dict.fromkeys(tutti, ieri))
+            codice, testo = giro(letti_oggi=tutti, pesa=1234)
+            esito("giro senza --file: il peso non si confronta, e la riga dei disciplinari lo dice",
+                  codice == 0 and "il file allo stesso indirizzo è cambiato" not in testo
+                  and "peso dei file non confrontato: giro senza --file" in testo, f"uscita {codice}, {testo[:600]}")
+
             prepara(mese_fa, {a: ieri, c: ieri, pagina: ieri})
             codice, testo = giro(argomenti=())
             esito("senza rete: un collegamento senza lettura annotata è un avviso, non un errore",
@@ -480,8 +518,8 @@ def prove_delle_letture(controllo):
             controllo.scadenza = float("inf")
             for elenco in elenchi:
                 elenco.clear()
-            controllo.metodi.clear()
-            controllo.letti.clear()
+            for insieme in (controllo.metodi, controllo.letti, controllo.pesi, controllo.confronti):
+                insieme.clear()
 
 
 def prove_del_browser(controllo, base):
@@ -990,30 +1028,57 @@ def prove_delle_sintesi(controllo, base):
         {"nome": "Pizza Finta", "tipo": "STG"}]}
     note = {"52021XC0202(02)": [("52021XC0202(02)R(01)", "2021-06-01"), ("52021XC0202(02)R(02)", "2021-07-01")]}
 
-    def giro(nome, atteso, registro_finto=registro, **finto):
+    def giro(nome, atteso, registro_finto=registro, disciplinari=(0, 0, 0), **finto):
+        """`disciplinari`: quante righe il giro deve mettere fra i disciplinari nuovi, tolti e aggiornati."""
         FINTO.update({"registro": registro_finto, "stato_registro": 200, "stato_archivio": 200, "fuori_dal_gruppo": set(),
                       "inesistenti": set(), "rettifiche": note})
         FINTO.update(finto)
-        for elenco in (controllo.errori, controllo.non_letti, controllo.novita, controllo.protetti, controllo.da_rivedere, controllo.muti):
+        for elenco in (controllo.errori, controllo.non_letti, controllo.novita, controllo.protetti, controllo.da_rivedere,
+                       controllo.muti, *controllo.disciplinari.values()):
             elenco.clear()
         controllo.metodi.clear()
         controllo.di_fila.clear()
+        controllo.confronti.clear()
         controllo.controlla_europa(json.loads(json.dumps(catalogo)))
         visto = (len(controllo.errori), len(controllo.non_letti), len(controllo.novita), controllo.metodi["archivio dell'UE"])
         testo = " | ".join(controllo.errori + [t for _, t in controllo.non_letti] + controllo.novita)
-        esito(nome, visto == atteso[:4] and all(pezzo in testo for pezzo in atteso[4:]),
-              f"rotti, non letti, novità, atti trovati: {visto}; atteso {atteso[:4]} con {atteso[4:]}; {testo[:300]}")
+        fra_i_disciplinari = tuple(len(controllo.disciplinari[k]) for k in ("nuovi", "tolti", "aggiornati"))
+        esito(nome, visto == atteso[:4] and all(pezzo in testo for pezzo in atteso[4:]) and fra_i_disciplinari == disciplinari,
+              f"rotti, non letti, novità, atti trovati: {visto}; atteso {atteso[:4]} con {atteso[4:]}; nuovi, tolti, "
+              f"aggiornati: {fra_i_disciplinari}, attesi {disciplinari}; {testo[:300]}")
 
     try:
         giro("sintesi: registro e archivio uguali ai dati, nessun rilievo (il fascicolo «PGI-IT-2» vale «PGI-IT-0002»)", (0, 0, 0, 3))
-        giro("sintesi: una pubblicazione nuova nel registro è una novità", (0, 0, 1, 3, "Formaggio Alfa", "pubblicazioni diverse", "07/07/2026"),
+        esito("registro: il giro conta i prodotti italiani registrati che ha confrontato, e sa di aver letto l'archivio per intero",
+              controllo.confronti.get("registro") == 3 and controllo.confronti.get("archivio") is True, controllo.confronti)
+        giro("sintesi: una pubblicazione nuova nel registro è una novità, fra i disciplinari aggiornati",
+             (0, 0, 1, 3, "Formaggio Alfa", "pubblicazioni diverse", "07/07/2026"), disciplinari=(0, 0, 1),
              registro_finto=[del_registro("PDO-IT-0001", "Formaggio Alfa", (1, "1.1.2020"), (7, "7.7.2026"))] + registro[1:])
         giro("sintesi: un fascicolo cambiato nel registro è una novità", (0, 0, 1, 3, "Salame Beta", "PGI-IT-0099"),
              registro_finto=[registro[0], dict(registro[1], fileNumber="PGI-IT-0099")] + registro[2:])
-        giro("sintesi: un prodotto che il registro non ha più è una novità", (0, 0, 1, 3, "Olio Gamma", "non c'è più un solo prodotto"),
+        giro("sintesi: un prodotto che il registro non ha più è una novità, fra i disciplinari tolti",
+             (0, 0, 1, 3, "Olio Gamma", "non c'è più un solo prodotto"), disciplinari=(0, 1, 0),
              registro_finto=registro[:2] + registro[3:])
-        giro("sintesi: due voci del registro con lo stesso nome sono una novità", (0, 0, 1, 3, "Olio Gamma"),
+        giro("sintesi: due voci del registro con lo stesso nome sono una novità sola, e nessuna delle due è un prodotto nuovo",
+             (0, 0, 1, 3, "Olio Gamma"), disciplinari=(0, 1, 0),
              registro_finto=registro + [dict(registro[2], giIdentifier="EUGI8888", fileNumber="PDO-IT-0888")])
+        # disciplinari nuovi e tolti (Alessandro, 25/11/2026): il registro europeo li dice con una richiesta sola
+        nuovo = dict(del_registro("PGI-IT-0004", "Pane Delta", (9, "9.9.2026")), giType="PGI", euProtectionDate="2026-09-09")
+        giro("registro: un prodotto italiano registrato che il catalogo non ha è un disciplinare nuovo",
+             (0, 0, 1, 3, "prodotto nuovo nel registro europeo", "«Pane Delta»", "IGP, fascicolo PGI-IT-0004", "09/09/2026"),
+             disciplinari=(1, 0, 0), registro_finto=registro + [nuovo])
+        giro("registro: una domanda e una pubblicazione non ancora registrate non sono disciplinari nuovi", (0, 0, 0, 3),
+             registro_finto=registro + [dict(nuovo, status="applied"), dict(nuovo, giIdentifier="EUGI0005", status="published")])
+        esito("registro: nel conto dei prodotti confrontati entrano solo quelli registrati, non le domande",
+              controllo.confronti.get("registro") == 3, controllo.confronti)
+        giro("registro: un prodotto che il catalogo non ha, ma segnato come tolto, non è un disciplinare nuovo", (0, 0, 0, 3),
+             registro_finto=registro + [dict(nuovo, removedFlag=True)])
+        giro("registro: un prodotto del catalogo segnato come tolto è un disciplinare tolto",
+             (0, 0, 1, 3, "Olio Gamma", "non è più fra i prodotti registrati", "segnato come tolto"), disciplinari=(0, 1, 0),
+             registro_finto=registro[:2] + [dict(registro[2], removedFlag=True)] + registro[3:])
+        giro("registro: un prodotto del catalogo che non ha più lo stato «registered» è un disciplinare tolto",
+             (0, 0, 1, 3, "Olio Gamma", "non è più fra i prodotti registrati", "«applied»"), disciplinari=(0, 1, 0),
+             registro_finto=registro[:2] + [dict(registro[2], status="applied")] + registro[3:])
         giro("sintesi: registro muto, fonte non letta; l'archivio si controlla lo stesso", (0, 1, 0, 3, "registro europeo eAmbrosia", "HTTP 500"),
              stato_registro=500)
         giro("sintesi: registro senza prodotti italiani, fonte non letta", (0, 1, 0, 3, "senza prodotti italiani"),
@@ -1024,10 +1089,13 @@ def prove_delle_sintesi(controllo, base):
              fuori_dal_gruppo={"52020XC0101(01)"}, inesistenti={"52020XC0101(01)"})
         giro("sintesi: una risposta a gruppi incompleta non rompe nulla, se l'atto da solo risponde", (0, 0, 0, 3),
              fuori_dal_gruppo={"52020XC0101(01)", "52021XC0202(02)R(01)"})
-        giro("sintesi: una rettifica che i dati non conoscono è una novità", (0, 0, 1, 3, "Formaggio Alfa", "52020XC0101(01)R(01)", "05/05/2025"),
+        giro("sintesi: una rettifica che i dati non conoscono è una novità, fra i disciplinari aggiornati",
+             (0, 0, 1, 3, "Formaggio Alfa", "52020XC0101(01)R(01)", "05/05/2025"), disciplinari=(0, 0, 1),
              rettifiche=dict(note, **{"52020XC0101(01)": [("52020XC0101(01)R(01)", "2025-05-05")]}))
         giro("sintesi: archivio muto, due fonti non lette (esistenza e rettifiche) e nessun collegamento rotto", (0, 2, 0, 0, "non ha detto se esistono", "rettifiche nuove"),
              stato_archivio=503)
+        esito("archivio: se non si è fatto leggere, il giro non lo dà per letto (gli «aggiornati» restano da verificare)",
+              controllo.confronti.get("archivio") is False and controllo.confronti.get("registro") == 3, controllo.confronti)
         giro("sintesi: se l'archivio non restituisce più le rettifiche che i dati conoscono, la risposta non vale (fonte non letta)",
              (0, 1, 0, 3, "non ha restituito 2 rettifiche", "52021XC0202(02)R(01)", '--nome "Salame Beta"'), rettifiche={})
 
@@ -1062,9 +1130,220 @@ def prove_delle_sintesi(controllo, base):
               not controllo.errori and not controllo.non_letti and not controllo.novita)
     finally:
         ue.REGISTRO, controllo.SPARQL_UE, controllo.ARCHIVIO_UE = veri
-        for elenco in (controllo.errori, controllo.non_letti, controllo.novita):
+        for elenco in (controllo.errori, controllo.non_letti, controllo.novita, *controllo.disciplinari.values()):
             elenco.clear()
         controllo.metodi.clear()
+        controllo.confronti.clear()
+
+
+def prove_dei_disciplinari(controllo, base):
+    """Disciplinari nuovi, tolti e aggiornati (Alessandro, 25/11/2026: si controlla sempre): il peso dei file, le
+    pagine del Ministero, e il riepilogo che il rapporto porta in ogni giro fatto con la rete."""
+    def pulisci():
+        for elenco in (controllo.errori, controllo.non_letti, controllo.novita, controllo.protetti, controllo.da_rivedere,
+                       controllo.muti, *controllo.disciplinari.values()):
+            elenco.clear()
+        for insieme in (controllo.metodi, controllo.di_fila, controllo.motivo, controllo.letti, controllo.pesi, controllo.confronti):
+            insieme.clear()
+
+    def fra_i_disciplinari():
+        return tuple(len(controllo.disciplinari[k]) for k in ("nuovi", "tolti", "aggiornati"))
+
+    # il peso che il sito dichiara: il totale di una risposta parziale, la lunghezza di una intera
+    casi = [((206, {"content-range": "bytes 0-7/185003", "content-length": "8"}), 185003),
+            ((200, {"content-length": "4009"}), 4009),
+            ((200, {"content-length": "4009", "content-encoding": "gzip"}), None),
+            ((206, {"content-range": "bytes 0-7/*"}), None),
+            ((206, {"content-length": "8"}), None),
+            ((200, {}), None)]
+    sbagliati = [(caso, controllo.peso_del_file(*caso), atteso) for caso, atteso in casi if controllo.peso_del_file(*caso) != atteso]
+    esito("peso di un file: totale di Content-Range nelle risposte parziali, Content-Length in quelle intere, nulla se il sito non lo dice",
+          not sbagliati, sbagliati)
+    esito("data di un file: il giorno di Last-Modified, vuoto se manca o non si legge",
+          controllo.data_del_file({"last-modified": "Wed, 12 Dec 2012 07:52:23 GMT"}) == "2012-12-12"
+          and controllo.data_del_file({}) == "" and controllo.data_del_file({"last-modified": "ieri"}) == "")
+
+    # file del catalogo: il server finto dichiara 4009 byte per /vero.pdf
+    vero = len(RISPOSTE["/vero.pdf"][2])
+    pulisci()
+    uguale = {"voci": [{"nome": "Uguale", "formato": "pdf", "url": base + "/vero.pdf?a", "byte": vero,
+                        "extra": [{"etichetta": "Modifica temporanea", "url": base + "/vero.pdf?b", "byte": vero}]},
+                       {"nome": "Solo Word", "formato": "docx", "url": base + "/qualsiasi.pdf"}]}
+    controllo.controlla_file_del_catalogo(uguale)
+    controllo.confronta_pesi(uguale)
+    esito("file del catalogo con lo stesso peso dei dati: nessuna novità, e il giro dice quanti ne ha confrontati",
+          not controllo.novita and not controllo.errori and fra_i_disciplinari() == (0, 0, 0) and controllo.confronti.get("file") == [2, 2],
+          f"{controllo.novita} {controllo.confronti}")
+    pulisci()
+    cambiato = {"voci": [{"nome": "Cambiato", "formato": "pdf", "url": base + "/vero.pdf?a", "byte": vero - 9},
+                         {"nome": "Uguale", "formato": "pdf", "url": base + "/vero.pdf?b", "byte": vero,
+                          "extra": [{"etichetta": "Modifica temporanea", "url": base + "/vero.pdf?c", "byte": vero + 1}]}]}
+    controllo.controlla_file_del_catalogo(cambiato)
+    controllo.confronta_pesi(cambiato)
+    testo = " | ".join(controllo.novita)
+    esito("file aggiornato allo stesso indirizzo (peso diverso dai dati): novità fra i disciplinari aggiornati, con i due pesi",
+          len(controllo.novita) == 2 and fra_i_disciplinari() == (0, 0, 2) and not controllo.errori
+          and f"«Cambiato»: il file allo stesso indirizzo è cambiato: nei dati pesa {vero - 9} byte, ora {vero}" in testo
+          and "«Uguale», Modifica temporanea" in testo and controllo.letti == {base + "/vero.pdf?a", base + "/vero.pdf?b", base + "/vero.pdf?c"},
+          f"{fra_i_disciplinari()} {testo}")
+    pulisci()
+    sparito = {"voci": [{"nome": "Sparito", "formato": "pdf", "url": base + "/manca.pdf", "byte": 100},
+                        {"nome": "Non letto", "formato": "pdf", "url": base + "/rifiuto.pdf", "byte": 100},
+                        {"nome": "Senza peso nei dati", "formato": "pdf", "url": base + "/vero.pdf?d"}]}
+    controllo.controlla_file_del_catalogo(sparito)
+    controllo.confronta_pesi(sparito)
+    esito("file del catalogo che risponde 404: collegamento rotto e disciplinare tolto; ciò che non si legge o non ha il peso nei dati non si confronta",
+          len(controllo.errori) == 1 and fra_i_disciplinari() == (0, 1, 0) and not controllo.novita and controllo.confronti.get("file") == [0, 3],
+          f"{controllo.errori} {controllo.novita} {controllo.confronti}")
+
+    # il peso passa davvero dalle intestazioni della risposta ai dati del giro: risposta parziale (206), come il
+    # sito del Ministero, e pagina al posto del PDF alla prima richiesta, con il file intero alla seconda
+    pulisci()
+    veri = {"voci": [{"nome": "Parziale", "formato": "pdf", "url": base + "/parziale.pdf", "byte": vero},
+                     {"nome": "Due richieste", "formato": "pdf", "url": base + "/pagina-poi-pdf.pdf", "byte": vero}]}
+    controllo.controlla_file_del_catalogo(veri)
+    controllo.confronta_pesi(veri)
+    esito("peso da una risposta parziale vera (206 con Content-Range): il totale del file, con il giorno che il sito dichiara",
+          controllo.pesi.get(base + "/parziale.pdf") == (vero, "2012-12-12"), controllo.pesi)
+    esito("peso dopo una pagina al posto del PDF: vale la risposta con il PDF, non quella con la pagina",
+          controllo.pesi.get(base + "/pagina-poi-pdf.pdf", (0,))[0] == vero and len(RISPOSTE["/qualsiasi.pdf"][2]) != vero
+          and not controllo.novita and controllo.confronti.get("file") == [2, 2], f"{controllo.pesi} {controllo.novita}")
+
+    # un file che la richiesta semplice non legge e il browser sì: il peso è quello del file ricevuto dal browser
+    def col_browser(risposte, catalogo_finto):
+        pulisci()
+        for voce in catalogo_finto["voci"]:
+            controllo.da_rivedere.append((f"disciplinare «{voce['nome']}»", voce["url"], "TimeoutError: timed out"))
+        vero_playwright = sys.modules.get("playwright.sync_api", "assente")
+        sys.modules["playwright.sync_api"] = types.SimpleNamespace(sync_playwright=lambda: BrowserConPagina(risposte))
+        try:
+            controllo.chiudi_da_rivedere(True)
+        finally:
+            if vero_playwright == "assente":
+                sys.modules.pop("playwright.sync_api", None)
+            else:
+                sys.modules["playwright.sync_api"] = vero_playwright
+        controllo.confronta_pesi(catalogo_finto)
+
+    pdf = b"%PDF-1.7\n" + b"x" * 100
+    col_browser([(200, pdf)], {"voci": [{"nome": "Dal browser", "formato": "pdf", "url": "https://www.esempio.it/a.pdf", "byte": len(pdf) + 7}]})
+    esito("file letto dal browser e aggiornato allo stesso indirizzo: il peso è quello del file ricevuto, ed è una novità",
+          fra_i_disciplinari() == (0, 0, 1) and f"nei dati pesa {len(pdf) + 7} byte, ora {len(pdf)}" in " ".join(controllo.novita)
+          and controllo.confronti.get("file") == [1, 1], f"{controllo.novita} {controllo.confronti}")
+    col_browser([(404, b"")], {"voci": [{"nome": "Sparito al browser", "formato": "pdf", "url": "https://www.esempio.it/b.pdf", "byte": 10}]})
+    esito("file del catalogo che risponde 404 al browser: collegamento rotto e disciplinare tolto",
+          len(controllo.errori) == 1 and fra_i_disciplinari() == (0, 1, 0), f"{controllo.errori} {fra_i_disciplinari()}")
+
+    # pagine del Ministero: allegati nuovi, allegati spariti, elenco ufficiale cambiato
+    def allegato(pagina, nome):
+        return f"https://www.masaf.gov.it/flex/cm/pages/ServeAttachment.php/L/IT/D/{nome}/P/BLOB%3AID%3D{pagina}/E/pdf?mode=download"
+
+    catalogo = {"classi": [{"id": "formaggi", "pagina": "https://www.masaf.gov.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/100"}],
+                "elenco_ufficiale": {"allegato": allegato(200, "elenco"), "aggiornato": "2026-10-15"},
+                "allegati_noti": [{"url": allegato(100, "decreto"), "motivo": "decreto di riconoscimento del consorzio"}],
+                "voci": [{"nome": "Formaggio Alfa", "formato": "pdf", "url": allegato(100, "alfa")},
+                         {"nome": "Formaggio Beta", "formato": "pdf", "url": allegato(100, "beta"),
+                          "extra": [{"etichetta": "Modifica temporanea", "url": allegato(8079, "beta-temporanea")}]}]}
+    del_ministero = {"gruppi": [{"documenti": [{"id": "elenco-pat", "url": allegato(300, "pat")}]}]}
+    intatte = {"100": {allegato(100, "alfa"): "Alfa", allegato(100, "beta"): "Beta", allegato(100, "decreto"): "Decreto"},
+               "200": {allegato(200, "elenco"): "Elenco"}, "300": {allegato(300, "pat"): "Elenco PAT"},
+               "8079": {allegato(8079, "beta-temporanea"): "Beta, modifica temporanea"}}
+    vera = controllo.allegati_della_pagina
+
+    def ministero(nome, pagine, atteso, *pezzi):
+        """`atteso`: rotti, novità, (nuovi, tolti, aggiornati), pagine lette."""
+        pulisci()
+        controllo.allegati_della_pagina = pagine.get
+        try:
+            controllo.controlla_ministero(del_ministero, catalogo)
+        finally:
+            controllo.allegati_della_pagina = vera
+        visto = (len(controllo.errori), len(controllo.novita), fra_i_disciplinari(), controllo.confronti.get("pagine"))
+        testo = " | ".join(controllo.errori + controllo.novita)
+        esito(nome, visto == atteso and all(pezzo in testo for pezzo in pezzi), f"{visto}, atteso {atteso}; {testo[:300]}")
+
+    ministero("Ministero: pagine uguali ai dati, nessun rilievo e quattro pagine lette su quattro", intatte, (0, 0, (0, 0, 0), [4, 4]))
+    ministero("Ministero: un allegato nuovo nella pagina di una classe è una novità, fra i disciplinari nuovi",
+              dict(intatte, **{"100": dict(intatte["100"], **{allegato(100, "gamma"): "Formaggio Gamma"})}),
+              (0, 1, (1, 0, 0), [4, 4]), "allegato nuovo «Formaggio Gamma»")
+    ministero("Ministero: un disciplinare sparito dagli allegati è un collegamento rotto, fra i disciplinari tolti",
+              dict(intatte, **{"100": {u: n for u, n in intatte["100"].items() if u != allegato(100, "beta")}}),
+              (1, 0, (0, 1, 0), [4, 4]), "«Formaggio Beta»: il file non è più fra gli allegati")
+    ministero("Ministero: un disciplinare sostituito (file sparito e allegato nuovo) compare fra i tolti e fra i nuovi",
+              dict(intatte, **{"100": {allegato(100, "alfa"): "Alfa", allegato(100, "decreto"): "Decreto", allegato(100, "beta-2"): "Beta 2026"}}),
+              (1, 1, (1, 1, 0), [4, 4]), "«Formaggio Beta»", "allegato nuovo «Beta 2026»")
+    ministero("Ministero: un documento sparito dalla sua pagina è un collegamento rotto, ma non è un disciplinare tolto",
+              dict(intatte, **{"300": {allegato(300, "altro"): "Altro"}}), (1, 0, (0, 0, 0), [4, 4]), "documento «elenco-pat»")
+    ministero("Ministero: un allegato nuovo nella pagina delle modifiche temporanee è una novità, fra i disciplinari aggiornati",
+              dict(intatte, **{"8079": dict(intatte["8079"], **{allegato(8079, "alfa-temporanea"): "Alfa, modifica temporanea"})}),
+              (0, 1, (0, 0, 1), [4, 4]), "allegato nuovo «Alfa, modifica temporanea»")
+    ministero("Ministero: l'elenco ufficiale cambiato è una novità, fra i disciplinari nuovi",
+              dict(intatte, **{"200": {allegato(200, "elenco-nuovo"): "Elenco"}}), (0, 1, (1, 0, 0), [4, 4]), "ha cambiato l'elenco")
+    ministero("Ministero: una pagina che non si legge non conta fra quelle confrontate",
+              {k: v for k, v in intatte.items() if k != "8079"}, (0, 0, (0, 0, 0), [3, 4]))
+
+    # il rapporto: la riga dei disciplinari c'è sempre con la rete, la sezione solo se c'è qualcosa
+    documenti_veri, catalogo_vero = controllo.carica()
+    pulisci()
+    interi = {"registro": 335, "archivio": True, "pagine": [26, 26], "file": [336, 336]}
+
+    def riga(anche_file=True, **cambiati):
+        """La riga dei disciplinari del rapporto, con i confronti del giro cambiati come dice la prova."""
+        controllo.confronti.clear()
+        controllo.confronti.update({k: v for k, v in dict(interi, **cambiati).items() if v is not None})
+        testo = controllo.rapporto(documenti_veri, catalogo_vero, True, anche_file)
+        return next(r for r in testo.splitlines() if r.startswith("Disciplinari nuovi:")), testo
+
+    quale, testo = riga()
+    esito("rapporto: senza novità e con i confronti interi dice «nuovi: nessuno, tolti: nessuno, aggiornati: nessuno» e che cosa ha confrontato",
+          quale.startswith("Disciplinari nuovi: nessuno. Tolti: nessuno. Aggiornati: nessuno.") and "335 prodotti italiani registrati" in quale
+          and "peso di 336 file del Ministero su 336" in quale and "### Disciplinari nuovi" not in testo and "Nessun problema." in testo,
+          testo[:500])
+    quale, _ = riga(registro=None)
+    esito("rapporto: con il registro non letto nessuna delle tre voci dice «nessuno»",
+          "nessuno" not in quale and quale.count("registro europeo non letto") == 3, quale)
+    quale, _ = riga(pagine=[24, 26])
+    esito("rapporto: con due pagine del Ministero non lette, nuovi e tolti non dicono «nessuno»; gli aggiornati sì",
+          quale.startswith("Disciplinari nuovi: confronto incompleto (2 pagine del Ministero su 26 non lette). Tolti: confronto incompleto (")
+          and "Aggiornati: nessuno." in quale, quale)
+    quale, _ = riga(archivio=False)
+    esito("rapporto: con l'archivio dell'UE non letto per intero, gli aggiornati non dicono «nessuno»",
+          "Disciplinari nuovi: nessuno. Tolti: nessuno. Aggiornati: confronto incompleto (archivio dell'UE non letto per intero)." in quale, quale)
+    quale, _ = riga(file=[300, 336])
+    esito("rapporto: con una parte dei file non pesata, gli aggiornati non dicono «nessuno»",
+          "Aggiornati: confronto incompleto (peso confrontato per 300 file su 336)." in quale and "Tolti: nessuno." in quale, quale)
+    quale, _ = riga(anche_file=False)
+    esito("rapporto: in un giro senza --file gli aggiornati dicono che il peso non è stato confrontato, anche se un giro precedente lo aveva fatto",
+          "Aggiornati: confronto incompleto (peso dei file non confrontato: giro senza --file)." in quale and "peso di 336 file" not in quale, quale)
+    testo = controllo.rapporto(documenti_veri, catalogo_vero, False, False)
+    esito("rapporto: senza rete la riga dei disciplinari non c'è (nessun confronto fatto)", "Disciplinari nuovi" not in testo, testo[:300])
+    pulisci()
+    righe = {"nuovi": "prodotto nuovo nel registro europeo: «Pane Delta»", "tolti": "disciplinare «Olio Gamma»: tolto",
+             "aggiornati": "disciplinare «Formaggio Alfa»: il file allo stesso indirizzo è cambiato"}
+    for chiave, riga in righe.items():
+        controllo.disciplinari[chiave].append(riga)
+    controllo.errori.append(righe["tolti"])
+    controllo.novita.extend([righe["nuovi"], righe["aggiornati"], "documento «prova»: è uscita una versione consolidata più recente"])
+    testo = controllo.rapporto(documenti_veri, catalogo_vero, True, True)
+    sezione = testo.split("### Disciplinari nuovi, tolti o aggiornati", 1)[-1].split("### ", 1)[0]
+    altre = testo.split("### Novità sulle fonti, da valutare", 1)[-1]
+    esito("rapporto: i disciplinari nuovi, tolti e aggiornati hanno la loro sezione, con come si lavorano",
+          "Disciplinari nuovi: 1, con il confronto incompleto (" in testo and all(voce in sezione for voce in righe.values())
+          and "Nuovi (" in sezione and "Tolti (" in sezione and "Aggiornati (" in sezione and "Come si lavorano" in sezione, testo[:700])
+    esito("rapporto: le righe dei disciplinari non si ripetono fra le altre novità, che restano nella loro sezione",
+          "versione consolidata più recente" in altre and righe["nuovi"] not in altre and righe["aggiornati"] not in altre
+          and testo.count(righe["nuovi"]) == 1, altre[:400])
+    # lo stesso disciplinare con tre righe (sparito dagli allegati, 404, tolto dal registro) è un disciplinare solo
+    pulisci()
+    controllo.confronti.update(interi)
+    for coda in (": il file non è più fra gli allegati", ": HTTP 404", ": nel registro europeo non è più fra i prodotti registrati"):
+        controllo.disciplinari["tolti"].append("disciplinare «Olio Gamma»" + coda)
+    controllo.disciplinari["tolti"].append("disciplinare «Salame Beta»: HTTP 404")
+    controllo.errori.extend(controllo.disciplinari["tolti"])
+    testo = controllo.rapporto(documenti_veri, catalogo_vero, True, True)
+    esito("rapporto: il conto dei tolti è per disciplinare, non per riga (tre righe sullo stesso prodotto contano uno)",
+          "Disciplinari nuovi: nessuno. Tolti: 2. Aggiornati: nessuno." in testo, testo[:400])
+    pulisci()
 
 
 def prove_delle_risposte():
@@ -1372,6 +1651,7 @@ def prove_delle_risposte():
         prove_del_browser(controllo, base)
         prove_delle_letture(controllo)
         prove_delle_sintesi(controllo, base)
+        prove_dei_disciplinari(controllo, base)
     finally:
         server.shutdown()
 
@@ -1446,6 +1726,20 @@ def main():
         prova(base, "allegato di un'altra pagina del Ministero", nel_catalogo(altra_pagina),
               "non è della pagina del Ministero della sua classe")
         prova(base, "stesso indirizzo su due disciplinari", nel_catalogo(doppione), "indirizzo già usato da un'altra voce")
+
+        # il peso in byte: serve a riconoscere un file aggiornato senza cambiare indirizzo
+        def senza_peso(dati):
+            del next(v for v in dati["voci"] if v["formato"] == "pdf")["byte"]
+
+        def peso_che_non_torna(dati):
+            next(v for v in dati["voci"] if v["formato"] == "pdf")["byte"] += 5000
+
+        def aggiuntivo_senza_peso(dati):
+            del next(v for v in dati["voci"] if v.get("extra"))["extra"][0]["byte"]
+
+        prova(base, "disciplinare in PDF senza il peso in byte", nel_catalogo(senza_peso), "manca «byte»")
+        prova(base, "peso in KB che non torna con il peso in byte", nel_catalogo(peso_che_non_torna), "non torna con «byte»")
+        prova(base, "documento aggiuntivo senza il peso in byte", nel_catalogo(aggiuntivo_senza_peso), "manca «byte»")
         prova(base, "data di verifica in formato sbagliato", nel_catalogo(data_sbagliata),
               "«verificato» deve essere una data AAAA-MM-GG")
         prova(base, "verifica dei collegamenti più vecchia della soglia (--eta 45)", nel_catalogo(verifica_vecchia),
