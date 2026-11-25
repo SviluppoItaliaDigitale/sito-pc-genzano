@@ -38,14 +38,15 @@ $fn = 96;
 LUNGO = 140; LARGO = 53; SPESSO = 10; SMUSSO = 6;   // spesso 10 mm: ai lati della tasca restano due pareti da 4 mm
 MONETA_D = 21.25; MONETA_S = 1.67;
 GIOCO_D = 0.4; GIOCO_S = 0.3;          // la tasca è 0,4 mm più larga e 0,3 mm più spessa della moneta
-SPORGE = 3;                            // quanto la moneta esce dalla parete, dentro l'apertura
+SPORGE = 4;                            // quanto la moneta esce dalla parete, dentro l'apertura (4 mm: la parete resta lontana dal collo)
 APERTURA_R = 18; CZ = 25;              // apertura tonda: il tappo da 32,1 mm ci passa di sbieco
 APPOGGIO_X = 20;                       // lato dell'apertura verso la punta: appoggia sopra il tappo
 DENTE_X = APPOGGIO_X + 22;             // punta della moneta
 PARETE_X = DENTE_X + SPORGE;           // dove finisce l'apertura e comincia la parete del manico
 CX = PARETE_X - APERTURA_R;            // centro dell'apertura
 MX = DENTE_X + MONETA_D / 2;           // centro della moneta
-CORDINO = [132, 8]; CORDINO_D = 5;     // occhiello per un cordino
+// occhiello per un cordino: in basso nell'apribottiglie; nel tre in uno in alto, perché in basso lo chiuderebbe la linguetta
+CORDINO = tipo == "tre_in_uno" ? [132, 45] : [132, 8]; CORDINO_D = 5;
 EURO_D = 23.25; LINGUA_S = 2.2; LINGUA_L = 28;   // linguetta per il carrello: un decimo più sottile della moneta
 // Misure: [lunghezza, larghezza, smusso, spessore, carattere riga1, y riga1, carattere righe piccole, y riga2, y riga3,
 //          x del centro del nominativo]. Con Liberation Sans Narrow Bold a 4,5 mm il tratto più sottile è di 0,70 mm.
@@ -89,6 +90,19 @@ module tasca() {
     }
 }
 
+// smusso di 2 mm a 45 gradi sul bordo dell'apertura dal lato del dente, solo sulla faccia senza scritte, quella che
+// guarda la bottiglia: quando l'attrezzo è inclinato di 30 gradi per infilare la moneta sotto il tappo, quello spigolo
+// è l'unico punto che può toccare il collo
+module smusso_dente() {
+    intersection() {
+        translate([0, 0, -SPESSO / 2 - 0.01]) hull() {
+            linear_extrude(0.01) offset(delta = 2) apertura();
+            translate([0, 0, 2]) linear_extrude(0.01) apertura();
+        }
+        translate([CX + 8, CZ - 13, -SPESSO]) cube([30, 26, SPESSO]);
+    }
+}
+
 module tricolore() {
     for (i = [0:2]) translate([BAND[0] + i * 4 + (i > 0 ? 0.4 : 0), BAND[1]]) square([4 - (i == 1 ? 0.8 : 0.4), S1]);
 }
@@ -112,7 +126,8 @@ module base() {
         }
         tasca();
         // il bordo che appoggia sul tappo è smussato di 1 mm sulle due facce: non ammacca il tappo e non si scheggia
-        for (v = [-1, 1]) translate([APPOGGIO_X, CZ, v * SPESSO / 2]) rotate([0, 45, 0]) cube([1.42, 26, 1.42], center = true);
+        for (v = [-1, 1]) translate([APPOGGIO_X, CZ, v * SPESSO / 2]) rotate([0, 45, 0]) cube([1.42, 36, 1.42], center = true);
+        smusso_dente();
     }
     // linguetta per il carrello, a metà spessore, con il lato basso sul piano di stampa
     if (tipo == "tre_in_uno") in_piedi() linear_extrude(LINGUA_S, center = true) hull() {

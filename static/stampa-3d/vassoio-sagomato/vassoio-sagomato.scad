@@ -219,6 +219,15 @@ module parete(g, verso, s, y0, y1) {
 module piede(p) {
     translate([p[0], p[1], PIANO - 0.01]) cylinder(d1 = 20, d2 = 13, h = PIEDE - PIANO, $fn = 48);
 }
+// Vassoi impilabili (25/11/2026, richiesta di Alessandro): sopra ogni piedino, sulla faccia dove si appoggiano le
+// stoviglie, c'è un incavo tondo profondo 1,2 mm, largo 14,6 mm in alto e 13,4 mm in fondo. I piedini del vassoio
+// messo sopra finiscono con un piano di 13 mm e ci entrano: i vassoi vuoti non scivolano uno sull'altro. L'incavo è
+// scavato nel pieno del piedino, che lì è largo 20 mm, quindi non lascia pareti sottili. Ogni vassoio alza la pila
+// di 46,8 mm; sotto il vassoio di sopra restano 45 mm, più dei 9 mm della clip e dei 4,6 mm della targhetta.
+INCAVO_P = 1.2;
+module incavo_piede(p) {
+    translate([p[0], p[1], -0.01]) cylinder(d1 = 14.6, d2 = 13.4, h = INCAVO_P + 0.01, $fn = 48);
+}
 /* ---------- Giunzioni senza viti: pezzi «a incastro» con chiavette a farfalla ---------- */
 
 // Chi non vuole viti e dadi stampa i pezzi «a incastro» (parti che finiscono per _i): al posto di fori e sedi dei
@@ -285,6 +294,7 @@ module corpo() {
 module scavi() {
     // fori di piatto e bicchiere, con lo smusso dal lato delle stoviglie
     translate([0, 0, -1]) linear_extrude(PIEDE) { fori2d(); manici2d(); }
+    for (p = PIEDI, v = [-1, 1]) incavo_piede([p[0], v * p[1]]);        // incavi per impilare i vassoi
     // lo smusso si fa foro per foro: un solo inviluppo li unirebbe tutti
     translate([0, 0, -0.01]) linear_extrude(INCISO + 0.01) etichette2d();
     // pezzi a incastro: sedi delle chiavette, alte quanto la parete e chiuse dal piano
@@ -382,6 +392,7 @@ module pezzo_destra() {
 // per un piatto solo, provato lo stesso giorno, è stato tolto: ogni vassoio porta sempre anche posate, bicchiere e
 // bottiglia.)
 PRO = 120;                                     // larghezza di ogni pezzo della prolunga
+module incavi_pro(piedi) { for (p = piedi, v = [-1, 1]) incavo_piede([p[0], v * p[1]]); }
 module lastra_pro(piedi) {
     translate([0, -FONDO / 2, 0]) cube([PRO, FONDO, PIANO]);
     for (v = [-1, 1]) translate([0, v > 0 ? FONDO / 2 - 2.4 : -FONDO / 2, PIANO - 0.01]) cube([PRO, 2.4, NERV - PIANO]);   // bordi
@@ -407,6 +418,7 @@ module prolunga_a() {
             parete(PRO, -1, FL_A, -FONDO / 2, FONDO / 2);
         }
         foro_pro(0);
+        incavi_pro([[20, 109], [PRO - 16, 107]]);
         viti_dadi(0, VITI_1);
         viti_teste(PRO, VITI_2);
         costole(PRO, COST_2, 0.2);
@@ -424,6 +436,7 @@ module prolunga_b() {
             for (v = [-1, 1]) parete(PRO, -1, FL_A, v > 0 ? Y1A : -FONDO / 2, v > 0 ? FONDO / 2 : -Y1A);
         }
         foro_pro(PRO);
+        incavi_pro([[12, 110], [PRO - 43, 109]]);
         viti_dadi(0, VITI_2);
         viti_teste(PRO, VITI_1);
         costole(PRO, COST_1, 0.2);
