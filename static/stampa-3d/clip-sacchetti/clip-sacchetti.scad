@@ -46,7 +46,7 @@ DENTE = 1.5;       // rilievo lungo il braccio che preme: entra in un incavo del
 CERN = 1.2;        // spessore della cerniera flessibile
 CERN_O = [0, -1.7]; CERN_R = 5.3;
 APERTA = 15;       // gradi di apertura con cui si stampa: chiudendola la cerniera lavora di poco
-GAMBO = 1.6; SCATTO = 1.2;   // linguetta di chiusura e dente che aggancia sotto il braccio largo
+GAMBO = 1.6; SCATTO = 1.4;   // linguetta di chiusura e dente che aggancia sotto il braccio largo
 CENTRO = [-62.5, 6.5];       // il pezzo è spostato così le scritte stanno intorno all'origine
 
 SOLCO = 0.8;
@@ -68,7 +68,11 @@ module testi2d() {
 // Braccio largo, con le scritte: in alto ha l'incavo per il rilievo dell'altro braccio
 module largo2d() {
     difference() {
-        translate([R, -LB + R]) offset(r = R) square([L - 2 * R, LB - 2 * R]);
+        union() {
+            translate([R, -LB + R]) offset(r = R) square([L - 2 * R, LB - 2 * R]);
+            // spigolo vivo dove aggancia il dente: su un angolo tondo il dente scivolerebbe
+            translate([L - 1.2, -LB]) square([1.2, 1.2]);
+        }
         translate([10 - 0.4, -DENTE]) square([105 + 0.8, DENTE + 1]);
         polygon([[L - 1.2, 0.1], [L + 0.1, 0.1], [L + 0.1, -1.2]]);          // invito per la linguetta
         polygon([[-0.1, 0.1], [2.5, 0.1], [-0.1, -2.5]]);                     // spazio per la cerniera
@@ -81,6 +85,9 @@ module stretto2d() {
     translate([L + 0.4, -LB - 3.2]) square([GAMBO, LB + 3.2 + LUCE + 0.01]);
     polygon([[L + 0.41, -LB - 0.3], [L + 0.4 - SCATTO, -LB - 0.3], [L + 0.4 - SCATTO, -LB - 0.9], [L + 0.41, -LB - 2.4]]);
     translate([L + 0.4, -LB - 4.8]) square([6, 1.6]);
+    // rinforzo alla radice della linguetta, dove flette, e all'attacco della cerniera
+    polygon([[L + 0.41, LUCE + 0.01], [L - 0.5, LUCE + 0.01], [L + 0.41, LUCE - 0.9]]);
+    hull() { translate([0, 3.6]) circle(d = CERN, $fn = 16); translate([1.2, 3.6]) circle(d = 3.2, $fn = 24); }
 }
 function cern(a) = [CERN_O[0] + CERN_R * cos(a), CERN_O[1] + CERN_R * sin(a)];
 module cerniera2d() {
@@ -89,6 +96,7 @@ module cerniera2d() {
 module clip2d() {
     largo2d();
     cerniera2d();
+    hull() { translate(cern(270)) circle(d = CERN, $fn = 16); translate([1.0, -7]) circle(d = 3.2, $fn = 24); }
     translate(CERN_O) rotate(APERTA) translate(-CERN_O) stretto2d();
 }
 

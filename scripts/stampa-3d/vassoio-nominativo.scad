@@ -1,6 +1,7 @@
 // Vassoio porta piatto, bicchiere e posate con il nominativo (volontari della Protezione Civile di Genzano di Roma).
 // Il piatto e il bicchiere si infilano in due fori più stretti del loro bordo: restano appesi e non scivolano.
-// Le posate stanno sotto una clip a molla. Il vassoio è rialzato su dodici piedini, perché piatto e bicchiere
+// La bottiglietta d'acqua da mezzo litro scende in un pozzetto. Vicino a ogni posto una scritta appena incisa dice
+// che cosa ci va. Le posate stanno sotto una clip a molla. Il vassoio è rialzato su dodici piedini, perché piatto e bicchiere
 // scendono sotto il piano; ai due lati corti ha un'asola per le dita, che fa da manico. È in tre pezzi uniti da
 // cinque viti, perché intero (456 × 240 mm) non entra nel piatto
 // di una stampante da tavolo: ogni pezzo sta in 250 × 210 mm (Original Prusa MK4S: scheda su prusa3d.com,
@@ -15,7 +16,9 @@
 // clip = clip per le posate, coricata per la stampa; montato = vassoio montato, solo da guardare;
 // controllo_viti = solo le parti delle scritte che finirebbero sotto una vite (deve risultare vuoto)
 // sinistra180 e centro180 = seconda versione dei due pezzi del piatto, con il foro da 180 mm
-parte = "tutto"; // [tutto, base, testo, sinistra, centro, destra, sinistra180, centro180, clip, montato, controllo_viti]
+// sinistra3, centro3, destra3 = terza versione, con le sedi sagomate: si stampa diritta, con il fondo sul piatto;
+// montato3 = terza versione montata, solo da guardare
+parte = "tutto"; // [tutto, base, testo, sinistra, centro, destra, sinistra180, centro180, clip, montato, sinistra3, centro3, destra3, montato3, controllo_viti]
 tipo = "vassoio"; // [vassoio]
 
 /* [Testi] */
@@ -52,6 +55,11 @@ $fn = 64;
 // Seconda versione (foro da 180 mm): il piatto appoggia più in basso, sulla parete, e sotto il bordo restano
 // 22 mm di vassoio per parte con il piatto piano e 20 mm con il fondo (con il foro da 200 mm sono 12 e 10 mm).
 // La base dei due piatti (165 e 145 mm) entra comunque. Per piatti leggeri, pieni o molli è la più sicura.
+// Bottiglietta d'acqua da mezzo litro: tonda, 68 mm di diametro, alta 172,5 mm (bottiglia rPET da 500 ml, scheda
+// del produttore su berlinpackaging.eu, consultata il 25/11/2026). Il pozzetto è largo 70 mm e profondo 44 mm: la
+// bottiglia scende di circa 35 mm e si ferma su un cono che in fondo lascia un'apertura di 54 mm. Una bottiglia
+// più larga di 70 mm non entra; una più stretta di 55 mm cadrebbe.
+BOTT = 70; B_PROF = 44; B_CONO = 9; B_FONDO = 54;
 STRETTO = parte == "sinistra180" || parte == "centro180";
 FORO_PIATTO = STRETTO ? 180 : 200; FORO_BICCHIERE = 56;
 PIANO = 3.0;                  // spessore del piano (15 strati da 0,2 mm)
@@ -74,8 +82,9 @@ FORO = 4.5; SVASO_D = 9.4; SVASO_H = 2.45; DADO = 7.2; DADO_H = 3.4;
 LARGO = 456; FONDO = 240;                      // ingombro del vassoio montato
 G1 = 148; G2 = 328;                            // giunzioni: sinistra | centro | destra
 PX = 148;                                      // centro del piatto: la prima giunzione taglia il foro a metà
-CX = 381; CY = 62;                             // centro del bicchiere
-NX = 381; NY = -62;                            // centro della targhetta
+CX = 381; CY = 78;                             // centro del bicchiere
+BX = 381; BY = -8;                             // centro della bottiglietta
+NX = 381; NY = -84;                            // centro della targhetta
 POS_X = 291; POS_L = 55;                       // corsia delle posate: centro e distanza fra le gambe della clip
 NERV_X = 256;                                  // nervatura fra il piatto e le posate
 // Manici: un'asola di 92 × 22 mm per le dita a ogni lato corto; fuori dall'asola resta una barra larga 7 mm
@@ -86,7 +95,7 @@ FL_A = 4; FL_B = 8;                            // pareti di giunzione: quella co
 VITE_Z = 14.5;                                 // quota delle viti di giunzione sotto il piano
 VITI_1 = [-110, 110]; VITI_2 = [-85, 0, 85];   // viti della prima e della seconda giunzione
 // Piedini: quattro per pezzo, così ogni pezzo sta in piedi anche da solo
-PIEDI = [[22, 98], [130, 109], [168, 109], [312, 107], [348, 107], [434, 98]];
+PIEDI = [[22, 98], [130, 109], [168, 109], [312, 107], [340, 110], [434, 98]];
 
 /* ---------- Targhetta ---------- */
 
@@ -155,7 +164,8 @@ module contorno2d() {
 module foro2d(i, extra) {
     if (i == 0) translate([PX, 0]) circle(d = FORO_PIATTO + 2 * extra, $fn = 180);
     if (i == 1) translate([CX, CY]) circle(d = FORO_BICCHIERE + 2 * extra, $fn = 96);
-    if (i > 1) hull() for (v = [-1, 1]) translate([MAN_X[i - 2], v * (MAN_L - MAN_W) / 2]) circle(d = MAN_W + 2 * extra, $fn = 48);
+    if (i == 4) translate([BX, BY]) circle(d = BOTT + 2 * extra, $fn = 120);
+    if (i == 2 || i == 3) hull() for (v = [-1, 1]) translate([MAN_X[i - 2], v * (MAN_L - MAN_W) / 2]) circle(d = MAN_W + 2 * extra, $fn = 48);
 }
 module fori2d(extra = 0) {
     translate([PX, 0]) circle(d = FORO_PIATTO + 2 * extra, $fn = 180);
@@ -176,11 +186,20 @@ module nervature2d() {
     difference() { contorno2d(); offset(delta = -2.4) contorno2d(); }               // bordo
     anello2d([PX, 0], FORO_PIATTO, 2.6);
     anello2d([CX, CY], FORO_BICCHIERE, 2.4);
+    anello2d([BX, BY], BOTT, 2.6);
     difference() { manici2d(SM + 3.2); manici2d(SM - 0.01); }                       // bordo delle asole dei manici
     translate([NERV_X, -FONDO / 2]) square([2.4, FONDO]);                           // fra il piatto e le posate
     for (y = [-75, 25]) translate([NERV_X, y - 1.2]) square([G2 - NERV_X, 2.4]);    // sotto la corsia delle posate
-    translate([G2, -1.2]) square([CX - FORO_BICCHIERE / 2 - G2, 2.4]);              // pezzo di destra
-    translate([G2, NY + 22]) square([MAN_X[1] - MAN_W / 2 - G2, 2.4]);
+    for (y = [38, -57]) translate([G2, y - 1.2]) square([MAN_X[1] - MAN_W / 2 - G2, 2.4]);   // pezzo di destra
+}
+// Scritte incise di 0,4 mm sulla faccia del piano, accanto a ogni posto: si vedono appena e dicono che cosa ci va
+INCISO = 0.4;
+module etichetta(t, p) { translate(p) text(t, size = 5, font = font2, halign = "center", valign = "center"); }
+module etichette2d() {
+    etichetta("PIATTO", [95, -104]);
+    etichetta("POSATE", [POS_X, -106]);
+    etichetta("BICCHIERE", [CX, 38.5]);
+    etichetta("BOTTIGLIA", [BX, -51.5]);
 }
 // parete di giunzione: da y0 a y1, spessa s, con il lato sulla giunzione g (verso = -1 a sinistra, 1 a destra)
 module parete(g, verso, s, y0, y1) {
@@ -194,6 +213,7 @@ module corpo() {
     linear_extrude(PIANO) contorno2d();
     translate([0, 0, PIANO - 0.01]) linear_extrude(NERV - PIANO) nervature2d();
     for (p = PIEDI, v = [-1, 1]) piede([p[0], v * p[1]]);
+    translate([BX, BY, PIANO - 0.01]) cylinder(d = BOTT + 4.8, h = B_PROF - PIANO, $fn = 120);   // pozzetto della bottiglia
     // sedi dei dadi della targhetta
     for (p = T_VITI) translate([NX + p[0], NY + p[1], PIANO - 0.01]) cylinder(d = 15, h = 4, $fn = 48);
 }
@@ -201,7 +221,14 @@ module scavi() {
     // fori di piatto e bicchiere, con lo smusso dal lato delle stoviglie
     translate([0, 0, -1]) linear_extrude(PIEDE) { fori2d(); manici2d(); }
     // lo smusso si fa foro per foro: un solo inviluppo li unirebbe tutti
-    for (i = [0:3]) hull() {
+    translate([0, 0, -0.01]) linear_extrude(INCISO + 0.01) etichette2d();
+    // pozzetto della bottiglia: diritto, poi un cono su cui la bottiglia si ferma, poi aperto
+    translate([BX, BY, 0]) {
+        translate([0, 0, -1]) cylinder(d = BOTT, h = B_PROF - B_CONO + 1, $fn = 120);
+        translate([0, 0, B_PROF - B_CONO - 0.01]) cylinder(d1 = BOTT, d2 = B_FONDO, h = B_CONO + 0.02, $fn = 120);
+        cylinder(d = B_FONDO, h = PIEDE, $fn = 120);
+    }
+    for (i = [0:4]) hull() {
         translate([0, 0, -0.01]) linear_extrude(0.01) foro2d(i, SM);
         translate([0, 0, SM]) linear_extrude(0.01) foro2d(i, -0.02);
     }
@@ -215,16 +242,16 @@ module scavi() {
 // Giunzione: sulla parete sottile passano le viti, con la testa svasata; nella parete spessa il foro è cieco e il
 // dado scende in un'asola aperta. Una costola verticale sulla parete spessa entra in una scanalatura dell'altra:
 // tiene allineati i pezzi mentre si stringono le viti.
-module viti_teste(g, viti) {                 // nel pezzo a sinistra della giunzione
-    for (y = viti) translate([g, y, VITE_Z]) rotate([0, -90, 0]) {
+module viti_teste(g, viti, vz = VITE_Z) {    // nel pezzo a sinistra della giunzione
+    for (y = viti) translate([g, y, vz]) rotate([0, -90, 0]) {
         translate([0, 0, -0.01]) cylinder(d = FORO, h = FL_A + 0.02, $fn = 32);
         translate([0, 0, FL_A - SVASO_H]) cylinder(d1 = FORO, d2 = SVASO_D, h = SVASO_H + 0.02, $fn = 32);
     }
 }
-module viti_dadi(g, viti) {                  // nel pezzo a destra della giunzione
+module viti_dadi(g, viti, vz = VITE_Z, fine = FLANGIA + 6) {   // nel pezzo a destra della giunzione
     for (y = viti) {
-        translate([g - 0.01, y, VITE_Z]) rotate([0, 90, 0]) cylinder(d = FORO, h = 7.01, $fn = 32);
-        hull() for (z = [VITE_Z, FLANGIA + 6]) translate([g + 2, y, z]) rotate([0, 90, 0])
+        translate([g - 0.01, y, vz]) rotate([0, 90, 0]) cylinder(d = FORO, h = 7.6, $fn = 32);
+        hull() for (z = [vz, fine]) translate([g + 2, y, z]) rotate([0, 90, 0])
             cylinder(d = DADO / cos(30), h = DADO_H, $fn = 6);
     }
 }
@@ -296,6 +323,121 @@ module clip2d() {                              // x lungo il ponte, y verso l'al
 }
 module clip() { linear_extrude(C_LARGA) clip2d(); }
 
+/* ---------- Terza versione: sedi sagomate ---------- */
+
+// Qui le stoviglie non restano appese: appoggiano sul fondo, dentro sedi con la loro forma. Il piatto sta in una
+// conca chiusa da un anello alto 8 mm, che si allarga più della parete del piatto (così il piatto tocca il fondo e
+// non l'anello): base fino a 166 mm. Il bicchiere scende in un bicchierino alto 45 mm, circa metà dei 97 mm del
+// bicchiere, così resta facile da prendere: 49 mm in basso, 61 mm in alto. La bottiglietta sta in un anello largo
+// 70 mm e alto 45 mm. Le posate appoggiano su due ponticelli alti 9 mm e la clip si aggancia a uno dei due.
+// Il vassoio non ha piedini: si stampa diritto, con il fondo sul piatto della stampante, e per prenderlo dal tavolo
+// i due lati corti salgono inclinati verso l'esterno. Coordinate vere: z verso l'alto, z = 0 è il tavolo.
+W3 = 420; D3 = 240;                            // fondo del vassoio (in alto, con i due bordi inclinati, è largo 454)
+F3 = 2.4; H3 = 18; LAB = 17; MURO = 2.4;       // fondo, altezza dei bordi, sporgenza dei bordi inclinati, pareti
+J1 = 115; J2 = 296;                            // giunzioni
+P3 = [115, 0];                                 // centro del piatto
+A_R = 84; A_H = 8; A_PEND = 1.6; A_S = 2.4;    // anello del piatto: raggio interno in basso, altezza, pendenza, spessore
+A_FUORI = A_R + A_PEND * A_H + A_S;
+C3 = [360, 75]; B3 = [360, -6]; N3 = [360, -80];   // bicchiere, bottiglietta, targhetta
+BIC_H = 45; BIC_D1 = 49; BIC_D2 = 61;
+POS3_X = 253; CLIP3_Y = [-35, 45];             // corsia delle posate e i due ponticelli
+PONTE = 9;                                     // altezza dei ponticelli: 3 mm di tetto, sotto il dente della clip
+N_ALTO = 10.6;                                 // altezza degli appoggi della targhetta: la vite M4 × 10 si ferma
+                                               // a 4 mm dal tavolo, anche con una testa che affonda un po' di più
+V3_Z = 10;                                     // quota delle viti di giunzione
+Y3A = A_FUORI + 1.3;                           // la prima giunzione passa per il piatto: le pareti stanno fuori dall'anello
+V3_1 = [-109, 109]; V3_2 = [-85, 0, 85];
+module xz(t) { rotate([90, 0, 0]) linear_extrude(t) children(); }
+module vasca3() {
+    translate([0, -D3 / 2, 0]) cube([W3, D3, F3]);
+    // bordi lunghi, diritti, e bordi corti inclinati: sotto ci passano le dita
+    for (y = [D3 / 2, -D3 / 2 + MURO]) translate([0, y, 0]) xz(MURO) polygon([[0, 0], [W3, 0], [W3 + LAB, H3], [-LAB, H3]]);
+    translate([0, D3 / 2, 0]) xz(D3) {
+        polygon([[0, 0], [3.4, 0], [3.4 - LAB, H3], [-LAB, H3]]);
+        polygon([[W3, 0], [W3 - 3.4, 0], [W3 + LAB - 3.4, H3], [W3 + LAB, H3]]);
+    }
+    translate([P3[0], P3[1], F3 - 0.01]) rotate_extrude($fn = 180)
+        polygon([[A_R, 0], [A_R + A_PEND * A_H, A_H], [A_FUORI, A_H], [A_FUORI, 0]]);
+    translate([C3[0], C3[1], F3 - 0.01]) cylinder(d1 = BIC_D1 + 4, d2 = BIC_D2 + 4, h = BIC_H, $fn = 120);
+    translate([B3[0], B3[1], F3 - 0.01]) cylinder(d = BOTT + 4.8, h = 45, $fn = 120);
+    // pareti di giunzione
+    for (v = [-1, 1]) {
+        translate([J1 - FL_A, v > 0 ? Y3A : -D3 / 2 + 1, F3 - 0.01]) cube([FL_A + FL_B, D3 / 2 - 1 - Y3A, H3 - F3]);
+    }
+    translate([J2 - FL_A, -D3 / 2 + 1, F3 - 0.01]) cube([FL_A + FL_B, D3 - 2, H3 - F3]);
+    // ponticelli delle posate
+    for (y = CLIP3_Y) translate([POS3_X - 33, y - 9.2, F3 - 0.01]) cube([66, 18.4, PONTE - F3]);
+    // appoggi della targhetta: due con il dado, due semplici
+    for (p = T_VITI) {
+        translate([N3[0] + p[0] - 7.5, N3[1] + p[1] - 6.5, F3 - 0.01]) cube([15, 13, N_ALTO - F3]);
+        translate([N3[0] + p[0], N3[1] + 14, F3 - 0.01]) cylinder(d = 10, h = N_ALTO - F3, $fn = 48);
+    }
+}
+module etichette3() {
+    etichetta("PIATTO", [30, -100]);
+    etichetta("POSATE", [POS3_X, -106]);
+    // bicchiere e bottiglietta: sul fondo della loro sede, perché fra due sedi alte la scritta non si vedrebbe
+    etichetta("BICCHIERE", C3);
+    etichetta("BOTTIGLIA", B3);
+}
+module scavi3() {
+    translate([0, 0, F3 - INCISO]) linear_extrude(1) etichette3();
+    translate([C3[0], C3[1], F3]) cylinder(d1 = BIC_D1, d2 = BIC_D2 + 0.02, h = BIC_H + 0.02, $fn = 120);
+    translate([B3[0], B3[1], F3]) cylinder(d = BOTT, h = 50, $fn = 120);
+    // Fessure della clip: un pozzetto per la gamba e, verso l'esterno, la tasca dove aggancia il dente. La tasca
+    // esce dal fianco del ponticello con una finestrella alta 2,8 mm: da lì, con un cacciavite piccolo, si spinge
+    // il dente per togliere la clip. Il fondo della tasca è rialzato di 0,8 mm e segue il dente, che è smussato.
+    for (y = CLIP3_Y, v = [-1, 1]) translate([POS3_X + v * POS_L / 2, y, 0]) {
+        translate([-FESSURA / 2, -5.2, F3]) cube([FESSURA, 10.4, PONTE]);
+        translate([v > 0 ? FESSURA / 2 - 0.01 : -FESSURA / 2 - 0.3, -5.2, F3]) cube([0.31, 10.4, PONTE - PIANO - F3]);
+        translate([v > 0 ? FESSURA / 2 + 0.29 : -FESSURA / 2 - 0.29 - 6, -5.2, F3 + 0.8]) cube([6, 10.4, PONTE - PIANO - F3 - 0.8]);
+    }
+    // viti della targhetta: il dado entra di lato in un canale a T, sotto 2 mm di tetto
+    for (p = T_VITI) translate([N3[0] + p[0], N3[1] + p[1], 0]) {
+        v = p[0] > 0 ? 1 : -1;
+        translate([0, 0, F3 + 0.2]) cylinder(d = FORO, h = 20, $fn = 32);
+        translate([v > 0 ? -DADO / 2 - 0.2 : -8, -DADO / 2, N_ALTO - 2 - DADO_H]) cube([8 + DADO / 2 + 0.2, DADO, DADO_H]);
+        translate([v > 0 ? -DADO / 2 - 0.2 : -8, -FORO / 2, N_ALTO - 2 - 0.01]) cube([8 + DADO / 2 + 0.2, FORO, 3]);
+    }
+}
+module costole3(gioco = 0) {
+    for (y = COST_2) translate([J2, y, F3 - 0.01]) cylinder(r = 1.5 + gioco, h = H3 - F3 + (gioco > 0 ? 1 : 0), $fn = 24);
+}
+module sinistra3() {
+    difference() {
+        intersection() { vasca3(); translate([-50, -200, -1]) cube([J1 + 50, 400, 100]); }
+        scavi3();
+        viti_teste(J1, V3_1, V3_Z);
+    }
+}
+module centro3() {
+    difference() {
+        union() {
+            intersection() { vasca3(); translate([J1, -200, -1]) cube([J2 - J1, 400, 100]); }
+        }
+        scavi3();
+        viti_dadi(J1, V3_1, V3_Z, H3 + 6);
+        viti_teste(J2, V3_2, V3_Z);
+        costole3(0.2);
+    }
+}
+module destra3() {
+    difference() {
+        union() {
+            intersection() { vasca3(); translate([J2, -200, -1]) cube([W3, 400, 100]); }
+            intersection() { costole3(); translate([J2 - 5, -200, 0]) cube([5, 400, 100]); }
+        }
+        scavi3();
+        viti_dadi(J2, V3_2, V3_Z, H3 + 6);
+    }
+}
+module montato3() {
+    translate([-N3[0], -N3[1], -N_ALTO]) {
+        sinistra3(); centro3(); destra3();
+        translate([POS3_X, CLIP3_Y[0] + C_LARGA / 2, PONTE]) rotate([90, 0, 0]) clip();
+    }
+}
+
 /* ---------- Uscite ---------- */
 
 module per_la_stampa() { mirror([0, 1, 0]) children(); }
@@ -314,6 +456,10 @@ if (parte == "centro" || parte == "centro180") per_la_stampa() pezzo_centro();
 if (parte == "destra") per_la_stampa() pezzo_destra();
 if (parte == "clip") clip();
 if (parte == "montato") montato();
+if (parte == "sinistra3") sinistra3();
+if (parte == "centro3") centro3();
+if (parte == "destra3") destra3();
+if (parte == "montato3") montato3();
 // Le due viti della targhetta stanno ai lati delle righe piccole: qui si controlla che resti così (cerchi da 10 mm)
 if (parte == "controllo_viti")
     linear_extrude(1) intersection() { testi2d(); union() for (v = T_VITI) translate(v) circle(d = 10); }

@@ -69,9 +69,9 @@ STOP = -37.5;                                  // dove si ferma il bordo alto de
 BASSO = STOP - FH - 3;                         // bordo in basso
 GIUNTO = (ALTO + BASSO) / 2;                   // le due metà sono uguali in altezza
 PELLE = 2.4;                                   // spessore della faccia su cui si scrive (12 strati)
-SPESSA = 11.2;                                 // spessore in tutto, con le nervature
-FASCIA = 7.6;                                  // spessore delle due fasce accanto alla giunzione
-P_S = 3.6; P_L = LARGA - 12; P_H = 40;         // piastra di giunzione: spessore, larghezza, altezza
+SPESSA = 12.4;                                 // spessore in tutto, con le nervature
+FASCIA = 7.8;                                  // spessore delle due fasce accanto alla giunzione
+P_S = 4.6; P_L = LARGA - 12; P_H = 40;         // piastra di giunzione: spessore, larghezza, altezza
 P_VX = LARGA / 2 - 40; P_VY = 10;              // viti della piastra: due per metà
 RA = 6;
 T_VX = 56;                                     // viti della targhetta
@@ -141,10 +141,16 @@ module corpo() {
 module scavi() {
     // posto per la piastra, sopra le fasce
     translate([-P_L / 2 - 0.3, GIUNTO - P_H / 2 - 0.3, FASCIA]) cube([P_L + 0.6, P_H + 0.6, SPESSA]);
-    // viti della piastra: foro cieco (resta 1 mm di faccia) e sede esagonale del dado, aperta verso il retro
-    for (vx = [-1, 1], vy = [-1, 1]) translate([vx * P_VX, GIUNTO + vy * P_VY, 0]) {
-        translate([0, 0, 1.0]) cylinder(d = FORO, h = SPESSA, $fn = 32);
-        translate([0, 0, FASCIA - DADO_H]) cylinder(d = DADO / cos(30), h = DADO_H + 1, $fn = 6);
+    // Viti della piastra. Il dado non sta in una sede aperta verso la piastra (stringendo tirerebbe solo la piastra):
+    // scorre in un canale a T che parte dalla giunzione, sotto 2,4 mm di fascia. Così la vite stringe la piastra
+    // contro la fascia. Si infila prima di accostare le due metà. Sopra il dado il canale è largo quanto la vite:
+    // i due bordi sporgono 1,35 mm e si stampano senza supporti. La vite M4 × 10 entra per 12,2 mm al massimo
+    // (testa affondata di 0,2 mm): la punta si ferma a 2,2 mm dalla faccia; il foro arriva a 1 mm dalla faccia, per
+    // le teste più piccole del massimo, che affondano di più.
+    for (vx = [-1, 1]) translate([vx * P_VX, GIUNTO, 0]) {
+        for (vy = [-1, 1]) translate([0, vy * P_VY, 1.0]) cylinder(d = FORO, h = SPESSA, $fn = 32);
+        translate([-DADO / 2, -P_VY - DADO / 2, FASCIA - 2.4 - DADO_H]) cube([DADO, 2 * P_VY + DADO, DADO_H]);
+        translate([-FORO / 2, -P_VY - DADO / 2, FASCIA - 2.4 - 0.01]) cube([FORO, 2 * P_VY + DADO, 2.42]);
     }
     for (v = [-1, 1]) {
         // targhetta: la vite scende dal davanti, il dado sta in una sede aperta sul retro
@@ -183,9 +189,9 @@ module piastra() {
 /* ---------- Molla fermafogli con porta penna ---------- */
 
 // Profilo (u verso il basso del foglio, w sopra la faccia): una base avvitata alla tavoletta, dietro la base un
-// incavo a C per la penna (per fusti da 8 a 9,5 mm: entra a scatto dall'alto) e davanti una lamina che preme sui
+// incavo a C per la penna (per fusti da 8,5 a 9,5 mm: l'apertura è di 8,4 mm, l'interno di 10,2 mm; entra a scatto) e davanti una lamina che preme sui
 // fogli. La lamina è spessa 2,4 mm e da libera scende 1 mm sotto la faccia: montata, preme già. Sotto la lamina
-// passano fino a 30 fogli (3 mm). Si stampa coricata su un fianco: gli strati corrono lungo la lamina.
+// passano circa 20 fogli (2 mm). Si stampa coricata su un fianco: gli strati corrono lungo la lamina.
 M_L = 70;                                      // larghezza della molla
 M_BASE = 5.4;
 LAM = [[11, 4.2], [16.5, 8.6], [38, 0.2], [46, 6.0]];
@@ -193,11 +199,13 @@ module molla2d() {
     difference() {
         union() {
             translate([-16, 0]) square([28, M_BASE]);
-            translate([-8, 11]) circle(r = 7, $fn = 64);
+            translate([-8, 11]) circle(r = 6.4, $fn = 64);
         }
-        translate([-8, 11]) circle(r = 4.8, $fn = 64);
-        translate([-8 - 3.7, 11]) square([7.4, 10]);
+        translate([-8, 11]) circle(r = 5.1, $fn = 64);
+        translate([-8 - 4.2, 11]) square([8.4, 10]);
     }
+    // radice della lamina: si assottiglia dalla base, senza spigoli dove flette
+    hull() { translate([9, 2.7]) circle(d = 5.4, $fn = 32); translate(LAM[1]) circle(d = 2.4, $fn = 24); }
     for (i = [0 : len(LAM) - 2]) hull() { translate(LAM[i]) circle(d = 2.4, $fn = 24); translate(LAM[i + 1]) circle(d = 2.4, $fn = 24); }
 }
 module molla() {
