@@ -2193,3 +2193,4 @@ portablocco
 fermafogli
 disgaggio
 kilojoule
+apribottiglia

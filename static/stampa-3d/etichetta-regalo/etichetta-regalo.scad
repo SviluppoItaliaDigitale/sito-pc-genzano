@@ -10,7 +10,10 @@
 // tavolo = da scrivania (targa + piede); parete = con fori per le viti
 // Natale (25/11/2026): addobbo = disco da appendere all'albero; stella = stella da appendere; pacco = etichetta per
 // i regali; segnaposto = targa piccola con il suo piede, per la tavola
-tipo = "pacco"; // [petto, portachiavi, zaino, tavolo, parete, addobbo, stella, pacco, segnaposto]
+// Feste dell'anno (25/11/2026), tutte da appendere, con la stessa disposizione delle scritte dell'addobbo:
+// uovo = Pasqua; fiore = Infiorata e primavera; coccarda = 2 giugno e feste nazionali; cuore = «Grazie»
+// carrello (25/11/2026) = portachiavi con una linguetta a forma di moneta da 1 euro, per sbloccare il carrello della spesa
+tipo = "pacco"; // [petto, portachiavi, zaino, tavolo, parete, addobbo, stella, pacco, segnaposto, uovo, fiore, coccarda, cuore, carrello]
 // tutto = pezzo unico; base e testo = pezzi separati per stampa a due colori; piede = supporto della versione da tavolo
 parte = "tutto"; // [tutto, base, testo, piede]
 
@@ -52,24 +55,33 @@ $fn = 48;
 MISURE = [
     ["petto",       [80, 30, 3, 2.4, 8.5,  6.0, 4.5,  -2.3,  -8.0, 6]],
     ["portachiavi", [64, 26, 4, 4.0, 6.5,  5.7, 4.5,  -1.2,  -6.7, 3]],
+    ["carrello",    [64, 26, 4, 4.0, 6.5,  5.7, 4.5,  -1.2,  -6.7, 3]],
     ["zaino",       [80, 42, 4, 4.0, 8.5,  2.0, 4.5,  -6.3, -12.0, 6]],
     ["tavolo",      [150, 45, 4, 4.0, 20,  5.5, 6.0, -13.5,     0, 0]],
     ["parete",      [150, 45, 4, 4.0, 20,  5.5, 6.0, -13.5,     0, 0]],
     ["addobbo",     [76, 76, 4, 2.4, 8.0,  4.0, 4.5,  -7.5, -13.5, 7]],
     ["stella",      [112, 112, 3, 2.4, 8.0, 1.0, 4.5, -8.5, -14.5, 8]],
     ["pacco",       [86, 40, 3, 2.4, 8.0,  5.0, 4.5,  -5.0, -11.5, 9.5]],
-    ["segnaposto",  [100, 46, 4, 3.0, 9.0, 13.0, 4.5, -4.0, -10.5, 7]]
+    ["segnaposto",  [100, 46, 4, 3.0, 9.0, 13.0, 4.5, -4.0, -10.5, 7]],
+    // feste: la lunghezza è quella della zona delle scritte (un disco di 76 mm), non l'ingombro del pezzo
+    ["uovo",        [76, 76, 4, 2.4, 8.0,  4.0, 4.5,  -7.5, -13.5, 7]],
+    ["fiore",       [76, 76, 4, 2.4, 8.0,  4.0, 4.5,  -7.5, -13.5, 7]],
+    ["coccarda",    [76, 76, 4, 2.4, 8.0,  4.0, 4.5,  -7.5, -13.5, 7]],
+    ["cuore",       [76, 76, 4, 2.4, 8.0,  7.0, 4.5,  -4.5, -10.5, 7]]
 ];
 M = MISURE[search([tipo], MISURE)[0]][1];
 L = M[0]; H = M[1]; R = M[2]; B = M[3];
 S1 = M[4]; Y1 = M[5]; S2 = M[6]; Y2 = M[7]; Y3 = M[8]; TX = M[9];
-NATALE = tipo == "addobbo" || tipo == "stella" || tipo == "pacco" || tipo == "segnaposto";
-TRE_RIGHE = tipo == "petto" || tipo == "portachiavi" || tipo == "zaino" || NATALE;
+FESTA = tipo == "uovo" || tipo == "fiore" || tipo == "coccarda" || tipo == "cuore";
+NATALE = tipo == "addobbo" || tipo == "stella" || tipo == "pacco" || tipo == "segnaposto" || FESTA;
+CHIAVI = tipo == "portachiavi" || tipo == "carrello";
+TRE_RIGHE = tipo == "petto" || CHIAVI || tipo == "zaino" || NATALE;
 // Oggetti di Natale: quota della riga in alto, distanza della bandiera dal bordo sinistro, foro per il nastro
-Y0 = tipo == "addobbo" ? 17 : tipo == "stella" ? 11 : 14.2;
-BAND_DA = tipo == "addobbo" ? 5 : tipo == "stella" ? 25 : tipo == "pacco" ? 12 : tipo == "portachiavi" ? 3 : 3.5;
+Y0 = tipo == "cuore" ? 20 : tipo == "addobbo" || FESTA ? 17 : tipo == "stella" ? 11 : 14.2;
+BAND_DA = tipo == "addobbo" || FESTA ? 5 : tipo == "stella" ? 25 : tipo == "pacco" ? 12 : CHIAVI ? 3 : 3.5;
 NASTRO_D = 4.5;
-NASTRO = tipo == "addobbo" ? [0, L / 2 + 2] : tipo == "stella" ? [0, 45] : [-L / 2 + 6.5, 0];
+NASTRO = tipo == "addobbo" || tipo == "coccarda" ? [0, L / 2 + 2] : tipo == "stella" ? [0, 45] : tipo == "uovo" ? [0, 43]
+       : tipo == "fiore" ? [0, 42] : tipo == "cuore" ? [0, 28.5] : [-L / 2 + 6.5, 0];
 // stella a cinque punte: raggio delle punte e delle rientranze; rientranze larghe, per farci stare le scritte
 ST_R = 56 - R; ST_r = 34 - R;
 
@@ -84,6 +96,21 @@ module forma() {
         circle(d = L, $fn = 120);
         hull() { translate(NASTRO) circle(d = 14); translate([0, L / 2 - 8]) circle(d = 14); }
     }
+    else if (tipo == "uovo")          // uovo: un cerchio largo in basso e uno stretto in alto
+        hull() { translate([0, -4]) circle(r = 39, $fn = 120); translate([0, 19]) circle(r = 31, $fn = 120); }
+    else if (tipo == "fiore") {       // fiore: dieci petali tondi intorno al disco delle scritte
+        circle(d = L, $fn = 120);
+        for (i = [0:9]) rotate(90 + i * 36) translate([36, 0]) circle(r = 13, $fn = 60);
+    }
+    else if (tipo == "coccarda") {    // coccarda: bordo pieghettato, due nastri in basso, occhiello in alto
+        polygon([for (i = [0:63]) let (a = i * 360 / 64, q = i % 2 == 0 ? 42 : 39.5) [q * cos(a), q * sin(a)]]);
+        hull() { translate(NASTRO) circle(d = 14); translate([0, L / 2 - 8]) circle(d = 14); }
+        for (v = [-1, 1]) scale([v, 1]) offset(r = 0.8) offset(delta = -0.8) polygon([[4, -30], [21, -30], [26, -64], [18, -59], [11, -66]]);   // punte arrotondate
+    }
+    else if (tipo == "cuore") {       // cuore: due lobi che scendono a una punta arrotondata; foro sotto l'incavo
+        for (v = [-1, 1]) hull() { translate([v * 19, 18]) circle(r = 26, $fn = 120); translate([0, -50]) circle(r = 3); }
+        // l'incavo fra i due lobi: senza, l'inviluppo lo chiuderebbe e il cuore non si riconoscerebbe
+    }
     else if (tipo == "stella")
         offset(r = R) polygon([for (i = [0:9]) let (a = 90 + i * 36, q = i % 2 == 0 ? ST_R : ST_r) [q * cos(a), q * sin(a)]]);
     else if (tipo == "pacco")
@@ -91,7 +118,7 @@ module forma() {
                                [-L / 2 + R + 9, H / 2 - R], [-L / 2 + R, H / 2 - R - 9], [-L / 2 + R, -H / 2 + R + 9]]);
     else
     offset(r = R) square([L - 2 * R, H - 2 * R], center = true);
-    if (tipo == "portachiavi")
+    if (CHIAVI)
         hull() {
             translate([OCCHIELLO_X, 0]) circle(d = OCCHIELLO_D);
             translate([-L / 2 + R, 0]) square([2 * R, OCCHIELLO_D], center = true);
@@ -99,9 +126,9 @@ module forma() {
 }
 
 module fori() {
-    if (tipo == "portachiavi") translate([OCCHIELLO_X, 0]) circle(d = FORO_D);
+    if (CHIAVI) translate([OCCHIELLO_X, 0]) circle(d = FORO_D);
     if (tipo == "zaino") translate([0, FESSURA_Y]) offset(r = 1.5) square(FESSURA - [3, 3], center = true);
-    if (tipo == "addobbo" || tipo == "stella" || tipo == "pacco") translate(NASTRO) circle(d = NASTRO_D);
+    if (tipo == "addobbo" || tipo == "stella" || tipo == "pacco" || FESTA) translate(NASTRO) circle(d = NASTRO_D);
 }
 
 module sagoma(inset = 0) {
@@ -134,7 +161,7 @@ module testi2d() {
     if (NATALE && riga0 != "") {
         translate([0, Y0]) text(riga0, size = S2, font = font2, halign = "center", valign = "center");
         // due stelline ai lati della riga in alto (addobbo e stella)
-        if (tipo == "addobbo" || tipo == "stella") for (v = [-1, 1]) translate([v * 24, Y0])
+        if (tipo == "addobbo" || tipo == "stella" || FESTA) for (v = [-1, 1]) translate([v * (len(riga0) > 10 ? 27 : len(riga0) < 7 ? 17 : 21), Y0])
             polygon([for (i = [0:9]) let (a = 90 + i * 36, q = i % 2 == 0 ? 3.2 : 1.5) [q * cos(a), q * sin(a)]]);
     }
 }
@@ -154,7 +181,20 @@ module rilievo2d() {
     if (cornice > 0) difference() { sagoma(SMUSSO); sagoma(SMUSSO + cornice); }
 }
 
+// Chiave per il carrello: una linguetta con la punta tonda come una moneta da 1 euro (23,25 mm di diametro,
+// spessa 2,33 mm: Banca centrale europea, «Facce comuni», ecb.europa.eu, letta il 25/11/2026). È spessa 2,2 mm,
+// un decimo meno della moneta, perché una stampa può uscire più spessa del disegno; esce di 28 mm dal manico,
+// più del diametro della moneta, così la punta arriva dove arriverebbe la moneta.
+EURO_D = 23.25; LINGUA_S = 2.2; LINGUA_L = 28;
+module lingua() {
+    linear_extrude(LINGUA_S) hull() {
+        translate([L / 2 - 4, -EURO_D / 2]) square([4, EURO_D]);
+        translate([L / 2 + LINGUA_L - EURO_D / 2, 0]) circle(d = EURO_D, $fn = 120);
+    }
+}
+
 module base() {
+    if (tipo == "carrello") lingua();
     difference() {
         corpo();
         if (tipo == "petto" && fissaggio == "spilla")
