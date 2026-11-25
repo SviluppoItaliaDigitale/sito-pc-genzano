@@ -55,7 +55,8 @@ FW = M[9]; FH = M[10];
 // ISO 10642 riportata da engineersedge.com). Dado: 7 mm fra le facce piane, alto fino a 3,2 mm (ISO 4032:1979,
 // estratto su standards.iteh.ai; scheda Fabory dell'articolo 01103040001). Foro di passaggio di 4,5 mm: serie media
 // della ISO 273:1979, ripresa dalla norma indiana IS 1821:1987 (law.resource.org). Fonti consultate il 25/11/2026.
-FORO = 4.5; SVASO_D = 9.4; SVASO_H = 2.45; DADO = 7.2; DADO_H = 3.4;
+// Le sedi dei dadi sono larghe 7,5 mm: un foro stampato esce un po' più stretto del disegno.
+FORO = 4.5; SVASO_D = 9.4; SVASO_H = 2.45; DADO = 7.5; DADO_H = 3.4;
 
 /* ---------- Tavoletta: misure ---------- */
 
@@ -146,8 +147,8 @@ module scavi() {
     // le teste più piccole del massimo, che affondano di più.
     for (vx = [-1, 1]) translate([vx * P_VX, GIUNTO, 0]) {
         for (vy = [-1, 1]) translate([0, vy * P_VY, 1.0]) cylinder(d = FORO, h = SPESSA, $fn = 32);
-        translate([-DADO / 2, -P_VY - DADO / 2, FASCIA - 2.4 - DADO_H]) cube([DADO, 2 * P_VY + DADO, DADO_H]);
-        translate([-FORO / 2, -P_VY - DADO / 2, FASCIA - 2.4 - 0.01]) cube([FORO, 2 * P_VY + DADO, 2.42]);
+        translate([-DADO / 2, -P_VY - DADO / 2 - 0.8, FASCIA - 2.4 - DADO_H]) cube([DADO, 2 * P_VY + DADO + 1.6, DADO_H]);
+        translate([-FORO / 2, -P_VY - DADO / 2 - 0.8, FASCIA - 2.4 - 0.01]) cube([FORO, 2 * P_VY + DADO + 1.6, 2.42]);
     }
     for (v = [-1, 1]) {
         // targhetta: la vite scende dal davanti, il dado sta in una sede aperta sul retro

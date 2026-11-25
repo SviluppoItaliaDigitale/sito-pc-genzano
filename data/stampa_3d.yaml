@@ -911,7 +911,7 @@ oggetti:
       parte: "sinistra"
       file: "vassoio-pezzo-sinistro.stl"
       nome: "il pezzo sinistro, con metà del foro del piatto"
-      peso_g: 162
+      peso_g: 163
     altri_pezzi:
       - { parte: "centro", file: "vassoio-pezzo-centrale.stl", nome: "il pezzo centrale, con la corsia delle posate", peso_g: 226 }
       - { parte: "destra", file: "vassoio-pezzo-destro.stl", nome: "il pezzo destro, con il foro del bicchiere e il pozzetto della bottiglietta", peso_g: 272 }
@@ -920,15 +920,15 @@ oggetti:
       - { parte: "centro180", file: "vassoio-pezzo-centrale-foro-180.stl", nome: "il pezzo centrale con il foro da 180 mm", peso_g: 241, variante: "Seconda versione, con il foro del piatto da 180 mm: scarica questi due file al posto del pezzo sinistro e del pezzo centrale." }
     misure: "45,6 × 24 cm montato, alto 4,8 cm"
     lunghezza_mm: 76
-    peso_g: 681
+    peso_g: 682
     scheda:
       - ["Ingombro", "montato 456 × 240 mm, con il piano a 48 mm dal tavolo; pezzo sinistro 148 × 240 mm, pezzo centrale 182 × 240 mm, pezzo destro 130 × 240 mm, tutti alti 48 mm; targhetta 76 × 50 mm, spessa 3,6 mm (4,6 mm con le scritte)"]
-      - ["Peso", "circa 681 g in tutto: 162 g il pezzo sinistro, 226 g il centrale, 272 g il destro, 17 g la targhetta, 4 g la clip; con il foro da 180 mm il pezzo sinistro pesa 175 g e il centrale 241 g"]
+      - ["Peso", "circa 682 g in tutto: 163 g il pezzo sinistro, 226 g il centrale, 272 g il destro, 17 g la targhetta, 4 g la clip; con il foro da 180 mm il pezzo sinistro pesa 175 g e il centrale 241 g"]
       - ["Foro del piatto", "200 mm, con il bordo smussato. Tiene un piatto piano usa e getta «da 22 cm» (225 mm in alto, 165 mm alla base) e un piatto fondo «da 22 cm» (220 mm in alto, 145 mm alla base): la base scende nel foro e il bordo si appoggia. Va bene per piatti rigidi con il bordo da 215 a 228 mm: sotto i 205 mm il piatto passa attraverso il foro, fra 205 e 215 mm appoggia su pochi millimetri, oltre i 228 mm tocca la clip. Per piatti sottili, molli o molto pieni usa la seconda versione, con il foro da 180 mm. Misura il tuo piatto prima di stampare"]
       - ["Seconda versione: foro da 180 mm", "il pezzo sinistro e il pezzo centrale esistono anche con il foro del piatto da 180 mm. Il piatto appoggia più in basso, sulla parete, e sotto il bordo restano 22 mm di vassoio per parte con il piatto piano e 20 mm con il fondo (con il foro da 200 mm sono 12 e 10 mm): il peso non può farlo passare. La base dei due piatti (165 e 145 mm) entra lo stesso. Si scaricano al posto dei due pezzi con il foro da 200 mm; il resto è uguale"]
       - ["Foro del bicchiere", "56 mm. Un bicchiere usa e getta da 200 ml (46 mm alla base, 70 mm alla bocca, alto 97 mm) scende di circa 4 cm e si ferma, a 6 mm dal tavolo. Va bene per bicchieri con la base fra 45 e 56 mm: con la base più stretta il bicchiere scende fino a toccare il tavolo, con la base più larga non entra e si appoggia sul piano"]
-      - ["Bottiglietta d'acqua", "un pozzetto largo 70 mm e profondo 44 mm, fra il bicchiere e la targhetta. Una bottiglietta tonda da mezzo litro (68 mm di diametro, alta 17 cm) scende di circa 35 mm e si ferma su un cono, a qualche millimetro dal tavolo. Va bene per bottiglie larghe da 56 a 69 mm: una più larga non entra, una più stretta di 55 mm passerebbe dal fondo, che è aperto"]
-      - ["Scritte dei posti", "«Piatto», «Posate», «Bicchiere» e «Bottiglia», alte 5 mm e incise di 0,4 mm sul piano, accanto a ogni posto: si vedono appena. Abbiamo scelto le parole e non i disegni perché per piatto e bicchiere non c'è un simbolo che tutti leggono allo stesso modo, e a questa misura un disegno inciso si confonde"]
+      - ["Bottiglietta d'acqua", "un pozzetto largo 70 mm e profondo 44 mm, fra il bicchiere e la targhetta. Una bottiglietta tonda da mezzo litro (68 mm di diametro, alta 17 cm) scende di circa 35 mm e si ferma su un cono, a qualche millimetro dal tavolo. Va bene per bottiglie larghe da 56 a 69 mm: una più larga non entra, una più stretta di 55 mm passerebbe dal fondo, che è aperto. Il pozzetto tiene solo la parte bassa della bottiglia: non la regge se inclini il vassoio"]
+      - ["Scritte dei posti", "«Piatto», «Posate», «Bicchiere» e «Bottiglia», alte 5 mm e incise di 0,4 mm sul piano, accanto a ogni posto: si vedono appena, e vengono meglio su un piatto di stampa liscio. Abbiamo scelto le parole e non i disegni perché per piatto e bicchiere non c'è un simbolo che tutti leggono allo stesso modo, e a questa misura un disegno inciso si confonde"]
       - ["Terza versione", "nel catalogo c'è anche il «Vassoio con le sedi sagomate»: le stoviglie appoggiano sul fondo, dentro sedi con la loro forma, e il vassoio non ha piedini"]
       - ["Posate", "corsia libera larga 5 cm e lunga quanto il vassoio; una clip a molla le tiene appoggiate al piano: sotto il ponte restano 6 mm e la molla, da libera, scende a circa 1 mm. Le posate si infilano sempre nel loro tovagliolo o nella loro bustina, mai libere: la parte che va in bocca non deve toccare la plastica stampata"]
       - ["Piedini", "dodici, alti 45 mm: quattro per pezzo. Servono perché piatto e bicchiere scendono sotto il piano"]
@@ -937,7 +937,7 @@ oggetti:
       - ["Altezza delle lettere", "nominativo 8 mm; righe piccole 4 mm"]
       - ["Spazio per nome e cognome", "fascia libera di 62 × 7 mm sotto il nominativo, sulla targhetta"]
       - ["Scritte di un altro colore", "la targhetta si stampa da sola, con le scritte in alto. Per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di colore al primo strato delle scritte, cioè dopo lo strato 18 con strati da 0,2 mm (altezza 3,8 mm); oppure stampa la targhetta con un filo di un altro colore rispetto al vassoio"]
-      - ["Posizione di stampa", "cinque file, già orientati, senza supporti: i tre pezzi del vassoio sono capovolti, con il piano sul piatto di stampa, la clip è coricata su un fianco; serve un piatto di stampa di almeno 25 × 20 cm (non entra nelle stampanti da 22 × 22 cm)"]
+      - ["Posizione di stampa", "cinque file, già orientati, senza supporti: i tre pezzi del vassoio sono capovolti, con il piano sul piatto di stampa, la clip è coricata su un fianco; serve un piatto di stampa di almeno 25 × 20 cm (non entra nelle stampanti da 22 × 22 cm). I pezzi sono lunghi 24 cm: se serve, ruotali nel programma di stampa lungo il lato lungo del piatto, senza capovolgerli"]
       - ["Precisione", "la clip, le sedi dei dadi e le costole di allineamento sono disegnate per una stampante da tavolo ben regolata. Se ordini la stampa a un servizio, che può scostarsi di mezzo millimetro, la clip può non agganciare: in quel caso si lima il dente o si allarga la fessura"]
       - ["Da sapere", "il vassoio porta le stoviglie, non è un oggetto per alimenti: fra gli strati della plastica stampata restano solchi che non si puliscono a fondo. Pane, frutta e cibo stanno sempre nel piatto, mai appoggiati sul vassoio. Si lava a mano con acqua tiepida subito dopo l'uso: il PETG comincia a deformarsi a 68 gradi, quindi niente lavastoviglie e niente piatti o bevande bollenti. È pensato per circa 1,5 kg fra stoviglie e contenuto: è una stima di calcolo, non una prova di carico. Portalo con due mani"]
     materiale: "PETG"
@@ -949,7 +949,7 @@ oggetti:
       - "Stampa i cinque file: la targhetta con il tuo nominativo, i tre pezzi del vassoio e la clip."
       - "Appoggia i tre pezzi capovolti su un tavolo, con i piedini in alto, e accostali: le costole del pezzo centrale e del pezzo destro entrano nelle scanalature del pezzo accanto."
       - "Lascia cadere un dado in ognuna delle cinque asole delle pareti più spesse."
-      - "Dall'altra parte infila le cinque viti e stringile a mano fino a fermarti, senza forzare: le teste devono restare sotto la superficie. Dopo qualche giorno ricontrolla che siano ancora strette."
+      - "Dall'altra parte infila le cinque viti e stringile a mano fino a fermarti, senza forzare, con la chiave corta e circa mezzo giro dopo che la testa tocca: le teste devono restare sotto la superficie. Dopo qualche giorno ricontrolla che siano ancora strette."
       - "Gira il vassoio. Appoggia la targhetta sul pezzo destro, sopra i due fori, tieni un dado nella sede esagonale sotto il piano e stringi le due viti dall'alto."
       - "Spingi le due gambe della clip in una coppia di fessure della corsia delle posate, finché i denti scattano sotto il piano. Le coppie di fessure sono due: scegli quella più comoda per le tue posate."
       - "Infila il piatto, il bicchiere e la bottiglietta nei loro posti e fai scorrere le posate sotto la clip, dal manico."
@@ -983,29 +983,29 @@ oggetti:
       nome: "il pezzo sinistro, con metà della conca del piatto"
       peso_g: 141
     altri_pezzi:
-      - { parte: "centro3", file: "vassoio-sagomato-pezzo-centrale.stl", nome: "il pezzo centrale, con i ponticelli delle posate", peso_g: 218 }
+      - { parte: "centro3", file: "vassoio-sagomato-pezzo-centrale.stl", nome: "il pezzo centrale, con i ponticelli delle posate", peso_g: 217 }
       - { parte: "destra3", file: "vassoio-sagomato-pezzo-destro.stl", nome: "il pezzo destro, con le sedi di bicchiere e bottiglietta", peso_g: 212 }
       - { parte: "clip", file: "vassoio-sagomato-clip-posate.stl", nome: "la clip per le posate", peso_g: 4 }
     misure: "45,4 × 24 cm montato, alto 4,7 cm"
     lunghezza_mm: 76
-    peso_g: 592
+    peso_g: 591
     scheda:
       - ["Ingombro", "montato 454 × 240 mm; bordi alti 18 mm, sedi di bicchiere e bottiglietta alte 47 mm dal tavolo; pezzo sinistro 132 × 240 mm, pezzo centrale 181 × 240 mm, pezzo destro 143 × 240 mm; targhetta 76 × 50 mm, spessa 3,6 mm (4,6 mm con le scritte)"]
-      - ["Peso", "circa 592 g in tutto: 141 g il pezzo sinistro, 218 g il centrale, 212 g il destro, 17 g la targhetta, 4 g la clip"]
-      - ["Sede del piatto", "una conca larga 168 mm sul fondo, chiusa da un anello alto 8 mm che si allarga verso l'alto più della parete del piatto: il piatto tocca il fondo e non può scivolare. Tiene un piatto piano usa e getta «da 22 cm» (225 mm in alto, 165 mm alla base) e un piatto fondo «da 22 cm» (220 mm in alto, 145 mm alla base), che dentro la conca si sposta di un centimetro per parte. Va bene per piatti con la base fino a 166 mm e il bordo fino a 230 mm. Misura il tuo piatto prima di stampare"]
+      - ["Peso", "circa 591 g in tutto: 141 g il pezzo sinistro, 217 g il centrale, 212 g il destro, 17 g la targhetta, 4 g la clip"]
+      - ["Sede del piatto", "una conca larga 168 mm sul fondo, chiusa da un anello alto 8 mm che si allarga verso l'alto più della parete del piatto: il piatto tocca il fondo e non può scivolare. Tiene un piatto piano usa e getta «da 22 cm» (225 mm in alto, 165 mm alla base) e un piatto fondo «da 22 cm» (220 mm in alto, 145 mm alla base), che dentro la conca si sposta di un centimetro per parte. Va bene per piatti con la base fino a 166 mm e il bordo fino a 230 mm. Alla prima giunzione le pareti passano sotto il bordo del piatto e sono tagliate per lasciargli 2,5 mm: il conto è fatto su un piatto con la parete diritta fra base e bordo, perché il profilo vero non è nelle schede. Misura il tuo piatto prima di stampare e provalo sul vassoio montato"]
       - ["Sede del bicchiere", "un bicchierino alto 45 mm, largo 49 mm in basso e 61 mm in alto. Un bicchiere usa e getta da 200 ml (46 mm alla base, 70 mm alla bocca, alto 97 mm) appoggia sul fondo ed esce per metà, così si prende bene. Un bicchiere con la base più larga di 49 mm si ferma più in alto e resta tenuto per meno"]
-      - ["Sede della bottiglietta", "un anello largo 70 mm e alto 45 mm, per una bottiglietta tonda da mezzo litro (68 mm di diametro, alta 17 cm). Va bene per bottiglie larghe fino a 69 mm; una più stretta ci sta, ma balla"]
+      - ["Sede della bottiglietta", "un anello largo 70 mm e alto 45 mm, per una bottiglietta tonda da mezzo litro (68 mm di diametro, alta 17 cm). Va bene per bottiglie larghe fino a 69 mm; una più stretta ci sta, ma balla. L'anello tiene solo la parte bassa della bottiglia: non la regge se inclini il vassoio"]
       - ["Posate", "appoggiano su due ponticelli alti 9 mm, a 8 cm l'uno dall'altro, così i manici restano sollevati e si prendono bene. La clip a molla si aggancia a uno dei due ponticelli: sotto il ponte restano 6 mm e la molla, da libera, scende a circa 1 mm. Le posate si infilano sempre nel loro tovagliolo o nella loro bustina, mai libere: la parte che va in bocca non deve toccare la plastica stampata"]
       - ["Scritte dei posti", "«Piatto» e «Posate» sul fondo, davanti al loro posto; «Bicchiere» e «Bottiglia» sul fondo della loro sede, perché fra due sedi alte non si vedrebbero. Sono alte 5 mm e incise di 0,4 mm: si vedono appena. Abbiamo scelto le parole e non i disegni perché per piatto e bicchiere non c'è un simbolo che tutti leggono allo stesso modo, e a questa misura un disegno inciso si confonde"]
-      - ["Manici", "i due lati corti salgono inclinati verso l'esterno per 17 mm: le dita passano sotto il bordo anche con il vassoio appoggiato sul tavolo"]
+      - ["Manici", "i due lati corti salgono inclinati verso l'esterno per 17 mm: sotto il bordo entra la punta delle dita, quanto basta per sollevare il vassoio dal tavolo e poi prenderlo meglio"]
       - ["Giunzioni", "due: i pezzi si accostano lungo pareti alte 16 mm e si stringono con cinque viti M4 × 10 a testa svasata e cinque dadi M4, che si lasciano cadere dall'alto in un'asola. La prima giunzione passa per il centro del piatto: lì le pareti stanno fuori dall'anello, due tratti da 2 cm con una vite ciascuno. Altre due viti con due dadi fissano la targhetta: i dadi entrano di lato nei due appoggi"]
       - ["Altezza delle lettere", "nominativo 8 mm; righe piccole 4 mm"]
       - ["Spazio per nome e cognome", "fascia libera di 62 × 7 mm sotto il nominativo, sulla targhetta"]
       - ["Scritte di un altro colore", "la targhetta si stampa da sola, con le scritte in alto. Per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di colore al primo strato delle scritte, cioè dopo lo strato 18 con strati da 0,2 mm (altezza 3,8 mm); oppure stampa la targhetta con un filo di un altro colore rispetto al vassoio"]
-      - ["Posizione di stampa", "cinque file, già orientati, senza supporti: i tre pezzi del vassoio sono diritti, con il fondo sul piatto di stampa, la clip è coricata su un fianco; serve un piatto di stampa di almeno 25 × 20 cm (non entra nelle stampanti da 22 × 22 cm)"]
+      - ["Posizione di stampa", "cinque file, già orientati, senza supporti: i tre pezzi del vassoio sono diritti, con il fondo sul piatto di stampa, la clip è coricata su un fianco; serve un piatto di stampa di almeno 25 × 20 cm (non entra nelle stampanti da 22 × 22 cm). I pezzi sono lunghi 24 cm: se serve, ruotali nel programma di stampa lungo il lato lungo del piatto, senza capovolgerli. Con pezzi così larghi e sottili conviene un bordo di adesione di qualche millimetro"]
       - ["Precisione", "la clip e i canali dei dadi sono disegnati per una stampante da tavolo ben regolata. Se ordini la stampa a un servizio, che può scostarsi di mezzo millimetro, la clip può non agganciare: in quel caso si lima il dente o si allarga la fessura"]
       - ["Differenze dall'altro vassoio", "nel «Vassoio porta piatto, bicchiere e posate» le stoviglie restano appese in fori più stretti del loro bordo e il vassoio sta su dodici piedini; qui appoggiano sul fondo e il vassoio è basso. Questo ha il fondo chiuso: se si rovescia un po' d'acqua resta nel vassoio"]
-      - ["Da sapere", "il vassoio porta le stoviglie, non è un oggetto per alimenti: fra gli strati della plastica stampata restano solchi che non si puliscono a fondo. Pane, frutta e cibo stanno sempre nel piatto, mai appoggiati sul vassoio. Si lava a mano con acqua tiepida subito dopo l'uso: il PETG comincia a deformarsi a 68 gradi, quindi niente lavastoviglie e niente piatti o bevande bollenti. È pensato per circa 1,5 kg fra stoviglie e contenuto: è una stima di calcolo, non una prova di carico. Portalo con due mani, una per manico"]
+      - ["Da sapere", "il vassoio porta le stoviglie, non è un oggetto per alimenti: fra gli strati della plastica stampata restano solchi che non si puliscono a fondo. Pane, frutta e cibo stanno sempre nel piatto, mai appoggiati sul vassoio. Si lava a mano con acqua tiepida subito dopo l'uso: il PETG comincia a deformarsi a 68 gradi, quindi niente lavastoviglie e niente piatti o bevande bollenti. Tienilo intorno a 1 kg fra stoviglie e contenuto: il fondo è sottile e non è stato provato sotto carico. Portalo con due mani, una per manico, e tienilo in piano: la bottiglietta è tenuta solo per i primi 4 cm"]
     materiale: "PETG"
     colore: "blu"
     occorrente:
@@ -1015,7 +1015,7 @@ oggetti:
       - "Stampa i cinque file: la targhetta con il tuo nominativo, i tre pezzi del vassoio e la clip."
       - "Appoggia i tre pezzi su un tavolo e accostali: le due costole del pezzo destro entrano nelle scanalature del pezzo centrale."
       - "Lascia cadere un dado in ognuna delle cinque asole aperte in alto, nelle pareti più spesse."
-      - "Dall'altra parte infila le cinque viti e stringile a mano fino a fermarti, senza forzare: le teste devono restare sotto la superficie. Dopo qualche giorno ricontrolla che siano ancora strette."
+      - "Dall'altra parte infila le cinque viti e stringile a mano fino a fermarti, senza forzare, con la chiave corta e circa mezzo giro dopo che la testa tocca: le teste devono restare sotto la superficie. Dopo qualche giorno ricontrolla che siano ancora strette."
       - "Spingi un dado di lato in ognuno dei due appoggi rettangolari della targhetta, fino in fondo. Appoggia la targhetta sui quattro appoggi e stringi le due viti dall'alto."
       - "Spingi le due gambe della clip nelle fessure di uno dei due ponticelli, finché i denti scattano."
       - "Metti il piatto, il bicchiere e la bottiglietta nelle loro sedi e fai scorrere le posate sotto la clip, dal manico."
@@ -1078,7 +1078,7 @@ oggetti:
     montaggio:
       - "Stampa i cinque file: la targhetta con il tuo nominativo, le due metà della tavoletta, la piastra e la molla."
       - "Appoggia le due metà sul tavolo con le nervature in alto. Sul bordo della giunzione di ogni metà ci sono due canali: spingi un dado in ognuno, fino in fondo, poi accosta le due metà."
-      - "Appoggia la piastra sulle due fasce lisce, con le svasature in alto, e stringi le quattro viti fino a fermarti, senza forzare."
+      - "Appoggia la piastra sulle due fasce lisce, con le svasature in alto, e stringi le quattro viti fino a fermarti, senza forzare: con la chiave corta, circa mezzo giro dopo che la testa tocca. Dopo qualche giorno ricontrolla che siano ancora strette."
       - "Gira la tavoletta e fai sporgere il bordo alto dal tavolo. Appoggia la molla in alto, con l'incavo della penna verso il bordo, infila due dadi nelle sedi della sua base e stringi le due viti dal retro."
       - "Appoggia la targhetta in alto, sopra la molla, tieni un dado in ognuna delle due sedi sul retro e stringi le due viti dal davanti."
       - "Infila i fogli sotto la lamina fino in fondo e premi la penna nell'incavo."
@@ -1136,7 +1136,7 @@ oggetti:
     montaggio:
       - "Stampa i cinque file: la targhetta con il tuo nominativo, le due metà della tavoletta, la piastra e la molla."
       - "Appoggia le due metà sul tavolo con le nervature in alto. Sul bordo della giunzione di ogni metà ci sono due canali: spingi un dado in ognuno, fino in fondo, poi accosta le due metà."
-      - "Appoggia la piastra sulle due fasce lisce, con le svasature in alto, e stringi le quattro viti fino a fermarti, senza forzare."
+      - "Appoggia la piastra sulle due fasce lisce, con le svasature in alto, e stringi le quattro viti fino a fermarti, senza forzare: con la chiave corta, circa mezzo giro dopo che la testa tocca. Dopo qualche giorno ricontrolla che siano ancora strette."
       - "Gira la tavoletta e fai sporgere il bordo alto dal tavolo. Appoggia la molla in alto, con l'incavo della penna verso il bordo, infila due dadi nelle sedi della sua base e stringi le due viti dal retro."
       - "Appoggia la targhetta in alto, sopra la molla, tieni un dado in ognuna delle due sedi sul retro e stringi le due viti dal davanti."
       - "Infila i fogli sotto la lamina fino in fondo e premi la penna nell'incavo."

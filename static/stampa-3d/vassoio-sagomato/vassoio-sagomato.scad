@@ -78,7 +78,8 @@ SM = 1.5;                     // smusso dei fori sul lato dove si infilano piatt
 // ISO 10642 riportata da engineersedge.com). Dado: 7 mm fra le facce piane, alto fino a 3,2 mm (ISO 4032:1979,
 // estratto su standards.iteh.ai; scheda Fabory dell'articolo 01103040001). Foro di passaggio di 4,5 mm: serie media
 // della ISO 273:1979, ripresa dalla norma indiana IS 1821:1987 (law.resource.org). Fonti consultate il 25/11/2026.
-FORO = 4.5; SVASO_D = 9.4; SVASO_H = 2.45; DADO = 7.2; DADO_H = 3.4;
+// Le sedi dei dadi sono larghe 7,5 mm: un foro stampato esce un po' più stretto del disegno.
+FORO = 4.5; SVASO_D = 9.4; SVASO_H = 2.45; DADO = 7.5; DADO_H = 3.4;
 
 /* ---------- Pianta (vista da sopra, vassoio in uso) ---------- */
 
@@ -98,7 +99,8 @@ FL_A = 4; FL_B = 8;                            // pareti di giunzione: quella co
 VITE_Z = 14.5;                                 // quota delle viti di giunzione sotto il piano
 VITI_1 = [-110, 110]; VITI_2 = [-85, 0, 85];   // viti della prima e della seconda giunzione
 // Piedini: quattro per pezzo, così ogni pezzo sta in piedi anche da solo
-PIEDI = [[22, 98], [130, 109], [168, 109], [312, 107], [340, 110], [434, 98]];
+// Davanti a ogni testa di vite restano almeno 25 mm liberi per la chiave: per questo il secondo piedino sta a x = 105
+PIEDI = [[22, 98], [105, 109], [168, 109], [312, 107], [340, 110], [434, 98]];
 
 /* ---------- Targhetta ---------- */
 
@@ -383,24 +385,31 @@ module etichette3() {
     etichetta("BICCHIERE", C3);
     etichetta("BOTTIGLIA", B3);
 }
+// Le pareti della prima giunzione stanno sotto il bordo del piatto: il loro spigolo interno è tagliato lungo una
+// linea parallela alla parete del piatto piano (base 165 mm, bordo 225 mm, alto 20 mm, presa diritta fra base e
+// bordo: è un'ipotesi, il profilo vero non è nella scheda del produttore), 2,5 mm più in basso.
+function sotto_il_piatto(y) = F3 + (y - 82.5) / 1.5 - 2.5;
 module scavi3() {
+    for (v = [0, 1]) mirror([0, v, 0]) translate([J1 - FL_A - 1, 0, 0]) rotate([90, 0, 90]) linear_extrude(FL_A + FL_B + 2)
+        polygon([[Y3A - 1, sotto_il_piatto(Y3A - 1)], [113, sotto_il_piatto(113)], [113, 30], [Y3A - 1, 30]]);
     translate([0, 0, F3 - INCISO]) linear_extrude(1) etichette3();
     translate([C3[0], C3[1], F3]) cylinder(d1 = BIC_D1, d2 = BIC_D2 + 0.02, h = BIC_H + 0.02, $fn = 120);
     translate([B3[0], B3[1], F3]) cylinder(d = BOTT, h = 50, $fn = 120);
     // Fessure della clip: un pozzetto per la gamba e, verso l'esterno, la tasca dove aggancia il dente. La tasca
     // esce dal fianco del ponticello con una finestrella alta 2,8 mm: da lì, con un cacciavite piccolo, si spinge
-    // il dente per togliere la clip. Il fondo della tasca è rialzato di 0,8 mm e segue il dente, che è smussato.
+    // il dente per togliere la clip. Il fondo della tasca è rialzato di 1,2 mm e segue il dente, che è smussato.
+    // Sopra il dente restano 0,65 mm: il tetto della tasca è un ponte di 10 mm, che in stampa può calare un po'.
     for (y = CLIP3_Y, v = [-1, 1]) translate([POS3_X + v * POS_L / 2, y, 0]) {
         translate([-FESSURA / 2, -5.2, F3]) cube([FESSURA, 10.4, PONTE]);
-        translate([v > 0 ? FESSURA / 2 - 0.01 : -FESSURA / 2 - 0.3, -5.2, F3]) cube([0.31, 10.4, PONTE - PIANO - F3]);
-        translate([v > 0 ? FESSURA / 2 + 0.29 : -FESSURA / 2 - 0.29 - 6, -5.2, F3 + 0.8]) cube([6, 10.4, PONTE - PIANO - F3 - 0.8]);
+        translate([v > 0 ? FESSURA / 2 - 0.01 : -FESSURA / 2 - 0.5, -5.2, F3]) cube([0.51, 10.4, PONTE - PIANO - F3 + 0.4]);
+        translate([v > 0 ? FESSURA / 2 + 0.49 : -FESSURA / 2 - 0.49 - 6, -5.2, F3 + 1.2]) cube([6, 10.4, PONTE - PIANO - F3 - 0.8]);
     }
     // viti della targhetta: il dado entra di lato in un canale a T, sotto 2 mm di tetto
     for (p = T_VITI) translate([N3[0] + p[0], N3[1] + p[1], 0]) {
         v = p[0] > 0 ? 1 : -1;
         translate([0, 0, F3 + 0.2]) cylinder(d = FORO, h = 20, $fn = 32);
-        translate([v > 0 ? -DADO / 2 - 0.2 : -8, -DADO / 2, N_ALTO - 2 - DADO_H]) cube([8 + DADO / 2 + 0.2, DADO, DADO_H]);
-        translate([v > 0 ? -DADO / 2 - 0.2 : -8, -FORO / 2, N_ALTO - 2 - 0.01]) cube([8 + DADO / 2 + 0.2, FORO, 3]);
+        translate([v > 0 ? -DADO / 2 - 0.8 : -8, -DADO / 2, N_ALTO - 2 - DADO_H]) cube([8 + DADO / 2 + 0.8, DADO, DADO_H]);
+        translate([v > 0 ? -DADO / 2 - 0.8 : -8, -FORO / 2, N_ALTO - 2 - 0.01]) cube([8 + DADO / 2 + 0.8, FORO, 3]);
     }
 }
 module costole3(gioco = 0) {
