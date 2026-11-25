@@ -91,6 +91,8 @@ ORIGINE_PATTERNS = [
      ["ordinanza-", "delibera-", "deliberazione-",
       # avviso, determinazione e modulo del Comune per i volontari civici (ottobre 2026)
       "volontari-civici-genzano"]),
+    ("TERZO", "Città metropolitana di Roma Capitale (bandi, gare, atti)",
+     ["citta-metropolitana-"]),
     ("TERZO", "FEMA (Federal Emergency Management Agency, USA)",
      ["fema-"]),
     ("TERZO", "Polizia di Stato",
