@@ -142,6 +142,10 @@ function geometria(pos, suo) {
     const mio = t < suo;
     const alto = mio && !a.incise && zm > zb + 0.01 && zm <= zb + ril + 0.02;
     let cc = alto ? cr : cb;
+    // Scritte incise sul pezzo montato (vassoio: «Piatto», «Posate»…): il fondo dell'incisione, alla quota
+    // «incisioni_z» di anteprima.insieme, prende il colore delle scritte
+    if (!mio && INSIEME && typeof INSIEME.incisioni_z === 'number' && Math.abs(zm - INSIEME.incisioni_z) < 0.05
+        && Math.abs(pc[t + 2] - pc[t + 5]) < 1e-3 && Math.abs(pc[t + 2] - pc[t + 8]) < 1e-3) cc = cr;
     // Scritte incise sul retro che sta sul piano (cover): fondo e pareti delle incisioni come le scritte, bandiera
     // a specchio nel file, quindi il verde sta dalla parte delle x più alte
     if (mio && a.incise && zm > zmin + 0.01 && zm <= zmin + ril + 0.05) {

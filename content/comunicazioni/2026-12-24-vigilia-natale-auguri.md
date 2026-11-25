@@ -7,7 +7,7 @@ canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-24-vigilia-natale-auguri.webp"
-image_alt: "Presepe artistico illuminato in chiesa italiana durante la vigilia di Natale con candele accese e atmosfera raccolta"
+image_alt: "Cover dell'articolo: Vigilia di Natale: auguri dalla Protezione Civile"
 scadenza: "2026-12-26"
 area: "Genzano di Roma"
 allegati: []

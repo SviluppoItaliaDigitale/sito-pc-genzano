@@ -358,6 +358,9 @@ const tri = ['#009246', '#ffffff', '#ce2b37'].map(c => new THREE.Color(c)), col 
 for (let t = 0; t < pos.length; t += 9) {
   const zm = Math.max(pc[t + 2], pc[t + 5], pc[t + 8]);
   let c = t < suo && zm > zb + 0.01 && zm <= zb + ril + 0.02 ? cr : cb;
+  // scritte incise sul pezzo montato (vassoio): il fondo dell'incisione prende il colore delle scritte
+  if (t >= suo && A.insieme && typeof A.insieme.incisioni_z === 'number' && Math.abs(zm - A.insieme.incisioni_z) < 0.05
+      && Math.abs(pc[t + 2] - pc[t + 5]) < 1e-3 && Math.abs(pc[t + 2] - pc[t + 8]) < 1e-3) c = cr;
   if (c === cr && A.bandiera) {
     const [x0, y0, x1, y1] = A.bandiera, cx = (pc[t] + pc[t + 3] + pc[t + 6]) / 3, cy = (pc[t + 1] + pc[t + 4] + pc[t + 7]) / 3;
     if (cx >= x0 - 0.1 && cx <= x1 + 0.1 && cy >= y0 - 0.1 && cy <= y1 + 0.1) c = tri[Math.max(0, Math.min(2, Math.floor((cx - x0) / (x1 - x0) * 3)))];   // il bordo sinistro può cadere poco prima di x0

@@ -7,7 +7,7 @@ canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-25-natale-auguri-genzano.webp"
-image_alt: "Cupola di basilica italiana innevata con alberello di Natale decorato in primo piano durante la giornata di Natale"
+image_alt: "Cover dell'articolo: 25 dicembre: buon Natale a Genzano di Roma"
 scadenza: "2026-12-27"
 area: "Genzano di Roma"
 allegati: []
@@ -21,6 +21,10 @@ draft: false
 A **ogni casa** di Genzano di Roma e a tutti i **genzanesi** lontani:
 
 **Buon Natale**.
+
+{{< foto src="/images/2026-12-25-auguri-natale-gruppo.webp"
+         alt="Biglietto di auguri su fondo blu: in alto il logo e il nome del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma, a destra una grande stella a cinque punte con il foro per appenderla, in basso la scritta «Buon Natale dai volontari della Protezione Civile di Genzano di Roma». Nel piè della grafica i marchi Quality Label ESC con il codice E10435833, Coordinamento FE.PI.VOL. e volontariato del Servizio nazionale della protezione civile."
+         caption="Gli auguri del Gruppo. È la stella dell'[addobbo da stampare in 3D](/stampa-3d/stella-natale/) con il nominativo dei volontari, qui stilizzata. Grafica: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 
 ## Un pensiero speciale
 

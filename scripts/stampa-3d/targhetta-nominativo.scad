@@ -5,7 +5,9 @@
 /* [Tipo di targhetta] */
 // petto = da divisa; portachiavi = con foro per l'anello; zaino = con fessura per laccio o cinghia;
 // tavolo = da scrivania (targa + piede); parete = con fori per le viti
-tipo = "petto"; // [petto, portachiavi, zaino, tavolo, parete]
+// Natale (25/11/2026): addobbo = disco da appendere all'albero; stella = stella da appendere; pacco = etichetta per
+// i regali; segnaposto = targa piccola con il suo piede, per la tavola
+tipo = "petto"; // [petto, portachiavi, zaino, tavolo, parete, addobbo, stella, pacco, segnaposto]
 // tutto = pezzo unico; base e testo = pezzi separati per stampa a due colori; piede = supporto della versione da tavolo
 parte = "tutto"; // [tutto, base, testo, piede]
 
@@ -14,6 +16,8 @@ riga1 = "ALFA 1";
 riga2 = "PROTEZIONE CIVILE";
 // terza riga (petto, portachiavi, zaino): vuota per non usarla
 riga3 = "GENZANO DI ROMA";
+// riga in alto degli oggetti di Natale («BUON NATALE», «AUGURI DA»): vuota per non usarla
+riga0 = "";
 font = "Liberation Sans:style=Bold";
 // carattere stretto per la riga piccola, così il nome dell'ente entra tutto
 font2 = "Liberation Sans Narrow:style=Bold";
@@ -47,12 +51,24 @@ MISURE = [
     ["portachiavi", [64, 26, 4, 4.0, 6.5,  5.7, 4.5,  -1.2,  -6.7, 3]],
     ["zaino",       [80, 42, 4, 4.0, 8.5,  2.0, 4.5,  -6.3, -12.0, 6]],
     ["tavolo",      [150, 45, 4, 4.0, 20,  5.5, 6.0, -13.5,     0, 0]],
-    ["parete",      [150, 45, 4, 4.0, 20,  5.5, 6.0, -13.5,     0, 0]]
+    ["parete",      [150, 45, 4, 4.0, 20,  5.5, 6.0, -13.5,     0, 0]],
+    ["addobbo",     [76, 76, 4, 2.4, 8.0,  4.0, 4.5,  -7.5, -13.5, 7]],
+    ["stella",      [112, 112, 3, 2.4, 8.0, 1.0, 4.5, -8.5, -14.5, 8]],
+    ["pacco",       [86, 40, 3, 2.4, 8.0,  5.0, 4.5,  -5.0, -11.5, 9.5]],
+    ["segnaposto",  [100, 46, 4, 3.0, 9.0, 13.0, 4.5, -4.0, -10.5, 7]]
 ];
 M = MISURE[search([tipo], MISURE)[0]][1];
 L = M[0]; H = M[1]; R = M[2]; B = M[3];
 S1 = M[4]; Y1 = M[5]; S2 = M[6]; Y2 = M[7]; Y3 = M[8]; TX = M[9];
-TRE_RIGHE = tipo == "petto" || tipo == "portachiavi" || tipo == "zaino";
+NATALE = tipo == "addobbo" || tipo == "stella" || tipo == "pacco" || tipo == "segnaposto";
+TRE_RIGHE = tipo == "petto" || tipo == "portachiavi" || tipo == "zaino" || NATALE;
+// Oggetti di Natale: quota della riga in alto, distanza della bandiera dal bordo sinistro, foro per il nastro
+Y0 = tipo == "addobbo" ? 17 : tipo == "stella" ? 11 : 14.2;
+BAND_DA = tipo == "addobbo" ? 5 : tipo == "stella" ? 25 : tipo == "pacco" ? 12 : tipo == "portachiavi" ? 3 : 3.5;
+NASTRO_D = 4.5;
+NASTRO = tipo == "addobbo" ? [0, L / 2 + 2] : tipo == "stella" ? [0, 45] : [-L / 2 + 6.5, 0];
+// stella a cinque punte: raggio delle punte e delle rientranze; rientranze larghe, per farci stare le scritte
+ST_R = 56 - R; ST_r = 34 - R;
 
 // Portachiavi: occhiello tondo a sinistra con il foro per l'anello (5,5 mm di plastica intorno al foro)
 OCCHIELLO_D = 16; FORO_D = 5;
@@ -61,6 +77,16 @@ OCCHIELLO_X = -L / 2 - OCCHIELLO_D / 2 + 3;
 FESSURA = [26, 5.5]; FESSURA_Y = 13.5;
 
 module forma() {
+    if (tipo == "addobbo") {
+        circle(d = L, $fn = 120);
+        hull() { translate(NASTRO) circle(d = 14); translate([0, L / 2 - 8]) circle(d = 14); }
+    }
+    else if (tipo == "stella")
+        offset(r = R) polygon([for (i = [0:9]) let (a = 90 + i * 36, q = i % 2 == 0 ? ST_R : ST_r) [q * cos(a), q * sin(a)]]);
+    else if (tipo == "pacco")
+        offset(r = R) polygon([[-L / 2 + R + 9, -H / 2 + R], [L / 2 - R, -H / 2 + R], [L / 2 - R, H / 2 - R],
+                               [-L / 2 + R + 9, H / 2 - R], [-L / 2 + R, H / 2 - R - 9], [-L / 2 + R, -H / 2 + R + 9]]);
+    else
     offset(r = R) square([L - 2 * R, H - 2 * R], center = true);
     if (tipo == "portachiavi")
         hull() {
@@ -72,6 +98,7 @@ module forma() {
 module fori() {
     if (tipo == "portachiavi") translate([OCCHIELLO_X, 0]) circle(d = FORO_D);
     if (tipo == "zaino") translate([0, FESSURA_Y]) offset(r = 1.5) square(FESSURA - [3, 3], center = true);
+    if (tipo == "addobbo" || tipo == "stella" || tipo == "pacco") translate(NASTRO) circle(d = NASTRO_D);
 }
 
 module sagoma(inset = 0) {
@@ -84,7 +111,7 @@ module sagoma(inset = 0) {
 // Tricolore: tre fasce verticali separate da solchi di 0,8 mm (sopra il minimo di 0,5 mm dei servizi di stampa),
 // così si riconosce anche stampato in un solo colore. Posizione fissa a sinistra, il nominativo si sposta di TX.
 BAND_H = S1; BAND_W = S1 * 1.5; SOLCO = 0.8;
-BAND_X = TX - L / 2 + (tipo == "portachiavi" ? 3 : 3.5);
+BAND_X = TX - L / 2 + BAND_DA;
 module bandiera2d() {
     for (i = [0:2])
         translate([BAND_X - TX + i * BAND_W / 3 + (i > 0 ? SOLCO / 2 : 0), Y1 - BAND_H / 2])
@@ -101,6 +128,12 @@ module testi2d() {
     if (TRE_RIGHE && riga3 != "")
         translate([0, Y3])
             text(riga3, size = S2, font = font2, halign = "center", valign = "center");
+    if (NATALE && riga0 != "") {
+        translate([0, Y0]) text(riga0, size = S2, font = font2, halign = "center", valign = "center");
+        // due stelline ai lati della riga in alto (addobbo e stella)
+        if (tipo == "addobbo" || tipo == "stella") for (v = [-1, 1]) translate([v * 24, Y0])
+            polygon([for (i = [0:9]) let (a = 90 + i * 36, q = i % 2 == 0 ? 3.2 : 1.5) [q * cos(a), q * sin(a)]]);
+    }
 }
 
 // Bordi smussati: tre gradini da 0,2 mm in alto e due in basso (uno strato di stampa ciascuno).
@@ -152,11 +185,12 @@ module testo3d() {
 
 // Piede per la versione da tavolo: la targa si infila nella fessura, inclinata di 15 gradi
 module piede() {
-    fessura = B + rilievo + 0.4;
+    fessura = B + rilievo + 1.0;               // mezzo millimetro di gioco per parte: la tolleranza di una stampa a filo
+    pl = tipo == "segnaposto" ? 35 : 50;       // mezza lunghezza del piede
     difference() {
         hull() {
-            translate([-50, -14, 0]) cube([100, 28, 2]);
-            translate([-50, -8, 0]) cube([100, 16, 14]);
+            translate([-pl, -14, 0]) cube([2 * pl, 28, 2]);
+            translate([-pl, -8, 0]) cube([2 * pl, 16, 14]);
         }
         translate([0, -2, 6]) rotate([-15, 0, 0])
             translate([-(L / 2 + 5), -fessura / 2, 0]) cube([L + 10, fessura, 30]);

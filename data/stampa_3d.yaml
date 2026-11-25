@@ -20,6 +20,8 @@ servizio:
 
 # Gruppi del catalogo, nell'ordine in cui compaiono
 categorie:
+  - id: "natale"
+    titolo: "Per Natale"
   - id: "giubbetto"
     titolo: "Sul giubbetto e in tasca"
   - id: "radio"
@@ -38,6 +40,158 @@ categorie:
     titolo: "Per il telefono"
 
 oggetti:
+  # --- Serie di Natale (25/11/2026): quattro oggetti piatti di targhetta-nominativo.scad, tipi addobbo, stella, pacco, segnaposto
+  - id: "addobbo-natale"
+    nome: "Addobbo per l'albero"
+    articolo: "l'addobbo"
+    descrizione: "Disco blu da appendere all'albero di Natale, con «Buon Natale» fra due stelline, la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». Ha un occhiello per il nastro. Sul retro, liscio, puoi aggiungere nome e cognome."
+    categoria: "natale"
+    breve: "Disco da appendere all'albero, con «Buon Natale» e il nominativo."
+    sorgente: "targhetta-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-33.0, 0.0, -21.0, 8.0]
+      nome: {zona: [-25, -3.5, 25, 3.5], lato: "retro"}
+    parametri:
+      tipo: "addobbo"
+      parte: "tutto"
+      riga0: "BUON NATALE"
+    misure: "7,6 × 8,5 cm, spesso 3,4 mm"
+    lunghezza_mm: 76
+    peso_g: 15
+    scheda:
+      - ["Ingombro", "disco di 76 mm, alto 85 mm con l'occhiello, spesso 3,4 mm (2,4 mm di base e 1 mm di scritte)"]
+      - ["Peso", "circa 15 g"]
+      - ["Occhiello", "foro da 4,5 mm per un nastro o uno spago"]
+      - ["Altezza delle lettere", "nominativo 8 mm; righe piccole 4,5 mm"]
+      - ["Scritte di un altro colore", "le scritte sono in rilievo di 1 mm: per averle di un altro colore, nel programma di stampa aggiungi un cambio di filo al primo strato delle scritte, cioè dopo lo strato 12 con strati da 0,2 mm (altezza 2,6 mm). Cambiano colore con le scritte anche la cornice, la bandiera e le due stelline, che sono in rilievo alla stessa altezza. Il cambio di filo è facoltativo e si fa anche con una stampante a un colore solo: la stampa si ferma a quello strato, cambi il filo a mano e riparte. Senza cambio il pezzo esce di un colore solo e le scritte si leggono per il rilievo"]
+      - ["Posizione di stampa", "in piano, già orientato nel file, senza supporti"]
+      - ["Da sapere", "Si appende lontano da candele, stufe e lampadine che scaldano: il PETG comincia a deformarsi a 68 gradi. Con le luci a LED, che scaldano poco, il rischio è basso. Non è un giocattolo: tienilo fuori dalla portata dei bambini piccoli"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "un nastro o uno spago lungo circa 20 cm"
+    montaggio:
+      - "Infila il nastro nell'occhiello e annodalo ad anello."
+      - "Appendilo a un ramo robusto, lontano dalle fonti di calore."
+
+  - id: "stella-natale"
+    nome: "Stella di Natale da appendere"
+    articolo: "la stella"
+    descrizione: "Stella blu a cinque punte, larga quasi 11 cm, da appendere all'albero, alla finestra o alla porta della sede. Porta «Buon Natale» fra due stelline, la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». Le punte sono arrotondate e nella punta in alto c'è il foro per il nastro."
+    categoria: "natale"
+    breve: "Stella a cinque punte da appendere, con «Buon Natale» e il nominativo."
+    sorgente: "targhetta-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-31.0, -3.0, -19.0, 5.0]
+      nome: {zona: [-22, -27, 22, -20], lato: "retro"}
+    parametri:
+      tipo: "stella"
+      parte: "tutto"
+      riga0: "BUON NATALE"
+    misure: "10,7 × 10,2 cm, spessa 3,4 mm"
+    lunghezza_mm: 107
+    peso_g: 19
+    scheda:
+      - ["Ingombro", "107 × 102 mm, spessa 3,4 mm (2,4 mm di base e 1 mm di scritte)"]
+      - ["Peso", "circa 19 g"]
+      - ["Foro", "da 4,5 mm nella punta in alto, per un nastro o uno spago"]
+      - ["Punte", "arrotondate con un raggio di 3 mm"]
+      - ["Altezza delle lettere", "nominativo 8 mm; righe piccole 4,5 mm"]
+      - ["Scritte di un altro colore", "le scritte sono in rilievo di 1 mm: per averle di un altro colore, nel programma di stampa aggiungi un cambio di filo al primo strato delle scritte, cioè dopo lo strato 12 con strati da 0,2 mm (altezza 2,6 mm). Cambiano colore con le scritte anche la cornice, la bandiera e le due stelline, che sono in rilievo alla stessa altezza. Il cambio di filo è facoltativo e si fa anche con una stampante a un colore solo: la stampa si ferma a quello strato, cambi il filo a mano e riparte. Senza cambio il pezzo esce di un colore solo e le scritte si leggono per il rilievo"]
+      - ["Posizione di stampa", "in piano, già orientata nel file, senza supporti"]
+      - ["Da sapere", "Si appende lontano da candele, stufe e lampadine che scaldano: il PETG comincia a deformarsi a 68 gradi. Con le luci a LED, che scaldano poco, il rischio è basso. Non è un giocattolo: tienila fuori dalla portata dei bambini piccoli"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "un nastro o uno spago lungo circa 20 cm"
+    montaggio:
+      - "Infila il nastro nel foro della punta in alto e annodalo ad anello."
+      - "Appendila all'albero, alla finestra o alla porta, lontano dalle fonti di calore."
+
+  - id: "etichetta-regalo"
+    nome: "Etichetta per i regali"
+    articolo: "l'etichetta"
+    descrizione: "Etichetta blu da legare a un pacco, con «Auguri da», la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma». Ha un foro per lo spago e si riusa ogni anno. Sul retro, liscio, puoi aggiungere nome e cognome oppure scrivere a mano il nome di chi riceve il regalo."
+    categoria: "natale"
+    breve: "Si lega al pacco con uno spago e si riusa ogni anno."
+    sorgente: "targhetta-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-31.0, 1.0, -19.0, 9.0]
+      nome: {zona: [-28, -3.5, 28, 3.5], lato: "retro"}
+    parametri:
+      tipo: "pacco"
+      parte: "tutto"
+      riga0: "AUGURI DA"
+    misure: "8,6 × 4 cm, spessa 3,4 mm"
+    lunghezza_mm: 86
+    peso_g: 11
+    scheda:
+      - ["Ingombro", "86 × 40 mm, spessa 3,4 mm (2,4 mm di base e 1 mm di scritte)"]
+      - ["Peso", "circa 11 g"]
+      - ["Foro", "da 4,5 mm sul lato con gli angoli tagliati, per lo spago"]
+      - ["Altezza delle lettere", "nominativo 8 mm; righe piccole 4,5 mm"]
+      - ["Scritte di un altro colore", "le scritte sono in rilievo di 1 mm: per averle di un altro colore, nel programma di stampa aggiungi un cambio di filo al primo strato delle scritte, cioè dopo lo strato 12 con strati da 0,2 mm (altezza 2,6 mm). Cambiano colore con le scritte anche la cornice e la bandiera, che sono in rilievo alla stessa altezza. Il cambio di filo è facoltativo e si fa anche con una stampante a un colore solo: la stampa si ferma a quello strato, cambi il filo a mano e riparte. Senza cambio il pezzo esce di un colore solo e le scritte si leggono per il rilievo"]
+      - ["Posizione di stampa", "in piano, già orientata nel file, senza supporti"]
+      - ["Da sapere", "sul retro si scrive bene con un pennarello indelebile; con l'alcol la scritta si toglie e l'etichetta si riusa. Tienila lontano da candele e fiamme: il PETG comincia a deformarsi a 68 gradi. Non è un giocattolo: lo spago e l'etichetta vanno tenuti fuori dalla portata dei bambini piccoli"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "uno spago o un nastro lungo circa 30 cm"
+      - "un pennarello indelebile, se vuoi scrivere sul retro il nome di chi riceve il regalo"
+    montaggio:
+      - "Infila lo spago nel foro e legalo al nastro del pacco."
+      - "Se vuoi, scrivi sul retro il nome di chi riceve il regalo."
+
+  - id: "segnaposto"
+    nome: "Segnaposto per la tavola"
+    articolo: "il segnaposto"
+    descrizione: "Targa blu con la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma», che sta in piedi su un suo piede, inclinata di 15 gradi. Sotto il nominativo c'è una fascia libera per nome e cognome. Serve per la cena del Gruppo, per le riunioni e per i tavoli della sala operativa."
+    categoria: "natale"
+    breve: "Targa con il suo piede, per la cena del Gruppo e le riunioni."
+    sorgente: "targhetta-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-46.5, 8.5, -33.0, 17.5]
+      nome: {zona: [-36, 0.5, 36, 7.5], lato: "fronte"}
+    parametri:
+      tipo: "segnaposto"
+      parte: "tutto"
+    secondo_pezzo:
+      parte: "piede"
+      file: "segnaposto-piede.stl"
+      nome: "il piede"
+      peso_g: 25
+    misure: "10 × 4,6 cm, spesso 4 mm, più il piede"
+    lunghezza_mm: 100
+    peso_g: 43
+    scheda:
+      - ["Ingombro", "targa 100 × 46 mm, spessa 4 mm (3 mm di base e 1 mm di scritte); piede 70 × 28 mm, alto 14 mm"]
+      - ["Peso", "circa 43 g: 18 g la targa, 25 g il piede"]
+      - ["Spazio per nome e cognome", "fascia libera di 72 × 7 mm sotto il nominativo"]
+      - ["Altezza delle lettere", "nominativo 9 mm; righe piccole 4,5 mm"]
+      - ["Scritte di un altro colore", "le scritte sono in rilievo di 1 mm: per averle di un altro colore, nel programma di stampa aggiungi un cambio di filo al primo strato delle scritte, cioè dopo lo strato 15 con strati da 0,2 mm (altezza 3,2 mm). Cambiano colore con le scritte anche la cornice e la bandiera, che sono in rilievo alla stessa altezza. Il cambio di filo è facoltativo e si fa anche con una stampante a un colore solo: la stampa si ferma a quello strato, cambi il filo a mano e riparte. Senza cambio il pezzo esce di un colore solo e le scritte si leggono per il rilievo"]
+      - ["Posizione di stampa", "due file, in piano, già orientati, senza supporti"]
+      - ["Da sapere", "sta accanto al piatto, mai a contatto con il cibo: il PETG stampato non è un materiale per alimenti e fra gli strati restano solchi che non si puliscono a fondo. Si tiene lontano da candele e fiamme: il PETG comincia a deformarsi a 68 gradi. Si pulisce con un panno umido, non in lavastoviglie. Non è un giocattolo: tienilo fuori dalla portata dei bambini piccoli"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "circa 45 g di filo PETG per i due pezzi"
+    montaggio:
+      - "Stampa i due file: la targa con il tuo nominativo e il piede."
+      - "Infila la targa nella fessura del piede, con le scritte verso chi guarda: resta inclinata all'indietro."
+      - "Se la targa balla nella fessura, fermala con una goccia di colla."
+
   - id: "targhetta-petto"
     nome: "Targhetta da petto"
     articolo: "la targhetta"
@@ -64,6 +218,7 @@ oggetti:
       - ["Scritte e cornice", "in rilievo di 1 mm; cornice larga 1,2 mm"]
       - ["Altezza delle lettere", "nominativo 8,5 mm; righe piccole 4,5 mm, tratto più sottile 0,7 mm"]
       - ["Fissaggio", "scanalatura sul retro larga 1,6 mm e profonda 1,3 mm per una spilla da balia lunga 45 mm; due incavi da 6,5 × 6,5 mm, profondi 1,4 mm"]
+      - ["Scritte di un altro colore", "le scritte sono in rilievo di 1 mm in cima, l'ultimo millimetro del pezzo: per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di filo al primo strato delle scritte, cioè dopo lo strato 12 con strati da 0,2 mm (altezza 2,6 mm). Con le scritte cambiano colore anche la bandiera e la cornice, dove c'è, perché sono in rilievo alla stessa altezza. Il cambio di filo è facoltativo e si fa anche con una stampante a un colore solo: la stampa si ferma a quello strato, cambi il filo a mano e riparte. Senza cambio il pezzo esce di un colore solo e le scritte si leggono per il rilievo"]
       - ["Posizione di stampa", "in piano, già orientata nel file, senza supporti"]
     materiale: "PETG"
     colore: "blu"
@@ -102,6 +257,7 @@ oggetti:
       - ["Peso", "circa 10 g"]
       - ["Occhiello", "diametro 16 mm, foro da 5 mm per l'anello"]
       - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4,5 mm"]
+      - ["Scritte di un altro colore", "le scritte sono in rilievo di 1 mm in cima, l'ultimo millimetro del pezzo: per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di filo al primo strato delle scritte, cioè dopo lo strato 20 con strati da 0,2 mm (altezza 4,2 mm). Con le scritte cambiano colore anche la bandiera e la cornice, dove c'è, perché sono in rilievo alla stessa altezza. Il cambio di filo è facoltativo e si fa anche con una stampante a un colore solo: la stampa si ferma a quello strato, cambi il filo a mano e riparte. Senza cambio il pezzo esce di un colore solo e le scritte si leggono per il rilievo"]
       - ["Posizione di stampa", "in piano, già orientato nel file, senza supporti"]
     materiale: "PETG"
     colore: "blu"
@@ -136,6 +292,7 @@ oggetti:
       - ["Peso", "circa 17 g"]
       - ["Fessura", "26 × 5,5 mm, in alto, per laccio o cinghia"]
       - ["Altezza delle lettere", "nominativo 8,5 mm; righe piccole 4,5 mm"]
+      - ["Scritte di un altro colore", "le scritte sono in rilievo di 1 mm in cima, l'ultimo millimetro del pezzo: per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di filo al primo strato delle scritte, cioè dopo lo strato 20 con strati da 0,2 mm (altezza 4,2 mm). Con le scritte cambiano colore anche la bandiera e la cornice, dove c'è, perché sono in rilievo alla stessa altezza. Il cambio di filo è facoltativo e si fa anche con una stampante a un colore solo: la stampa si ferma a quello strato, cambi il filo a mano e riparte. Senza cambio il pezzo esce di un colore solo e le scritte si leggono per il rilievo"]
       - ["Posizione di stampa", "in piano, già orientata nel file, senza supporti"]
     materiale: "PETG"
     colore: "blu"
@@ -173,6 +330,7 @@ oggetti:
       - ["Piastra", "spessa 5 mm, scritte in rilievo di 1 mm"]
       - ["Gancio", "largo 80 mm; braccio spesso 10 mm, punta alta 7 mm; 21 mm liberi fra la piastra e la punta; rinforzo a 45 gradi alla base"]
       - ["Fori", "2 per viti a testa svasata da 4 mm (foro 4,4 mm, svasatura 8,8 mm: la testa di una vite per legno da 4 mm è larga 8 mm e resta a filo), a 66 mm l'uno dall'altro"]
+      - ["Scritte di un altro colore", "per come il pezzo è girato sul piatto di stampa, le scritte non sono l'ultimo strato: un cambio di filo non basta a colorarle. Per metterle in evidenza, a pezzo finito ripassa il rilievo con un pennarello a vernice a punta fine. Provalo prima su un pezzo di scarto dello stesso filo: la tenuta dipende dal materiale. Con un colore solo non devi fare nulla: le scritte si leggono per il rilievo"]
       - ["Posizione di stampa", "in piedi sul lato sinistro, già orientato nel file, senza supporti"]
     materiale: "PETG"
     colore: "blu"
@@ -208,6 +366,7 @@ oggetti:
       - ["Ponte sopra l'anta", "2 mm: passa nella fessura fra anta chiusa e mobile"]
       - ["Aletta dietro", "alta 28 mm e spessa 5 mm; ponte sopra l'anta spesso 5 mm"]
       - ["Gancio", "largo 80 mm; 21 mm liberi fra la piastra e la punta"]
+      - ["Scritte di un altro colore", "per come il pezzo è girato sul piatto di stampa, le scritte non sono l'ultimo strato: un cambio di filo non basta a colorarle. Per metterle in evidenza, a pezzo finito ripassa il rilievo con un pennarello a vernice a punta fine. Provalo prima su un pezzo di scarto dello stesso filo: la tenuta dipende dal materiale. Con un colore solo non devi fare nulla: le scritte si leggono per il rilievo"]
       - ["Posizione di stampa", "in piedi sul lato sinistro, già orientato nel file, senza supporti"]
     materiale: "PETG"
     colore: "blu"
@@ -248,6 +407,7 @@ oggetti:
       - ["Dentino", "lascia un passaggio di 3,5 mm; scivolo sotto per far entrare la cintura, fermo sopra per non farla uscire"]
       - ["Linguetta a molla", "80 × 49 mm, spessa 3,5 mm: si apre di 1,5 mm con una spinta di circa 2 kg"]
       - ["Occhiello", "diametro 18 mm, foro da 8 mm per anello o moschettone"]
+      - ["Scritte di un altro colore", "per come il pezzo è girato sul piatto di stampa, le scritte non sono l'ultimo strato: un cambio di filo non basta a colorarle. Per metterle in evidenza, a pezzo finito ripassa il rilievo con un pennarello a vernice a punta fine. Provalo prima su un pezzo di scarto dello stesso filo: la tenuta dipende dal materiale. Con un colore solo non devi fare nulla: le scritte si leggono per il rilievo"]
       - ["Posizione di stampa", "in piedi sul lato sinistro, già orientato nel file, senza supporti; così la linguetta è robusta nella direzione in cui si piega"]
     materiale: "PETG"
     colore: "blu"
@@ -286,6 +446,7 @@ oggetti:
       - ["Barra", "spessa 4 mm e alta 38 mm, a 8 mm dalla piastra: la clip della radio ci passa dietro e scende libera sotto"]
       - ["Spazio fra i due appoggi", "42 mm vicino alla parete e 68 mm davanti: entrano le clip larghe fino a 4 cm"]
       - ["Fori", "4 per viti a testa svasata da 4 mm (foro 4,4 mm, svasatura 8,8 mm: la testa di una vite per legno da 4 mm è larga 8 mm e resta a filo)"]
+      - ["Scritte di un altro colore", "per come il pezzo è girato sul piatto di stampa, le scritte non sono l'ultimo strato: un cambio di filo non basta a colorarle. Per metterle in evidenza, a pezzo finito ripassa il rilievo con un pennarello a vernice a punta fine. Provalo prima su un pezzo di scarto dello stesso filo: la tenuta dipende dal materiale. Con un colore solo non devi fare nulla: le scritte si leggono per il rilievo"]
       - ["Posizione di stampa", "in piedi sul lato sinistro, già orientato nel file, senza supporti"]
     materiale: "PETG"
     colore: "blu"
@@ -325,6 +486,7 @@ oggetti:
       - ["Righello", "in rilievo lungo il bordo basso, da 0 a 7 cm, tacche ogni 5 mm larghe 0,8 mm"]
       - ["Asola", "3,6 × 14 mm, a destra, per cordino, anello o moschettone"]
       - ["Scritte", "nominativo alto 8,5 mm, «EMERGENZA 112» alto 6,5 mm, righe piccole 4,5 mm"]
+      - ["Scritte di un altro colore", "le scritte sono in rilievo di 1 mm in cima, l'ultimo millimetro del pezzo: per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di filo al primo strato delle scritte, cioè dopo lo strato 15 con strati da 0,2 mm (altezza 3,2 mm). Con le scritte cambiano colore anche la bandiera e la cornice, dove c'è, perché sono in rilievo alla stessa altezza. Il cambio di filo è facoltativo e si fa anche con una stampante a un colore solo: la stampa si ferma a quello strato, cambi il filo a mano e riparte. Senza cambio il pezzo esce di un colore solo e le scritte si leggono per il rilievo"]
       - ["Posizione di stampa", "in piano, già orientata nel file, senza supporti"]
     materiale: "PETG"
     colore: "blu"
@@ -359,6 +521,7 @@ oggetti:
       - ["Peso", "circa 8 g"]
       - ["Fessure", "due, da 2,4 × 6,5 mm, alle estremità: entrano fascette larghe fino a 5 mm"]
       - ["Scritte", "nominativo alto 6,5 mm, righe piccole 4 mm"]
+      - ["Scritte di un altro colore", "le scritte sono in rilievo di 1 mm in cima, l'ultimo millimetro del pezzo: per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di filo al primo strato delle scritte, cioè dopo lo strato 15 con strati da 0,2 mm (altezza 3,2 mm). Con le scritte cambiano colore anche la bandiera e la cornice, dove c'è, perché sono in rilievo alla stessa altezza. Il cambio di filo è facoltativo e si fa anche con una stampante a un colore solo: la stampa si ferma a quello strato, cambi il filo a mano e riparte. Senza cambio il pezzo esce di un colore solo e le scritte si leggono per il rilievo"]
       - ["Posizione di stampa", "in piano, già orientata nel file, senza supporti"]
     materiale: "PETG"
     colore: "blu"
@@ -394,6 +557,7 @@ oggetti:
       - ["Peso", "circa 54 g"]
       - ["Forma", "due piastre spesse 3,5 mm inclinate di 65 gradi, unite in alto e aperte sotto"]
       - ["Scritte", "nominativo alto 16 mm, righe piccole 5,5 mm, in rilievo di 1 mm"]
+      - ["Scritte di un altro colore", "per come il pezzo è girato sul piatto di stampa, le scritte non sono l'ultimo strato: un cambio di filo non basta a colorarle. Per metterle in evidenza, a pezzo finito ripassa il rilievo con un pennarello a vernice a punta fine. Provalo prima su un pezzo di scarto dello stesso filo: la tenuta dipende dal materiale. Con un colore solo non devi fare nulla: le scritte si leggono per il rilievo"]
       - ["Posizione di stampa", "in piedi, già orientata nel file, senza supporti"]
     materiale: "PETG"
     colore: "blu"
@@ -431,6 +595,7 @@ oggetti:
       - ["Bordi", "coprono 2 mm del tesserino su tre lati, con il lato di sotto inclinato di 46 gradi"]
       - ["Linguetta", "40 × 13 mm, con asola da 15 × 4 mm per la clip da badge o il cordino"]
       - ["Scritte", "nominativo alto 6,5 mm, righe piccole 4 mm"]
+      - ["Scritte di un altro colore", "le scritte sono in rilievo di 1 mm sulla cornice, in cima al pezzo: per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di filo al primo strato delle scritte, cioè dopo lo strato 30 con strati da 0,2 mm (altezza 6,2 mm). Guarda l'anteprima degli strati prima di stampare: le scritte cominciano a 6,1 mm, e se il programma le fa partire uno strato dopo sposta lì il cambio. Il cambio di filo è facoltativo e si fa anche con una stampante a un colore solo: la stampa si ferma a quello strato, cambi il filo a mano e riparte. Senza cambio il pezzo esce di un colore solo e le scritte si leggono per il rilievo"]
       - ["Posizione di stampa", "in piano, con il fondo sul piano, già orientato nel file, senza supporti"]
     materiale: "PETG"
     colore: "blu"
@@ -469,6 +634,7 @@ oggetti:
       - ["Suono", "finestra da 8 × 3 mm con lo spigolo che rompe il getto d'aria; canna chiusa da 9 × 8,4 × 22 mm con il tetto a punta"]
       - ["Foro per il cordino", "diametro 3,6 mm, in alto, da parte a parte"]
       - ["Scritte", "sul retro: nominativo alto 6 mm, riga piccola 4 mm"]
+      - ["Scritte di un altro colore", "per come il pezzo è girato sul piatto di stampa, le scritte non sono l'ultimo strato: un cambio di filo non basta a colorarle. Lasciale del colore del pezzo: si leggono per il rilievo. Non usare pennarelli o vernici su questo oggetto: il fischietto va in bocca"]
       - ["Posizione di stampa", "in piedi, con la bocca sul piano, già orientato nel file, senza supporti"]
     materiale: "PETG"
     colore: "blu"
@@ -507,6 +673,7 @@ oggetti:
       - ["Spazio fra i due appoggi", "36 mm vicino alla parete e 54 mm davanti: entrano le clip larghe fino a 3,5 cm"]
       - ["Fori", "2 per viti a testa svasata da 4 mm (foro 4,4 mm, svasatura 8,8 mm: la testa di una vite per legno da 4 mm è larga 8 mm e resta a filo), a 50 mm l'uno dall'altro"]
       - ["Scritte", "nominativo alto 7,5 mm, righe piccole 4 mm, in rilievo di 1 mm"]
+      - ["Scritte di un altro colore", "per come il pezzo è girato sul piatto di stampa, le scritte non sono l'ultimo strato: un cambio di filo non basta a colorarle. Per metterle in evidenza, a pezzo finito ripassa il rilievo con un pennarello a vernice a punta fine. Provalo prima su un pezzo di scarto dello stesso filo: la tenuta dipende dal materiale. Con un colore solo non devi fare nulla: le scritte si leggono per il rilievo"]
       - ["Posizione di stampa", "in piedi sul lato sinistro, già orientato nel file, senza supporti"]
     materiale: "PETG"
     colore: "blu"
@@ -546,6 +713,7 @@ oggetti:
       - ["Incavi", "due, da 18 × 14 mm, alle estremità, dove si avvolge il cavo"]
       - ["Fessure", "due, larghe 2,2 mm, una per linguetta: bloccano i capi di cavi fino a 2 mm"]
       - ["Scritte", "nominativo alto 6,5 mm, righe piccole 4 mm, con cornice"]
+      - ["Scritte di un altro colore", "le scritte sono in rilievo di 1 mm in cima, l'ultimo millimetro del pezzo: per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di filo al primo strato delle scritte, cioè dopo lo strato 15 con strati da 0,2 mm (altezza 3,2 mm). Con le scritte cambiano colore anche la bandiera e la cornice, dove c'è, perché sono in rilievo alla stessa altezza. Il cambio di filo è facoltativo e si fa anche con una stampante a un colore solo: la stampa si ferma a quello strato, cambi il filo a mano e riparte. Senza cambio il pezzo esce di un colore solo e le scritte si leggono per il rilievo"]
       - ["Posizione di stampa", "in piano, già orientato nel file, senza supporti"]
     materiale: "PETG"
     colore: "blu"
@@ -579,6 +747,7 @@ oggetti:
       - ["Peso", "circa 4 g"]
       - ["Scritte", "nominativo alto 8 mm, riga piccola 4 mm, in rilievo di 1 mm"]
       - ["Fissaggio", "biadesivo in schiuma sul retro, che riempie la curva del casco; niente fori"]
+      - ["Scritte di un altro colore", "le scritte sono in rilievo di 1 mm in cima, l'ultimo millimetro del pezzo: per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di filo al primo strato delle scritte, cioè dopo lo strato 6 con strati da 0,2 mm (altezza 1,4 mm). Con le scritte cambiano colore anche la bandiera e la cornice, dove c'è, perché sono in rilievo alla stessa altezza. Il cambio di filo è facoltativo e si fa anche con una stampante a un colore solo: la stampa si ferma a quello strato, cambi il filo a mano e riparte. Senza cambio il pezzo esce di un colore solo e le scritte si leggono per il rilievo"]
       - ["Posizione di stampa", "in piano, già orientata nel file, senza supporti"]
     materiale: "PETG"
     colore: "blu"
@@ -617,6 +786,7 @@ oggetti:
       - ["Angolo in alto a sinistra", "scala 1:50.000: tacche ogni 2 mm (100 m) per 20 mm (1 km), sul bordo alto e sul bordo sinistro"]
       - ["Bordo basso", "scala 1:10.000: tacche ogni 5 mm (50 m) per 100 mm (1 km)"]
       - ["Tacche", "larghe 0,8 mm, lunghe 6 mm ogni 500 m e 3,5 mm le altre; angoli in alto vivi"]
+      - ["Scritte di un altro colore", "le scritte sono in rilievo di 1 mm in cima, l'ultimo millimetro del pezzo: per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di filo al primo strato delle scritte, cioè dopo lo strato 13 con strati da 0,2 mm (altezza 2,8 mm). Con le scritte cambiano colore anche le tacche e i numeri, che sono in rilievo alla stessa altezza. Il cambio di filo è facoltativo e si fa anche con una stampante a un colore solo: la stampa si ferma a quello strato, cambi il filo a mano e riparte. Senza cambio il pezzo esce di un colore solo e le scritte si leggono per il rilievo"]
       - ["Posizione di stampa", "in piano, già orientato nel file, senza supporti"]
     materiale: "PETG"
     colore: "blu"
@@ -655,6 +825,7 @@ oggetti:
       - ["Alfabeto", "le 26 lettere con le parole dell'alfabeto fonetico internazionale (ICAO e ITU), su due colonne, alte 4 mm"]
       - ["Foro", "diametro 4 mm, in alto, per un nastro o un cordino"]
       - ["Scritte", "nominativo alto 6,5 mm, con cornice"]
+      - ["Scritte di un altro colore", "le scritte sono in rilievo di 1 mm in cima, l'ultimo millimetro del pezzo: per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di filo al primo strato delle scritte, cioè dopo lo strato 8 con strati da 0,2 mm (altezza 1,8 mm). Con le scritte cambiano colore anche la bandiera e la cornice, dove c'è, perché sono in rilievo alla stessa altezza. Il cambio di filo è facoltativo e si fa anche con una stampante a un colore solo: la stampa si ferma a quello strato, cambi il filo a mano e riparte. Senza cambio il pezzo esce di un colore solo e le scritte si leggono per il rilievo"]
       - ["Posizione di stampa", "in piano, già orientato nel file, senza supporti"]
     materiale: "PETG"
     colore: "blu"
@@ -697,6 +868,7 @@ oggetti:
       - ["Manico", "per i manici delle tazze non c'è una misura unica: misura il tuo prima di ordinare; nel modello OpenSCAD si cambiano manico_largo e manico_spesso"]
       - ["Altezza delle lettere", "nominativo 6 mm; righe piccole 4 mm"]
       - ["Spazio per nome e cognome", "fascia libera di 50 × 7 mm sotto il nominativo"]
+      - ["Scritte di un altro colore", "le scritte sono in rilievo di 1 mm in cima, l'ultimo millimetro del pezzo: per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di filo al primo strato delle scritte, cioè dopo lo strato 13 con strati da 0,2 mm (altezza 2,8 mm). Da quello strato in su prendono il secondo colore anche le parti del pezzo più alte delle scritte. Il cambio di filo è facoltativo e si fa anche con una stampante a un colore solo: la stampa si ferma a quello strato, cambi il filo a mano e riparte. Senza cambio il pezzo esce di un colore solo e le scritte si leggono per il rilievo"]
       - ["Posizione di stampa", "in piano, già orientato nel file, senza supporti"]
     materiale: "PETG"
     colore: "blu"
@@ -735,6 +907,7 @@ oggetti:
       - ["Occhiello", "diametro 22 mm con foro da 8 mm: 7 mm di plastica intorno al foro"]
       - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4 mm"]
       - ["Spazio per nome e cognome", "fascia libera di 60 × 7 mm sotto il nominativo"]
+      - ["Scritte di un altro colore", "le scritte sono in rilievo di 1 mm in cima, l'ultimo millimetro del pezzo: per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di filo al primo strato delle scritte, cioè dopo lo strato 18 con strati da 0,2 mm (altezza 3,8 mm). Con le scritte cambiano colore anche la bandiera e la cornice, dove c'è, perché sono in rilievo alla stessa altezza. Il cambio di filo è facoltativo e si fa anche con una stampante a un colore solo: la stampa si ferma a quello strato, cambi il filo a mano e riparte. Senza cambio il pezzo esce di un colore solo e le scritte si leggono per il rilievo"]
       - ["Posizione di stampa", "in piano, già orientata nel file, senza supporti"]
     materiale: "PETG"
     colore: "blu"
@@ -774,6 +947,7 @@ oggetti:
       - ["Apertura", "su un lato corto, con un incavo per le dita; foro di scolo da 6 mm sul fondo"]
       - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4 mm"]
       - ["Spazio per nome e cognome", "fascia libera di 60 × 7 mm sotto il nominativo"]
+      - ["Scritte di un altro colore", "per come il pezzo è girato sul piatto di stampa, le scritte non sono l'ultimo strato: un cambio di filo non basta a colorarle. Lasciale del colore del pezzo: si leggono per il rilievo. Non usare pennarelli o vernici su questo oggetto: dentro ci stanno le posate, che vanno in bocca"]
       - ["Posizione di stampa", "in piedi sul lato chiuso, già orientato nel file, senza supporti; serve una stampante con almeno 22 cm di altezza utile"]
     materiale: "PETG"
     colore: "blu"
@@ -810,6 +984,7 @@ oggetti:
       - ["Foro", "diametro 4,5 mm, in un occhiello da 14 mm, per un cordino sottile"]
       - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4 mm"]
       - ["Spazio per nome e cognome", "fascia libera di 60 × 7 mm sotto il nominativo"]
+      - ["Scritte di un altro colore", "le scritte sono in rilievo di 1 mm in cima, l'ultimo millimetro del pezzo: per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di filo al primo strato delle scritte, cioè dopo lo strato 15 con strati da 0,2 mm (altezza 3,2 mm). Con le scritte cambiano colore anche la bandiera e la cornice, dove c'è, perché sono in rilievo alla stessa altezza. Il cambio di filo è facoltativo e si fa anche con una stampante a un colore solo: la stampa si ferma a quello strato, cambi il filo a mano e riparte. Senza cambio il pezzo esce di un colore solo e le scritte si leggono per il rilievo"]
       - ["Posizione di stampa", "in piano, già orientata nel file, senza supporti"]
     materiale: "PETG"
     colore: "blu"
@@ -846,6 +1021,7 @@ oggetti:
       - ["Asole", "due, da 4,5 × 22 mm, alle estremità: per fascette spesse fino a 4 mm o velcro largo fino a 2 cm"]
       - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4 mm"]
       - ["Spazio per nome e cognome", "fascia libera di 60 × 7 mm sotto il nominativo"]
+      - ["Scritte di un altro colore", "le scritte sono in rilievo di 1 mm in cima, l'ultimo millimetro del pezzo: per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di filo al primo strato delle scritte, cioè dopo lo strato 15 con strati da 0,2 mm (altezza 3,2 mm). Con le scritte cambiano colore anche la bandiera e la cornice, dove c'è, perché sono in rilievo alla stessa altezza. Il cambio di filo è facoltativo e si fa anche con una stampante a un colore solo: la stampa si ferma a quello strato, cambi il filo a mano e riparte. Senza cambio il pezzo esce di un colore solo e le scritte si leggono per il rilievo"]
       - ["Posizione di stampa", "in piano, già orientata nel file, senza supporti"]
     materiale: "PETG"
     colore: "blu"
@@ -883,7 +1059,7 @@ oggetti:
       - ["Chiusura", "una linguetta a scatto in fondo al braccio stretto aggancia lo spigolo del braccio largo con un dente di 1,4 mm; per riaprire si tira in fuori la piccola presa in fondo alla linguetta. Un rilievo lungo il braccio stretto entra in un incavo dell'altro e fa fare una piega al sacchetto"]
       - ["Cerniera", "un arco di plastica spesso 1,2 mm: si piega di pochi gradi a ogni chiusura. Con il tempo può cedere: non forzarla oltre l'apertura con cui è stampata"]
       - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4 mm"]
-      - ["Scritte di un altro colore", "le scritte sono l'ultimo millimetro: per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di colore al primo strato delle scritte, cioè dopo lo strato 50 con strati da 0,2 mm (altezza 10,2 mm)"]
+      - ["Scritte di un altro colore", "le scritte sono l'ultimo millimetro: per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di colore al primo strato delle scritte, cioè dopo lo strato 50 con strati da 0,2 mm (altezza 10,2 mm). Il cambio di filo è facoltativo e si fa anche con una stampante a un colore solo: la stampa si ferma a quello strato, cambi il filo a mano e riparte. Senza cambio il pezzo esce di un colore solo e le scritte si leggono per il rilievo"]
       - ["Posizione di stampa", "in piano, aperta, già orientata nel file, senza supporti"]
       - ["Da sapere", "la clip tocca il sacchetto, non il cibo; con il bordo piegato può toccarne il lato interno, quindi non è un oggetto per alimenti: usala con cibi secchi e puliscila con un panno umido. Non stringe come una pinza e non è una chiusura ermetica: tiene il sacchetto per la piega, non lo sigilla. Non usarla per i surgelati: l'acqua di condensa entra fra gli strati della plastica. Tienila lontana da forno e fornelli: il PETG comincia a deformarsi a 68 gradi. È disegnata per una stampante da tavolo ben regolata: con un servizio di stampa, che può scostarsi di mezzo millimetro, lo scatto può risultare duro o lento"]
     materiale: "PETG"
@@ -915,41 +1091,41 @@ oggetti:
       quota_scritte: 3.6
       sagoma_z: -1.6   # contorno letto dentro il piano del vassoio, sotto la targhetta
       camera: { da: [-0.35, -0.75, 0.6], su: [0, 0, 1] }
-      insieme: { file: "vassoio-montato.stl", parte: "montato" }   # nelle anteprime il vassoio è montato
+      insieme: { file: "vassoio-montato.stl", parte: "montato", incisioni_z: -0.4 }   # nelle anteprime il vassoio è montato
       nome: { zona: [-31, -0.5, 31, 6.5], lato: "fronte" }
     parametri:
       tipo: "vassoio"
       parte: "tutto"
     secondo_pezzo:
-      parte: "sinistra"
-      file: "vassoio-pezzo-sinistro.stl"
+      parte: "sinistra180"
+      file: "vassoio-pezzo-sinistro-foro-180.stl"
       nome: "il pezzo sinistro, con metà del foro del piatto"
-      peso_g: 163
+      peso_g: 175
     altri_pezzi:
-      - { parte: "centro", file: "vassoio-pezzo-centrale.stl", nome: "il pezzo centrale, con la corsia delle posate", peso_g: 226 }
       - { parte: "destra", file: "vassoio-pezzo-destro.stl", nome: "il pezzo destro, con il foro del bicchiere e il pozzetto della bottiglietta", peso_g: 272 }
       - { parte: "clip", file: "vassoio-clip-posate.stl", nome: "la clip per le posate", peso_g: 4 }
-      - { parte: "sinistra180", file: "vassoio-pezzo-sinistro-foro-180.stl", nome: "il pezzo sinistro con il foro da 180 mm", peso_g: 175, variante: "Seconda versione, con il foro del piatto da 180 mm: scarica questi due file al posto del pezzo sinistro e del pezzo centrale." }
       - { parte: "centro180", file: "vassoio-pezzo-centrale-foro-180.stl", nome: "il pezzo centrale con il foro da 180 mm", peso_g: 241, variante: "Seconda versione, con il foro del piatto da 180 mm: scarica questi due file al posto del pezzo sinistro e del pezzo centrale." }
-      - { parte: "sinistra_i", file: "vassoio-incastro-pezzo-sinistro.stl", nome: "il pezzo sinistro a incastro", peso_g: 165, variante: "Versione a incastro, senza viti: questi tre pezzi prendono il posto dei tre pezzi con le viti e si uniscono con le cinque chiavette. Non è stata provata in stampa: stampa prima il provino." }
-      - { parte: "centro_i", file: "vassoio-incastro-pezzo-centrale.stl", nome: "il pezzo centrale a incastro", peso_g: 227, variante: "Versione a incastro, senza viti: questi tre pezzi prendono il posto dei tre pezzi con le viti e si uniscono con le cinque chiavette. Non è stata provata in stampa: stampa prima il provino." }
+      - { parte: "sinistra180_i", file: "vassoio-incastro-pezzo-sinistro-foro-180.stl", nome: "il pezzo sinistro a incastro", peso_g: 178, variante: "Versione a incastro, senza viti: questi tre pezzi prendono il posto dei tre pezzi con le viti e si uniscono con le cinque chiavette. Non è stata provata in stampa: stampa prima il provino." }
+      - { parte: "centro180_i", file: "vassoio-incastro-pezzo-centrale-foro-180.stl", nome: "il pezzo centrale a incastro", peso_g: 243, variante: "Versione a incastro, senza viti: questi tre pezzi prendono il posto dei tre pezzi con le viti e si uniscono con le cinque chiavette. Non è stata provata in stampa: stampa prima il provino." }
       - { parte: "destra_i", file: "vassoio-incastro-pezzo-destro.stl", nome: "il pezzo destro a incastro", peso_g: 271, variante: "Versione a incastro, senza viti: questi tre pezzi prendono il posto dei tre pezzi con le viti e si uniscono con le cinque chiavette. Non è stata provata in stampa: stampa prima il provino." }
       - { parte: "farfalle", file: "vassoio-chiavette.stl", nome: "le cinque chiavette a farfalla", peso_g: 23, variante: "Versione a incastro, senza viti: questi tre pezzi prendono il posto dei tre pezzi con le viti e si uniscono con le cinque chiavette. Non è stata provata in stampa: stampa prima il provino." }
       - { parte: "provino", file: "vassoio-provino-incastro.stl", nome: "il provino: una sede e una chiavetta corta", peso_g: 4, variante: "Versione a incastro, senza viti: questi tre pezzi prendono il posto dei tre pezzi con le viti e si uniscono con le cinque chiavette. Non è stata provata in stampa: stampa prima il provino." }
-      - { parte: "sinistra180_i", file: "vassoio-incastro-pezzo-sinistro-foro-180.stl", nome: "il pezzo sinistro a incastro con il foro da 180 mm", peso_g: 178, variante: "Versione a incastro con il foro del piatto da 180 mm: questi due file prendono il posto del pezzo sinistro e del pezzo centrale a incastro." }
-      - { parte: "centro180_i", file: "vassoio-incastro-pezzo-centrale-foro-180.stl", nome: "il pezzo centrale a incastro con il foro da 180 mm", peso_g: 243, variante: "Versione a incastro con il foro del piatto da 180 mm: questi due file prendono il posto del pezzo sinistro e del pezzo centrale a incastro." }
+      - { parte: "sinistra", file: "vassoio-pezzo-sinistro.stl", nome: "il pezzo sinistro con il foro da 200 mm", peso_g: 163, variante: "Versione con il foro del piatto da 200 mm, solo per piatti rigidi con il bordo da 215 a 228 mm: scarica questi due file al posto del pezzo sinistro e del pezzo centrale." }
+      - { parte: "centro", file: "vassoio-pezzo-centrale.stl", nome: "il pezzo centrale con il foro da 200 mm", peso_g: 226, variante: "Versione con il foro del piatto da 200 mm, solo per piatti rigidi con il bordo da 215 a 228 mm: scarica questi due file al posto del pezzo sinistro e del pezzo centrale." }
+      - { parte: "sinistra_i", file: "vassoio-incastro-pezzo-sinistro.stl", nome: "il pezzo sinistro a incastro con il foro da 200 mm", peso_g: 165, variante: "Versione a incastro con il foro del piatto da 200 mm, solo per piatti rigidi: questi due file prendono il posto del pezzo sinistro e del pezzo centrale a incastro." }
+      - { parte: "centro_i", file: "vassoio-incastro-pezzo-centrale.stl", nome: "il pezzo centrale a incastro con il foro da 200 mm", peso_g: 227, variante: "Versione a incastro con il foro del piatto da 200 mm, solo per piatti rigidi: questi due file prendono il posto del pezzo sinistro e del pezzo centrale a incastro." }
       - { parte: "rivetti_targhetta", file: "vassoio-rivetti-targhetta.stl", nome: "i due rivetti per la targhetta", peso_g: 1, variante: "Rivetti stampati al posto delle viti e dei dadi: entrano negli stessi fori. Tengono fermo il pezzo con un po' di gioco e, una volta scattati, si tolgono solo rompendoli. Non sono stati provati in stampa." }
     misure: "45,6 × 24 cm montato, alto 4,8 cm"
     lunghezza_mm: 76
-    peso_g: 682
+    peso_g: 709
     scheda:
       - ["Ingombro", "montato 456 × 240 mm, con il piano a 48 mm dal tavolo; pezzo sinistro 148 × 240 mm, pezzo centrale 182 × 240 mm, pezzo destro 130 × 240 mm, tutti alti 48 mm; targhetta 76 × 50 mm, spessa 3,6 mm (4,6 mm con le scritte)"]
-      - ["Peso", "circa 682 g in tutto: 163 g il pezzo sinistro, 226 g il centrale, 272 g il destro, 17 g la targhetta, 4 g la clip; con il foro da 180 mm il pezzo sinistro pesa 175 g e il centrale 241 g. I pezzi a incastro pesano 165, 227 e 271 g (178 e 243 g con il foro da 180 mm) e le cinque chiavette 23 g in tutto"]
-      - ["Foro del piatto", "200 mm, con il bordo smussato. Tiene un piatto piano usa e getta «da 22 cm» (225 mm in alto, 165 mm alla base) e un piatto fondo «da 22 cm» (220 mm in alto, 145 mm alla base): la base scende nel foro e il bordo si appoggia. Va bene per piatti rigidi con il bordo da 215 a 228 mm: sotto i 205 mm il piatto passa attraverso il foro, fra 205 e 215 mm appoggia su pochi millimetri, oltre i 228 mm tocca la clip. Per piatti sottili, molli o molto pieni usa la seconda versione, con il foro da 180 mm. Misura il tuo piatto prima di stampare"]
-      - ["Seconda versione: foro da 180 mm", "il pezzo sinistro e il pezzo centrale esistono anche con il foro del piatto da 180 mm. Il piatto appoggia più in basso, sulla parete, e sotto il bordo restano 22 mm di vassoio per parte con il piatto piano e 20 mm con il fondo (con il foro da 200 mm sono 12 e 10 mm): il peso non può farlo passare. La base dei due piatti (165 e 145 mm) entra lo stesso. Si scaricano al posto dei due pezzi con il foro da 200 mm; il resto è uguale"]
+      - ["Peso", "circa 709 g in tutto: 175 g il pezzo sinistro, 241 g il centrale, 272 g il destro, 17 g la targhetta, 4 g la clip; con il foro da 200 mm il pezzo sinistro pesa 163 g e il centrale 226 g. I pezzi a incastro pesano 178, 243 e 271 g (165 e 227 g con il foro da 200 mm) e le cinque chiavette 23 g in tutto"]
+      - ["Foro del piatto", "180 mm, con il bordo smussato: è più stretto del piatto di 4 cm, così il piatto non può passare dal foro e cadere, nemmeno se è sottile, molle o molto pieno. Tiene un piatto piano usa e getta «da 22 cm» (225 mm in alto, 165 mm alla base) e un piatto fondo «da 22 cm» (220 mm in alto, 145 mm alla base): la base scende nel foro, la parete si appoggia sul bordo del foro e sotto il bordo del piatto restano 22 mm di vassoio per parte con il piatto piano e 20 mm con il fondo. Va bene per piatti con il bordo da 195 a 228 mm: sotto i 185 mm il piatto passa attraverso il foro, fra 185 e 195 mm appoggia su pochi millimetri, oltre i 228 mm il bordo arriva sopra la clip delle posate. Le misure dei piatti vengono dalle schede dei produttori, non da una prova: misura il tuo piatto prima di stampare"]
+      - ["Versione con il foro da 200 mm", "il pezzo sinistro e il pezzo centrale esistono anche con il foro del piatto da 200 mm, in cui il piatto scende di più: circa 13 mm sotto il piano il piatto piano, contro i 6 mm del foro da 180 mm (calcolo con la parete diritta, contando lo smusso di 1,5 mm del foro). Sotto il bordo del piatto restano però solo 12 mm di vassoio per parte con il piatto piano e 10 mm con il fondo: va bene solo per piatti rigidi con il bordo da 215 a 228 mm, e un piatto sottile o molle, se è pieno, può piegarsi e passare. Si scaricano al posto dei due pezzi con il foro da 180 mm; il resto è uguale"]
       - ["Foro del bicchiere", "56 mm. Un bicchiere usa e getta da 200 ml (46 mm alla base, 70 mm alla bocca, alto 97 mm) scende di circa 4 cm e si ferma, a 6 mm dal tavolo. Va bene per bicchieri con la base fra 45 e 56 mm: con la base più stretta il bicchiere scende fino a toccare il tavolo, con la base più larga non entra e si appoggia sul piano"]
-      - ["Bottiglietta d'acqua", "un pozzetto largo 70 mm e profondo 44 mm, fra il bicchiere e la targhetta. Una bottiglietta tonda da mezzo litro (68 mm di diametro, alta 17 cm) scende di circa 35 mm e si ferma su un cono, a qualche millimetro dal tavolo. Va bene per bottiglie larghe da 56 a 69 mm: una più larga non entra, una più stretta di 55 mm passerebbe dal fondo, che è aperto. Il pozzetto tiene solo la parte bassa della bottiglia: non la regge se inclini il vassoio"]
-      - ["Scritte dei posti", "«Piatto», «Posate», «Bicchiere» e «Bottiglia», alte 5 mm e incise di 0,4 mm sul piano, accanto a ogni posto: si vedono appena, e vengono meglio su un piatto di stampa liscio. Abbiamo scelto le parole e non i disegni perché per piatto e bicchiere non c'è un simbolo che tutti leggono allo stesso modo, e a questa misura un disegno inciso si confonde"]
+      - ["Bottiglietta d'acqua", "un pozzetto largo 70 mm e profondo 44 mm, fra il bicchiere e la targhetta. Una bottiglietta tonda da mezzo litro (68 mm di diametro, alta 17 cm) scende di circa 35 mm e si ferma su un cono, a poco più di un centimetro dal tavolo. Va bene per bottiglie larghe da 56 a 69 mm: una più larga non entra, una più stretta di 55 mm passerebbe dal fondo, che è aperto. Il pozzetto tiene solo la parte bassa della bottiglia: non la regge se inclini il vassoio. Nel pozzetto non va il bicchiere: passerebbe dal fondo fino al tavolo"]
+      - ["Scritte dei posti", "«Piatto», «Posate», «Bicchiere» e «Bottiglia», alte 5 mm e incise di 0,4 mm sul piano, accanto a ogni posto: si vedono appena, e vengono meglio su un piatto di stampa liscio. Per farle risaltare ci sono due modi. Con il cambio di filo: i pezzi si stampano capovolti e le scritte sono i primi due strati, quindi stampa i primi due strati di un colore e cambia filo dopo lo strato 2 (strati da 0,2 mm); il piano resta del primo colore e in fondo alle lettere si vede il secondo; dal terzo strato in su tutto il resto, cioè i bordi del piano, le pareti dei fori, le nervature, le pareti di giunzione e i piedini, viene del secondo colore. Il cambio vale per tutti e tre i pezzi. Oppure, a pezzo finito, passa nei solchi un pennarello a vernice a punta fine e togli subito con un panno ciò che resta fuori, dopo averlo provato su un pezzo di scarto. Abbiamo scelto le parole e non i disegni perché per piatto e bicchiere non c'è un simbolo che tutti leggono allo stesso modo, e a questa misura un disegno inciso si confonde"]
       - ["Terza versione", "nel catalogo c'è anche il «Vassoio con le sedi sagomate»: le stoviglie appoggiano sul fondo, dentro sedi con la loro forma, e il vassoio non ha piedini"]
       - ["Posate", "corsia libera larga 5 cm e lunga quanto il vassoio; una clip a molla le tiene appoggiate al piano: sotto il ponte restano 6 mm e la molla, da libera, scende a circa 1 mm. Le posate si infilano sempre nel loro tovagliolo o nella loro bustina, mai libere: la parte che va in bocca non deve toccare la plastica stampata"]
       - ["Piedini", "dodici, alti 45 mm: quattro per pezzo. Servono perché piatto e bicchiere scendono sotto il piano"]
@@ -957,15 +1133,15 @@ oggetti:
       - ["Giunzioni", "due: i pezzi si accostano lungo due pareti alte 23 mm, con una costola che entra in una scanalatura e li tiene allineati; si stringono con cinque viti M4 × 10 a testa svasata e cinque dadi M4. Altre due viti con due dadi fissano la targhetta"]
       - ["Altezza delle lettere", "nominativo 8 mm; righe piccole 4 mm"]
       - ["Spazio per nome e cognome", "fascia libera di 62 × 7 mm sotto il nominativo, sulla targhetta"]
-      - ["Scritte di un altro colore", "la targhetta si stampa da sola, con le scritte in alto. Per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di colore al primo strato delle scritte, cioè dopo lo strato 18 con strati da 0,2 mm (altezza 3,8 mm); oppure stampa la targhetta con un filo di un altro colore rispetto al vassoio"]
-      - ["Posizione di stampa", "cinque file, già orientati, senza supporti: i tre pezzi del vassoio sono capovolti, con il piano sul piatto di stampa, la clip è coricata su un fianco; serve un piatto di stampa di almeno 25 × 20 cm (non entra nelle stampanti da 22 × 22 cm). I pezzi sono lunghi 24 cm: se serve, ruotali nel programma di stampa lungo il lato lungo del piatto, senza capovolgerli"]
+      - ["Scritte di un altro colore", "la targhetta si stampa da sola, con le scritte in alto. Per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di colore al primo strato delle scritte, cioè dopo lo strato 18 con strati da 0,2 mm (altezza 3,8 mm); oppure stampa la targhetta con un filo di un altro colore rispetto al vassoio. Il cambio di filo è facoltativo e si fa anche con una stampante a un colore solo: la stampa si ferma a quello strato, cambi il filo a mano e riparte. Senza cambio il pezzo esce di un colore solo e le scritte si leggono per il rilievo"]
+      - ["Posizione di stampa", "cinque file, già orientati, senza supporti: i tre pezzi del vassoio sono capovolti, con il piano sul piatto di stampa, la clip è coricata su un fianco; serve un piatto di stampa di almeno 26 × 20 cm, perché intorno a pezzi lunghi 24 cm resti un centimetro di margine (non entra nelle stampanti da 22 × 22 cm). I pezzi sono lunghi 24 cm: se serve, ruotali nel programma di stampa lungo il lato lungo del piatto, senza capovolgerli"]
       - ["Precisione", "la clip, le sedi dei dadi e le costole di allineamento sono disegnate per una stampante da tavolo ben regolata. Se ordini la stampa a un servizio, che può scostarsi di mezzo millimetro, la clip può non agganciare: in quel caso si lima il dente o si allarga la fessura"]
       - ["Da sapere", "il vassoio porta le stoviglie, non è un oggetto per alimenti: fra gli strati della plastica stampata restano solchi che non si puliscono a fondo. Pane, frutta e cibo stanno sempre nel piatto, mai appoggiati sul vassoio. Si lava a mano con acqua tiepida subito dopo l'uso: il PETG comincia a deformarsi a 68 gradi, quindi niente lavastoviglie e niente piatti o bevande bollenti. È pensato per circa 1,5 kg fra stoviglie e contenuto: è una stima di calcolo, non una prova di carico. Portalo con due mani"]
       - ["Senza viti di metallo", "il vassoio si può fare tutto di plastica stampata. Per le giunzioni ci sono i pezzi «a incastro»: al posto dei fori hanno cinque sedi a coda di rondine, a cavallo delle giunzioni, alte quanto la parete. In ogni sede si preme da sotto una chiavetta a farfalla (collo di 6 mm, ali di 12 mm); un dente lungo la giunzione entra in una gola del pezzo accanto e tiene i pezzi alla stessa altezza. Per la targhetta ci sono due rivetti, che entrano negli stessi fori delle viti. I pezzi a incastro non hanno i fori per le viti: scegli prima di stampare. Le chiavette sono tenute dall'attrito e lasciano un po' di gioco: sotto carico la giunzione può aprirsi di qualche decimo di millimetro e il vassoio flette più che con le viti. Incastro e rivetti sono calcolati, non provati in stampa né sotto carico: stampa prima il provino, che trovi fra i file, e per un uso di tutti i giorni o per carichi vicini al limite usa le viti"]
     materiale: "PETG"
     colore: "blu"
     occorrente:
-      - "circa 700 g di filo PETG per tutti i pezzi"
+      - "circa 730 g di filo PETG per tutti i pezzi"
       - "7 viti M4 lunghe 10 mm a testa svasata e 7 dadi esagonali M4 (si trovano in ferramenta); non servono rondelle: le teste entrano nelle svasature e i dadi nelle loro sedi"
       - "una chiave a brugola da 2,5 mm, oppure un cacciavite a croce se le viti hanno la testa a croce"
       - "oppure, senza comprare nulla: i tre pezzi a incastro con le cinque chiavette e i due rivetti della targhetta, che trovi fra i file da scaricare (circa 25 g di filo in più)"
@@ -999,7 +1175,7 @@ oggetti:
       quota_scritte: 3.6
       sagoma_z: -9.4   # contorno letto dentro il fondo del vassoio, sotto la targhetta
       camera: { da: [-0.35, -0.75, 0.6], su: [0, 0, 1] }
-      insieme: { file: "vassoio-sagomato-montato.stl", parte: "montato3" }   # nelle anteprime il vassoio è montato
+      insieme: { file: "vassoio-sagomato-montato.stl", parte: "montato3", incisioni_z: -8.6 }   # nelle anteprime il vassoio è montato
       nome: { zona: [-31, -0.5, 31, 6.5], lato: "fronte" }
     parametri:
       tipo: "vassoio"
@@ -1029,13 +1205,13 @@ oggetti:
       - ["Sede del bicchiere", "un bicchierino alto 45 mm, largo 49 mm in basso e 61 mm in alto. Un bicchiere usa e getta da 200 ml (46 mm alla base, 70 mm alla bocca, alto 97 mm) appoggia sul fondo ed esce per metà, così si prende bene. Un bicchiere con la base più larga di 49 mm si ferma più in alto e resta tenuto per meno"]
       - ["Sede della bottiglietta", "un anello largo 70 mm e alto 45 mm, per una bottiglietta tonda da mezzo litro (68 mm di diametro, alta 17 cm). Va bene per bottiglie larghe fino a 69 mm; una più stretta ci sta, ma balla. L'anello tiene solo la parte bassa della bottiglia: non la regge se inclini il vassoio"]
       - ["Posate", "appoggiano su due ponticelli alti 9 mm, a 8 cm l'uno dall'altro, così i manici restano sollevati e si prendono bene. La clip a molla si aggancia a uno dei due ponticelli: sotto il ponte restano 6 mm e la molla, da libera, scende a circa 1 mm. Le posate si infilano sempre nel loro tovagliolo o nella loro bustina, mai libere: la parte che va in bocca non deve toccare la plastica stampata"]
-      - ["Scritte dei posti", "«Piatto» e «Posate» sul fondo, davanti al loro posto; «Bicchiere» e «Bottiglia» sul fondo della loro sede, perché fra due sedi alte non si vedrebbero. Sono alte 5 mm e incise di 0,4 mm: si vedono appena. Abbiamo scelto le parole e non i disegni perché per piatto e bicchiere non c'è un simbolo che tutti leggono allo stesso modo, e a questa misura un disegno inciso si confonde"]
+      - ["Scritte dei posti", "«Piatto» e «Posate» sul fondo, davanti al loro posto; «Bicchiere» e «Bottiglia» sul fondo della loro sede, perché fra due sedi alte non si vedrebbero. Sono alte 5 mm e incise di 0,4 mm: si vedono appena. Per farle risaltare ci sono due modi. Con il cambio di filo: il fondo è spesso 2,4 mm e le lettere scendono fino a 2 mm, quindi cambia filo dopo lo strato 10 (strati da 0,2 mm); in fondo alle lettere si vede il primo colore, mentre il piano e tutto ciò che sta sopra, bordi e sedi compresi, prendono il secondo. Oppure, a pezzo finito, passa nei solchi un pennarello a vernice a punta fine e togli subito con un panno ciò che resta fuori, dopo averlo provato su un pezzo di scarto. Abbiamo scelto le parole e non i disegni perché per piatto e bicchiere non c'è un simbolo che tutti leggono allo stesso modo, e a questa misura un disegno inciso si confonde"]
       - ["Manici", "i due lati corti salgono inclinati verso l'esterno per 17 mm: sotto il bordo entra la punta delle dita, quanto basta per sollevare il vassoio dal tavolo e poi prenderlo meglio"]
       - ["Giunzioni", "due: i pezzi si accostano lungo pareti alte 16 mm e si stringono con cinque viti M4 × 10 a testa svasata e cinque dadi M4, che si lasciano cadere dall'alto in un'asola. La prima giunzione passa per il centro del piatto: lì le pareti stanno fuori dall'anello, due tratti da 2 cm con una vite ciascuno. Altre due viti con due dadi fissano la targhetta: i dadi entrano di lato nei due appoggi"]
       - ["Altezza delle lettere", "nominativo 8 mm; righe piccole 4 mm"]
       - ["Spazio per nome e cognome", "fascia libera di 62 × 7 mm sotto il nominativo, sulla targhetta"]
-      - ["Scritte di un altro colore", "la targhetta si stampa da sola, con le scritte in alto. Per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di colore al primo strato delle scritte, cioè dopo lo strato 18 con strati da 0,2 mm (altezza 3,8 mm); oppure stampa la targhetta con un filo di un altro colore rispetto al vassoio"]
-      - ["Posizione di stampa", "cinque file, già orientati, senza supporti: i tre pezzi del vassoio sono diritti, con il fondo sul piatto di stampa, la clip è coricata su un fianco; serve un piatto di stampa di almeno 25 × 20 cm (non entra nelle stampanti da 22 × 22 cm). I pezzi sono lunghi 24 cm: se serve, ruotali nel programma di stampa lungo il lato lungo del piatto, senza capovolgerli. Con pezzi così larghi e sottili conviene un bordo di adesione di qualche millimetro"]
+      - ["Scritte di un altro colore", "la targhetta si stampa da sola, con le scritte in alto. Per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di colore al primo strato delle scritte, cioè dopo lo strato 18 con strati da 0,2 mm (altezza 3,8 mm); oppure stampa la targhetta con un filo di un altro colore rispetto al vassoio. Il cambio di filo è facoltativo e si fa anche con una stampante a un colore solo: la stampa si ferma a quello strato, cambi il filo a mano e riparte. Senza cambio il pezzo esce di un colore solo e le scritte si leggono per il rilievo"]
+      - ["Posizione di stampa", "cinque file, già orientati, senza supporti: i tre pezzi del vassoio sono diritti, con il fondo sul piatto di stampa, la clip è coricata su un fianco; serve un piatto di stampa di almeno 26 × 20 cm, perché intorno a pezzi lunghi 24 cm resti un centimetro di margine (non entra nelle stampanti da 22 × 22 cm). I pezzi sono lunghi 24 cm: se serve, ruotali nel programma di stampa lungo il lato lungo del piatto, senza capovolgerli. Con pezzi così larghi e sottili conviene un bordo di adesione di qualche millimetro"]
       - ["Precisione", "la clip e i canali dei dadi sono disegnati per una stampante da tavolo ben regolata. Se ordini la stampa a un servizio, che può scostarsi di mezzo millimetro, la clip può non agganciare: in quel caso si lima il dente o si allarga la fessura"]
       - ["Differenze dall'altro vassoio", "nel «Vassoio porta piatto, bicchiere e posate» le stoviglie restano appese in fori più stretti del loro bordo e il vassoio sta su dodici piedini; qui appoggiano sul fondo e il vassoio è basso. Questo ha il fondo chiuso: se si rovescia un po' d'acqua resta nel vassoio"]
       - ["Da sapere", "il vassoio porta le stoviglie, non è un oggetto per alimenti: fra gli strati della plastica stampata restano solchi che non si puliscono a fondo. Pane, frutta e cibo stanno sempre nel piatto, mai appoggiati sul vassoio. Si lava a mano con acqua tiepida subito dopo l'uso: il PETG comincia a deformarsi a 68 gradi, quindi niente lavastoviglie e niente piatti o bevande bollenti. Tienilo intorno a 1 kg fra stoviglie e contenuto: il fondo è sottile e non è stato provato sotto carico. Portalo con due mani, una per manico, e tienilo in piano: la bottiglietta è tenuta solo per i primi 4 cm"]
@@ -1106,7 +1282,7 @@ oggetti:
       - ["Faccia per scrivere", "spessa 2,4 mm e liscia, perché nasce sul piatto di stampa; sul retro ha nervature alte 10 mm che la tengono rigida e la fanno appoggiare in piano sul tavolo"]
       - ["Giunzione", "le due metà si accostano a metà altezza e una piastra sul retro, spessa 4,6 mm, le tiene unite con quattro viti M4 × 10 a testa svasata e quattro dadi M4. Ogni dado scorre in un canale che parte dalla giunzione e resta sotto la plastica: così la vite stringe la piastra contro la tavoletta. Le punte delle viti si fermano a 2 mm dalla faccia per scrivere. Altre due viti con due dadi fissano la molla e altre due la targhetta"]
       - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4 mm"]
-      - ["Scritte di un altro colore", "la targhetta si stampa da sola, con le scritte in alto. Per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di colore al primo strato delle scritte, cioè dopo lo strato 18 con strati da 0,2 mm (altezza 3,8 mm); oppure stampa la targhetta con un filo di un altro colore"]
+      - ["Scritte di un altro colore", "la targhetta si stampa da sola, con le scritte in alto. Per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di colore al primo strato delle scritte, cioè dopo lo strato 18 con strati da 0,2 mm (altezza 3,8 mm); oppure stampa la targhetta con un filo di un altro colore. Il cambio di filo è facoltativo e si fa anche con una stampante a un colore solo: la stampa si ferma a quello strato, cambi il filo a mano e riparte. Senza cambio il pezzo esce di un colore solo e le scritte si leggono per il rilievo"]
       - ["Posizione di stampa", "cinque file, già orientati, senza supporti: le due metà sono capovolte, con la faccia per scrivere sul piatto di stampa; la molla è coricata su un fianco; serve un piatto di stampa di almeno 25 × 20 cm"]
       - ["Precisione", "la molla, i canali e le sedi dei dadi sono disegnati per una stampante da tavolo ben regolata. Con un servizio di stampa, che può scostarsi di mezzo millimetro, un dado può entrare a fatica: si aiuta con la vite"]
       - ["Da sapere", "la molla è di plastica: se la apri oltre il necessario o la lasci a lungo con un pacco di fogli troppo spesso, perde forza. Non lasciare il portablocco al sole dietro un vetro: il PETG comincia a deformarsi a 68 gradi"]
@@ -1169,7 +1345,7 @@ oggetti:
       - ["Faccia per scrivere", "spessa 2,4 mm e liscia, perché nasce sul piatto di stampa; sul retro ha nervature alte 10 mm che la tengono rigida e la fanno appoggiare in piano sul tavolo"]
       - ["Giunzione", "le due metà si accostano a metà altezza e una piastra sul retro, spessa 4,6 mm, le tiene unite con quattro viti M4 × 10 a testa svasata e quattro dadi M4. Ogni dado scorre in un canale che parte dalla giunzione e resta sotto la plastica: così la vite stringe la piastra contro la tavoletta. Le punte delle viti si fermano a 2 mm dalla faccia per scrivere. Altre due viti con due dadi fissano la molla e altre due la targhetta"]
       - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4 mm"]
-      - ["Scritte di un altro colore", "la targhetta si stampa da sola, con le scritte in alto. Per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di colore al primo strato delle scritte, cioè dopo lo strato 18 con strati da 0,2 mm (altezza 3,8 mm); oppure stampa la targhetta con un filo di un altro colore"]
+      - ["Scritte di un altro colore", "la targhetta si stampa da sola, con le scritte in alto. Per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di colore al primo strato delle scritte, cioè dopo lo strato 18 con strati da 0,2 mm (altezza 3,8 mm); oppure stampa la targhetta con un filo di un altro colore. Il cambio di filo è facoltativo e si fa anche con una stampante a un colore solo: la stampa si ferma a quello strato, cambi il filo a mano e riparte. Senza cambio il pezzo esce di un colore solo e le scritte si leggono per il rilievo"]
       - ["Posizione di stampa", "cinque file, già orientati, senza supporti: le due metà sono capovolte, con la faccia per scrivere sul piatto di stampa; la molla è coricata su un fianco; serve un piatto di stampa di almeno 20 × 17 cm"]
       - ["Precisione", "la molla, i canali e le sedi dei dadi sono disegnati per una stampante da tavolo ben regolata. Con un servizio di stampa, che può scostarsi di mezzo millimetro, un dado può entrare a fatica: si aiuta con la vite"]
       - ["Da sapere", "la molla è di plastica: se la apri oltre il necessario o la lasci a lungo con un pacco di fogli troppo spesso, perde forza. Non lasciare il portablocco al sole dietro un vetro: il PETG comincia a deformarsi a 68 gradi"]
@@ -1226,7 +1402,7 @@ oggetti:
       - ["Scomparti", "due, profondi 90 mm: quello di sinistra è largo 69 mm, quello di destra 35 mm; pareti da 2 mm"]
       - ["Targhetta", "102 × 19 mm, spessa 2,4 mm (3,4 mm con le scritte), con i due lati lunghi smussati a 45 gradi: scorre in una guida a coda di rondine davanti all'oggetto, senza viti né colla. Entra da destra e si ferma a sinistra"]
       - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4 mm"]
-      - ["Scritte di un altro colore", "la targhetta si stampa da sola, con le scritte in alto. Per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di colore al primo strato delle scritte, cioè dopo lo strato 12 con strati da 0,2 mm (altezza 2,6 mm); oppure stampala con un filo di un altro colore"]
+      - ["Scritte di un altro colore", "la targhetta si stampa da sola, con le scritte in alto. Per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di colore al primo strato delle scritte, cioè dopo lo strato 12 con strati da 0,2 mm (altezza 2,6 mm); oppure stampala con un filo di un altro colore. Il cambio di filo è facoltativo e si fa anche con una stampante a un colore solo: la stampa si ferma a quello strato, cambi il filo a mano e riparte. Senza cambio il pezzo esce di un colore solo e le scritte si leggono per il rilievo"]
       - ["Posizione di stampa", "due file, già orientati, senza supporti: il portapenne in piedi, la targhetta in piano con le scritte in alto"]
       - ["Precisione", "fra la targhetta e la guida ci sono 0,2 mm per parte: con una stampante da tavolo ben regolata entra a pressione. Se resta lenta basta una goccia di colla; se non entra, passa una lima sui due lati smussati"]
     materiale: "PETG"
@@ -1272,7 +1448,7 @@ oggetti:
       - ["Vano delle graffette", "30 × 79 mm, profondo 21 mm, con gli angoli arrotondati per prendere bene le graffette"]
       - ["Targhetta", "102 × 19 mm, spessa 2,4 mm (3,4 mm con le scritte), con i due lati lunghi smussati a 45 gradi: scorre in una guida a coda di rondine davanti all'oggetto, senza viti né colla. Entra da destra e si ferma a sinistra"]
       - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4 mm"]
-      - ["Scritte di un altro colore", "la targhetta si stampa da sola, con le scritte in alto. Per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di colore al primo strato delle scritte, cioè dopo lo strato 12 con strati da 0,2 mm (altezza 2,6 mm); oppure stampala con un filo di un altro colore"]
+      - ["Scritte di un altro colore", "la targhetta si stampa da sola, con le scritte in alto. Per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di colore al primo strato delle scritte, cioè dopo lo strato 12 con strati da 0,2 mm (altezza 2,6 mm); oppure stampala con un filo di un altro colore. Il cambio di filo è facoltativo e si fa anche con una stampante a un colore solo: la stampa si ferma a quello strato, cambi il filo a mano e riparte. Senza cambio il pezzo esce di un colore solo e le scritte si leggono per il rilievo"]
       - ["Posizione di stampa", "due file, già orientati, senza supporti: tutti e due in piano, la targhetta con le scritte in alto"]
       - ["Precisione", "fra la targhetta e la guida ci sono 0,2 mm per parte: con una stampante da tavolo ben regolata entra a pressione. Se resta lenta basta una goccia di colla; se non entra, passa una lima sui due lati smussati"]
     materiale: "PETG"
@@ -1315,6 +1491,7 @@ oggetti:
       - ["Sedi", "4, diametro 15,5 mm e profonde 34 mm: le pile AA misurano al massimo 14,5 × 50,5 mm (IEC 60086-2) e sporgono di circa 16 mm"]
       - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4 mm, sul lato largo"]
       - ["Spazio per nome e cognome", "fascia libera di 60 × 7 mm sotto il nominativo"]
+      - ["Scritte di un altro colore", "per come il pezzo è girato sul piatto di stampa, le scritte non sono l'ultimo strato: un cambio di filo non basta a colorarle. Per metterle in evidenza, a pezzo finito ripassa il rilievo con un pennarello a vernice a punta fine. Provalo prima su un pezzo di scarto dello stesso filo: la tenuta dipende dal materiale. Con un colore solo non devi fare nulla: le scritte si leggono per il rilievo"]
       - ["Posizione di stampa", "in piedi, con le sedi aperte in alto, già orientato nel file, senza supporti"]
     materiale: "PETG"
     colore: "blu"
@@ -1352,6 +1529,7 @@ oggetti:
       - ["Sedi", "4, diametro 11,5 mm e profonde 32 mm: le pile AAA misurano al massimo 10,5 × 44,5 mm (IEC LR03, scheda Energizer EN92) e sporgono di circa 12 mm"]
       - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4 mm, sul lato largo"]
       - ["Spazio per nome e cognome", "fascia libera di 56 × 7 mm sotto il nominativo"]
+      - ["Scritte di un altro colore", "per come il pezzo è girato sul piatto di stampa, le scritte non sono l'ultimo strato: un cambio di filo non basta a colorarle. Per metterle in evidenza, a pezzo finito ripassa il rilievo con un pennarello a vernice a punta fine. Provalo prima su un pezzo di scarto dello stesso filo: la tenuta dipende dal materiale. Con un colore solo non devi fare nulla: le scritte si leggono per il rilievo"]
       - ["Posizione di stampa", "in piedi, con le sedi aperte in alto, già orientato nel file, senza supporti"]
     materiale: "PETG"
     colore: "blu"
@@ -1390,6 +1568,7 @@ oggetti:
       - ["Alloggi nano SIM", "2, da 9,8 × 13,3 mm e profondi 0,9 mm: le nano SIM misurano 8,8 × 12,3 × 0,67 mm (ETSI TS 102 221)"]
       - ["Incavi per il dito", "uno per alloggio, sul bordo basso, con 1 mm di plastica sotto"]
       - ["Spazio per nome e cognome", "fascia libera di 60 × 7 mm sotto il nominativo"]
+      - ["Scritte di un altro colore", "le scritte sono in rilievo di 1 mm in cima, l'ultimo millimetro del pezzo: per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di filo al primo strato delle scritte, cioè dopo lo strato 18 con strati da 0,2 mm (altezza 3,8 mm). Il cambio di filo è facoltativo e si fa anche con una stampante a un colore solo: la stampa si ferma a quello strato, cambi il filo a mano e riparte. Senza cambio il pezzo esce di un colore solo e le scritte si leggono per il rilievo"]
       - ["Posizione di stampa", "in piano, già orientato nel file, senza supporti"]
     materiale: "PETG"
     colore: "blu"
@@ -1428,6 +1607,7 @@ oggetti:
       - ["Cornice", "in rilievo di 1 mm, larga 1,2 mm, che irrigidisce il segnalibro"]
       - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4 mm, in alto"]
       - ["Spazio per nome e cognome", "fascia libera di 50 × 7 mm sotto il nominativo"]
+      - ["Scritte di un altro colore", "le scritte sono in rilievo di 1 mm in cima, l'ultimo millimetro del pezzo: per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di filo al primo strato delle scritte, cioè dopo lo strato 10 con strati da 0,2 mm (altezza 2,2 mm). Con le scritte cambiano colore anche la bandiera e la cornice, dove c'è, perché sono in rilievo alla stessa altezza. Il cambio di filo è facoltativo e si fa anche con una stampante a un colore solo: la stampa si ferma a quello strato, cambi il filo a mano e riparte. Senza cambio il pezzo esce di un colore solo e le scritte si leggono per il rilievo"]
       - ["Posizione di stampa", "in piano, già orientato nel file, senza supporti"]
     materiale: "PETG"
     colore: "blu"
@@ -1463,6 +1643,7 @@ oggetti:
       - ["Fori", "2 per viti a testa svasata da 4 mm (foro 4,4 mm, svasatura 8,8 mm: la testa di una vite per legno da 4 mm è larga 8 mm e resta a filo), a 78 mm l'uno dall'altro, lontani dalle scritte"]
       - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4 mm"]
       - ["Spazio per nome e cognome", "fascia libera di 60 × 7 mm sotto il nominativo"]
+      - ["Scritte di un altro colore", "le scritte sono in rilievo di 1 mm in cima, l'ultimo millimetro del pezzo: per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di filo al primo strato delle scritte, cioè dopo lo strato 15 con strati da 0,2 mm (altezza 3,2 mm). Con le scritte cambiano colore anche la bandiera e la cornice, dove c'è, perché sono in rilievo alla stessa altezza. Il cambio di filo è facoltativo e si fa anche con una stampante a un colore solo: la stampa si ferma a quello strato, cambi il filo a mano e riparte. Senza cambio il pezzo esce di un colore solo e le scritte si leggono per il rilievo"]
       - ["Posizione di stampa", "in piano, già orientato nel file, senza supporti"]
     materiale: "PETG"
     colore: "blu"
@@ -1514,7 +1695,7 @@ oggetti:
       - ["Altezza delle lettere", "nominativo 8 mm; righe piccole 4 mm"]
       - ["Spazio per nome e cognome", "fascia libera di 68 × 7 mm sotto il nominativo"]
       - ["Posizione di stampa", "due file, tutti e due in piano, già orientati, senza supporti; serve un piatto di stampa di almeno 25 × 20 cm"]
-      - ["Scritte di un altro colore", "le scritte sono l'ultimo millimetro del pezzo con il nominativo. Per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di colore al primo strato delle scritte, cioè dopo lo strato 54 con strati da 0,2 mm (altezza 11,0 mm): la stampante si ferma, cambi il filo e finisce le scritte con il secondo colore"]
+      - ["Scritte di un altro colore", "le scritte sono l'ultimo millimetro del pezzo con il nominativo. Per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di colore al primo strato delle scritte, cioè dopo lo strato 54 con strati da 0,2 mm (altezza 11,0 mm): la stampante si ferma, cambi il filo e finisce le scritte con il secondo colore. Il cambio di filo è facoltativo e si fa anche con una stampante a un colore solo: la stampa si ferma a quello strato, cambi il filo a mano e riparte. Senza cambio il pezzo esce di un colore solo e le scritte si leggono per il rilievo"]
       - ["Senza viti di metallo", "chi non vuole comprare viti e dadi può stampare i quattro rivetti, che trovi fra i file: hanno la testa svasata e due denti in punta, entrano negli stessi fori e si agganciano nella sede del dado. Si stampano coricati, uniti da una barretta da tagliare. Tengono insieme i due pezzi con un po' di gioco e, una volta scattati, si tolgono solo rompendoli: per abiti pesanti o per un uso di tutti i giorni restano meglio le viti. Sono calcolati, non provati in stampa"]
     materiale: "PETG"
     colore: "blu"
@@ -1560,6 +1741,7 @@ oggetti:
       - ["Presa", "cinque denti alti 1,3 mm sul lato che appoggia a terra"]
       - ["Foro", "diametro 9 mm, in coda, per un moschettone o un cordino"]
       - ["Scritte", "sul fianco: nominativo alto 6,5 mm e «PC Genzano di Roma» alto 4 mm"]
+      - ["Scritte di un altro colore", "le scritte sono in rilievo di 1 mm in cima, l'ultimo millimetro del pezzo: per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di filo al primo strato delle scritte, cioè dopo lo strato 125 con strati da 0,2 mm (altezza 25,2 mm). Il cambio di filo è facoltativo e si fa anche con una stampante a un colore solo: la stampa si ferma a quello strato, cambi il filo a mano e riparte. Senza cambio il pezzo esce di un colore solo e le scritte si leggono per il rilievo"]
       - ["Posizione di stampa", "sdraiato su un fianco, già orientato nel file, senza supporti"]
     materiale: "TPU 95A"
     colore: "arancione"
@@ -1597,6 +1779,7 @@ oggetti:
       - ["Aggancio", "anello aperto a sinistra: foro da 8,6 mm, bocca da 7,2 mm, parete da 3,5 mm. Il file pronto è pensato per un filo da 8 mm, una misura d'esempio: misura il tuo e, se è diverso, cambia «filo» nel modello"]
       - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4 mm"]
       - ["Spazio per nome e cognome", "fascia libera di 60 × 7 mm sotto il nominativo"]
+      - ["Scritte di un altro colore", "le scritte sono in rilievo di 1 mm in cima, l'ultimo millimetro del pezzo: per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di filo al primo strato delle scritte, cioè dopo lo strato 15 con strati da 0,2 mm (altezza 3,2 mm). Con le scritte cambiano colore anche la bandiera e la cornice, dove c'è, perché sono in rilievo alla stessa altezza. Il cambio di filo è facoltativo e si fa anche con una stampante a un colore solo: la stampa si ferma a quello strato, cambi il filo a mano e riparte. Senza cambio il pezzo esce di un colore solo e le scritte si leggono per il rilievo"]
       - ["Posizione di stampa", "in piano, già orientata nel file, senza supporti"]
     materiale: "PETG"
     colore: "blu"
@@ -1638,6 +1821,7 @@ oggetti:
       - ["Spazio interno", "110 × 64 mm, alto 30 mm fino al coperchio: qualche paio di guanti piegati, quanti dipende da taglia e spessore"]
       - ["Coperchio", "scorre in due scanalature alte 3 mm e profonde 1,5 mm, con 0,5 mm di gioco per lato, quanto la tolleranza dei servizi di stampa; la parete dal lato d'ingresso è più bassa. Non ha un fermo: provalo prima e tieni la scatola con il coperchio in alto"]
       - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4 mm"]
+      - ["Scritte di un altro colore", "le scritte sono in rilievo di 1 mm in cima, l'ultimo millimetro del coperchio: per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di filo al primo strato delle scritte, cioè dopo lo strato 10 con strati da 0,2 mm (altezza 2,2 mm). Il cambio di filo è facoltativo e si fa anche con una stampante a un colore solo: la stampa si ferma a quello strato, cambi il filo a mano e riparte. Senza cambio il pezzo esce di un colore solo e le scritte si leggono per il rilievo"]
       - ["Posizione di stampa", "due file, tutti e due in piano, già orientati, senza supporti"]
     materiale: "PETG"
     colore: "blu"
@@ -1681,6 +1865,7 @@ oggetti:
       - ["Spazio interno", "diametro 18 mm, profondo 68 mm"]
       - ["Filetto", "a un principio, passo 5 mm, alto 10 mm, con 0,5 mm di gioco, quanto la tolleranza dei servizi di stampa; il tappo chiude sulla spalla del corpo con 0,5 mm di margine in cima"]
       - ["Tappo", "diametro 29 mm, alto 12,5 mm, con un'aletta e un foro da 4 mm per il cordino"]
+      - ["Scritte di un altro colore", "per come il pezzo è girato sul piatto di stampa, le scritte non sono l'ultimo strato: un cambio di filo non basta a colorarle. Per metterle in evidenza, a pezzo finito ripassa il rilievo con un pennarello a vernice a punta fine. Provalo prima su un pezzo di scarto dello stesso filo: la tenuta dipende dal materiale. Con un colore solo non devi fare nulla: le scritte si leggono per il rilievo"]
       - ["Posizione di stampa", "due file, tutti e due in piedi, già orientati, senza supporti"]
     materiale: "PETG"
     colore: "arancione"
@@ -1717,6 +1902,7 @@ oggetti:
       - ["Peso", "circa 108 g"]
       - ["Anello", "largo 80 mm, spesso 3,5 mm, foro da 40,3 mm e bocca da 36,5 mm: per il corpo da 39,67 mm delle Maglite a 2 o 3 pile D (scheda del produttore, maglite.com, consultata il 24/11/2026); con i 38,1 mm della ML300LX la torcia ha 2,2 mm di gioco e si muove un poco"]
       - ["Fori", "3 per viti a testa svasata da 4 mm (foro 4,4 mm, svasatura 8,8 mm: la testa di una vite per legno da 4 mm è larga 8 mm e resta a filo): due nella piastra, uno sotto l'anello"]
+      - ["Scritte di un altro colore", "per come il pezzo è girato sul piatto di stampa, le scritte non sono l'ultimo strato: un cambio di filo non basta a colorarle. Per metterle in evidenza, a pezzo finito ripassa il rilievo con un pennarello a vernice a punta fine. Provalo prima su un pezzo di scarto dello stesso filo: la tenuta dipende dal materiale. Con un colore solo non devi fare nulla: le scritte si leggono per il rilievo"]
       - ["Posizione di stampa", "in piedi sul lato sinistro, già orientato nel file, senza supporti"]
     materiale: "ASA"
     colore: "blu"
@@ -1759,6 +1945,7 @@ oggetti:
       - ["Spazio per l'aletta", "20,5 mm: 2 cm sono una misura d'esempio, non di un mezzo preciso. Misura la tua aletta e cambia «spessore_parasole» nel modello"]
       - ["Linguetta dietro", "alta 24 mm e spessa 4 mm; ponte sopra l'aletta spesso 3 mm"]
       - ["Occhiello", "diametro 18 mm, foro da 8 mm per anello o moschettone"]
+      - ["Scritte di un altro colore", "per come il pezzo è girato sul piatto di stampa, le scritte non sono l'ultimo strato: un cambio di filo non basta a colorarle. Per metterle in evidenza, a pezzo finito ripassa il rilievo con un pennarello a vernice a punta fine. Provalo prima su un pezzo di scarto dello stesso filo: la tenuta dipende dal materiale. Con un colore solo non devi fare nulla: le scritte si leggono per il rilievo"]
       - ["Posizione di stampa", "in piedi sul lato sinistro, già orientato nel file, senza supporti"]
     materiale: "ASA"
     colore: "blu"
@@ -1805,6 +1992,7 @@ oggetti:
       - ["Scritte", "incise 0,6 mm sul retro: nominativo alto 7 mm, righe piccole 4,5 mm"]
       - ["Spazio per nome e cognome", "fascia di 56 × 7 mm in basso sul retro, incisa"]
       - ["Limiti", "non protegge il vetro della fotocamera; copre il carrellino della SIM, che si raggiunge togliendo la cover; il fondo non entra nelle basi di ricarica; non è dichiarata conforme alle linee guida di Apple per gli accessori"]
+      - ["Scritte di un altro colore", "le scritte sono incise di 0,6 mm sul retro, che sta sul piatto di stampa. Per farle risaltare, stampa i primi tre strati di un colore e cambia filo dopo lo strato 3 (strati da 0,2 mm): in fondo alle lettere si vede il secondo colore. Del primo colore resta solo la pelle esterna del retro, spessa 0,6 mm; fianchi e bordi escono del secondo. Il cambio è facoltativo e si fa anche con una stampante a un colore solo: senza, la cover esce di un colore e le scritte si leggono per l'incisione. Non consigliamo pennarelli o vernici: su un materiale morbido e sempre in mano si staccano"]
       - ["Posizione di stampa", "con il retro sul piano, già orientata nel file, senza supporti"]
     materiale: "TPU 95A"
     colore: "nero"
@@ -1847,6 +2035,7 @@ oggetti:
       - ["Scritte", "incise 0,6 mm sul retro: nominativo alto 7 mm, righe piccole 4,5 mm"]
       - ["Spazio per nome e cognome", "fascia di 56 × 7 mm in basso sul retro, incisa"]
       - ["Limiti", "non protegge il vetro della fotocamera; copre il carrellino della SIM, che si raggiunge togliendo la cover; il fondo non entra nelle basi di ricarica; non è dichiarata conforme alle linee guida di Apple per gli accessori"]
+      - ["Scritte di un altro colore", "le scritte sono incise di 0,6 mm sul retro, che sta sul piatto di stampa. Per farle risaltare, stampa i primi tre strati di un colore e cambia filo dopo lo strato 3 (strati da 0,2 mm): in fondo alle lettere si vede il secondo colore. Del primo colore resta solo la pelle esterna del retro, spessa 0,6 mm; fianchi e bordi escono del secondo. Il cambio è facoltativo e si fa anche con una stampante a un colore solo: senza, la cover esce di un colore e le scritte si leggono per l'incisione. Non consigliamo pennarelli o vernici: su un materiale morbido e sempre in mano si staccano"]
       - ["Posizione di stampa", "con il retro sul piano, già orientata nel file, senza supporti"]
     materiale: "TPU 95A"
     colore: "nero"
@@ -1889,6 +2078,7 @@ oggetti:
       - ["Scritte", "incise 0,6 mm sul retro: nominativo alto 7 mm, righe piccole 4,5 mm"]
       - ["Spazio per nome e cognome", "fascia di 56 × 7 mm in basso sul retro, incisa"]
       - ["Limiti", "non protegge il vetro della fotocamera; copre il carrellino della SIM, che si raggiunge togliendo la cover; il fondo non entra nelle basi di ricarica; non è dichiarata conforme alle linee guida di Apple per gli accessori"]
+      - ["Scritte di un altro colore", "le scritte sono incise di 0,6 mm sul retro, che sta sul piatto di stampa. Per farle risaltare, stampa i primi tre strati di un colore e cambia filo dopo lo strato 3 (strati da 0,2 mm): in fondo alle lettere si vede il secondo colore. Del primo colore resta solo la pelle esterna del retro, spessa 0,6 mm; fianchi e bordi escono del secondo. Il cambio è facoltativo e si fa anche con una stampante a un colore solo: senza, la cover esce di un colore e le scritte si leggono per l'incisione. Non consigliamo pennarelli o vernici: su un materiale morbido e sempre in mano si staccano"]
       - ["Posizione di stampa", "con il retro sul piano, già orientata nel file, senza supporti"]
     materiale: "TPU 95A"
     colore: "nero"
@@ -1931,6 +2121,7 @@ oggetti:
       - ["Scritte", "incise 0,6 mm sul retro: nominativo alto 7 mm, righe piccole 4,5 mm"]
       - ["Spazio per nome e cognome", "fascia di 56 × 7 mm in basso sul retro, incisa"]
       - ["Limiti", "non protegge il vetro della fotocamera; copre il carrellino della SIM, che si raggiunge togliendo la cover; il fondo non entra nelle basi di ricarica; non è dichiarata conforme alle linee guida di Apple per gli accessori"]
+      - ["Scritte di un altro colore", "le scritte sono incise di 0,6 mm sul retro, che sta sul piatto di stampa. Per farle risaltare, stampa i primi tre strati di un colore e cambia filo dopo lo strato 3 (strati da 0,2 mm): in fondo alle lettere si vede il secondo colore. Del primo colore resta solo la pelle esterna del retro, spessa 0,6 mm; fianchi e bordi escono del secondo. Il cambio è facoltativo e si fa anche con una stampante a un colore solo: senza, la cover esce di un colore e le scritte si leggono per l'incisione. Non consigliamo pennarelli o vernici: su un materiale morbido e sempre in mano si staccano"]
       - ["Posizione di stampa", "con il retro sul piano, già orientata nel file, senza supporti"]
     materiale: "TPU 95A"
     colore: "nero"
@@ -1973,6 +2164,7 @@ oggetti:
       - ["Scritte", "incise 0,6 mm sul retro: nominativo alto 7 mm, righe piccole 4,5 mm"]
       - ["Spazio per nome e cognome", "fascia di 56 × 7 mm in basso sul retro, incisa"]
       - ["Limiti", "non protegge il vetro della fotocamera; copre il carrellino della SIM, che si raggiunge togliendo la cover; il fondo non entra nelle basi di ricarica; non è dichiarata conforme alle linee guida di Apple per gli accessori"]
+      - ["Scritte di un altro colore", "le scritte sono incise di 0,6 mm sul retro, che sta sul piatto di stampa. Per farle risaltare, stampa i primi tre strati di un colore e cambia filo dopo lo strato 3 (strati da 0,2 mm): in fondo alle lettere si vede il secondo colore. Del primo colore resta solo la pelle esterna del retro, spessa 0,6 mm; fianchi e bordi escono del secondo. Il cambio è facoltativo e si fa anche con una stampante a un colore solo: senza, la cover esce di un colore e le scritte si leggono per l'incisione. Non consigliamo pennarelli o vernici: su un materiale morbido e sempre in mano si staccano"]
       - ["Posizione di stampa", "con il retro sul piano, già orientata nel file, senza supporti"]
     materiale: "TPU 95A"
     colore: "nero"
