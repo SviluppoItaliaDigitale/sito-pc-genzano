@@ -2,15 +2,17 @@
 """Prove di check-cucina-emergenza.py, il controllo della sezione /cucina-emergenza/.
 
 Il controllo è bloccante sulle PR e ogni mese rilegge i collegamenti: se smette di vedere un errore, nessuno
-se ne accorge. Quattro gruppi di prove, nessuna richiesta fuori dalla macchina:
+se ne accorge. Cinque gruppi di prove, nessuna richiesta fuori dalla macchina:
   1. senza rete: i casi sbagliati (sito non istituzionale, file Word, PDF fuori dai dati, collegamento
      mancante, verifica troppo vecchia, sintesi europea su un altro sito o senza il suo collegamento…) che
      deve respingere con il messaggio giusto, e la copia intatta che deve passare;
   2. risposte dei siti, con un server finto in locale: un PDF vero è letto, un 404 è un collegamento rotto,
      una pagina di verifica anti-bot o un rifiuto (403) non sono né rotti né controllati, e nemmeno un sito
-     che dà tempo scaduto o un errore del server (5xx); una pagina qualsiasi al posto del PDF, o un 400, è
-     una fonte non letta, e lo sono troppi collegamenti rimasti senza controllo (più di SOGLIA_FERMO e più
-     di un quinto di quelli da aprire);
+     che dà tempo scaduto o un errore del server (5xx) o che chiude la connessione senza rispondere, alla
+     richiesta semplice e al browser; una pagina qualsiasi al posto del PDF, o un 400, è una fonte non
+     letta, anche quando l'altra richiesta è rimasta senza risposta, e lo sono un nome che non si risolve,
+     un certificato scaduto e troppi collegamenti rimasti senza controllo (più di SOGLIA_FERMO e più di un
+     quinto di quelli da aprire);
   3. browser di riserva: se Playwright manca o Chromium non parte, il controllo non si interrompe, classifica
      ciò che ha già letto e scrive il rapporto, che dice perché il ripiego è mancato;
   4. sintesi europee, con un registro e un archivio finti in locale: una pubblicazione nuova, un fascicolo
@@ -19,7 +21,11 @@ se ne accorge. Quattro gruppi di prove, nessuna richiesta fuori dalla macchina:
      fonti non lette, e anche un archivio che non restituisce più le rettifiche già note. In più, le
      funzioni di scripts/aggiorna-documenti-unici.py che decidono quale documento è di quale prodotto
      (denominazione intera fra virgolette o numero di fascicolo: «Bra» non è «fibra») e il suo lavoro su un
-     catalogo finto: ciò che non si legge o non si sa interpretare non cambia i dati.
+     catalogo finto: ciò che non si legge o non si sa interpretare non cambia i dati;
+  5. letture annotate (--aggiorna-data): di ogni collegamento resta il giorno dell'ultima lettura riuscita,
+     da qualunque rete, e la data di verifica dei dati è il più vecchio di quei giorni. Non avanza se un
+     collegamento non è mai stato letto, non torna indietro, e con un collegamento rotto o una fonte non
+     letta non si annota nulla.
 
 Uso:  python3 scripts/prova-check-cucina-emergenza.py public
 Lavora su copie in una cartella temporanea: i file del repository non si toccano. Uscita 0 se ogni prova
@@ -33,6 +39,7 @@ import json
 import os
 import re
 import shutil
+import socket
 import subprocess
 import sys
 import tempfile
@@ -129,6 +136,11 @@ class SitoFinto(http.server.BaseHTTPRequestHandler):
 
     def do_GET(self):
         percorso, _, domanda = self.path.partition("?")
+        if percorso == "/chiude.pdf":  # il sito chiude la connessione senza rispondere
+            self.close_connection = True
+            with contextlib.suppress(OSError):
+                self.connection.shutdown(socket.SHUT_RDWR)
+            return
         if percorso == "/registro":  # elenco del registro europeo eAmbrosia
             stato, tipo, corpo = FINTO["stato_registro"], "application/json", json.dumps(FINTO["registro"]).encode("utf-8")
         elif percorso == "/archivio":  # domande SPARQL all'archivio dell'UE, a gruppi di numeri CELEX
@@ -194,6 +206,282 @@ class BrowserCheNonParte:
 
     def stop(self):
         self.fermato = True
+
+
+class BrowserCheCade:
+    """Finto Playwright: Chromium parte, ma ogni richiesta finisce con l'errore che Playwright dà quando il sito
+    chiude la connessione. È su più righe: dopo la prima c'è il registro delle chiamate."""
+
+    def __init__(self):
+        contesto = types.SimpleNamespace(request=types.SimpleNamespace(get=self.chiedi))
+        browser = types.SimpleNamespace(new_context=lambda **parole: contesto, close=lambda: None)
+        self.chromium = types.SimpleNamespace(launch=lambda: browser)
+
+    def chiedi(self, url, timeout=None):
+        raise RuntimeError(f"APIRequestContext.get: socket hang up\nCall log:\n  - → GET {url}\n    - user-agent: prova")
+
+    def start(self):
+        return self
+
+    def stop(self):
+        pass
+
+
+class BrowserConPagina:
+    """Finto Playwright con una pagina: le risposte alle richieste si danno in fila (l'ultima vale per le
+    successive) e la navigazione può interrompersi, come quando un PDF fa partire lo scaricamento."""
+
+    def __init__(self, risposte, titolo="Documento", inciampo=None):
+        self.risposte, self.richieste, self.inciampo = list(risposte), 0, inciampo
+        pagina = types.SimpleNamespace(goto=self.vai, wait_for_timeout=lambda millisecondi: None, title=lambda: titolo,
+                                       inner_text=lambda selettore: "", close=lambda: None)
+        contesto = types.SimpleNamespace(request=types.SimpleNamespace(get=self.chiedi), new_page=lambda: pagina)
+        browser = types.SimpleNamespace(new_context=lambda **parole: contesto, close=lambda: None)
+        self.chromium = types.SimpleNamespace(launch=lambda: browser)
+
+    def vai(self, url, wait_until=None, timeout=None):
+        if self.inciampo:
+            raise RuntimeError(self.inciampo)
+
+    def chiedi(self, url, timeout=None):
+        stato, corpo = self.risposte[min(self.richieste, len(self.risposte) - 1)]
+        self.richieste += 1
+        return types.SimpleNamespace(status=stato, ok=200 <= stato < 300, body=lambda: corpo)
+
+    def start(self):
+        return self
+
+    def stop(self):
+        pass
+
+
+def prove_delle_letture(controllo):
+    """--aggiorna-data: le letture si annotano collegamento per collegamento, da qualunque rete, e la data di
+    verifica è il giorno del collegamento letto da più tempo. Mai avanti senza prove, mai indietro."""
+    adesso = controllo.oggi_in_italia()
+    oggi, ieri, domani = adesso.isoformat(), (adesso - timedelta(days=1)).isoformat(), (adesso + timedelta(days=1)).isoformat()
+    mese_fa = (adesso - timedelta(days=30)).isoformat()
+    a, b, c, pagina = ("https://www.esempio.it/a.pdf", "https://www.esempio.it/b.pdf",
+                       "https://www.esempio.it/catalogo/c.pdf", "https://www.esempio.it/pagina-a")
+    documenti = {"gruppi": [{"documenti": [{"id": "a", "url": a, "pagina": {"url": pagina}}, {"id": "b", "url": b}]}]}
+    catalogo = {"voci": [{"nome": "Prodotto", "formato": "pdf", "url": c},
+                         {"nome": "Solo Word", "formato": "docx", "url": "https://www.esempio.it/catalogo/d.docx"}]}
+    tutti = {a, b, c, pagina}
+    veri = (controllo.RADICE, controllo.FILE_DOCUMENTI, controllo.FILE_CATALOGO, controllo.FILE_LETTURE,
+            controllo.carica, controllo.controlla_dati, controllo.controlla_rete, sys.argv)
+    elenchi = (controllo.errori, controllo.non_letti, controllo.novita, controllo.protetti, controllo.muti,
+               controllo.da_rivedere, controllo.senza_browser, controllo.note_letture)
+    with tempfile.TemporaryDirectory() as temporanea:
+        radice = Path(temporanea)
+        controllo.RADICE = radice
+        controllo.FILE_DOCUMENTI = radice / "cucina_emergenza.yaml"
+        controllo.FILE_CATALOGO = radice / "disciplinari.json"
+        controllo.FILE_LETTURE = radice / ".manuale" / "letture.json"
+
+        def prepara(data, letture=None, letti_oggi=()):
+            controllo.FILE_DOCUMENTI.write_text(f'# prova\nverificato: "{data}"\n', encoding="utf-8")
+            controllo.FILE_CATALOGO.write_text('{\n  "verificato": "%s",\n  "voci": []\n}\n' % data, encoding="utf-8")
+            documenti["verificato"] = catalogo["verificato"] = data
+            controllo.FILE_LETTURE.parent.mkdir(exist_ok=True)
+            if letture is None:
+                controllo.FILE_LETTURE.unlink(missing_ok=True)
+            else:
+                controllo.FILE_LETTURE.write_text(letture if isinstance(letture, str) else json.dumps(letture), encoding="utf-8")
+            for elenco in elenchi:
+                elenco.clear()
+            controllo.metodi.clear()
+            controllo.letti.clear()
+            controllo.letti.update(letti_oggi)
+
+        def scritta():
+            return (re.search(r'^verificato: "([^"]+)"', controllo.FILE_DOCUMENTI.read_text(encoding="utf-8"), re.M).group(1),
+                    json.loads(controllo.FILE_CATALOGO.read_text(encoding="utf-8"))["verificato"])
+
+        def annotate():
+            try:
+                return json.loads(controllo.FILE_LETTURE.read_text(encoding="utf-8"))
+            except FileNotFoundError:
+                return None
+
+        def giro(rotti=(), fonti=(), fermi=(), letti_oggi=(), argomenti=("--rete", "--aggiorna-data")):
+            """Un giro intero di main(), di norma con --rete --aggiorna-data e senza --file: le richieste sono finte."""
+            def rete_finta(*argomenti):
+                controllo.letti.update(letti_oggi)
+                controllo.errori.extend(rotti)
+                controllo.non_letti.extend(fonti)
+                controllo.muti.extend(fermi)
+            controllo.carica = lambda: (documenti, catalogo)
+            controllo.controlla_dati = lambda *argomenti: None
+            controllo.controlla_rete = rete_finta
+            sys.argv = [SCRIPT, *argomenti]
+            uscita = io.StringIO()
+            with contextlib.redirect_stdout(uscita):
+                codice = controllo.main()
+            return codice, uscita.getvalue()
+
+        try:
+            prepara(mese_fa, letti_oggi=tutti)
+            controllo.aggiorna_verifica(documenti, catalogo)
+            esito("letture: tutto letto oggi, la data di verifica diventa oggi nei due file e ogni collegamento ha il suo giorno",
+                  scritta() == (oggi, oggi) and annotate() == dict.fromkeys(tutti, oggi) and documenti["verificato"] == oggi,
+                  f"{scritta()} {annotate()}")
+
+            prepara(mese_fa, letti_oggi=tutti - {b})
+            controllo.aggiorna_verifica(documenti, catalogo)
+            esito("letture: un collegamento mai letto tiene ferma la data, e il rapporto lo nomina",
+                  scritta() == (mese_fa, mese_fa) and annotate() == dict.fromkeys(tutti - {b}, oggi)
+                  and any("non risultano mai letti" in riga and b in riga for riga in controllo.note_letture),
+                  f"{scritta()} {annotate()} {controllo.note_letture}")
+
+            prepara(mese_fa, {a: ieri, b: mese_fa, c: ieri, pagina: ieri}, letti_oggi=tutti - {b})
+            controllo.aggiorna_verifica(documenti, catalogo)
+            esito("letture: un collegamento non letto oggi conserva il suo giorno, e la data resta quella",
+                  scritta() == (mese_fa, mese_fa) and annotate() == {a: oggi, b: mese_fa, c: oggi, pagina: oggi}
+                  and any(b in riga and controllo.giorno(mese_fa) in riga for riga in controllo.note_letture),
+                  f"{scritta()} {annotate()} {controllo.note_letture}")
+
+            prepara(mese_fa, {a: ieri, b: mese_fa, c: ieri, pagina: ieri}, letti_oggi={b})
+            controllo.aggiorna_verifica(documenti, catalogo)
+            esito("letture: riletto da un'altra rete il solo collegamento fermo, la data avanza al più vecchio degli altri",
+                  scritta() == (ieri, ieri) and annotate() == {a: ieri, b: oggi, c: ieri, pagina: ieri}, f"{scritta()} {annotate()}")
+
+            prepara(ieri, dict.fromkeys(tutti, mese_fa))
+            controllo.aggiorna_verifica(documenti, catalogo)
+            esito("letture: la data di verifica non torna mai indietro",
+                  scritta() == (ieri, ieri) and annotate() == dict.fromkeys(tutti, mese_fa), f"{scritta()} {annotate()}")
+
+            prepara(mese_fa, {a: domani, b: "2026-02-31", c: ieri, pagina: 5, "https://www.esempio.it/tolto.pdf": oggi})
+            controllo.aggiorna_verifica(documenti, catalogo)
+            esito("letture: un giorno nel futuro o scritto male vale come mai letto, e un collegamento uscito dai dati si toglie",
+                  scritta() == (mese_fa, mese_fa) and annotate() == {c: ieri}, f"{scritta()} {annotate()}")
+
+            prepara(mese_fa, "{ non è json", letti_oggi=tutti)
+            controllo.aggiorna_verifica(documenti, catalogo)
+            esito("letture: un file delle letture rovinato riparte da ciò che si legge oggi",
+                  scritta() == (oggi, oggi) and annotate() == dict.fromkeys(tutti, oggi), f"{scritta()} {annotate()}")
+
+            prepara(mese_fa, dict.fromkeys(tutti, mese_fa))
+            codice, testo = giro(rotti=[f"documento «b»: HTTP 404: {b}"], letti_oggi=tutti - {b})
+            esito("giro con un collegamento rotto: uscita 1, nessuna lettura annotata, data ferma",
+                  codice == 1 and annotate() == dict.fromkeys(tutti, mese_fa) and scritta() == (mese_fa, mese_fa)
+                  and "Letture annotate" not in testo, f"uscita {codice}, {annotate()}")
+
+            prepara(mese_fa, dict.fromkeys(tutti, mese_fa))
+            codice, testo = giro(fonti=[("www.esempio.it", "pagina del Ministero: HTTP 502")], letti_oggi=tutti)
+            esito("giro con una fonte non letta: uscita 2, nessuna lettura annotata, data ferma",
+                  codice == 2 and annotate() == dict.fromkeys(tutti, mese_fa) and scritta() == (mese_fa, mese_fa),
+                  f"uscita {codice}, {annotate()}")
+
+            prepara(mese_fa, {a: ieri, b: ieri, c: ieri, pagina: ieri})
+            codice, testo = giro(fermi=[f"documento «b»: Error: APIRequestContext.get: socket hang up: {b}"], letti_oggi=tutti - {b})
+            esito("giro con un sito che non risponde: uscita 3, le altre letture si annotano e la data arriva al giorno di quel collegamento",
+                  codice == 3 and annotate() == {a: oggi, b: ieri, c: oggi, pagina: oggi} and scritta() == (ieri, ieri)
+                  and f"Data scritta nei dati: {ieri}." in testo and "Letture annotate" in testo
+                  and "--rete --browser --aggiorna-data" in testo, f"uscita {codice}, {annotate()}, {scritta()}")
+
+            prepara(mese_fa, {a: ieri, b: ieri, c: ieri, pagina: ieri})
+            codice, testo = giro(letti_oggi=tutti - {c})
+            esito("giro senza rilievi e senza --file: i PDF del catalogo restano al loro giorno, e la data si ferma lì",
+                  codice == 0 and scritta() == (ieri, ieri) and annotate() == {a: oggi, b: oggi, c: ieri, pagina: oggi}
+                  and c in testo and "non può andare oltre" in testo and "Nessun problema." in testo,
+                  f"uscita {codice}, {scritta()}, {annotate()}")
+
+            prepara(mese_fa, {a: ieri, b: ieri, c: ieri, pagina: ieri})
+            codice, testo = giro(letti_oggi=tutti, argomenti=("--rete", "--file", "--aggiorna-data"))
+            esito("giro senza rilievi con --file, tutto letto: uscita 0, data di oggi",
+                  codice == 0 and scritta() == (oggi, oggi) and "Ogni collegamento è stato letto in questo giro." in testo
+                  and "Nessun problema." in testo, f"uscita {codice}, {scritta()}")
+
+            prepara(mese_fa, {a: ieri, b: oggi, c: ieri, pagina: ieri})   # «b» letto oggi da un'altra rete
+            codice, testo = giro(fermi=[f"documento «b»: Error: APIRequestContext.get: socket hang up: {b}"], letti_oggi=tutti - {b},
+                                 argomenti=("--rete", "--file", "--aggiorna-data"))
+            esito("giro con un sito che non risponde, già letto oggi da un'altra rete: uscita 3, data di oggi, e il rapporto lo spiega",
+                  codice == 3 and scritta() == (oggi, oggi) and annotate() == dict.fromkeys(tutti, oggi)
+                  and "letto oggi da un'altra rete" in testo and "letto in questo giro" not in testo,
+                  f"uscita {codice}, {scritta()}, {annotate()}")
+
+            # un giro cominciato ieri sera e finito dopo la mezzanotte: le letture portano il giorno dell'inizio
+            prepara(mese_fa, dict.fromkeys(tutti, mese_fa))
+            orologio_vero = controllo.oggi_in_italia
+            controllo.oggi_in_italia = lambda: adesso - timedelta(days=1)
+
+            def dopo_la_mezzanotte(*argomenti):
+                controllo.oggi_in_italia = orologio_vero
+                controllo.letti.update(tutti)
+            try:
+                controllo.carica = lambda: (documenti, catalogo)
+                controllo.controlla_dati = lambda *argomenti: None
+                controllo.controlla_rete = dopo_la_mezzanotte
+                sys.argv = [SCRIPT, "--rete", "--file", "--aggiorna-data"]
+                with contextlib.redirect_stdout(io.StringIO()):
+                    codice = controllo.main()
+            finally:
+                controllo.oggi_in_italia = orologio_vero
+            esito("un giro a cavallo della mezzanotte annota il giorno in cui è cominciato",
+                  codice == 0 and annotate() == dict.fromkeys(tutti, ieri) and scritta() == (ieri, ieri),
+                  f"uscita {codice}, {annotate()}, {scritta()}")
+
+            prepara(mese_fa, [1, 2], letti_oggi=tutti)
+            controllo.aggiorna_verifica(documenti, catalogo)
+            esito("letture: un file delle letture che non è una mappa riparte da ciò che si legge oggi",
+                  scritta() == (oggi, oggi) and annotate() == dict.fromkeys(tutti, oggi), f"{scritta()} {annotate()}")
+
+            prepara(mese_fa, {a: ieri, b: ieri, c: ieri, pagina: ieri}, letti_oggi=tutti)
+            controllo.aggiorna_verifica(documenti, catalogo, ieri)
+            esito("letture: il giorno annotato è quello in cui il giro è cominciato, non quello in cui finisce",
+                  annotate() == dict.fromkeys(tutti, ieri) and scritta() == (ieri, ieri), f"{scritta()} {annotate()}")
+
+            # date diverse nei due file (non dovrebbe capitare: lo blocca il controllo dei dati): avanza solo la più vecchia
+            prepara(mese_fa, dict.fromkeys(tutti, ieri))
+            controllo.FILE_CATALOGO.write_text('{\n  "verificato": "%s",\n  "voci": []\n}\n' % oggi, encoding="utf-8")
+            catalogo["verificato"] = oggi
+            controllo.aggiorna_verifica(documenti, catalogo)
+            esito("letture: con date diverse nei due file avanza solo quella rimasta indietro, l'altra non torna indietro",
+                  scritta() == (ieri, oggi) and (documenti["verificato"], catalogo["verificato"]) == (ieri, oggi), f"{scritta()}")
+
+            # --unisci-letture: le letture di un giro sommate a quelle già annotate (il workflow, sopra l'ultimo main)
+            altro = radice / "letture-del-giro.json"
+            prepara(mese_fa, {a: ieri, b: mese_fa, c: ieri, pagina: ieri})   # su main: «b» fermo a un mese fa
+            altro.write_text(json.dumps({a: oggi, b: oggi, c: mese_fa, pagina: domani, "https://www.esempio.it/tolto.pdf": oggi}),
+                             encoding="utf-8")
+            codice, testo = giro(argomenti=("--unisci-letture", str(altro)))
+            esito("--unisci-letture: per ogni collegamento vale il giorno più recente, il futuro e gli indirizzi tolti si scartano, la data è il più vecchio",
+                  codice == 0 and annotate() == {a: oggi, b: oggi, c: ieri, pagina: ieri} and scritta() == (ieri, ieri)
+                  and "Letture sommate" in testo, f"uscita {codice}, {annotate()}, {scritta()}")
+
+            prepara(mese_fa, {a: ieri, b: mese_fa, c: ieri, pagina: ieri})
+            altro.write_text("[1, 2]", encoding="utf-8")
+            codice, testo = giro(argomenti=("--unisci-letture", str(altro)))
+            esito("--unisci-letture con un file che non è una mappa: uscita 1, nulla cambia",
+                  codice == 1 and annotate() == {a: ieri, b: mese_fa, c: ieri, pagina: ieri} and scritta() == (mese_fa, mese_fa)
+                  and "deve essere una mappa" in testo, f"uscita {codice}, {annotate()}")
+
+            prepara(mese_fa, {a: ieri, b: mese_fa, c: ieri, pagina: ieri})
+            codice, testo = giro(argomenti=("--unisci-letture", str(radice / "non-esiste.json")))
+            esito("--unisci-letture con un file che non c'è: uscita 1, nulla cambia",
+                  codice == 1 and annotate() == {a: ieri, b: mese_fa, c: ieri, pagina: ieri} and scritta() == (mese_fa, mese_fa),
+                  f"uscita {codice}, {annotate()}")
+
+            prepara(ieri, {a: mese_fa, b: ieri, c: ieri, pagina: ieri})   # data portata avanti a mano: stato non valido
+            altro.write_text(json.dumps({a: oggi}), encoding="utf-8")
+            codice, testo = giro(argomenti=("--unisci-letture", str(altro)))
+            esito("--unisci-letture su dati con la data portata avanti a mano: uscita 1, non somma nulla",
+                  codice == 1 and annotate() == {a: mese_fa, b: ieri, c: ieri, pagina: ieri} and "non si porta avanti a mano" in testo,
+                  f"uscita {codice}, {annotate()}")
+
+            prepara(mese_fa, {a: ieri, c: ieri, pagina: ieri})
+            codice, testo = giro(argomenti=())
+            esito("senza rete: un collegamento senza lettura annotata è un avviso, non un errore",
+                  codice == 0 and "Avviso: 1 collegamenti dei dati non hanno una lettura annotata" in testo and b in testo,
+                  f"uscita {codice}, {testo[:300]}")
+        finally:
+            (controllo.RADICE, controllo.FILE_DOCUMENTI, controllo.FILE_CATALOGO, controllo.FILE_LETTURE,
+             controllo.carica, controllo.controlla_dati, controllo.controlla_rete, sys.argv) = veri
+            controllo.scadenza = float("inf")
+            for elenco in elenchi:
+                elenco.clear()
+            controllo.metodi.clear()
+            controllo.letti.clear()
 
 
 def prove_del_browser(controllo, base):
@@ -750,18 +1038,21 @@ def prove_delle_sintesi(controllo, base):
                 elenco.clear()
             controllo.metodi.clear()
             controllo.di_fila.clear()
-            controllo.controlla_ue("documento «prova»", f"{base}{percorso}?uri=CELEX:52020XC0101%2801%29")
+            controllo.letti.clear()
+            indirizzo = f"{base}{percorso}?uri=CELEX:52020XC0101%2801%29"
+            controllo.controlla_ue("documento «prova»", indirizzo)
             controllo.chiudi_da_rivedere(False)
             visto = (len(controllo.errori), len(controllo.non_letti), len(controllo.protetti), len(controllo.muti),
-                     controllo.metodi["richiesta diretta"], controllo.metodi["archivio dell'UE"])
-            esito(nome, visto == atteso, f"rotti, non letti, protetti, muti, letti, confermati dall'archivio: {visto}; atteso {atteso}")
+                     controllo.metodi["richiesta diretta"], controllo.metodi["archivio dell'UE"], int(controllo.letti == {indirizzo}))
+            esito(nome, visto == atteso and (atteso[6] or not controllo.letti),
+                  f"rotti, non letti, protetti, muti, letti, confermati dall'archivio, segnato per le letture: {visto}; atteso {atteso}")
 
-        eurlex("EUR-Lex: il PDF risponde, letto con la richiesta diretta", "/vero.pdf", (0, 0, 0, 0, 1, 0))
-        eurlex("EUR-Lex: risposta 202 senza contenuto, vale l'esistenza nell'archivio dell'UE", "/attesa.pdf", (0, 0, 0, 0, 0, 1))
-        eurlex("EUR-Lex: errore del server sull'indirizzo del PDF, «non controllato» e non fonte non letta", "/guasto.pdf", (0, 0, 0, 1, 0, 0))
-        eurlex("EUR-Lex: rifiuto (403) sull'indirizzo del PDF, «non controllato» e non fonte non letta", "/rifiuto.pdf", (0, 0, 1, 0, 0, 0))
-        eurlex("EUR-Lex: un 400 sull'indirizzo del PDF resta una fonte non letta", "/negato.pdf", (0, 1, 0, 0, 0, 0))
-        eurlex("EUR-Lex: un 404 sull'indirizzo del PDF è un collegamento rotto", "/manca.pdf", (1, 0, 0, 0, 0, 0))
+        eurlex("EUR-Lex: il PDF risponde, letto con la richiesta diretta", "/vero.pdf", (0, 0, 0, 0, 1, 0, 1))
+        eurlex("EUR-Lex: risposta 202 senza contenuto, vale l'esistenza nell'archivio dell'UE", "/attesa.pdf", (0, 0, 0, 0, 0, 1, 1))
+        eurlex("EUR-Lex: errore del server sull'indirizzo del PDF, «non controllato» e non fonte non letta", "/guasto.pdf", (0, 0, 0, 1, 0, 0, 0))
+        eurlex("EUR-Lex: rifiuto (403) sull'indirizzo del PDF, «non controllato» e non fonte non letta", "/rifiuto.pdf", (0, 0, 1, 0, 0, 0, 0))
+        eurlex("EUR-Lex: un 400 sull'indirizzo del PDF resta una fonte non letta", "/negato.pdf", (0, 1, 0, 0, 0, 0, 0))
+        eurlex("EUR-Lex: un 404 sull'indirizzo del PDF è un collegamento rotto", "/manca.pdf", (1, 0, 0, 0, 0, 0, 0))
         vuoto = {"voci": [{"nome": "Formaggio Alfa", "tipo": "DOP"}, {"nome": "Pizza Finta", "tipo": "STG"}]}
         for elenco in (controllo.errori, controllo.non_letti, controllo.novita):
             elenco.clear()
@@ -807,6 +1098,8 @@ def prove_delle_risposte():
         esito("una pagina qualsiasi al posto del PDF è una fonte non letta",
               len(controllo.non_letti) == 1 and "/qualsiasi.pdf" in controllo.non_letti[0][1], controllo.non_letti)
         esito("il PDF vero è letto", controllo.metodi["richiesta diretta"] == 1)
+        esito("dei cinque indirizzi chiesti, solo il PDF letto è segnato per le letture annotate",
+              controllo.letti == {base + "/vero.pdf"}, controllo.letti)
 
         for elenco in (controllo.errori, controllo.non_letti, controllo.protetti, controllo.da_rivedere, controllo.muti):
             elenco.clear()
@@ -841,6 +1134,8 @@ def prove_delle_risposte():
         esito("catalogo misto: tre PDF letti, un 404 fra i rotti, il file Word non si chiede",
               controllo.metodi["richiesta diretta"] == 3 and len(controllo.errori) == 1 and not controllo.non_letti,
               f"letti {controllo.metodi['richiesta diretta']}, rotti {controllo.errori}, non letti {controllo.non_letti}")
+        esito("catalogo misto: i tre PDF letti sono segnati per le letture annotate, il 404 e il file Word no",
+              controllo.letti == {base + "/vero.pdf", base + "/vero.pdf?b", base + "/vero.pdf?c"}, controllo.letti)
         # un sito che non risponde: tempo scaduto o errore del server. Regola guasti, punto 3: non è un collegamento
         # rotto e non rende rosso il controllo, ma resta nel rapporto e la data di verifica non si aggiorna
         def pulisci():
@@ -849,6 +1144,7 @@ def prove_delle_risposte():
             controllo.metodi.clear()
             controllo.di_fila.clear()
             controllo.motivo.clear()
+            controllo.letti.clear()
 
         pulisci()
         attesa_vera, controllo.TEMPO_MASSIMO = controllo.TEMPO_MASSIMO, 0.3
@@ -868,7 +1164,7 @@ def prove_delle_risposte():
         esito("un 400 resta una fonte non letta", len(controllo.non_letti) == 1 and "/negato.pdf" in controllo.non_letti[0][1],
               controllo.non_letti)
         esito("il rapporto ha la sezione dei siti che non hanno risposto e non dice «Nessun problema»",
-              "### Collegamenti non controllati: il sito non ha risposto in tempo" in testo and "Nessun problema." not in testo
+              "### Collegamenti non controllati: il sito non ha risposto" in testo and "Nessun problema." not in testo
               and "/lento.pdf" in testo, testo[:300])
         pulisci()
         for n in range(controllo.SOGLIA_FERMO + 2):
@@ -909,8 +1205,172 @@ def prove_delle_risposte():
         esito("catalogo su un sito muto: dodici «non controllati», nessuna fonte non letta",
               len(controllo.muti) == 12 and not controllo.non_letti and not controllo.errori,
               f"muti {len(controllo.muti)}, non letti {len(controllo.non_letti)}")
+
+        # un sito che chiude la connessione senza rispondere (lo fa chi filtra gli indirizzi dei centri di calcolo):
+        # il 25/11/2026 il sito dell'IZS lo ha fatto con i server di GitHub, e il giro è finito rosso per un documento
+        pulisci()
+        controllo.controlla_pdf("documento «chiude»", base + "/chiude.pdf")
+        controllo.chiudi_da_rivedere(False)
+        esito("un sito che chiude la connessione senza rispondere: «non controllato», né rotto né fonte non letta",
+              len(controllo.muti) == 1 and "/chiude.pdf" in controllo.muti[0] and not controllo.non_letti and not controllo.errori,
+              f"muti {controllo.muti}, non letti {controllo.non_letti}")
+
+        pulisci()
+        vero = sys.modules.get("playwright.sync_api", "assente")
+        sys.modules["playwright.sync_api"] = types.SimpleNamespace(sync_playwright=BrowserCheCade)
+        try:
+            controllo.controlla_pdf("documento «chiude»", base + "/chiude.pdf")
+            controllo.chiudi_da_rivedere(True)
+        finally:
+            if vero == "assente":
+                sys.modules.pop("playwright.sync_api", None)
+            else:
+                sys.modules["playwright.sync_api"] = vero
+        testo = controllo.rapporto(documenti, catalogo, True, False)
+        esito("connessione chiusa alla richiesta semplice e al browser: «non controllato», con l'errore del browser su una riga",
+              len(controllo.muti) == 1 and "socket hang up" in controllo.muti[0] and "\n" not in controllo.muti[0]
+              and "Call log" not in testo and not controllo.non_letti and not controllo.senza_browser,
+              f"muti {controllo.muti}, non letti {controllo.non_letti}, {controllo.senza_browser}")
+        esito("il rapporto dice come si completa il controllo da un'altra rete",
+              "### Collegamenti non controllati: il sito non ha risposto" in testo
+              and "--rete --browser --aggiorna-data" in testo and controllo.FILE_LETTURE.name in testo, testo[-700:])
+
+        # richiesta semplice e browser insieme: conta la risposta avuta, non il silenzio dell'altra
+        pulisci()
+        caduta = "Error: APIRequestContext.get: socket hang up"
+        scaduto = "TimeoutError: timed out"
+        casi = {"a": (scaduto, ("no", caduta)),                       # silenzio e silenzio: non controllato
+                "b": (controllo.ALTRO, ("no", caduta)),               # una pagina al posto del PDF: fonte non letta
+                "c": (scaduto, ("no", "anche il browser non ottiene un PDF (HTTP 200)")),
+                "d": ("URLError: <urlopen error [Errno -2] Name or service not known>",
+                      ("no", "Error: APIRequestContext.get: getaddrinfo ENOTFOUND www.esempio.it")),
+                "e": ("ConnectionResetError: [Errno 104] Connection reset by peer", None),  # il browser non ha provato
+                "f": (scaduto, ("no", controllo.ANTIBOT)),            # verifica anti-bot vista dal browser
+                "g": ("SSLCertVerificationError: certificate has expired", ("no", caduta)),
+                "h": (scaduto, ("pdf", "")),                          # il browser legge il PDF
+                "i": (controllo.FUORI_TEMPO, ("no", "anche il browser non ottiene un PDF (HTTP 200)")),
+                "j": (controllo.SALTATO, None),                       # saltato, e il browser non ha provato
+                "k": (scaduto, ("no", "Error: APIRequestContext.get: connect ETIMEDOUT 192.0.2.1:443"))}
+        controllo.da_rivedere.extend((f"documento «{nome}»", f"https://www.esempio.it/{nome}.pdf", nota)
+                                     for nome, (nota, _) in casi.items())
+        vera = controllo.riprova_con_browser
+        controllo.riprova_con_browser = lambda voci: {f"https://www.esempio.it/{nome}.pdf": del_browser
+                                                      for nome, (_, del_browser) in casi.items() if del_browser}
+        try:
+            controllo.chiudi_da_rivedere(True)
+        finally:
+            controllo.riprova_con_browser = vera
+        fonti = {testo.split("»")[0][-1]: testo for _, testo in controllo.non_letti}
+        esito("silenzio alla richiesta semplice e al browser (tempo scaduto, connessione chiusa): «non controllato»",
+              sorted(m.split("»")[0][-1] for m in controllo.muti) == ["a", "e", "j", "k"]
+              and "socket hang up" in next(m for m in controllo.muti if "«a»" in m), controllo.muti)
+        esito("una risposta che non è il PDF conta più del silenzio dell'altra richiesta: fonte non letta",
+              sorted(fonti) == ["b", "c", "d", "g", "i"] and controllo.ALTRO in fonti["b"] and "HTTP 200" in fonti["c"]
+              and "HTTP 200" in fonti["i"],
+              controllo.non_letti)
+        esito("nome che non si risolve e certificato scaduto restano fonti non lette, con il loro motivo",
+              "ENOTFOUND" in fonti.get("d", "") and "certificate has expired" in fonti.get("g", ""), controllo.non_letti)
+        esito("verifica anti-bot vista dal browser dopo un tempo scaduto: né rotto né controllato",
+              len(controllo.protetti) == 1 and "«f»" in controllo.protetti[0] and controllo.ANTIBOT in controllo.protetti[0],
+              controllo.protetti)
+        esito("il PDF letto dal browser è segnato per le letture annotate, e solo quello",
+              controllo.letti == {"https://www.esempio.it/h.pdf"} and controllo.metodi["browser"] == 1, controllo.letti)
+
+        # pagine degli enti accanto ai documenti: lette, dietro una verifica, senza risposta
+        pulisci()
+        vere = (controllo.controlla_ministero, controllo.controlla_europa)
+        controllo.controlla_ministero = controllo.controlla_europa = lambda *argomenti: None
+        try:
+            controllo.controlla_rete({"gruppi": [{"documenti": [
+                {"id": "x", "url": base + "/vero.pdf?x", "pagina": {"url": base + "/qualsiasi.pdf?pagina"}},
+                {"id": "y", "url": base + "/vero.pdf?y", "pagina": {"url": base + "/verifica.pdf?pagina"}},
+                {"id": "z", "url": base + "/vero.pdf?z", "pagina": {"url": base + "/chiude.pdf?pagina"}}]}]}, {"voci": []}, False)
+        finally:
+            controllo.controlla_ministero, controllo.controlla_europa = vere
+        esito("pagine degli enti: quella che risponde è segnata per le letture; verifica anti-bot e connessione chiusa restano «non controllate»",
+              controllo.letti == {base + "/vero.pdf?x", base + "/vero.pdf?y", base + "/vero.pdf?z", base + "/qualsiasi.pdf?pagina"}
+              and len(controllo.protetti) == 1 and len(controllo.muti) == 1 and "/chiude.pdf?pagina" in controllo.muti[0]
+              and not controllo.non_letti and not controllo.errori,
+              f"letti {controllo.letti}, protetti {controllo.protetti}, muti {controllo.muti}, non letti {controllo.non_letti}")
+        # i messaggi d'errore veri di urllib e di Playwright, uno per uno
+        silenzi = ["TimeoutError: timed out", "URLError: <urlopen error timed out>", "HTTP 503",
+                   "URLError: <urlopen error [Errno 104] Connection reset by peer>", "ConnectionResetError: [Errno 104] Connection reset by peer",
+                   "RemoteDisconnected: Remote end closed connection without response", "URLError: <urlopen error [Errno 111] Connection refused>",
+                   "URLError: <urlopen error [Errno 110] Connection timed out>", "URLError: <urlopen error [Errno 113] No route to host>",
+                   "URLError: <urlopen error [Errno 101] Network is unreachable>", "BrokenPipeError: [Errno 32] Broken pipe",
+                   "IncompleteRead: IncompleteRead(0 bytes read, 8 more expected)",
+                   "SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)",
+                   "Error: APIRequestContext.get: socket hang up", "Error: APIRequestContext.get: read ECONNRESET",
+                   "Error: APIRequestContext.get: connect ECONNREFUSED 192.0.2.1:443", "Error: APIRequestContext.get: connect ETIMEDOUT 192.0.2.1:443",
+                   "Error: APIRequestContext.get: connect EHOSTUNREACH 192.0.2.1:443", "Error: APIRequestContext.get: write EPIPE",
+                   "Error: APIRequestContext.get: Client network socket disconnected before secure TLS connection was established",
+                   "Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.esempio.it/a.pdf",
+                   "TimeoutError: APIRequestContext.get: Timeout 30000ms exceeded.", "anche il browser non ottiene un PDF (HTTP 502)",
+                   controllo.SALTATO, controllo.FUORI_TEMPO]
+        altro = ["HTTP 400", "HTTP 401", "HTTP 301", controllo.ALTRO, "anche il browser non ottiene un PDF (HTTP 200)", "EUR-Lex",
+                 controllo.ANTIBOT, f"{controllo.RIFIUTO} (HTTP 403)",
+                 "URLError: <urlopen error [Errno -2] Name or service not known>",
+                 "URLError: <urlopen error [Errno -3] Temporary failure in name resolution>",
+                 "SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1000)",
+                 "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+                 "URLError: <urlopen error Tunnel connection failed: 503 Service Unavailable>",
+                 "Error: APIRequestContext.get: getaddrinfo ENOTFOUND www.esempio.it",
+                 "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.esempio.it/a.pdf",
+                 "Error: Page.goto: net::ERR_CERT_DATE_INVALID at https://www.esempio.it/a.pdf",
+                 "Error: Page.goto: net::ERR_ABORTED at https://www.esempio.it/a.pdf"]
+        esito("tempo scaduto, errore del server, connessione chiusa, rifiutata o non raggiungibile: «il sito non ha risposto»",
+              all(controllo.SILENZIO.search(s) for s in silenzi), [s for s in silenzi if not controllo.SILENZIO.search(s)])
+        esito("nome che non si risolve, certificato, rifiuti e risposte diverse dal PDF non sono «il sito non ha risposto»",
+              not any(controllo.SILENZIO.search(s) for s in altro), [s for s in altro if controllo.SILENZIO.search(s)])
+
+        vera = controllo.urllib.request.urlopen
+
+        def su_due_righe(*argomenti, **parole):
+            raise OSError("prima riga\nseconda riga")
+        controllo.urllib.request.urlopen = su_due_righe
+        try:
+            stato, _, errore = controllo.chiedi("https://www.esempio.it/a.pdf")
+        finally:
+            controllo.urllib.request.urlopen = vera
+        esito("un errore di rete scritto su più righe entra nel rapporto su una riga sola",
+              stato == 0 and errore == "OSError: prima riga seconda riga", f"{stato} {errore!r}")
+
+        # il browser di riserva con una pagina vera: la visita che sblocca il PDF, il rifiuto, la pagina al posto del PDF
+        def con_la_pagina(nota, finto):
+            pulisci()
+            controllo.da_rivedere.append(("documento «prova»", "https://www.esempio.it/prova.pdf", nota))
+            vero = sys.modules.get("playwright.sync_api", "assente")
+            sys.modules["playwright.sync_api"] = types.SimpleNamespace(sync_playwright=lambda: finto)
+            try:
+                controllo.chiudi_da_rivedere(True)
+            finally:
+                if vero == "assente":
+                    sys.modules.pop("playwright.sync_api", None)
+                else:
+                    sys.modules["playwright.sync_api"] = vero
+            return (len(controllo.errori), len(controllo.non_letti), len(controllo.protetti), len(controllo.muti),
+                    controllo.metodi["browser"], len(controllo.letti))
+
+        pdf = b"%PDF-1.7\n" + b"x" * 100
+        interrotta = "Page.goto: net::ERR_ABORTED at https://www.esempio.it/prova.pdf\nCall log:\n  - navigating"
+        visto = con_la_pagina(controllo.ANTIBOT, BrowserConPagina([(200, VERIFICA), (200, pdf)], inciampo=interrotta))
+        esito("browser: la visita della pagina sblocca il PDF anche se la navigazione si interrompe per lo scaricamento",
+              visto == (0, 0, 0, 0, 1, 1), f"rotti, non letti, protetti, muti, letti dal browser, segnati: {visto}")
+        visto = con_la_pagina("TimeoutError: timed out", BrowserConPagina([(403, b"Forbidden")], inciampo=interrotta))
+        esito("browser: un rifiuto (403) dopo una navigazione interrotta resta «né rotto né controllato», non una fonte non letta",
+              visto == (0, 0, 1, 0, 0, 0) and controllo.RIFIUTO in controllo.protetti[0], f"{visto} {controllo.protetti} {controllo.non_letti}")
+        visto = con_la_pagina("TimeoutError: timed out", BrowserConPagina([(200, QUALSIASI)]))
+        esito("browser: una pagina qualsiasi al posto del PDF è una fonte non letta",
+              visto == (0, 1, 0, 0, 0, 0) and "HTTP 200" in controllo.non_letti[0][1], f"{visto} {controllo.non_letti}")
+        visto = con_la_pagina("TimeoutError: timed out", BrowserConPagina([(200, QUALSIASI)], titolo="Just a moment..."))
+        esito("browser: una pagina di verifica riconosciuta dal titolo è «né rotto né controllato»",
+              visto == (0, 0, 1, 0, 0, 0) and controllo.ANTIBOT in controllo.protetti[0], f"{visto} {controllo.protetti}")
+        visto = con_la_pagina("TimeoutError: timed out", BrowserConPagina([(200, QUALSIASI), (404, b"")]))
+        esito("browser: un 404 dopo la visita della pagina è un collegamento rotto",
+              visto == (1, 0, 0, 0, 0, 0), f"{visto} {controllo.errori}")
         pulisci()
         prove_del_browser(controllo, base)
+        prove_delle_letture(controllo)
         prove_delle_sintesi(controllo, base)
     finally:
         server.shutdown()
@@ -989,8 +1449,59 @@ def main():
         prova(base, "data di verifica in formato sbagliato", nel_catalogo(data_sbagliata),
               "«verificato» deve essere una data AAAA-MM-GG")
         prova(base, "verifica dei collegamenti più vecchia della soglia (--eta 45)", nel_catalogo(verifica_vecchia),
-              "l'ultimo controllo completo dei collegamenti è del", "--eta", "45")
+              "la data di verifica dei collegamenti è ferma al", "--eta", "45")
         prova(base, "data di verifica nel futuro", nel_catalogo(verifica_futura), "«verificato» è una data futura")
+
+        # letture annotate: il file, se c'è, è ben formato, e la data dei dati non è più recente delle letture
+        def con_le_letture(letture):
+            def cambia(caso):
+                (caso / ".manuale").mkdir(exist_ok=True)
+                testo = letture if isinstance(letture, str) else json.dumps(letture)
+                (caso / ".manuale" / "cucina-emergenza-letture.json").write_text(testo, encoding="utf-8")
+            return cambia
+
+        scritta = catalogo["verificato"]
+        prima_della_data = (date.fromisoformat(scritta) - timedelta(days=1)).isoformat()
+        prova(base, "data di verifica portata avanti a mano: più recente di una lettura annotata",
+              con_le_letture({in_pdf["url"]: prima_della_data, uno: scritta}), "non si porta avanti a mano")
+        prova(base, "file delle letture con un giorno scritto male", con_le_letture({uno: "2026-1-05"}),
+              "letture con il giorno scritto male o nel futuro")
+        prova(base, "file delle letture con un giorno che non esiste", con_le_letture({uno: "2026-02-31"}),
+              "letture con il giorno scritto male o nel futuro")
+        prova(base, "file delle letture con un giorno nel futuro",
+              con_le_letture({uno: (date.today() + timedelta(days=3)).isoformat()}), "letture con il giorno scritto male o nel futuro")
+        prova(base, "file delle letture che non è una mappa", con_le_letture([uno]), "deve essere una mappa indirizzo → giorno")
+        prova(base, "file delle letture rovinato", con_le_letture("{ non è json"), "il file delle letture non si legge")
+        prova(base, "date di verifica diverse nei due file di dati",
+              nel_catalogo(lambda dati: dati.update(verificato=prima_della_data)), "è diverso nei due file di dati")
+
+        spec = importlib.util.spec_from_file_location("controllo_dei_dati", RADICE / "scripts" / SCRIPT)
+        modulo = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(modulo)
+        tutti_i_collegamenti = modulo.collegamenti_da_leggere(*modulo.carica())
+        vecchia = date.today() - timedelta(days=100)
+
+        def vecchia_ovunque(caso):
+            nel_catalogo(lambda dati: dati.update(verificato=vecchia.isoformat()))(caso)
+            p = caso / "data" / "cucina_emergenza.yaml"
+            p.write_text(re.sub(r'(?m)^verificato: "[^"]+"', f'verificato: "{vecchia.isoformat()}"', p.read_text(encoding="utf-8")),
+                         encoding="utf-8")
+            con_le_letture(dict(dict.fromkeys(tutti_i_collegamenti, date.today().isoformat()), **{uno: vecchia.isoformat()}))(caso)
+
+        prova(base, "data di verifica ferma da troppo: il messaggio nomina il collegamento che la tiene ferma (--eta 45)",
+              vecchia_ovunque, f"letti l'ultima volta il {vecchia:%d/%m/%Y}: {uno}.", "--eta", "45")
+
+        caso = base.parent / "caso"
+        if caso.exists():
+            shutil.rmtree(caso)
+        shutil.copytree(base, caso)
+        con_le_letture({in_pdf["url"]: scritta, uno: scritta, "https://www.esempio.it/tolto.pdf": prima_della_data})(caso)
+        r = lancia(caso, "--eta", "36500")
+        esiti.append(r.returncode == 0)
+        print(("ok  " if r.returncode == 0 else "NO  ")
+              + "letture coerenti con la data passano, anche con un indirizzo che non è più nei dati")
+        if r.returncode != 0:
+            print("    " + "\n    ".join((r.stdout + r.stderr).strip().splitlines()[-12:]))
         prova(base, "pagina che collega un file Word",
               nella_pagina("disciplinari/index.html", in_fondo(f'<a href="{word.replace("&", "&amp;")}">Word</a>')),
               "le pagine collegano un file che non è un PDF")
