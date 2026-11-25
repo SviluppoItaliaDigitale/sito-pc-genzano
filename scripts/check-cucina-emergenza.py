@@ -756,12 +756,15 @@ def controlla_archivio_delle_sintesi(ue, voci):
                                   f"dati non conoscono ({numero}" + (f", del {giorno(quando)}" if giorno(quando) else "") + ")")
         # la controprova: le rettifiche che i dati conoscono devono tornare nella risposta. Se mancano, la
         # risposta è incompleta o la domanda non funziona più, e «nessuna rettifica nuova» non vorrebbe dire nulla
-        perse = sorted((atto, numero) for atto in gruppo for numero in note[atto][1]
+        perse = sorted((note[atto][0], numero, atto) for atto in gruppo for numero in note[atto][1]
                        if numero not in {n for n, _ in legate.get(atto, [])})
         if perse:
+            nome, numero, atto = perse[0]
             non_letti.append((ARCHIVIO, f"l'archivio dell'UE non ha restituito {len(perse)} rettifiche che i dati conoscono "
-                                        f"(la prima: {perse[0][1]}, dell'atto {perse[0][0]}): risposta incompleta, non si sa "
-                                        f"se ci sono rettifiche nuove"))
+                                        f"(la prima: {numero}, dell'atto {atto}, «{nome}»): risposta incompleta, non si sa "
+                                        f"se ci sono rettifiche nuove. Se si ripete, e l'archivio ha davvero tolto il "
+                                        f"legame, la rettifica si toglie dai dati solo così: "
+                                        f"`python3 scripts/aggiorna-documenti-unici.py --nome \"{nome}\"`"))
 
 
 def controlla_europa(catalogo):
@@ -1050,7 +1053,9 @@ def rapporto(documenti, catalogo, con_rete, anche_file, rete_saltata=False):
                   "`data/disciplinari.json`. Un allegato che non serve al catalogo si aggiunge a `allegati_noti` con il motivo.",
                   "Per le sintesi europee (pubblicazioni nuove nel registro, rettifiche nuove, fascicolo cambiato):",
                   "`python3 scripts/aggiorna-documenti-unici.py`, che rilegge i soli prodotti cambiati e riscrive i dati;",
-                  "poi la build e questo controllo con `--public public`.", ""]
+                  "poi la build e questo controllo con `--public public`. Lo script non fa arretrare da solo ciò che il",
+                  "sito già mostra (una sintesi più vecchia, una rettifica in meno): lo elenca sotto «Da guardare», e chi",
+                  "ha guardato lo accetta lanciandolo per quel prodotto, con `--nome \"Prodotto\"`.", ""]
     elif not protetti and not muti:
         righe += ["Nessun problema.", ""]
     firma = hashlib.sha256("\n".join(sorted(errori + [t for _, t in non_letti] + protetti + muti + novita)).encode("utf-8")).hexdigest()[:16]
