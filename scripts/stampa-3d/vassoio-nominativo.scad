@@ -519,7 +519,7 @@ DX3 = DOPPIO3 ? 240 : 0;
 W3 = 420 + DX3; D3 = 240;                      // fondo del vassoio (in alto, con i due bordi inclinati, è largo 34 mm di più)
 F3 = 2.4; H3 = 18; LAB = 17; MURO = 2.4;       // fondo, altezza dei bordi, sporgenza dei bordi inclinati, pareti
 J1 = 115; J2 = 296 + DX3;                      // giunzioni
-JA = 235; JB = 355;                            // solo nel doppio: giunzione fra i due piatti e giunzione nel secondo piatto
+JA = 245; JB = 355;                            // solo nel doppio: giunzione fra i due piatti e giunzione nel secondo piatto
 JC = DOPPIO3 ? JB : J1;                        // giunzione sinistra del pezzo centrale
 GIUNZ_PIATTO = DOPPIO3 ? [J1, JB] : [J1];      // giunzioni che passano per il centro di un piatto
 P3 = [115, 0];                                 // centro del piatto

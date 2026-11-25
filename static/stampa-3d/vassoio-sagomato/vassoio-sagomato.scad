@@ -1,4 +1,4 @@
-// Vassoio con le sedi sagomate con il nominativo. Modello per OpenSCAD (https://openscad.org/), gratuito.
+// Vassoio chiuso per piatto piano con il nominativo. Modello per OpenSCAD (https://openscad.org/), gratuito.
 // Scrivi il tuo nominativo in riga1, premi F6 per l'anteprima e F7 per salvare il file STL.
 // Lo stesso modello fa anche altri oggetti: si sceglie con il parametro «tipo».
 // Vassoio porta piatto, bicchiere e posate con il nominativo (volontari della Protezione Civile di Genzano di Roma).
@@ -21,7 +21,7 @@
 // sinistra180 e centro180 = seconda versione dei due pezzi del piatto, con il foro da 180 mm
 // sinistra3, centro3, destra3 = terza versione, con le sedi sagomate: si stampa diritta, con il fondo sul piatto;
 // montato3 = terza versione montata, solo da guardare
-parte = "tutto"; // [tutto, base, testo, sinistra, centro, destra, sinistra180, centro180, sinistra160, centro160, sinistra160_i, centro160_i, clip, montato, sinistra3, centro3, destra3, montato3, sinistra_i, centro_i, destra_i, sinistra180_i, centro180_i, sinistra3_i, centro3_i, destra3_i, farfalle, farfalle3, provino, rivetti_targhetta, rivetti_targhetta3, controllo_viti]
+parte = "tutto"; // [tutto, base, testo, sinistra, centro, destra, sinistra180, centro180, sinistra160, centro160, sinistra160_i, centro160_i, clip, montato, sinistra3, centro3, destra3, montato3, sinistra_i, centro_i, destra_i, sinistra180_i, centro180_i, sinistra3_i, centro3_i, destra3_i, farfalle, farfalle3, provino, rivetti_targhetta, rivetti_targhetta3, controllo_viti, montato160, montato_doppio, prolunga_a, prolunga_b, sinistra3f, centro3f, sinistra3f_i, centro3f_i, montato3f, sinistra3d, a3d, b3d, centro3d, destra3d, montato3d]
 tipo = "vassoio"; // [vassoio]
 
 /* [Testi] */
@@ -65,11 +65,11 @@ $fn = 64;
 // bottiglia scende di circa 35 mm e si ferma su un cono che in fondo lascia un'apertura di 54 mm. Una bottiglia
 // più larga di 70 mm non entra; una più stretta di 55 mm cadrebbe.
 BOTT = 70; B_PROF = 44; B_CONO = 9; B_FONDO = 54;
-STRETTO = parte == "montato" || parte == "sinistra180" || parte == "centro180" || parte == "sinistra180_i" || parte == "centro180_i";
+STRETTO = parte == "montato" || parte == "montato_doppio" || parte == "prolunga_a" || parte == "prolunga_b" || parte == "sinistra180" || parte == "centro180" || parte == "sinistra180_i" || parte == "centro180_i";
 // Vassoio per i piatti fondi (25/11/2026, richiesta di Alessandro): foro da 160 mm. Il piatto fondo «da 22 cm» (220 mm
 // in alto, 145 mm alla base, alto 27 mm) ci entra con la base e sotto il bordo restano 30 mm di vassoio per parte;
 // il piatto piano (base di 165 mm) non ci entra: per quello c'è il foro da 180 mm.
-FONDI = parte == "sinistra160" || parte == "centro160" || parte == "sinistra160_i" || parte == "centro160_i";
+FONDI = parte == "montato160" || parte == "sinistra160" || parte == "centro160" || parte == "sinistra160_i" || parte == "centro160_i";
 FORO_PIATTO = FONDI ? 160 : STRETTO ? 180 : 200; FORO_BICCHIERE = 56;
 PIANO = 3.0;                  // spessore del piano (15 strati da 0,2 mm)
 NERV = 15;                    // fin dove scendono le nervature sotto il piano (12 mm oltre il piano)
@@ -243,7 +243,7 @@ module incavo_piede(p) {
 // in una gola del pezzo accanto e impedisce ai pezzi di scorrere in altezza uno sull'altro.
 // Le sedi e i pezzi pieni intorno prendono il posto delle viti: i pezzi a incastro non hanno fori per le viti.
 // Alla seconda giunzione restano anche le due costole di allineamento dei pezzi con le viti.
-INC_PARTI = ["sinistra_i", "centro_i", "destra_i", "sinistra180_i", "centro180_i", "sinistra160_i", "centro160_i", "sinistra3_i", "centro3_i",
+INC_PARTI = ["sinistra_i", "centro_i", "destra_i", "sinistra180_i", "centro180_i", "sinistra160_i", "centro160_i", "sinistra3_i", "centro3_i", "sinistra3f_i", "centro3f_i",
              "destra3_i", "interferenze", "interferenze3"];
 INC = len([for (q = INC_PARTI) if (q == parte) 1]) > 0;
 K_L = 14; K_COLLO = 6; K_ALA = 12; K_GIOCO = 0.2; K_BORDO = 3;
@@ -416,10 +416,68 @@ module pezzo_destra() {
     }
 }
 
-// Ogni vassoio è completo (piatto, posate, bicchiere, bottiglia). Il vassoio piccolo con il solo piatto e la prolunga
-// per il secondo piatto, provati il 25/11/2026, sono stati tolti su indicazione di Alessandro: un foro da 180 mm con le
-// sue giunzioni non sta in un pezzo largo meno di 20 cm e il vassoio lungo 70 cm fletteva.
+/* ---------- Vassoio doppio: due piatti (25/11/2026) ---------- */
 
+// Ogni vassoio è completo (piatto, posate, bicchiere, bottiglia): niente vassoi con il solo piatto.
+// Un foro da 180 mm con le sue pareti di giunzione non sta in un pezzo largo meno di 20 cm, il massimo per una
+// stampante da tavolo: per questo ogni foro del piatto è diviso fra due pezzi, e per il secondo piatto ne servono due.
+// Fra il pezzo sinistro e il pezzo centrale entrano due pezzi larghi 120 mm, A e B. A chiude il primo foro (prende
+// il posto del lato sinistro del pezzo centrale), B apre il secondo (ha il lato destro del pezzo sinistro); fra A e
+// B c'è una giunzione uguale alla seconda del vassoio. I due piatti stanno a 240 mm da centro a centro: fra i bordi
+// di due piatti da 225 mm restano 15 mm. Il vassoio doppio è lungo 696 mm e si unisce solo con le viti M4 × 10.
+// Tolto per errore di lettura e rimesso lo stesso giorno, su indicazione di Alessandro, come oggetto a sé del catalogo.
+PRO = 120;                                     // larghezza di ogni pezzo della prolunga
+module incavi_pro(piedi) { for (p = piedi, v = [-1, 1]) incavo_piede([p[0], v * p[1]]); }
+module lastra_pro(piedi) {
+    translate([0, -FONDO / 2, 0]) cube([PRO, FONDO, PIANO]);
+    for (v = [-1, 1]) translate([0, v > 0 ? FONDO / 2 - 2.4 : -FONDO / 2, PIANO - 0.01]) cube([PRO, 2.4, NERV - PIANO]);   // bordi
+    for (p = piedi, v = [-1, 1]) piede([p[0], v * p[1]]);
+}
+module foro_pro(x) {      // foro del piatto con il centro sulla giunzione x, e il suo smusso
+    translate([x, 0, -1]) cylinder(d = FORO_PIATTO, h = PIEDE, $fn = 180);
+    hull() {
+        translate([x, 0, -0.01]) cylinder(d = FORO_PIATTO + 2 * SM, h = 0.01, $fn = 180);
+        translate([x, 0, SM]) cylinder(d = FORO_PIATTO - 0.04, h = 0.01, $fn = 180);
+    }
+}
+module solo_pro() { intersection() { children(); translate([0, -200, -1]) cube([PRO, 400, 100]); } }
+// A: a sinistra il primo foro (lato dei dadi, con le costole che entrano nel pezzo sinistro), a destra una parete
+// intera con le teste delle viti
+module prolunga_a() {
+    difference() {
+        union() {
+            lastra_pro([[20, 109], [PRO - 16, 107]]);
+            solo_pro() translate([0, 0, PIANO - 0.01]) linear_extrude(NERV - PIANO) anello2d([0, 0], FORO_PIATTO, 2.6);
+            for (v = [-1, 1]) parete(0, 1, FL_B, v > 0 ? Y1A : -FONDO / 2, v > 0 ? FONDO / 2 : -Y1A);
+            intersection() { costole(0, COST_1); translate([-5, -200, 0]) cube([5, 400, 100]); }
+            parete(PRO, -1, FL_A, -FONDO / 2, FONDO / 2);
+        }
+        foro_pro(0);
+        incavi_pro([[20, 109], [PRO - 16, 107]]);
+        viti_dadi(0, VITI_1);
+        viti_teste(PRO, VITI_2);
+        costole(PRO, COST_2, 0.2);
+    }
+}
+// B: a sinistra una parete intera con i dadi e le costole, a destra il secondo foro (lato delle teste, come il
+// pezzo sinistro), a cui si attacca il pezzo centrale
+module prolunga_b() {
+    difference() {
+        union() {
+            lastra_pro([[12, 110], [PRO - 43, 109]]);
+            solo_pro() translate([0, 0, PIANO - 0.01]) linear_extrude(NERV - PIANO) anello2d([PRO, 0], FORO_PIATTO, 2.6);
+            parete(0, 1, FL_B, -FONDO / 2, FONDO / 2);
+            intersection() { costole(0, COST_2); translate([-5, -200, 0]) cube([5, 400, 100]); }
+            for (v = [-1, 1]) parete(PRO, -1, FL_A, v > 0 ? Y1A : -FONDO / 2, v > 0 ? FONDO / 2 : -Y1A);
+        }
+        foro_pro(PRO);
+        incavi_pro([[12, 110], [PRO - 43, 109]]);
+        viti_dadi(0, VITI_2);
+        viti_teste(PRO, VITI_1);
+        costole(PRO, COST_1, 0.2);
+        translate([0, 0, -0.01]) linear_extrude(INCISO + 0.01) etichetta("PIATTO", [PRO - 64, -104]);
+    }
+}
 /* ---------- Clip per le posate ---------- */
 
 // Un ponte sopra le posate, con due gambe che entrano nelle fessure del piano e si agganciano sotto con un dente.
@@ -454,15 +512,26 @@ module clip() { linear_extrude(C_LARGA) clip2d(); }
 // 70 mm e alto 45 mm. Le posate appoggiano su due ponticelli alti 9 mm e la clip si aggancia a uno dei due.
 // Il vassoio non ha piedini: si stampa diritto, con il fondo sul piatto della stampante, e per prenderlo dal tavolo
 // i due lati corti salgono inclinati verso l'esterno. Coordinate vere: z verso l'alto, z = 0 è il tavolo.
-W3 = 420; D3 = 240;                            // fondo del vassoio (in alto, con i due bordi inclinati, è largo 454)
+// Vassoio chiuso per i piatti fondi (25/11/2026): la conca è larga 148 mm invece di 168, per il piatto fondo «da 22 cm»
+// (145 mm alla base, 220 in alto, alto 27 mm). Vassoio chiuso doppio (stesso giorno): due conche da 168 mm a 240 mm
+// da centro a centro; fra il pezzo sinistro e il pezzo centrale entrano due pezzi larghi 120 mm, A e B, e tutto ciò
+// che sta a destra del piatto si sposta di 240 mm. Il doppio si unisce solo con le viti.
+FONDI3 = len([for (q = ["sinistra3f", "centro3f", "sinistra3f_i", "centro3f_i", "montato3f"]) if (q == parte) 1]) > 0;
+DOPPIO3 = len([for (q = ["sinistra3d", "a3d", "b3d", "centro3d", "destra3d", "montato3d"]) if (q == parte) 1]) > 0;
+DX3 = DOPPIO3 ? 240 : 0;
+W3 = 420 + DX3; D3 = 240;                      // fondo del vassoio (in alto, con i due bordi inclinati, è largo 34 mm di più)
 F3 = 2.4; H3 = 18; LAB = 17; MURO = 2.4;       // fondo, altezza dei bordi, sporgenza dei bordi inclinati, pareti
-J1 = 115; J2 = 296;                            // giunzioni
+J1 = 115; J2 = 296 + DX3;                      // giunzioni
+JA = 245; JB = 355;                            // solo nel doppio: giunzione fra i due piatti e giunzione nel secondo piatto
+JC = DOPPIO3 ? JB : J1;                        // giunzione sinistra del pezzo centrale
+GIUNZ_PIATTO = DOPPIO3 ? [J1, JB] : [J1];      // giunzioni che passano per il centro di un piatto
 P3 = [115, 0];                                 // centro del piatto
-A_R = 84; A_H = 8; A_PEND = 1.6; A_S = 2.4;    // anello del piatto: raggio interno in basso, altezza, pendenza, spessore
+PIATTI3 = DOPPIO3 ? [P3, [P3[0] + DX3, 0]] : [P3];
+A_R = FONDI3 ? 74 : 84; A_H = 8; A_PEND = 1.6; A_S = 2.4;    // anello del piatto: raggio interno in basso, altezza, pendenza, spessore
 A_FUORI = A_R + A_PEND * A_H + A_S;
-C3 = [360, 75]; B3 = [360, -6]; N3 = [360, -80];   // bicchiere, bottiglietta, targhetta
+C3 = [360 + DX3, 75]; B3 = [360 + DX3, -6]; N3 = [360 + DX3, -80];   // bicchiere, bottiglietta, targhetta
 BIC_H = 45; BIC_D1 = 49; BIC_D2 = 61;
-POS3_X = 253; CLIP3_Y = [-35, 45];             // corsia delle posate e i due ponticelli
+POS3_X = 253 + DX3; CLIP3_Y = [-35, 45];             // corsia delle posate e i due ponticelli
 PONTE = 9;                                     // altezza dei ponticelli: 3 mm di tetto, sotto il dente della clip
 N_ALTO = 10.6;                                 // altezza degli appoggi della targhetta: la vite M4 × 10 si ferma
                                                // a 4 mm dal tavolo, anche con una testa che affonda un po' di più
@@ -473,7 +542,7 @@ V3_1 = [-109, 109]; V3_2 = [-85, 0, 85];
 // tavolo, più delle sedi del bicchiere e della bottiglietta (47,4 mm). Sotto ogni colonnina, nel fondo, c'è un incavo
 // profondo 1 mm in cui entra la punta della colonnina del vassoio sotto (12 mm; incavo da 14,4 a 13,6 mm).
 // Ogni vassoio alza la pila di 49 mm. Le colonnine stanno a 20 mm dalla sede del bicchiere e a 3 mm dalla targhetta.
-COL3 = [[11, 109], [W3 - 11, 109]]; COL3_H = 50; COL3_D1 = 16; COL3_D2 = 12; COL3_INC = 1.0;
+COL3 = DOPPIO3 ? [[11, 109], [JA - 10, 109], [W3 - 11, 109]] : [[11, 109], [W3 - 11, 109]]; COL3_H = 50; COL3_D1 = 16; COL3_D2 = 12; COL3_INC = 1.0;
 module xz(t) { rotate([90, 0, 0]) linear_extrude(t) children(); }
 module vasca3() {
     translate([0, -D3 / 2, 0]) cube([W3, D3, F3]);
@@ -484,15 +553,15 @@ module vasca3() {
         polygon([[0, 0], [3.4, 0], [3.4 - LAB, H3], [-LAB, H3]]);
         polygon([[W3, 0], [W3 - 3.4, 0], [W3 + LAB - 3.4, H3], [W3 + LAB, H3]]);
     }
-    translate([P3[0], P3[1], F3 - 0.01]) rotate_extrude($fn = 180)
+    for (c = PIATTI3) translate([c[0], c[1], F3 - 0.01]) rotate_extrude($fn = 180)
         polygon([[A_R, 0], [A_R + A_PEND * A_H, A_H], [A_FUORI, A_H], [A_FUORI, 0]]);
     translate([C3[0], C3[1], F3 - 0.01]) cylinder(d1 = BIC_D1 + 4, d2 = BIC_D2 + 4, h = BIC_H, $fn = 120);
     translate([B3[0], B3[1], F3 - 0.01]) cylinder(d = BOTT + 4.8, h = 45, $fn = 120);
     // pareti di giunzione
-    for (v = [-1, 1]) {
-        translate([J1 - FL_A, v > 0 ? Y3A : -D3 / 2 + 1, F3 - 0.01]) cube([FL_A + FL_B, D3 / 2 - 1 - Y3A, H3 - F3]);
+    for (j = GIUNZ_PIATTO, v = [-1, 1]) {
+        translate([j - FL_A, v > 0 ? Y3A : -D3 / 2 + 1, F3 - 0.01]) cube([FL_A + FL_B, D3 / 2 - 1 - Y3A, H3 - F3]);
     }
-    translate([J2 - FL_A, -D3 / 2 + 1, F3 - 0.01]) cube([FL_A + FL_B, D3 - 2, H3 - F3]);
+    for (j = DOPPIO3 ? [JA, J2] : [J2]) translate([j - FL_A, -D3 / 2 + 1, F3 - 0.01]) cube([FL_A + FL_B, D3 - 2, H3 - F3]);
     if (INC) {
         for (v = [-1, 1]) rinforzo(J1, v * KY1, F3 - 0.01, H3 - F3);
         for (y = KY2) rinforzo(J2, y, F3 - 0.01, H3 - F3);
@@ -506,7 +575,7 @@ module vasca3() {
     }
 }
 module etichette3() {
-    etichetta("PIATTO", [35, -100]);
+    for (c = PIATTI3) etichetta("PIATTO", [c[0] - 80, -100]);
     etichetta("POSATE", [POS3_X, -106]);
     // bicchiere e bottiglietta: sul fondo della loro sede, perché fra due sedi alte la scritta non si vedrebbe
     etichetta("BICCHIERE", C3);
@@ -515,10 +584,11 @@ module etichette3() {
 // Le pareti della prima giunzione stanno sotto il bordo del piatto: il loro spigolo interno è tagliato lungo una
 // linea parallela alla parete del piatto piano (base 165 mm, bordo 225 mm, alto 20 mm, presa diritta fra base e
 // bordo: è un'ipotesi, il profilo vero non è nella scheda del produttore), 2,5 mm più in basso.
-function sotto_il_piatto(y) = F3 + (y - 82.5) / 1.5 - 2.5;
+// Per il piatto fondo (base 145 mm, bordo 220 mm, alto 27 mm) la parete sale di 1 mm ogni 1,389 mm.
+function sotto_il_piatto(y) = FONDI3 ? F3 + (y - 72.5) / 1.389 - 2.5 : F3 + (y - 82.5) / 1.5 - 2.5;
 module scavi3() {
     for (p = COL3, v = [-1, 1]) translate([p[0], v * p[1], -0.01]) cylinder(d1 = COL3_D2 + 2.4, d2 = COL3_D2 + 1.6, h = COL3_INC + 0.01, $fn = 48);
-    for (v = [0, 1]) mirror([0, v, 0]) translate([J1 - (INC ? 11 : FL_A + 1), 0, 0]) rotate([90, 0, 90]) linear_extrude(INC ? 22 : FL_A + FL_B + 2)
+    for (j = GIUNZ_PIATTO, v = [0, 1]) mirror([0, v, 0]) translate([j - (INC ? 11 : FL_A + 1), 0, 0]) rotate([90, 0, 90]) linear_extrude(INC ? 22 : FL_A + FL_B + 2)
         polygon([[Y3A - 1, sotto_il_piatto(Y3A - 1)], [113, sotto_il_piatto(113)], [113, 30], [Y3A - 1, 30]]);
     // pezzi a incastro: sedi delle chiavette, aperte in alto, e sotto ognuna un foro da 3,2 mm nel fondo per
     // spingerla fuori; con la chiavetta al suo posto il foro è chiuso
@@ -546,8 +616,8 @@ module scavi3() {
         translate([v > 0 ? -DADO / 2 - 0.8 : -8, -FORO / 2, N_ALTO - 2 - 0.01]) cube([8 + DADO / 2 + 0.8, FORO, 3]);
     }
 }
-module costole3(gioco = 0) {
-    for (y = COST_2) translate([J2, y, F3 - 0.01]) cylinder(r = 1.5 + gioco, h = H3 - F3 + (gioco > 0 ? 1 : 0), $fn = 24);
+module costole3(gioco = 0, j = J2) {
+    for (y = COST_2) translate([j, y, F3 - 0.01]) cylinder(r = 1.5 + gioco, h = H3 - F3 + (gioco > 0 ? 1 : 0), $fn = 24);
 }
 module sinistra3() {
     difference() {
@@ -560,12 +630,12 @@ module sinistra3() {
 module centro3() {
     difference() {
         union() {
-            intersection() { vasca3(); translate([J1, -200, -1]) cube([J2 - J1, 400, 100]); }
-            if (INC) dente(J1, tratti1(Y3A), D_Z3);
+            intersection() { vasca3(); translate([JC, -200, -1]) cube([J2 - JC, 400, 100]); }
+            if (INC) dente(JC, tratti1(Y3A), D_Z3);
         }
         scavi3();
         if (INC) dente(J2, TRATTI2, D_Z3, 0.2);
-        else { viti_dadi(J1, V3_1, V3_Z, H3 + 6); viti_teste(J2, V3_2, V3_Z); }
+        else { viti_dadi(JC, V3_1, V3_Z, H3 + 6); viti_teste(J2, V3_2, V3_Z); }
         costole3(0.2);
     }
 }
@@ -578,6 +648,33 @@ module destra3() {
         }
         scavi3();
         if (!INC) viti_dadi(J2, V3_2, V3_Z, H3 + 6);
+    }
+}
+// Vassoio chiuso doppio. A: dal centro del primo piatto alla giunzione fra i due piatti (a sinistra i dadi della
+// prima giunzione, a destra le teste delle viti). B: da lì al centro del secondo piatto (a sinistra i dadi e le
+// costole, a destra le teste delle viti, come il pezzo sinistro).
+module a3d() {
+    difference() {
+        intersection() { vasca3(); translate([J1, -200, -1]) cube([JA - J1, 400, 100]); }
+        scavi3();
+        viti_dadi(J1, V3_1, V3_Z, H3 + 6); viti_teste(JA, V3_2, V3_Z);
+        costole3(0.2, JA);
+    }
+}
+module b3d() {
+    difference() {
+        union() {
+            intersection() { vasca3(); translate([JA, -200, -1]) cube([JB - JA, 400, 100]); }
+            intersection() { costole3(0, JA); translate([JA - 5, -200, 0]) cube([5, 400, 100]); }
+        }
+        scavi3();
+        viti_dadi(JA, V3_2, V3_Z, H3 + 6); viti_teste(JB, V3_1, V3_Z);
+    }
+}
+module montato3d() {
+    translate([-N3[0], -N3[1], -N_ALTO]) {
+        sinistra3(); a3d(); b3d(); centro3(); destra3();
+        translate([POS3_X, CLIP3_Y[0] + C_LARGA / 2, PONTE]) rotate([90, 0, 0]) clip();
     }
 }
 module montato3() {
@@ -632,6 +729,17 @@ module montato() {
         translate([POS_X, CLIP_Y[0] + C_LARGA / 2, 0]) rotate([90, 0, 0]) clip();
     }
 }
+module montato_doppio() {
+    translate([-NX - 2 * PRO, -NY, 0]) {
+        scale([1, 1, -1]) {
+            pezzo_sinistra();
+            translate([G1, 0, 0]) prolunga_a();
+            translate([G1 + PRO, 0, 0]) prolunga_b();
+            translate([2 * PRO, 0, 0]) { pezzo_centro(); pezzo_destra(); }
+        }
+        translate([POS_X + 2 * PRO, CLIP_Y[0] + C_LARGA / 2, 0]) rotate([90, 0, 0]) clip();
+    }
+}
 
 if (parte == "tutto" || parte == "base") targhetta_base();
 if (parte == "tutto" || parte == "testo") targhetta_testo();
@@ -639,11 +747,17 @@ if (parte == "sinistra" || parte == "sinistra180" || parte == "sinistra_i" || pa
 if (parte == "centro" || parte == "centro180" || parte == "centro_i" || parte == "centro180_i" || parte == "centro160" || parte == "centro160_i") per_la_stampa() pezzo_centro();
 if (parte == "destra" || parte == "destra_i") per_la_stampa() pezzo_destra();
 if (parte == "clip") clip();
-if (parte == "montato") montato();
-if (parte == "sinistra3" || parte == "sinistra3_i") sinistra3();
-if (parte == "centro3" || parte == "centro3_i") centro3();
-if (parte == "destra3" || parte == "destra3_i") destra3();
-if (parte == "montato3") montato3();
+if (parte == "montato" || parte == "montato160") montato();
+if (parte == "montato_doppio") montato_doppio();
+if (parte == "prolunga_a") per_la_stampa() prolunga_a();
+if (parte == "prolunga_b") per_la_stampa() prolunga_b();
+if (parte == "sinistra3" || parte == "sinistra3_i" || parte == "sinistra3f" || parte == "sinistra3f_i" || parte == "sinistra3d") sinistra3();
+if (parte == "centro3" || parte == "centro3_i" || parte == "centro3f" || parte == "centro3f_i" || parte == "centro3d") centro3();
+if (parte == "destra3" || parte == "destra3_i" || parte == "destra3d") destra3();
+if (parte == "a3d") a3d();
+if (parte == "b3d") b3d();
+if (parte == "montato3d") montato3d();
+if (parte == "montato3" || parte == "montato3f") montato3();
 // chiavette delle giunzioni e rivetti della targhetta (7,2 mm sul vassoio con i piedini, 5,6 mm su quello sagomato)
 // Chiavette: cinque con la base per il vassoio con i piedini (si premono da sotto); per quello sagomato due basse,
 // per la giunzione sotto il bordo del piatto, e tre alte, che si premono dall'alto
