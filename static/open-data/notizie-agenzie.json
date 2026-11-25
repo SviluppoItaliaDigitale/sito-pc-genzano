@@ -5,52 +5,178 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-11-25T00:46:28+00:00",
+  "generato": "2026-11-25T09:16:10+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
+   "data": "2026-11-25T09:02:59+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Rischio cardiovascolare, al policlinico di Foggia la campagna 'Quore a Cuore'",
+   "url": "https://www.adnkronos.com/cronaca/rischio-cardiovascolare-al-policlinico-di-foggia-la-campagna-quore-a-cuore_42JU5SiyHOuMwLKqOsk8m7"
+  },
+  {
+   "data": "2026-11-25T09:02:33+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "'Quore a Cuore', a Milano la campagna per la riduzione del rischio cardiovascolare",
+   "url": "https://www.adnkronos.com/cronaca/quore-a-cuore-a-milano-la-campagna-per-la-riduzione-del-rischio-cardiovascolare_47qn6TjkmKkQKXzcbRkLub"
+  },
+  {
+   "data": "2026-11-25T08:51:29+00:00",
+   "fonte": "ANSA",
+   "titolo": "Mattarella: 'Uscire dalla violenza è possibile, non dipende solo dal coraggio di una donna'",
+   "url": "https://www.ansa.it/sito/notizie/speciali/25-novembre/2026/11/25/mattarella-uscire-da-violenza-e-possibile-non-dipende-solo-dal-coraggio-di-una_41fb8ea3-bf35-4d18-b6f2-6281126d08a1.html"
+  },
+  {
+   "data": "2026-11-25T08:50:50+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Violenza sulle donne, Meloni: \"Lo Stato c’è\". Mattarella: \"Garantire protezione e giustizia alle vittime\"",
+   "url": "https://www.adnkronos.com/politica/violenza-donne-appello-25-novembre_4HbA7PWoUakL1NCcac0U0b"
+  },
+  {
+   "data": "2026-11-25T08:48:20+00:00",
+   "fonte": "ANSA",
+   "titolo": "Valditara: 'Chi sostiene diritti donne voti decreto contro il burqa a scuola'",
+   "url": "https://www.ansa.it/canale_legalita_scuola/notizie/2026/11/24/valditara-chi-sostiene-diritti-donne-voti-decreto-contro-il-burqa-a-scuola_d6a53179-f027-4dfd-bd06-bbb593301f5a.html"
+  },
+  {
+   "data": "2026-11-25T08:48:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "De Gennaro, le lettere prima del suicidio: \"La mafia non è riuscita a fare quello che avete fatto voi\"",
+   "url": "https://www.adnkronos.com/cronaca/de-gennaro-suicidio-lettere-indagini-news-oggi_3OAzkx6vf5BMKOp3ZGNQN5"
+  },
+  {
+   "data": "2026-11-25T08:39:12+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina, von der Leyen: \"Kiev resisterà, Ue al suo fianco. Rimborso? Solo quando Russia pagherà i danni\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-ue-parlamento-news-oggi-25-novembre-2026_3Y9Cr1nnQZoASVawRtJP19"
+  },
+  {
+   "data": "2026-11-25T08:39:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Boehringer Ingelheim investe 160 milioni in 5 anni per produrre più principi attivi in Italia",
+   "url": "https://www.adnkronos.com/economia/boehringer-ingelheim-investe-160-milioni-in-5-anni-per-produrre-piu-principi-attivi-in-italia_6hnsnrBC0j5QPDrXqIjYMz"
+  },
+  {
+   "data": "2026-11-25T08:36:48+00:00",
+   "fonte": "ANSA",
+   "titolo": "Le lettere di De Gennaro: 'L'hard disk non ve l'ho dato perché non avreste capito niente'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/25/le-lettere-di-de-gennaro-lhard-disk-non-ve-lho-dato-perche-non-avreste_990dcfdb-4804-4496-9613-4036357dd514.html"
+  },
+  {
+   "data": "2026-11-25T08:34:22+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Ditta nel milanese accoglie Bossetti con una mail, 'lavorerà con noi'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/25/ditta-nel-milanese-accoglie-bossetti-con-una-mail-lavorera-con_e51ae1ad-69c3-4d9f-b8e1-022739122451.html"
+  },
+  {
+   "data": "2026-11-25T08:32:05+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Migrante in bici travolto e ucciso da un'auto, arrestato un 20enne",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/25/migrante-in-bici-travolto-e-ucciso-da-unauto-arrestato-un-20enne_cf7a8ef2-b209-4ffb-8999-a6d078d5b42c.html"
+  },
+  {
+   "data": "2026-11-25T08:31:32+00:00",
+   "fonte": "ANSA",
+   "titolo": "Pechino sul caso Huawei, 'ci opponiamo a repressione di nostre aziende dagli Usa'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/25/pechino-sul-caso-huawei-ci-opponiamo-a-repressione-di-nostre-aziende-dagli-usa_5ecb6989-cc80-4183-84b5-bfc3adf85b3c.html"
+  },
+  {
+   "data": "2026-11-25T08:23:44+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Aereo precipita al largo del Mississippi, 6 morti: due sono bambini",
+   "url": "https://www.adnkronos.com/internazionale/esteri/incidente-aereo-usa-mississippi-morti_6DkqpjgbID5fO4AIXWpVer"
+  },
+  {
+   "data": "2026-11-25T08:21:23+00:00",
+   "fonte": "ANSA",
+   "titolo": "Israele, Change bloc punta a insediare un nuovo governo mercoledì prossimo",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/25/israele-change-bloc-punta-a-insediare-un-nuovo-governo-mercoledi-prossimo_d382b6df-0b01-413e-94f9-859e88c479f3.html"
+  },
+  {
+   "data": "2026-11-25T08:18:10+00:00",
+   "fonte": "ANSA",
+   "titolo": "BANCOMAT Coin sarà il nome della stablecoin di sistema in euro",
+   "url": "https://www.ansa.it/native/ansacom/2026/11/25/bancomat-coin-sara-il-nome-della-stablecoin-di-sistema-in-euro_86ad3ed9-bbc1-4e5a-9513-a4688f8285d0.html"
+  },
+  {
+   "data": "2026-11-25T08:13:55+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ai, Bper: \"L'intelligenza artificiale al servizio del consulente\"",
+   "url": "https://www.adnkronos.com/economia/ai-bper-lintelligenza-artificiale-al-servizio-del-consulente_1ITDpxfaOVngAoXVA3DFeH"
+  },
+  {
+   "data": "2026-11-25T08:10:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Gaza, attacco israeliano a campo profughi: 4 morti tra cui due ragazze di 15 e 13 anni",
+   "url": "https://www.adnkronos.com/internazionale/esteri/gaza-israele-guerra-attacchi-news-oggi_7BQPVJ4MUh3y6NrWtHS99F"
+  },
+  {
+   "data": "2026-11-25T07:56:48+00:00",
+   "fonte": "ANSA",
+   "titolo": "Una donna su 3 non conosce la tecnica dell'autopalpazione mammaria",
+   "url": "https://www.ansa.it/canale_saluteebenessere/notizie/sanita/2026/11/24/una-donna-su-3-non-conosce-la-tecnica-dellautopalpazione-mammaria_2a87d840-f0dc-4735-b761-8916bb60e9d8.html"
+  },
+  {
+   "data": "2026-11-25T07:53:36+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Volontario in Ucraina indagato come mercenario in Italia",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/25/volontario-in-ucraina-indagato-come-mercenario-in-italia_cd297ea7-65d5-49f5-993f-50d936670bd4.html"
+  },
+  {
+   "data": "2026-11-25T07:51:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Neve sulle Alpi, freddo e pioggia: 48 ore instabili sull'Italia, le previsioni meteo",
+   "url": "https://www.adnkronos.com/cronaca/meteo-freddo-maltempo-previsioni-oggi-25-novembre-2026_1qfxRM5yjk3QvEuxvhtW5R"
+  },
+  {
+   "data": "2026-11-25T07:36:48+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Amazon venderà auto online nel Regno Unito a partire dal prossimo anno",
+   "url": "https://www.adnkronos.com/economia/amazon-auto-vendita-online-uk-2027_HWcraE3kGeVsznQu02ljZ"
+  },
+  {
+   "data": "2026-11-25T07:31:56+00:00",
+   "fonte": "ANSA",
+   "titolo": "Raid israeliano a Gaza, sterminata una famiglia di 4 persone",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/25/raid-israeliano-a-gaza-sterminata-una-famiglia-di-4-persone_d5c6fbf4-d81e-4056-84a1-d712fa4bd264.html"
+  },
+  {
+   "data": "2026-11-25T07:22:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "25 novembre, Giornata internazionale per l'eliminazione della violenza contro le donne: i dati choc nel mondo",
+   "url": "https://www.adnkronos.com/cronaca/giornata-internazionale-violenza-donne-oggi-25-novembre_2w7LRkSA7JvueHoN27Dvpp"
+  },
+  {
+   "data": "2026-11-25T06:59:03+00:00",
+   "fonte": "ANSA",
+   "titolo": "PRIME PAGINE | Analisi sulle lettere e sui reperti, gli scritti sono di De Gennaro",
+   "url": "https://www.ansa.it/sito/podcast/ansa_voice_daily/2026/11/25/prime-pagine-analisi-sulle-lettere-e-sui-reperti-gli-scritti-sono_fb54147f-7ec9-4d24-bafb-4d1c15b4aaf0.html"
+  },
+  {
+   "data": "2026-11-25T06:27:36+00:00",
+   "fonte": "ANSA",
+   "titolo": "Da Star Trek a Gattaca, i futuri possibili per IA e robot nel 2050",
+   "url": "https://www.ansa.it/canale_scienza/notizie/futuri_digitali/2026/11/25/da-star-trek-a-gattaca-i-futuri-possibili-per-ia-e-robot-nel-2050_71676771-0d10-4e35-927c-6c8fc5aacf72.html"
+  },
+  {
+   "data": "2026-11-25T06:26:04+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Operazione del Ros contro la 'ndrangheta, 33 arresti",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/25/operazione-del-ros-contro-la-ndrangheta-33-arresti_7d0a8f16-d5f0-4e1c-b1f2-4a2bc5433549.html"
+  },
+  {
+   "data": "2026-11-25T06:11:57+00:00",
+   "fonte": "ANSA",
+   "titolo": "Non Una di Meno, per il 25 novembre sit-in e iniziative in 40 città",
+   "url": "https://www.ansa.it/sito/notizie/speciali/25-novembre/2026/11/24/non-una-di-meno-per-il-25-novembre-sit-in-e-iniziative-in-40-citta_8cae99d6-2e9b-4a47-8352-902d3556cc4b.html"
+  },
+  {
    "data": "2026-11-24T23:35:58+00:00",
    "fonte": "ANSA",
    "titolo": "Il padre di Meghan incriminato per possesso di pornografia infantile",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/25/il-padre-di-meghan-incriminato-per-possesso-di-pornografia-infantile_e953748f-0c8a-4f5f-acf9-4aba353eb65b.html"
-  },
-  {
-   "data": "2026-11-24T23:11:15+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Maltempo, allerta arancione su settori di Emilia-Romagna e Lazio: piogge e temporali al Centro-Sud",
-   "url": "https://www.adnkronos.com/cronaca/maltempo-piogge-temporali-allerta-ultime-notizie_5mk3gGwGo6u3LYHgyaTmXN"
-  },
-  {
-   "data": "2026-11-24T23:07:55+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Nvidia, Financial Times: Trump ha guadagnato fino a 15 milioni di dollari con il ritorno di Huang",
-   "url": "https://www.adnkronos.com/internazionale/esteri/jensen-huang-nvidia-donald-trump-guadagno-ultime-news_2EUfRVq41MvgOSnXND2YH1"
-  },
-  {
-   "data": "2026-11-24T23:06:40+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ucraina: \"Raid contro navi Russia in Libia? Diritto all'autodifesa non è limitato geograficamente\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-attacco-russia-libia-news_3Tgf9jQO8HrwnIxSe6Ac8X"
-  },
-  {
-   "data": "2026-11-24T23:03:18+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Manovra, testo alla Camera il 18 dicembre: maggioranza al lavoro sul condono, Meloni vede i sindaci",
-   "url": "https://www.adnkronos.com/economia/manovra-2027-condono-pensioni-spalmacrediti-ipotesi-governo_7DRQw8yvMpeqVKSdXfEIfp"
-  },
-  {
-   "data": "2026-11-24T22:46:18+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "I Kneecap sono davvero i Rage Against The Machine di oggi? A Milano uno show tra politica e lotta",
-   "url": "https://www.adnkronos.com/spettacoli/kneecap-concerto-milano-alcatraz-recensione_2obvFitDtaUQLP2tylkWXp"
-  },
-  {
-   "data": "2026-11-24T22:22:26+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il giallo dei tacchini graziati da Trump, uno è salvo ma l'altro è sparito",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/24/il-giallo-dei-tacchini-graziati-da-trump-uno-e-salvo-ma-laltro-e-sparito_f3e0fbf4-94aa-4551-bf7f-d5447c931320.html"
   },
   {
    "data": "2026-11-24T22:20:19+00:00",
@@ -59,136 +185,10 @@
    "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/24/impresa-napoli-in-champions-ferma-il-city-e-sfiora-la-vittoria_1e5fe97c-b6f3-441c-a543-b404bd1ce557.html"
   },
   {
-   "data": "2026-11-24T21:44:32+00:00",
-   "fonte": "ANSA",
-   "titolo": "Antimafia divisa, forse il testamento di De Gennaro in commissione",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/24/antimafia-divisa-forse-il-testamento-di-de-gennaro-in-commissione-_f547b6cf-2afa-4335-8e33-c8cb26ef8d53.html"
-  },
-  {
-   "data": "2026-11-24T21:38:19+00:00",
-   "fonte": "ANSA",
-   "titolo": "Huawei giudicata colpevole negli Usa di aver rubato segreti industriali",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/24/huawei-colpevole-di-aver-rubato-segreti-industriali-e-frode-bancaria-negli-stati_041d7ec5-fc47-4e54-a632-55a769f737fe.html"
-  },
-  {
    "data": "2026-11-24T21:35:11+00:00",
    "fonte": "ANSA",
    "titolo": "Riammesso l'emendamento FdI su exit tax. Pressing di Salvini sul condono",
    "url": "https://www.ansa.it/sito/notizie/politica/2026/11/24/pressing-di-salvini-sul-condono.-alt-dei-sindaci-non-ricada-tutto_afb633f3-0b1a-4acd-8a7c-858433efc830.html"
-  },
-  {
-   "data": "2026-11-24T21:28:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Conte: \"Con alleati visioni diverse su Ucraina, su tutto il resto c'è sintonia\"",
-   "url": "https://www.adnkronos.com/politica/conte-dimartedi-ucraina_7tftxHrdhZbzbaIHD6amQr"
-  },
-  {
-   "data": "2026-11-24T21:27:02+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ucraina, Conte: \"Rischiamo guerra mondiale\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/conte-m5s-guerra-ucraina-russia_OoxSiWHsustlbebfVrzjZ"
-  },
-  {
-   "data": "2026-11-24T21:20:23+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Pierfrancesco Favino a Belve: \"Totti divinità, non potrei mai interpretarlo\". Poi, la sorpresa",
-   "url": "https://www.adnkronos.com/spettacoli/favino-totti-belve-fagnani-stasera-intervista_5HXFgy0NL4nEtBUVe7gysX"
-  },
-  {
-   "data": "2026-11-24T21:12:27+00:00",
-   "fonte": "ANSA",
-   "titolo": "Jensen Huang chiede scusa e annuncia: 'Sto andando in terapia'",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/24/trump-nella-bufera-per-nvidia-ombre-di-insider-trading_74b46bf0-83fd-4c6e-8f4c-7b8b9842fa26.html"
-  },
-  {
-   "data": "2026-11-24T21:02:17+00:00",
-   "fonte": "ANSA",
-   "titolo": "Sinner operato: 'Ho provato tutto prima dell'intervento, ci vediamo presto'",
-   "url": "https://www.ansa.it/sito/notizie/sport/2026/11/24/sinner-operato-ho-provato-tutto-prima-dellintervento-ci-vediamo-presto_2f14a8e6-4a0b-4ce2-b7a5-23561133f659.html"
-  },
-  {
-   "data": "2026-11-24T20:59:04+00:00",
-   "fonte": "ANSA",
-   "titolo": "Spunta un nuovo telefonista nel caso di Emanuela Orlandi, isolata la voce&nbsp;",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/24/spunta-un-nuovo-telefonista-nel-caso-di-emanuela-orlandi-isolata-la-voce_fa3f0340-1eec-4948-b4c5-adcc3111d40d.html"
-  },
-  {
-   "data": "2026-11-24T20:47:26+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Egitto, minacce a console onorario: l'ex marito di Nessy Guerra assolto in appello",
-   "url": "https://www.adnkronos.com/cronaca/egitto-nessy-guerra-ex-marito-assolto-appello-minacce-console_4oW19a5qdqwdXgC7qtaGxG"
-  },
-  {
-   "data": "2026-11-24T20:38:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Trump grazia i tacchini Freedom e Feathers: \"Vivranno per sempre\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/trump-grazia-tacchini-thanksgiving_3jWgh90M74d8rUdrCzqhrJ"
-  },
-  {
-   "data": "2026-11-24T20:23:00+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "La notte alla scrivania e il video. Le ultime 12 ore di De Gennaro",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/24/la-notte-alla-scrivania-e-il-video.-le-ultime-12-ore-di-de-gennaro_5a4a297e-1336-4a69-943d-476affc68574.html"
-  },
-  {
-   "data": "2026-11-24T20:08:52+00:00",
-   "fonte": "ANSA",
-   "titolo": "Hegseth ferma i Patriot a Kiev, l'Italia teme l'escalation nel Mediterraneo",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/24/il-ft-hegseth-blocca-la-consegna-di-60-missili-per-patriot-allucraina_2d8d9336-6bc5-4470-a273-9eaa8cf9c91c.html"
-  },
-  {
-   "data": "2026-11-24T19:58:05+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Analisi sulle lettere e sui reperti, venerdì l'autopsia di De Gennaro",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/24/analisi-sulle-lettere-e-sui-reperti-venerdi-lautopsia-di-de-gennaro_47670806-9616-42f4-a73b-f1d126d5e641.html"
-  },
-  {
-   "data": "2026-11-24T19:30:34+00:00",
-   "fonte": "ANSA",
-   "titolo": "Standing ovation per John Travolta al Tff: 'Mi avete permesso di volare in alto'",
-   "url": "https://www.ansa.it/sito/notizie/cultura/2026/11/24/standing-ovation-per-john-travolta-al-tff-mi-avete-permesso-di-volare-in-alto_caf27fd6-7f31-48e9-8f43-3c265e5ca18f.html"
-  },
-  {
-   "data": "2026-11-24T19:12:11+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "SuperEnalotto, numeri e combinazione vincente di oggi 24 novembre",
-   "url": "https://www.adnkronos.com/cronaca/superenalotto-estrazione-martedi-24-novembre-numeri-combinazione-quote_5AWsBfHnfL5uZKn05r3XiX"
-  },
-  {
-   "data": "2026-11-24T19:12:07+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "'Morirò per l'indifferenza' gli ultimi post dello studente trovato senza vita in tenda",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/24/lo-studente-trovato-senza-vita-in-tenda-scriveva-moriro-per-lindifferenza_42e0bff2-d6df-4ea9-9197-eba185aac4e1.html"
-  },
-  {
-   "data": "2026-11-24T19:08:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Champions League, Manchester City-Napoli 2-2, Bouaddi e Cherki rispondono a Hojlund e Lang",
-   "url": "https://www.adnkronos.com/sport/champions-manchester-city-napoli_2wJaXlJwq9gUsmtwCGi3BF"
-  },
-  {
-   "data": "2026-11-24T18:58:28+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Pirata della strada investe e uccide migrante in bici nel Brindisino",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/24/pirata-della-strada-investe-e-uccide-migrante-in-bici-nel-brindisino_b09e2c0d-1db5-475a-bfb7-c097feb65369.html"
-  },
-  {
-   "data": "2026-11-24T18:49:13+00:00",
-   "fonte": "ANSA",
-   "titolo": "William a Downing Street, Burnham vuole far crescere il futuro re",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/24/il-principe-william-per-la-prima-volta-a-downing-street-da-burnham_3e6be9ed-f8ae-491b-9407-18affb66a042.html"
-  },
-  {
-   "data": "2026-11-24T18:47:20+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Il rebus delle Procure, chi indaga sulla vicenda De Gennaro",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/24/il-rebus-delle-procure-chi-indaga-sulla-vicenda-de-gennaro_f5f9be82-2058-4bd2-b995-de35802c2a72.html"
-  },
-  {
-   "data": "2026-11-24T18:46:12+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Castelli, 'cantieri sisma concentrati su ditta prima del 2022'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/24/castelli-cantieri-sisma-concentrati-su-ditta-prima-del-2022_4d488ca5-6dea-4fd4-b8f3-ab8c54d6c39a.html"
   }
  ]
 }
