@@ -43,8 +43,10 @@ $fn = 64;
 
 // Piatto piano usa e getta «da 22 cm»: 225 mm in alto, 165 mm alla base, alto 20 mm. Piatto fondo «da 22 cm»:
 // 220 mm in alto, 145 mm alla base, alto 27 mm (Dopla Green, schede del rivenditore office.centrolibri.it,
-// consultate il 25/11/2026). Il foro del piatto è di 200 mm: più stretto del bordo dei due piatti (che quindi non
-// passano) e più largo della loro base (che quindi scende nel foro). Un piatto con il bordo sotto i 205 mm cade.
+// consultate il 25/11/2026). Il foro del piatto è di 180 mm nella versione principale (dal 25/11/2026, richiesta di
+// Alessandro: il piatto non deve poter cadere dal vassoio) e di 200 mm nella versione per soli piatti rigidi: più
+// stretto del bordo dei due piatti (che quindi non passano) e più largo della loro base (che quindi scende nel foro).
+// Con il foro da 180 mm un piatto con il bordo sotto i 185 mm cade; con quello da 200 mm, sotto i 205 mm.
 // Bicchiere usa e getta da 200 ml: 70 mm alla bocca (scheda tecnica Euronda Monoart mod. 80, rev. 11/2024), 46 mm
 // alla base e 70 mm alla bocca, alto 97 mm (bicchieri in polipropilene Semadeni, scheda su avantorsciences.com);
 // fonti consultate il 25/11/2026. Il foro del bicchiere è di 56 mm: il bicchiere scende di circa 40 mm e si
@@ -52,7 +54,7 @@ $fn = 64;
 // Piedini: il piano sta a 48 mm dal tavolo, 6 mm più di quanto scende quel bicchiere (42 mm, contando lo smusso).
 // Il PETG comincia a deformarsi a 68 gradi (temperatura di inflessione sotto carico, scheda tecnica Prusament PETG
 // di Prusa Polymers, consultata il 25/11/2026): niente stoviglie o bevande bollenti.
-// Seconda versione (foro da 180 mm): il piatto appoggia più in basso, sulla parete, e sotto il bordo restano
+// Versione principale (foro da 180 mm): il piatto appoggia più in basso, sulla parete, e sotto il bordo restano
 // 22 mm di vassoio per parte con il piatto piano e 20 mm con il fondo (con il foro da 200 mm sono 12 e 10 mm).
 // La base dei due piatti (165 e 145 mm) entra comunque. Per piatti leggeri, pieni o molli è la più sicura.
 // Bottiglietta d'acqua da mezzo litro: tonda, 68 mm di diametro, alta 172,5 mm (bottiglia rPET da 500 ml, scheda
@@ -60,7 +62,7 @@ $fn = 64;
 // bottiglia scende di circa 35 mm e si ferma su un cono che in fondo lascia un'apertura di 54 mm. Una bottiglia
 // più larga di 70 mm non entra; una più stretta di 55 mm cadrebbe.
 BOTT = 70; B_PROF = 44; B_CONO = 9; B_FONDO = 54;
-STRETTO = parte == "sinistra180" || parte == "centro180" || parte == "sinistra180_i" || parte == "centro180_i";
+STRETTO = parte == "montato" || parte == "sinistra180" || parte == "centro180" || parte == "sinistra180_i" || parte == "centro180_i";
 FORO_PIATTO = STRETTO ? 180 : 200; FORO_BICCHIERE = 56;
 PIANO = 3.0;                  // spessore del piano (15 strati da 0,2 mm)
 NERV = 15;                    // fin dove scendono le nervature sotto il piano (12 mm oltre il piano)
