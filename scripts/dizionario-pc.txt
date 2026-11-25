@@ -2191,3 +2191,5 @@ preimballato
 eAmbrosia
 portablocco
 fermafogli
+disgaggio
+kilojoule

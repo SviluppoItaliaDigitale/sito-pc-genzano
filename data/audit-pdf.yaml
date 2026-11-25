@@ -1,10 +1,10 @@
-ultimo_audit: '2026-11-24'
-totale: 151
+ultimo_audit: '2026-11-25'
+totale: 152
 riepilogo:
   ACCESSIBILE: 86
   PARZIALE: 11
   NON_ACCESSIBILE: 9
-  TERZO: 45
+  TERZO: 46
   ERRORE: 0
 documenti:
 - path: /allegati/2026/2026-05-08-dpc-art-39-rimborsi-volontari-lavoratori-autonomi.pdf
@@ -160,6 +160,20 @@ documenti:
   text_chars_sample: 3849
   origine: TERZO
   origine_descrizione: Camera dei Deputati (atti parlamentari, disegni di legge)
+  verdict: TERZO
+- path: /allegati/2026/citta-metropolitana-roma-bando-sp-79b-genzano-lago-scarpata-2026.pdf
+  file: citta-metropolitana-roma-bando-sp-79b-genzano-lago-scarpata-2026.pdf
+  size_kb: 838.9
+  sha256: 91bec17243df3cccddb44b3567b2041fc210b73567cd7ccc404388ea73ae50a4
+  searchable: true
+  tagged: true
+  language: it
+  title: null
+  pages: 41
+  errors: []
+  text_chars_sample: 13347
+  origine: TERZO
+  origine_descrizione: Città metropolitana di Roma Capitale (bandi, gare, atti)
   verdict: TERZO
 - path: /allegati/2026/comune-genzano-ordinanza-150-2026-commemorazione-defunti.pdf
   file: comune-genzano-ordinanza-150-2026-commemorazione-defunti.pdf
