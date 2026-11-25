@@ -416,6 +416,44 @@ oggetti:
       - "Infila l'occhiello del portachiavi nell'anello e fallo girare finché esce dall'altra parte."
       - "Aggiungi le chiavi allo stesso modo."
 
+  - id: "chiave-carrello"
+    nome: "Chiave per il carrello della spesa"
+    articolo: "la chiave"
+    descrizione: "Portachiavi con una linguetta che ha la punta tonda e lo spessore di una moneta da 1 euro: si infila nella fessura del carrello della spesa al posto della moneta e si sfila tenendola dal manico. Sul manico porta la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma», e ha un occhiello rinforzato per l'anello delle chiavi. Utile quando si fa la spesa per un campo o per la mensa e non si ha la moneta in tasca."
+    categoria: "giubbetto"
+    breve: "Sblocca il carrello della spesa al posto della moneta da 1 euro; sta sul mazzo delle chiavi."
+    sorgente: "targhetta-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-29.0, 2.45, -19.25, 8.95]
+      sagoma_z: 1.0   # contorno letto all'altezza della linguetta, più bassa del manico
+      nome: {zona: [-32.6, -6.3, 30.2, 0.7], lato: "retro"}   # riga di nome e cognome (static/js/stampa3d-nome-core.js)
+    parametri:
+      tipo: "carrello"
+      parte: "tutto"
+    misure: "10,5 × 2,6 cm, spesso 5 mm"
+    lunghezza_mm: 105
+    peso_g: 12
+    scheda:
+      - ["Ingombro", "105 × 26 mm; manico spesso 5 mm (4 mm di base e 1 mm di scritte), linguetta spessa 2,2 mm"]
+      - ["Peso", "circa 12 g"]
+      - ["Linguetta", "larga 23,25 mm e con la punta tonda, come una moneta da 1 euro (23,25 mm di diametro, spessa 2,33 mm: misure della Banca centrale europea); è spessa 2,2 mm ed esce di 28 mm dal manico. Va bene per i carrelli che prendono la moneta da 1 euro; quelli che vogliono solo la moneta da 50 centesimi o da 2 euro hanno la fessura di un'altra misura"]
+      - ["Occhiello", "diametro 16 mm, foro da 5 mm per l'anello"]
+      - ["Altezza delle lettere", "nominativo 6,5 mm; righe piccole 4,5 mm"]
+      - ["Scritte di un altro colore", "le scritte sono in rilievo di 1 mm in cima, l'ultimo millimetro del pezzo: per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di filo al primo strato delle scritte, cioè dopo lo strato 20 con strati da 0,2 mm (altezza 4,2 mm). Con le scritte cambiano colore anche la bandiera e la cornice, dove c'è, perché sono in rilievo alla stessa altezza. Il cambio di filo è facoltativo e si fa anche con una stampante a un colore solo: la stampa si ferma a quello strato, cambi il filo a mano e riparte. Senza cambio il pezzo esce di un colore solo e le scritte si leggono per il rilievo"]
+      - ["Posizione di stampa", "in piano, già orientato nel file, senza supporti"]
+      - ["Da sapere", "è disegnata sulle misure della moneta, non provata su un carrello: le serrature non sono tutte uguali, e in qualcuna può entrare a fatica o non sbloccare. Non forzarla: la linguetta è sottile. Sblocca il carrello come farebbe la moneta e non toglie nulla a nessuno: il carrello si riporta sempre al suo posto"]
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "un anello portachiavi da 25 mm (si trova in ferramenta)"
+    montaggio:
+      - "Apri l'anello con l'unghia o con la punta di un cacciavite e infilaci l'occhiello della chiave."
+      - "Al carrello: spingi la linguetta nella fessura della moneta, fino in fondo, finché la catena si sgancia."
+      - "Sfila la chiave tirandola dal manico: nella maggior parte delle serrature il carrello resta libero. Se la serratura la trattiene, lasciala lì come una moneta e riprendila quando riagganci il carrello."
+
   - id: "etichetta-zaino"
     nome: "Etichetta per lo zaino"
     articolo: "l'etichetta"
