@@ -12,7 +12,7 @@
 # che annota le letture in .manuale/cucina-emergenza-letture.json. Non si cambia a mano.
 # Controllo: python3 scripts/check-cucina-emergenza.py (ogni mese, controllo-cucina-emergenza.yml).
 # Shortcode: {{< cucina-documenti gruppo="…" >}}.
-verificato: "2026-11-24"
+verificato: "2026-11-25"
 
 gruppi:
   - id: campo
