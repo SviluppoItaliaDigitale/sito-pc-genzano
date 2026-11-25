@@ -44,7 +44,7 @@ Secondo **ISTAT** e **Ministero dell'Interno**:
 - **uso** in caso di aggressione in corso.
 
 ### 113 — Pronto intervento Polizia
-- **numero alternativo** a 112 dove la NUE non è attiva;
+- **numero alternativo** al 112 dove la NUE non è attiva;
 - **nel Lazio** dal 2015 la NUE 112 è il riferimento unico.
 
 ### App YouPol (Polizia di Stato)
@@ -116,7 +116,7 @@ Se si sospetta che una donna vicina (parente, amica, vicina, collega) stia suben
 5. **farsi** certificare eventuali lesioni al pronto soccorso;
 6. **conservare** prove (messaggi, email, registrazioni);
 7. **non** minimizzare; **non** sentirsi in colpa;
-8. **parlare** con persona di fiducia.
+8. **parlare** con una persona di fiducia.
 
 ## Cosa fare se conosci una vittima
 

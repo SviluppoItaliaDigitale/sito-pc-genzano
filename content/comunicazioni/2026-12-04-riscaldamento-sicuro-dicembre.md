@@ -31,7 +31,7 @@ A **dicembre** il **riscaldamento** funziona a pieno regime. È anche il mese di
 - **legna** bagnata o non stagionata;
 - **stufe** troppo vicine a materiali infiammabili;
 - **ventole** di aspirazione grasse;
-- **guaste** elettriche.
+- **guasti** elettrici.
 
 ### Ustioni
 - **superfici** calde di stufe;
