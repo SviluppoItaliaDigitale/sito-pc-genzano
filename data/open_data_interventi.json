@@ -1,7 +1,7 @@
 {
  "titolo": "Interventi del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma",
  "fonte": "Registro interventi del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma, dati aggregati e anonimi",
- "aggiornato": "2026-11-21",
+ "aggiornato": "2026-11-25",
  "testi": {
   "tutto": "tutto il periodo",
   "rivivi": "Rivivi l'attività del Gruppo giorno per giorno"
@@ -1166,6 +1166,26 @@
    "d": "2026-11-21",
    "n": 1,
    "ore": 1.1
+  },
+  {
+   "d": "2026-11-22",
+   "n": 0,
+   "ore": 0.0
+  },
+  {
+   "d": "2026-11-23",
+   "n": 1,
+   "ore": 1.5
+  },
+  {
+   "d": "2026-11-24",
+   "n": 0,
+   "ore": 0.0
+  },
+  {
+   "d": "2026-11-25",
+   "n": 3,
+   "ore": 2.1
   }
  ],
  "serie": {
@@ -1178,7 +1198,7 @@
     "Agosto",
     "Settembre",
     "Ottobre",
-    "Novembre (fino al 21)"
+    "Novembre (fino al 25)"
    ],
    "chiavi": [
     "2026-04",
@@ -1203,7 +1223,7 @@
       52,
       46,
       48,
-      18
+      22
      ]
     },
     {
@@ -1218,7 +1238,7 @@
       227.2,
       133.6,
       94.9,
-      36.8
+      40.4
      ]
     },
     {
@@ -1233,7 +1253,7 @@
       1495,
       977,
       355,
-      163
+      175
      ]
     }
    ]
@@ -1263,11 +1283,11 @@
      "unita1": "intervento",
      "valori": [
       87,
-      69,
-      22,
+      71,
+      23,
       16,
       13,
-      11,
+      12,
       5,
       5,
       4,
@@ -1402,11 +1422,11 @@
     ],
     "2026-11": [
      0,
-     12,
-     3,
+     14,
+     4,
      2,
      0,
-     0,
+     1,
      1,
      0,
      0,
@@ -1435,9 +1455,9 @@
      "unita1": "intervento",
      "valori": [
       76,
-      23,
-      47,
-      55,
+      24,
+      48,
+      57,
       26,
       11
      ]
@@ -1502,9 +1522,9 @@
     ],
     "2026-11": [
      3,
-     2,
-     2,
-     9,
+     3,
+     3,
+     11,
      1,
      1
     ]
@@ -1529,9 +1549,9 @@
      "unita1": "intervento",
      "valori": [
       72,
-      66,
+      67,
       64,
-      55,
+      57,
       13,
       11,
       6,
@@ -1620,9 +1640,9 @@
     ],
     "2026-11": [
      1,
-     8,
+     9,
      0,
-     6,
+     8,
      4,
      0,
      2,
