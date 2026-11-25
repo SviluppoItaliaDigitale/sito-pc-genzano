@@ -349,7 +349,7 @@ document.addEventListener('s3d:geometria', async ev => {
   const mia = ++tre.richiesta;           // un caricamento in corso non la sovrascrive
   if (tre.rotto || !tre.mesh) return;    // senza vista 3D resta l'immagine: il file si scarica lo stesso
   const p2 = await compagno();
-  if (mia !== tre.richiesta) return;     // nel frattempo è arrivata un'altra forma
+  if (mia !== tre.richiesta || tre.rotto) return;     // nel frattempo è arrivata un'altra forma, o la vista si è fermata
   mostra(pos, 'nome', p2);
   if (ev.detail.lato === 'retro') posiziona(-1);
 });

@@ -2,21 +2,22 @@
 // Scrivi il tuo nominativo in riga1, premi F6 per l'anteprima e F7 per salvare il file STL.
 // Lo stesso modello fa anche altri oggetti: si sceglie con il parametro «tipo».
 // Oggetti grandi con il nominativo, in due pezzi uniti da viti (volontari della Protezione Civile di Genzano di
-// Roma): gruccia per la divisa e gli abiti, vassoio per piatto, posate e bicchiere. Sono in due pezzi perché interi
-// non entrano nel piatto di una stampante da tavolo: per esempio 250 × 210 mm la Original Prusa MK4S, 250 × 220 mm
-// la CORE One, 360 × 360 mm la XL (schede su prusa3d.com, consultate il 25/11/2026). I pezzi della gruccia stanno in
-// 250 × 210 mm; il pezzo più grande del vassoio chiede un piatto di almeno 250 × 250 mm. Il pezzo con le scritte
-// cambia con il nominativo, il secondo è uguale per tutti. Si cambiano solo i parametri qui sotto.
-// Ogni oggetto lascia libera, accanto alle scritte, una fascia per una riga con nome e cognome.
+// Roma): gruccia per la divisa e gli abiti. È in due pezzi perché intera non entra nel piatto di una stampante da
+// tavolo: per esempio 250 × 210 mm la Original Prusa MK4S, 250 × 220 mm la CORE One, 360 × 360 mm la XL (schede su
+// prusa3d.com, consultate il 25/11/2026). Il pezzo più grande della gruccia misura 238 × 188 mm: serve un piatto
+// di almeno 250 × 200 mm, per lasciare il margine del bordo di adesione. Il pezzo con le scritte cambia con il
+// nominativo, il secondo è uguale per tutti. Si cambiano solo i parametri qui sotto.
+// Accanto alle scritte resta libera una fascia per una riga con nome e cognome.
 // Licenza: CC BY-NC-SA 4.0 — Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma.
 
 /* [Oggetto] */
-// gruccia = gruccia larga 40 cm con la barra per i pantaloni; vassoio = vassoio a scomparti con due manici
-tipo = "gruccia"; // [gruccia, vassoio]
+// gruccia = gruccia larga 40 cm con la barra per i pantaloni
+tipo = "gruccia"; // [gruccia]
 // tutto = il pezzo con il nominativo; base e testo = lo stesso pezzo diviso per la stampa a due colori;
-// braccio = secondo pezzo della gruccia (già capovolto per la stampa); modulo = secondo pezzo del vassoio;
-// insieme = i due pezzi montati, solo da guardare: non si stampa così
-parte = "tutto"; // [tutto, base, testo, braccio, modulo, insieme]
+// braccio = secondo pezzo della gruccia (già capovolto per la stampa);
+// insieme = i due pezzi montati, solo da guardare: non si stampa così;
+// controllo_viti = solo le parti delle scritte che finirebbero sopra una vite (deve risultare vuoto)
+parte = "tutto"; // [tutto, base, testo, braccio, insieme, controllo_viti]
 
 /* [Testi] */
 riga1 = "ALFA 1";
@@ -38,19 +39,17 @@ $fn = 48;
 
 // Misure per tipo: [lunghezza, altezza, raggio angoli, spessore base, carattere riga1, y riga1,
 //                   carattere righe piccole, y riga2, y riga3, x del centro delle scritte]
-// Per la gruccia lunghezza × altezza è l'oggetto montato e lo spessore è quello del pezzo; per il vassoio sono le
-// misure del pezzo con il nominativo, «spessore» è l'altezza del bordo con le scritte e le tre righe stanno in fila.
+// Lunghezza × altezza è l'oggetto montato e lo spessore è quello del pezzo.
 // Regole dei servizi di stampa FDM (Craftcloud): pareti da 1 mm in su, tratti delle lettere da 0,6 mm in su,
 // rilievi alti e larghi almeno 0,5 mm. Liberation Sans Bold da 6 mm in su e Narrow Bold a 4 mm passano il controllo.
 MISURE = [
-    ["gruccia", [400, 188, 6, 10.8, 8.0, 31.0, 4.0, 13.0, 6.5, 0]],
-    ["vassoio", [249, 250, 4, 15.0, 6.0, 120.0, 4.0, 120.0, 120.0, -188]]
+    ["gruccia", [400, 188, 6, 10.8, 8.0, 31.0, 4.0, 13.0, 6.5, 0]]
 ];
 M = MISURE[search([tipo], MISURE)[0]][1];
 L = M[0]; H = M[1]; R = M[2]; B = M[3];
 S1 = M[4]; Y1 = M[5]; S2 = M[6]; Y2 = M[7]; Y3 = M[8]; TX = M[9];
 
-/* ---------- Viti e dadi (uguali per i due oggetti) ---------- */
+/* ---------- Viti e dadi ---------- */
 
 // Viti M4 × 10 a testa svasata con esagono incassato (ISO 10642) e dadi esagonali M4 (ISO 4032).
 // Testa della vite: cono a 90 gradi, diametro teorico fino a 8,96 mm (reale da 7,53 mm), alta fino a 2,48 mm:
@@ -67,13 +66,16 @@ FORO = 4.5; SVASO_D = 9.4; SVASO_H = 2.45; DADO = 7.2; DADO_H = 3.4;
 
 // Larghezza 400 mm: una gruccia di legno per adulti del commercio è larga 43 cm e spessa 14 mm (IKEA BUMERANG,
 // articolo 702.385.41: scheda su ikea.com/it, consultata il 25/11/2026).
-// Gancio: occhio di 40 mm e apertura di 36 mm, per tubi appendiabiti fino a 35 mm. Un tubo ovale per armadi misura
-// 30 × 15 mm (kit Emuca, articolo 7061611: scheda su emuca.com, consultata il 25/11/2026). Non c'è una misura unica:
-// chi ha un tubo più grosso lo misura prima di stampare.
+// Gancio: occhio di 40 mm e apertura di 36,5 mm fra la punta e la piastra. Con la tolleranza di stampa (±0,5 mm
+// per superficie) si dichiara per tubi appendiabiti fino a 33 mm. Un tubo ovale per armadi misura 30 × 15 mm (kit
+// Emuca, articolo 7061611: scheda su emuca.com, consultata il 25/11/2026). Non c'è una misura unica: chi ha un tubo
+// più grosso lo misura prima di stampare.
 // Spessore 10,8 mm (54 strati da 0,2 mm): due linguette da 5,4 mm, una vite da 10 mm che non esce dal retro.
 // Carico: giacca e pantaloni di una divisa, cioè qualche chilo. Con 3 kg appesi, la flessione nel gancio (sezione di
 // 14 × 10,8 mm, braccio di 27 mm) dà circa 2,5 MPa, contro i 47 MPa a cui cede il PETG stampato in piano (scheda
-// tecnica Prusament PETG di Prusa Polymers, consultata il 25/11/2026). È un calcolo, non una prova di carico.
+// tecnica Prusament PETG di Prusa Polymers, consultata il 25/11/2026). Giunzioni: il braccio destro porta metà del
+// carico (circa 15 N) attraverso linguette da 5,4 mm e due viti M4 per giunzione; taglio e pressione sui fori restano
+// di pochi MPa. Sono calcoli, non una prova di carico: per questo la scheda dice «valore di calcolo».
 T = 10.8;                     // spessore della gruccia
 MEZZO = T / 2;                // piano su cui si toccano le linguette dei due pezzi
 SM = 2.0;                     // smusso a 45 gradi di tutti gli spigoli: niente bordi vivi sui tessuti
@@ -89,29 +91,6 @@ GR_X0 = 6; GR_X1 = 38;                         // giunzione delle spalle: da x0 
 GR_XB = 17;                                    // giunzione della barra: da -17 a +17
 GR_VITI = [[14, GR_SY], [30, GR_SY], [-8.5, GR_BY], [8.5, GR_BY]];
 GR_TACCA_X = 165;                              // tacche per le spalline e i passanti
-
-/* ---------- Vassoio: misure (con la fonte) ---------- */
-
-// Scomparto del piatto: largo 237 mm; lungo 217 mm sul fondo e 229 mm all'altezza del bordo, perché la parete del
-// manico è inclinata di 45 gradi. Un piatto piano usa e getta «da 22 cm» misura 225 mm in alto, 165 mm alla base ed
-// è alto 20 mm (Dopla Green, scheda del rivenditore office.centrolibri.it, consultata il 25/11/2026): entra con il
-// bordo sopra la parete inclinata. Regola per gli altri piatti: fino a 217 mm entrano sempre; più larghi, fino a
-// 235 mm, entrano se il bordo esterno è più alto, in millimetri, del diametro meno 217.
-// Corsia delle posate lunga 244 mm: coltello 210-245 mm, forchetta e cucchiaio 190-210 mm (guida Lusini «Posate»,
-// consultata il 24/11/2026). Scomparto del bicchiere 84 × 84 mm, per bicchieri e tazze larghi fino a 8 cm.
-// Fondo 2,4 mm (12 strati), bordi alti 15 mm, parete fra i due pezzi alta 24 mm, manici alti 26 mm.
-// Il vassoio porta le stoviglie e non tocca il cibo. Si lava a mano: il PETG comincia a deformarsi a 68 gradi
-// (temperatura di inflessione sotto carico, scheda tecnica Prusament PETG, consultata il 25/11/2026).
-V_LARGO = 250; V_FONDO = 2.4; V_BORDO_H = 15; V_BORDO = 3; V_DIETRO = 10;
-V_R = 4; V_RI = 6;                             // raggi degli angoli in fondo: fuori e dentro
-V_GA = 4; V_GB = 8; V_GH = 24;                 // pareti di giunzione dei due pezzi e loro altezza
-V_PIANO_A = 217;                               // fondo piano dello scomparto del piatto
-V_POSATE = 52; V_DIV = 2; V_BICCHIERE = 84;    // corsia delle posate, divisori bassi, scomparto del bicchiere
-V_DIV_H = 8.4;                                 // altezza dei divisori bassi (6 mm sopra il fondo)
-V_MAN_H = 26; V_MAN_S = 5; V_MAN_L = 120;      // manico: altezza, spessore in orizzontale, larghezza alla base
-V_VITE_Z = 9.5; V_VITI_Y = [-85, 0, 85];       // viti della giunzione: altezza da terra e posizioni
-V_NOME_X = [-160, -98];                        // fascia libera per nome e cognome, sul bordo dietro
-V_ENTE_X = -50.2;                              // centro della riga con l'ente: finisce 6 mm prima della giunzione
 
 /* ---------- Scritte ---------- */
 
@@ -137,16 +116,11 @@ module riga(t, x, y, s = S2, f = font2) {
     translate([x, y]) text(t, size = s, font = f, halign = "center", valign = "center");
 }
 
-// Gruccia: nominativo, fascia libera per nome e cognome, poi l'ente su due righe.
-// Vassoio: tutto su una riga lungo il bordo dietro: nominativo, fascia libera, poi l'ente per intero (a 4 mm
-// «PROTEZIONE CIVILE GENZANO DI ROMA» è lungo 88 mm).
+// Nominativo, fascia libera per nome e cognome, poi l'ente su due righe.
 module testi2d() {
     translate([TX, Y1]) nominativo2d(S1);
-    if (tipo == "vassoio") riga(str(riga2, riga2 != "" && riga3 != "" ? " " : "", riga3), V_ENTE_X, Y2);
-    else {
-        if (riga2 != "") riga(riga2, TX, Y2);
-        if (riga3 != "") riga(riga3, TX, Y3);
-    }
+    if (riga2 != "") riga(riga2, TX, Y2);
+    if (riga3 != "") riga(riga3, TX, Y3);
 }
 
 /* ---------- Gruccia ---------- */
@@ -249,105 +223,10 @@ module gr_braccio_stampa() {
     translate([0, 0, T]) rotate([0, 180, 0]) gr_braccio_montato();
 }
 
-/* ---------- Vassoio ---------- */
-
-// Ogni pezzo è mezzo vassoio: la giunzione sta sul piano x = 0, il fondo va verso le x negative e finisce con una
-// parete inclinata di 45 gradi, che sopra il bordo prosegue e fa da manico: le dita entrano sotto, il pollice sta
-// sopra. Inclinata così la parete si stampa senza supporti, e il bordo rialzato del piatto le passa sopra.
-function v_xi(xb, z) = xb - (z - V_FONDO);       // faccia interna della parete inclinata, alla quota z
-function v_xo(xb, z) = v_xi(xb, z) - V_MAN_S;    // faccia esterna
-
-// Rettangolo da x0 a x1: angoli arrotondati in fondo (x0), vivi sulla giunzione (x1)
-module v_pianta(x0, x1, y0, y1, r) {
-    hull() {
-        translate([x0 + r, y0 + r]) circle(r);
-        translate([x0 + r, y1 - r]) circle(r);
-        translate([x1 - 0.01, y0]) square([0.01, y1 - y0]);
-    }
-}
-
-module v_manico(xb) {
-    z0 = V_BORDO_H - 0.01; z1 = V_MAN_H; zs = z1 - 6;       // in cima il manico è largo 11 mm: ci sta il pollice
-    intersection() {
-        translate([0, V_MAN_L / 2, 0]) rotate([90, 0, 0]) linear_extrude(V_MAN_L)
-            polygon([[v_xo(xb, z0), z0], [v_xo(xb, z1), z1], [v_xi(xb, zs), z1], [v_xi(xb, zs), zs], [v_xi(xb, z0), z0]]);
-        // i fianchi del manico salgono a 45 gradi verso il centro
-        hull() {
-            translate([-500, -V_MAN_L / 2, z0]) cube([500, V_MAN_L, 0.01]);
-            translate([-500, -V_MAN_L / 2 + (z1 - z0), z1]) cube([500, V_MAN_L - 2 * (z1 - z0), 0.01]);
-        }
-    }
-}
-
-// piano = lunghezza del fondo piano; pg = spessore della parete di giunzione; dietro = spessore del bordo dietro
-module v_meta(piano, pg, dietro) {
-    xb = -(pg + piano);
-    ya = -V_LARGO / 2; yb = V_LARGO / 2;
-    zs = V_BORDO_H - 1.5; c = 1.5;
-    difference() {
-        union() {
-            // guscio: fondo, bordi e parete inclinata; sotto i lati lunghi uno smusso di 1,5 mm
-            hull() {
-                linear_extrude(0.01) v_pianta(v_xo(xb, 0), 0, ya + c, yb - c, V_R);
-                translate([0, 0, c]) linear_extrude(0.01) v_pianta(v_xo(xb, c), 0, ya, yb, V_R);
-                translate([0, 0, V_BORDO_H - 0.01]) linear_extrude(0.01) v_pianta(v_xo(xb, V_BORDO_H), 0, ya, yb, V_R);
-            }
-            // parete di giunzione, più alta dei bordi: fa da divisorio
-            translate([-pg, ya, c]) cube([pg, V_LARGO, V_GH - c]);
-            v_manico(xb);
-        }
-        // vano
-        hull() {
-            translate([0, 0, V_FONDO]) linear_extrude(0.01) v_pianta(v_xi(xb, V_FONDO), -pg, ya + V_BORDO, yb - dietro, V_RI);
-            translate([0, 0, zs]) linear_extrude(0.01) v_pianta(v_xi(xb, zs), -pg, ya + V_BORDO, yb - dietro, V_RI);
-        }
-        translate([0, 0, zs - 0.01]) linear_extrude(V_GH) v_pianta(v_xi(xb, zs), -pg, ya + V_BORDO, yb - dietro, V_RI);
-    }
-}
-
-// Pezzo con il nominativo: scomparto del piatto. Il bordo dietro è largo 10 mm e porta le scritte sulla faccia in
-// alto; nella parete di giunzione passano tre viti, con la testa svasata dal lato del piatto.
-module v_base() {
-    difference() {
-        v_meta(V_PIANO_A, V_GA, V_DIETRO);
-        for (y = V_VITI_Y) translate([0, y, V_VITE_Z]) rotate([0, -90, 0]) {
-            translate([0, 0, -0.01]) cylinder(d = FORO, h = V_GA + 0.02);
-            translate([0, 0, V_GA - SVASO_H]) cylinder(d1 = FORO, d2 = SVASO_D, h = SVASO_H + 0.02);
-        }
-    }
-}
-
-// Secondo pezzo: corsia delle posate, scomparto del bicchiere e spazio per pane o tovagliolo. La parete di
-// giunzione è spessa 8 mm: dentro ha tre asole aperte in alto, dove si lasciano cadere i dadi, e tre fori ciechi per
-// le viti, che non sbucano dal lato delle posate.
-module v_modulo() {
-    piano = V_POSATE + V_DIV + V_BICCHIERE;
-    xb = -(V_GB + piano);
-    xd = -(V_GB + V_POSATE);                                // divisorio fra posate e bicchiere
-    yb = V_LARGO / 2 - V_BORDO;
-    mirror([1, 0, 0]) difference() {
-        union() {
-            v_meta(piano, V_GB, V_BORDO);
-            translate([xd - V_DIV, -yb - 0.01, V_FONDO - 0.01]) cube([V_DIV, 2 * yb + 0.02, V_DIV_H - V_FONDO]);
-            // chiusura dello scomparto del bicchiere: segue la parete inclinata
-            translate([0, yb - V_BICCHIERE, 0]) rotate([90, 0, 0]) linear_extrude(V_DIV)
-                polygon([[xd - V_DIV + 0.01, V_FONDO - 0.01], [xd - V_DIV + 0.01, V_DIV_H],
-                         [v_xi(xb, V_DIV_H) - 2, V_DIV_H], [v_xi(xb, V_FONDO) - 2, V_FONDO - 0.01]]);
-        }
-        for (y = V_VITI_Y) {
-            // foro cieco della vite: 7 mm, resta 1 mm di parete dal lato delle posate
-            translate([0.01, y, V_VITE_Z]) rotate([0, -90, 0]) cylinder(d = FORO, h = 7.01);
-            // asola del dado, con il fondo a V che lo tiene all'altezza della vite
-            hull() for (z = [V_VITE_Z, V_GH + 6]) translate([-2 - DADO_H, y, z]) rotate([0, 90, 0])
-                cylinder(d = DADO / cos(30), h = DADO_H, $fn = 6);
-        }
-    }
-}
-
 /* ---------- Montaggio dei pezzi ---------- */
 
 module base() {
-    if (tipo == "gruccia") gr_base(); else v_base();
+    gr_base();
 }
 module testo() {
     translate([0, 0, B - 0.01]) linear_extrude(rilievo + 0.01) testi2d();
@@ -356,5 +235,7 @@ module testo() {
 if (parte == "tutto" || parte == "base" || parte == "insieme") base();
 if (parte == "tutto" || parte == "testo" || parte == "insieme") testo();
 if (parte == "braccio") gr_braccio_stampa();
-if (parte == "modulo") v_modulo();
-if (parte == "insieme") { if (tipo == "gruccia") gr_braccio_montato(); else v_modulo(); }
+if (parte == "insieme") gr_braccio_montato();
+// Le viti stanno sotto la piastra, lontane dalle scritte: qui si controlla che resti così (cerchi da 10 mm).
+if (parte == "controllo_viti")
+    linear_extrude(1) intersection() { testi2d(); union() for (v = GR_VITI) translate(v) circle(d = 10); }

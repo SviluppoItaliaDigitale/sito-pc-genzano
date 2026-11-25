@@ -14,7 +14,7 @@ pezzo) e l'anteprima <prefisso>-NNN.webp disegnata dal file stesso, più retro.w
 posteriore. Salta gli STL già presenti, salvo --tutti; il modello .scad si riscrive sempre.
 Un oggetto in due pezzi (per esempio scatola e coperchio) ha «secondo_pezzo» nel catalogo: il pezzo con
 le scritte cambia con il nominativo, il secondo è uguale per tutti e si crea una volta sola, con gli stessi controlli.
-Se i due pezzi si montano insieme (gruccia, vassoio), «insieme» nell'anteprima aggiunge il secondo pezzo alle
+Se i due pezzi si montano insieme (gruccia), «insieme» nell'anteprima aggiunge il secondo pezzo alle
 anteprime, nella posizione di montaggio: nei file da stampare ogni pezzo resta da solo.
 Nei modelli con viti controlla che la testa delle viti non copra mai bandiera e scritte.
 Controlla le regole pubblicate da Craftcloud per la stampa FDM (support.craftcloud3d.com, articoli
@@ -344,7 +344,7 @@ if (A.inclina) {        // targa da tavolo: piastra con le scritte riportata in 
   for (let i = 0; i < pos.length; i += 3) { const y = pos[i + 1], z = pos[i + 2] + calo; pc[i] = pos[i]; pc[i + 1] = y * ca + z * sa - meta; pc[i + 2] = -y * sa + z * ca; }
 }
 const aree = new Map();
-for (let t = 0; t < pc.length; t += 9) {
+for (let t = 0; t < suo; t += 9) {      // solo il pezzo con il nominativo decide la quota delle scritte
   const z0 = pc[t + 2]; if (Math.abs(z0 - pc[t + 5]) > 1e-3 || Math.abs(z0 - pc[t + 8]) > 1e-3) continue;
   const nz = (pc[t + 3] - pc[t]) * (pc[t + 7] - pc[t + 1]) - (pc[t + 4] - pc[t + 1]) * (pc[t + 6] - pc[t]);
   if (nz > 0) aree.set(z0.toFixed(2), (aree.get(z0.toFixed(2)) || 0) + nz);
@@ -373,7 +373,7 @@ sc.add(new THREE.Mesh(g, new THREE.MeshStandardMaterial({ vertexColors: true, ro
 const s = new THREE.Vector3(); g.boundingBox.getSize(s);
 const cam = new THREE.PerspectiveCamera(30, 1100 / 640, 1, 5000);
 const d = Math.max(s.x, s.y * 1.72, s.z) * 0.5 / Math.tan(THREE.MathUtils.degToRad(15)) * 1.1;
-// «camera» nell'anteprima: da dove si guarda e quale asse sta in alto (vassoio: di fronte e dall'alto)
+// «camera» nell'anteprima: da dove si guarda e quale asse sta in alto (per esempio di fronte e dall'alto)
 const K = A.camera || {};
 if (K.su) cam.up.set(K.su[0], K.su[1], K.su[2]);
 cam.position.copy(new THREE.Vector3(...(K.da || [0.85, -0.2, 0.75])).normalize().multiplyScalar(d)); cam.lookAt(0, 0, 0);
@@ -499,7 +499,12 @@ def main():
         else:
             modello.parent.mkdir(parents=True, exist_ok=True)
             modello.write_text(testo_modello, encoding="utf-8")
-        if not a.check and "controllo_viti" in sorgente.read_text(encoding="utf-8"):
+        testo_sorgente = sorgente.read_text(encoding="utf-8")
+        # Un modello con viti deve avere la parte «controllo_viti»: senza, il controllo sotto verrebbe saltato
+        # in silenzio (rilievo della revisione del 25/11/2026 sulla gruccia).
+        if re.search(r"\bFORO\b|VITI\b", testo_sorgente) and "controllo_viti" not in testo_sorgente:
+            errori.append(f"{sorgente.name} ha fori per viti ma non la parte «controllo_viti»: aggiungila")
+        if not a.check and "controllo_viti" in testo_sorgente:
             viti += [(sorgente, ogg.get("parametri", {}), f'{nom["prefisso"]} {n}') for n in numeri]
         for n in numeri:
             dest = USCITA / ogg["id"] / nome_file(nom["prefisso"], n)
