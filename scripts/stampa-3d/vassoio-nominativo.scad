@@ -14,7 +14,8 @@
 // sinistra, centro, destra = i tre pezzi del vassoio, già capovolti per la stampa (il piano sta sul piatto);
 // clip = clip per le posate, coricata per la stampa; montato = vassoio montato, solo da guardare;
 // controllo_viti = solo le parti delle scritte che finirebbero sotto una vite (deve risultare vuoto)
-parte = "tutto"; // [tutto, base, testo, sinistra, centro, destra, clip, montato, controllo_viti]
+// sinistra180 e centro180 = seconda versione dei due pezzi del piatto, con il foro da 180 mm
+parte = "tutto"; // [tutto, base, testo, sinistra, centro, destra, sinistra180, centro180, clip, montato, controllo_viti]
 tipo = "vassoio"; // [vassoio]
 
 /* [Testi] */
@@ -45,8 +46,14 @@ $fn = 64;
 // alla base e 70 mm alla bocca, alto 97 mm (bicchieri in polipropilene Semadeni, scheda su avantorsciences.com);
 // fonti consultate il 25/11/2026. Il foro del bicchiere è di 56 mm: il bicchiere scende di circa 40 mm e si
 // ferma. Un bicchiere con la base più larga di 56 mm non entra: si appoggia sul piano.
-// Piedini: il piano sta a 48 mm dal tavolo, 8 mm più di quanto scende il bicchiere.
-FORO_PIATTO = 200; FORO_BICCHIERE = 56;
+// Piedini: il piano sta a 48 mm dal tavolo, 6 mm più di quanto scende quel bicchiere (42 mm, contando lo smusso).
+// Il PETG comincia a deformarsi a 68 gradi (temperatura di inflessione sotto carico, scheda tecnica Prusament PETG
+// di Prusa Polymers, consultata il 25/11/2026): niente stoviglie o bevande bollenti.
+// Seconda versione (foro da 180 mm): il piatto appoggia più in basso, sulla parete, e sotto il bordo restano
+// 22 mm di vassoio per parte con il piatto piano e 20 mm con il fondo (con il foro da 200 mm sono 12 e 10 mm).
+// La base dei due piatti (165 e 145 mm) entra comunque. Per piatti leggeri, pieni o molli è la più sicura.
+STRETTO = parte == "sinistra180" || parte == "centro180";
+FORO_PIATTO = STRETTO ? 180 : 200; FORO_BICCHIERE = 56;
 PIANO = 3.0;                  // spessore del piano (15 strati da 0,2 mm)
 NERV = 15;                    // fin dove scendono le nervature sotto il piano (12 mm oltre il piano)
 FLANGIA = 26;                 // fin dove scendono le pareti di giunzione (23 mm oltre il piano)
@@ -169,7 +176,7 @@ module nervature2d() {
     difference() { contorno2d(); offset(delta = -2.4) contorno2d(); }               // bordo
     anello2d([PX, 0], FORO_PIATTO, 2.6);
     anello2d([CX, CY], FORO_BICCHIERE, 2.4);
-    difference() { manici2d(SM + 2.4); manici2d(SM - 0.01); }                       // bordo delle asole dei manici
+    difference() { manici2d(SM + 3.2); manici2d(SM - 0.01); }                       // bordo delle asole dei manici
     translate([NERV_X, -FONDO / 2]) square([2.4, FONDO]);                           // fra il piatto e le posate
     for (y = [-75, 25]) translate([NERV_X, y - 1.2]) square([G2 - NERV_X, 2.4]);    // sotto la corsia delle posate
     translate([G2, -1.2]) square([CX - FORO_BICCHIERE / 2 - G2, 2.4]);              // pezzo di destra
@@ -224,8 +231,8 @@ module viti_dadi(g, viti) {                  // nel pezzo a destra della giunzio
 module costole(g, ys, gioco = 0) {
     for (y = ys) translate([g, y, PIANO - 0.01]) cylinder(r = 1.5 + gioco, h = FLANGIA - PIANO + (gioco > 0 ? 1 : 0), $fn = 24);
 }
-COST_1 = [-103, 103]; COST_2 = [-45, 45];
-Y1A = 100.6;                                   // le pareti della prima giunzione cominciano oltre il foro del piatto
+COST_1 = [-105, 105]; COST_2 = [-45, 45];
+Y1A = FORO_PIATTO / 2 + 0.6;                   // le pareti della prima giunzione cominciano oltre il foro del piatto
 
 module pezzo_sinistra() {
     difference() {
@@ -267,11 +274,11 @@ module pezzo_destra() {
 /* ---------- Clip per le posate ---------- */
 
 // Un ponte sopra le posate, con due gambe che entrano nelle fessure del piano e si agganciano sotto con un dente.
-// Sotto il ponte una linguetta a molla preme le posate. Sotto il ponte restano 6 mm: le posate si infilano dal
-// manico. Si stampa coricata, così gli strati corrono lungo le gambe e la molla, che devono flettere.
+// Sotto il ponte una linguetta a molla, spessa 2 mm, preme le posate: da libera scende a circa 1 mm dal piano e
+// sotto il ponte restano 6 mm. Le posate si infilano dal manico. Si stampa coricata, così gli strati corrono lungo le gambe e la molla, che devono flettere.
 C_LARGA = 10; C_ALTO = 6; C_PONTE = 3; C_GAMBA = 1.6; C_DENTE = 0.8;
 // La faccia esterna della gamba sta a 0,1 mm dal bordo esterno della fessura; il dente sporge 0,8 mm oltre e si
-// aggancia sotto il piano. Per entrare, la gamba flette verso l'interno, dove la fessura lascia 0,4 mm in più.
+// aggancia sotto il piano. Per entrare, la gamba flette verso l'interno, dove la fessura (2,8 mm) lascia 1,1 mm.
 C_FUORI = POS_L / 2 + FESSURA / 2 - 0.1;
 module clip2d() {                              // x lungo il ponte, y verso l'alto; y = 0 è la faccia del piano
     h = C_ALTO + C_PONTE;
@@ -283,9 +290,9 @@ module clip2d() {                              // x lungo il ponte, y verso l'al
             [v * (C_FUORI + p[0]), p[1]]]);
     }
     // molla: parte da sotto il ponte, a sinistra, e scende fino a 1,5 mm dal piano
-    hull() { translate([-20, C_ALTO + 0.2]) circle(d = 1.2, $fn = 16); translate([-17, C_ALTO - 0.4]) circle(d = 1.2, $fn = 16); }
-    hull() { translate([-17, C_ALTO - 0.4]) circle(d = 1.2, $fn = 16); translate([12, 2.1]) circle(d = 1.2, $fn = 16); }
-    hull() { translate([12, 2.1]) circle(d = 1.2, $fn = 16); translate([17, 3.2]) circle(d = 1.2, $fn = 16); }
+    hull() { translate([-20, C_ALTO + 0.2]) circle(d = 2.0, $fn = 16); translate([-17, C_ALTO - 0.4]) circle(d = 2.0, $fn = 16); }
+    hull() { translate([-17, C_ALTO - 0.4]) circle(d = 2.0, $fn = 16); translate([12, 2.1]) circle(d = 2.0, $fn = 16); }
+    hull() { translate([12, 2.1]) circle(d = 2.0, $fn = 16); translate([17, 3.2]) circle(d = 2.0, $fn = 16); }
 }
 module clip() { linear_extrude(C_LARGA) clip2d(); }
 
@@ -302,8 +309,8 @@ module montato() {
 
 if (parte == "tutto" || parte == "base") targhetta_base();
 if (parte == "tutto" || parte == "testo") targhetta_testo();
-if (parte == "sinistra") per_la_stampa() pezzo_sinistra();
-if (parte == "centro") per_la_stampa() pezzo_centro();
+if (parte == "sinistra" || parte == "sinistra180") per_la_stampa() pezzo_sinistra();
+if (parte == "centro" || parte == "centro180") per_la_stampa() pezzo_centro();
 if (parte == "destra") per_la_stampa() pezzo_destra();
 if (parte == "clip") clip();
 if (parte == "montato") montato();

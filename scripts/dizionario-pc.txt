@@ -2189,3 +2189,5 @@ map
 preimballati
 preimballato
 eAmbrosia
+portablocco
+fermafogli
