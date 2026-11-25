@@ -8,7 +8,8 @@
 # ente che lo pubblica, indirizzo del PDF, pagine e peso misurati sul file scaricato,
 # descrizione tratta dal suo indice. `nota` è l'avvertenza che la pagina mostra in
 # grassetto: età del documento, a chi è rivolto, che cosa non prenderne come istruzione.
-# `verificato` è il giorno dell'ultimo controllo di tutti i link.
+# `verificato` è il giorno da cui ogni link è stato riletto almeno una volta: lo scrive il controllo,
+# che annota le letture in .manuale/cucina-emergenza-letture.json. Non si cambia a mano.
 # Controllo: python3 scripts/check-cucina-emergenza.py (ogni mese, controllo-cucina-emergenza.yml).
 # Shortcode: {{< cucina-documenti gruppo="…" >}}.
 verificato: "2026-11-24"

@@ -46,11 +46,16 @@ senza contenuto. L'indirizzo che si pubblica si costruisce dal numero CELEX, e i
 nell'archivio dell'Ufficio delle pubblicazioni, che di EUR-Lex è la fonte.
 
 Un errore di lettura non cambia i dati: il prodotto per cui una fonte non ha risposto resta com'era, e il
-file si scrive solo alla fine, tutto insieme. Dopo: python3 scripts/check-cucina-emergenza.py --public public
-(dopo la build) e, con la rete, python3 scripts/check-cucina-emergenza.py --rete.
-Uscita 0; 1 se una fonte non si è fatta leggere; 3 se resta qualcosa da guardare a mano (una pubblicazione
-che lo script non sa interpretare, una rettifica nota che l'archivio non restituisce più, un prodotto che
-nel registro non ha più una voce sola con quel nome).
+file si scrive solo alla fine, tutto insieme. E ciò che il sito già mostra non arretra da solo: se la ricerca
+di oggi darebbe nessuna sintesi, o una più vecchia, al posto di quella pubblicata, oppure toglierebbe una
+rettifica collegata, il prodotto resta com'era e lo script lo scrive fra le cose da guardare (l'archivio può
+aver risposto a metà). Chi ha guardato e vuole accettare la risposta di oggi lancia lo script per quel
+prodotto, con --nome. Dopo: python3 scripts/check-cucina-emergenza.py --public public (dopo la build) e, con
+la rete, python3 scripts/check-cucina-emergenza.py --rete.
+Uscita 0; 1 se una fonte non si è fatta leggere; 2 se gli argomenti sono sbagliati; 3 se resta qualcosa da
+guardare a mano (una pubblicazione che lo script non sa interpretare o di cui l'archivio non ha ancora il
+testo italiano, una sintesi o una rettifica che arretrerebbe, un prodotto che nel registro non ha più una
+voce sola con quel nome).
 """
 import argparse
 import hashlib
@@ -85,7 +90,7 @@ A_GRUPPI_DI = 40      # atti per ogni domanda all'archivio dell'UE (l'indirizzo 
 AVVISI_AL_GIORNO = 40     # numeri d'ordine che si provano per gli avvisi della serie C usciti in un giorno
 MASSIMO_PDF = 60 * 1024 * 1024  # byte: oltre non è un atto della Gazzetta (il più pesante visto è di circa 17 MB)
 ARCHIVIO_FILE = "https://publications.europa.eu/"  # i PDF si scaricano solo dall'archivio
-GIORNI_RETTIFICA_RECENTE = 60   # una rettifica più giovane, senza testo italiano, non si archivia: si riprova
+GIORNI_RECENTI = 60   # un atto o una rettifica più giovani, senza testo italiano in archivio, si riprovano
 # Denominazione fra virgolette e numero di riferimento stampati sotto il titolo della sintesi: «PDO-IT-0002-AM03»
 # (dal 2012 circa) o «IT-PDO-0117-0002» (prima: il primo numero è il tipo di domanda, il secondo il fascicolo).
 VIRGOLETTE = re.compile(r"[«“\"]\s*([^»”\"]{2,120}?)\s*[»”\"]")
@@ -97,6 +102,8 @@ CELEX_VALIDO = re.compile(r"[0-9A-Z()/]+")
 # Il sito collega solo atti con il numero CELEX nella forma corrente («52016XC1126(01)»): è quella che il
 # controllo dei dati accetta e per cui l'indirizzo del PDF su EUR-Lex è stato verificato.
 CELEX_COLLEGABILE = re.compile(r"[0-9A-Z()]+")
+RETTIFICA = re.compile(r"R\(\d+\)$")   # il numero CELEX di una rettifica finisce con «R(01)»
+AVVISO_SERIE_C = re.compile(r"5\d{4}XC[0-9()]+")
 CDM = "PREFIX cdm: <http://publications.europa.eu/ontology/cdm#> "
 STRINGA = "^^<http://www.w3.org/2001/XMLSchema#string>"
 
@@ -192,13 +199,16 @@ def impronta_del_registro(voce_del_registro):
 
 # ───────────────────────── richieste ─────────────────────────
 
-def chiedi(url, intestazioni=None, tentativi=3, massimo=None):
-    """(stato, contenuto). Stato 0 se non arriva una risposta utile, o se pesa più di `massimo` byte."""
+def chiedi(url, intestazioni=None, tentativi=3, massimo=None, solo_da=None):
+    """(stato, contenuto). Stato 0 se non arriva una risposta utile, se pesa più di `massimo` byte o se, dopo
+    un rinvio, arriva da un indirizzo che non comincia con `solo_da`."""
     ultimo = (0, b"")
     for n in range(tentativi):
         try:
             richiesta = urllib.request.Request(url, headers={"User-Agent": AGENTE, **(intestazioni or {})})
             with urllib.request.urlopen(richiesta, timeout=TEMPO_MASSIMO) as risposta:
+                if solo_da and not risposta.geturl().startswith(solo_da):
+                    return 0, b""
                 corpo = risposta.read() if massimo is None else risposta.read(massimo + 1)
             time.sleep(PAUSA)
             if massimo is not None and len(corpo) > massimo:
@@ -237,12 +247,18 @@ class Deposito:
     def leggi(self, *percorso, ore=None):
         """Con `ore`, un file più vecchio vale come assente: il registro cambia, gli atti della Gazzetta no."""
         p = self.base.joinpath(*percorso)
-        if not p.exists() or (ore is not None and time.time() - p.stat().st_mtime > ore * 3600):
-            return None
-        return json.loads(p.read_text(encoding="utf-8"))
+        try:
+            if not p.exists() or (ore is not None and time.time() - p.stat().st_mtime > ore * 3600):
+                return None
+            return json.loads(p.read_text(encoding="utf-8"))
+        except (ValueError, OSError):
+            return None  # un file rimasto a metà dopo un'interruzione vale come non scaricato
 
     def scrivi(self, dati, *percorso):
-        self.base.joinpath(*percorso).write_text(json.dumps(dati, ensure_ascii=False), encoding="utf-8")
+        p = self.base.joinpath(*percorso)
+        provvisorio = p.with_name(p.name + ".tmp")
+        provvisorio.write_text(json.dumps(dati, ensure_ascii=False), encoding="utf-8")
+        os.replace(provvisorio, p)
 
 
 def voci_italiane(dati):
@@ -327,11 +343,15 @@ def celex_della_risorsa(deposito, risorsa):
         non_letti.append(f"l'archivio dell'UE non ha detto il numero CELEX di {risorsa}")
         return None
     try:
-        numero = righe[0]["celex"]["value"] if righe else ""
+        numeri = sorted({r["celex"]["value"] for r in righe})
     except (KeyError, TypeError):
         non_letti.append(f"l'archivio dell'UE ha risposto in una forma inattesa per {risorsa}")
         return None
-    if not CELEX_VALIDO.fullmatch(numero):
+    numeri = [n for n in numeri if CELEX_VALIDO.fullmatch(n)]
+    avvisi = [n for n in numeri if AVVISO_SERIE_C.fullmatch(n)]
+    # un numero solo, oppure un solo avviso della serie C fra più numeri; altrimenti non si sceglie a caso
+    numero = numeri[0] if len(numeri) == 1 else avvisi[0] if len(avvisi) == 1 else ""
+    if not numero:
         return ""
     deposito.scrivi({"celex": numero}, "atti", chiave)
     return numero
@@ -347,10 +367,13 @@ def atto_in_italiano(deposito, celex):
     if noto is not None and "manca" in noto and not noto["manca"].startswith("PDF senza testo"):
         # un atto che l'archivio non aveva in italiano può arrivare dopo: quel «manca» vale 12 ore
         noto = deposito.leggi("atti", f"{nome}.json", ore=ORE_REGISTRO)
-    if noto is not None:
-        if "manca" not in noto:
-            noto["testo"] = (deposito.base / "atti" / f"{nome}.txt").read_text(encoding="utf-8")
+    if noto is not None and "manca" in noto:
         return noto
+    if noto is not None:
+        try:
+            return dict(noto, testo=(deposito.base / "atti" / f"{nome}.txt").read_text(encoding="utf-8"))
+        except OSError:
+            pass  # nel deposito c'è la nota ma non il testo: l'atto si riscarica
     righe = interroga("PREFIX cdm: <http://publications.europa.eu/ontology/cdm#> SELECT DISTINCT ?tipo ?item WHERE { "
                       f'?work cdm:resource_legal_id_celex "{celex}"^^<http://www.w3.org/2001/XMLSchema#string> . '
                       "?expr cdm:expression_belongs_to_work ?work ; cdm:expression_uses_language "
@@ -373,9 +396,10 @@ def atto_in_italiano(deposito, celex):
     if not indirizzo.startswith(ARCHIVIO_FILE):
         non_letti.append(f"per l'atto {celex} l'archivio dell'UE indica un file fuori dal suo sito: non scaricato")
         return None
-    stato, corpo = chiedi(indirizzo, {"Accept": "*/*"}, massimo=MASSIMO_PDF)
+    stato, corpo = chiedi(indirizzo, {"Accept": "*/*"}, massimo=MASSIMO_PDF, solo_da=ARCHIVIO_FILE)
     if stato != 200 or not corpo.startswith(b"%PDF-"):
-        non_letti.append(f"PDF dell'atto {celex} non scaricato dall'archivio dell'UE (HTTP {stato}, o file troppo pesante)")
+        non_letti.append(f"PDF dell'atto {celex} non scaricato dall'archivio dell'UE (HTTP {stato}, file troppo pesante "
+                         f"o rinvio a un altro sito)")
         return None
     with tempfile.TemporaryDirectory() as temporanea:
         percorso = Path(temporanea) / "atto.pdf"
@@ -475,7 +499,10 @@ def rettifiche_nell_archivio(atti):
         if risposta is None:
             return None
         righe += risposta
-    return righe_delle_rettifiche(righe)
+    try:
+        return righe_delle_rettifiche(righe)
+    except (KeyError, TypeError, AttributeError):
+        return None  # risposta in una forma inattesa: vale come archivio che non ha risposto
 
 
 def rettifica_cita_l_atto(testo_rettifica, celex, testo_atto, forme, data_atto=""):
@@ -483,7 +510,8 @@ def rettifica_cita_l_atto(testo_rettifica, celex, testo_atto, forme, data_atto="
     intera), oppure il numero dell'atto («C/2025/3944», Gazzetta dal 1º ottobre 2023), oppure il fascicolo della
     Gazzetta in cui l'atto è uscito insieme al suo anno («C 440 del 26 novembre 2016»): il fascicolo si ricava
     dai numeri di pagina stampati nell'atto («C 440/7»), l'anno dalla data dell'atto, perché la numerazione
-    dei fascicoli riparte ogni anno."""
+    dei fascicoli riparte ogni anno. Fascicolo e anno valgono per tutti gli avvisi usciti in quel fascicolo:
+    questa verifica da sola non basterebbe, e infatti arriva dopo la relazione «corregge» dell'archivio."""
     piano = " ".join(testo_rettifica.split())
     if "ettifica" not in piano:
         return False
@@ -503,15 +531,17 @@ def rettifica_cita_l_atto(testo_rettifica, celex, testo_atto, forme, data_atto="
 def aggiorna_rettifiche(deposito, voce, trovate, forme, sempre=False, anche_meno=False):
     """Scrive in voce["sintesi"] le rettifiche dell'atto: quelle con il testo in italiano che citano l'atto in
     «rettifiche», le altre in «rettifiche_altre». Una rettifica recente che non ha ancora il testo in italiano
-    non si annota: resta una novità per il controllo mensile, finché il testo arriva. Se nella risposta
-    dell'archivio manca una rettifica che i dati conoscono, la voce resta com'era: l'archivio può aver risposto
-    a metà, e una rettifica pubblicata non si toglie per questo (con `anche_meno`, cioè quando chi lancia lo
-    script ha chiesto proprio quel prodotto, vale la risposta dell'archivio). Restituisce gli avvisi per chi
-    lancia lo script; None se una fonte non si è fatta leggere, e anche allora la voce resta com'era."""
+    non si annota: resta una novità per il controllo mensile, finché il testo arriva. Ciò che il sito già
+    mostra non arretra da solo: se nella risposta dell'archivio manca una rettifica che i dati conoscono, la
+    voce resta com'era (l'archivio può aver risposto a metà); se di una rettifica collegata oggi manca il testo
+    italiano, o non supera più la verifica, resta collegata e lo script lo dice. Con `anche_meno`, cioè quando
+    chi lancia lo script ha chiesto proprio quel prodotto, vale la risposta di oggi. Restituisce gli avvisi
+    per chi lancia lo script; None se una fonte non si è fatta leggere, e anche allora la voce resta com'era."""
     sintesi = voce["sintesi"]
-    recente = (date.today() - timedelta(days=GIORNI_RETTIFICA_RECENTE)).isoformat()
+    recente = (date.today() - timedelta(days=GIORNI_RECENTI)).isoformat()
     celex = celex_dell_indirizzo(sintesi["url"])
-    gia = {celex_dell_indirizzo(r["url"]) for r in sintesi.get("rettifiche", [])} | set(sintesi.get("rettifiche_altre", []))
+    mostrate_prima = {celex_dell_indirizzo(r["url"]): r for r in sintesi.get("rettifiche", [])}
+    gia = set(mostrate_prima) | set(sintesi.get("rettifiche_altre", []))
     if not sempre and {numero for numero, _ in trovate} == gia:
         return []
     sparite = sorted(gia - {numero for numero, _ in trovate})
@@ -523,21 +553,41 @@ def aggiorna_rettifiche(deposito, voce, trovate, forme, sempre=False, anche_meno
     atto = atto_in_italiano(deposito, celex) if trovate else {}
     if atto is None:
         return None
+    if "manca" in atto:
+        # la sintesi è stata letta nel testo italiano di questo atto: se oggi l'archivio dice di non averlo,
+        # è la risposta di oggi che non vale
+        non_letti.append(f"l'archivio dell'UE non dà il testo italiano dell'atto {celex}, da cui viene la sintesi di "
+                         f"«{voce['nome']}» ({atto['manca']})")
+        return None
     for numero, data in trovate:
+        nota = None if anche_meno else mostrate_prima.get(numero)  # una rettifica che il sito già mostra
+        if not CELEX_COLLEGABILE.fullmatch(numero):
+            avvisi.append(f"«{voce['nome']}»: la rettifica {numero} ha un numero CELEX che il sito non sa collegare: "
+                          f"non annotata, da guardare a mano")
+            continue
         rettifica = atto_in_italiano(deposito, numero)
         if rettifica is None:
             return None
         if "manca" in rettifica:
-            if not data or data >= recente:
+            if nota:
+                mostrate.append(nota)
+                avvisi.append(f"«{voce['nome']}»: l'archivio non dà il testo italiano della rettifica {numero}, che il "
+                              f"sito collega ({rettifica['manca']}): resta com'era, da guardare a mano")
+            elif not data or data >= recente:
                 avvisi.append(f"«{voce['nome']}»: la rettifica {numero} non ha ancora il testo in italiano "
                               f"({rettifica['manca']}): non annotata, si riprova al prossimo giro")
             else:
                 altre.append(numero)  # non c'è in italiano: corregge altre versioni linguistiche
-        elif (not re.fullmatch(r"\d{4}-\d{2}-\d{2}", data) or "manca" in atto
+        elif (not re.fullmatch(r"\d{4}-\d{2}-\d{2}", data)
               or not rettifica_cita_l_atto(rettifica["testo"], celex, atto["testo"], forme, sintesi.get("data", ""))):
-            altre.append(numero)
-            avvisi.append(f"«{voce['nome']}»: la rettifica {numero} non è stata collegata (senza data, o non cita "
-                          f"l'atto {celex}): da guardare a mano")
+            if nota:
+                mostrate.append(nota)
+                avvisi.append(f"«{voce['nome']}»: la rettifica {numero}, che il sito collega, oggi non supera la verifica "
+                              f"(senza data, o non cita l'atto {celex}): resta com'era, da guardare a mano")
+            else:
+                altre.append(numero)
+                avvisi.append(f"«{voce['nome']}»: la rettifica {numero} non è stata collegata (senza data, o non cita "
+                              f"l'atto {celex}): da guardare a mano")
         else:
             mostrate.append({"url": EURLEX_PDF.format(numero.replace("(", "%28").replace(")", "%29")), "data": data,
                              "pagine": rettifica["pagine"], "kb": rettifica["kb"]})
@@ -577,21 +627,26 @@ def pubblicazioni(scheda):
     return sorted(elenco, key=lambda p: (p[0] or "9999-99-99", p[1], p[2]), reverse=True)
 
 
-def cerca_sintesi(deposito, voce, del_registro, scheda):
+def cerca_sintesi(deposito, voce, del_registro, scheda, a_mano=False):
     """La sintesi più recente del prodotto: (dati, tutto_letto, da_guardare). Senza sintesi i dati sono None.
     tutto_letto è falso se una fonte non ha risposto; da_guardare elenca ciò che lo script non sa decidere
-    da solo (pubblicazione senza data o non interpretabile, sintesi che nomina il prodotto in un'altra forma).
-    In tutti e due i casi chi chiama lascia il prodotto com'era."""
+    da solo (pubblicazione senza data o non interpretabile, sintesi che nomina il prodotto in un'altra forma,
+    atto appena uscito di cui l'archivio non ha ancora il testo italiano). In tutti e due i casi chi chiama
+    lascia il prodotto com'era. Con `a_mano` (chi lancia lo script ha chiesto proprio quel prodotto) una
+    pubblicazione senza data si salta, invece di fermare la ricerca."""
     forme = denominazioni([voce["nome"]] + list(del_registro.get("protectedNames") or []))
     fascicolo = del_registro.get("fileNumber") or voce.get("fascicolo") or ""
+    recente = (date.today() - timedelta(days=GIORNI_RECENTI)).isoformat()
     riserva = None
     for data, indirizzo, testo_rif in pubblicazioni(scheda):
         if "corrigendum" in indirizzo:
             continue  # le rettifiche si trattano a parte, con la relazione «corregge» dell'archivio
         citata = f"{testo_rif or 'senza testo'}, {indirizzo}"
         if not data:
+            if a_mano:
+                continue
             return None, True, [f"«{voce['nome']}»: il registro cita una pubblicazione senza data ({citata}): non si "
-                                f"può dire qual è la più recente"]
+                                f"può dire qual è la più recente (per saltarla: --nome \"{voce['nome']}\")"]
         celex, risorsa = celex_di(indirizzo)
         candidati, a_numeri = ([celex] if celex else []), False
         if risorsa:
@@ -606,12 +661,20 @@ def cerca_sintesi(deposito, voce, del_registro, scheda):
             candidati, a_numeri = [f"5{aaaa}XC{mm}{gg}({n:02d})" for n in range(1, AVVISI_AL_GIORNO + 1)], True
         if not candidati:
             return None, True, [f"«{voce['nome']}»: pubblicazione che lo script non sa interpretare ({citata})"]
+        if all(RETTIFICA.search(numero) for numero in candidati):
+            continue  # una rettifica citata con il suo numero CELEX: come quelle con «corrigendum» nell'indirizzo
         vuoti = 0
         for numero in candidati:
             atto = atto_in_italiano(deposito, numero)
             if atto is None:
                 return None, False, []
             if "manca" in atto:
+                if not a_numeri and data >= recente:
+                    # un atto appena uscito può arrivare in archivio qualche giorno dopo: saltarlo vorrebbe dire
+                    # scegliere una sintesi più vecchia e segnare il prodotto come già letto
+                    return None, True, [f"«{voce['nome']}»: l'atto {numero}, che il registro cita con la data {data}, non "
+                                        f"ha ancora il testo in italiano nell'archivio ({atto['manca']}): si riprova al "
+                                        f"prossimo giro"]
                 vuoti += 1
                 if a_numeri and vuoti >= 3:
                     break  # tre numeri di fila senza un atto in italiano: gli avvisi di quel giorno sono finiti
@@ -660,8 +723,12 @@ def scrivi_catalogo(testo):
     """Scrive il file dei dati tutto insieme: prima su un file accanto, poi al suo posto. Un'interruzione a
     metà lascia il file com'era."""
     provvisorio = FILE_CATALOGO.with_name(FILE_CATALOGO.name + ".tmp")
-    provvisorio.write_text(testo, encoding="utf-8")
-    os.replace(provvisorio, FILE_CATALOGO)
+    try:
+        provvisorio.write_text(testo, encoding="utf-8")
+        os.replace(provvisorio, FILE_CATALOGO)
+    finally:
+        if provvisorio.exists():  # la scrittura si è interrotta: il file accanto non deve restare
+            provvisorio.unlink()
 
 
 def riordina(voce):
@@ -698,6 +765,10 @@ def main():
     if sconosciuti:
         ap.error("nel catalogo non c'è un prodotto con questo nome (va scritto come in data/disciplinari.json): "
                  + "; ".join(sconosciuti))
+    garantite = sorted(v["nome"] for v in catalogo["voci"] if v["nome"] in args.nome and v["tipo"] == "STG")
+    if garantite:
+        ap.error("le STG non sono nel registro delle indicazioni geografiche e non hanno una sintesi europea: "
+                 + "; ".join(garantite))
     for programma in ("pdftotext", "pdfinfo"):
         if not shutil.which(programma):
             sys.exit(f"Manca {programma}: sudo apt-get update && sudo apt-get install -y poppler-utils")
@@ -726,8 +797,20 @@ def main():
                 non_letti.append(f"scheda del registro non letta per «{voce['nome']}»")
                 sintesi, tutto_letto, da_guardare = None, False, []
             else:
-                sintesi, tutto_letto, da_guardare = cerca_sintesi(deposito, voce, del_registro, scheda)
+                sintesi, tutto_letto, da_guardare = cerca_sintesi(deposito, voce, del_registro, scheda, a_mano=bool(args.nome))
                 letti += 1
+            vecchia = voce.get("sintesi") or {}
+            if tutto_letto and not da_guardare:
+                if sintesi and not impronta:
+                    # senza indirizzi nell'elenco del registro non c'è impronta, e senza impronta il controllo
+                    # mensile non può accorgersi di una pubblicazione nuova: una sintesi così non si scrive
+                    da_guardare = [f"«{voce['nome']}»: la scheda del registro ha una sintesi, ma l'elenco del registro non "
+                                   f"cita pubblicazioni con un indirizzo"]
+                elif vecchia and not args.nome and (not sintesi or sintesi["data"] < vecchia.get("data", "")):
+                    # ciò che il sito già mostra non arretra da solo: l'archivio può aver risposto a metà
+                    da_guardare = [f"«{voce['nome']}»: la ricerca di oggi darebbe "
+                                   + (f"una sintesi più vecchia ({sintesi['data']})" if sintesi else "nessuna sintesi")
+                                   + f" al posto di quella del {vecchia.get('data')} (per accettarla: --nome \"{voce['nome']}\")"]
             if not tutto_letto:
                 pass  # una fonte non si è fatta leggere: sintesi e impronta restano com'erano
             elif da_guardare:
@@ -735,7 +818,6 @@ def main():
                 avvisi += [riga + ": il prodotto resta com'era, da guardare a mano" for riga in da_guardare]
             else:
                 if sintesi:
-                    vecchia = voce.get("sintesi") or {}
                     if vecchia.get("url") == sintesi["url"]:  # stesso atto: le rettifiche già note restano
                         sintesi.update({k: vecchia[k] for k in ("rettifiche", "rettifiche_altre") if k in vecchia})
                     voce["sintesi"] = sintesi

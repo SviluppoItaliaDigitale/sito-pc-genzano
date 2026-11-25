@@ -7,9 +7,17 @@ di enti governativi e istituzionali. Lo script la fa rispettare in due modi.
   python3 scripts/check-cucina-emergenza.py [--public public] [--eta GIORNI]
       Senza rete: forma dei dati, solo siti dell'elenco ENTI, solo PDF, nessun doppione. Con --public anche
       le pagine costruite: contengono proprio i collegamenti dei dati, nessun file Word o Excel e nessun PDF
-      fuori dai dati. Bloccante sulle pull request (validate-pr.yml). Con --eta è un errore anche una data
-      «verificato» più vecchia di GIORNI giorni: lo usa l'audit del sito (audit-sito.yml, sezione 51), perché
-      un giro mensile saltato non lascia nessun run rosso.
+      fuori dai dati. Bloccante sulle pull request (validate-pr.yml). Controlla anche la data di verifica:
+      «verificato» è uguale nei due file di dati e non è più recente delle letture annotate in
+      .manuale/cucina-emergenza-letture.json, che devono essere ben formate (la data la scrive lo script, non
+      si porta avanti a mano). Con --eta è un errore anche una data «verificato» più vecchia di GIORNI
+      giorni, e il messaggio nomina i collegamenti che la tengono ferma: lo usa l'audit del sito
+      (audit-sito.yml, sezione 51), perché un giro mensile saltato non lascia nessun run rosso.
+
+  python3 scripts/check-cucina-emergenza.py --unisci-letture FILE
+      Senza rete: somma alle letture annotate quelle di FILE (per ogni collegamento vale il giorno più
+      recente) e riporta la data di verifica. Lo usa il workflow per salvare le letture di un giro sopra
+      l'ultimo main, senza conflitti con una pull request che nel frattempo ne ha annotate altre.
 
   python3 scripts/check-cucina-emergenza.py --rete [--file] [--browser] [--rapporto FILE] [--aggiorna-data]
       Con richieste vere e poche per volta: il sito del Ministero dell'agricoltura risponde 502 se lo si
@@ -32,20 +40,28 @@ di enti governativi e istituzionali. Lo script la fa rispettare in due modi.
       - Verifiche anti-bot: se un sito risponde con una pagina di verifica o rifiuta la richiesta (403, 429),
         il collegamento non è rotto e non è controllato. Non si aggira: si dichiara nel rapporto, e la data
         di verifica non si aggiorna. Il sito del Ministero della Salute lo fa a tratti (24/11/2026).
-      - Siti che non rispondono: un collegamento che dà tempo scaduto o un errore del server (5xx) dalla
-        macchina del controllo non è rotto e non è controllato (regola guasti, punto 3: non rende rosso il
-        controllo, resta nel rapporto e si riapre con una richiesta vera da un'altra rete). Il 25/11/2026 il
-        sito dell'IZS rispondeva in due secondi da una rete e non rispondeva ai server di GitHub.
-      - --aggiorna-data (con --file): se tutto è stato letto e nulla è rotto, scrive la data di oggi in
-        «verificato» dei due file di dati. Ogni mese: .github/workflows/controllo-cucina-emergenza.yml.
+      - Siti che non rispondono: un collegamento che dà tempo scaduto o un errore del server (5xx), o a cui
+        il sito chiude o rifiuta la connessione, dalla macchina del controllo non è rotto e non è controllato
+        (regola guasti, punto 3: non rende rosso il controllo, resta nel rapporto e si riapre con una
+        richiesta vera da un'altra rete). Il 25/11/2026 il sito dell'IZS rispondeva in due secondi da una
+        rete, e ai server di GitHub prima non rispondeva e poi chiudeva la connessione.
+      - --aggiorna-data: se le fonti del controllo sono state lette e nulla è rotto, annota in
+        .manuale/cucina-emergenza-letture.json il giorno in cui ogni collegamento è stato letto l'ultima
+        volta (oggi per quelli letti in questo giro, anche senza --file) e porta «verificato» dei due file
+        di dati al più vecchio di quei giorni: è la data da cui ogni collegamento è stato riletto almeno una
+        volta. Così le letture fatte da reti diverse si sommano: ciò che i server di GitHub non raggiungono
+        si rilegge da un'altra rete, e la data avanza lo stesso. Non torna mai indietro. Le letture
+        portano il giorno in cui il giro è cominciato.
+        Ogni mese: .github/workflows/controllo-cucina-emergenza.yml.
 
 Uscita: 0 tutto a posto; 1 collegamenti rotti o dati sbagliati (con i dati sbagliati i siti non si interrogano,
 e il rapporto lo dice); 2 una fonte non si è fatta leggere (pagine del Ministero, registro europeo, archivio
 dell'UE, un indirizzo che risponde con altro al posto del PDF, oppure troppi collegamenti rimasti senza
 controllo: più di 5 e più di un quinto di quelli da aprire. Regola guasti: un controllo che non legge la sua
 fonte non chiude in verde); 3 solo novità da valutare, oppure pochi collegamenti non controllati perché il
-sito chiede una verifica anti-bot o non ha risposto in tempo (regola guasti, punto 3: non sono guasti, ma si
-dichiarano, e la data di verifica resta ferma: se dura più di 45 giorni lo dice l'audit del sito con --eta).
+sito chiede una verifica anti-bot o non ha risposto (regola guasti, punto 3: non sono guasti, ma si
+dichiarano, e la data di verifica non va oltre il giorno della loro ultima lettura riuscita: se resta ferma
+più di 45 giorni lo dice l'audit del sito con --eta).
 Dati: data/cucina_emergenza.yaml, data/disciplinari.json. Le sintesi europee le scrive nei dati
 scripts/aggiorna-documenti-unici.py, da cui questo script prende le funzioni sul registro e sull'archivio.
 """
@@ -53,6 +69,7 @@ import argparse
 import hashlib
 import html
 import json
+import os
 import re
 import sys
 import threading
@@ -68,6 +85,8 @@ from pathlib import Path
 RADICE = Path(__file__).resolve().parent.parent
 FILE_DOCUMENTI = RADICE / "data" / "cucina_emergenza.yaml"
 FILE_CATALOGO = RADICE / "data" / "disciplinari.json"
+# Giorno dell'ultima lettura riuscita di ogni collegamento, da qualunque rete: lo scrive --aggiorna-data.
+FILE_LETTURE = RADICE / ".manuale" / "cucina-emergenza-letture.json"
 
 # Siti ammessi: enti governativi e istituzionali. Un sito nuovo si aggiunge qui solo se è di un ente pubblico
 # (ministero, regione, azienda sanitaria, agenzia o istituto pubblico, Unione europea), mai di terzi.
@@ -111,16 +130,29 @@ RIFIUTO = "il sito ha rifiutato la richiesta automatica"
 PROTETTO = (ANTIBOT, RIFIUTO)  # esiti che non dicono nulla sul collegamento: né rotto né controllato
 ALTRO = "risponde, ma non con un PDF"
 SALTATO = "non controllato: il sito non rispondeva alle richieste precedenti"
-# Il sito non ha risposto: tempo scaduto, errore del server, o collegamento saltato per uno di questi motivi.
-SILENZIO = re.compile(r"timed out|TimeoutError|\bHTTP 5\d\d\b|^non controllato:")
+# Il sito non ha risposto: tempo scaduto, errore del server, connessione chiusa o rifiutata dal sito prima
+# della risposta (lo fa chi filtra gli indirizzi dei centri di calcolo), sito non raggiungibile dalla macchina
+# del controllo, o collegamento saltato per uno di questi motivi. Non ci sono il nome che non si risolve e il
+# certificato che non vale: quelli il cittadino li incontra da ogni rete, e restano fra le fonti non lette.
+# Un sito spento per tutti finisce qui anche lui: lo ferma la data, che resta al giorno della sua ultima
+# lettura finché, oltre i 45 giorni, l'audit del sito non lo nomina (--eta).
+SILENZIO = re.compile(r"timed out|TimeoutError|\bHTTP 5\d\d\b|^non controllato:|"
+                      r"(?i:socket hang up|ECONNRESET|ECONNREFUSED|ECONNABORTED|ETIMEDOUT|EHOSTUNREACH|ENETUNREACH|EPIPE\b|"
+                      r"ERR_CONNECTION_(?:RESET|REFUSED|CLOSED|ABORTED|TIMED_OUT)|ERR_EMPTY_RESPONSE|ERR_TIMED_OUT|"
+                      r"ERR_ADDRESS_UNREACHABLE|connection (?:reset|refused|aborted)|RemoteDisconnected|"
+                      r"remote end closed connection|IncompleteRead|UNEXPECTED_EOF|EOF occurred in violation of protocol|"
+                      r"broken pipe|network is unreachable|no route to host|"
+                      r"socket disconnected before secure TLS connection)")
 
 errori = []       # dati sbagliati o collegamenti rotti (uscita 1)
 non_letti = []    # (sito, testo): fonti che non si sono fatte leggere (uscita 2)
 novita = []       # cose nuove sulle fonti, da valutare: non sono guasti (uscita 3)
 protetti = []     # collegamenti dietro una verifica anti-bot: non controllati in questo giro (uscita 3)
-muti = []         # collegamenti a cui il sito non ha risposto in tempo: non controllati in questo giro (uscita 3)
+muti = []         # collegamenti a cui il sito non ha risposto: non controllati in questo giro (uscita 3)
 da_rivedere = []  # (dove, url, nota): PDF che la richiesta semplice non ha letto, da riprovare con il browser
 senza_browser = []  # perché il ripiego con il browser, se chiesto, non è stato possibile
+letti = set()     # indirizzi letti davvero in questo giro: --aggiorna-data ne annota il giorno
+note_letture = []  # che cosa --aggiorna-data ha annotato e dove si ferma la data: va nel rapporto
 metodi = Counter()
 
 
@@ -133,8 +165,21 @@ def oggi_in_italia():
 
 
 def controlla_eta(documenti, catalogo, giorni):
-    """L'ultimo controllo completo dei collegamenti non è più vecchio di `giorni`: lo usa l'audit del sito, perché
-    un giro mensile saltato, o fermo per una verifica anti-bot, non lascia nessun run rosso."""
+    """La data di verifica non è più vecchia di `giorni`: lo usa l'audit del sito, perché un giro mensile
+    saltato, o un collegamento che la macchina del controllo non riesce a leggere, non lascia nessun run rosso."""
+    fermi = ""
+    try:
+        attuali = list(dict.fromkeys(collegamenti_da_leggere(documenti, catalogo)))
+        letture = letture_scritte()
+        valide = {url: letture[url] for url in attuali if giorno_di_lettura(letture.get(url))}
+        mai = [url for url in attuali if url not in valide]
+        vecchio = min(valide.values(), default="")
+        quali = mai or [url for url, quando in valide.items() if quando == vecchio]
+        if letture and quali:
+            fermi = (" Collegamenti " + ("senza una lettura annotata" if mai else f"letti l'ultima volta il {giorno(vecchio)}")
+                     + ": " + ", ".join(quali[:3]) + (f" e altri {len(quali) - 3}" if len(quali) > 3 else "") + ".")
+    except (KeyError, TypeError, AttributeError):  # dati malformati: lo dice già controlla_dati
+        pass
     for nome, dati in (("cucina_emergenza.yaml", documenti), ("disciplinari.json", catalogo)):
         try:
             fatta = date.fromisoformat(str(dati.get("verificato", "")))
@@ -142,9 +187,11 @@ def controlla_eta(documenti, catalogo, giorni):
             continue  # il formato sbagliato lo segnala già controlla_dati
         eta = (oggi_in_italia() - fatta).days
         if eta > giorni:
-            errori.append(f"{nome}: l'ultimo controllo completo dei collegamenti è del {fatta:%d/%m/%Y}, {eta} giorni fa "
-                          f"(soglia {giorni}): rilanciare «Cucina in emergenza: controllo mensile dei collegamenti» e, "
-                          f"se resta una verifica anti-bot, aprire quei collegamenti con un browser")
+            errori.append(f"{nome}: la data di verifica dei collegamenti è ferma al {fatta:%d/%m/%Y}, {eta} giorni fa "
+                          f"(soglia {giorni}): da allora almeno un collegamento non è stato riletto. Rilanciare «Cucina in "
+                          f"emergenza: controllo mensile dei collegamenti»; ciò che la macchina del controllo non legge si "
+                          f"rilegge da un'altra rete con `python3 scripts/{Path(__file__).name} --rete --browser "
+                          f"--aggiorna-data`, che annota le letture in {FILE_LETTURE.relative_to(RADICE)}.{fermi}")
 
 
 def carica():
@@ -372,6 +419,45 @@ def controlla_sintesi(dove, voce, usati):
 
 # ───────────────────────── pagine costruite ─────────────────────────
 
+def giorno_di_lettura(quando):
+    """Vero se `quando` è un giorno AAAA-MM-GG, non nel futuro: così si scrivono le letture annotate."""
+    return (isinstance(quando, str) and bool(re.fullmatch(r"\d{4}-\d{2}-\d{2}", quando)) and bool(giorno(quando))
+            and quando <= oggi_in_italia().isoformat())
+
+
+def controlla_letture(documenti, catalogo):
+    """Le due date «verificato» coincidono; il file delle letture, se c'è, è una mappa indirizzo → giorno, e la
+    data dei dati non è più recente dell'ultima lettura annotata di nessun collegamento: la data la scrive lo
+    script, e chi la porta avanti a mano dichiara un controllo che non c'è stato. Restituisce i collegamenti
+    dei dati che non hanno ancora una lettura annotata (non è un errore: la data resta ferma finché non si
+    leggono)."""
+    nome = FILE_LETTURE.relative_to(RADICE)
+    if str(documenti.get("verificato", "")) != str(catalogo.get("verificato", "")):
+        errori.append(f"«verificato» è diverso nei due file di dati ({documenti.get('verificato')} in cucina_emergenza.yaml, "
+                      f"{catalogo.get('verificato')} in disciplinari.json): le due date le scrive insieme lo script")
+    try:
+        letture = json.loads(FILE_LETTURE.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        return []
+    except (OSError, ValueError) as e:
+        errori.append(f"{nome}: il file delle letture non si legge ({type(e).__name__})")
+        return []
+    if not isinstance(letture, dict):
+        errori.append(f"{nome}: il file delle letture deve essere una mappa indirizzo → giorno")
+        return []
+    sbagliati = sorted(url for url, quando in letture.items() if not giorno_di_lettura(quando))
+    if sbagliati:
+        errori.append(f"{nome}: {len(sbagliati)} letture con il giorno scritto male o nel futuro (la prima: {sbagliati[0]})")
+    attuali = set(collegamenti_da_leggere(documenti, catalogo))
+    scritta = max(str(documenti.get("verificato", "")), str(catalogo.get("verificato", "")))
+    indietro = sorted(url for url, quando in letture.items() if url in attuali and giorno_di_lettura(quando) and quando < scritta)
+    if indietro:
+        errori.append(f"«verificato» ({scritta}) è più recente dell'ultima lettura annotata di {len(indietro)} collegamenti "
+                      f"(il primo: {indietro[0]}, letto il {letture[indietro[0]]}): la data la scrive lo script da {nome}, "
+                      f"con --rete --aggiorna-data, e non si porta avanti a mano")
+    return [url for url in dict.fromkeys(collegamenti_da_leggere(documenti, catalogo)) if not giorno_di_lettura(letture.get(url))]
+
+
 def collegamenti(percorso):
     testo = percorso.read_text(encoding="utf-8")
     trovati = set()
@@ -463,7 +549,7 @@ def chiedi(url, intervallo=None, quanto=None, intestazioni=None, segui=True, ten
                 return 0, b"", errore
         except Exception as e:  # rete, tempo scaduto, connessione chiusa, certificato
             ultimo[host] = time.time()
-            errore = f"{type(e).__name__}: {e}"
+            errore = " ".join(f"{type(e).__name__}: {e}".split())  # su una riga: finisce nel rapporto
         if n < tentativi - 1:
             time.sleep(8 * (n + 1))
     return 0, b"", errore
@@ -509,6 +595,7 @@ def controlla_pdf(dove, url):
     segna(host, esito in ("pdf", "assente"), nota)
     if esito == "pdf":
         metodi["richiesta diretta"] += 1
+        letti.add(url)
     elif esito == "assente":
         errori.append(f"{dove}: {nota}: {url}")
     else:
@@ -588,6 +675,7 @@ def controlla_ue(dove, url):
         errori.append(f"{dove}: HTTP {stato}: {url}")
     elif stato == 200 and inizio.startswith(b"%PDF"):
         metodi["richiesta diretta"] += 1
+        letti.add(url)
     elif stato in (200, 202):
         da_rivedere.append((dove, url, "EUR-Lex"))
     elif errore in ("HTTP 403", "HTTP 429"):
@@ -756,12 +844,15 @@ def controlla_archivio_delle_sintesi(ue, voci):
                                   f"dati non conoscono ({numero}" + (f", del {giorno(quando)}" if giorno(quando) else "") + ")")
         # la controprova: le rettifiche che i dati conoscono devono tornare nella risposta. Se mancano, la
         # risposta è incompleta o la domanda non funziona più, e «nessuna rettifica nuova» non vorrebbe dire nulla
-        perse = sorted((atto, numero) for atto in gruppo for numero in note[atto][1]
+        perse = sorted((note[atto][0], numero, atto) for atto in gruppo for numero in note[atto][1]
                        if numero not in {n for n, _ in legate.get(atto, [])})
         if perse:
+            nome, numero, atto = perse[0]
             non_letti.append((ARCHIVIO, f"l'archivio dell'UE non ha restituito {len(perse)} rettifiche che i dati conoscono "
-                                        f"(la prima: {perse[0][1]}, dell'atto {perse[0][0]}): risposta incompleta, non si sa "
-                                        f"se ci sono rettifiche nuove"))
+                                        f"(la prima: {numero}, dell'atto {atto}, «{nome}»): risposta incompleta, non si sa "
+                                        f"se ci sono rettifiche nuove. Se si ripete, e l'archivio ha davvero tolto il "
+                                        f"legame, la rettifica si toglie dai dati solo così: "
+                                        f"`python3 scripts/aggiorna-documenti-unici.py --nome \"{nome}\"`"))
 
 
 def controlla_europa(catalogo):
@@ -800,6 +891,8 @@ def controlla_rete(documenti, catalogo, anche_file):
                     muti.append(f"{dove}, pagina dell'ente: {nota}: {doc['pagina']['url']}")
                 else:
                     non_letti.append((sito(doc["pagina"]["url"]), f"{dove}, pagina dell'ente: {nota}"))
+            else:
+                letti.add(doc["pagina"]["url"])
     controlla_ministero(documenti, catalogo)
     controlla_europa(catalogo)  # prima dei file del Ministero, che nei periodi lenti consumano il tempo del giro
     if anche_file:
@@ -831,6 +924,7 @@ def controlla_file_del_catalogo(catalogo):
         for (dove, url), (esito, nota) in zip(voci, squadra.map(uno, voci)):
             if esito == "pdf":
                 metodi["richiesta diretta"] += 1
+                letti.add(url)
                 senza_risposta = 0
             elif esito == "assente":
                 errori.append(f"{dove}: {nota}: {url}")
@@ -886,9 +980,11 @@ def riprova_con_browser(voci):
                     try:
                         try:
                             pagina.goto(url, wait_until="domcontentloaded", timeout=30000)
-                        except Exception as e:  # un PDF fa partire lo scaricamento e interrompe la navigazione
-                            if "Download is starting" not in str(e):
-                                nota = type(e).__name__
+                        except Exception:
+                            # un PDF fa partire lo scaricamento e interrompe la navigazione; di ogni altra
+                            # interruzione dice di più la richiesta che segue: la risposta del sito, o
+                            # l'errore di rete, che finisce nell'«except» in fondo
+                            pass
                         # una validazione automatica del browser chiede qualche secondo: le si lascia il tempo
                         for _ in range(4):
                             pagina.wait_for_timeout(5000)
@@ -918,7 +1014,8 @@ def riprova_con_browser(voci):
                 esiti[url] = ("pdf", "")
                 falliti[sito(url)] = 0
             except Exception as e:
-                esiti[url] = ("no", f"{type(e).__name__}: {str(e)[:120]}")
+                # di un errore di Playwright serve la prima riga: le altre sono il registro delle chiamate
+                esiti[url] = ("no", f"{type(e).__name__}: {(str(e).strip().splitlines() or [''])[0][:120]}")
                 falliti[sito(url)] += 1
             time.sleep(PAUSA)
         try:
@@ -944,33 +1041,49 @@ def chiudi_da_rivedere(con_browser):
               "si prosegue senza.", file=sys.stderr)
     for dove, url, nota in da_rivedere:
         esito, nota_browser = (esiti or {}).get(url, ("", ""))
+        note = [n for n in (nota_browser, nota) if n]  # prima ciò che ha visto il browser, poi la richiesta semplice
         if esito == "pdf":
             metodi["browser"] += 1
+            letti.add(url)
         elif esito == "assente":
             errori.append(f"{dove}: {nota_browser}: {url}")
         elif nota == "EUR-Lex":
             # il documento esiste nell'archivio dell'UE e l'indirizzo di EUR-Lex risponde: di più una
             # richiesta automatica non ottiene
             metodi["archivio dell'UE"] += 1
-        elif nota.startswith(PROTETTO) or nota_browser.startswith(PROTETTO):
+            letti.add(url)
+        elif any(n.startswith(PROTETTO) for n in note):
             # né rotto né controllato: il sito non lascia leggere il file ai programmi, e non lo si aggira
-            protetti.append(f"{dove}: {nota_browser if nota_browser.startswith(PROTETTO) else nota}: {url}")
-        elif SILENZIO.search(nota_browser or nota):
-            # né rotto né controllato: da questa macchina il sito non ha risposto (regola guasti, punto 3)
-            muti.append(f"{dove}: {nota_browser or nota}: {url}")
+            protetti.append(f"{dove}: {next(n for n in note if n.startswith(PROTETTO))}: {url}")
+        elif note and all(SILENZIO.search(n) for n in note):
+            # né rotto né controllato: da questa macchina il sito non ha risposto, né alla richiesta semplice
+            # né al browser (regola guasti, punto 3)
+            muti.append(f"{dove}: {note[0]}: {url}")
         else:
-            non_letti.append((sito(url), f"{dove}: {nota_browser or nota}: {url}"))
+            # almeno una delle due richieste ha avuto una risposta, e non era il PDF: conta quella, non il
+            # silenzio dell'altra
+            non_letti.append((sito(url), f"{dove}: {next((n for n in note if not SILENZIO.search(n)), '')}: {url}"))
+
+
+def collegamenti_da_leggere(documenti, catalogo, anche_file=True):
+    """Gli indirizzi che il giro apre con una richiesta sua: documenti, pagine degli enti e, con --file, i PDF
+    del catalogo. Le sintesi europee non ci sono: di quelle si chiede all'archivio dell'UE, tutte insieme."""
+    indirizzi = []
+    for doc in tutti_i_documenti(documenti):
+        indirizzi.append(doc["url"])
+        if doc.get("pagina") and sito(doc["pagina"]["url"]) != MASAF:
+            indirizzi.append(doc["pagina"]["url"])
+    if anche_file:
+        for voce in catalogo["voci"]:
+            if voce["formato"] == "pdf":
+                indirizzi.append(voce["url"])
+            indirizzi += [extra["url"] for extra in voce.get("extra", [])]
+    return indirizzi
 
 
 def collegamenti_da_aprire(documenti, catalogo, anche_file):
-    """Quanti collegamenti il giro apre con una richiesta sua: documenti, pagine degli enti e, con --file, i PDF
-    del catalogo. Le sintesi europee non si contano: di quelle si chiede all'archivio dell'UE."""
-    quanti = 0
-    for doc in tutti_i_documenti(documenti):
-        quanti += 1 + bool(doc.get("pagina") and sito(doc["pagina"]["url"]) != MASAF)
-    if anche_file:
-        quanti += sum((voce["formato"] == "pdf") + len(voce.get("extra", [])) for voce in catalogo["voci"])
-    return quanti
+    """Quanti collegamenti il giro apre con una richiesta sua."""
+    return len(collegamenti_da_leggere(documenti, catalogo, anche_file))
 
 
 def segnala_controllo_mancato(da_aprire):
@@ -1021,6 +1134,7 @@ def rapporto(documenti, catalogo, con_rete, anche_file, rete_saltata=False):
         righe.append("PDF letti: " + ", ".join(f"{n} con {m}" for m, n in sorted(metodi.items())) + ".")
     if senza_browser:
         righe.append("Ripiego con il browser non disponibile in questo giro: " + "; ".join(senza_browser) + ".")
+    righe += note_letture
     righe.append("")
     if errori:
         righe += ["### Collegamenti rotti o dati sbagliati", ""] + [f"- {e}" for e in errori] + [""]
@@ -1030,18 +1144,24 @@ def rapporto(documenti, catalogo, con_rete, anche_file, rete_saltata=False):
         righe += ["### Collegamenti non controllati: il sito chiede una verifica anti-bot", "",
                   "Il sito ha risposto alle richieste automatiche con una pagina di verifica o con un rifiuto. Non è un",
                   "collegamento rotto e la verifica non è stata aggirata: questi collegamenti restano da controllare, e la",
-                  "data di verifica scritta nei dati non cambia. Si può rilanciare il controllo un altro giorno (Actions →",
-                  "«Cucina in emergenza: controllo mensile dei collegamenti» → Run workflow) o aprirli con un browser.", ""]
+                  "data di verifica scritta nei dati non va oltre il giorno della loro ultima lettura riuscita.", ""]
         righe += [f"- {p}" for p in protetti] + [""]
     if muti:
-        righe += ["### Collegamenti non controllati: il sito non ha risposto in tempo", "",
-                  "Dalla macchina del controllo il sito ha dato tempo scaduto o un errore del server. Non è detto che il",
-                  "collegamento sia rotto: va riaperto con una richiesta vera da un'altra rete, e se non risponde per più",
-                  "settimane si tratta come rotto (regola sui guasti, punto 3). La data di verifica scritta nei dati non",
-                  "cambia. Il controllo si può rilanciare (Actions → «Cucina in emergenza: controllo mensile dei",
-                  "collegamenti» → Run workflow) o eseguire da un'altra macchina, pubblicando poi la data con una PR:",
-                  "`python3 scripts/check-cucina-emergenza.py --rete --file --browser --aggiorna-data`.", ""]
+        righe += ["### Collegamenti non controllati: il sito non ha risposto", "",
+                  "Dalla macchina del controllo il sito ha dato tempo scaduto o un errore del server, oppure ha chiuso o",
+                  "rifiutato la connessione. Non è detto che il collegamento sia rotto: va riaperto con una richiesta vera",
+                  "da un'altra rete, e se non risponde per più settimane si tratta come rotto (regola sui guasti, punto 3).",
+                  "La data di verifica scritta nei dati non va oltre il giorno della sua ultima lettura riuscita.", ""]
         righe += elenco_per_sito([(sito(m.rsplit(": ", 1)[-1]), m) for m in muti]) + [""]
+    if protetti or muti:
+        righe += ["Come si completa il controllo: lo si rilancia un altro giorno (Actions → «Cucina in emergenza: controllo",
+                  "mensile dei collegamenti» → Run workflow), oppure si rileggono questi collegamenti da un'altra rete con",
+                  f"`python3 scripts/{Path(__file__).name} --rete --browser --aggiorna-data` (con `--file` anche i PDF del",
+                  f"catalogo). Lo script annota in `{FILE_LETTURE.relative_to(RADICE)}` il giorno di ogni lettura riuscita: le",
+                  "letture fatte da reti diverse si sommano, e la data che il sito mostra è quella del collegamento letto da",
+                  "più tempo. Poi una pull request con quel file e, se la data è cambiata, con i due file di dati. Se nel",
+                  "rapporto non resta altro da lavorare, la issue si chiude a mano: il giro del mese dopo ne apre una nuova",
+                  "solo se serve.", ""]
     if novita:
         righe += ["### Novità sulle fonti, da valutare", ""] + [f"- {n}" for n in novita] + [""]
     if errori or non_letti or novita:
@@ -1050,7 +1170,9 @@ def rapporto(documenti, catalogo, con_rete, anche_file, rete_saltata=False):
                   "`data/disciplinari.json`. Un allegato che non serve al catalogo si aggiunge a `allegati_noti` con il motivo.",
                   "Per le sintesi europee (pubblicazioni nuove nel registro, rettifiche nuove, fascicolo cambiato):",
                   "`python3 scripts/aggiorna-documenti-unici.py`, che rilegge i soli prodotti cambiati e riscrive i dati;",
-                  "poi la build e questo controllo con `--public public`.", ""]
+                  "poi la build e questo controllo con `--public public`. Lo script non fa arretrare da solo ciò che il",
+                  "sito già mostra (una sintesi più vecchia, una rettifica in meno): lo elenca sotto «Da guardare», e chi",
+                  "ha guardato lo accetta lanciandolo per quel prodotto, con `--nome \"Prodotto\"`.", ""]
     elif not protetti and not muti:
         righe += ["Nessun problema.", ""]
     firma = hashlib.sha256("\n".join(sorted(errori + [t for _, t in non_letti] + protetti + muti + novita)).encode("utf-8")).hexdigest()[:16]
@@ -1058,53 +1180,158 @@ def rapporto(documenti, catalogo, con_rete, anche_file, rete_saltata=False):
     return "\n".join(righe) + "\n"
 
 
-def aggiorna_data():
-    """Scrive la data di oggi (ora italiana) in «verificato» dei due file di dati."""
-    oggi = oggi_in_italia().isoformat()
+def letture_scritte():
+    """Le letture già annotate, {indirizzo: giorno}. Vuoto se il file non c'è o non si legge."""
+    try:
+        letture = json.loads(FILE_LETTURE.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        return {}
+    except (OSError, ValueError) as e:
+        print(f"Avviso: {FILE_LETTURE.name} non si legge ({type(e).__name__}): le letture ripartono da questo giro.",
+              file=sys.stderr)
+        return {}
+    return letture if isinstance(letture, dict) else {}
+
+
+def annota_letture(documenti, catalogo, oggi, altre=None):
+    """Scrive in FILE_LETTURE il giorno dell'ultima lettura riuscita di ogni collegamento, da qualunque rete: il
+    più recente fra `oggi` (per i collegamenti letti in questo giro), il giorno già scritto e quello di `altre`
+    (le letture di un altro giro, da sommare). I collegamenti usciti dai dati si tolgono. Restituisce
+    (giorno, quali): il giorno più vecchio fra tutti, cioè la data da cui ogni collegamento è stato riletto
+    almeno una volta, con i collegamenti fermi a quel giorno; (None, quali) se qualcuno non è mai stato letto.
+    Un giorno scritto male o nel futuro vale come lettura mai fatta."""
+    prima, altre = letture_scritte(), altre or {}
+    letture, mai = {}, []
+    for url in dict.fromkeys(collegamenti_da_leggere(documenti, catalogo)):
+        giorni = [g for g in (oggi if url in letti else None, prima.get(url), altre.get(url)) if giorno_di_lettura(g)]
+        if giorni:
+            letture[url] = max(giorni)
+        else:
+            mai.append(url)
+    testo = json.dumps(letture, ensure_ascii=False, indent=1, sort_keys=True) + "\n"
+    try:
+        uguale = FILE_LETTURE.read_text(encoding="utf-8") == testo
+    except (OSError, ValueError):
+        uguale = False
+    if not uguale:
+        FILE_LETTURE.parent.mkdir(parents=True, exist_ok=True)
+        provvisorio = FILE_LETTURE.with_name(FILE_LETTURE.name + ".tmp")
+        try:
+            provvisorio.write_text(testo, encoding="utf-8")
+            os.replace(provvisorio, FILE_LETTURE)  # o tutto il file o niente: mai un elenco a metà
+        finally:
+            provvisorio.unlink(missing_ok=True)
+    if mai:
+        return None, mai
+    fermo = min(letture.values(), default=None)
+    return fermo, [url for url, quando in letture.items() if quando == fermo]
+
+
+def aggiorna_verifica(documenti, catalogo, oggi=None, altre=None):
+    """Annota le letture del giro (o somma quelle di `altre`) e porta la data di verifica dei due file di dati
+    al giorno da cui ogni collegamento è stato riletto. Mai indietro, e mai avanti se un collegamento non è mai
+    stato letto. `oggi` è il giorno in cui il giro è cominciato: un giro a cavallo della mezzanotte non
+    annota letture con il giorno dopo."""
+    oggi = oggi or oggi_in_italia().isoformat()
+    fermo, quali = annota_letture(documenti, catalogo, oggi, altre)
+    dove = f"`{FILE_LETTURE.relative_to(RADICE)}`"
+    note_letture.append(f"Letture annotate in {dove}: {len(letti)} collegamenti letti in questo giro." if altre is None else
+                        f"Letture sommate a quelle di {dove}: per ogni collegamento vale il giorno più recente.")
+    primi = ", ".join(quali[:3]) + (f" e altri {len(quali) - 3}" if len(quali) > 3 else "")
+    if fermo is None:
+        note_letture.append(f"La data di verifica non cambia: {len(quali)} collegamenti non risultano mai letti ({primi}).")
+        return
+    scritte = str(documenti.get("verificato", "")), str(catalogo.get("verificato", ""))
+    if fermo > min(scritte):
+        aggiorna_data(fermo)
+        documenti["verificato"], catalogo["verificato"] = max(scritte[0], fermo), max(scritte[1], fermo)
+    if fermo < oggi:
+        note_letture.append(f"Ogni collegamento è stato riletto dal {giorno(fermo)} in poi: la data di verifica non può "
+                            f"andare oltre. Letti l'ultima volta quel giorno: {primi}.")
+    elif altre is None and set(collegamenti_da_leggere(documenti, catalogo)) <= letti:
+        note_letture.append("Ogni collegamento è stato letto in questo giro.")
+    else:
+        note_letture.append("Ogni collegamento ha una lettura di oggi, di questo giro o di un altro: ciò che qui sotto è "
+                            "«non controllato» è stato letto oggi da un'altra rete.")
+
+
+def unisci_letture(documenti, catalogo, percorso):
+    """--unisci-letture: somma alle letture annotate quelle di un altro file, senza rete. Lo usa il workflow per
+    salvare le letture di un giro sopra l'ultimo main: se nel frattempo una pull request ha annotato altre
+    letture, per ogni collegamento resta il giorno più recente, e nessuna delle due si perde."""
+    try:
+        altre = json.loads(Path(percorso).read_text(encoding="utf-8"))
+    except (OSError, ValueError) as e:
+        errori.append(f"--unisci-letture: {percorso} non si legge ({type(e).__name__})")
+        return
+    if not isinstance(altre, dict):
+        errori.append(f"--unisci-letture: {percorso} deve essere una mappa indirizzo → giorno")
+        return
+    aggiorna_verifica(documenti, catalogo, altre=altre)
+
+
+def aggiorna_data(quando):
+    """Porta al giorno `quando` (AAAA-MM-GG) la data «verificato» dei due file di dati, dove è più vecchia: una
+    data non torna mai indietro."""
     da_scrivere = []
-    for percorso, modello, nuovo in ((FILE_DOCUMENTI, r'(?m)^verificato: "\d{4}-\d{2}-\d{2}"', f'verificato: "{oggi}"'),
-                                    (FILE_CATALOGO, r'(?m)^  "verificato": "\d{4}-\d{2}-\d{2}"', f'  "verificato": "{oggi}"')):
+    for percorso, modello in ((FILE_DOCUMENTI, r'(?m)^verificato: "(\d{4}-\d{2}-\d{2})"'),
+                              (FILE_CATALOGO, r'(?m)^  "verificato": "(\d{4}-\d{2}-\d{2})"')):
         testo = percorso.read_text(encoding="utf-8")
-        cambiato, quante = re.subn(modello, nuovo, testo, count=1)
-        if quante != 1:
+        trovata = re.search(modello, testo)
+        if not trovata:
             sys.exit(f"{percorso.name}: riga «verificato» non trovata, data non aggiornata in nessuno dei due file")
-        if cambiato != testo:
-            da_scrivere.append((percorso, cambiato))
-    for percorso, cambiato in da_scrivere:  # solo dopo aver preparato entrambi: mai due date diverse
+        if trovata.group(1) < quando:
+            da_scrivere.append((percorso, testo[:trovata.start(1)] + quando + testo[trovata.end(1):]))
+    for percorso, cambiato in da_scrivere:  # solo dopo aver preparato entrambi: mai una data scritta e l'altra no
         percorso.write_text(cambiato, encoding="utf-8")
-    return oggi
 
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--public", metavar="CARTELLA", help="controlla anche le pagine costruite da Hugo")
     ap.add_argument("--eta", type=int, metavar="GIORNI",
-                    help="errore se l'ultimo controllo completo dei collegamenti ha più di GIORNI giorni")
+                    help="errore se la data di verifica dei collegamenti ha più di GIORNI giorni")
     ap.add_argument("--rete", action="store_true", help="richieste vere a documenti e pagine del Ministero")
     ap.add_argument("--file", action="store_true", help="con --rete: chiede anche l'inizio di ogni PDF del catalogo")
     ap.add_argument("--browser", action="store_true", help="con --rete: riprova con Chromium ciò che non si legge")
     ap.add_argument("--rapporto", metavar="FILE", help="scrive il rapporto in Markdown")
-    ap.add_argument("--aggiorna-data", action="store_true", help="con --rete --file: a controllo pulito, data di oggi nei dati")
+    ap.add_argument("--aggiorna-data", action="store_true",
+                    help="con --rete: annota il giorno di ogni lettura riuscita e porta la data di verifica dei dati "
+                         "al giorno da cui ogni collegamento è stato riletto")
+    ap.add_argument("--unisci-letture", metavar="FILE",
+                    help="senza rete: somma alle letture annotate quelle di FILE (per ogni collegamento vale il giorno "
+                         "più recente) e riporta la data di verifica; lo usa il workflow per salvare un giro sull'ultimo main")
     args = ap.parse_args()
     if (args.file or args.browser or args.aggiorna_data) and not args.rete:
         ap.error("--file, --browser e --aggiorna-data valgono solo con --rete")
-    if args.aggiorna_data and not args.file:
-        ap.error("--aggiorna-data chiede --file: la data dice che ogni collegamento è stato controllato")
+    if args.unisci_letture and args.rete:
+        ap.error("--unisci-letture lavora senza rete: non va insieme a --rete")
     documenti, catalogo = carica()
     controlla_dati(documenti, catalogo)
+    # con i dati malformati l'elenco dei collegamenti non si sa costruire
+    senza_lettura = controlla_letture(documenti, catalogo) if not errori else []
     if args.eta is not None:
         controlla_eta(documenti, catalogo, args.eta)
     if args.public:
         controlla_pagine(args.public, documenti, catalogo)
+    if args.unisci_letture and not errori:
+        unisci_letture(documenti, catalogo, args.unisci_letture)
+    elif senza_lettura and not args.rete:
+        primi = ", ".join(senza_lettura[:3]) + (f" e altri {len(senza_lettura) - 3}" if len(senza_lettura) > 3 else "")
+        note_letture.append(f"Avviso: {len(senza_lettura)} collegamenti dei dati non hanno una lettura annotata ({primi}): "
+                            f"la data di verifica non avanza finché non si leggono con `--rete --aggiorna-data` "
+                            f"(con `--file` per i PDF del catalogo).")
     rete_fatta = args.rete and not errori  # con i dati sbagliati non si interrogano i siti: prima si correggono
     if rete_fatta:
         global scadenza
         scadenza = time.time() + TEMPO_RICHIESTE
+        inizio = oggi_in_italia().isoformat()  # le letture portano il giorno in cui il giro è cominciato
         controlla_rete(documenti, catalogo, args.file)
         chiudi_da_rivedere(args.browser)
         segnala_controllo_mancato(collegamenti_da_aprire(documenti, catalogo, args.file))
-        if args.aggiorna_data and not errori and not non_letti and not protetti and not muti:
-            catalogo["verificato"] = aggiorna_data()
+        if args.aggiorna_data and not errori and not non_letti:
+            # un collegamento rotto o una fonte non letta: nessuna lettura si annota, la data resta com'è
+            aggiorna_verifica(documenti, catalogo, inizio)
     testo = rapporto(documenti, catalogo, rete_fatta, rete_fatta and args.file, rete_saltata=args.rete and not rete_fatta)
     if args.rapporto:
         Path(args.rapporto).write_text(testo, encoding="utf-8")
