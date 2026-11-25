@@ -579,8 +579,9 @@ if (parte == "montato3") montato3();
 // Chiavette: cinque con la base per il vassoio con i piedini (si premono da sotto); per quello sagomato due basse,
 // per la giunzione sotto il bordo del piatto, e tre alte, che si premono dall'alto
 K_ALTA = FLANGIA - PIANO - 0.4; K3_BASSA = 11.0; K3_ALTA = H3 - F3 - 0.4;
-if (parte == "farfalle") for (i = [0:4]) translate([i * 22, 0, 0]) chiavetta(K_ALTA, 3);
-if (parte == "farfalle3") for (i = [0:4]) translate([i * 18, 0, 0]) chiavetta(i < 2 ? K3_BASSA : K3_ALTA);
+// Una barretta bassa le tiene unite in stampa (più stabili sul piatto): si taglia a filo. Sta dal lato che resta fuori.
+if (parte == "farfalle") { for (i = [0:4]) translate([i * 22, 0, 0]) chiavetta(K_ALTA, 3); translate([0, -0.5, 0]) cube([88, 1, 0.6]); }
+if (parte == "farfalle3") { for (i = [0:4]) translate([i * 18, 0, 0]) chiavetta(i < 2 ? K3_BASSA : K3_ALTA); translate([0, -0.5, 0]) cube([72, 1, 0.6]); }
 // Controlli: i pezzi a incastro montati con le chiavette non devono compenetrarsi (queste parti devono uscire vuote)
 if (parte == "interferenze") {
     intersection() { pezzo_sinistra(); pezzo_centro(); }
