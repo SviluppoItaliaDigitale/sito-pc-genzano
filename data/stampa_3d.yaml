@@ -1068,7 +1068,7 @@ oggetti:
       quota_scritte: 3.6
       sagoma_z: -1.6   # contorno letto dentro il piano del vassoio, sotto la targhetta
       camera: { da: [-0.35, -0.75, 0.6], su: [0, 0, 1] }
-      insieme: { file: "vassoio-montato.stl", parte: "montato" }   # nelle anteprime il vassoio è montato
+      insieme: { file: "vassoio-montato.stl", parte: "montato", incisioni_z: -0.4 }   # nelle anteprime il vassoio è montato
       nome: { zona: [-31, -0.5, 31, 6.5], lato: "fronte" }
     parametri:
       tipo: "vassoio"
@@ -1152,7 +1152,7 @@ oggetti:
       quota_scritte: 3.6
       sagoma_z: -9.4   # contorno letto dentro il fondo del vassoio, sotto la targhetta
       camera: { da: [-0.35, -0.75, 0.6], su: [0, 0, 1] }
-      insieme: { file: "vassoio-sagomato-montato.stl", parte: "montato3" }   # nelle anteprime il vassoio è montato
+      insieme: { file: "vassoio-sagomato-montato.stl", parte: "montato3", incisioni_z: -8.6 }   # nelle anteprime il vassoio è montato
       nome: { zona: [-31, -0.5, 31, 6.5], lato: "fronte" }
     parametri:
       tipo: "vassoio"
