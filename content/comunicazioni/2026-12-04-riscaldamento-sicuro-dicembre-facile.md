@@ -138,7 +138,7 @@ Non fare mai queste cose:
 - usare il forno a gas per riscaldarsi
 - lasciare le candele accese senza sorveglianza
 - mettere oggetti infiammabili vicino alla stufa
-- non fare la manutenzione alla caldaia
+- saltare il controllo della caldaia
 
 ## Per sapere di più
 

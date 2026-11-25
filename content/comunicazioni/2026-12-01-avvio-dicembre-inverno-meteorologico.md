@@ -20,7 +20,7 @@ Il **1° dicembre** segna l'**avvio** dell'**inverno meteorologico** (che per co
 
 ### Definizioni
 - **meteorologico**: 1° dicembre – 28/29 febbraio;
-- **astronomico**: 21 dicembre (solstizio) – 20/21 marzo (equinozio primavera).
+- **astronomico**: 21 dicembre (solstizio) – 20/21 marzo (equinozio di primavera).
 
 ### Perché due definizioni
 Il **meteorologico** è usato per **confronti statistici** (medie trimestrali). L'**astronomico** è legato alla **posizione della Terra** rispetto al Sole.
@@ -48,7 +48,7 @@ Le condizioni previste giorno per giorno sono nei bollettini del **Centro Funzio
 - **isolamento**: chiudere spifferi, tendaggi pesanti alla sera;
 - **umidificatori** per salute respiratoria;
 - **ventilare** giornalmente per pochi minuti;
-- **monossido carbonio**: rilevatore testato.
+- **monossido di carbonio**: rilevatore testato.
 
 #### Auto
 - **pneumatici** invernali (obbligatori dal 15 novembre);
@@ -67,8 +67,8 @@ Le condizioni previste giorno per giorno sono nei bollettini del **Centro Funzio
 ## Festività del mese
 
 ### Civili e istituzionali
-- **3 dicembre**: Giornata Internazionale Persone con Disabilità;
-- **10 dicembre**: Giornata Diritti Umani;
+- **3 dicembre**: Giornata internazionale delle persone con disabilità;
+- **10 dicembre**: Giornata dei Diritti Umani;
 - **25 dicembre**: Natale (festa nazionale);
 - **26 dicembre**: Santo Stefano;
 - **31 dicembre**: Capodanno (notte);

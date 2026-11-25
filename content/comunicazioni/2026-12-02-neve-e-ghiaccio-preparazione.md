@@ -86,7 +86,7 @@ A **Genzano di Roma**, **458 metri** s.l.m., la **neve** in inverno è **rara** 
 ### Casa
 - **riscaldamento** al giusto livello (non massimo sprecato);
 - **temperatura** interna consigliata 18-20 °C;
-- **monossido carbonio**: monitoraggio continuo con rilevatori;
+- **monossido di carbonio**: monitoraggio continuo con rilevatori;
 - **stufe alternative** solo se omologate;
 - **mai** bracieri, fornelli gas non ventilati, barbecue in casa.
 
@@ -101,10 +101,10 @@ In Italia, la **responsabilità** dello sgombero neve/ghiaccio davanti alla prop
 - **rispettare** spazi di accessibilità (rampe, passi carrabili).
 
 ### Tetti
-- **verificare** carico neve: se eccessivo può cedere soffitti leggeri;
+- **verificare** carico di neve: se eccessivo può cedere soffitti leggeri;
 - **non salire** sul tetto per pulire (rischio caduta);
 - **ditte specializzate** se necessario;
-- **grondaie** possono fratturarsi per peso ghiaccio.
+- **grondaie** possono fratturarsi per il peso del ghiaccio.
 
 ### Rami caduti o pericolanti
 - **segnalare** al Comune o **112** se rischio per persone o cose;
@@ -163,7 +163,7 @@ In Italia, la **responsabilità** dello sgombero neve/ghiaccio davanti alla prop
 
 ### Caduta per ghiaccio
 - **non muovere** ferito se sospetto trauma colonna;
-- **112** se frattura sospetta o perdita coscienza;
+- **112** se frattura sospetta o perdita di coscienza;
 - **riscaldare** delicatamente se ipotermia lieve;
 - **non** strofinare parti congelate.
 
@@ -176,7 +176,7 @@ In caso di nevicata significativa:
 - **attività** didattiche a distanza possibili;
 - **ricorso** a genitori per assistenza bambini.
 
-## PC e emergenze neve
+## PC ed emergenze neve
 
 In caso di nevicata il Comune può attivare il Gruppo Comunale. Tra i [mezzi del Gruppo](/chi-siamo/) c'è un Mercedes Atego attrezzato con spazzaneve e spargisale. I volontari, quando attivati, possono supportare le persone con fragilità (sole, anziane, con disabilità). Per le emergenze si chiama il **112**.
 

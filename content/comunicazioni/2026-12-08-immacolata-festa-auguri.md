@@ -44,7 +44,7 @@ Anche nei giorni di festa il numero per qualunque emergenza è il **112**. Il Gr
 
 ### Se resti a casa
 - **riscaldamento** sicuro;
-- **cucina** attenzione (vedi nostro articolo del 24 novembre);
+- **cucina**: attenzione (vedi il nostro articolo del 24 novembre);
 - **aerazione** breve ma quotidiana;
 - **candele** mai incustodite;
 - **alcol** con moderazione.

@@ -31,7 +31,7 @@ Dopo giorni di festa sei più stanco. La stanchezza è pericolosa quando guidi. 
 
 ### Questi sono i segnali
 
-- Sbadagli spesso.
+- Sbadigli spesso.
 - Le palpebre sono pesanti.
 - Non ricordi come sei arrivato.
 - Ti distrai facilmente.
