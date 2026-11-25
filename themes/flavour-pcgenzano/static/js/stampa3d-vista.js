@@ -331,6 +331,22 @@ function avvia() {
     if (!b || tre.rotto || !tre.mesh || !tre.mesh.visible) return;
     if (b.dataset.ruota) ruota(b.dataset.ruota);
     if (b.dataset.vista) posiziona(b.dataset.vista === 'retro' ? -1 : 1);
+    // «Un colore solo»: fa vedere l'oggetto come esce da una stampante a un colore, senza le scritte evidenziate.
+    // La vista parte sempre con le scritte colorate: questo è un confronto, e il pulsante dice in che stato è.
+    if (b.dataset.colori !== undefined) {
+      const solo = b.getAttribute('aria-pressed') !== 'true';
+      b.setAttribute('aria-pressed', solo ? 'true' : 'false');
+      b.classList.toggle('active', solo);      // stato visibile con la classe di Bootstrap, senza regole nuove nel foglio di stile
+      const m = tre.mesh.material;
+      m.vertexColors = !solo;
+      m.color.set(solo ? ((O.anteprima && O.anteprima.base) || '#1d4f9a') : '#ffffff');
+      m.needsUpdate = true;
+      const nota = document.querySelector('[data-s3d="colori-nota"]');
+      if (nota) nota.textContent = solo
+        ? 'Ora vedi l\'oggetto in un colore solo, come esce da una stampante a un colore: le scritte si leggono per il rilievo.'
+        : 'Ora le scritte sono di nuovo evidenziate.';
+      disegna();
+    }
   });
   // La vista in 3D parte quando entra nello schermo, o al primo tocco
   vista.box.addEventListener('pointerdown', avvia, { once: true });
