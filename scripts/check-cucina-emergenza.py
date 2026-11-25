@@ -849,6 +849,7 @@ def controlla_ministero(documenti, catalogo):
     noti = {n["url"] for n in catalogo.get("allegati_noti", [])}
     del_catalogo = {c["pagina"].rsplit("/", 1)[1] for c in catalogo["classi"]} | {PAGINA_MODIFICHE}
     confronti["pagine"] = [0, len(attesi)]  # pagine del Ministero lette, pagine da leggere
+    confronti["modifiche"] = False          # letta la pagina delle modifiche temporanee: lì un allegato nuovo è un aggiornamento
     for numero in sorted(attesi, key=int):
         trovati = allegati_della_pagina(numero)
         if trovati is None:
@@ -862,6 +863,8 @@ def controlla_ministero(documenti, catalogo):
                                      f"(pagina letta male o riorganizzata)"))
             continue
         confronti["pagine"][0] += 1
+        if numero == PAGINA_MODIFICHE:
+            confronti["modifiche"] = True
         for dove, url in mancanti:
             errori.append(f"{dove}: il file non è più fra gli allegati di {indirizzo} (il Ministero può averlo sostituito)")
             if dove.startswith("disciplinare"):
@@ -1339,8 +1342,12 @@ def righe_dei_disciplinari(anche_file):
     lette, tutte = confronti.get("pagine", [0, 0])
     senza_registro = [] if "registro" in confronti else ["registro europeo non letto"]
     senza_pagine = ([] if "pagine" in confronti and lette == tutte else
-                    [f"{tutte - lette} pagine del Ministero su {tutte} non lette" if "pagine" in confronti
+                    [("1 pagina del Ministero su {} non letta".format(tutte) if tutte - lette == 1
+                      else f"{tutte - lette} pagine del Ministero su {tutte} non lette") if "pagine" in confronti
                      else "pagine del Ministero non lette"])
+    # gli allegati nuovi della pagina delle modifiche temporanee vanno fra gli aggiornati: se quella pagina non
+    # è stata letta, «aggiornati: nessuno» non si può dire (rilievo della revisione sulla PR #2049)
+    senza_modifiche = [] if confronti.get("modifiche") else ["pagina delle modifiche temporanee del Ministero non letta"]
     senza_archivio = [] if confronti.get("archivio") else ["archivio dell'UE non letto per intero"]
     pesati, file = confronti.get("file", [0, 0])
     if not anche_file:
@@ -1349,7 +1356,7 @@ def righe_dei_disciplinari(anche_file):
         senza_peso = [] if "file" in confronti and pesati == file else [f"peso confrontato per {pesati} file su {file}"]
     riga = (f"Disciplinari nuovi: {esito('nuovi', senza_registro + senza_pagine)}. "
             f"Tolti: {esito('tolti', senza_registro + senza_pagine)}. "
-            f"Aggiornati: {esito('aggiornati', senza_registro + senza_archivio + senza_peso)}.")
+            f"Aggiornati: {esito('aggiornati', senza_registro + senza_modifiche + senza_archivio + senza_peso)}.")
     fatti = ([f"{confronti['registro']} prodotti italiani registrati nel registro europeo"] if "registro" in confronti else [])
     if "pagine" in confronti:
         fatti.append(f"allegati di {lette} pagine del Ministero su {tutte}")

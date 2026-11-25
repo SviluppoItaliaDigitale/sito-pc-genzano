@@ -1264,6 +1264,8 @@ def prove_dei_disciplinari(controllo, base):
         esito(nome, visto == atteso and all(pezzo in testo for pezzo in pezzi), f"{visto}, atteso {atteso}; {testo[:300]}")
 
     ministero("Ministero: pagine uguali ai dati, nessun rilievo e quattro pagine lette su quattro", intatte, (0, 0, (0, 0, 0), [4, 4]))
+    esito("Ministero: letta la pagina delle modifiche temporanee, il giro lo annota", controllo.confronti.get("modifiche") is True,
+          str(controllo.confronti))
     ministero("Ministero: un allegato nuovo nella pagina di una classe è una novità, fra i disciplinari nuovi",
               dict(intatte, **{"100": dict(intatte["100"], **{allegato(100, "gamma"): "Formaggio Gamma"})}),
               (0, 1, (1, 0, 0), [4, 4]), "allegato nuovo «Formaggio Gamma»")
@@ -1282,11 +1284,13 @@ def prove_dei_disciplinari(controllo, base):
               dict(intatte, **{"200": {allegato(200, "elenco-nuovo"): "Elenco"}}), (0, 1, (1, 0, 0), [4, 4]), "ha cambiato l'elenco")
     ministero("Ministero: una pagina che non si legge non conta fra quelle confrontate",
               {k: v for k, v in intatte.items() if k != "8079"}, (0, 0, (0, 0, 0), [3, 4]))
+    esito("Ministero: non letta la pagina delle modifiche temporanee, il giro lo annota", controllo.confronti.get("modifiche") is False,
+          str(controllo.confronti))
 
     # il rapporto: la riga dei disciplinari c'è sempre con la rete, la sezione solo se c'è qualcosa
     documenti_veri, catalogo_vero = controllo.carica()
     pulisci()
-    interi = {"registro": 335, "archivio": True, "pagine": [26, 26], "file": [336, 336]}
+    interi = {"registro": 335, "archivio": True, "pagine": [26, 26], "modifiche": True, "file": [336, 336]}
 
     def riga(anche_file=True, **cambiati):
         """La riga dei disciplinari del rapporto, con i confronti del giro cambiati come dice la prova."""
@@ -1307,6 +1311,12 @@ def prove_dei_disciplinari(controllo, base):
     esito("rapporto: con due pagine del Ministero non lette, nuovi e tolti non dicono «nessuno»; gli aggiornati sì",
           quale.startswith("Disciplinari nuovi: confronto incompleto (2 pagine del Ministero su 26 non lette). Tolti: confronto incompleto (")
           and "Aggiornati: nessuno." in quale, quale)
+    quale, _ = riga(pagine=[25, 26], modifiche=False)
+    esito("rapporto: se la pagina non letta è quella delle modifiche temporanee, nemmeno gli aggiornati dicono «nessuno»",
+          "Aggiornati: confronto incompleto (pagina delle modifiche temporanee del Ministero non letta)." in quale
+          and quale.startswith("Disciplinari nuovi: confronto incompleto (1 pagina del Ministero su 26 non letta)."), quale)
+    quale, _ = riga(pagine=None, modifiche=None)
+    esito("rapporto: senza le pagine del Ministero nessuna delle tre voci dice «nessuno»", "nessuno" not in quale, quale)
     quale, _ = riga(archivio=False)
     esito("rapporto: con l'archivio dell'UE non letto per intero, gli aggiornati non dicono «nessuno»",
           "Disciplinari nuovi: nessuno. Tolti: nessuno. Aggiornati: confronto incompleto (archivio dell'UE non letto per intero)." in quale, quale)
