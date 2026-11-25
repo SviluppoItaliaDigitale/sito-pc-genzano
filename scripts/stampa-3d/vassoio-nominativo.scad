@@ -18,7 +18,7 @@
 // sinistra180 e centro180 = seconda versione dei due pezzi del piatto, con il foro da 180 mm
 // sinistra3, centro3, destra3 = terza versione, con le sedi sagomate: si stampa diritta, con il fondo sul piatto;
 // montato3 = terza versione montata, solo da guardare
-parte = "tutto"; // [tutto, base, testo, sinistra, centro, destra, sinistra180, centro180, clip, montato, sinistra3, centro3, destra3, montato3, controllo_viti]
+parte = "tutto"; // [tutto, base, testo, sinistra, centro, destra, sinistra180, centro180, clip, montato, sinistra3, centro3, destra3, montato3, rivetti_giunzioni, rivetti_targhetta, rivetti_targhetta3, controllo_viti]
 tipo = "vassoio"; // [vassoio]
 
 /* [Testi] */
@@ -447,6 +447,39 @@ module montato3() {
     }
 }
 
+/* ---------- Ferramenta stampata: rivetti al posto di viti e dadi ---------- */
+
+// Chi non vuole comprare viti e dadi stampa questi rivetti: entrano negli stessi fori da 4,5 mm. La testa svasata
+// si appoggia nella svasatura; il gambo è tagliato in due per il lungo e in punta ha due denti che sporgono 0,4 mm
+// dal foro:
+// passano nel foro stringendosi e si riaprono nella sede del dado. «presa» è la distanza fra la superficie dove
+// sta la testa e la parete su cui appoggerebbe il dado. Si stampano coricati, uniti da una barretta che si spezza:
+// così gli strati corrono lungo il gambo. Non stringono come una vite: tengono uniti i pezzi con un po' di gioco.
+R_GAMBO = 2.1; R_TESTA = 4.3; R_DENTE = 2.65; R_SPESSO = 3.0; R_TAGLIO = 2.0; R_PUNTA = 3.0;
+module rivetto_mezzo(presa) {                  // metà profilo: [raggio, distanza dalla testa]
+    lh = presa - 0.4 + 0.15;                   // la testa affonda 0,4 mm nella svasatura; 0,15 mm di gioco
+    polygon([[0, 0], [R_TESTA, 0], [R_GAMBO, R_TESTA - R_GAMBO], [R_GAMBO, lh], [R_DENTE, lh], [R_DENTE, lh + 0.8],
+             [1.7, lh + R_PUNTA], [0, lh + R_PUNTA]]);
+}
+module rivetto(presa) {
+    lh = presa - 0.4 + 0.15;
+    translate([0, 0, R_SPESSO / 2]) difference() {
+        intersection() {
+            rotate([0, 90, 0]) rotate_extrude($fn = 64) rivetto_mezzo(presa);
+            translate([-1, -6, -R_SPESSO / 2]) cube([lh + R_PUNTA + 2, 12, R_SPESSO]);
+        }
+        hull() {
+            translate([1.8, 0, -3]) cylinder(d = R_TAGLIO, h = 6, $fn = 24);   // il taglio comincia dentro la testa: gambe più lunghe, più elastiche
+            translate([lh + R_PUNTA + 1, 0, -3]) cylinder(d = R_TAGLIO, h = 6, $fn = 24);
+        }
+    }
+}
+// «quanti» rivetti uguali, uniti dalla barretta sotto le teste
+module rivetti(presa, quanti) {
+    for (i = [0 : quanti - 1]) translate([0, i * 11, 0]) rivetto(presa);
+    translate([-0.9, 0, 0]) cube([1.2, (quanti - 1) * 11, 0.8]);
+}
+
 /* ---------- Uscite ---------- */
 
 module per_la_stampa() { mirror([0, 1, 0]) children(); }
@@ -469,6 +502,10 @@ if (parte == "sinistra3") sinistra3();
 if (parte == "centro3") centro3();
 if (parte == "destra3") destra3();
 if (parte == "montato3") montato3();
+// rivetti delle giunzioni (presa 6 mm) e della targhetta (7,2 mm sul vassoio con i piedini, 5,6 mm su quello sagomato)
+if (parte == "rivetti_giunzioni") rivetti(6.0, 5);
+if (parte == "rivetti_targhetta") rivetti(7.2, 2);
+if (parte == "rivetti_targhetta3") rivetti(5.6, 2);
 // Le due viti della targhetta stanno ai lati delle righe piccole: qui si controlla che resti così (cerchi da 10 mm)
 if (parte == "controllo_viti")
     linear_extrude(1) intersection() { testi2d(); union() for (v = T_VITI) translate(v) circle(d = 10); }

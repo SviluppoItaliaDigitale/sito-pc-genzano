@@ -931,6 +931,8 @@ oggetti:
       - { parte: "clip", file: "vassoio-clip-posate.stl", nome: "la clip per le posate", peso_g: 4 }
       - { parte: "sinistra180", file: "vassoio-pezzo-sinistro-foro-180.stl", nome: "il pezzo sinistro con il foro da 180 mm", peso_g: 175, variante: "Seconda versione, con il foro del piatto da 180 mm: scarica questi due file al posto del pezzo sinistro e del pezzo centrale." }
       - { parte: "centro180", file: "vassoio-pezzo-centrale-foro-180.stl", nome: "il pezzo centrale con il foro da 180 mm", peso_g: 241, variante: "Seconda versione, con il foro del piatto da 180 mm: scarica questi due file al posto del pezzo sinistro e del pezzo centrale." }
+      - { parte: "rivetti_giunzioni", file: "vassoio-rivetti-giunzioni.stl", nome: "i cinque rivetti per le giunzioni", peso_g: 1, variante: "Ferramenta stampata, al posto di viti e dadi: i rivetti entrano negli stessi fori. Tengono uniti i pezzi con un po' di gioco, non stringono come le viti, e non sono stati provati: se uno non tiene, usa viti e dadi." }
+      - { parte: "rivetti_targhetta", file: "vassoio-rivetti-targhetta.stl", nome: "i due rivetti per la targhetta", peso_g: 1, variante: "Ferramenta stampata, al posto di viti e dadi: i rivetti entrano negli stessi fori. Tengono uniti i pezzi con un po' di gioco, non stringono come le viti, e non sono stati provati: se uno non tiene, usa viti e dadi." }
     misure: "45,6 × 24 cm montato, alto 4,8 cm"
     lunghezza_mm: 76
     peso_g: 682
@@ -953,13 +955,16 @@ oggetti:
       - ["Posizione di stampa", "cinque file, già orientati, senza supporti: i tre pezzi del vassoio sono capovolti, con il piano sul piatto di stampa, la clip è coricata su un fianco; serve un piatto di stampa di almeno 25 × 20 cm (non entra nelle stampanti da 22 × 22 cm). I pezzi sono lunghi 24 cm: se serve, ruotali nel programma di stampa lungo il lato lungo del piatto, senza capovolgerli"]
       - ["Precisione", "la clip, le sedi dei dadi e le costole di allineamento sono disegnate per una stampante da tavolo ben regolata. Se ordini la stampa a un servizio, che può scostarsi di mezzo millimetro, la clip può non agganciare: in quel caso si lima il dente o si allarga la fessura"]
       - ["Da sapere", "il vassoio porta le stoviglie, non è un oggetto per alimenti: fra gli strati della plastica stampata restano solchi che non si puliscono a fondo. Pane, frutta e cibo stanno sempre nel piatto, mai appoggiati sul vassoio. Si lava a mano con acqua tiepida subito dopo l'uso: il PETG comincia a deformarsi a 68 gradi, quindi niente lavastoviglie e niente piatti o bevande bollenti. È pensato per circa 1,5 kg fra stoviglie e contenuto: è una stima di calcolo, non una prova di carico. Portalo con due mani"]
+      - ["Senza viti di metallo", "chi non vuole comprare viti e dadi può stampare i rivetti, che trovi fra i file: hanno la testa svasata e due denti in punta, entrano negli stessi fori e si agganciano nella sede del dado. Si premono a mano fino allo scatto e si stampano coricati, uniti da una barretta da spezzare. Tengono insieme i pezzi con un po' di gioco e non stringono come le viti: per un uso pesante o frequente restano meglio le viti. Non sono stati provati"]
     materiale: "PETG"
     colore: "blu"
     occorrente:
       - "circa 700 g di filo PETG per tutti i pezzi"
       - "7 viti M4 lunghe 10 mm a testa svasata e 7 dadi esagonali M4 (si trovano in ferramenta); non servono rondelle: le teste entrano nelle svasature e i dadi nelle loro sedi"
       - "una chiave a brugola da 2,5 mm, oppure un cacciavite a croce se le viti hanno la testa a croce"
+      - "oppure, senza comprare nulla: i rivetti stampati, che trovi fra i file da scaricare"
     montaggio:
+      - "Se usi i rivetti stampati al posto delle viti: spezza la barretta che li unisce, infila ogni rivetto nel foro dalla parte della svasatura e premi finché i due denti scattano nella sede del dado. I dadi non servono."
       - "Stampa i cinque file: la targhetta con il tuo nominativo, i tre pezzi del vassoio e la clip."
       - "Appoggia i tre pezzi capovolti su un tavolo, con i piedini in alto, e accostali: le costole del pezzo centrale e del pezzo destro entrano nelle scanalature del pezzo accanto."
       - "Lascia cadere un dado in ognuna delle cinque asole delle pareti più spesse."
@@ -1000,6 +1005,8 @@ oggetti:
       - { parte: "centro3", file: "vassoio-sagomato-pezzo-centrale.stl", nome: "il pezzo centrale, con i ponticelli delle posate", peso_g: 217 }
       - { parte: "destra3", file: "vassoio-sagomato-pezzo-destro.stl", nome: "il pezzo destro, con le sedi di bicchiere e bottiglietta", peso_g: 212 }
       - { parte: "clip", file: "vassoio-sagomato-clip-posate.stl", nome: "la clip per le posate", peso_g: 4 }
+      - { parte: "rivetti_giunzioni", file: "vassoio-sagomato-rivetti-giunzioni.stl", nome: "i cinque rivetti per le giunzioni", peso_g: 1, variante: "Ferramenta stampata, al posto di viti e dadi: i rivetti entrano negli stessi fori. Tengono uniti i pezzi con un po' di gioco, non stringono come le viti, e non sono stati provati: se uno non tiene, usa viti e dadi." }
+      - { parte: "rivetti_targhetta3", file: "vassoio-sagomato-rivetti-targhetta.stl", nome: "i due rivetti per la targhetta", peso_g: 1, variante: "Ferramenta stampata, al posto di viti e dadi: i rivetti entrano negli stessi fori. Tengono uniti i pezzi con un po' di gioco, non stringono come le viti, e non sono stati provati: se uno non tiene, usa viti e dadi." }
     misure: "45,4 × 24 cm montato, alto 4,7 cm"
     lunghezza_mm: 76
     peso_g: 591
@@ -1020,13 +1027,16 @@ oggetti:
       - ["Precisione", "la clip e i canali dei dadi sono disegnati per una stampante da tavolo ben regolata. Se ordini la stampa a un servizio, che può scostarsi di mezzo millimetro, la clip può non agganciare: in quel caso si lima il dente o si allarga la fessura"]
       - ["Differenze dall'altro vassoio", "nel «Vassoio porta piatto, bicchiere e posate» le stoviglie restano appese in fori più stretti del loro bordo e il vassoio sta su dodici piedini; qui appoggiano sul fondo e il vassoio è basso. Questo ha il fondo chiuso: se si rovescia un po' d'acqua resta nel vassoio"]
       - ["Da sapere", "il vassoio porta le stoviglie, non è un oggetto per alimenti: fra gli strati della plastica stampata restano solchi che non si puliscono a fondo. Pane, frutta e cibo stanno sempre nel piatto, mai appoggiati sul vassoio. Si lava a mano con acqua tiepida subito dopo l'uso: il PETG comincia a deformarsi a 68 gradi, quindi niente lavastoviglie e niente piatti o bevande bollenti. Tienilo intorno a 1 kg fra stoviglie e contenuto: il fondo è sottile e non è stato provato sotto carico. Portalo con due mani, una per manico, e tienilo in piano: la bottiglietta è tenuta solo per i primi 4 cm"]
+      - ["Senza viti di metallo", "chi non vuole comprare viti e dadi può stampare i rivetti, che trovi fra i file: hanno la testa svasata e due denti in punta, entrano negli stessi fori e si agganciano nella sede del dado. Si premono a mano fino allo scatto e si stampano coricati, uniti da una barretta da spezzare. Tengono insieme i pezzi con un po' di gioco e non stringono come le viti: per un uso pesante o frequente restano meglio le viti. Non sono stati provati"]
     materiale: "PETG"
     colore: "blu"
     occorrente:
       - "circa 600 g di filo PETG per tutti i pezzi"
       - "7 viti M4 lunghe 10 mm a testa svasata e 7 dadi esagonali M4 (si trovano in ferramenta); non servono rondelle: le teste entrano nelle svasature e i dadi nelle loro sedi"
       - "una chiave a brugola da 2,5 mm, oppure un cacciavite a croce se le viti hanno la testa a croce"
+      - "oppure, senza comprare nulla: i rivetti stampati, che trovi fra i file da scaricare"
     montaggio:
+      - "Se usi i rivetti stampati al posto delle viti: spezza la barretta che li unisce, infila ogni rivetto nel foro dalla parte della svasatura e premi finché i due denti scattano nella sede del dado. I dadi non servono."
       - "Stampa i cinque file: la targhetta con il tuo nominativo, i tre pezzi del vassoio e la clip."
       - "Appoggia i tre pezzi su un tavolo e accostali: le due costole del pezzo destro entrano nelle scanalature del pezzo centrale."
       - "Lascia cadere un dado in ognuna delle cinque asole aperte in alto, nelle pareti più spesse."
@@ -1069,6 +1079,7 @@ oggetti:
       - { parte: "bassa", file: "portablocco-a4-meta-bassa.stl", nome: "la metà bassa della tavoletta", peso_g: 188 }
       - { parte: "piastra", file: "portablocco-a4-piastra.stl", nome: "la piastra di giunzione", peso_g: 48 }
       - { parte: "molla", file: "portablocco-a4-molla.stl", nome: "la molla fermafogli con il porta penna", peso_g: 25 }
+      - { parte: "rivetti", file: "portablocco-a4-rivetti.stl", nome: "gli otto rivetti: quattro per la piastra, due per la molla, due per la targhetta", peso_g: 1, variante: "Ferramenta stampata, al posto di viti e dadi: i rivetti entrano negli stessi fori. Tengono uniti i pezzi con un po' di gioco, non stringono come le viti, e non sono stati provati: se uno non tiene, usa viti e dadi." }
     misure: "22,0 × 34,8 cm montato, spesso 1,2 cm"
     lunghezza_mm: 126
     peso_g: 465
@@ -1085,13 +1096,16 @@ oggetti:
       - ["Posizione di stampa", "cinque file, già orientati, senza supporti: le due metà sono capovolte, con la faccia per scrivere sul piatto di stampa; la molla è coricata su un fianco; serve un piatto di stampa di almeno 25 × 20 cm"]
       - ["Precisione", "la molla, i canali e le sedi dei dadi sono disegnati per una stampante da tavolo ben regolata. Con un servizio di stampa, che può scostarsi di mezzo millimetro, un dado può entrare a fatica: si aiuta con la vite"]
       - ["Da sapere", "la molla è di plastica: se la apri oltre il necessario o la lasci a lungo con un pacco di fogli troppo spesso, perde forza. Non lasciare il portablocco al sole dietro un vetro: il PETG comincia a deformarsi a 68 gradi"]
+      - ["Senza viti di metallo", "chi non vuole comprare viti e dadi può stampare i rivetti, che trovi fra i file: hanno la testa svasata e due denti in punta, entrano negli stessi fori e si agganciano nella sede del dado. Si premono a mano fino allo scatto e si stampano coricati, uniti da una barretta da spezzare. Tengono insieme i pezzi con un po' di gioco e non stringono come le viti: per un uso pesante o frequente restano meglio le viti. Non sono stati provati"]
     materiale: "PETG"
     colore: "blu"
     occorrente:
       - "circa 480 g di filo PETG per tutti i pezzi"
       - "8 viti M4 lunghe 10 mm a testa svasata e 8 dadi esagonali M4 (si trovano in ferramenta); non servono rondelle: le teste entrano nelle svasature e i dadi nelle loro sedi"
       - "una chiave a brugola da 2,5 mm, oppure un cacciavite a croce se le viti hanno la testa a croce"
+      - "oppure, senza comprare nulla: i rivetti stampati, che trovi fra i file da scaricare"
     montaggio:
+      - "Se usi i rivetti stampati al posto delle viti: spezza la barretta che li unisce, infila ogni rivetto nel foro dalla parte della svasatura e premi finché i due denti scattano nella sede del dado. I dadi non servono."
       - "Stampa i cinque file: la targhetta con il tuo nominativo, le due metà della tavoletta, la piastra e la molla."
       - "Appoggia le due metà sul tavolo con le nervature in alto. Sul bordo della giunzione di ogni metà ci sono due canali: spingi un dado in ognuno, fino in fondo, poi accosta le due metà."
       - "Appoggia la piastra sulle due fasce lisce, con le svasature in alto, e stringi le quattro viti fino a fermarti, senza forzare: con la chiave corta, circa mezzo giro dopo che la testa tocca. Dopo qualche giorno ricontrolla che siano ancora strette."
@@ -1128,6 +1142,7 @@ oggetti:
       - { parte: "bassa", file: "portablocco-b5-meta-bassa.stl", nome: "la metà bassa della tavoletta", peso_g: 145 }
       - { parte: "piastra", file: "portablocco-b5-piastra.stl", nome: "la piastra di giunzione", peso_g: 40 }
       - { parte: "molla", file: "portablocco-b5-molla.stl", nome: "la molla fermafogli con il porta penna", peso_g: 25 }
+      - { parte: "rivetti", file: "portablocco-b5-rivetti.stl", nome: "gli otto rivetti: quattro per la piastra, due per la molla, due per la targhetta", peso_g: 1, variante: "Ferramenta stampata, al posto di viti e dadi: i rivetti entrano negli stessi fori. Tengono uniti i pezzi con un po' di gioco, non stringono come le viti, e non sono stati provati: se uno non tiene, usa viti e dadi." }
     misure: "18,6 × 30,1 cm montato, spesso 1,2 cm"
     lunghezza_mm: 126
     peso_g: 367
@@ -1144,13 +1159,16 @@ oggetti:
       - ["Posizione di stampa", "cinque file, già orientati, senza supporti: le due metà sono capovolte, con la faccia per scrivere sul piatto di stampa; la molla è coricata su un fianco; serve un piatto di stampa di almeno 20 × 17 cm"]
       - ["Precisione", "la molla, i canali e le sedi dei dadi sono disegnati per una stampante da tavolo ben regolata. Con un servizio di stampa, che può scostarsi di mezzo millimetro, un dado può entrare a fatica: si aiuta con la vite"]
       - ["Da sapere", "la molla è di plastica: se la apri oltre il necessario o la lasci a lungo con un pacco di fogli troppo spesso, perde forza. Non lasciare il portablocco al sole dietro un vetro: il PETG comincia a deformarsi a 68 gradi"]
+      - ["Senza viti di metallo", "chi non vuole comprare viti e dadi può stampare i rivetti, che trovi fra i file: hanno la testa svasata e due denti in punta, entrano negli stessi fori e si agganciano nella sede del dado. Si premono a mano fino allo scatto e si stampano coricati, uniti da una barretta da spezzare. Tengono insieme i pezzi con un po' di gioco e non stringono come le viti: per un uso pesante o frequente restano meglio le viti. Non sono stati provati"]
     materiale: "PETG"
     colore: "blu"
     occorrente:
       - "circa 380 g di filo PETG per tutti i pezzi"
       - "8 viti M4 lunghe 10 mm a testa svasata e 8 dadi esagonali M4 (si trovano in ferramenta); non servono rondelle: le teste entrano nelle svasature e i dadi nelle loro sedi"
       - "una chiave a brugola da 2,5 mm, oppure un cacciavite a croce se le viti hanno la testa a croce"
+      - "oppure, senza comprare nulla: i rivetti stampati, che trovi fra i file da scaricare"
     montaggio:
+      - "Se usi i rivetti stampati al posto delle viti: spezza la barretta che li unisce, infila ogni rivetto nel foro dalla parte della svasatura e premi finché i due denti scattano nella sede del dado. I dadi non servono."
       - "Stampa i cinque file: la targhetta con il tuo nominativo, le due metà della tavoletta, la piastra e la molla."
       - "Appoggia le due metà sul tavolo con le nervature in alto. Sul bordo della giunzione di ogni metà ci sono due canali: spingi un dado in ognuno, fino in fondo, poi accosta le due metà."
       - "Appoggia la piastra sulle due fasce lisce, con le svasature in alto, e stringi le quattro viti fino a fermarti, senza forzare: con la chiave corta, circa mezzo giro dopo che la testa tocca. Dopo qualche giorno ricontrolla che siano ancora strette."
@@ -1466,6 +1484,8 @@ oggetti:
       file: "gruccia-braccio-destro.stl"
       nome: "il braccio destro"
       peso_g: 82
+    altri_pezzi:
+      - { parte: "rivetti", file: "gruccia-rivetti.stl", nome: "i quattro rivetti per le due giunzioni", peso_g: 1, variante: "Ferramenta stampata, al posto di viti e dadi: i rivetti entrano negli stessi fori. Tengono uniti i pezzi con un po' di gioco, non stringono come le viti, e non sono stati provati: se uno non tiene, usa viti e dadi." }
     misure: "40 × 19 cm montata, spessa 1,1 cm"
     lunghezza_mm: 238
     peso_g: 240
@@ -1480,13 +1500,16 @@ oggetti:
       - ["Spazio per nome e cognome", "fascia libera di 68 × 7 mm sotto il nominativo"]
       - ["Posizione di stampa", "due file, tutti e due in piano, già orientati, senza supporti; serve un piatto di stampa di almeno 25 × 20 cm"]
       - ["Scritte di un altro colore", "le scritte sono l'ultimo millimetro del pezzo con il nominativo. Per averle di un colore diverso dal fondo, nel programma di stampa aggiungi un cambio di colore al primo strato delle scritte, cioè dopo lo strato 54 con strati da 0,2 mm (altezza 11,0 mm): la stampante si ferma, cambi il filo e finisce le scritte con il secondo colore"]
+      - ["Senza viti di metallo", "chi non vuole comprare viti e dadi può stampare i rivetti, che trovi fra i file: hanno la testa svasata e due denti in punta, entrano negli stessi fori e si agganciano nella sede del dado. Si premono a mano fino allo scatto e si stampano coricati, uniti da una barretta da spezzare. Tengono insieme i pezzi con un po' di gioco e non stringono come le viti: per un uso pesante o frequente restano meglio le viti. Non sono stati provati"]
     materiale: "PETG"
     colore: "blu"
     occorrente:
       - "circa 250 g di filo PETG per tutti i pezzi"
       - "4 viti M4 lunghe 10 mm a testa svasata e 4 dadi esagonali M4 (si trovano in ferramenta); non servono rondelle: le teste entrano nelle svasature e i dadi nelle loro sedi"
       - "una chiave a brugola da 2,5 mm, oppure un cacciavite a croce se le viti hanno la testa a croce"
+      - "oppure, senza comprare nulla: i rivetti stampati, che trovi fra i file da scaricare"
     montaggio:
+      - "Se usi i rivetti stampati al posto delle viti: spezza la barretta che li unisce, infila ogni rivetto nel foro dalla parte della svasatura e premi finché i due denti scattano nella sede del dado. I dadi non servono."
       - "Stampa tutti e due i file: il pezzo con il tuo nominativo e il braccio destro."
       - "Spingi i quattro dadi nelle sedi esagonali sul retro del pezzo con il nominativo: due vicino alla piastra e due sulla barra. Se un dado non entra del tutto, lo tira in sede la vite."
       - "Appoggia il braccio destro sul davanti: le sue due linguette coprono quelle del pezzo con il nominativo, sulle spalle e sulla barra."
