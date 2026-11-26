@@ -24,7 +24,9 @@ Regole spostate da `CLAUDE.md` l'11/11/2026, con il testo integrale: la sequenza
 - **Rinforzati:** «vai fino alla fine», «prosegui fino alla fine», «porta a termine», «non fermarti», «fai tutto», «completa», «chiudi tutto».
 - **Conferme** a una tua proposta del turno precedente (es. «Vuoi che apra PR + merge + verifica deploy?»): «sì», «ok», «conferma», «d'accordo», «procedi pure».
 
-**Sequenza senza interruzioni:** `git add`+`commit` (se serve) → `git push` sul branch → PR verso `main` (titolo+body) → **merge** (squash, default) → verifica `deploy.yml` partito → comunica URL PR mergiata + ETA deploy (~2-3 min).
+**Sequenza senza interruzioni:** `git add`+`commit` (se serve) → `git push` sul branch → PR verso `main` (titolo+body) → **attesa di tutti i controlli** (`gh pr checks N --watch --interval 20`, o i check-run della PR finché nessuno è in corso) e **nessuno rosso** → **merge** (squash, default) → verifica `deploy.yml` partito → comunica URL PR mergiata + ETA deploy (~2-3 min).
+
+🔴 **Mai unire con un controllo in corso o rosso** (dal 26/11/2026): la PR #2071 è stata unita alle 19:17:54, mentre i controlli giravano ancora, e l'inventario dei PDF è poi risultato rosso, bloccando tutte le PR successive. L'attesa non è un «fermarsi»: si aspetta e si unisce. Un controllo rosso si corregge sul ramo prima del merge. Rete di sicurezza: `.github/workflows/controllo-merge.yml` apre la issue «PR unite con controlli rossi».
 
 **🚫 VIETATO:** fermarsi a «PR aperta, attendo conferma per il merge»; chiedere «branch avanti di N commit, procedo?» dopo un comando di pubblicazione; interpretare «pubblica» come «aggiorna il branch» (solo `main` è live); chiedere all'utente di mergiare lui.
 
