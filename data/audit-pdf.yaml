@@ -1,10 +1,10 @@
-ultimo_audit: '2026-11-25'
-totale: 152
+ultimo_audit: '2026-11-26'
+totale: 153
 riepilogo:
   ACCESSIBILE: 86
   PARZIALE: 11
   NON_ACCESSIBILE: 9
-  TERZO: 46
+  TERZO: 47
   ERRORE: 0
 documenti:
 - path: /allegati/2026/2026-05-08-dpc-art-39-rimborsi-volontari-lavoratori-autonomi.pdf
@@ -132,6 +132,21 @@ documenti:
   text_chars_sample: 6630
   origine: TERZO
   origine_descrizione: Comune di Genzano di Roma (ordinanze, delibere)
+  verdict: TERZO
+- path: /allegati/2026/2026-11-26-gazzetta-ufficiale-n-276-dpr-217-assistente-spirituale-volontari-pc.pdf
+  file: 2026-11-26-gazzetta-ufficiale-n-276-dpr-217-assistente-spirituale-volontari-pc.pdf
+  size_kb: 1694.8
+  sha256: d05d016760fb45d4859d0776cae34085a3fe5ada61871518ae659fd9d09d5da9
+  searchable: true
+  tagged: false
+  language: null
+  title: null
+  pages: 3
+  errors: []
+  text_chars_sample: 16886
+  origine: TERZO
+  origine_descrizione: Gazzetta Ufficiale della Repubblica Italiana (testi legislativi
+    originali)
   verdict: TERZO
 - path: /allegati/2026/bando-regione-lazio-2026-contributi-volontariato-pc-g16101.pdf
   file: bando-regione-lazio-2026-contributi-volontariato-pc-g16101.pdf

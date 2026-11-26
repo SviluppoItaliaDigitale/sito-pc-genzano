@@ -40,6 +40,11 @@ chrome_collegato() {
 
 exec 9>"$LAVORO/.giro.lock"
 flock -n 9 || { echo "Un giro è già in corso." >>"$LOG"; exit 0; }
+# Blocco comune con il podcast della Misericordia di Ariccia: stesso Chrome e
+# stesso account di NotebookLM, quindi i due giri si mettono in fila (26/11/2026).
+mkdir -p "$HOME/.cache"
+exec 8>"$HOME/.cache/podcast-chrome.lock"
+flock -n 8 || { echo "Chrome è occupato da un altro giro del podcast." >>"$LOG"; exit 0; }
 
 if [ "${1:-}" = "--prova" ]; then
   cd "$REPO"
