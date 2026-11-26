@@ -413,7 +413,7 @@ La pagina **`/cruscotto/`** (in menu sotto *Per il Cittadino*) è un cruscotto m
 | Allerta | `allerta-stato-attuale` | `data/allerta.json` (CFR Lazio) | Livello allerta corrente |
 | Incendi | `dashboard-incendi` | EFFIS/Copernicus WMS `viirs.hs,modis.hs` su base satellitare Esri | Focolai da satellite VIIRS/MODIS |
 | Aria e pollini | `dashboard-aria` | Open-Meteo Air Quality (CAMS) **+ mappe ufficiali ARPA Lazio** (CHIMERE, `qa.arpalazio.net`) | AQI/PM/O₃ puntuale + previsione regionale PM10/NO₂/O₃/polveri 0-96h |
-| Aria Europa (CAMS) | `dashboard-cams` | Copernicus CAMS via WMS pubblico ECMWF `eccharts.ecmwf.int/wms/?token=public` (no auth, no API key) | Forecast orario europeo: PM2.5/PM10/O₃/NO₂/SO₂/polveri sahariane, orizzonti ora/+6h/+24h/+48h/+72h |
+| Aria Europa (CAMS) | `dashboard-cams` | Previsioni europee Copernicus CAMS di Open-Meteo (CC BY 4.0), salvate in `static/open-data/cams-europa.json` da `scripts/genera-cams-europa.py` (dal 26/11/2026; prima WMS ECMWF `eccharts.ecmwf.int`, token pubblico disattivato) | Griglia 1,5° × 2°, passi di 6 ore: PM2.5/PM10/O₃/NO₂/SO₂/polveri sahariane, orizzonti ora/+6h/+24h/+48h/+72h |
 | Emergenze EU (EMS) | `dashboard-ems` | Copernicus EMS Rapid Mapping JSON API `rapidmapping.emergency.copernicus.eu` (CORS aperto, no auth) | Ultime 15 attivazioni mappature emergenza in Europa, filtrabili per categoria (incendi/alluvioni/tempeste/terremoti/altro) e per area (tutta EU / solo Italia) |
 | Mare | `dashboard-mare` | Open-Meteo Marine | Onde sulla costa laziale (Anzio-Nettuno) |
 | Mare ItaliaMeteo | `dashboard-italiameteo-mare` | ItaliaMeteo/MeteoHub WMS modello d'onda WW3 MEDITA (CC BY 4.0) | Altezza e periodo delle onde sui mari italiani |

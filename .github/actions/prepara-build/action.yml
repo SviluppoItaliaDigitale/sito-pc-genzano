@@ -113,6 +113,12 @@ runs:
       shell: bash
       run: python3 scripts/genera-ems-attivazioni.py
 
+    - name: "🌫️ Snapshot qualità dell'aria europea CAMS (scheda del cruscotto)"
+      # Il WMS pubblico ECMWF non funziona più (26/11/2026): previsioni CAMS da Open-Meteo.
+      # Si rinnova al massimo ogni 3 ore; fonte giù = snapshot invariato, exit 0.
+      shell: bash
+      run: python3 scripts/genera-cams-europa.py
+
     - name: "🌍 Snapshot allerte globali GDACS (per la Sala situazioni)"
       shell: bash
       run: python3 scripts/genera-gdacs-eventi.py

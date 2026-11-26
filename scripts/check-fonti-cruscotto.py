@@ -225,13 +225,27 @@ def chk_earth_search_s2():
 
 
 def chk_cams_eu():
-    # CAMS Europe via WMS pubblico ECMWF (token=public). Bbox Italia, layer PM2.5.
-    # Il server risponde HTTP 302 -> redirect al PNG renderizzato in CDN streaming.
-    url = ("https://eccharts.ecmwf.int/wms/?token=public"
-           "&service=wms&VERSION=1.3.0&LAYERS=composition_europe_pm2p5_forecast_surface"
-           "&FORMAT=image/png&REQUEST=GetMap&CRS=EPSG:4326&BBOX=35,5,48,20&WIDTH=64&HEIGHT=64")
-    ok, det, _, _ = _get(url, accept=(200, 302))
-    return ok, det
+    # Dal 26/11/2026 la scheda «Aria Europa (CAMS)» non legge piu' il WMS pubblico di
+    # ECMWF (eccharts.ecmwf.int, token=public: «Access token disabled», HTTP 403,
+    # issue #2064) ma lo snapshot static/open-data/cams-europa.json, scritto da
+    # scripts/genera-cams-europa.py con le previsioni europee CAMS di Open-Meteo.
+    # Qui si controlla la fonte a monte (dominio cams_europe, tutte le variabili
+    # con almeno un valore); l'eta' dello snapshot e' in SNAPSHOT_ETA.
+    url = ("https://air-quality-api.open-meteo.com/v1/air-quality?latitude=41.7085&longitude=12.6916"
+           "&hourly=pm2_5,pm10,ozone,nitrogen_dioxide,sulphur_dioxide,dust"
+           "&forecast_days=2&domains=cams_europe&timezone=UTC")
+    ok, det, _, j = _get(url, expect_json=True)
+    if not ok:
+        return False, det
+    try:
+        h = j["hourly"]
+        vuote = [k for k in ("pm2_5", "pm10", "ozone", "nitrogen_dioxide", "sulphur_dioxide", "dust")
+                 if not any(v is not None for v in h.get(k, []))]
+    except Exception:
+        return False, "risposta senza il blocco «hourly»: schema cambiato?"
+    if vuote:
+        return False, "nessun valore per: " + ", ".join(vuote)
+    return True, f"{det}, dominio cams_europe con tutte e sei le variabili"
 
 
 def chk_ems_rapid():
@@ -650,6 +664,7 @@ SNAPSHOT_ETA = (
     ("incendi-firms.json", 36, "nuovi passaggi VIIRS piu' volte al giorno; pausa massima osservata ~24 h"),
     ("meteoalarm-italia.json", 120, "nei periodi calmi resta uguale per giorni; pausa massima osservata ~30 h"),
     ("ems-attivazioni.json", 168, "le attivazioni Copernicus cambiano di rado; pausa massima osservata ~43 h"),
+    ("cams-europa.json", 30, "si riscrive ogni 11-12 h (CAMS pubblica due volte al giorno); con le pause dello scheduler di GitHub oltre 30 h vuol dire fermo"),
 )
 
 
@@ -740,7 +755,7 @@ SORGENTI = [
     ("Livelli tematici (alluvioni, neve, suolo, vegetazione, aerosol) — NASA GIBS", "Satellite", chk_gibs_tematici),
     ("Incendi — GWIS/EFFIS Copernicus (focolai 7 giorni)", "Incendi", chk_effis_focolai),
     ("Qualità aria regionale — ARPA Lazio", "Aria e pollini", chk_arpa),
-    ("Aria Europa — Copernicus CAMS (WMS ECMWF)", "Aria Europa (CAMS)", chk_cams_eu),
+    ("Aria Europa — Copernicus CAMS (via Open-Meteo)", "Aria Europa (CAMS)", chk_cams_eu),
     ("Emergenze EU — Copernicus EMS Rapid Mapping", "Emergenze EU (EMS)", chk_ems_rapid),
     ("Allerte globali — GDACS", "Sala situazioni (GDACS)", chk_gdacs),
     ("Bollettino criticità DPC", "Sala situazioni (ALLERTA, cartina zone)", chk_dpc_bollettino),
