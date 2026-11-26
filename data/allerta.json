@@ -1,7 +1,13 @@
 {
-  "livello": "gialla",
-  "titolo": "ALLERTA GIALLA — rischio idraulico",
-  "descrizione": "Ordinaria per rischio idraulico, Zona F — Bacini Costieri Sud (Genzano). Bollettino DPC/Regione Lazio del 25 novembre 2026, validità 26 novembre 00:00–23:59.",
-  "ultimo_aggiornamento": "2026-11-25T00:03:53+01:00",
-  "ultimo_controllo": "2026-11-26T14:28:37+01:00"
+  "livello": "verde",
+  "titolo": "NESSUNA ALLERTA",
+  "descrizione": "Non sono previsti fenomeni significativi sul nostro territorio.",
+  "ultimo_aggiornamento": "2026-11-26T14:58:56+01:00",
+  "ultimo_controllo": "2026-11-26T14:58:56+01:00",
+  "domani": {
+    "livello": "verde",
+    "titolo": "Previsto verde",
+    "rischi": [],
+    "data": "2026-11-27"
+  }
 }
