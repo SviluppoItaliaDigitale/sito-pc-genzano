@@ -1,0 +1,65 @@
+name: "🚦 PR unite con controlli rossi"
+
+# Rete di sicurezza (26/11/2026): la PR #2071 è stata unita alle 19:17:54, prima che i controlli finissero, e uno è
+# poi risultato rosso (inventario dei PDF), rendendo rosse tutte le PR successive. A ogni PR unita su main questo
+# workflow aspetta che tutti i controlli del suo ultimo commit siano finiti e, se uno è rosso, apre o aggiorna una
+# sola issue «PR unite con controlli rossi» (label automazione, salute-sistema) che la routine di lavorazione delle
+# issue automatiche ripara. La issue si chiude a mano dopo la riparazione (regola .claude/rules/13, § sequenza).
+# Non legge testi scritti da altri: usa solo numero della PR e SHA, passati come variabili d'ambiente.
+
+on:
+  pull_request:
+    types: [closed]
+    branches: [main]
+
+permissions:
+  contents: read
+  checks: read
+  issues: write
+  pull-requests: read
+
+concurrency:
+  group: controllo-merge-${{ github.event.pull_request.number }}
+  cancel-in-progress: false
+
+jobs:
+  attesa-controlli-merge:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - name: Attendi la fine dei controlli e segnala quelli rossi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          PR: ${{ github.event.pull_request.number }}
+          SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          lista() { gh api "repos/$GH_REPO/commits/$SHA/check-runs?per_page=100" \
+            -q '.check_runs[] | select(.name != "attesa-controlli-merge") | "\(.status)\t\(.conclusion)\t\(.name)\t\(.html_url)"'; }
+          for i in $(seq 1 70); do   # fino a 35 minuti
+            in_corso=$(lista | awk -F'\t' '$1 != "completed"' | wc -l)
+            [ "$in_corso" = 0 ] && break
+            sleep 30
+          done
+          lista > controlli.tsv
+          rossi=$(awk -F'\t' '$1 != "completed" || ($2 != "success" && $2 != "skipped" && $2 != "neutral")' controlli.tsv || true)
+          echo "Controlli del commit $SHA (PR #$PR):"; cat controlli.tsv
+          [ -z "$rossi" ] && { echo "Tutti verdi."; exit 0; }
+          titolo="PR unite con controlli rossi"
+          {
+            echo "La PR #$PR è stata unita su main con questi controlli rossi o non finiti:"
+            echo
+            printf '%s\n' "$rossi" | awk -F'\t' '{printf "- %s (%s, %s): %s\n", $3, $1, $2, $4}'
+            echo
+            echo "Da fare: riprodurre l'errore, correggerlo su main con una PR a controlli verdi, poi chiudere questa issue."
+            echo "Causa da evitare: unire prima che tutti i controlli siano finiti (\`gh pr checks N --watch\`), regola .claude/rules/13."
+          } > voce.md
+          num=$(gh issue list --state open --search "in:title \"$titolo\"" --json number -q '.[0].number')
+          if [ -n "$num" ]; then
+            gh issue comment "$num" --body-file voce.md
+          else
+            gh issue create --title "$titolo" --body-file voce.md --label "automazione,salute-sistema"
+          fi
+          exit 1
