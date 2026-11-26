@@ -54,6 +54,7 @@ jobs:
           python3 scripts/genera-volo-soccorso.py
           python3 scripts/genera-meteoalarm.py
           python3 scripts/genera-incendi-firms.py
+          python3 scripts/genera-cams-europa.py
 
       - name: "💾 Commit solo se i dati sono cambiati"
         run: |
@@ -64,7 +65,8 @@ jobs:
                   static/open-data/gdacs-eventi.json \
                   static/open-data/ems-attivazioni.json \
                   static/open-data/volo-soccorso.json \
-                  static/open-data/meteoalarm-italia.json
+                  static/open-data/meteoalarm-italia.json \
+                  static/open-data/cams-europa.json
           # incendi-firms.json esiste solo se il segreto FIRMS_MAP_KEY e' configurato
           [ -f static/open-data/incendi-firms.json ] && git add static/open-data/incendi-firms.json || true
           if git diff --cached --quiet; then
