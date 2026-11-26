@@ -21,6 +21,14 @@ Le puntate già in calendario escono da sole anche a PC spento (rebuild di ogni 
 GitHub). Se il magazzino scende sotto una settimana o un'uscita salta, `controllo-podcast.yml`
 apre una issue che arriva per email.
 
+## Blocco comune con la Misericordia (dal 26/11/2026)
+
+Il podcast della Misericordia di Ariccia (`sito-misericordia-ariccia/scripts/podcast-auto/`) usa lo
+stesso Chrome e lo stesso account di NotebookLM. Per questo `giro-automatico.sh`, dopo il proprio
+blocco `~/podcast-lavoro/.giro.lock`, prende anche il blocco comune `~/.cache/podcast-chrome.lock`:
+se l'altro giro è in corso scrive «Chrome è occupato da un altro giro del podcast.» nel log ed esce,
+e riprova all'ora successiva. Così i due giri vanno in fila e non insieme.
+
 ## Il giro, passo per passo
 
 Una puntata alla volta (istruzione di Alessandro del 15/11/2026): si chiude fino alla messa
