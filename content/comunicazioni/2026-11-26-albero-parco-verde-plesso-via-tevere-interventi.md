@@ -33,7 +33,7 @@ Poco dopo le **10:30** siamo intervenuti in un **parco comunale**, dove era cadu
 
 Verso le **13** siamo andati al **plesso scolastico di via Tevere**. Il verde pericolante era già stato rimosso in precedenza, insieme ai **Vigili del Fuoco**. Questa volta i volontari hanno messo in sicurezza la zona.
 
-**Due volontari**, con il pickup **EVO Cross 4**, hanno lavorato per poco più di **un'ora**. L'intervento **non è concluso**: sarà completato alla prima occasione utile.
+**Due volontari** hanno lavorato per poco più di **un'ora**. L'intervento **non è concluso**: sarà completato alla prima occasione utile.
 
 ## Le statistiche aggiornate
 
