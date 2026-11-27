@@ -109,7 +109,7 @@ La lezione vale per tutte le organizzazioni, compresa la nostra: l'assicurazione
 
 **Fonti istituzionali:**
 
-- [Regione Lazio — Bollettino ufficiale n. 95 del 26 novembre 2026](https://www.regione.lazio.it/bur?vw=ultimibur), determinazioni da G16477 a G16481 del 24 novembre 2026 (Atti dirigenziali di gestione, Direzione regionale Emergenza, Protezione civile e NUE 112).
+- [Regione Lazio — Bollettino ufficiale della Regione Lazio (BURL)](https://www.regione.lazio.it/bur): numero 95 del 26 novembre 2026, determinazioni da G16477 a G16481 del 24 novembre 2026 (Atti dirigenziali di gestione, Direzione regionale Emergenza, Protezione civile e NUE 112). Gli atti si trovano nella ricerca del BURL indicando il numero della determinazione.
 - [Regione Lazio — Regolamento regionale 14 ottobre 2019, n. 18, testo coordinato al 14 maggio 2021](https://regione.lazio.it/regolamenti-regionali-testo-coordinato/regolamento-regionale-14-ottobre-2019-n-18/14052021).
 - [Regione Lazio — Elenco territoriale delle organizzazioni di volontariato di protezione civile](https://www.regione.lazio.it/protezione-civile/elenco-territoriale-MGO).
 - [Regione Lazio — Legge regionale 26 febbraio 2014, n. 2, testo coordinato (PDF)](https://www.regione.lazio.it/sites/default/files/documentazione/2025/PRC-LR-02-26-02-2014.pdf).
