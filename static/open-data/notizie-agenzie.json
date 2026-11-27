@@ -5,46 +5,112 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-11-26T20:28:20+00:00",
+  "generato": "2026-11-27T03:07:06+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-11-26T20:22:15+00:00",
+   "data": "2026-11-27T02:29:11+00:00",
    "fonte": "ANSA",
-   "titolo": "Intelligenza Artificiale e computer quantistici, a Roma il convegno finale di AI AnthropoCosmic",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/intelligenza-artificiale-e-computer-quantistici-a-roma-il-convegno-finale-di-ai-anthropocosmic_1e4778de-4c6d-488d-a202-90516a1d7d14.html"
+   "titolo": "Spagna, Sanchez e Colau in tandem credono nella rimonta sul consorzio Feijoo e Abascal",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/27/spagna-sanchez-e-colau-in-tandem-credono-nella-rimonta-sul-consorzio-feijoo_ea91670f-862d-4fa7-8026-2204493d546c.html"
   },
   {
-   "data": "2026-11-26T20:22:06+00:00",
+   "data": "2026-11-27T00:55:08+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il bilancio spacca l'Europa ma Costa insiste: 'Serve un'intesa a dicembre'",
+   "url": "https://www.ansa.it/europa/notizie/rubriche/altrenews/2026/11/27/ansail-bilancio-spacca-leuropa-ma-costa-insiste-serve-unintesa-a-dicembre_fe68840f-5fc7-4c53-b41a-e795d3b27382.html"
+  },
+  {
+   "data": "2026-11-26T23:19:39+00:00",
    "fonte": "ANSA",
    "titolo": "Accordo per De Cos alla Bce, ma è muro contro muro sul bilancio Ue",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/26/confronto-tra-i-leader-sulla-bce-oggi-verso-lavvio-iter-formale_b89e1430-4300-482f-9508-c475065af9d8.html"
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/26/accordo-per-de-cos-alla-bce-ma-e-muro-contro-muro-sul-bilancio_b89e1430-4300-482f-9508-c475065af9d8.html"
   },
   {
-   "data": "2026-11-26T20:21:39+00:00",
+   "data": "2026-11-26T23:17:01+00:00",
    "fonte": "ANSA",
-   "titolo": "Il vertice Ue sul bilancio, Macron contro i tagli: 'Non ci sarà accordo stavolta'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/26/al-via-il-vertice-ue-dedicato-al-bilancio.-meloni-niente-tagli-al-bilancio_d61f8cab-2589-48ec-a6bb-ff3094591418.html"
+   "titolo": "Attacco con droni in Kuwait, morti due tecnici italiani",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/26/due-tecnici-italiani-della-rheinmetall-morti-in-un-attacco-in-kuwait_060489c8-4e35-4f04-9c6a-ade4a80acda4.html"
   },
   {
-   "data": "2026-11-26T20:17:03+00:00",
+   "data": "2026-11-26T23:16:06+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Giustizia, continua lo scontro sugli stipendi dei magistrati. Da oggi il congresso Anm, Meloni non ci sarà",
+   "url": "https://www.adnkronos.com/politica/stipendi-magistrati-meloni-anm-congresso_5engMZe3vhJIURa71rLZ4c"
+  },
+  {
+   "data": "2026-11-26T23:10:46+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Droni sul Kuwait, morti due tecnici italiani di 65 e 36 anni. Le accuse all'Iran, la smentita di Teheran",
+   "url": "https://www.adnkronos.com/internazionale/esteri/kuwait-attacco-drone-italiani-morti-cosa-sappiamo_5gZ5lXDuqgcBWqfDRvdje3"
+  },
+  {
+   "data": "2026-11-26T23:06:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina, il monito di Trump a Putin: \"Ritirare l'aggressione all'Europa\". Londra allerta 100mila riservisti, Varsavia istituisce la no-fly zone",
+   "url": "https://www.adnkronos.com/internazionale/esteri/trump-putin-ucraina-nato-oggi_oinrM8wjiy7AF19en1kUz"
+  },
+  {
+   "data": "2026-11-26T23:04:40+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Femminicidio Pistoia, Ionela uccisa a 24 anni: il compagno si suicida dallo stesso viadotto dove morì Lorena Isceri",
+   "url": "https://www.adnkronos.com/cronaca/femminicidio-pistoia-24enne-uccisa-compagno-suicida_4K5CY9uOPwpHOz7EA9l37R"
+  },
+  {
+   "data": "2026-11-26T22:12:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Conference League, rimonta nel finale per l'Atalanta: il Borac resta in 9 e la Dea vince 3-2",
+   "url": "https://www.adnkronos.com/sport/conference-league-borac-atalanta_XaqSsZUxMF1EyC7nqwfcT"
+  },
+  {
+   "data": "2026-11-26T21:41:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Consiglio europeo, Merz: \"Fiducioso in un accordo entro fine anno\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/vertice-consiglio-europeo-bilancio-pluriennale-previsioni_2vMKPrYphLxeeMbGNEaWTx"
+  },
+  {
+   "data": "2026-11-26T21:40:36+00:00",
    "fonte": "ANSA",
-   "titolo": "Europa League, in campo Juventus-Omonia DIRETTA",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/26/europa-league-in-campo-juventus-omonia-diretta_cb9c81b7-a2f3-4183-98e9-a3d1491cbfaa.html"
+   "titolo": "L'Italbasket fa festa, Turchia battuta e Mattarella applaude",
+   "url": "https://www.ansa.it/sito/notizie/sport/basket/2026/11/26/litalbasket-fa-festa-turchia-battuta-e-mattarella-applaude_4504c1af-9519-412b-a2e9-b333a566cfed.html"
+  },
+  {
+   "data": "2026-11-26T21:28:59+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Sondaggio politico, Fratelli d'Italia primo partito e centrodestra vince contro Conte o Schlein",
+   "url": "https://www.adnkronos.com/politica/sondaggio-elezioni-porta-a-porta-voto-oggi-26-novembre_38KYd7xvmQjPBgy6cVjxXl"
+  },
+  {
+   "data": "2026-11-26T21:10:00+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il cda di Rcs designa Stefano Barigelli per la direzione del Corriere",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/26/il-cda-di-rcs-designa-stefano-barigelli-per-la-direzione-del-corriere_fb40f7d3-e251-4706-b202-ebdf33314802.html"
+  },
+  {
+   "data": "2026-11-26T21:06:30+00:00",
+   "fonte": "ANSA",
+   "titolo": "Ilona Staller: 'Mi candido a sindaco di Roma, ci sto già lavorando'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/26/ilona-staller-mi-candido-a-sindaco-di-roma-ci-sto-gia-lavorando_564e00ea-bb1d-4296-8c86-30d65e6614c0.html"
+  },
+  {
+   "data": "2026-11-26T20:48:12+00:00",
+   "fonte": "ANSA",
+   "titolo": "De Gennaro: 'Non ho tradito, un condannato a morte non mente'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/26/la-lettera-di-de-gennaro-sul-corriere-io-condannato-a-morte_8d506c3b-6d62-4d78-a4a7-2c6bed64af4a.html"
+  },
+  {
+   "data": "2026-11-26T20:44:19+00:00",
+   "fonte": "ANSA",
+   "titolo": "Ucraina, Kushner: 'Putin ha mostrato finora moderazione non usando armi nucleari'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/26/ucraina-kushner-putin-ha-mostrato-finora-moderazione-non-usando-armi-nucleari_85352e5f-375f-426f-821c-b842ff42a209.html"
   },
   {
    "data": "2026-11-26T20:11:11+00:00",
    "fonte": "ANSA",
    "titolo": "La maggioranza blinda il condono, ma niente sanatoria per le zone sismiche",
    "url": "https://www.ansa.it/sito/notizie/politica/2026/11/26/salvini-in-manovra-una-norma-sul-condono-la-stiamo-costruendo-con-i-comuni_6c4a993a-9e13-463d-b930-9be3df31a000.html"
-  },
-  {
-   "data": "2026-11-26T20:08:44+00:00",
-   "fonte": "ANSA",
-   "titolo": "De Gennaro: 'Non ho tradito, un condannato a morte non mente'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/26/la-lettera-di-de-gennaro-sul-corriere-io-condannato-a-morte_8d506c3b-6d62-4d78-a4a7-2c6bed64af4a.html"
   },
   {
    "data": "2026-11-26T20:05:19+00:00",
@@ -65,19 +131,13 @@
    "url": "https://www.adnkronos.com/sport/coppa-davis-spagna-austria_1wkJ0BIfQAk3WSkm5MwnaP"
   },
   {
-   "data": "2026-11-26T19:59:44+00:00",
-   "fonte": "ANSA",
-   "titolo": "Attacco con droni in Kuwait, morti due tecnici italiani",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/26/due-tecnici-italiani-della-rheinmetall-morti-in-un-attacco-in-kuwait_060489c8-4e35-4f04-9c6a-ade4a80acda4.html"
-  },
-  {
    "data": "2026-11-26T19:58:55+00:00",
    "fonte": "ANSA",
    "titolo": "La minaccia russa fa paura, Londra allerta 100.000 riservisti",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/26/gb-chiede-a-100-mila-riservisti-di-tenersi-pronti-in-caso-di-guerra_4e4aae73-a28f-4ae1-aab9-4016fcf8b2fb.html"
   },
   {
-   "data": "2026-11-26T19:43:09+00:00",
+   "data": "2026-11-26T19:43:00+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Superenalotto, numeri combinazione vincente oggi 26 novembre",
    "url": "https://www.adnkronos.com/cronaca/superenalotto-numeri-vincenti-oggi-26-novembre_3eptufNRdu1tdrXbHeoblF"
@@ -91,7 +151,7 @@
   {
    "data": "2026-11-26T19:23:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Europa League, oggi Juventus-Omonia Nicosia 0-1 - Diretta",
+   "titolo": "La Juve cala il poker contro l'Omonia: bianconeri a un passo dagli ottavi di Europa League",
    "url": "https://www.adnkronos.com/sport/europa-league-juventus-omonia-nicosia_4cgzKzytijCi97gVrGUjAn"
   },
   {
@@ -125,70 +185,10 @@
    "url": "https://www.ansa.it/sito/videogallery/mondo/2026/11/26/new-york-rinviata-per-maltempo-la-parata-del-ringraziamento_29cb46fc-3dfa-4498-91ad-59c59989b5a9.html"
   },
   {
-   "data": "2026-11-26T18:50:57+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "De Gennaro, muro di no comment da politici citati nella lettera. Conte: \"Confermo, non mi ha mai chiesto nulla\"",
-   "url": "https://www.adnkronos.com/politica/de-gennaro-lettera-politici-citati-no-comment_3nI73wTGvlWQ5twmo3EOiY"
-  },
-  {
-   "data": "2026-11-26T18:50:15+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Olympiacos-Milan, perché la Uefa ha cambiato il marcatore: non è gol di Pirola ma autogol di Maignan",
-   "url": "https://www.adnkronos.com/sport/europa-league-olympiacos-milan_7kfSaLaRz3ODJ4GFoYuJ8D"
-  },
-  {
-   "data": "2026-11-26T18:43:27+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Il super nonno da record, a 98 anni fa 25 piegamenti: \"Ora mi siedo...\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/record-piegamenti-98-anni-video_EF2YZnFrHAD6yLrxufFhx"
-  },
-  {
-   "data": "2026-11-26T18:41:17+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Il migliore amico dell’uomo diventa un robot: Autostrade dello Stato presenta il cane con IA per la sicurezza dei cantieri",
-   "url": "https://www.adnkronos.com/economia/cane-robot-autostrade-dello-stato-sicurezza-cantieri_6UN7ElE8yTMiRQWJPh2DP5"
-  },
-  {
    "data": "2026-11-26T18:36:16+00:00",
    "fonte": "ANSA",
    "titolo": "Le mostre del weekend, da Guttuso e Vedova a Frida e Marilyn",
    "url": "https://www.ansa.it/canale_viaggi/notizie/arte/2026/11/25/le-mostre-del-weekend-da-guttuso-e-vedova-a-frida-e-marilyn_25293a56-0f0e-4351-a882-39903747c433.html"
-  },
-  {
-   "data": "2026-11-26T18:36:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Caso Orlandi, Chi l'ha visto: \"Telefonista anonimo sarebbe ex agente Sisde, tra i primi a entrare in casa di Emanuela\"",
-   "url": "https://www.adnkronos.com/cronaca/emanuela-orlandi-telefonista-voce-chi-lha-visto_48sqYfBY5FDv2hqOIyKlGX"
-  },
-  {
-   "data": "2026-11-26T18:32:14+00:00",
-   "fonte": "ANSA",
-   "titolo": "Leone nelle parrocchie romane, 'non ci sono cristiani di serie A e B'",
-   "url": "https://www.ansa.it/vaticano/notizie/2026/11/26/leone-nelle-parrocchie-romane-non-ci-sono-cristiani-di-serie-a-e-b_0e98126a-d6f5-41cf-b356-f1cea4358bf4.html"
-  },
-  {
-   "data": "2026-11-26T18:27:26+00:00",
-   "fonte": "ANSA",
-   "titolo": "Jindal rilancia sull'ex Ilva, gli investimenti salgono a 7,5 miliardi",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/26/jindal-rilancia-sullex-ilva-gli-investimenti-salgono-a-75-miliardi_788dba04-7995-40f9-8e2b-a59723e1bde1.html"
-  },
-  {
-   "data": "2026-11-26T18:24:57+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Dal giornalismo sportivo al Corriere della Sera, chi è il neodirettore Stefano Barigelli",
-   "url": "https://www.adnkronos.com/economia/stefano-barigelli-corriere-della-sera-chi-e_6j5XhVfxYv7LiqFJAWjoIr"
-  },
-  {
-   "data": "2026-11-26T18:24:10+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "L'albero della discordia a Milano, 'lasciateci la tradizione'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/26/lalbero-della-discordia-a-milano-lasciateci-la-tradizione_5147ea1d-48f8-4306-aab7-d0cecbe747cd.html"
-  },
-  {
-   "data": "2026-11-26T18:22:30+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Cyberattacchi, Corazza (Parlamento Ue): \"Sappiamo chi attacca e perché, potremmo difenderci se uniti\"",
-   "url": "https://www.adnkronos.com/economia/cyberattacchi-corazza-parlamento-ue-sappiamo-chi-attacca-e-perche-potremmo-difenderci-se-uniti_6GfPo2Um8CO8iNMvHoIbWz"
   }
  ]
 }
