@@ -50,7 +50,7 @@ puntate:
   fonti:
   - content/rischi-prevenzione/rischio-sismico.md
   parole: []
-  stato: da-fare
+  stato: programmata
   motivo_precedente: '15/11/2026, due tentativi (1 e 37 fonti, formato Approfondimento,
     lunghezza predefinita): spiegazioni tecniche aggiunte, scosse dei Colli Albani
     rese più gravi; Norcia 2016 raccontata con un salvataggio del centro storico che
@@ -58,13 +58,20 @@ puntate:
   tentativi: 0
   nota: '18/11/2026, rimessa in coda per decisione di Alessandro («anche quelle scartate!»):
     terzo tentativo con una sola pagina come fonte (niente parole, niente pagine ufficiali),
-    lunghezza Breve e le istruzioni_extra già scritte.'
-  istruzioni_extra: 'ATTENZIONE, regole aggiuntive: non aggiungere spiegazioni tecniche
-    che la pagina non dà, non raccontare terremoti del passato se non come li racconta
-    la pagina, non rendere più gravi le scosse dei Colli Albani. Non usare "fondamentale",
-    "importantissimo", "sempre" o "mai" se non sono nella frase della pagina. Non
-    dire la parola "fonti". Non aggiungere esempi o situazioni che non sono nella
-    pagina.'
+    lunghezza Breve e le istruzioni_extra già scritte. 27/11/2026, terzo tentativo
+    (1 fonte, Breve, istruzioni_extra con il divieto di leggere le istruzioni a voce;
+    audio 2:30) superato: ogni frase confrontata con la pagina (zona 2B e sciami «di
+    solito piccole ma a volte avvertite», prima, durante, difficoltà di movimento,
+    dopo, 112); nessun taglio.'
+  istruzioni_extra: 'ATTENZIONE, regole aggiuntive. Queste istruzioni non si leggono
+    e non si ripetono a voce: non dire a chi è dedicata la puntata e non dire come
+    si pronuncia un numero. Non aggiungere spiegazioni tecniche che la pagina non
+    dà, non raccontare terremoti del passato se non come li racconta la pagina, non
+    rendere più gravi le scosse dei Colli Albani. Non usare "fondamentale", "importantissimo",
+    "sempre" o "mai" se non sono nella frase della pagina. Non dire la parola "fonti".
+    Non aggiungere esempi o situazioni che non sono nella pagina.'
+  file: content/podcast/2026-12-29-rischio-sismico.md
+  data: '2026-12-29'
 - id: allerta-meteo
   titolo: 'Allerta meteo: che cosa vogliono dire i colori'
   fonti:
