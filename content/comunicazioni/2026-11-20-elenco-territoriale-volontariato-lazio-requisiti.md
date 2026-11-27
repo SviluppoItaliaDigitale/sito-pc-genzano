@@ -1,6 +1,7 @@
 ---
 title: "Elenco territoriale del Lazio: che cosa serve a un'organizzazione di volontariato di protezione civile"
 date: 2026-11-20T00:05:00+01:00
+lastmod: 2026-11-27
 description: "Chi può iscriversi all'elenco territoriale della Regione Lazio, i requisiti minimi, le classi e le sezioni specialistiche, come si presenta la domanda."
 badge: "Volontariato"
 canale: "approfondimenti"
@@ -88,6 +89,16 @@ Oggi la procedura passa dalla piattaforma regionale, come spiega la pagina della
 
 Una volta iscritta, l'organizzazione presenta ogni anno, entro il 31 maggio, la documentazione aggiornata; l'iscrizione si rivede almeno ogni tre anni (articolo 7).
 
+## Aggiornamento del 27 novembre 2026: cinque cancellazioni per la polizza non rinnovata
+
+Il Bollettino ufficiale della Regione Lazio n. 95 del 26 novembre 2026 pubblica cinque determinazioni della Direzione regionale Emergenza, Protezione civile e NUE 112 (da G16477 a G16481, del 24 novembre 2026). Con ciascuna la Regione **cancella dall'elenco territoriale** un'organizzazione: due Gruppi comunali di protezione civile e tre associazioni.
+
+Il motivo è lo stesso in tutti e cinque gli atti. Il controllo periodico della piattaforma regionale ha rilevato che **la polizza assicurativa dei volontari risultava scaduta** e non era stata caricata di nuovo. La Direzione aveva scritto a ciascuna organizzazione, in date diverse tra il 2025 e il 2026 (per due atti la nota è del 30 gennaio 2026), per avviare il procedimento di cancellazione e dare dieci giorni per le osservazioni. Non avendo ricevuto risposta, ha applicato l'articolo 11, comma 2, lettera b), del regolamento regionale n. 18/2019 (in un atto anche la lettera a)).
+
+Gli atti ricordano anche una conseguenza dell'articolo 11, comma 5: chi rappresentava o dirigeva un'organizzazione cancellata d'ufficio **non può ricoprire incarichi in altre organizzazioni dell'elenco per cinque anni**.
+
+La lezione vale per tutte le organizzazioni, compresa la nostra: l'assicurazione dei volontari è un requisito da mantenere ogni anno, non solo da presentare alla prima iscrizione. Senza polizza in regola un'organizzazione rischia la cancellazione dall'elenco territoriale.
+
 ## Per approfondire
 
 **Sul nostro sito:**
@@ -98,6 +109,7 @@ Una volta iscritta, l'organizzazione presenta ogni anno, entro il 31 maggio, la 
 
 **Fonti istituzionali:**
 
+- [Regione Lazio — Bollettino ufficiale n. 95 del 26 novembre 2026](https://www.regione.lazio.it/bur?vw=ultimibur), determinazioni da G16477 a G16481 del 24 novembre 2026 (Atti dirigenziali di gestione, Direzione regionale Emergenza, Protezione civile e NUE 112).
 - [Regione Lazio — Regolamento regionale 14 ottobre 2019, n. 18, testo coordinato al 14 maggio 2021](https://regione.lazio.it/regolamenti-regionali-testo-coordinato/regolamento-regionale-14-ottobre-2019-n-18/14052021).
 - [Regione Lazio — Elenco territoriale delle organizzazioni di volontariato di protezione civile](https://www.regione.lazio.it/protezione-civile/elenco-territoriale-MGO).
 - [Regione Lazio — Legge regionale 26 febbraio 2014, n. 2, testo coordinato (PDF)](https://www.regione.lazio.it/sites/default/files/documentazione/2025/PRC-LR-02-26-02-2014.pdf).

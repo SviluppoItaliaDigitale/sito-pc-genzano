@@ -1,6 +1,7 @@
 ---
 title: "Come entra un gruppo di volontari nella protezione civile del Lazio. Versione facile da leggere"
 date: 2026-11-20T00:05:00+01:00
+lastmod: 2026-11-27
 description: "Versione semplificata (italiano A2) dell'articolo sull'elenco territoriale del volontariato della Regione Lazio. Frasi corte, parole comuni."
 badge: "Volontariato"
 priorita: "normale"
@@ -69,10 +70,23 @@ La Regione risponde entro 60 giorni.
 
 Ogni anno, entro il 31 maggio, il gruppo manda alla Regione i documenti aggiornati.
 
+## Novità del 27 novembre 2026
+
+La Regione Lazio ha tolto dall'elenco cinque organizzazioni di volontari. Sono due gruppi comunali e tre associazioni.
+
+Il motivo è lo stesso per tutte. L'assicurazione dei volontari era scaduta e nessuno l'ha caricata di nuovo sul sito della Regione.
+
+La Regione aveva scritto alle organizzazioni. Non ha avuto risposta.
+
+Chi guidava queste organizzazioni non può avere un incarico in altre organizzazioni dell'elenco per cinque anni.
+
+Il messaggio è chiaro: l'assicurazione dei volontari va rinnovata ogni anno. Senza assicurazione un gruppo rischia di uscire dall'elenco.
+
 ## Da dove vengono queste informazioni
 
 - Il regolamento regionale 14 ottobre 2019, numero 18.
 - La pagina della Regione Lazio sull'elenco territoriale.
 - Il Codice della protezione civile, decreto legislativo 1 del 2018.
+- Il Bollettino ufficiale della Regione Lazio numero 95 del 26 novembre 2026.
 
 Trovi i link nell'[articolo completo](/comunicazioni/2026-11-20-elenco-territoriale-volontariato-lazio-requisiti/).
