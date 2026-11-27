@@ -258,7 +258,10 @@ jobs:
         run: |
           MIN=$(date -u +%-M)
           if [ "$MIN" -ge 10 ] && [ "$MIN" -lt 15 ]; then
-            gh workflow run deploy-coalescer.yml --ref main
+            for t in 1 2 3; do
+              gh workflow run deploy-coalescer.yml --ref main && break
+              echo "::warning::Dispatch del coalescer fallito (tentativo $t)"; sleep 10
+            done || true
           else
             echo "Minuto $MIN: il coalescer si avvia solo fra i minuti 10 e 14."
           fi

@@ -327,7 +327,13 @@ def carica(gruppo: str) -> int:
         if not da_caricare:
             print("Nessuna immagine da caricare.")
             return 1
-        r = gh("release", "upload", TAG, *da_caricare, "--clobber")
+        # errori transitori di GitHub (502/503) sono frequenti: tre tentativi
+        for tentativo in range(3):
+            r = gh("release", "upload", TAG, *da_caricare, "--clobber")
+            if r.returncode == 0:
+                break
+            print(f"Caricamento non riuscito (tentativo {tentativo + 1}/3): {r.stderr.strip()}")
+            time.sleep(20)
         if r.returncode != 0:
             print(f"Caricamento non riuscito: {r.stderr.strip()}")
             return 1
