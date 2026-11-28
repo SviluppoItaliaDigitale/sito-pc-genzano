@@ -1399,3 +1399,15 @@ dati:
         perche: "La Regione Emilia-Romagna indica un picco di 36.600 sfollati il 20 maggio 2023 (verificato il 20/11/2026)."
         contesto: 'Emilia|Romagna|2023'
         finestra: 300
+
+  - id: dl-170-2026-conversione
+    dato: "Decreto-legge 170/2026 (scuola): stato della conversione in legge"
+    valore: "convertito dalla legge 27 novembre 2026, n. 219 (GU n. 277 del 27/11/2026), in vigore dal 28/11/2026"
+    fonti:
+      - nome: "Gazzetta Ufficiale, Serie Generale n. 277 del 27/11/2026, legge 219/2026 (26G00242)"
+        url: "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-11-27&atto.codiceRedazionale=26G00242&elenco30giorni=false"
+    vietati:
+      - regex: '170/2026[^.\n]{0,80}in attesa di conversione'
+        perche: "Il D.L. 170/2026 è stato convertito dalla legge 219/2026 il 27/11/2026 (verificato il 28/11/2026)."
+        contesto: '170/2026'
+        finestra: 200

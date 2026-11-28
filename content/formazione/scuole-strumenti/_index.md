@@ -41,7 +41,7 @@ Il monte ore minimo triennale previsto dalla normativa è:
 - 150 ore negli istituti tecnici;
 - 210 ore negli istituti professionali.
 
-Dal 1° ottobre 2026 istituti tecnici e professionali si chiamano «licei tecnologici» e «licei professionali» (D.L. 170/2026, art. 9, in attesa di conversione in legge); il monte ore non cambia. Dettagli nel [quadro normativo per la scuola](/formazione/quadro-normativo-scuola/#pcto).
+Dal 1° ottobre 2026 istituti tecnici e professionali si chiamano «licei tecnologici» e «licei professionali» (D.L. 170/2026, art. 9, convertito dalla [legge 219/2026](https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-11-27&atto.codiceRedazionale=26G00242&elenco30giorni=false)); il monte ore non cambia. Dettagli nel [quadro normativo per la scuola](/formazione/quadro-normativo-scuola/#pcto).
 
 Un eventuale percorso con il Gruppo può coprire solo una parte di questo monte ore e deve essere approvato dalla scuola.
 
