@@ -1,11 +1,11 @@
 {
  "_snapshot": {
-  "generato": "2026-11-27T21:35:16+00:00",
+  "generato": "2026-11-28T03:30:20+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 18,
-  "scaduti_scartati": 19,
-  "in_corso": 6,
+  "avvisi": 21,
+  "scaduti_scartati": 5,
+  "in_corso": 10,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
@@ -23,19 +23,6 @@
    "identificativo": "2.49.0.0.380.3.IT.261127114825.047"
   },
   {
-   "in_corso": true,
-   "regione": "Abruzzo",
-   "fenomeno": "Pioggia",
-   "livello": "gialla",
-   "evento_originale": "Yellow Rain Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-27T10:00:00+00:00",
-   "fine": "2026-11-27T23:59:00+00:00",
-   "emesso": "2026-11-27T10:48:25+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261127114825.046"
-  },
-  {
    "in_corso": false,
    "regione": "Abruzzo",
    "fenomeno": "Vento",
@@ -47,6 +34,32 @@
    "fine": "2026-11-28T11:59:00+00:00",
    "emesso": "2026-11-27T10:48:25+00:00",
    "identificativo": "2.49.0.0.380.3.IT.261127114825.048"
+  },
+  {
+   "in_corso": false,
+   "regione": "Basilicata",
+   "fenomeno": "Vento",
+   "livello": "gialla",
+   "evento_originale": "Yellow Wind Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-29T00:00:00+00:00",
+   "fine": "2026-11-29T17:59:00+00:00",
+   "emesso": "2026-11-27T10:48:25+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261127114825.055"
+  },
+  {
+   "in_corso": false,
+   "regione": "Calabria",
+   "fenomeno": "Vento",
+   "livello": "gialla",
+   "evento_originale": "Yellow Wind Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-29T00:00:00+00:00",
+   "fine": "2026-11-29T17:59:00+00:00",
+   "emesso": "2026-11-27T10:48:25+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261127114825.056"
   },
   {
    "in_corso": false,
@@ -62,7 +75,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261127114825.059"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Calabria",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -73,6 +86,19 @@
    "fine": "2026-11-28T23:59:00+00:00",
    "emesso": "2026-11-27T10:48:25+00:00",
    "identificativo": "2.49.0.0.380.3.IT.261127114825.043"
+  },
+  {
+   "in_corso": false,
+   "regione": "Campania",
+   "fenomeno": "Vento",
+   "livello": "gialla",
+   "evento_originale": "Yellow Wind Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-29T00:00:00+00:00",
+   "fine": "2026-11-29T17:59:00+00:00",
+   "emesso": "2026-11-27T10:48:25+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261127114825.053"
   },
   {
    "in_corso": true,
@@ -102,19 +128,6 @@
   },
   {
    "in_corso": true,
-   "regione": "Liguria",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-27T19:00:00+00:00",
-   "fine": "2026-11-27T23:59:00+00:00",
-   "emesso": "2026-11-27T10:48:25+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261127114825.038"
-  },
-  {
-   "in_corso": false,
    "regione": "Marche",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -140,6 +153,19 @@
    "identificativo": "2.49.0.0.380.3.IT.261127114825.051"
   },
   {
+   "in_corso": false,
+   "regione": "Molise",
+   "fenomeno": "Vento",
+   "livello": "gialla",
+   "evento_originale": "Yellow Wind Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-29T00:00:00+00:00",
+   "fine": "2026-11-29T17:59:00+00:00",
+   "emesso": "2026-11-27T10:48:25+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261127114825.052"
+  },
+  {
    "in_corso": true,
    "regione": "Molise",
    "fenomeno": "Temporali",
@@ -153,17 +179,17 @@
    "identificativo": "2.49.0.0.380.3.IT.261127114825.050"
   },
   {
-   "in_corso": true,
-   "regione": "Molise",
-   "fenomeno": "Pioggia",
+   "in_corso": false,
+   "regione": "Puglia",
+   "fenomeno": "Vento",
    "livello": "gialla",
-   "evento_originale": "Yellow Rain Warning",
+   "evento_originale": "Yellow Wind Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-11-27T10:00:00+00:00",
-   "fine": "2026-11-27T23:59:00+00:00",
+   "inizio": "2026-11-29T00:00:00+00:00",
+   "fine": "2026-11-29T17:59:00+00:00",
    "emesso": "2026-11-27T10:48:25+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261127114825.049"
+   "identificativo": "2.49.0.0.380.3.IT.261127114825.054"
   },
   {
    "in_corso": false,
@@ -179,7 +205,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261127114825.058"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Puglia",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -192,7 +218,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261127114825.042"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Sardegna",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -207,6 +233,19 @@
   {
    "in_corso": false,
    "regione": "Sicilia",
+   "fenomeno": "Vento",
+   "livello": "gialla",
+   "evento_originale": "Yellow Wind Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-29T00:00:00+00:00",
+   "fine": "2026-11-29T17:59:00+00:00",
+   "emesso": "2026-11-27T10:48:25+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261127114825.057"
+  },
+  {
+   "in_corso": true,
+   "regione": "Sicilia",
    "fenomeno": "Temporali",
    "livello": "gialla",
    "evento_originale": "Yellow Thunderstorm Warning",
@@ -218,7 +257,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261127114825.060"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Toscana",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -231,7 +270,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261127114825.039"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Umbria",
    "fenomeno": "Vento",
    "livello": "gialla",

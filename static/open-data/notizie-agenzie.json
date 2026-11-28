@@ -5,11 +5,23 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-11-27T21:34:21+00:00",
+  "generato": "2026-11-28T03:29:58+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-11-27T23:27:05+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Cesare Cremonini, nella sua Bologna un nuovo volto da jazz club: \"Sono il vostro amateur\"",
+   "url": "https://www.adnkronos.com/spettacoli/cesare-cremonini-amatour-concerto-bologna-tour-amateur_50TYiuSScvCTUSGfa27j75"
+  },
+  {
+   "data": "2026-11-27T23:01:01+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Corrado Augias, oggi il ricordo in musica e parole all'Auditorium Parco Musica: la scaletta",
+   "url": "https://www.adnkronos.com/cultura/corrado-augias-omaggio-auditorium-parco-della-musica_13xB4PdQMmYRYmP6Qk5lNh"
+  },
   {
    "data": "2026-11-27T20:40:05+00:00",
    "fonte": "ADNKRONOS",
@@ -69,18 +81,6 @@
    "fonte": "ADNKRONOS",
    "titolo": "Tecnologia, ai e sicurezza al centro della convention Cto Italy di Brightstar",
    "url": "https://www.adnkronos.com/economia/tecnologia-ai-e-sicurezza-al-centro-della-convention-cto-italy-di-brightstar_2SS7piro1rZePb7lvB59Mf"
-  },
-  {
-   "data": "2026-11-27T18:12:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Anci, Vicchiarello: \"Investire sulle persone per offrire servizi migliori\"",
-   "url": "https://www.adnkronos.com/economia/anci-vicchiarello-investire-sulle-persone-per-offrire-servizi-migliori_3TVWtIRm9JnWiGaOhxyYv9"
-  },
-  {
-   "data": "2026-11-27T18:06:47+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Anci, Vigilante (Gse): \"Abbiamo formato oltre 14mila funzionari degli enti locali",
-   "url": "https://www.adnkronos.com/economia/anci-vigilante-gse-abbiamo-formato-oltre-14mila-funzionari-degli-enti-locali_71fP8v1FonaNltnHDOtJ2j"
   },
   {
    "data": "2026-11-27T05:59:55+00:00",
