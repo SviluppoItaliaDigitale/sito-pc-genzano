@@ -1,11 +1,11 @@
 {
  "_snapshot": {
-  "generato": "2026-11-28T12:12:15+00:00",
+  "generato": "2026-11-28T20:06:43+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 17,
-  "scaduti_scartati": 5,
-  "in_corso": 16,
+  "avvisi": 16,
+  "scaduti_scartati": 6,
+  "in_corso": 15,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
@@ -34,19 +34,6 @@
    "fine": "2026-11-29T17:59:00+00:00",
    "emesso": "2026-11-28T09:12:55+00:00",
    "identificativo": "2.49.0.0.380.3.IT.261128101255.056"
-  },
-  {
-   "in_corso": true,
-   "regione": "Calabria",
-   "fenomeno": "Temporali",
-   "livello": "gialla",
-   "evento_originale": "Yellow Thunderstorm Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-28T11:00:00+00:00",
-   "fine": "2026-11-28T17:59:00+00:00",
-   "emesso": "2026-11-28T09:12:55+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261128101255.059"
   },
   {
    "in_corso": true,
